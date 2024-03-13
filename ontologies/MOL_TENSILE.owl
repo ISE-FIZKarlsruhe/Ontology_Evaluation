@@ -1,0 +1,1103 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#"
+     xml:base="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:gd="https://www.materials.fraunhofer.de/ontologies/graph_designer#"
+     xmlns:mid="https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest">
+        <owl:versionIRI rdf:resource="https://gitlab.cc-asp.fraunhofer.de/hart/matolab_mechanik/-/raw/master/mol_tt.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/ebrahimnorouzi/mseo.github.io/master/Ontology_files/BWMD_mid.owl"/>
+        <rdfs:comment xml:lang="en">This ontology was created by: Team Mechanik - Mat-O-Lab Materials &lt;d74c5619.fraunhofer.onmicrosoft.com@emea.teams.ms&gt;</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/graph_designer#RelationFadeoutDistance -->
+
+    <owl:AnnotationProperty rdf:about="https://www.materials.fraunhofer.de/ontologies/graph_designer#RelationFadeoutDistance"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty">
+        <gd:RelationFadeoutDistance rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2</gd:RelationFadeoutDistance>
+    </rdf:Description>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#OWLObjectProperty_00112 -->
+
+    <owl:ObjectProperty rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#OWLObjectProperty_00112">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="de">position_with_respect_to_specimen</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00001 -->
+
+    <owl:ObjectProperty rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00001">
+        <rdfs:subPropertyOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00323"/>
+        <rdfs:label xml:lang="en">grip arrangement</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00002 -->
+
+    <owl:ObjectProperty rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00002">
+        <rdfs:subPropertyOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00323"/>
+        <rdfs:label xml:lang="en">gripping system</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00003 -->
+
+    <owl:ObjectProperty rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00003">
+        <rdfs:subPropertyOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00323"/>
+        <rdfs:label xml:lang="en">test piece</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00004 -->
+
+    <owl:ObjectProperty rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00004">
+        <rdfs:subPropertyOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00322"/>
+        <rdfs:label xml:lang="en">made from material</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00005 -->
+
+    <owl:ObjectProperty rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00005">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">geometric property</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00006 -->
+
+    <owl:ObjectProperty rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00006">
+        <rdfs:subPropertyOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00005"/>
+        <rdfs:label xml:lang="en">area</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00007 -->
+
+    <owl:ObjectProperty rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00007">
+        <rdfs:subPropertyOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00006"/>
+        <rdfs:label xml:lang="en">section area</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00008 -->
+
+    <owl:ObjectProperty rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00008">
+        <rdfs:subPropertyOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00007"/>
+        <rdfs:label xml:lang="en">original section area</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00009 -->
+
+    <owl:ObjectProperty rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00009">
+        <rdfs:subPropertyOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00005"/>
+        <rdfs:label xml:lang="en">length</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00010 -->
+
+    <owl:ObjectProperty rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00010">
+        <rdfs:subPropertyOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00009"/>
+        <rdfs:label xml:lang="en">gauge length</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00011 -->
+
+    <owl:ObjectProperty rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00011">
+        <rdfs:subPropertyOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00010"/>
+        <rdfs:label xml:lang="en">original gauge length</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00012 -->
+
+    <owl:ObjectProperty rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00012">
+        <rdfs:subPropertyOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00009"/>
+        <rdfs:label xml:lang="en">side lenght</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00013 -->
+
+    <owl:ObjectProperty rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00013">
+        <rdfs:subPropertyOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00009"/>
+        <rdfs:label xml:lang="en">thickness</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00014 -->
+
+    <owl:ObjectProperty rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00014">
+        <rdfs:subPropertyOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00009"/>
+        <rdfs:label xml:lang="en">diameter</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00015 -->
+
+    <owl:ObjectProperty rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00015">
+        <rdfs:subPropertyOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00014"/>
+        <rdfs:label xml:lang="en">original diameter</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00016 -->
+
+    <owl:ObjectProperty rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00016">
+        <rdfs:subPropertyOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00005"/>
+        <rdfs:label xml:lang="en">section area shape</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00017 -->
+
+    <owl:ObjectProperty rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00017">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">mechanical property</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00018 -->
+
+    <owl:ObjectProperty rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00018">
+        <rdfs:subPropertyOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00017"/>
+        <rdfs:label xml:lang="en">characteristic mechanical property</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00019 -->
+
+    <owl:ObjectProperty rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00019">
+        <rdfs:subPropertyOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00018"/>
+        <rdfs:label xml:lang="en">yield strength</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00020 -->
+
+    <owl:ObjectProperty rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00020">
+        <rdfs:subPropertyOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00019"/>
+        <rdfs:label xml:lang="en">upper yield strength</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00021 -->
+
+    <owl:ObjectProperty rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00021">
+        <rdfs:subPropertyOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00019"/>
+        <rdfs:label xml:lang="en">lower yield strength</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00022 -->
+
+    <owl:ObjectProperty rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00022">
+        <rdfs:subPropertyOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00018"/>
+        <rdfs:label xml:lang="en">reduction of area</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00023 -->
+
+    <owl:ObjectProperty rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00023">
+        <rdfs:subPropertyOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00018"/>
+        <rdfs:label xml:lang="en">elongation after fracture</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00024 -->
+
+    <owl:ObjectProperty rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00024">
+        <rdfs:subPropertyOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00018"/>
+        <rdfs:label xml:lang="en">plastic extension at max force</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00025 -->
+
+    <owl:ObjectProperty rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00025">
+        <rdfs:subPropertyOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00018"/>
+        <rdfs:comment xml:lang="en">Should point to a pair of &quot;plastic strain&quot; and &quot;stress&quot;, maybe using reification?
+e.g. http://etutorials.org/Misc/Practical+resource+description+framework+rdf/Chapter+4.+Specialized+RDF+Relationships+Reification+Containers+and+Collections/4.3+Reification+The+RDF+Big+Ugly/</rdfs:comment>
+        <rdfs:label xml:lang="en">proof strength</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00026 -->
+
+    <owl:ObjectProperty rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00026">
+        <rdfs:subPropertyOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00107"/>
+        <rdfs:comment xml:lang="en">The elastic modulus as determined e.g. by a tensile test or an atomistic simulation.</rdfs:comment>
+        <rdfs:label xml:lang="de">E-Modul</rdfs:label>
+        <rdfs:label xml:lang="de">Elastizitätsmodul</rdfs:label>
+        <rdfs:label xml:lang="en">Youngs modulus</rdfs:label>
+        <rdfs:label xml:lang="en">modulus of elasticity</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00027 -->
+
+    <owl:ObjectProperty rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00027">
+        <rdfs:subPropertyOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00017"/>
+        <rdfs:label xml:lang="en">stress</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00028 -->
+
+    <owl:ObjectProperty rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00028">
+        <rdfs:subPropertyOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00027"/>
+        <rdfs:label xml:lang="en">engineering stress</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00029 -->
+
+    <owl:ObjectProperty rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00029">
+        <rdfs:subPropertyOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00027"/>
+        <rdfs:label xml:lang="en">true stress</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00030 -->
+
+    <owl:ObjectProperty rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00030">
+        <rdfs:subPropertyOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00017"/>
+        <rdfs:label xml:lang="en">strain</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00031 -->
+
+    <owl:ObjectProperty rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00031">
+        <rdfs:subPropertyOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00030"/>
+        <rdfs:label xml:lang="en">engineering strain</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00032 -->
+
+    <owl:ObjectProperty rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00032">
+        <rdfs:subPropertyOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00030"/>
+        <rdfs:label xml:lang="en">true strain</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00033 -->
+
+    <owl:ObjectProperty rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00033">
+        <rdfs:subPropertyOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00030"/>
+        <rdfs:label xml:lang="en">logarithmic strain</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00034 -->
+
+    <owl:ObjectProperty rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00034">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">appearance property</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00035 -->
+
+    <owl:ObjectProperty rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00035">
+        <rdfs:subPropertyOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00034"/>
+        <rdfs:label xml:lang="en">type of fracture</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00036 -->
+
+    <owl:ObjectProperty rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00036">
+        <rdfs:subPropertyOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00339"/>
+        <rdfs:label xml:lang="en">testing rate</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00037 -->
+
+    <owl:ObjectProperty rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00037">
+        <rdfs:subPropertyOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00036"/>
+        <rdfs:label xml:lang="en">crosshead separation rate</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00038 -->
+
+    <owl:ObjectProperty rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00038">
+        <rdfs:subPropertyOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00010"/>
+        <rdfs:label xml:lang="en">extensometer gauge length</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00039 -->
+
+    <owl:ObjectProperty rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00039">
+        <rdfs:subPropertyOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00010"/>
+        <rdfs:label xml:lang="en">final gauge length after fracture</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00040 -->
+
+    <owl:ObjectProperty rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00040">
+        <rdfs:subPropertyOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00018"/>
+        <rdfs:label xml:lang="en">maximum force</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00041 -->
+
+    <owl:ObjectProperty rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00041">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:comment>Method A (strain controlled) or method B (stress controlled) as defined by the standard DIN EN 6892.</rdfs:comment>
+        <rdfs:label xml:lang="en">method</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00042 -->
+
+    <owl:ObjectProperty rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00042">
+        <rdfs:subPropertyOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00007"/>
+        <rdfs:label xml:lang="en">minimum cross section area after fracture</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00043 -->
+
+    <owl:ObjectProperty rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00043">
+        <rdfs:subPropertyOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00007"/>
+        <rdfs:label xml:lang="en">original cross section of the parallel length</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00044 -->
+
+    <owl:ObjectProperty rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00044">
+        <rdfs:subPropertyOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00009"/>
+        <rdfs:label xml:lang="en">parallel length</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00045 -->
+
+    <owl:ObjectProperty rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00045">
+        <rdfs:subPropertyOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00018"/>
+        <rdfs:label xml:lang="en">permanent elongation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00046 -->
+
+    <owl:ObjectProperty rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00046">
+        <rdfs:subPropertyOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00018"/>
+        <rdfs:label xml:lang="en">permanent extension</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00047 -->
+
+    <owl:ObjectProperty rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00047">
+        <rdfs:subPropertyOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00018"/>
+        <rdfs:label xml:lang="en">plastic extension at maximum force</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00048 -->
+
+    <owl:ObjectProperty rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00048">
+        <rdfs:subPropertyOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00036"/>
+        <rdfs:label xml:lang="en">strain rate</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00049 -->
+
+    <owl:ObjectProperty rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00049">
+        <rdfs:subPropertyOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00036"/>
+        <rdfs:label xml:lang="en">stress rate</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00050 -->
+
+    <owl:ObjectProperty rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00050">
+        <rdfs:subPropertyOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00339"/>
+        <rdfs:label xml:lang="en">temperature</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00051 -->
+
+    <owl:ObjectProperty rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00051">
+        <rdfs:subPropertyOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00018"/>
+        <rdfs:label xml:lang="en">tensile strength</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00052 -->
+
+    <owl:ObjectProperty rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00052">
+        <rdfs:subPropertyOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00018"/>
+        <rdfs:label xml:lang="en">total extension at fracture</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00053 -->
+
+    <owl:ObjectProperty rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00053">
+        <rdfs:subPropertyOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00018"/>
+        <rdfs:label xml:lang="en">total extension at maximum force</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00054 -->
+
+    <owl:ObjectProperty rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00054">
+        <rdfs:subPropertyOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00018"/>
+        <rdfs:label xml:lang="en">yield point extension</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00102 -->
+
+    <owl:ObjectProperty rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00102">
+        <rdfs:subPropertyOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00323"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00010"/>
+        <rdfs:range rdf:resource="https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00016"/>
+        <rdfs:label xml:lang="en">unit</rdfs:label>
+        <gd:RelationFadeoutDistance rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2</gd:RelationFadeoutDistance>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00107 -->
+
+    <owl:ObjectProperty rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00107">
+        <rdfs:subPropertyOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00018"/>
+        <rdfs:comment xml:lang="en">aka slope of stress-strain curve</rdfs:comment>
+        <rdfs:label xml:lang="en">slope of the elastic part of the stress-percentage extension curve</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topDataProperty -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topDataProperty">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <gd:RelationFadeoutDistance rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2</gd:RelationFadeoutDistance>
+    </rdf:Description>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#OWLDataProperty_00108 -->
+
+    <owl:DatatypeProperty rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#OWLDataProperty_00108">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:label xml:lang="de">percentage plastic extension at maximum force</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#OWLDataProperty_00109 -->
+
+    <owl:DatatypeProperty rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#OWLDataProperty_00109">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:label xml:lang="de">slope of the elastic part of the stress-percentage extension curve</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#OWLDataProperty_00110 -->
+
+    <owl:DatatypeProperty rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#OWLDataProperty_00110">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="en">Computed according to DIN EN ISO 6892-1:2019, clause 3.8</rdfs:comment>
+        <rdfs:label xml:lang="de">percentage reduction of area</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00100 -->
+
+    <owl:DatatypeProperty rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00100">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:label xml:lang="en">name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00101 -->
+
+    <owl:DatatypeProperty rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00101">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:label xml:lang="en">value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#OWLClass_00111 -->
+
+    <owl:Class rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#OWLClass_00111">
+        <rdfs:subClassOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00266"/>
+        <rdfs:comment>Temperture as indicated by a sensor, e.g. a thermocouple or pyrometer.</rdfs:comment>
+        <rdfs:label xml:lang="de">Temperature sensor signal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#OWLClass_00113 -->
+
+    <owl:Class rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#OWLClass_00113">
+        <rdfs:subClassOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00266"/>
+        <rdfs:comment>Laboratory tempereature typically measured during long term tests.</rdfs:comment>
+        <rdfs:label xml:lang="de">Ambient temperature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00055 -->
+
+    <owl:Class rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00055">
+        <rdfs:subClassOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00061"/>
+        <rdfs:label xml:lang="en">Extensometer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00056 -->
+
+    <owl:Class rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00056">
+        <rdfs:subClassOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00070"/>
+        <rdfs:label xml:lang="en">Furnace</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00057 -->
+
+    <owl:Class rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00057">
+        <rdfs:subClassOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00070"/>
+        <rdfs:label xml:lang="en">Load cell</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00058 -->
+
+    <owl:Class rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00058">
+        <rdfs:subClassOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00070"/>
+        <rdfs:label xml:lang="en">Grip arrangement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00059 -->
+
+    <owl:Class rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00059">
+        <rdfs:subClassOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00070"/>
+        <rdfs:label xml:lang="en">Gripping system</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00060 -->
+
+    <owl:Class rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00060">
+        <rdfs:subClassOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00070"/>
+        <rdfs:label xml:lang="en">Tensile testing machine</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00061 -->
+
+    <owl:Class rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00061">
+        <rdfs:subClassOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00070"/>
+        <rdfs:label xml:lang="en">Length measuring device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00062 -->
+
+    <owl:Class rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00062">
+        <rdfs:subClassOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00061"/>
+        <rdfs:label xml:lang="en">Caliper gauge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00063 -->
+
+    <owl:Class rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00063">
+        <rdfs:subClassOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00061"/>
+        <rdfs:label xml:lang="en">Micrometer gauge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00064 -->
+
+    <owl:Class rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00064">
+        <rdfs:subClassOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00070"/>
+        <rdfs:label xml:lang="en">Thermometer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00065 -->
+
+    <owl:Class rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00065">
+        <rdfs:subClassOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00048"/>
+        <owl:disjointWith rdf:resource="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00066"/>
+        <rdfs:label xml:lang="en">Cylindrical test piece</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00066 -->
+
+    <owl:Class rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00066">
+        <rdfs:subClassOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00048"/>
+        <rdfs:label xml:lang="en">Rectangular test piece</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00067 -->
+
+    <owl:Class rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00067">
+        <rdfs:subClassOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00066"/>
+        <rdfs:label xml:lang="en">Square test piece</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00068 -->
+
+    <owl:Class rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00068">
+        <rdfs:subClassOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00235"/>
+        <rdfs:label xml:lang="en">Tensile test preparation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00069 -->
+
+    <owl:Class rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00069">
+        <rdfs:subClassOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00063"/>
+        <rdfs:label xml:lang="en">Tensile test evaluation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00070 -->
+
+    <owl:Class rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00070">
+        <rdfs:subClassOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00151"/>
+        <rdfs:label xml:lang="en">Tensile test execution</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00071 -->
+
+    <owl:Class rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00071">
+        <rdfs:subClassOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00299"/>
+        <rdfs:label xml:lang="en">Strain</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00072 -->
+
+    <owl:Class rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00072">
+        <rdfs:subClassOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00011"/>
+        <rdfs:label xml:lang="en">Stress</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00073 -->
+
+    <owl:Class rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00073">
+        <rdfs:subClassOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00011"/>
+        <rdfs:label xml:lang="en">StressRate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00074 -->
+
+    <owl:Class rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00074">
+        <rdfs:subClassOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00138"/>
+        <rdfs:label xml:lang="en">DIN EN ISO 6892-1_2020 characteristic values</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00095 -->
+
+    <owl:Class rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00095">
+        <rdfs:subClassOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00011"/>
+        <rdfs:label xml:lang="en">StrainRate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00106 -->
+
+    <owl:Class rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00106">
+        <rdfs:subClassOf rdf:resource="https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00151"/>
+        <rdfs:label xml:lang="en">Tensile test</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00075 -->
+
+    <owl:NamedIndividual rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00075">
+        <rdf:type rdf:resource="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00059"/>
+        <rdfs:label xml:lang="en">_hydraulic</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00076 -->
+
+    <owl:NamedIndividual rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00076">
+        <rdf:type rdf:resource="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00059"/>
+        <rdfs:label xml:lang="en">_mechanical</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00077 -->
+
+    <owl:NamedIndividual rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00077">
+        <rdf:type rdf:resource="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00058"/>
+        <rdfs:label xml:lang="en">_Parallelspannzeug</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00078 -->
+
+    <owl:NamedIndividual rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00078">
+        <rdf:type rdf:resource="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00058"/>
+        <rdfs:label xml:lang="en">_Schulterhalterung</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00079 -->
+
+    <owl:NamedIndividual rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00079">
+        <rdf:type rdf:resource="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00058"/>
+        <rdfs:label xml:lang="en">_Keilspannzeug</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00080 -->
+
+    <owl:NamedIndividual rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00080">
+        <rdf:type rdf:resource="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00058"/>
+        <rdfs:label xml:lang="en">_Gewindestück</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00081 -->
+
+    <owl:NamedIndividual rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00081">
+        <rdf:type rdf:resource="https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00016"/>
+        <mid:BWMD_00312 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MPa</mid:BWMD_00312>
+        <rdfs:label xml:lang="en">_megapascal</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00082 -->
+
+    <owl:NamedIndividual rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00082">
+        <rdf:type rdf:resource="https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00016"/>
+        <mid:BWMD_00312 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">s</mid:BWMD_00312>
+        <rdfs:label xml:lang="en">_second</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00083 -->
+
+    <owl:NamedIndividual rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00083">
+        <rdf:type rdf:resource="https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00016"/>
+        <mid:BWMD_00312 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">%</mid:BWMD_00312>
+        <rdfs:label xml:lang="en">_length_over_length_in_percent</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00084 -->
+
+    <owl:NamedIndividual rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00084">
+        <rdf:type rdf:resource="https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00016"/>
+        <rdfs:label xml:lang="en">_area_over_area_in_percent</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00085 -->
+
+    <owl:NamedIndividual rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00085">
+        <rdf:type rdf:resource="https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00016"/>
+        <mid:BWMD_00312 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GPa</mid:BWMD_00312>
+        <rdfs:label xml:lang="en">_gigapascal</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00086 -->
+
+    <owl:NamedIndividual rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00086">
+        <rdf:type rdf:resource="https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00016"/>
+        <mid:BWMD_00312 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">° C</mid:BWMD_00312>
+        <rdfs:label xml:lang="en">_degree_celsius</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00087 -->
+
+    <owl:NamedIndividual rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00087">
+        <rdf:type rdf:resource="https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00016"/>
+        <mid:BWMD_00312 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">µm</mid:BWMD_00312>
+        <rdfs:label xml:lang="en">_micrometer</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00088 -->
+
+    <owl:NamedIndividual rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00088">
+        <rdf:type rdf:resource="https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00016"/>
+        <mid:BWMD_00312 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm</mid:BWMD_00312>
+        <rdfs:label xml:lang="en">_milimeter</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00089 -->
+
+    <owl:NamedIndividual rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00089">
+        <rdf:type rdf:resource="https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00016"/>
+        <mid:BWMD_00312 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MPa/s</mid:BWMD_00312>
+        <rdfs:label xml:lang="en">_megapascal_per_second</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00090 -->
+
+    <owl:NamedIndividual rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00090">
+        <rdf:type rdf:resource="https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00016"/>
+        <mid:BWMD_00312 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N</mid:BWMD_00312>
+        <rdfs:label xml:lang="en">_newton</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00091 -->
+
+    <owl:NamedIndividual rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00091">
+        <rdf:type rdf:resource="https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00016"/>
+        <mid:BWMD_00312 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kN</mid:BWMD_00312>
+        <rdfs:label xml:lang="en">_kilonewton</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00092 -->
+
+    <owl:NamedIndividual rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00092">
+        <rdf:type rdf:resource="https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00016"/>
+        <mid:BWMD_00312 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1/s</mid:BWMD_00312>
+        <rdfs:label xml:lang="en">_length_over_length_per_second</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00093 -->
+
+    <owl:NamedIndividual rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00093">
+        <rdf:type rdf:resource="https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00016"/>
+        <mid:BWMD_00312 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm/s</mid:BWMD_00312>
+        <rdfs:label xml:lang="en">_milimeter_per_second</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00094 -->
+
+    <owl:NamedIndividual rdf:about="https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#TT_00094">
+        <rdf:type rdf:resource="https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00016"/>
+        <mid:BWMD_00312 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mm²</mid:BWMD_00312>
+        <rdfs:label xml:lang="en">_milimeter_times_milimeter</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00324">
+        <gd:RelationFadeoutDistance rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">999</gd:RelationFadeoutDistance>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
