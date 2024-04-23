@@ -1,0 +1,563 @@
+The enormous use of cutting fluid in machining leads to an increase in machining costs, along with different health hazards. Cutting fluid can be used efficiently using the MQL (minimum quantity lubrication) method, which aids in improving the machining performance. This paper contains multiple responses, namely, force, surface roughness, and temperature, so there arises a need for a multicriteria optimization technique. Therefore, in this paper, multiobjective optimization based on ratio analysis (MOORA), VIseKriterijumska Optimizacija I Kompromisno Resenje (VIKOR), and technique for order of preference by similarity to ideal solution (TOPSIS) are used to solve different multiobjective problems, and response surface methodology is also used for optimization and to validate the results obtained by multicriterion decision-making technique (MCDM) techniques. The design of the experiment is based on the Box–Behnken technique, which used four input parameters: feed rate, depth of cut, cutting speed, and nanofluid concentration, respectively. The experiments were performed on AISI 304 steel in turning with minimum quantity lubrication (MQL) and found that the use of hybrid nanofluid (Alumina–Graphene) reduces response parameters by approximately 13% in forces, 31% in surface roughness, and 14% in temperature, as compared to Alumina nanofluid. The response parameters are analyzed using analysis of variance (ANOVA), where the depth of cut and feed rate showed a major impact on response parameters. After using all three MCDM techniques, it was found that, at fixed weight factor with each MCDM technique, a similar process parameter was achieved (velocity of 90 m/min, feed of 0.08 mm/min, depth of cut of 0.6 mm, and nanoparticle concentration of 1.5%, respectively) for optimum response. The above stated multicriterion techniques employed in this work aid decision makers in selecting optimum parameters depending upon the desired targets. Thus, this work is a novel approach to studying the effectiveness of hybrid nanofluids in the machining of AISI 304 steel using MCDM techniques.
+Machining is a material removal process, in which undesired material is removed from the workpiece to give it a final shape. Different machining operations, such as turning, milling, grinding, and drilling, etc., are used in the manufacturing industry for metal cutting processes. The machining process aims to provide dimensional accuracy to the workpiece. Turning is one of the most widely used metal removal processes, used generally for cylindrical parts. To attain enhanced productivity, the wear of the tool and the obtained surface roughness of the workpiece must be minimal. At the interface of the cutting tool and workpiece, a large amount of heat is generated because of friction. This heat results in temperature generation, affecting tool life and the surface quality of the workpiece. Among the different varieties of steel alloys, the turning of AISI 304 steel is widely used in industries because of its diverse applications. There are a few challenges in the machining of AISI 304 steel alloy, as it possesses lower thermal conductivity along with the tendency of work hardening [
+1
+]. Thus, while machining AISI 304 steel, issues of rapid tool wear and increased cutting force are encountered, along with an increased cutting temperature [
+2
+]. For overcoming this temperature, cutting fluid is applied at the machining zone. The traditional approach to the application of cutting fluid is effective, but when used to an excess degree, it can cause a detrimental effect on human health as well as the environment. 
+To limit the use of traditional cutting fluid, the novel hybrid technique of minimum quantity lubrication (MQL) can be employed in the vicinity of the machining zone [
+3
+]. In this technique, the cutting fluid is engaged in the form of a spray, by applying pressurized air [
+4
+]. Hegab and Kishawy [
+5
+] used alumina and multiwalled carbon nanotube to investigate their effect on the energy consumption and the surface finish generated in the MQL assisted turning of Inconel 718. The carbon nanotube gave a better result than alumina and it was revealed that the weight % of the nanoparticle had a significant effect on the response parameters. The enhanced tribological and heat transfer properties of the nanoparticles added in the cutting fluid led to the improvement in surface characteristics by improving the interface bond between the Inconel surface and the cutting tool used. Sen et al. [
+6
+] performed a milling operation using a hybrid mixture of palm and castor oil with a mist lubrication technique. The reduction in surface roughness, by 16.14%, and 7.97% reduction in specific cutting energy, is reported. Duc et al. [
+7
+] performed hard turning on 90CrSi steel with minimum quantity lubrication. Alumina and molybdenum disulphide nanofluids are utilized for cutting fluid. A reduction in cutting force with an increase in thrust force is reported using MoS
+2
+ nanofluid. The use of both the nanoparticles in the MQL technique led to the improved performance of the carbide insert, due to the rise in the property of the base fluid in terms of thermal conductivity and lubrication. Bai et al. [
+8
+] studied the effect of different fluids using the minimum quantity lubrication technique on the response parameters. As per the authors, MQL or near dry machining is a suitable alternative for flood cooling in reducing environmental hazards, as well as production costs. The use of nanofluids as a coolant is seen as an emerging concept for machining purposes, as they possess enhanced heat transfer capabilities [
+9
+]. Do and Hsu [
+10
+] performed machining on AISI H13 and analysed the surface roughness using MQL. Higher cutting speed and low depth of cut resulted in improved surface finish using MQL. Dubey et al. [
+11
+] reviewed different methods of temperature measurement while machining. Prediction of temperature using thermocouples was found to be suitable. In another work, Dubey et al. [
+12
+] studied the effect of different cooling mechanisms on turning. Among various techniques, MQL was reported to be the most efficient lubrication method. Gupta et al. [
+13
+] optimized machining parameters in the turning of titanium alloy under the mist lubrication technique. The result revealed lower cutting force, using graphite nanofluids as it formed lower droplets because of a lower viscosity than the other two nanofluids, and resulted in deeper penetration at the machining zone. In the case of tool wear, graphite nanofluids also outperformed, as they possess better thermal conductivity than the other two and aided in dissipating heat and retaining the cutting tool hardness. Saini et al. [
+14
+] experimented on AISI-4340 steel under MQL conditions using different carbide inserts. The application of MQL resulted in a decrease in temperature of the chip–tool interface, thus maintaining the sharpness of the cutting edges of the tool. Singh et al. [
+15
+] investigated surface finish, cutting force, and tool wear on the turning of titanium alloy. The results revealed an enhancement in surface finish, by 15%, and a reduction in cutting force by using the near dry machining technique. Qu et al. [
+16
+] studied the machining of a ceramic matrix composite, with dry, flood, and minimum quantity lubrication. The improved surface finish obtained using nanofluids assisted MQL, along with less consumption of the cutting fluid in comparison to other lubrication techniques.
+With the advancement in studies of nanofluids as lubricants in machining operation, researchers are now focussing on using hybrid nanofluids for enhanced heat transfer characteristics [
+17
+]. Babar and Ali [
+18
+] reviewed the synthesis and thermophysical properties of hybrid nanofluids. It was suggested that hybrid nanofluids possess superior thermal characteristics over mono nanofluids because mono nanofluid forms clusters, thus increasing the diameter of the particles and, thus, leading to an increase in pumping power and viscosity. The thermophysical characteristic of nanofluids (viscosity, specific heat, viscosity, and density) is improved by enhancing the nanoparticle concentration. Kumar et al. [
+19
+] studied the tribological behaviour of nanofluid on different categories of steel. It was revealed that the introduction of nanofluid aided in minimizing wear. Jamil et al. [
+20
+] used combinations of alumina and carbon nanotube particles for the hybrid nanofluids machining of titanium alloy with MQL. The obtained result was compared with cryogenic cooling and an improvement in tool life by 23% was observed. A reduction of 11.8% was suggested by the authors in cutting temperature using cryogenic cooling, in comparison to MQL. Zhang et al. [
+21
+] compared the effect of hybrid nanofluid with single nanofluid on response parameters while machining on nickel alloy. The application of alumina and silicon carbide hybrid nanofluids resulted in a reduction of cutting forces and surface roughness, respectively, as both the nanofluids gave a synergistic effect and improved the grinding performance. Gugulothu and Pasam [
+22
+] investigated the performance of carbon nanotube and molybdenum disulphide nanoparticle enriched cutting fluid for turning 1040 steel. An increase in thermal conductivity is noticed by increasing the particle size, while a decrease in viscosity is encountered when rising in temperature. A reduction in surface roughness, by 28.53% and 18.3%, is reported when compared with dry machining and traditional cutting fluid. Kumar et al. [
+23
+] performed machining on silicon nitride and compared the result with mono and hybrid nanofluids. The cutting force and surface roughness were reduced by 27% and 41%. Abbas et al. [
+24
+] optimized the turning parameters using Edgeworth–Pareto method for achieving minimum turning time. The obtained surface finish reported is 0.8µm. In another study, Abbas et al. [
+25
+] performed a sustainability assessment related to power consumption and surface characteristics in the machining of AISI 1045 steel. The use of alumina nanoparticles in mist lubrication significantly improved the surface characteristic and minimized the power consumption. The effect on response parameters can be attributed to the alumina nanofluid’s spraying ability, enhanced sliding behaviour, less friction, and seizure characteristic at the tool–workpiece contact. Alajmi and Almeshal [
+26
+] used artificial intelligence to optimize surface roughness in the turning of AISI 304 steel. It was revealed that ANFIS-QPSO resulted in a more accurate prediction of surface roughness. Su et al. [
+27
+] a used multiobjective criterion for optimising machining parameters of AISI 304 steel. The reduction in surface roughness and specific energy consumption was reported to be 66.90% and 81.46%. Khan et al. [
+28
+] performed a grinding operation on D2 steel using an alumina wheel, and compared dry machining with MQL grinding. The effectiveness of heat dissipation and the penetration property of the cutting fluid using MQL gave better results. Li et al. [
+29
+] investigated tool wear and surface topography in the turning of austenitic steel. Response surface methodology was used as the optimization technique. The effective cutting parameters obtained were 120 mm/min cutting speed and 0.18 feed rate along with 0.42 mm depth of cut. 
+From the literature, it is evident that the machining of AISI 304 steel has been attempted by different researchers using nanofluids in improving the machining performances in terms of reduced cutting force, tooltip temperature, and surface roughness. The optimization of the process parameters is performed using Taguchi, grey relational analysis, genetic algorithm, and response surface methodology, but very little work is reported on an analysis of optimal parameters using multicriterion decision making (MCDM) techniques using minimum quantity lubrication. In the present work, alumina and graphene nanoparticles are hybridized in different volumetric concentrations. The performance of the hybrid nanofluids is analyzed in terms of cutting forces, surface roughness, and nodal temperature for the MQL turning of AISI 304 steel. The study aims to analyze the synergistic effect of the hybrid nanofluids on the response parameters for the MQL turning of steel, and suggest the optimum parameter and cutting fluid that can be used by researchers and industries while machining steel. The results obtained are further compared with that of alumina particle nanofluid. Furthermore, the selection of the optimized machining level parameter and their respective ranking is ascertained using three MCDM techniques, namely, MOORA (Multiobjective Optimization Method by Ratio Analysis), VIKOR (VlseKriterijumska Optimizacija I Kompromisno Resenje), and TOPSIS (technique for order performance by similarity to ideal solution).
+The experiment was performed using a conventional lathe Duo machine (Duo Machine Corps, Rajkot, India). Turning was carried on an AISI 304 steel workpiece of 60 mm diameter, whose chemical composition is mentioned in 
+Table 1
+. WIDIA’s tungsten carbide inserts (CNMG 120408) of grade TN 2000 and corner radius of 0.8 were used as a cutting tool material which is clamped mechanically on WIDIA’s tool holder. The experimental response, such as cutting force, was measured by using a piezoelectric Kistler dynamometer (9257B). It consists of a charge amplifier of Type 5697A1, comprising hardware for the data acquisition and the DynoWare software (3.1.2.0) for operating and storing the value of average cutting force. Turning operation was performed for 250 mm length of cylindrical workpiece and the average value of cutting force was recorded. Mitutoyo surface roughness tester (SJ210) was used for average surface roughness measurement (R
+a
+). It consists of a probe comprising of the diamond tip of a 2 µm radius that traverses on the workpiece. The cut off length is 0.08 mm and measuring speed is 0.25 mm/s, and the retraction speed of the probe is 1mm/s. The temperature measurement was performed using a K-type thermocouple, whose one end is clamped in a carbide insert, while the other end is attached to National Instrument’s data acquisition system, which recorded the cutting temperature. The cutting fluid used for machining is biodegradable oil based, which is enriched with water based alumina nanofluid and alumina–graphene hybrid nanofluid. The selection of nanofluids is carried out to analyze the synergistic effect of alumina (high conductivity) and graphene (high thermal conductivity along with lubricity) on turning in MQL environment. The combined properties of both nanoparticles are essential for any cutting fluid used in machining. The samples of mono and hybrid nanofluids were prepared in a volumetric ratio of 90:10 in three varying volumetric concentrations of 0.5%, 1%, and 1.5%, respectively. For the discharge of the cutting fluid, a minimum quantity lubrication setup was used. The experiments were repeated thrice and the average value was taken of the responses for better accuracy. The experimental setup is shown in 
+Figure 1
+.
+Design of experiment is made by using MINITAB-19 and for statistical analysis response surface methodology’s Box–Behnken design was used, with four factors at three different levels where the factors are, namely, depth of cut, feed rate, cutting velocity, and nanofluid concentration, which is shown in 
+Table 2
+. Due to 4 factors with 3 levels, the design contains 27 possible combinations to perform experiments. 
+Table 3
+ contains all 27 combinations which give the most effective results of response parameters.
+Optimization is very important in a production system because it helps to achieve good product quality at minimum cost. In this paper, there are three response parameters, and optimizing them individually may take a significant amount of time, effort and increase process complexity. Therefore, this paper deals with four optimization techniques to obtain a better result.
+Response surface methodology is a collection of statistical and mathematical techniques which are useful for the modeling and analysis of a problem in which the response of interest is influenced by multiple variables and the objective is to optimize the response. Response surface methodology is used for surface analysis of response parameters; along with that, problems formulation and process optimization can also be performed using RSM [
+30
+]. 
+Multicriteria decision making is mainly aimed at the optimization of conflicting responses, but in this paper, it is utilized for optimizing multiple criteria of nonconflicting nature. It is very useful when the number of response parameters is large in the count, because it calculates the optimized results for two responses and more than two responses in the same number of steps. The methodology used in these techniques is shown in 
+Figure 2
+. Here, the goal is to mainly check the reliability of three MCDM techniques (MOORA, VIKOR, TOSIS) for nonconflicting responses [
+31
+,
+32
+].
+MOORA is a simpler and popular MCDM technique; it is used to simultaneously optimize two or more than two conflicting/nonconflicting response parameters [
+33
+,
+34
+]. It is mainly used for the quantitative attribute.
+The VIKOR method is a multicriteria decision making (MCDM) or multicriteria decision analysis method. It was originally developed by Serafim Opricovic (1979-80) to solve decision problems with conflicting and noncommensurable (different units) criteria. It is used to simultaneously optimize two or more two responses. The decision maker desires to have a solution that is nearest to the ideal, whereas the alternatives are evaluated as per the established criteria. VIKOR ranks alternatives and determines the solution, named compromise, that is the closest to the ideal [
+35
+].
+TOPSIS is an MCDM technique. It is also used to calculate the optimized value when responses are large in number. It is a technique for order of preference by similarity to the ideal solution. It was developed by Ching-Lai Hwang and Yoon in 1981 and, further, it was developed by Yoon in 1981 and Harang in 1993 [
+36
+].
+In this paper, there are three major responses, namely, force, surface roughness, and temperature. All the three selected response parameters come under the nonbeneficial category; therefore, all of them should be at their minimum. To minimize them, proper lubrication and cooling are required at the machining interface. Therefore, in the present paper, mono and hybrid nanofluids with an MQL setup is used for cooling and lubrication purpose. As per the experimental results, it is found that the response parameters give more promising results, as they aided in reducing cutting forces, tool temperature, and surface roughness with hybrid nanofluids, as compared to single nanofluids alone, as shown in 
+Table 4
+. 
+RSM is used as a multipurpose technique: it can help to create mathematical model to predict the response and it can also help to analyze the surface response through the response surface curve for better understanding the effect of a process parameter on a response parameter; it also helps in the analysis of variance of process parameters and it can also calculate the optimized parameter. In this paper, a second degree model is used for performing data analysis and to determine the significance of the model’s parameters, calculation of mean response, and to arrive at optimum operating conditions on the control variables that helps to achieve a maximum or a minimum response over a certain region of interest. Therefore, after getting response parameters (
+Table 4
+), the quadratic model has been developed for the analysis of variance to check the stability and significance of the response, as well as process parameters [
+37
+]. The mathematical model for response parameters is discussed in the equations given below:
+For alumina
+
+
+
+
+Cutting Force = −370 − 1.86v
+c
+ + 3378 f
+o
+ + 874 a
+p
+ − 49 np% − 0.0055 v
+c
+ * v
+c
+ − 13159 f
+o
+ * f
+o
+ − 418 a
+p
+ * a
+p
+ − 12.0 np%*np% + 5.5 v
+c
+ * f
+o
+ + 2.13 v
+c
+ * a
+p
+ − 0.067 v
+c
+ *np%+ 931 f
+o
+ * a
+p
+ + 354 f
+o
+ *np% − 13.9a
+p
+*np%.
+
+
+
+
+
+(1)
+
+
+
+
+
+
+
+Surface Roughness = 2.34 + 0.0069 v
+c
+ − 23.52 f
+o
+ + 1.68 a
+p
+ − 0.306 np% − 0.000001 v
+c
+ * v
+c
+ + 143.7 f
+o
+ * f
+o
+ − 0.169 a
+p
+ * a
+p
+ − 0.138 np%*np% − 0.0275 v
+c
+ * f
+o
+ − 0.00796 v
+c
+ * a
+p
+ − 0.00317 v
+c
+ *np%− 4.02 f
+o
+ * a
+p
+ + 6.38 f
+o
+ *np% − 0.234 a
+p
+ *np%
+
+
+
+
+
+(2)
+
+
+
+
+
+
+
+Temperature = −95 − 2.01 v
+c
+ + 2248 f
+o
+ + 433 a
+p
+ − 108.6 np%− 0.00094 v
+c
+ * v
+c
+ − 3501 f
+o
+ * f
+o
+ − 212.1 a
+p
+ * a
+p
+ − 16.6 np%*np% − 4.79 v
+c
+ * f
+o
+ + 1.896 v
+c
+ * a
+p
+ + 1.357 v
+c
+ *np% − 532 f
+o
+ * a
+p
+ + 153 f
+o
+ *np% − 17.5 a
+p
+ *np%
+
+
+
+
+
+(3)
+
+
+
+
+For alumina–graphene
+
+
+
+
+Cutting Force = −350 − 2.27 v
+c
+ + 5998 f
+o
+ + 646 a
+p
+ − 146 np%+ 0.0044 v
+c
+ * v
+c
+ − 22338 f
+o
+ * f
+o
+ − 351 a
+p
+ * a
+p
+ − 7.6 np%*np% − 7.6 v
+c
+ * f
+o
+ + 1.76 v
+c
+ * a
+p
+ + 0.32 v
+c
+ *np% + 1223 f
+o
+ * a
+p
+ + 292 f
+o
+ *np%+ 59 a
+p
+ *np%
+
+
+
+
+
+(4)
+
+
+
+
+
+
+
+Surface Roughness = 1.20 + 0.01201 v
+c
+ − 14.02 f
+o
+ + 0.988 a
+p
+ − 0.023 np% − 0.000020 v
+c
+ * v
+c
+ + 97.6 f
+o
+ * f
+o
+ − 0.038 a
+p
+ * a
+p
+ − 0.120 np%*np% − 0.0399 v
+c
+ * f
+o
+ − 0.00541 v
+c
+ * a
+p
+ − 0.00415 v
+c
+ *np% − 2.75 f
+o
+ * a
+p
+ + 4.39 f
+o
+ *np%− 0.143 a
+p
+ *np%
+
+
+
+
+
+(5)
+
+
+
+
+
+
+
+Temperature = 47 − 3.66 v
+c
+ + 1187 Feed + 399 a
+p
+ − 134.9 np%+ 0.00684 v
+c
+ * v
+c
+ − 4758 Feed*Feed − 171.3 a
+p
+ * a
+p
+ − 26.7 np%*np% + 4.54 v
+c
+ *Feed + 1.171 v
+c
+ * a
+p
+ + 1.230 v
+c
+ *np%− 459 Feed* a
+p
+ + 615 Feed*np% − 15.2 a
+p
+ *np%
+
+
+
+
+
+(6)
+
+
+
+
+The above mentioned regression model helps to predict the response parameters, i.e., cutting force, temperature, roughness. Now, the analysis of variance is required to analyze the significance and influence of the process parameters and their factors on response parameters. ANOVA was carried out at a 95% confidence level, which means the 
+p
+-value of the factors must be less than 0.05 to satisfy the condition of a significant factor criteria. The coefficient of determinant, i.e., R
+2
+ and adjusted R
+2
+, is also one of the parameters to show the significance of experimental results. A regression model helps to calculate the coefficient of the determinant, and it should be more the 80% because, for the experimental results, 80% is an acceptable limit [
+38
+]. The ANOVA analysis, describing the 
+p
+-value and percentage contribution of the response parameters in alumina and alumina–graphene enriched cutting fluid, is given in 
+Table 5
+ and 
+Table 6
+.
+In 
+Table A1
+, the analysis of the variance for force has been carried out to analyze the significance of the process parameters and their impact on the response parameter i.e., force. 
+Table A1
+ signifies that depth of cut has a major impression on cutting force, approximately 65.2841%, which is the highest among all of the process parameters and their factors. As discussed above, parameters having a p-value <0.05 are significant; therefore, velocity, feed, depth of cut, np% and velocity*velocity, velocity* depth of cut, feed*np% are the significant parameters for cutting force. The coefficient of determinant is also used to show the significance and accuracy of experimental results: if R
+2
+ and adjusted R
+2
+ is greater than 90% the output is acceptable. In the case of cutting force, R
+2
+ is 96.25% and adjusted R
+2
+ is 91.87%. In 
+Table A2
+, the analysis of the variance for roughness has been carried out, to analyze the significance of the process parameters and their impact on response parameter i.e., surface roughness. 
+Table 5
+ signifies that the feed rate makes a major impression on surface roughness, approximately 62.38%, which is the highest among all of the process parameters and their factors. The coefficient of determinant is also used to show the significance and accuracy of experimental results: if R
+2
+ and adjusted R
+2
+ is greater than 90% the output is acceptable. In the case of surface roughness, R
+2
+ is 95.76% and adjusted R
+2
+ is 90.81%. In 
+Table A3
+, ANOVA signifies that depth of cut makes a major impression on tool temperature, approximately 55.53%, which is the highest among all of the process parameters and their factors. The coefficient of determinant also use to show the significance and accuracy of experimental results, so, in the case of tool temperature, R
+2
+ is 95.52% and adjusted R
+2
+ is 90.29%.
+In 
+Table A4
+, an analysis of the variance for cutting force has been carried out to analyze the significance of the process parameter and their impact on cutting force. 
+Table A4
+ signifies that depth of cut makes a major impression on cutting force, it contributes approximately 68.977% which is the highest among all the process parameters and their factors. The coefficient of determinant is also used to show the significance and accuracy of experimental results: if R
+2
+ and adjusted R
+2
+ is greater than 90% the output is acceptable. In the case of surface roughness, R
+2
+ is 94.96% and adjusted R
+2
+ is 89.09%. In the case of 
+Table A5
+, the feed rate shows the major impact on surface roughness. It contributes approximately 57.547%, which is the highest among all the process parameters and their factors; while the coefficient of the determinant of experimental calculated R
+2
+ as 95.60% and adjusted R
+2
+ as 90.47%. In 
+Table A6
+, ANOVA signifies that the depth of cut makes a major impression on tool temperature, approximately 48.52%, which is the highest among all of the process parameters and their factors. The coefficient of determinant is also used to show the significance and accuracy of experimental results, so, in the case of tool temperature, R
+2
+ is 93.53%and adjusted R
+2
+ is 85.99%%.
+As ANOVA signifies the impact of process parameters on response parameters, similarly, the response surface curve shows the variation in response parameters by varying input. 
+Figure 3
+ represents the response surface curve at variable feed, depth of cut, and nanofluid concentration for Al
+2
+O
+3
+ nanoparticles. 
+Figure 3
+a,b shows variation in forces, with 0.08 feed rate, 1.5% nanofluid concentration and 0.6 depth of cut force as minimum. The reduction in cutting force can be attributed to the rolling effect produced by the spherical size of alumina, which possesses high strength, hardness and delivers enough abrasive resistance in the process of friction and aids in minimizing the frictional coefficient in the zone of contact [
+39
+]. 
+Figure 3
+c,d explains variation in surface roughness, at maximum nanofluid concentration and minimum feed rate, depth of cut surface roughness is minimum as alumina resulted in minimizing the adhesion between the tool insert and workpiece and forming a tribo film, thus resulting in improved surface quality [
+40
+]. Similarly, 
+Figure 3
+e,f, shows the responses plot for temperature, and, in both cases, at maximum nanofluid concentration and minimum feed rate responses are minimum.
+As discussed in the case of alumina nanofluid, similar results are shown in the case of hybrid nanofluid (alumina–graphene). 
+Figure 4
+ shows the variation in responses (force, surface roughness, and temperature) by varying input parameters. 
+Figure 4
+a, b shows the response surface curve for cutting force, at the minimum value of feed rate, depth of cut, and maximum nanofluid concentration. The reduction in cutting force is more in the case of alumina–graphene hybrid nanofluids machining as compared to alumina nanofluids due to the exfoliation of the sheet like structure of graphene because of the shearing action produced by the chip on the tool rake face. In 
+Figure 4
+c–f, surface roughness and temperature, at a 0.08 feed rate, 1.5% nanofluid concentration, and 0.6 depth of cut force is minimum. After analyzing both the figures, force, surface roughness, and temperature increase, while the increase in depth of cut and feed at minimum nanofluid concentration and decreases with a decrease in depth of cut and feed at maximum concentration [
+37
+].
+MOORA is used for selecting the best optimum parameters. 
+Table A7
+ and 
+Table A8
+ contain the decision matrix, normalized decision matrix, and assessed value for alumina and alumina–graphene based nanofluid results. The decision matrix contains all the response parameters, such as force, surface roughness, and temperature. Normalization of the matrix is performed to convert them into dimensionless quantities. After normalization of the decision matrix, it will be further multiplied with the weight factor and convert the matrix into the weighted normalized matrix; after that, assessment values (B
+i
+) for the considered alternatives were determined and ranking them in descending order, the maximum value is ranked as the best (rank 1) and the minimum is ranked as the worst (rank27) [
+41
+,
+42
+]. The combined analysis of different MCDM techniques and the respective ranks obtained from the decision-making criteria used in mono and hybrid nanofluid cutting fluid based machining is mentioned in 
+Table 7
+ and 
+Table 8
+.
+VIKOR is a multicriteria optimization technique used for selecting the best optimum parameters in a conflicting and nonconflicting response. 
+Table A9
+ and 
+Table A10
+ contain the decision matrix, normalized decision matrix, and VIKOR index for alumina and alumina–graphene based nanofluid results. The decision matrix contains all the response parameters, such as force, surface roughness, and temperature. Normalization of the matrix is performed to convert them into dimensionless quantities. After normalization of the decision matrix, it will be further multiplied with the weight factor and convert the matrix into the weighted normalized matrix, at the end, the VIKOR index was determined and they were ranked in ascending order: the minimum VIKOR index value is ranked as the best (rank 1) and the maximum VIKOR index is ranked as the worst (rank27) [
+43
+,
+44
+,
+45
+].
+TOPSIS analysis is used to predict ideal solutions in multiresponse parameters. 
+Table A11
+ and 
+Table A12
+ contain the decision matrix, normalized decision matrix, and relative ideal solution for alumina and alumina–graphene based nanofluid results. Decision matrices contain response parameters such as force, roughness, and temperature. After forming a decision matrix, normalization of the matrix is required to convert them into dimensionless quantities. Afterward, the weighted normalized matrix has been formed by multiplying the weight factor with the normalized matrix. Next, the positive ideal solution (s+) and negative ideal solutions (s−) were calculated. Ranking of the ideal solution has been assigned by arranging them in descending order [
+46
+,
+47
+,
+48
+,
+49
+].
+The optimum results obtained from all four techniques are summarized in 
+Table 9
+. In all four techniques, RSM gives the minimum optimized results, whereas the rest of the three techniques give similar optimum results. RSM gives the optimum output value for the new input parameters, which are different from the input parameters mentioned in the design of the experiment; whereas the MCDM techniques give ideal results from the 27 experimentals used in this paper [
+50
+,
+51
+]. 
+The methodology used in this paper, of using multicriterion decision-making techniques in selecting the optimum parameters while performing turning operations with mono and hybrid nanofluids enriched with cutting fluid, is novel in this field. As nanofluids are very costly, their use in an efficient manner needs to be studied. The present study can help researchers and industries in choosing the optimum parameters while machining AISI 304 steel, which has wide applications. As per the experimental results, hybrid nanofluids seem to be more effective than a single nanofluid. This paper deals with three response parameters—force, surface roughness, and temperature—all of which are nonbeneficial; therefore, they should have the minimum value. After comparing the results, the following conclusions are made and summarized below:
+The use of hybrid nanofluid (alumina–graphene) resulted in an average reduction of response parameters by approximately 13% in cutting forces, 31% in surface roughness, and 14% in temperature, when compared to alumina nanofluid.
+It can be seen that the use of nanoparticle concentration in a lesser amount resulted in better surface characteristics and resulted in the lowering of cutting forces.
+Analysis of variance revealed the influence of input parameters on the response parameters. In both the cases, i.e., single and hybrid nanofluid, depth of cut showed a major impact while calculating force and temperature. The contribution of the depth of cut is approximately 65.81% and 57.63% in the case of single nanofluid while in the case of hybrid the % contributions are 68.38% and 51.14%, respectively. However, in the case of surface roughness, the most influenced parameter is the feed rate: its contributions in the cases of single and hybrid nanofluid are 63.18% and 58.47%, respectively.
+Response surface methodology is used for optimizing the response. As per RSM, the best process parameters for optimum response in the case of Al2O3 are 86.667 m/min velocity, 0.08 mm/min feed rate, 0.6 mm depth of cut, and at 1.5% of nanoparticle concentration. In the case of alumina–graphene, the suitable parameters for optimum results are 110.909 m/min velocity, 0.08 mm/min feed rate, 0.6484 mm depth of cut, and a nanoparticle concentration of 1.5%, respectively.
+The multicriteria decision-making techniques are used, such as MOORA, VIKOR, and TOPSIS for nonconflicting, nonbeneficial responses at 0.5 weight factor. According to the MCDM techniques, the best input parameter for optimum response is at 90 m/min velocity, 0.6 mm depth of cut, 0.08 mm/min feed rate, and 1% nanoparticle concentration.
+All three MCDM techniques showed similar responses, at a constant or fixed weight factor of 0.5.
+The use of hybrid nanofluid (alumina–graphene) resulted in an average reduction of response parameters by approximately 13% in cutting forces, 31% in surface roughness, and 14% in temperature, when compared to alumina nanofluid.
+It can be seen that the use of nanoparticle concentration in a lesser amount resulted in better surface characteristics and resulted in the lowering of cutting forces.
+Analysis of variance revealed the influence of input parameters on the response parameters. In both the cases, i.e., single and hybrid nanofluid, depth of cut showed a major impact while calculating force and temperature. The contribution of the depth of cut is approximately 65.81% and 57.63% in the case of single nanofluid while in the case of hybrid the % contributions are 68.38% and 51.14%, respectively. However, in the case of surface roughness, the most influenced parameter is the feed rate: its contributions in the cases of single and hybrid nanofluid are 63.18% and 58.47%, respectively.
+Response surface methodology is used for optimizing the response. As per RSM, the best process parameters for optimum response in the case of Al2O3 are 86.667 m/min velocity, 0.08 mm/min feed rate, 0.6 mm depth of cut, and at 1.5% of nanoparticle concentration. In the case of alumina–graphene, the suitable parameters for optimum results are 110.909 m/min velocity, 0.08 mm/min feed rate, 0.6484 mm depth of cut, and a nanoparticle concentration of 1.5%, respectively.
+The multicriteria decision-making techniques are used, such as MOORA, VIKOR, and TOPSIS for nonconflicting, nonbeneficial responses at 0.5 weight factor. According to the MCDM techniques, the best input parameter for optimum response is at 90 m/min velocity, 0.6 mm depth of cut, 0.08 mm/min feed rate, and 1% nanoparticle concentration.
+All three MCDM techniques showed similar responses, at a constant or fixed weight factor of 0.5.
+The present paper discusses machining performance using hybrid nanofluids. Here, graphene was used for developing hybrid nanofluids. Though it gave desirable results when compared to alumina, it is costly, so there is a need to find a cheaper alternative for graphene for hybridization, so that machining cost can be minimized. Moreover, in this research, both the nanoparticles (alumina–graphene) were mixed in a fixed mixing ratio of 90:10. There is a need to use different mixing ratios and further optimize the mixing ratio so that the optimum value can be obtained. In the future, further research can be performed on the optimization of MQL parameters. Furthermore, work on the hybridization of MCDM techniques can also be done. The thermal modeling of the cutting tool in multiphase using hybrid nanofluids is yet to be explored.
+Conceptualization, V.D. and A.K.S.; methodology, V.D.; software, V.D. and A.K.S.; validation, A.K.S., V.D. and P.V.; formal analysis, V.D.; investigation, V.D.; resources, A.K.S. and V.D.; data curation, V.D. and A.K.S.; writing—original draft preparation, V.D.; writing—review and editing, V.D., A.K.S., D.Y.P., K.G. and D.C.; visualization, V.D. and A.K.S.; supervision, A.K.S.; project administration, A.K.S. and V.D.; funding acquisition, D.Y.P., K.G. and D.C. All authors have read and agreed to the published version of the manuscript.
+This research received no external funding.
+Not applicable.
+Not applicable.
+The authors declare no conflict of interest.
+Publisher’s Note:
+ MDPI stays neutral with regard to jurisdictional claims in published maps and institutional affiliations.

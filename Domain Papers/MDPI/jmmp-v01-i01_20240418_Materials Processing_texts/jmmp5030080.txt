@@ -1,0 +1,499 @@
+This paper presents a brief introduction to competition-driven digital transformation in the machining sector. On this basis, the creation of a digital twin for machining processes is approached firstly using a basic digital twin structure. The latter is sub-grouped into information and data models, specific calculation and process models, all seen from an application-oriented perspective. Moreover, digital shadow and digital twin are embedded in this framework, being discussed in the context of a state-of-the-art literature review. The main part of this paper addresses models for machine and path inaccuracies, material removal and tool engagement, cutting force, process stability, thermal behavior, workpiece and surface properties. Furthermore, these models are superimposed towards an integral digital twin. In addition, the overall context is expanded towards an integral software architecture of a digital twin providing information system. The information system, in turn, ties in with existing forward-oriented planning from operational practice, leading to a significant expansion of the initially presented basic structure for a digital twin. Consequently, a time-stratified data layer platform is introduced to prepare for the resulting shadow-twin transformation loop. Finally, subtasks are defined to assure functional interfaces, model integrability and feedback measures.
+The manufacturing industry in high-wage countries is exposed to strong competition and constant pressure for innovation. In this context, digitization promises efficiency gains and technical development, while networking of relevant information (e.g., workpieces, machines, tools, etc.) is seen as an enabler for both [
+1
+]. Unfortunately, this potential is frequently approached by a serial implementation of company-specific solutions, which limits flexibility, general validity and transferability. Either way, the approach to acquire and analyze (existing) data from established process chains to gain technological knowledge is promising [
+2
+]. Either way, the representativeness of the data is decisive for success, which means that the digital twin (cf. 
+Section 2
+) plays a key role by definition. In addition, there is an increasing variety of products, shortened product development cycles, increasing quality requirements and permanent cost pressure, which is reflected by the component and its digital twin too. This transforms the digital twin into a resource, which can be actively involved in the trade-off between deadlines, product quality, and resource efficiency in order to achieve the best possible usage of production resources (e.g., machine tool, tools, etc.).
+Consequently, there is no alternative to the integration of all available technical and technological information in order to be economically successful in a competitive market environment. In fact, with the increasing application of industry 4.0 principles in the near future and the advancement of globalization, production processes will have to change fundamentally [
+3
+]. This implies the increasing technical possibility to acquire process-related (actual data) and planning-related (target data) data at a low cost during production planning and the subsequent machining [
+4
+]. Nevertheless, the challenge is to merge the data into a uniform representation in terms of a digital twin what means to, e.g., map relevant process parameters discretely and synchronously and thus link the physical and virtual worlds. This requires adequate methodical procedures, being explained and discussed in the first part of the paper. The second part of the paper describes the shop floor implementation in a machining company.
+The information model is the heart of standardized and structured data acquisition and covers both the planning data and the process data. (cf. 
+Section 3
+). Caesar et al. [
+5
+] subdivide their information into five data categories (workpiece data, process data, technology data, machine tool data and tool data) which must be made available for the digital representation of the machining process terming the result “digital shadow”. This distinction is made by the authors [
+5
+] since the provision of these five data types only creates the prerequisite for a real-time-capable evaluation while the feedback of derived process knowledge is missing or at least not up to date. Either way, the “digital shadow” is seen as an essential part of the physical/virtual transformation in machining (
+Figure 1
+). In fact, if implementing different types of models, such as analytical models, empirical models, data-driven models being deepened here in chapter 4, a complex machining process can be represented by a “digital twin” based on the digital shadow input. For digital twins of machining processes, it is particularly important that the “digital (process) twin” not only represents the physical object—respectively the subtractive removed parts of this object (cf. 
+Section 5.3
+)—but also the machine tool, the machining process as well as the tools and their involvement and interaction in the form of process parameters [
+5
+].
+Hence, reaching an actual digital twin of the subtractively removed area is a major challenge and requires specific and realistic calculation and process models what is discussed in particular in chapter 4. Nevertheless, the process integration of any derived information in the form of feedback affects the digital shadow (cf. 
+Section 5.4
+ or 
+Section 5.6
+) which means that the digital shadow is not necessarily a rigid, unchangeable record but a dynamic object instead (
+Figure 1
+).
+The information model is an abstract representation of real objects as well as their properties and interrelationships. The creation of the information model requires expert knowledge and a holistic understanding of process chains in order to be able to decide which information is necessary and relevant and to oversee structuring and classification of what can be expediently shown in case studies [
+6
+]. The process of creating an information model requires a structured approach while firstly defining the scope covering the necessary data and required information of, e.g., a milling process. Obviously, this task is inextricably linked with the process models implemented downstream in terms of input variable provision. Moreover, the scope definition includes an interface analysis of each individual data source (e.g., tool data management system) and a boundary condition assessment (e.g., type of data format, sampling rate, etc.) strongly determining the data acquisition after completion [
+7
+].
+Either way, the result is a structogram without logical contradictions based on internal necessities as well as interdependencies using, e.g., an ontology. However, for the creation of a digital twin of a machining process the interoperability between the process and planning data and its semantic description is an essential aspect for which, unfortunately, there is currently no standardized procedure available. Schroeder et al. [
+8
+] presented an information model that supports the simple exchange of data between heterogeneous systems in the context of cyber-physical systems (CPS). Similar approaches are also presented by Alam et al. [
+9
+] and Kao et al. [
+10
+]. Current research activities end to refer to individual components of the production environment, e.g., the production machine (Cus et al. [
+11
+], Moreno et al. [
+11
+], DebRoy et al. [
+12
+]) or even the entire factory (Uhlemann et al. [
+13
+], Siegert et al. [
+14
+]). However, the focus of this research is not on information modeling of digital twins of machining processes. Caesar et al. [
+5
+], in turn, provide a detailed description of an information model for a 3-axis milling process meeting the formulated requirements. In the context of feedback integration (cf. 
+Section 2
+), the information model and data models are closely connected (
+Figure 1
+), which leads to the question in which form or schema data and information can be filed and stored while providing the possibility of adding further data in a traceable manner. This means, which type, e.g., a relational database, object database, etc., is most suitable for the specific area of application [
+7
+].
+Moreover, machining processes are highly dynamic such as the process data (e.g., currents of the axis drives, actual positions, etc.) thus being acquired at a sufficiently high sampling rate (up to input–process–output (IPO) cycle of the numerical control (NC) in order to realize the necessary level of detail which, in turn, affects the storage question too. Consequently, large amounts of data have to be stored which requires appropriate formats and must reflect the structure of the information model. A format that fulfills both requirements is the HDF5 format, developed by the National Aeronautics and Space Administration (NASA) [
+15
+]. In addition, it must be possible to read out data performantly and allow porting in order to store and reuse the resulting digital twins.
+As mentioned before the process models are of crucial importance for obtaining a digital twin (
+Figure 1
+). The acquired planning and process data, on the other hand, represent the input for the (different) process models, which means both arise in mutual consideration in order to represent, e.g., tool-workpiece and/or process-machine interaction. The pure consideration of physical effects in the context of specific models (
+Figure 2
+), on the other hand, does not inevitably correlate with the machining result because singular effects are frequently super positioning. This means all data and information must be linked until it describes the component with sufficient agreement finally achieving the status of the digital twin, reflecting the entire process chain. Obviously, it is desirable to achieve this in real-time in order to enable, e.g., feedback with little timely offset. Nevertheless, currently, it is not possible to adaptively control a machining process in real-time based on a digital twin. On the other hand, calculation and visualization in a magnitude of 1 s are achievable but require great computing effort [
+16
+]. The reduction of this latency towards the IPO cycle of the NC is the subject of current research [
+17
+] and will certainly decrease.
+The models implemented here, however, aim to describe physical effects in a cause–effect relationship such as the calculation of the cutting force (cf. 
+Section 5.4
+) with a time offset of several minutes (depending on the precision). In the case of a (physical) machining process more preference is given to analytical-physical models, for example, detailed cutting force models are available (cf. 
+Section 5
+) while providing a maximum degree of agreement with the physical result [
+18
+].
+Furthermore, there are statistical and data-driven models [
+19
+] that mathematically link to a measured value and a location-specific event (e.g., chatter marks) are suitable too. The latter models can be supplied with data from databases while causalities can be made visible via, e.g., random or fixed correlations. In fact, data-driven models are well suited to determine individual features (e.g., surface defects) linking them to a cause (e.g., tool wear) via experience-based knowledge as part of the digital twin. Either way, the result of this methodical approach in terms of accuracy and resolution strongly depends on the quality of the applied data. If integrating several models, as required to achieve a digital twin of machining processes (cf. 
+Section 2
+), requires functional interfaces [
+16
+] in order to depict interactions realistically. Cutting force and regenerative chatter-induced path deviations, for example, are such accumulated errors that can result in a target-actual-deviation if compared to the component specification in terms of planning data.
+However, this shall emphasize the great potential of digital twin-based knowledge [
+20
+] that will expand existing value chains by an intangible resource which is specified in the following.
+This section deals with machine and path inaccuracies, which are determined in reference to 
+Figure 1
+, based on the NC information. The acquisition of the current state actual positions via the NC is highly accurate, especially if acquired via a direct position measuring system of the feed axes. Moreover, the actual position can be provided as high-frequency information. Nevertheless, there is a complex mechanical chain with finite stiffness between the feed axes and the tool center point (TCP) which leads to deviations. Depending on the configuration of the machine tool and the implemented process, these deviations can be significant [
+21
+]. Consequently, these deviations must be quantified using suitable models thus being an inherent part of the digital twin. In order to evaluate these dynamic path deviations of the particular machine tool, a holistic simulation of the structure and drive control is indispensable [
+21
+,
+22
+]. Firstly, the dynamic behavior of the mechanics is determined and transferred into a state-space representation [
+23
+]. Secondly, the mechanical state-space representation is enhanced by the digital drive control of the machine tool following the well-known cascaded structure approach combined with digital block simulation (DBS).
+Following this procedure, an integrated calculation of mechanics and digital drive control can be achieved [
+23
+] using the corresponding target values from the NC. In this way, target-actual deviations are causally enriched via the calculation of command variables and derived drive manipulated variables with the mechatronic model, reflecting movement-induced forces and moments. In addition, disturbance variables from the process—for example, spindle load readout and feed axes back transformation—can optionally be applied to the TCP node too. Following this procedure, the actual-target deviation at the direct position measuring systems as well as the actual position of the TCP can be provided taking into account the dynamic machine behavior (
+Figure 2
+).
+The calculated TCP node can be directly mirrored with the information read out from the NC and thus serve as an independent parameter for evaluating the axis deviations. In addition, this results in an information multiplication (cf. 
+Section 4
+), which adds to the nominal/actual deviations at the direct position measuring systems of the feed axes, supplements the deviations of the mechanics up to the tool interface for the domains of static and dynamic machine behavior (
+Figure 2
+). The result is the actual path movement at the TCP. In this calculation, the other process models (cutting force, etc.) can be integrated in the sense of linking the process models with each other.
+The thermal stability of machine tools is crucial for the manufacturing of high-quality parts since it is estimated that about 75% of all manufacturing errors can be attributed to thermal effects [
+24
+]. The major reason for such thermally induced effects is movement-based losses in machine tool assemblies, which are mainly depending on the operational state of the machine tool. The high frequent axis position information being part of the digital twin allows the time discreet determination of a loss emitting assembly based on the actual operational state. In addition, the process forces (cf. 
+Section 5.4
+) and the actual mechanical chain representation (cf. 
+Section 5.1
+) are valuable input variables to obtain the acting forces at the loss-causing assembly. In fact, loss models can be applied (cf. 
+Figure 1
+) using this information to estimate the heat generation in assemblies such as bearings [
+25
+], ball screw drives [
+26
+], or motors [
+27
+]. This allows estimating temperatures in the machine tool based on task-specific, locally resolved losses based on finite element and structural models. The later models mimic the thermal mechanisms of the real machine tool [
+28
+,
+29
+] and thus contribute to the integral digital twin.
+Nevertheless, the simulation requires the discrete modeling of the entire machine tool, or at least parts of it, to allow heat flow description across thermal interfaces including the parameterization of heat transfers including transient material properties. This means the power losses induced temperature changes are calculated within a fixed interval while considering conduction, convection and radiation of heat. Furthermore, the results of these calculations are included in deformation calculations reflecting the actual temperature fields and their change over time. Consequently, the results of these calculations are used to determine the thermally induced TCP deviation as illustrated in 
+Figure 3
+ (cf. 
+Figure 2
+). The proportional TCP deviation, again, influences the component accuracy [
+29
+], which makes it a part of the digital twin that can be compared in super positioned form with the physical processing result.
+The complete procedure, applicable as a standalone solution or model cascade application (
+Figure 1
+), includes loss estimation, thermal simulation and thermo-elastic deformation as illustrated in 
+Figure 3
+. The integral digital twin provides a suitable framework to forecast thermo-elastic deformations since representative process data are provided by flanking models, which improves the quality of the thermal simulations.
+The high-frequency position information read out from the NC and/or the calculated actual position information of the TCP (cf. 
+Section 5.1
+), are input variables for the time-discrete determination of the geometric tool engagement parameters. Hence, a material removal simulation can be performed, if these data are additionally enhanced by kinematic information as well as tool and workpiece data. As a result, technological information, such as the tool engagement angle, the cutting depth, are calculated based on actual process data. The milling application implies a continuously changing tool-engagement that requires a corresponding coordinate transformation from the actual axes position to the TCP reflecting the machine kinematics provided in the machine data class (cf. 
+Section 2
+).
+There are a number of different methods for calculating tool-workpiece interaction as well as material removal [
+30
+]. These methods are either based on spatially partitioned representations, volume-oriented representations or analytical calculation models while being extensively discussed in [
+30
+]. Nevertheless, considering accuracy requirements and kinematic complexity from state-of-the-art cutting processes preference is given to simple visualization, e.g., in an as-milled CAD file, which makes multi-dexel models particularly suitable to describe the tool-workpiece-interaction [
+31
+] which are a part of the digital twin. Standardized parameters of the tool engagement, e.g., tool engagement angle or cutting depth, are derived from the actual path (cf. 
+Section 5.1
+) projection. The tool is segmented in order to determine the local engagement while the local engagement, in turn, is resolved segment by segment. Obviously, this approach requires an up-to-date description of the tool including diameter, the number of teeth, cutting edge angle, etc., but also the state of wear. In consequence, relevant tool engagement variables such as cutting angle, average chip thickness, engagement width, etc. can be calculated (
+Figure 4
+) for the entire milling process based on documented state change intervals and added to the digital twin [
+32
+].
+The specific tool information (e.g., diameter, number of teeth, cutting edge angle, etc.) serves as input information for the cutting force calculation or the location-specific process stability determination [
+33
+]. The resulting virtual workpiece, based on the output of the material removal simulation, considers the actual position of the TCP (
+Figure 2
+), the tool displacement induced by the machining forces (
+Figure 4
+) as well as wear (constant between measurements). The result, however, is a spatially discrete mapping of a share of the total path deviation. The total path deviation, in turn, can be approached by the integration of further models (e.g., surface location error) until complete correspondence with the real component, which on the digital side adds up to the complete digital twin.
+On the basis of the determined geometric engagement parameters of the tool-workpiece interaction, which reflects the position of the actual TCP, the tool displacement and the tool wear, the effective cutting forces can be precisely calculated [
+34
+] what is secured by suitable measurement close to the cutting edge [
+35
+]. There are different methods for the determination of the cutting forces on the basis of the actual planning and process data [
+36
+]. These methods differ in terms of their informative value and suitability as a specific process model that needs to be weighed on a case by case basis [
+37
+]. Nevertheless, the method kit includes empirical cutting force models such as the linear model approach from Altintas [
+38
+] or the exponential model approach from Kienzle [
+39
+]. The size and shape of the chip cross-section (
+Figure 3
+) as an explicitly stated influencing variable, on the other hand, is used across all models to determine the uniform empirical representation of the cutting force [
+40
+]. All other parameters of the cutting process, such as the angle at the cutting edge, cooling lubricant volume flow, are used implicitly by model-specific constants (e.g., cutting force coefficient, etc.) [
+41
+]. These constants must be determined experimentally within the model-specific scope and do not represent a specific workpiece characteristic but rather summarize physical relationships and effects, which makes exact modeling an enormous challenge [
+36
+]. In practice, model uncertainties are either accepted or compensated for using statistical methods [
+42
+]. The main advantages of these cutting force models are their linkability with the material removal simulation results towards a temporally and spatially resolved cutting force along the toolpath trajectory (
+Figure 4
+). For this purpose, Lacalle et al. [
+43
+] developed a method and implemented this for the machining of thin and complex components.
+Another determination method for the effective cutting forces and feed forces are based on the current commands of the feed or spindle drive motors [
+44
+]. A corresponding model captures losses, induced by the structural dynamic chain and/or distortions between the effective point and the motor, in order to calculate the tangential part of the acting cutting force using the torque-forming current obtained in the process [
+45
+]. This calculation is performed with a machine-specific calibrated leakage current model [
+45
+] to achieve the leakage current for the complete speed range of the spindle. This procedure, which is also described in detail by Hänel et al. [
+46
+], is characterized by its simple applicability, low parameterization effort and high accuracy which ensures high practical applicability. In addition, this approach can be transferred to determine radial and axial force components using the feed axes data of the machine tool [
+4
+]. Nevertheless, modeling and calibration are significantly more complex for these cutting force components and associated with considerable efforts. Additionally, the calculation of these cutting force components is based on the time and location discrete values of the feed direction angle with respect to the machine reference system, or the current effective components of the feed axes, respectively. As a result, there is a non-linear increase in complexity when performing these calculations for the 5-axis milling process instead of using, e.g., 3-axis. The advantage of this method goes beyond the calculation of effective cutting forces. In fact, the main advantage lies in the ability to integrate these results in the digital shadow while using the in situ process data for the determination of the specific cutting force coefficients (e.g., Altintas, Kienzle) which is described in detail by Arnold et al. [
+47
+]. In this way, the input parameter for the below described empirical force calculation is adapted or extended by corresponding process data, which improves the accuracy of the cutting force coefficients. Hence, it should be emphasized that the digital shadow is not a static element—the opposite—the digital shadow continuously evolving, being enriched with calculated process information (cf. 
+Section 2
+). Furthermore, the linkage of models (e.g., material removal, cutting force, leakage current, etc.) illustrates the systematic approach towards an integral digital twin of the machining process being assest by comparison with the component (
+Figure 5
+).
+Chatter is the most important destructive factor in machining, being induced by the self-excited vibration in the machining system [
+48
+]. In fact, regenerative chatter is the most common phenomenon during cutting processing, caused by the non-coincidence of the vibrational displacement between the currently engaged and previously engaged tool tooth. The possibility of avoiding chatter mainly depends on the result of the stability lobe diagram (SLD) being achieved by solving the dynamic equations [
+36
+]. The construction of the SLD requires the frequency response function of the machining system composed of the tool and workpiece dynamics, i.e., establishing the SLD along the machining tool path. A digital twin of the machine tool enables the user to align virtual and physical machining scenarios, which could bring significant advantages for stability prediction. This shall be emphasized in 
+Figure 6
+, where the modal parameters of the tool and workpiece are introduced as part of data acquisition while contributing the digital twin for machining processes. Moreover, the modal parameters are updated after every process model integration loop (
+Figure 5
+).
+Here it shall be emphasized that the frequency variation of the workpiece becomes more significant in the case of continuous material removal [
+49
+]. In this case, the SLD prediction algorithm enables the user to integrate the cutting force coefficients, the dynamic parameters at the actual tool position, the modified cut-in and cut-out angles into the chatter prediction model. The vibrational displacement at the actual tool position is recorded and stored in real-time. In connection with the described models below (cf. 
+Section 5.3
+ and 
+Section 5.4
+), it will be possible to calculate the dynamic cutting forces which enable the calculation of uncut chip thickness, tool deflection, cut-in and cut-out angles as well as vibration displacement instantaneously while this data is then updated again. Consequently, the stability boundary can be obtained in real-time using previously mentioned data and the chatter metric time-domain criterion [
+50
+]. Hence, the cutting process stability can be visualized (
+Figure 6
+) such as the TCP–displacement (
+Figure 2
+), the tool engagement (
+Figure 4
+) and so on which makes a further contribution to the achievement of the digital twin. Nevertheless, it is not trivial to predict if chatter occurs under the given machining situation (cf. 
+Figure 4
+ and 
+Figure 5
+) from a simple analysis of two adjacent teeth and consideration of known chatter mechanism. Therefore, all the relevant time instants data (three, four, five or even more time instants) from the start of the NC program are recorded and analyzed. By continuously updating this data, the chatter model not only contributes to the digital twin, in return, but the chatter analysis also benefits from the interlinking with other models (cf. 
+Figure 2
+) which results in a broader perspective for comprehensive chatter analysis.
+As already mentioned in 
+Section 2
+, the digital process representation is inherently limited to the subtractive removed area. Material data can be discretized in envelop layers. Iterative machining approaches [
+51
+], sensory tools [
+35
+] and an appropriate selection of the process parameters can increase the number of layers and enrich the data contained. This is understood as a sensitive milling process that helps to detect the material properties of the raw part in order to take measures if necessary. Obviously, this is of greater importance when looking at raw parts made of special materials that have a complex thermo-mechanical manufacturing route. Examples of this are multi-material raw parts [
+52
+] or parts with pronounced residual stresses [
+53
+]. Either way, the material behavior cannot be predicted trivially in both cases. Consequently, spatially discrete resolved process data enables the identification of graded material properties in reference to the workpiece coordinate system (
+Figure 7
+).
+Either way, the machining data acquisition ends at the phase boundary. In addition, a plethora of techniques can be used to obtain morphological, chemical, crystallographic or performance data across a range of length scales [
+54
+] resulting in a sub-surface data layer that can be linked with the machining data in terms of correlative characterization. In addition, there are non-destructive testing methods such as computed tomography [
+55
+] or the investigation by means of neutron radiation [
+56
+] which enable the determination of spatially resolved material properties in the sub-surface area. Finally, this concept leads to a digital material twin [
+57
+], which also describes the non-machined area integrally. The material digital twin, in turn, can then be integrated as workpiece data (
+Figure 7
+).
+In the previous sections, several models were presented that were introduced to provide digital representations of the machine tool, the tool, the machining strategy of the component including relevant material parameters. Hence a digital twin can be achieved through superposition and interaction of the individual models, which, if it is sufficiently complete, provides a match with the resulting component. In accordance with the approach in the models, process data must be recorded, linked, combined with mathematical correlation and, again, assigned to the corresponding position in order to reflect technological [
+58
+], tool- and material-related [
+59
+] and machine-related [
+60
+] surface quality determining influences [
+61
+]. This is a particularly expedient approach since in-process measurements, in turn, only come into use for important molten elements due to the lack of robustness (e.g., due to contamination of the measuring mimic by coolant), process time extension and the additional costs [
+62
+]. In fact, the performance of offline measurement is widely limited to the final component state which implies a loss of information about the intermediate states which, is essential in order to learn from the process results while machining [
+63
+]. Obviously, the basis for substantial data-based conclusions is a precise match of the macroscopic (surface) parameters, such as first-degree shape deviations, and microscopic parameters in terms of 2nd-degree deviations (waviness) as well as 3rd to 4th-degree deviations in roughness between the component and its digital representation (
+Figure 8
+) [
+64
+].
+Nevertheless, the model-based representation of the as-milled surface is not only an additional benefit in order to, e.g., achieve a first-time-right result for a lot of size one machining tasks by, e.g., gradually approaching the target geometry—in opposite, it is the basis for cost-effective quality control and documentation [
+65
+]. Either way, Benardos et al. [
+59
+] categorize four types of model-based approaches to illuminate interactions from different perspectives. The first category includes functional relationships between parameters of the machining process and surface parameters classified as models of machining theory (I) [
+66
+]. This means that the interaction between tool and material (cf. 
+Section 5.3
+) is described by an exact description of geometric and kinematic boundary conditions (cf. 
+Figure 2
+ and 
+Figure 3
+) [
+67
+]. The second category includes the relationship between input parameters from technology, material, tool, machine tool, and process (
+Figure 2
+) and a cause’s independent description of the surface (cf. 
+Figure 8
+) [
+68
+] by the means of characteristic values, on the other hand, is classified as an experimental investigation approach (II) [
+59
+]. The class of design of experiment (DoE) approach (III) models [
+69
+] is a simplified form addressing correlations under controlled study conditions with the focus on reduced effort. The last class groups artificial intelligence approaches (IV) [
+70
+,
+71
+] which are often difficult to describe from a mathematical perspective.
+This fourth class was particularly created to identify reliable correlations between input and output parameters in a data-driven manner even without in-depth knowledge of the underlying physical and kinematic relationships [
+72
+]. Lu [
+73
+] provides a similar categorization, sub-grouping into pure models (I), comparable with physical models of machining theory (cf. 
+Figure 1
+), and signal- and artificial intelligence-based approaches (II). The latter takes into account the origin of the datasets been used to describe the surface quality. Examples of such sources are optics and computer vision, ultrasonic, acoustic emission and vibration-based methods whose measured values, must be made available in a spatially resolved manner. This means the indirect determination of surface quality parameters arises partly from the use of the utilization of the digital shadow data described in this paper in order to, e.g., determine shape deviations of the 1st and 2nd degree. The basis for this is the appropriate modeling of the tool shape and tool properties (cf. 
+Figure 3
+) as well as the knowledge of the actual technological parameter settings (e.g., tooth feed, velocities, etc.) as approached in 
+Figure 4
+. In fact, tool engagement simulations (cf. 
+Section 5.3
+) provide high-resolution chip characteristics based on in-depth force models (cf. 
+Section 5.4
+) which, in turn, are used as input for sophisticated tool displacement models [
+74
+], which results in a surface error location (SLE) [
+75
+].
+Either way, the result is illustrated in 
+Figure 8
+. Nevertheless, shape deviations of the 3rd to 4th degree, on the other hand, cannot be determined with comparable accuracy. The reasons for this [
+76
+] are seen in a rather unsuitable signal-to-noise ratio of the machine sensors, a lack of knowledge regarding the locally discrete material properties (cf. 
+Section 5.6
+) as well as the discontinuous monitoring of tool wear as already discussed in 
+Section 5.3
+. Nevertheless, there are also approaches pointing in this direction such as the surface roughness models introduced by Bauer et al. [
+77
+] or Teicher et al. [
+78
+] as well as the additional surface roughness models from Brammertz [
+79
+] or Brown [
+80
+]. Either way, the lower resolution range for 3rd
+-
+degree shape deviations is currently seen in the magnitude of more than 30 µm, if the calculation is based on the digital shadow data. A better resolution, on the other hand, is only achievable under optimal conditions (e.g., turning of easily machinable materials with a stiff machine using stiff, non-worn tools). Regardless of this, the downstream measurements are also a part of the digital twin.
+In the first part of the Paper, the model-based digital representation of a machining process was explained, which was further superimposed towards a digital twin for machining processes that correspond to the manufactured component. The next part of the paper, in turn, clarifies how the presented procedure can be implemented in an application-oriented manner, e.g., on a shop floor level (
+Figure 9
+).
+Sztipanovits et al. [
+81
+] state in this regard that the heterogeneity of tasks, data and information is an enormous challenge for a successful implementation. Jedrzejewski et al. [
+82
+] confirm this conclusion and also present a linkage approach for machining technology applications with a strong focus on a digital representation of the machine and its control. This work, on the other hand, goes beyond that by taking into account the tool (
+Figure 2
+) as well as the component (
+Figure 3
+, 
+Figure 4
+ and 
+Figure 5
+) and the material (
+Figure 7
+). Hence, the physical layer of a classic forward-oriented planning process is extensively expanded by a virtual layer, that reflects the models presented at the beginning, in order to firstly illustrate these relationships (
+Figure 9
+).
+Moreover, the essential links between the virtual and physical layer are set out based on the underlying information model presented at the beginning (cf. 
+Section 2
+) which is explained in the following chapters. The results are an integral description of a software architecture for an information system, which can be integrated into a manufacturing company while providing a digital twin for the machining process based on connected process models (cf. 
+Section 4
+). In addition, a return of the cyber-physically enabled digital twin is illustrated. This way, the digital process is transformed into an immaterial resource, which can serve as an information basis for future machining tasks as a digitally preserved experience.
+The classic forward-oriented planning process starts with the definition of the manufacturing tasks based on measurable target parameters usually specified by the client (
+Figure 9
+, definition of the engineering and machining task). Examples of that are the base material selection, target geometry and surface quality as well as flanking business information. Either way, the target parameters defined in this task have a strong impact on the downstream data acquisition measures and thus on the value of the component as well as the digital twin for machining processes. This means those responsible for planning have to be aware of the mathematical relationships in modeling (cf. 
+Section 5
+) to prepare for optimization strategies from the very beginning. In fact, there is a decisive share in the development of a digital twin resource, attributed to the early definition stage (
+Figure 8
+), which further ensures that the value of the resulting immaterial resource goes beyond the pure documentation. At this stage, in addition, existing connectors such as enterprise-resource-planning (ERP) system [
+83
+], computer-aided manufacturing (CAM) system [
+82
+] and manufacturing execution system (MES) [
+84
+] must be taken into account, because of their importance for the downstream data acquisition. The planning task, divided into four main groups (material, machine, tool and the technology data) in the first part of the paper (cf. 
+Section 2
+), must guarantee the later availability of the corresponding data (cf. 
+Figure 2
+, 
+Figure 3
+, 
+Figure 4
+, 
+Figure 5
+, 
+Figure 6
+, 
+Figure 7
+ and 
+Figure 8
+). For example, a geometric description of the tools is required (e.g., CAD models) which should preferably be made available in accordance with the ISO13399 standard [
+85
+]. Furthermore, a digital representation of the machine tool or at least the kinematic chain is required, in order to create the associated model (cf. 
+Section 5.1
+). Looking at the technology data, all planning information, such as clamping situation, nominal geometry, NC program, etc., must be linked to information systems 
+Figure 8
+). In addition, there are the actual process data (cf. 
+Section 2
+), e.g., actual/nominal positions, drive currents of the spindles and axes, PLC signals, etc., going to be acquired directly or indirectly during actual machining. Hence, a data interface to the NC of the machine tool must be available, in order to allow process data acquisition within time scales of the IPO cycle (high-frequency data), as explained in detail by Hänel et al. [
+51
+]. This requires specific solutions since this is very control-specific. Trabesinger et al. [
+86
+], provides an interface description for an Sinumerik Edge which, unfurtunatly, cannot be transferred to other numerical control systems (e.g., Fanuc, Heidenhain etc.).
+The data platform accommodates all planning and process data, filed after write once read many (WORM) precautions to ensure the authenticity of the data [
+51
+] as well as the model output and the individual output of the models as well as the linked-model data. The underlying storage logic is determined by the information model while HDF5 was chosen as the format for the implementation (c.f. 
+Section 3
+). The data platform consists of time-stratified data layers that archive the shadow-twin transformation loop (c.f. 
+Section 2
+ and 
+Figure 9
+). Compatible object storage is used to store and retrieve data directly from the machine, providing industry-leading durability, availability, performance, security, and virtually unlimited scalability at production location: The cloud storage uses objects rather than blocks or files while enabling to store data, along with metadata that identifies and describes the content [
+51
+]. Standardized platform-independent communication protocols, such as OPC UA, MT Connect [
+87
+] are used as communication interfaces for the data transfer to the data platform.
+Models (c.f. 
+Section 5
+) are either data-driven, combining measured values and physical properties, or physical, describing clear cause-effect relationships [
+88
+]. The models receive the process data via the data platform as digital shadows and make proportional contributions to the final digital twin for machining processes (
+Figure 9
+ and 
+Section 2
+). The digital twin, achieved by cascading model outputs (
+Figure 9
+, calculation in specific process models), reaches its final status after the real and the virtual component match each other, while both meet the measurable target parameters (c.f. 
+Section 6.2
+).
+A central motivation for the presented digital twin for machining processes is a simple representation of the machining results, which are the consequence of complex causal relationships. The form of representation (c.f. 
+Figure 2
+, 
+Figure 3
+, 
+Figure 4
+, 
+Figure 5
+, 
+Figure 6
+, 
+Figure 7
+ and 
+Figure 8
+) is easier to understand and faster to interpret than the underlying mathematics. This shall facilitate the exchange between interdisciplinary scientific fields, which is seen as a decisive advantage when dealing with complex machining tasks. For example, can tailor-made heat treatments be derived based on a quantified shape deviation (
+Figure 8
+) and, e.g., an identified property grading (
+Figure 7
+) if this is detected before the target geometry is reached (c.f. 
+Section 6.2
+). Obviously, this is not a decisive aspect of producing large component quantities from standard materials. On the contrary, there is more the aspect of quality assurance in the foreground, where suitable visualization methods can obviously bring advantages too. Nevertheless, if looking at high-performance material-based high-tech components there is a priority extension. In addition to the aspect of quality assurance, information exploration is added as an extended motivator. This means, to enable to combine early knowledge gain (c.f. 
+Section 5
+) with appropriate measures in order to enable the achievement of the target specifications (c.f. 
+Section 6.2
+). Either way, spatially discrete linkage of process data and/or the model output (
+Figure 9
+) is the decisive requirement for visualization using graphs, plots or histograms (
+Figure 2
+, 
+Figure 3
+, 
+Figure 4
+, 
+Figure 5
+, 
+Figure 6
+, 
+Figure 7
+ and 
+Figure 8
+). Specifically, this means, for example, to perform the material removal simulation (c.f. 
+Section 5.3
+) with the actual axes data instead of an NC interpreter. Nevertheless, the reference to the current NC line is particularly important, as these are the basis for feedback measures, in terms of, e.g., feed rate adjustments. The cascaded models (
+Figure 9
+), on the other hand, are essential for situation-adapted feedback. In fact, the models are superimposed to form the digital twin, while the basis for the derivation of measures, in turn, is created by their individual contributions. For example, the influence of tool deflection on component accuracy can be identified in isolation.
+A basic digital twin structure was presented based on an existing information model. The digital twin results from cascading of specific process model output determining machine and path inaccuracies, material removal and tool engagement, cutting force, process stability, thermal behavior, workpiece and surface properties. The digital shadow created by task definition as well as data acquisition from planning and processing provides the input data for these models. The model output is superimposed to a digital twin that corresponds to the real component that unites the real and virtual world. The model output, individually or superposed, is visualized in an easily comprehensible manner. This process-related consideration is further extended in favor of an integral software architecture approach, based on forward-oriented planning from operational practice. As a result, the introduced information model and the process models are expanded to include task definition and data collection, data platform and data handling as well as model integration. Finally, visualization, analysis and feedback are discussed and an outlook is given.
+The paper presented a general model structure for digital twins with exemplary functionalities in the context of machining processes. Such digital twins in their final form could achieve a major benefit for manufacturers. It supports the structured acquisition of manufacturing relevant data, which can be used for quality assurance and documentation. Furthermore, the structured database (digital shadow) allows the application of various process-relevant models, which helps to understand the fundamental mechanisms of the machining processes. This provides the knowledge base to make optimizations to the cutting process itself to increase machining quality as well as resource efficiency.
+Increasing model accuracy will be an important topic for further research, since the achievable process errors, such as positioning errors, are caused by several nonlinear physical effects during the machining process and are not all known in advance. Therefore, the individual models need to be monitored by back calculating the model accuracy using the various available data sources. AI-solutions, e.g., root-cause analysis, probabilistic approaches such as Bayesian networks, are the key to scan all sub-instances of the digital twin and continuously adjust the model parameters based on the current database.
+Another relevant point for the research will be the model connection and calculation since there can be a bidirectional relationship between the models, which requires an iterative approximation approach. For example, the tool engagement causes a force to deflect the tool, which in turn causes the tool engagement to change, changing the starting point of consideration. The reverse calculation of the interactions of the individual model instances, e.g., changes in tool engagement due to machine deviations, must be integrated individually and modularly via a secondary model layer. The results of this layer can later be transferred to a process chain level. Automatic detection of such loops could greatly simplify model integration, as calculation strategies could be automatically determined depending on the model dependencies.
+Conceptualization, A.H. (Albrecht Hänel), E.W.; L.P. and A.H. (Arvid Hellmich); formal analysis, U.F.; investigation, U.T. and H.W.; resources, A.H. (Arvid Hellmich); data curation, D.W.; writing—original draft preparation, A.H. (Albrecht Hänel) and A.S.; writing—review and editing, U.T., A.S. and L.P.; visualization, U.T. and D.W.; supervision, A.H. (Arvid Hellmich), A.S.; project administration, S.I.; funding acquisition, A.H. (Albrecht Hänel) and S.I. All authors have read and agreed to the published version of the manuscript.
+The German Aerospace Center (DLR) funded this research with the grant number 20Q1965C.
+The data presented in this study are available on request from the corresponding author.
+The authors would like to thank the Federal Ministry of Economics and Technology (BMWi) and the German Aerospace Center (DLR) for funding this paper as part of the research project “TwinProCut” of the aeronautics research program (LuFo VI-1).
+The authors declare no conflict of interest.
+Publisher’s Note:
+ MDPI stays neutral with regard to jurisdictional claims in published maps and institutional affiliations.

@@ -1,0 +1,1258 @@
+Concrete filled steel tubes (CFSTs) show advantageous applications in the field of construction, especially for a high axial load capacity. The challenge in using such structure lies in the selection of many parameters constituting CFST, which necessitates defining complex relationships between the components and the corresponding properties. The axial capacity (P
+u
+) of CFST is among the most important mechanical properties. In this study, the possibility of using a feedforward neural network (FNN) to predict P
+u
+ was investigated. Furthermore, an evolutionary optimization algorithm, namely invasive weed optimization (IWO), was used for tuning and optimizing the FNN weights and biases to construct a hybrid FNN–IWO model and improve its prediction performance. The results showed that the FNN–IWO algorithm is an excellent predictor of P
+u
+, with a value of R
+2
+ of up to 0.979. The advantage of FNN–IWO was also pointed out with the gains in accuracy of 47.9%, 49.2%, and 6.5% for root mean square error (RMSE), mean absolute error (MAE), and R
+2
+, respectively, compared with simulation using the single FNN. Finally, the performance in predicting the P
+u
+ in the function of structural parameters such as depth/width ratio, thickness of steel tube, yield stress of steel, concrete compressive strength, and slenderness ratio was investigated and discussed.
+Concrete and steel are the two most commonly used construction materials today. However, each material has different advantages and disadvantages [
+1
+,
+2
+,
+3
+]. Therefore, to be able to take advantages and minimize disadvantages, an optimal solution is to use a combination of both materials, such as a “combined steel concrete structure” or using a combination of concrete elements and steel elements in “composite structures”. One of the combined steel concrete structures is a steel pipe composite structure filled with medium or high strength concrete. This type of structure is called a steel-concrete pipe.
+In recent decades, concrete filled steel tubes (CFSTs) have been widely used in the construction of modern buildings and bridges [
+4
+], even in high seismic risk areas [
+5
+,
+6
+,
+7
+,
+8
+,
+9
+,
+10
+]. This increase in use is because of the significant advantages that the CFST column system offers over conventional steel or reinforced concrete systems, such as high axial load capacity [
+4
+], good plasticity and toughness [
+6
+], larger energy absorption capacity [
+7
+], convenient construction [
+11
+], economy of materials [
+12
+,
+13
+,
+14
+], and excellent seismic and refractory performance [
+15
+]. In particular, this type of structure can reduce the environmental burden by removing formwork [
+16
+], reusing steel pipes, and using high quality concrete with recycled aggregate [
+17
+]. The characteristics of CFST are that the steel material is located far from the central axis so the rigidity of the column is very large, and thus it also contributes to increasing the moment of inertia of the structure [
+5
+,
+18
+]. The ideal form of concrete core works against the compressive load and hinders the local buckling state of the steel pipe. Therefore, the CFST structures are often used in locations subject to large compressive loads [
+9
+,
+15
+,
+19
+]. The CFST columns are mainly divided into square columns, round columns, and rectangular columns, based on different cross-sectional forms [
+15
+]. In particular, the square and rectangular CFST columns have the advantage of easy connection and reliable work with other structural members such as beams, walls, and panels [
+20
+]. Compared with square CFST columns, rectangular columns have irregular bending stiffness along different axes, so this type of column is suitable for the mechanical behavior of members including arch ribs, pillars, abutments, and piers, and other structural members under load actions vary greatly from vertical to horizontal [
+6
+]. Because the scope of application of rectangular CFST columns is quite wide and this column is mainly subjected to compression, the main purpose of the paper is to analyze and evaluate the ultimate bearing capacity of rectangular columns.
+In recent decades, the regulations for calculating the CFST column type have been proposed in design standards such as AISC-LRFD [
+21
+], ACI 318-05 [
+22
+], Japan Institute of Architecture [
+17
+], European Code EC 4, British Standard BS 5400 [
+23
+], and Australian Standard AS-5100.6 [
+24
+]. In addition, numerous experimental and numerical studies were conducted to analyze the mechanical properties of rectangular CFST columns under axial compression. As an example, Hatzigeorgiou [
+25
+] has proposed a theoretical analysis for modeling the behavior of CFST under extreme loading conditions. Later, the verification of such an approach against experimental and analytical results has also been reported in the work of Hatzigeorgiou [
+26
+]. In the work of Liu et al. [
+4
+], 26 rectangular CFST column samples were experimented under concentric compression with the main parameters such as strength and aspect ratio. In Chitawadagi et al. [
+8
+], the load capacity of CFST columns depended on the variation of CFST properties such as the wall thickness of pipes, strength of in-filled concrete, area of cross section of steel pipes, and pipe length. In this study, 243 rectangular CFST samples were investigated; the experimental results were compared with the predicted column strength, which was performed according to design codes such as EC4-1994 and AISC-LRFD-1994. In addition, there are many other test methods dealing with factors that affect the bearing capacity of rectangular CFST columns such as the effect of concrete compaction [
+27
+], load conditions, and boundary conditions [
+16
+]. The addition of steel fibers in core concrete had a significant effect on the performance of concrete steel pipes [
+28
+] and many other tests [
+9
+,
+13
+,
+29
+,
+30
+,
+31
+,
+32
+]. Finite element analysis is now also frequently used for design and research issues thanks to the existence of many commercial software such as ABAQUS [
+33
+] and ANSYS [
+34
+]. Tort et al. [
+35
+] carried out computational research to analyze the nonlinear response of composite frames including rectangular concrete pipe beams and steel frames subjected to static and dynamic loads. On the basis of the Drucker–Prager model, Wang et al. [
+36
+] developed a finite element model that can predict the axial compression behavior of a composite column with a fibrous reinforced concrete core. Collecting 340 test data of circular, square, and rectangular CFST columns, Tao et al. [
+37
+] developed new finite element models for simulating CFST stub columns under compression mode along the axis. The new model was more flexible and accurate for modeling the CFST stub columns. However, the design standards were limited by the scope of use and were not suitable for high-strength materials, and testing methods were often costly and time-consuming. The accuracy of finite element models was greatly affected by the input parameters, especially the suitable selection of the concrete model. Therefore, it is necessary to propose a uniform and effective approach to design rectangular CFST columns.
+In recent years, artificial intelligence (AI) based on computer science has gradually become popular and applied in many different fields [
+38
+,
+39
+,
+40
+,
+41
+]. Artificial neural network (ANN) is a branch of AI techniques; different ANN-based modeling methods have been used by scientists in many construction engineering applications [
+42
+]. Sanad et al. [
+43
+] used ANN to estimate the reinforced concrete deep beams ultimate shear strength. Lima et al. [
+44
+] predicted the bending resistance and initial stiffness of steel beam connection using a back-propagation algorithm. Seleemah et al. [
+45
+] applied ANN to predict the maximum shear strength of concrete beams without horizontal reinforcement. Blachowski and Pnevmatikos [
+46
+] have developed a vibration control system based on the ANN method, for application in earthquake engineering. As an example for structural engineering, Kiani et al. [
+47
+] have applied AI techniques including support vector machines (SVM) and ANN for deriving seismic fragility curves. It is worth noticing that significant studies have been carried out to explore the prediction of damage using AI techniques. In a series of papers, Mangalathu et al. [
+48
+] have proposed various AI methods such as ANN and random forest for tracking damage of bridge portfolios [
+48
+] as well as assessing the seismic risk of skewed bridges [
+49
+]. In terms of structural failure, typical failure modes of reinforced concrete columns such as flexure, flexure–shear, and shear were investigated by Mangalathu et al. [
+50
+,
+51
+] using decision trees (DT), SVM, and ANN. Guo et al. [
+52
+,
+53
+] employed the ANN model for the identification of damage in different structures such as suspended-dome and offshore jacket platforms. Regarding structural uncertainty analysis, various published works by E. Zio should be consulted [
+54
+,
+55
+,
+56
+]. With rectangular CFST columns, the use of ANN has also been proposed. For example, Sadoon et al. [
+57
+] proposed an ANN model for predicting the final strength of rectangular concrete steel beam girder (RCFST) under eccentric shaft load. The results showed that the ANN model was more accurate than the AISC and Eurocode 4 standard. Du et al. [
+10
+] formulated an ANN model with different input parameters to determine the axial bearing capacity of rectangular CFST column. The results of the model were compared with the results calculated according to European Code EC 4 [
+23
+], ACI [
+22
+], and AISC360-10 [
+21
+], and found that the ANN model was accurate. However, in the above studies, the mentioned correlation coefficient (R) was less than 0.98. Therefore, in this paper, we tried to create a bulk sample set and proposed an algorithm to increase the accuracy of the prediction of the axial load bearing capacity of the CFST column.
+In short, the aim of this paper is dedicated to the development and optimization of an AI-based model, namely the feedforward neural network (FNN), to predict the P
+u
+ of CFST. An optimization algorithm, invasive weed optimization (IWO), was used to finely tune the FNN parameters (i.e., weights and biases) to develop a hybrid model, namely FNN–IWO, and to improve the prediction performance. With respect to the CFST database, 99 samples were collected from the available literature and used for the training and testing phases of the FNN–IWO algorithm. Criteria such as coefficient of determination (R
+2
+), standard deviation error (ErrorStD), root mean square error (RMSE), mean absolute error (MAE), and slope were used to evaluate the performance of FNN–IWO. Finally, an investigation of the prediction capability in the function of different structural parameters was conducted.
+An artificial or neural network (also known as an artificial neural network (ANN)) is a biological neural network based a computational or mathematical model. It includes a number of artificial neurons (nodes) that are linked to each other and processes information by transmitting along the connections and calculating new values at the nodes (connection method for calculation) [
+58
+,
+59
+]. The ANN models are made up of three or more layers, including an input layer that is the leftmost layer of the network representing the inputs, an output layer that is the rightmost layer of the network representing the results achieved, and one or more hidden layers representing the logical reasoning of the network [
+60
+,
+61
+,
+62
+]. The neurons in each layer are linked to the front and rear neurons with each associated weight. A training algorithm is often used to repeat minimizing the cost function relative to the link weight and neuron threshold. Networks are usually divided into two categories based on how the units are connected, including the feedforward neural network (FNN) and the recurrent neural network. To date, FNN is the most popular architecture owing to its structural flexibility, good performance, and the availability of many training algorithms [
+63
+]. Currently, the most widely used training algorithm for multi-layer feedforward networks is the backpropagation algorithm (BP). In BP, network training is achieved by adjusting weights and is done through numerous training sets and training cycles [
+64
+]. With the ability to approximate the functions, FNNs have been successfully applied in a number of civil engineering and structural fields [
+65
+] such as predicting the compression strength of concrete [
+66
+], investigating the fire resistance of calves [
+67
+], determining the axial strength of cylindrical concrete pillars [
+58
+], and predicting the fire resistance of concrete tubular steel columns [
+65
+]. Therefore, in this study, FNN was selected and used to predict the axial capacity of CFST.
+IWO is a new random number optimization method inspired by a popular phenomenon in agriculture. The term of weed invasion was first introduced by Mehrabian and Lucas in 2006 [
+68
+]. This technique is based on a number of interesting features of invasive weed plants that reproduce and distribute fast and vigorously, and adapt themselves to changes in climatic conditions [
+69
+]. Therefore, capturing their characteristics will lead to a powerful optimization algorithm [
+70
+]. The advantages of IWO algorithm compared with other evolutionary algorithms are few parameters, simple structure, easy to understand, and easy to program features [
+71
+]. Up to now, the IWO algorithm has become more and more popular and has been successfully applied in areas such as antenna system design [
+72
+] and design of coding chains for DNA [
+73
+], as well as inter-related problems regarding economic [
+74
+], tourism [
+75
+], and construction techniques [
+76
+]. The IWO algorithm is implemented by the following steps:
+
+Step 1.
+Initialization: Weeds are randomly scattered over a D-dimensional target area as the primary solution.
+Step 2.
+Reproduction: During reproduction, each weed produces seed depending on the physical strength and colony. Weeds that acquire more resources have a better chance of producing seeds and plants that are less adapted to fields are not able to reproduce, and thus produce fewer seeds. The number of seeds increases linearly from the minimum value for the worst weed to the maximum value for the best weed.
+Step 3.
+Spatial dispersal: The seeds generated from step 2 are randomly dispersed in the search space by means of normally distributed random numbers with an average of zero, but with different variances to ensure that the seeds are located around the main factory.
+Step 4.
+Competitive exclusion: The spawning and dispersal process randomly create a new population for the next generation of weeds and their seeds. When the size of this new population is greater than a certain maximum value, the lower-strength weeds will be eliminated through competition and only some of the weeds will be equal to the dark weed population.
+Step 5.
+Termination conditions: The process continues again from step 2 to step 4 until the maximum number of iterations is reached and the best physical tree is nearest to the optimized solution.
+Initialization: Weeds are randomly scattered over a D-dimensional target area as the primary solution.
+Reproduction: During reproduction, each weed produces seed depending on the physical strength and colony. Weeds that acquire more resources have a better chance of producing seeds and plants that are less adapted to fields are not able to reproduce, and thus produce fewer seeds. The number of seeds increases linearly from the minimum value for the worst weed to the maximum value for the best weed.
+Spatial dispersal: The seeds generated from step 2 are randomly dispersed in the search space by means of normally distributed random numbers with an average of zero, but with different variances to ensure that the seeds are located around the main factory.
+Competitive exclusion: The spawning and dispersal process randomly create a new population for the next generation of weeds and their seeds. When the size of this new population is greater than a certain maximum value, the lower-strength weeds will be eliminated through competition and only some of the weeds will be equal to the dark weed population.
+Termination conditions: The process continues again from step 2 to step 4 until the maximum number of iterations is reached and the best physical tree is nearest to the optimized solution.
+Evaluation of the AI model was performed using statistical measurements such as mean absolute error (MAE), coefficient of determination (R
+2
+), and root mean square error (RMSE). In general, these criteria are popular methods to quantify the performance of AI algorithms [
+76
+,
+77
+]. More specifically, the mean squared difference between actual values and estimated values defines RMSE, whereas the mean magnitude of the errors defines MAE. The R
+2
+ evaluates the correlation between actual and estimated values [
+78
+,
+79
+,
+80
+]. Quantitatively, lower RMSE and MAE show better performance of the models. In contrast, a higher R
+2
+ shows better performance of the model [
+81
+,
+82
+]. MAE, RMSE, and R
+2
+ are expressed as follows [
+83
+,
+84
+]:
+
+
+
+
+
+
+
+
+MAE
+
+
+=
+
+
+
+
+1
+
+
+N
+
+
+
+
+
+
+
+
+∑
+
+
+
+
+i
+
+
+=
+
+
+1
+
+
+
+
+N
+
+
+
+
+
+
+
+
+(
+
+
+
+
+
+
+a
+
+
+i
+
+
+
+
+−
+
+
+
+
+
+
+a
+
+
+¯
+
+
+
+
+i
+
+
+
+
+
+
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(1)
+
+
+
+
+
+
+
+
+
+
+
+
+RMSE
+
+
+ 
+
+
+=
+
+
+ 
+
+
+
+
+
+
+
+
+1
+
+
+N
+
+
+
+
+
+
+
+
+∑
+
+
+
+
+i
+
+
+=
+
+
+1
+
+
+
+
+N
+
+
+
+
+
+
+
+
+
+
+
+
+(
+
+
+
+
+
+
+a
+
+
+i
+
+
+
+
+−
+
+
+
+
+
+
+a
+
+
+¯
+
+
+
+
+i
+
+
+
+
+
+
+)
+
+
+
+
+
+
+2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(2)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+R
+
+
+2
+
+
+
+
+=
+
+
+1
+
+
+−
+
+
+
+
+
+
+
+
+
+
+∑
+
+
+
+
+i
+
+
+=
+
+
+1
+
+
+
+
+N
+
+
+
+
+
+
+
+
+
+
+
+
+(
+
+
+
+
+
+
+a
+
+
+i
+
+
+
+
+−
+
+
+
+
+
+
+a
+
+
+¯
+
+
+
+
+i
+
+
+
+
+
+
+)
+
+
+
+
+
+
+2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+∑
+
+
+
+
+i
+
+
+=
+
+
+1
+
+
+
+
+N
+
+
+
+
+
+
+
+
+
+
+
+
+(
+
+
+
+
+
+
+a
+
+
+i
+
+
+
+
+−
+
+
+
+
+a
+
+
+¯
+
+
+
+
+
+
+)
+
+
+
+
+
+
+2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(3)
+
+
+
+
+
+where 
+
+
+
+
+
+
+a
+
+
+i
+
+
+
+
+
+
+ is the actual output, 
+
+
+
+
+
+
+
+
+a
+
+
+¯
+
+
+
+
+i
+
+
+
+
+
+
+ infers the predicted output, 
+
+
+
+
+a
+
+
+¯
+
+
+
+
+ infers the mean of the 
+
+
+
+
+
+
+a
+
+
+i
+
+
+
+
+
+
+, and 
+N
+ infers the number of used samples.
+In this study, a total of 99 compression tests of rectangular CFST columns (
+Figure 1
+) were extracted from the available literature: Bridge [
+85
+], Du et al. [
+86
+], Du et al. [
+87
+], Ghannam et al. [
+88
+], Han [
+89
+], Han & Yang [
+90
+], Han & Yao [
+91
+], Lin [
+92
+], Schneider [
+93
+], Shakir-Khalil & Mouli [
+94
+], and Shakir-Khalil & Zeghiche [
+95
+]. Information of the database is summarized in 
+Table 1
+, including the number of data and the percentage of proportion, whereas 
+Table 2
+ presents the initial statistical analysis of the corresponding database.
+The experimental tests were carried out considering the following steps: design, processing of steel tube, production of concrete, curing of specimens, and loading measurement [
+15
+,
+86
+]. As proposed by Sarir et al. [
+96
+] and Ren et al. [
+15
+] in investigating CFST columns, initial geometric imperfections as well as residual stress exhibited a negligible effect on the behavior of columns under axial loading. Consequently, input variables affecting the axial capacity of rectangular CFST are from two main groups: geometry of columns and mechanical properties of constituent materials. Therefore, six independent variables were selected as inputs of the problem, such as depth of cross section (H), width of cross section (W), thickness of steel tube (t), length of column (L), yield stress of steel (f
+y
+), and compressive strength of concrete (f
+c
+’). It is seen in 
+Table 2
+ of the initial statistical analysis that all input variables cover a wide range of values. More precisely, H varies from 90 to 360 mm with an average value of 163 mm and a coefficient of variation of 32%. W ranges from 60 to 240 mm with an average value of 111 mm and a coefficient of variation of 32%. t ranges from 0.7 to 10 mm with an average value of 4 mm and a coefficient of variation of 48%. L varies from 100 to 3050 mm with an average value of 869 mm and a coefficient of variation of 89%. f
+y
+ ranges from 194 to 515 MPa with an average value of 329 MPa and a coefficient of variation of 24%. f
+c
+’ varies from 8 to 47 MPa with an average value of 31 MPa and a coefficient of variation of 39%.
+It should be pointed out that the steel tube of 43 specimens was cold-formed, whereas welded built-up was done in the other 56 configurations. In terms of failure modality, local outward buckling failure of the external steel was observed in all specimens, as shown in 
+Figure 2
+a. This is the same as that observed by other investigations such as Han and Yao [
+91
+], Lyu et al. [
+97
+], Ding et al. [
+98
+], and Yan et al. [
+99
+]. Depending on the dimension of the cross section, the locations of the external folding of the steel tube are not the same. Such local buckling of the steel tube occurred mostly at the ends or in the center along the axis of the specimens, as seen in 
+Figure 2
+a. In addition to outward buckling failure, fracture at the welding seam also occurred in welded specimens, as shown in 
+Figure 2
+b. Such tensile fracture is the result of too much growth of the concrete in the core [
+99
+]. However, the tensile fracture of the steel tube generally occurred after the peak load [
+98
+]. Last, but not least, for all specimens, concrete in the core was damaged in most of specimens following a shear failure mode, as shown in 
+Figure 2
+c [
+97
+,
+98
+]. Besides, the influence of temperature on the failure modality of stub CFST structural members could be referred to in Yan et al. [
+99
+] (low temperature) and Lyu et al. [
+97
+] (high temperature). Finally, Angelo et al. [
+100
+] and Kulkarni et al. [
+101
+] have tested and discussed about the failure of rectangular CFST structural members in junction with wide beam for earthquake engineering application.
+It is worth mentioning that only rectangular CFST columns (i.e., depth/width ratio greater than 1) were collected for investigation. As indicated in 
+Table 2
+, the depth/width ratio ranges from 1 to 2, allowing for exploring the axial failure of CFST around the weak axis. In addition, as the depth/width ratio differs than 1, the stress of confined concrete applied to the steel wall is not the same along the weak and strong axes, while the thickness of the steel tube was constant. Consequently, the consideration of only rectangular CFST columns could strongly reveal the influence of both the structural geometry and mechanical properties of constituent materials.
+The dataset was randomly divided into two sub-datasets including the training part (60%) and testing part (40%) part. All data were scaled into the range of [0,1] in order to reduce numerical biases while treating with the AI algorithms, as recommended by various studies in the literature [
+102
+,
+103
+,
+104
+]. Such a scaling process is expressed using Equation (4) between raw and scaled data [
+105
+,
+106
+,
+107
+]:
+
+
+
+
+
+
+
+
+
+
+x
+
+
+
+
+s
+
+
+c
+
+
+a
+
+
+l
+
+
+e
+
+
+d
+
+
+
+
+
+
+=
+
+
+
+
+
+
+
+
+(
+
+
+
+
+
+
+x
+
+
+
+
+r
+
+
+a
+
+
+w
+
+
+
+
+
+
+−
+
+
+β
+
+
+
+
+)
+
+
+
+
+
+
+
+
+α
+
+
+−
+
+
+β
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(4)
+
+
+
+
+
+where 
+α
+ and 
+β
+ are the maximum and minimum values of the considered variable 
+x
+, respectively. It should be noticed that a reverse transformation could be used for converting data from the scaling space to the raw one using Equation (4). Besides, a correlation analysis between the input and output variables is performed and plotted in 
+Figure 3
+.
+Figure 3
+ was generated in order to explore the linear statistical correlation between variables in the database. Therefore, a 7 × 7 matrix was generated, in which the upper triangular part indicates the value of the correlation coefficient, whereas the lower triangular part shows the scatter plot between two associated variables. The diagonal of the matrix indicates the name of the variable (i.e., as the correlation coefficient of a variable itself is equal to 1). For interpretation purpose, the correlation coefficient between H and W is indicated as 0.86, whereas the corresponding scatter plot between H and W is shown on the left side of W (row 2, column 1). It is seen that a high and positive value of statistical correlation was obtained in this case, confirmed by most of the data points being located around the diagonal in the scatter plot.
+It can be seen that no direct correlation was observed between each input and output (P
+u
+). The maximum value of the Pearson correlation coefficient (r) compared with P
+u
+ was calculated as 0.78 (for variable t), followed by 0.60 (for variable f
+y
+), 0.39 (for variable W), 0.30 (for variable H), 0.27 (for variable f
+c
+’), and 0.18 (for variable L). Besides, the correlation between H and W was highest (r = 0.86).
+In this section, the optimization of weight parameters of FNN is presented using the IWO algorithm. It is not worth noticing that the architecture of the FNN model is very important. Depending on the problem of interest, the prediction results could exhibit significant variation from using one architecture to another [
+96
+,
+107
+,
+108
+]. As the numbers of inputs and outputs are fixed, the undetermined parameters of the architecture are the number of hidden layer(s) and the number of neurons in each hidden layer(s) [
+109
+]. As proved by many investigations in the literature, the FNN model involving only one hidden layer could be sufficient for exploring successfully complex nonlinear relationship between inputs and outputs. For instance, Mohamad et al. [
+110
+] have used one hidden layer architecture model for predicting ripping production, as have Singh et al. [
+111
+] for predicting cadmium removal. In civil engineering application, a prediction model involving one hidden layer has also been widely applied in many works, for instance, Gordan et al. [
+112
+] for earthquake slope stability or Sarir et al. [
+96
+] for bearing capacity of circular concrete-filled steel tube columns. Therefore, the one hidden layer FNN model was finally adopted in this work, also saving cost, processing time, and limitation of instruments. On the other hand, the number of neurons in the hidden layer was recommended to be equal to the sum of the number of inputs and outputs [
+109
+,
+113
+,
+114
+]. Consequently, the FNN model exhibits one hidden layer and seven neurons in the hidden layer. The activation function for the hidden layer was chosen as a sigmoid function, whereas the activation function for the output layer was a linear function [
+115
+]. The cost function was chosen such as the mean square error function [
+116
+]. Finally, 
+Table 3
+ indicates the information of the FNN model.
+As revealed in the literature, a key aspect of using evolutionary algorithms for optimizing AI models is to study the relationship between population size and problem dimensionality [
+117
+,
+118
+,
+119
+,
+120
+]. In many other evolutionary algorithms such as differential evolution, the number in the population is recommended to be 7–10 times the number of inputs [
+121
+,
+122
+]. In this study, the population size of the IWO technique was chosen as 50. Other parameters include the variance reduction exponent, chosen as 2; initial value of standard deviation, chosen as 0.01; final value of standard deviation, chosen as 0.001; and maximum iteration, chosen as 800. It is worth noticing that such ranges of parameters are commonly employed for training AI models using IWO algorithm, for instance, Huang et al. [
+76
+] and Mishagi et al. [
+123
+]. It should also be noticed that a large population size cannot be useful in evolutionary algorithms and affects the optimization results [
+124
+]. Information of the IWO algorithm is presented in 
+Table 3
+.
+Figure 4
+a presents the evolution of 42 weight parameters of the hidden layer, whereas 
+Figure 4
+b shows such evolution of 7 weight parameters of the output layer. It is seen that, at the 300 first iterations, fluctuations were observed for all weight parameters, as the IWO algorithm imitated the colonizing behavior of weed plants. After about 500–600 iterations, stabilization was achieved for weight parameters for the 57-dimensional optimization problem. Consequently, at least 700–800 iterations are needed in order to ensure the stabilization of the process.
+Weight parameters at iteration 800 were extracted for constructing the final FNN–IWO model (a combination of FNN and IWO). This model was then used as a numerical prediction function for parametrically investigating the deviation of quality assessment criteria in function weight parameters. The parametric study could be helpful to verify if the results provided by the IWO were unique, that is, the IWO allowed reaching the global optimum of the problem. For illustration purposes, only three first weight parameters were plotted. 
+Figure 5
+a presents the evolution of RMSE while varying weight parameters N°1 and N°2 from their lowest to highest values. In the same context, 
+Figure 5
+b presents the evolution of RMSE while varying weight parameters N°1 and N°3 from their lowest to highest values. It is seen from 
+Figure 5
+a,b that the global optimum of the two RMSE surfaces matched the final set of weight parameters provided by the IWO algorithm. This remark confirmed that the IWO technique allowed calibrating the global optimum of the optimization problem, thus providing the final FNN–IWO model.
+Figure 6
+a–c present the evolution of RMSE, MAE, and R
+2
+ during the optimization process of FNN weight parameters, for both training and testing data. It is seen that during the optimization using the training data, good results of RMSE, MAE, and R
+2
+ for the testing data were obtained. It is not worth noting that the testing data were totally new when applying. This remark allows exploring that no overfitting occurred during the training phase (i.e., performance indicators of testing data go in a bad direction). The efficiency and robustness of the IWO technique are then confirmed.
+In this section, the influence of training set size (in %) on the prediction results is presented. The training dataset was varied from 10% to 90% of the total data (with a resolution of 10%). 
+Figure 7
+ illustrates the influence of training set size, with respect to R
+2
+ (
+Figure 7
+a), RMSE (
+Figure 7
+b), MAE (
+Figure 7
+c), ErrorStD (
+Figure 7
+d), and slope (
+Figure 7
+e). All relevant values are also highlighted in 
+Table 4
+.
+As seen in 
+Figure 7
+a,e for R
+2
+ and slope, the performance of the prediction model progressively increased during the increasing of the training set size from 10% to 90%. For instance, for the testing part, R
+2
+ = 0.387 when the training set size was 10%, which was increased to 0.987 when the training set size was 90%. The same remark was also obtained when regarding 
+Figure 7
+b,c,d for RMSE, MAE, and ErrorStD, respectively. Moreover, the performance of the prediction model for both training and testing parts became stable from 60% of the training set size (
+Figure 7
+a). This observation indicates that no over-fitting occurred when the training set size surpassed a high percentage, for instance, 80%. This point proves that the prediction model is robust, exhibiting a strong capability in tracking relevant information in the testing part even it is small. Finally, yet importantly, the prediction model is promising in the case in which more data are available.
+In this section, the performance of FNN–IWO in predicting the P
+u
+ of CFST is investigated. The predicted outputs versus the corresponding experimental results associated with the training, testing, and all datasets are presented in 
+Figure 8
+. The fitted linear lines are also plotted (red lines) in each graph to show the performance of the algorithm. R
+2
+ values with respect to the training, testing, and all datasets were estimated at 0.978, 0.979, and 0.978, respectively, showing an excellent prediction capability of FNN–IWO. Furthermore, three linear equations representing the relationships between actual and predicted data were also given in each graph, including the intercepts and slopes. It is observed that the FNN–IWO algorithm possessed a strong linear correlation between actual and predicted P
+u
+ values.
+The detailed performance of the proposed FNN–IWO algorithm is summarized in 
+Table 5
+, including R
+2
+, RMSE, MAE, standard deviation error (ErrorStD), slope, and slope angle. Regarding the results of quality assessment and error analysis, FNN–IWO exhibited a strong capability in predicting the critical compression capacity of the rectangular section.
+For further assessment of the performance of the FNN–IWO algorithm, comparison between the experimental and predicted results was performed at different quantile levels. For this purpose, quantiles from 10% to 90% were computed to track the behavior of the distribution of the data, with a focus on the most important statistical distribution. The results are presented (
+Figure 9
+a–c) for the training, testing, and all data, respectively, whereas the percentage of error (%) between the predicted and actual values at each quantile level is displayed in 
+Figure 10
+.
+It is seen that, for the training dataset, the actual and predicted data were highly correlated, whereas a small difference was observed at each level of quantile for the testing part. With respect to the whole dataset, the highest error ratio was observed at Q80, followed by Q90 and Q10. For the values of error, it was seen that the FNN–IWO model exhibited a strong efficiency in predicting P
+u
+ within the Q10–Q70 range (error < 5%) and from Q80 to Q90 (with error in the 5%–10% range).
+In this section, the prediction accuracy of FNN–IWO with respect to different ranges of structural parameters is presented. The actual and predicted P
+u
+ in function of the depth /width ratio, t, f
+y
+, f
+c
+’, and slenderness ratio are displayed in 
+Figure 11
+a–e, respectively. Besides, error analysis in terms of R
+2
+, RMSE, and MAE for several intervals of the depth/width ratio, t, f
+y
+, f
+c
+’, and slenderness ratio, respectively, is also indicated in 
+Table 6
+ and 
+Figure 11
+, together with the associated number of data.
+In the case of the depth/width ratio, 11 configurations were found between 1 and 1.2, exhibiting R
+2
+ = 0.98, RMSE = 137.57 kN, and MAE = 95.25 kN; 22 configurations were found between 1.2 and 1.4, showing R
+2
+ = 0.98, RMSE = 71.07 kN, and MAE = 56.01 kN; 43 configurations were found between 1.4 and 1.6, exhibiting R
+2
+ = 0.97, RMSE = 144.71 kN, and MAE = 109.65 kN; 11 configurations were found between 1.6 and 1.8, exhibiting R
+2
+ = 0.89, RMSE = 56.16 kN, and MAE = 38.91 kN; and only 3 configurations were found between 1.8 and 2, exhibiting R
+2
+ = 1.00, RMSE = 24.75 kN, and MAE = 21.81 kN. Such an analysis allowed confirming that the FNN–IWO model is efficient in predicting P
+u
+ from nearly square to highly rectangular columns.
+In the case of slenderness, 78 configurations were found between 0 and 20 of slenderness, exhibiting R
+2
+ = 0.98, RMSE = 123.29 kN, and MAE = 86.64 kN; 6 configurations were found between 20 and 40 of slenderness, showing R
+2
+ = 0.98, RMSE = 42.80 kN, and MAE = 32.09 kN; 13 configurations were found between 40 and 60 of slenderness, exhibiting R
+2
+ = 0.99, RMSE = 72.25 kN, and MAE = 55.32 kN. Although the number of data is small for large slenderness, such an analysis allowed remarking that the FNN–IWO model is efficient in predicting P
+u
+ for short, medium, and long columns.
+In order to highlight the efficiency of the evolutionary IWO algorithm, comparisons between FNN–IWO and the individual FNN were performed, using a similar training algorithm (scaled conjugate gradient (SCG)), FNN architecture, and dataset.
+Considering RMSE, MAE, and standard deviation error (ErrorStD), 
+Figure 12
+ identifies the values of the two algorithms for the training part (
+Figure 12
+a) and testing part (
+Figure 12
+b). It can be clearly seen that FNN–IWO is more accurate than the single FNN, represented by a reduction of error for RMSE (2 times), MAE (3 times), or ErrorStD (2 times). Improvement of the accuracy is more pronounced in the training part than the testing part. Considering R
+2
+ and slope as error criteria, FNN–IWO also exhibited an advantage compared with FNN without optimization, for both the training and testing datasets (
+Figure 11
+c,d).
+For the sake of comparison, 
+Table 7
+ indicates the exact values and gains (in %) while using FNN–IWO with FNN for five error criteria. With a focus on the testing part, the gains reached 47.9%, 49.2%, 41.3%, 6.5%, and 1.5% for RMSE, MAE, ErrorStD, R
+2
+, and slope, respectively. As a conclusion, using IWO to tune the weights and bias of FNN strongly enhanced the accuracy in predicting P
+u
+.
+Even though many studies attempted to predict the P
+u
+ of CFST with different AI algorithms, the accuracy and robustness of these algorithms still need further comprehensive investigation. In this study, a novel hybrid approach of FNN–IWO was proposed and improved for the prediction of P
+u
+ of CFST, of which IWO was used for tuning and optimizing the FNN weights and biases to improve the prediction performance.
+The results showed that the FNN–IWO algorithm is an excellent predictor of P
+u
+, with a value of R
+2
+ of up to 0.979. The performance of FNN–IWO in predicting P
+u
+ function of structural parameters such as depth/width ratio, thickness of steel tube, yield stress of steel, concrete compressive strength, and slenderness ratio was investigated and the results showed that FNN–IWO is efficient in predicting P
+u
+ from nearly square to highly rectangular columns, as well as for short, medium, and long columns. Better performance of FNN–IWO was also pointed out with the gains in accuracy of 47.9%, 49.2%, and 6.5% for RMSE, MAE, and R
+2
+, respectively, compared with the simulation using the single FNN. This study may help in quick and accurate prediction of P
+u
+ of CFST for better practice purposes.
+In general, the main advantage of AI-based methods is its efficient capability to model the macroscopic mechanical behavior of the structural members without any prior assumptions or constraints. Therefore, the developed AI model in this study could be applied to the pre-design phase of the design process. Indeed, such quick numerical estimation is helpful to explore some initial evaluations of the outcome before conducting any extensive laboratory experiments. To this aim, a graphical user interface application should be compiled for facilitating the application by engineers/researchers.
+On the other hand, empirical formulae should be derived based on the “black-box” AI-based model developed in this study for estimating the axial behavior of rectangular CFST columns. In addition, the performance of such empirical formulae should be compared with other existing equations in the literature such as Ding et al. [
+98
+], Wang et al. [
+125
+], and Han et al. [
+126
+]. Besides, numerical finite element scheme should also be studied, especially for investigating the mechanical behaviors of composite columns at both the micro and macro levels. Finally, improvement for current designs (such as Eurocode-4 [
+127
+], AISC [
+128
+], and ACI [
+129
+]), if it exists, should be proposed.
+The axial behavior of CFST composite columns is a complex problem, involving various variables such as geometry and mechanical properties of constituent materials. Consequently, experimental databases are crucial for studying this problem. In further studies, a larger database should be considered, in order to cover more material strengths and geometric dimension ranges.
+The methodology modeling of this work could be extended for predicting other macroscopic properties such as bending, compression, or tension strength of not only composite members, but also members made of a single material (i.e., concrete or steel members). Besides, an investigation based on homogenization and de-homogenization approaches [
+130
+,
+131
+,
+132
+,
+133
+,
+134
+] could also be useful for studying structural members under different boundary conditions and loadings. Such a framework, including the finite element scheme, could also be coupled with AI-based prediction in order to better understand the micro and macro behaviors of structural members.
+Conceptualization, H.Q.N., T.-T.L. and H.-B.L.; methodology, H.-B.L., T.-T.L., and B.T.P.; validation, H.-B.L., H.Q.N., and B.T.P.; formal analysis, H.Q.N., T.-A.N, T.-T.L., V.Q.T. and H.-B.L.; data curation, V.Q.T. and T.-A.N.; writing—original draft preparation, all authors; writing—review and editing, H.-B.L., T.-T.L., and B.T.P.; project administration, H.-B.L.; funding acquisition, H.Q.N. All authors have read and agreed to the published version of the manuscript.
+This research received no external funding.
+The authors declare no conflict of interest.

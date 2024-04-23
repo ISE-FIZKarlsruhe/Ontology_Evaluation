@@ -1,0 +1,722 @@
+The material properties of 3D printed continuous fiber composites have been studied many times in the last years. However, only a minimal number of samples were used to determine the properties in each of the reported studies. Moreover, reported results can hardly be compared due to different sample geometries. Consequently, the variability of the mechanical properties (from one sample to the other) is a crucial parameter that has not been well quantified yet. In the present work, the flexural properties of 3D printed continuous carbon fiber/nylon composite specimens were experimentally quantified, using batches of 15 test specimens. In order to account for the possible influence of the quality of the prepreg filaments on the observed variability, three different filament rolls were used to manufacture the different batches. Also, two configurations were tested, with a fiber direction parallel (longitudinal) or perpendicular (transverse) to the main axis of the specimens. The results show moderate to high variabilities of the flexural modulus, flexural strength and maximum strain. The coefficient of variation was more than twice as high in the transverse case as in the longitudinal case.
+For ultra-lightweight applications, composite materials are often the preferred choice in the material selection process due to their superior strength-to-weight ratio. In addition, continuous fiber reinforcements are known to significantly outperform discontinuous reinforcements (short fiber, nanofibers and particles) [
+1
+,
+2
+,
+3
+,
+4
+]. Traditional manufacturing processes, such as manual layup, are well established for Continuous Fiber Composite (CFC) manufacturing. However, among other disadvantages (material waste, expensive manufacturing molds), the traditional processes are limited in terms of achievable geometrical complexity [
+5
+].
+In contrast, Additive Manufacturing (AM) enables the fabrication of parts with complex geometries and various infill patterns [
+6
+]. It is particularly attractive for the manufacturing of customized parts and small series. Substantial Research & Development efforts have been dedicated to the development of AM technologies for CFC over the last years. The most common AM technology for the fabrication of CFC, essentially due to its low associated costs, is Continuous Filament Fabrication (CFF). Research in CFF has addressed the following issues: material extrusion process [
+7
+,
+8
+], printable materials and their mechanical properties [
+9
+,
+10
+], infill patterns and their influence on energy absorption [
+11
+], environmental effects [
+12
+], process parameters [
+13
+,
+14
+,
+15
+,
+16
+], fiber placement, printing path design [
+17
+], and lightweight applications [
+18
+,
+19
+,
+20
+]. The technological trend in CFF is now going towards true 3D printing with multi-axis devices. Early examples of true 3D printed CFC components are lattice sandwich core structures [
+21
+,
+22
+]. True 3D systems range from low-cost devices to systems with up to 12-axis of motion and multiple industrial robotic arms [
+23
+,
+24
+,
+25
+,
+26
+,
+27
+,
+28
+]. They offer various advantages. The relative movement between the print head and the print bed helps reduce support material [
+29
+] and increase printing speed. Both reduce the overall printing time [
+30
+]. Furthermore, it enables non-planar 3D printing, which offers two essential benefits. Namely, an increase in the surface quality of the printed components and the possibility of material deposition in 3D curves [
+23
+]. Non-planar 3D printing opens up the possibility of optimizing the fiber direction in the plane and the 3D space, allowing for the creation of much stronger components.
+Before printing, a slicer divides the part geometry (stl.-file) into successive layers in the height direction. The layers are then printed one after the other. This limits the deposition paths to 2D planes, resulting in one direction (perpendicular to the plane) being much weaker than the in-plane directions, essentially due to interlayer adhesion and delamination issues. The weak direction exists for both reinforced and unreinforced materials. Koch et al. [
+31
+] quantified this anisotropy for an ABS filament. Zolfagharian et al. [
+32
+] found better structural integrity for PA12 nylon when filaments are aligned with the direction of applied stresses.
+Multi-axis 3D printing enables, in contrast, to deposit filaments along 3D paths. For instance, in the case of a pressure cap, fiber deposition along the cap curvature becomes possible, resulting in a much stronger part. For polymers, Yerazunis et al. [
+33
+] showed the benefit of stress-tensor-aligned deposition paths using a 5-axis printer. They fabricated vessel pressure caps with optimized 3D deposition paths, which had three to five times the strength of the layer-wise manufactured parts. This strength improvement results from the utilization of manufacturing-induced anisotropy (the polymer itself has isotropic material properties).
+In the case of the pressure vessel cap, it is possible to optimize the fiber direction analytically. However, for the optimization of components with more disordered stress distributions, numerical tools are needed. In recent years, several research works addressed the problem of the optimization of fiber directions in CFF-manufactured components using numerical analysis. The component geometry is either defined in advance (for instance, a plate with bolted joints [
+34
+,
+35
+,
+36
+]) or determined by numerical topology optimization for a homogeneous material [
+37
+]. A numerical analysis is then used to determine the paths of maximum stress in this geometry. Finally, the direction of the fiber (fiber path) is planned according to the obtained stress paths. Wang et al. [
+38
+], for instance, developed a Stress Vector Tracing method to generate the fiber paths along the stress paths and compared the results to methods which were previously proposed by Papapetrou et al. [
+39
+]. Component strength and stiffness improvement were demonstrated in mechanical tests and numerical analysis using anisotropic CFC material. For instance, Sugiyama et al. [
+34
+] performed bolt joint tensile tests. Improvements factors of 9.4 and 1.6 were respectively observed for the stiffness and strength parameters of the tested plates compared to non-optimized linear laminar plates. Other optimization steps can be included in the iterative process of fiber path generation. For instance, the fiber volume fraction can be tuned by changing the distance between fiber trajectories (referred to as variable stiffness composites in the literature). To date, most research works for the optimization of fiber directions are limited to 2D components. However, there are proposals for geometry optimizations of true 3D printed structures, such as a 3D topology optimization via the natural evolution method [
+40
+].
+Any numerical analysis is based on the definition of a numerical model, including a material model. The material model is a mathematical representation of the expected material behavior under load. For the material model, the mechanical properties of the material are usually obtained through standard mechanical tests. Alternatively, the mechanical properties can sometimes be estimated using simple computation rules, such as the rule of mixtures for composite materials with varying fiber volume fractions. Current test standards specify a minimum number of test specimens to calculate the average value of mechanical properties from the individual results. Numerous scientific publications report the mechanical properties of 3D printed CFC, including carbon, fiberglass and aramid fiber reinforcement. Most often, commercial CFF desktop 3D printers were used to manufacture the test specimens. Blok et al. and Goh et al. manufactured specimens with the Mark One desktop 3D printer (Markforged). Blok et al. [
+41
+] determined the mechanical properties of carbon fiber reinforced nylon through tensile, flexural and shear tests. According to the data published in the paper, the samples had an estimated fiber volume content of 27%, and three or four specimens were used for each test. Goh et al. [
+42
+] reported tensile and flexural properties of carbon fiber and fiberglass reinforced nylon. The authors reported fiber volume fractions of 41% and 35%, respectively. They prepared three specimens for each test and fiber type. The reported flexural strength of carbon fiber specimens is 430 MPa ± 3%, slightly less than the strength reported by Blok et al. of 485 MPa ± 1%. With the Mark Two desktop 3D printer (Markforged), Dickson et al. and Chacón et al. manufactured carbon fiber, fiberglass and kevlar fiber-reinforced specimens, and Ueda et al., Araya-Calvo et al. and He et al. manufactured carbon fiber reinforced specimens. Dickson et al. [
+9
+] determined tensile and flexural properties of specimens with eight reinforced layers, leading to a fiber volume fraction of around 8–11%, and compared isotropic and concentric printing patterns. The stated mechanical properties are the average of five tensile test specimens and three flexural test specimens. Chacón et al. [
+14
+] also reported the mechanical properties from tensile and flexural tests, compared three different reinforcement types with fiber volume fractions from 2% to 27%, and studied the influence of the build direction. The authors tested five specimens for each group of parameters. Ueda et al. [
+43
+] tested carbon fiber-reinforced nylon specimens as a benchmark to compare with their self-developed 3D printing system. The authors referred to a fiber volume fraction of approximately 35% (reduced by nylon layers) and more than three test specimens per conducted test. The measured flexural strength was 583 MPa ± 19.7%. Araya-Calvo et al. [
+44
+] reported compression and flexural properties of carbon fiber reinforced nylon with varying fiber volume content (about 8%, 17%, 25% for compression and 17%, 32%, 49% for bending). Also, they varied the reinforcement (isotropic or concentric) and the printing direction. For each configuration, they tested two specimens. He et al. [
+45
+] studied the effect of microscopic voids on mechanical performance using compression molding as a post-printing treatment. The authors reported tensile, flexural and shear properties of five specimens. The flexural strength of 3D printed specimens without post-treatment was 546.2 MPa ± 3.6%.
+Despite the large amount of scientific work carried out to characterize the mechanical properties of CFC, the previous experimental results are hardly comparable and cannot be combined in a high-quality material model. Reasons for this are that the dimensions of test specimens and applied test standards differ and that the different studies used different fiber volume contents and reinforcement strategies. Moreover, each material model obtained from one individual study suffers from the small sample size used in this study, leading to an insufficiently accurate statistical description of the material parameters. In the context of material models for numeric simulation and optimization, this is referred to as incomplete knowledge in the model inputs or model parameter uncertainty [
+46
+]. Different types of uncertainties occur within the design process, classified as epistemic and aleatory uncertainties. For a given manufacturing system (e.g., CFF) in a certain state (e.g., defined process parameters), some uncertainties are reducible (epistemic uncertainties), while others remain irreducible (aleatory uncertainties). For instance, uncertainties in mechanical properties are reducible because the quantification of the variability depends on the sample size. A well-chosen sample size leads to a satisfying quantification of the statistical quantities, particularly the mean value and the standard deviation, which are used to evaluate the level of variability of the mechanical properties.
+In the end, the description of the material behavior of a numerical model is as accurate as the determined material properties. Therefore, there is a direct relationship between the accuracy of the material properties implemented in a material model and the numerical analysis result, which represents the behavior of the component under load. The predictive numerical model directly impacts the quality of the derived optimized components and influences how well the superior CFC material properties are exploited. Consequently, increasing the accuracy of the material model through a more accurate quantification of the mechanical properties leads to more reliable optimization results. This is quickly becoming a critical design and manufacturing issue as technology steadily progresses towards true 3D printing, where even more uncertainties occur. Additionally, numerical simulation plays an increasingly important role in the development process of lightweight parts, such as motorbike components [
+47
+]. Consequently, fewer prototypes are needed to perform the required mechanical testing, which shortens development times. More accurate simulation models are now under development to go even further and move directly from CAD design to end part manufacturing. In that case, the numerical simulation must predict the structural behavior under load with very high accuracy.
+The present study constitutes part of the work towards that end. Its main contribution is the characterization of flexural properties of 3D printed CFC with a sufficient sample size to reduce epistemic uncertainty. It is demonstrated that a larger sample size leads to more accurate quantification of the mechanical properties and their variabilities. This fills a current knowledge gap, as no study with a significantly large sample size has been published to date. Tensile tests were intentionally not performed, as they often yield invalid measurement results. For instance, there is a risk of premature failure near the clamps caused by the superposition of tensile stress and surface pressure if clamping jaws are tightened too much. If the clamps are not tightened strongly enough, the sample can slip. The specimen must be discarded in both cases [
+48
+,
+49
+].
+In this work, the flexural properties and their variabilities were experimentally quantified using a three-point bending test and a total of 30 test specimens. 15 specimens with 0° and 15 specimens with 90° fiber direction were tested to determine the longitudinal and the transverse flexural properties. Among fiber reinforcement materials, carbon fiber offers the highest strength and stiffness. Therefore, lightweight industries are particularly interested in carbon fiber composites. In addition, the availability of 3D printing systems plays an important role in industrial adoption. Markforged is a market leader of CFF 3D printers. Its systems are widely used in the industry (in the lightweight sector, especially). Also, filaments tailored for the printer are advantageously available directly from the manufacturer. In the present study, a CFF desktop 3D printer (Mark Two, Markforged) and carbon fiber reinforced nylon filament were used to manufacture the test specimens.
+The next chapters are as follows: 
+Section 2
+ describes microstructure analysis methods for the composite material before and after printing, and the mechanical testing method used to determine the flexural properties of the material. 
+Section 3
+ presents the results of the material analysis and mechanical experiments. 
+Section 4
+ provides a discussion of the previous results. Especially, the large observed variability of the mechanical properties is discussed. A conclusion and an outlook on future work constitute the final section of this paper.
+The mechanical properties that describe a material under bending load are the flexural modulus, the flexural strength, and the maximum strain. Bending tests enable the determination of these mechanical properties. Microstructural analyses provide additional information before and after 3D printing.
+A CFF desktop 3D printer Mark Two (Markforged) [
+50
+] was used to manufacture the bending test specimens. The Mark Two 3D printer uses the prepreg extrusion method, which prints with a pre-impregnated composite filament. A feeding system transports the filament to the heated print head during the 3D printing operation, where the thermoplastic matrix material is melted before filament deposition (see 
+Figure 1
+). The round filament is compressed to a smaller layer height during deposition, which results in a larger path width. The bending test specimens were manufactured using a Markforged prepreg filament made of a 1K roving of continuous carbon fiber, which was pre-impregnated with a nylon matrix (CF/PA6) [
+51
+].
+The test specimens were designed according to the standard ISO 14125:1998 [
+52
+]. Their dimensions are 60 × 15 × 2mm (length × width × thickness). The slicer software Eiger (Markforged) [
+53
+] was used to define the printing sequence and create the G-code. 
+Figure 2
+ shows the printing path for one layer of the bending test specimen with 0° fiber direction. Based on Chacón et al. [
+14
+], who reported higher strength and stiffness for specimens sliced in the thickness direction rather than in the width direction, the specimens were sliced in the thickness direction. All test specimens were manufactured in the same way. The slicer software automatically adds at least one bottom and one top nylon layer. In previous bending tests [
+54
+], a flexural modulus of 20.4 GPa ± 18.2% for specimens with the extra top and bottom nylon layers was reported. However, a flexural modulus of 38.3 GPa ± 8.2% was observed for specimens without nylon layers. One possible explanation for this difference is the significantly lower flexural modulus of nylon compared to CF/PA6. To get rid of this effect, the extra nylon bottom and top layers were removed, which also resulted in the reduction of the specimen thickness. The flexural modulus 
+
+
+
+
+E
+
+
+f
+
+
+
+
+ is calculated according to the test standard [
+52
+] from geometrical parameters, the change of applied force 
+
+
+
+
+Δ
+
+
+F
+
+
+
+
+ and the change of deflection 
+
+
+
+
+Δ
+
+
+s
+
+
+
+
+ as:
+
+
+
+
+
+
+
+
+
+
+E
+
+
+f
+
+
+
+
+=
+
+
+
+
+
+
+L
+
+
+3
+
+
+
+
+
+
+4
+
+
+b
+
+
+
+
+h
+
+
+3
+
+
+
+
+
+
+
+
+
+
+
+
+Δ
+
+
+F
+
+
+
+
+
+
+Δ
+
+
+s
+
+
+
+
+
+
+,
+
+
+
+
+
+
+
+
+
+
+(1)
+
+
+
+
+
+where 
+h
+ is the specimen thickness, 
+L
+ is the length between the supports, and 
+b
+ is the width of the test specimen. If the specimen height decreases by 10%, the flexural modulus increases by 37% arithmetically, assuming that the change of force 
+
+
+
+
+Δ
+
+
+F
+
+
+
+
+ over the change of deflection 
+
+
+
+
+Δ
+
+
+s
+
+
+
+
+ does not change. In addition, the nylon layer may cause a delay in bending deformation of the CF/PA6 layers. Instead of enforcing strain on the compression side of the specimen (upper side), the loading pin first deforms the nylon layer (low surface hardness). As a result, the measured stress-strain curve shifts towards higher strains and the determined flexural modulus decreases. 
+Figure 3
+ shows both specimens before and after nylon removal.
+Complementary process parameters used for the 3D printing of the bending test specimens are shown in 
+Table 1
+. The temperature and layer height are the default settings of the 3D printer. In total, 30 test specimens were manufactured using three CF/PA6 filament spools. The purchased spools were identical, but the material properties may still have differed from one spool to the other. A set of ten specimens (five with 0° and five with 90° fiber direction) was manufactured per spool. The nomenclature of the specimens is as follows: name of the 3D printer (here: Mark Two, or M2), fiber direction in degrees (0 or 90), filament spool index (I to III), and specimen number (1 to 5). The manufacturing of one set (i.e., 10 specimens) of specimens required about 12.6 cm
+3
+ of CF/PA6 filament. The fabrication took place at ambient temperature and pressure (several weeks separated the manufacture of the different sets). After manufacturing, the samples were stored at ambient conditions for two to fourteen days before testing.
+For the determination of flexural properties, three-point bending tests were performed according to test standard ISO 14125:1998 [
+52
+]. The tests were conducted on a multi-testing machine Z020 (Zwick Roell) [
+55
+], shown in 
+Figure 4
+. The test machine is equipped with a tensile load cell, suitable for forces up to 20 kN and corresponds to the standard ISO 7500-1 [
+56
+]. The manufacturer’s software testXpert II [
+57
+] was used on the testing machine to initialize the test parameters and record the test data. The distance between the support points was set to 40 mm in accordance with the test standard. The bending tests were carried out at a test speed of 1 mm/min. The test speed corresponds to the vertical displacement of the crosshead, where the loading pin is attached. The testing machine has built-in measuring systems to record the relevant parameters for the strain and stress calculation. These are the applied force to the specimen and the simultaneous deflection in the middle of the specimen. A tensile load cell measures the force, while the crosshead position is used to determine the deflection. A preload was not applied for the test, as the test standard does not explicitly recommend it.
+For an analysis of the material’s microstructure, both the unprinted prepreg filament and 3D printed untested specimens were examined. First, the proportion of the different constituents of the filament was determined. A thermogravimetric analysis (TGA) of two unprinted CF/PA6 filament samples was conducted to determine the fiber weight fraction 
+
+
+
+
+f
+
+
+w
+
+
+
+
+ of carbon within the prepreg filament. The fiber volume fraction 
+f
+ was calculated from this result, applying the rule of mixtures for composite materials [
+58
+]:
+
+
+
+
+
+
+
+
+f
+
+
+=
+
+
+
+
+
+
+V
+
+
+f
+
+
+
+
+
+
+
+
+V
+
+
+f
+
+
+
+
++
+
+
+
+
+V
+
+
+m
+
+
+
+
+
+
+
+
+=
+
+
+
+
+
+
+f
+
+
+w
+
+
+
+
+
+
+
+
+f
+
+
+w
+
+
+
+
++
+
+
+
+
+(
+
+
+1
+
+
+−
+
+
+
+
+f
+
+
+w
+
+
+
+
+)
+
+
+
+
+
+
+
+
+ρ
+
+
+f
+
+
+
+
+
+
+ρ
+
+
+m
+
+
+
+
+
+
+
+
+
+
+,
+
+
+
+
+
+
+
+
+
+
+(2)
+
+
+
+
+
+where 
+
+
+
+
+V
+
+
+f
+
+
+
+
+ and 
+
+
+
+
+V
+
+
+m
+
+
+
+
+ are the volume and 
+
+
+
+
+ρ
+
+
+f
+
+
+
+
+ and 
+
+
+
+
+ρ
+
+
+m
+
+
+
+
+ the densities of carbon fibers and the matrix, respectively. The TGA measurement was performed in a temperature range of [20–600 °C] in a nitrogen atmosphere (gas flow rate of 25 mL/min), with a linear heating rate of 10 °C/min. During this process, the PA6 matrix material of the CF/PA6 filament degraded completely. The residue corresponds to the fraction of carbon fibers in the filament and is measured by weighting.
+For a further analysis of the CF/PA6 filament, cross-sections of the unprinted filament were prepared for optical examination with a microscope to gain information about the distribution of the continuous fibers within the filament. Additionally, micrographs of the 3D printed bending test specimens were prepared for microscopic analysis to characterize fiber, matrix and void distribution in the 3D printed material. The binocular microscope Axio Lab.A1 (Zeiss) [
+59
+] was used for the microscopic examination of the samples. Images were acquired with a 2.0 MP pixel-fox digital camera (Dietermann & Heuser Solution) [
+60
+] and processed with the manufacturer’s image measuring software. For the micrographs, the test specimens were cut in the middle of the longitudinal axis after cleaning and embedding in VersoCit-2 (Struers) [
+61
+], a two-component cold mounting for materialographic specimens. The specimens’ surface was then finished with a multi-stage grit process, and further polished using the LaboPol polisher (Struers).
+The manufacturer (Markforged) provides information about the material properties in a data sheet [
+51
+] and an official retailer (Mark3D) specifies the CFF nozzle diameter [
+62
+]. However, none of them provides information on the CF/PA6 filament diameter and the fiber amount in the filament. 
+Figure 5
+ shows the result of the micrographic analysis of the unprinted CF/PA6 filament, where the filament boundary is clearly visible. The filament diameter was determined to be 388 
+
+
+μ
+
+
+m at one position, using the image processing program. However, the filament is not perfectly circular. The distribution of carbon fibers within the filament cross-section is irregular. The fibers are distributed within three bands with regions of pure matrix material in between. This structure was also reported by Blok et al. [
+41
+]. Furthermore, the micrograph shows voids in the filament, which are recognizable as dark round spots. In contrast, the elongated spots likely result from the grinding process within the specimen preparation (see 
+Section 2
+, Microstructural analysis) and are not actual defects, originally present in the filament.
+Table 2
+ shows the TGA results of two unprinted CF/PA6 filament samples. The samples were weighted before heat treatment, as well as the fiber residues afterward. The ratio of residue weight to filament weight is the fiber’s weight fraction in the composite material. Using these TGA measurement results, the fiber volume fraction f of the carbon prepreg filament was then calculated from Equation (
+2
+). With the measured fiber weight fraction (
+
+
+
+
+f
+
+
+w
+
+
+
+
+ = 47.3 ± 0.1%) and the densities of carbon fiber (
+
+
+
+
+ρ
+
+
+f
+
+
+
+
+ = 1.8 g/cm
+3
+,
+58
+]) and PA6 matrix (
+
+
+
+
+ρ
+
+
+m
+
+
+
+
+ = 1.08 g/cm
+3
+ [
+51
+]), an average fiber volume fraction of 
+f
+ = 35.0 ± 0.1% in the carbon prepreg filament was obtained. This value is in accordance with results reported by other authors, such as He et al. [
+45
+], who reported an average filament diameter of 359 ± 4 
+
+
+μ
+
+
+m and an average carbon fiber volume fraction of 34.9 ± 0.8%.
+Figure 6
+ shows a micrograph of the cross-section from a specimen with 0° fiber direction. The layer-wise structure resulting from the 3D printing process is well visible in the micrograph due to interlayer voids and irregular fiber and matrix distribution. The micrograph width is approximately equal to the path width of two filaments printed next to each other (the average width of a printed filament is 910 
+
+
+μ
+
+
+m [
+54
+]). The height of the micrograph is approximately equal to eleven printed layers. There is a locally varying fiber distribution, likely a consequence of the already irregular fiber distribution in the CF/PA6 filament. Also, a columnar pattern of the void concentration appears. There are areas with more voids (at the left and the right edges of the micrograph) and areas with fewer voids (at the center of the micrograph). For a better view of the columnar pattern, the reader is referred to Ueda et al. [
+43
+], where an X-ray computed tomography image shows an entire specimen cross-section using a larger scale. The printing path can explain the occurrence of the columnar pattern. Contrary to the idealized illustration in 
+Figure 2
+, the actual distances between the lines of the printing path vary slightly. As a result, the adjacent printed filaments overlap to varying degrees and gaps sometimes occur.
+Figure 7
+ shows micrographs of the top view of two adjacent printed filaments. In 
+Figure 7
+a, a gap occurs between the printed filaments, leading to a less dense local microstructure and, thus, to more voids. In 
+Figure 7
+b, on the other hand, the printed filaments overlap, resulting in a denser microstructure with significantly fewer voids.
+15 specimens were tested for each fiber direction to determine the mechanical properties. The flexural tests were performed in sets. 
+Figure 8
+a,d show the test specimens of a set with longitudinal and transverse fiber direction, respectively. Slight geometric irregularities of the specimens are visible, which can be attributed to the manufacturing process. 
+Figure 8
+b,e show the deformation of specimens during the flexural test. A larger deformation before failure was observed for specimens with transverse fiber direction. The plastically deformed specimens (i.e., after mechanical testing) are shown in 
+Figure 8
+c,f. In some of the specimens with longitudinal fiber direction, delamination of the outer layers was also observed.
+The stress-strain curves of 3D printed CF/PA6 specimens, as well as their variability, are of particular interest. Evaluated separately for each set, the average stress-strain curves including their standard deviation in the longitudinal fiber direction and transverse fiber direction are shown in 
+Figure 9
+ and 
+Figure 10
+, respectively. The average curves and standard deviation were calculated from the measurement data. Usually, specimens fail at different stresses. If neglected, this phenomenon can lead to calculation errors. Here, the average stress-strain curve and its standard deviation were computed between the origin and the stress level at which the first specimen failed. Additionally, the mean flexural strength was calculated for each set and marked in the figures. The shapes of the stress-strain curves differ significantly for the different fiber directions. For the longitudinal fiber direction, the stress increases almost linearly with strain, without a noticeable change of strain rate, until a sudden failure occurs. In contrast, a non-linear behavior occurs for the transverse fiber direction, starting from a strain of about 1% to 1.2%. The material follows a linear-elastic behavior in the first third of the strain range before non-linear material behavior occurs. The observed standard deviation of the stress-strain curves increases with larger strains. The magnitude of standard deviation also differs between the sets. For instance, in the longitudinal direction (see 
+Figure 9
+), the standard deviation ranges from 38.3 MPa to 52.3 MPa at a strain of 1.3%. In the transverse fiber direction (see 
+Figure 10
+), the standard deviation ranges from 7.5 MPa to 8.5 MPa at a strain of 2.5%. The flexural modulus was determined according to the test standard ISO 14125:1998 [
+52
+]. It is the stress-strain gradient of the strain range 0.05% to 0.25% (strain at the outer surface in the middle of the specimen, calculated from the measured deflection).
+The mechanical properties, observed in both directions, are significantly lower in the transverse direction. The flexural strength in the transverse direction is located between 29.9 MPa and 57.8 MPa. In the longitudinal direction, it is located between 470.1 MPa and 623.2 MPa. The flexural modulus was determined according to the test standard ISO 14125:1998 [
+52
+]. The observed Young’s modulus values show the same kind of discrepancy between both directions. In the transverse direction, Young’s modulus values between 1.3 GPa and 2.5 GPa were measured. In the longitudinal direction, Young’s modulus values between 32.1 GPa and 43.1 GPa were measured. This highlights the previously described significant material anisotropy of CFC. The excellent mechanical behavior in the longitudinal direction is due to the excellent mechanical properties of the continuous fibers themselves. In the transverse direction, the observed properties are those of the (poorer) matrix material. The values provided by the manufacturer [
+51
+] for the CF/PA6 and pure Nylon filaments are respectively 540 MPa and 50 MPa for the flexural strength, and 51 GPa and 1.4 GPa for the flexural modulus. These values were obtained using a method similar to the test standard ASTM D790.
+In order to quantify the variability, 
+Figure 11
+ and 
+Figure 12
+ show the mean value and standard deviation of the determined mechanical properties (flexural modulus, flexural strength, maximum strain) for each set of tested specimens. The obtained mechanical properties for the different sets differ noticeably in terms of mean value and less in terms of standard deviation. In the longitudinal direction, the flexural modulus ranges from 36.5 ± 3.3 GPa to 40.2 ± 3.1 GPa. Likewise, the flexural strength ranges from 515.7 ± 47.7 MPa to 569.2 ± 64.8 MPa. In comparison, the flexural strength differs more in the transverse direction and ranges from 37.9 ± 8.0 MPa to 43.9 ± 8.7 MPa. However, the mean values for the flexural modulus and maximum strain differ less between the different sets, for the transverse direction.
+Table 3
+ shows the calculated statistical quantities of the measured mechanical properties to quantify the level of variability for all test specimens. The coefficient of variation (c.o.v.) is the ratio of the standard deviation to the mean value. It allows easy comparison of the degree of variation of mechanical properties. In general, the c.o.v. in the transverse direction is at least twice as large as in the longitudinal direction. The lowest c.o.v. is observed for the maximum strain. It is 4% in the longitudinal direction, corresponding to a moderate level of variability, and 13.4% in the transverse direction, corresponding to a high level of variability. A moderate to high level of variability occurs for flexural modulus and flexural strength, with a c.o.v. of about 10% in the longitudinal and 20% in the transverse direction, respectively.
+A significant level of variability in the measured mechanical properties was observed. Factors that influence the variability in the measured mechanical properties are to be found along the whole manufacturing chain, as well as in the test procedure. All manufacturing processes induce uncertainties. For the 3D printing process, the prepreg filament, ambient conditions, manufacturing process parameters and machine inaccuracies all influence the structure of the printed material and therefore, the resulting material properties. Some factors certainly influence the test specimens of a given set equally. This is the case, among others, for the distance between the printing nozzle and the print bed (adjusted before printing), for the wear of the different components of the 3D printer, for the variations in filament quality, and for the variations in environmental conditions like temperature, ambient pressure and humidity, during manufacturing and material storage. The equipment used for mechanical testing also influences, equally, the test results. These factors can be used to explain the observed dispersion between the individual sets. Other factors, in contrast, have a direct influence on each particular specimen, within each set. For instance, variations in the print precision (print head movement speed, filament feeding speed) can lead to local differences in the microstructure (e.g., location and size of voids), with a direct impact on the resulting mechanical properties. These factors influence the standard deviation observed for each set, and are at the origin of the differences in standard deviation observed between the different sets.
+The international standards for determining the flexural properties of polymer matrix composite materials (ASTM D 7264/D 7264M [
+63
+] and ISO 14125:1998 [
+52
+]) suggest to characterize at least five specimens per test to achieve valid nominal values and standard deviation results. In the present study, three times this number of specimens were tested, whereby these were manufactured with three different CF/PA6 filament rolls (differentiated as sets). The test results show that this minimum number of specimens, as recommended by the test standards, is not enough to characterize the mechanical properties of 3D printed CFC with sufficient accuracy, especially in terms of variability. The comparison between the different sets in 
+Figure 11
+ and 
+Figure 12
+ show indeed, that a significant amount of uncertainty would remain, if one set only was considered (i.e., five specimens). In that case, the mechanical properties would either be overestimated or underestimated. Therefore, there is a need to define new test standards for 3D printed CFC materials.
+In addition to significantly larger sample sizes, improved test methods are also required. The three-point bending test is probably sensitive to the location of voids in the specimen. The standards ASTM D7264/D7264M [
+63
+] and ISO 14125:1998 [
+52
+] both suggest three-point and four-point loading configurations. Both tests are performed with identical specimen geometries. However, the standards do not specify which test configuration should be preferred. Two significant differences between the two test methods are the distribution of the bending moment and the occurrence of vertical shear forces. In the three-point bending test, the bending moment is not uniform in the area between the support pins, but increases linearly, with a maximum reached in the center of the specimen, directly under the loading pin. Therefore, voids located in the center of the specimen lead to earlier failure and lower measured flexural strength, compared to specimens where voids are located closer to areas subjected to lower bending moments. Furthermore, the three-point bending test configuration is the only one where vertical shear forces are generated in the area between the support pins, which leads to earlier material failure. Therefore, the four-point bending test, with the advantages of a constant bending moment between the two load pins and the absence of vertical shear forces, shall result in a more accurate determination of mechanical properties and their variability.
+The first part of this discussion concerned the need to increase the number of tested specimens to achieve a correct statistical description, of the measured mechanical properties. However, the measured mechanical properties still show a significant level of variability, due to the aleatory uncertainty. The only way to reduce this uncertainty is therefore to drastically improve the manufacturing process itself. One may try to reduce the variability due to the differences between rolls, by performing pre-tests for each filament before manufacturing. However, this would be a difficult procedure to implement due to the limited amount of material per roll and to the additional effort required for testing. It is therefore probably economically non-viable to do so. Corrective measures (e.g., optimization of the 3D printing process parameters) can also be implemented in the case of CFC test specimens to reduce the content, distribution and size of voids. Solving the problem that leads to inconsistent distances between printed lines shall also make it possible to avoid the columnar accumulation of voids in the microstructure (
+Figure 6
+). Yet, it may take years for these improvements to be achieved and made available in commercial manufacturing tools.
+In this paper, the flexural properties of 3D printed CF/PA6 test specimens were quantified. 15 samples per fiber direction were tested with the objective of determining the variability in material parameters with high accuracy. The research was motivated by the direct positive impact which the expected results can have on the quality of material models used in numerical simulation and optimization. The test results showed a large variability in the measured mechanical properties. This variability is irreducible unless improved manufacturing tools are used. It is suggested to use a larger number of test specimens to quantify the material parameters with sufficient accuracy until adequate test standards are defined and released.
+Future work shall include the determination of all relevant parameters (tensile tests, shear test, etc.) and the testing of other reinforcement fiber materials (glassfiber, aramid). It will also be necessary to consider the effect of the observed variability of the material parameters on numerical design optimization procedures. Typical optimization objectives are the minimization of weight or the maximization of stiffness with maximum displacement or stress constraints. Considering the large variability of the material parameters, as shown in the present study, the choice of these two optimality criteria might be questioned because variability in the material parameters leads to variability in the observed maximum displacement or maximum stress. This can be considered either by changing the optimization objective or adding an optimization constraint. An adjusted optimization objective minimizes variability directly. For instance, this can be written as a multi-objective optimization, where one objective is to minimize the weight of a structure, and the other objective is to minimize the variability of the displacement. Alternatively, an optimization constraint can be added to the typical formulation. For instance, the optimization objective can remain the minimization of weight, while an additional constraint limits the allowed variability of the displacement to 10%. In both cases, the material properties would be uncertain parameters and modeled using random variables and distribution laws. Finally, the combination of better manufacturing processes, better testing procedures, better statistical characterization of mechanical properties, and development of optimal design under uncertainties should result in greatly improved and robust CFC designs for 3D printing.
+Conceptualization, L.-M.F., F.O.R.; methodology, H.O., R.B.H., G.W. and F.O.R.; validation, H.O., F.O.R.; resources, L.-M.F., F.O.R.; formal analysis, C.B., R.B.H., G.W.; investigation, H.O., R.B.H., G.W.; data curation, H.O., R.B.H.; writing—original draft preparation, C.B.; writing—review and editing: C.B., P.N. and F.D.; visualization, C.B.; supervision, F.D., P.N.; fund acquisition, F.O.R. All authors have read and agreed to the published version of the manuscript.
+This research was financially supported by the Interreg program Si-At with the projects MMO-3D and ASAM. Further it was financially supported by the “Ministère de l’Enseignement Supérieur et de la Recherche” of France.
+Not applicable.
+Not applicable.
+The data presented in this study are available on request from the corresponding author.
+The authors thank Marius Laux for the training to conduct the microscopic analysis and Alexander Berndt for helpful discussions.
+The authors declare no conflict of interest.
+Publisher’s Note:
+ MDPI stays neutral with regard to jurisdictional claims in published maps and institutional affiliations.

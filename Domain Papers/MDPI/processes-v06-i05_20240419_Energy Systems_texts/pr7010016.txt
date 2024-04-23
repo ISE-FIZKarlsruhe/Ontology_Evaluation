@@ -1,0 +1,1607 @@
+In earlier work (Silva et al., 2016; Soh et al., 2014a; Soh et al., 2015), the supercritical CO
+2
+ transesterification of triolein to methyl-oleate using Nafion solid-acid catalyst and large methanol/triolein molar feed ratios was carried out. Herein, these ratios are adjusted (from 50–550) to evaluate the yield of fatty acid methyl esters in batch laboratory reactors as temperature is varied from 80–95 °C and pressure is varied from 8.0–9.65 MPa. Also, to better understand the effect of varying these operating parameters, batch reactor simulations using the Soave-Redlich-Kwong Equation of State (RK-ASPEN EOS) in ASPEN PLUS are carried-out. A single-reaction kinetic model is used and phase equilibrium is computed as the reactions proceed. Experimental data are compared with these results.
+As a replacement for conventional fossil fuels to meet energy demands, a new wave of research on biodiesel production technologies has commenced for the development of alternate energy sources worldwide. These include fatty acid methyl esters (FAMEs), i.e., biodiesel, having characteristics similar to petrodiesel oil, allowing its use in compression motors without any engine modification [
+1
+]. FAMEs are commonly obtained by (1) the transesterification of vegetable oils, i.e., triglycerides (TG) of fatty acids (FAs), or (2) esterification of free fatty acids (FFA), with lower alcohols [
+2
+]. Generally, triglycerides can be classified into two groups: simple and mixed. The simple triglyceride is composed of three identical fatty acid chains, whereas fatty acid chains of a mixed triglyceride are not identical. Natural oils produced from oil-bearing crops comprise 97% of various triglycerides and 1–5% of free fatty acids (FFA). Along with simple triglycerides, vegetable oils consist of mixed triglycerides containing different fatty acid chains; e.g., C12:0 (lauric acid chain), C14:0 (myristic acid chain), C16:0 (palmitic acid chain), C18:0 (stearic acid chain), C18:1 (oleic acid chain), and C18:2 (linoleic acid chain). Their compositions are known to vary with oil sources and growth conditions [
+3
+]. Recently, alternative feedstocks such as waste/used cooking oils, and non-edible feedstocks such as jatropha, pongamia, castor and microalgal oils are used to produce biodiesel fuels, to reduce the high prices of biodiesel fuel.
+Transesterification of triglycerides with homogeneous acid or base catalyst requires its neutralization and recovery from the reactor products. Increased purification and recovery steps can, eventually, affect product costs and the market. Also, the base catalyst results in the production of undesirable products due to the saponification reaction. Alternatively, heterogeneous catalysts can be separated from the liquid effluents and re-used easily [
+4
+]. Solid acid-catalyzed transesterification reactions have been explored to circumvent the problems associated with the conversion of low quality feedstocks (containing free fatty acids) to biodiesel, and thus, are preferred over base catalyzed transesterifications. Also, non-catalytic transesterifications have shown promising reaction rates for commercial application using supercritical methanol (>250 °C, 19–45 MPa) [
+5
+,
+6
+]. The partial miscibility of the oil and methanol phases at moderate temperatures and pressures hinders the rate of reaction.
+Supercritical processes do not require neutralization, washing, and drying steps, allowing waste oils to be processed without these expensive pretreatment steps [
+5
+]. Supercritical carbon dioxide (Sc-CO
+2
+) (critical point at 31 °C and 7.3 MPa) and methanol (critical point at 240 °C and 7.95 MPa) used in a single supercritical phase for the transesterification resulted in higher reaction rates and lesser time duration [
+6
+]. But, the monophasic system can suffer from high energy requirements and the need for downstream separation of glycerol from the product [
+7
+]. Operation at moderate temperatures (~80–100 °C) and pressures (8–10 MPa) in a multi-phase liquid-vapor system may allow for the same benefits without high energy burdens. Sc-CO
+2
+ (supercritical carbon dioxide) acts as a co-solvent and can increase the rate of the reaction by eliminating or reducing the transport resistance and increasing the solubility of methanol in triolein and vice-versa [
+8
+].
+In previous work Soh et al. [
+7
+], demonstrated experimentally that mixed carbon dioxide (CO
+2
+) and methanol (MeOH) successfully transesterifies triolein into methyl-oleate at moderate pressures and temperatures below 100 °C in the presence of a heterogeneous acid catalyst, Nafion NR50. Additionally, high-pressure CO
+2
+ was experimentally found to be effective and selective in separating algae oil triglycerides [
+9
+], with new separation approaches currently under development. Silva et al. [
+10
+] simulated a batch reactor involving six chemical species; viz., triolein, methanol, CO
+2
+, glycerol, FAME, and water. The comparison of simulation results using the RK-ASPEN EOS (with no binary parameters) gave reasonable agreement with VLLE (vapor-liquid-liquid equilibrium) experimental results, and thus, the RK-ASPEN EOS was used in thermo-kinetic reactor model (see 
+Section 3
+ below). A custom-written FORTRAN
+®
+ subroutine in a USER2 block of ASPEN PLUS was used that integrates the mass balance ordinary differential equations (ODEs) and checks the multiphase equilibrium, at various time intervals, to incorporate the effect of the phase behavior on the reaction kinetics periodically using the FLSH_FLASH subroutine [
+10
+,
+11
+]. FLSH_FLASH is an ASPEN PLUS subroutine that performs only flash calculations (without reactions). Rate constants were regressed using the bulk concentrations in the experimental 50 mL, agitated reactor vessel [
+9
+].
+However, since the motivation behind these reactions was to evaluate only the effect of phase behavior without assessing yields of methyl-oleate converted and a constant amount of methanol on the reaction yield, the molar ratio of methanol/triolein used was quite high (1087). Because of its impact on the FAME yield [
+12
+], these experiments have been extended to methanol/triolein molar ratios of 50, 100, 300, and 550 herein. Then, using the batch-reactor simulation model [
+10
+], the predicted FAME yields are shown to compare favorably with the experimental data. A key objective of this verification, is to show that the FAME yields can be optimized by varying the methanol/triolein molar ratio, together with operating temperature and pressure. This manuscript focuses on this verification of the laboratory data. 
+For the laboratory experiments (carried out at Lafayette College), corn oil and methanol at the four molar ratios were transesterified using solid-acid heterogeneous catalyst (Nafion NR50) in the presence of supercritical CO
+2
+ at 95 °C and 9.65 MPa for 4 h in a batch reactor to yield FAME. Then, a FORTRAN
+®
+ USER2 block in ASPEN PLUS V10, prepared by Silva et al. [
+10
+], was used to carry-out dynamic simulations of the batch reactor. As the mass-balances were integrated, using the kinetic model in 
+Section 3
+, the FLSH_FLASH subroutine was used to compute 3-phase equilibria using the RK-ASPEN EOS. Given the concentrations of FAME in the vapor and two liquid phases, and the phase volumes, the yield of methyl-oleate (g) was computed.
+This section describes the chemicals, catalyst, batch reactor, and analysis methods in the experiments at Lafayette College.
+Chemicals: For calibration of the supercritical fluid chromatography-mass spectroscopy (SFC-MS) unit, all oleate species standards were purchased from Sigma-Aldrich (purity ≥ 99%, St. Louis, MO, USA) except diolein (1,2 and 1,3 DG isomers, 2:1 isomeric ratio) from MP Biomedicals, LLC (purity ≥ 99%, Santa Ana, CA, USA). ACS grade methanol was obtained from J.T. Baker (Radnor, PA, USA). High Performance Liquid Chromatography (HPLC) grade heptane and ultrapure isopropanol were obtained from Alfa Aesar (Haverhill, MA, USA) and Sigma-Aldrich, Inc. Bone-dry CO
+2
+ with a siphon tube and nitrogen gas were supplied by Airgas, Inc. (Radnor, PA, USA). Corn oil was obtained from a local market and was analyzed for fatty-acid content using standard methods (10.4 wt% C16:0, 30.8 wt% C18:1, 58.8 wt% C18:2, others in trace quantities) [
+13
+]. Note that, for experiments at low methanol/triolein molar ratios, inexpensive corn oil was purchased.
+Catalyst Characteristics: Nafion NR50 was purchased from Ion Power, Inc. (New Castle, DE, USA), and stored in a desiccator [
+14
+]. For all of the experiments reported, the catalyst concentration was 0.00379 mol/L (based upon the number of active sites per μmol). To assess CO
+2
+’s effect on particle swelling, all Nafion NR50 was presoaked in methanol for at least 72 h before reaction. 
+Reactor and reaction conditions: Nearly all of the reactions were performed in a stainless-steel stirred reactor (Supercritical Fluid Technologies, Inc. (Newark, DE, USA), High-Pressure Reactor, 100 mL). For each reaction, the catalyst and substrates were added directly into the reactor that was then sealed and heated to the desired temperature using the built-in heating jacket and controlled by an RXTrol Jr. integrated processor (Newark, DE, USA). The reactor was then pressurized with CO
+2
+ and stirred at 300 rpm to increase the interfacial area between triglyceride and methanol phases. Preliminary experiments indicate that this mixing speed is sufficient to minimize mass-transfer limitations within the reactor [
+15
+]. The conditions were maintained for 4 h when CO
+2
+ was vented through a restrictor valve. After the reaction, the venting CO
+2
+ was slowly sparged through isopropanol liquid to dissolve the reaction products. Then, this isopropanol was added to the liquids remaining in the reactor, which were dissolved in it. The resulting isopropanol was analyzed to determine concentrations of the reactor products. An internal standard was used to analytically compensate for any loss of isopropanol during sparging. All reactions were performed in at least duplicate with an initial substrate (corn oil) at loadings, depending on the methanol/triolein ratio. Note that for all loadings, the combined volumes of methanol and corn oil was 5.22 mL, giving a fixed volume of CO
+2
+. 
+Analysis: Samples were analyzed by supercritical fluid chromatography-mass spectrometry (Waters
+®
+ Acquity UPC
+2
+ with Xevo TQD Triple Quadrupole Mass Spectrometer (Milford, MA, USA) with an Acquity HSS C18 column (100 Å, 1.8 µm, 2.1 mm × 100 mm) and using a 1 µL sample volume. The column was held at 45 °C with a back pressure of 1500 psi. The mobile phase consisted of CO
+2
+ (A) and 90:10 acetonitrile: methanol (B). The elution gradient started at 15% B and increased linearly to 35% B in 3.5 min where it was held for 1 min before return to the starting conditions. The mass spectrometer was run in Atmospheric pressure chemical ionization (APCI+) mode with a desolvation temperature of 600 °C and N
+2
+ flow rate of 1000 L/h and cone flow of 40 L/h. The APCI voltages were 3.5 kV (corona) and 50 V (cone). Each FAME was identified using its [M-H]
++
+ adduct and quantified using a calibration curve and analyzed in its linear range.
+In this section, the batch reactor model used in our ASPEN PLUS simulations is reviewed first. Then, the RK-ASPEN EOS used to calculate vapor-liquid-liquid (VLL) equilibrium is reviewed.
+In recent research, our objective has been to take experimental data in the laboratory (to extend the data taken by Soh et al. [
+9
+,
+11
+]) and to use simulation software (ASPEN PLUS-Version 10, AspenTech, Bedford, MA, USA)—Silva et al. [
+10
+]), so that at intermediate pressures, CO
+2
+ causes triglyceride to dissolve in the methanol phase, significantly increasing the transesterification reaction rate. The additional data are needed to improve estimates of the reaction rates, especially at far smaller methanol/triglyceride ratios. Given that the triglycerides of corn oil are principally linoleic and oleic acids, triolein (C
+57
+H
+104
+O
+2
+) was selected to represent the corn oil in the ASPEN PLUS simulations and the principal product was taken to be methyl-oleate (C
+19
+H
+36
+O
+2
+), representing the biodiesel. 
+Earlier Silva et al. [
+10
+], because pure-species parameters for diglyceride and monoglyceride were unavailable, an approximate single-reaction, kinetic mechanism, was used, as shown in 
+Figure 1
+. This model included just six chemical species: triolein, methanol, methyl oleate, glycerol, CO
+2
+, and water.
+For this reaction, our earliest reactor model [
+10
+] was created to track the batch reactor data taken by Soh et al. [
+9
+,
+11
+], involving up to three phases (V, LI, and LII). For each phase, the mass balances were expressed:
+
+
+
+
+
+
+
+
+
+
+
+
+d
+
+
+[
+
+
+
+
+c
+
+
+j
+
+
+
+
+]
+
+
+
+
+
+
+d
+
+
+t
+
+
+
+
+
+
+=
+
+
+
+
+ν
+
+
+j
+
+
+
+
+×
+
+
+r
+
+
+ 
+
+
+j
+
+
+=
+
+
+1
+
+
+,
+
+
+ 
+
+
+…
+
+
+,
+
+
+ 
+
+
+4
+
+
+
+
+
+
+
+
+
+
+(1)
+
+
+
+
+
+where 
+j
+ is the species counter in the reaction, and the intrinsic rate of reaction is expressed, in kmol/L·s: 
+
+
+
+
+
+
+
+
+r
+
+
+=
+
+
+
+
+k
+
+
+f
+
+
+
+
+
+
+
+
+(
+
+
+
+
+c
+
+
+
+
+cat
+
+
+
+
+
+
+)
+
+
+
+
+
+
+
+
+n
+
+
+f
+
+
+
+
+
+
+
+
+
+
+c
+
+
+
+
+TG
+
+
+
+
+
+
+
+
+c
+
+
+
+
+MEOH
+
+
+
+
+
+
+−
+
+
+
+
+k
+
+
+r
+
+
+
+
+
+
+
+
+(
+
+
+
+
+c
+
+
+
+
+cat
+
+
+
+
+
+
+)
+
+
+
+
+
+
+
+
+n
+
+
+r
+
+
+
+
+
+
+
+
+
+
+c
+
+
+
+
+FAME
+
+
+
+
+
+
+
+
+c
+
+
+
+
+GLY
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(2)
+
+
+
+
+
+where 
+k
+f
+ is the forward rate constant, m
+3
+/kmol·s, 
+k
+r
+ is the reverse rate constant, m
+3
+/kmol·s, 
+c
+cat
+ is the Nafion catalyst concentration, 
+n
+f
+ is the exponent of the catalyst concentration in the forward direction, 
+n
+r
+ is the exponent of the catalyst concentration in the reverse direction, 
+c
+j
+ is the concentration of species 
+j
+, kmol/L, and ν
+j
+ is the stoichiometric coefficient of species 
+j
+ in the reaction. In the absence of catalyst, the 
+n
+ coefficients are zero. Note: For species 
+j
+ in reaction 
+i
+, the intrinsic rate of reaction is 
+
+
+
+
+
+
+r
+
+
+j
+
+
+
+
+=
+
+
+
+
+ν
+
+
+j
+
+
+
+
+×
+
+
+r
+
+
+
+
+.
+Prior to each time-step, when integrating mass balances (1) for each phase in a custom written FORTRAN
+®
+ subroutine, in a USER2 block, the concentrations in the three phases and phase volumes are computed by minimizing G (Gibbs free energy) subject to mass-balance constraints. For this purpose, the 
+Gibbs flash method
+ in ASPEN PLUS was used as a flash convergence algorithm in the block options of the USER2 block with Redlich-Kwong Equation-of-state, RK-ASPEN, as the base method in ASPEN PLUS. 
+Cubic equations-of-state (EOS) were first developed roughly 130 years ago and have become the industry standard since the development of computer-aided process design in the 1970s. The cubic EOSs are named as such because they contain a cubed molar volume term (Equation (3)). Numerous variants exist, the most popular of which are the van der Waals equation, Soave-Redlich-Kwong [
+16
+], and Peng-Robinson [
+17
+]. In 1972, G. Soave replaced the 1/√
+T
+ term of the original Redlich-Kwong equation with a function 
+
+
+∝
+
+
+ (
+T
+, 
+
+
+
+
+
+
+ω
+
+
+i
+
+
+
+
+
+
+) involving the temperature and the acentric factor (the resulting equation is also known as the Soave-Redlich-Kwong equation of state; SRK EOS). Herein, Soave-Redlich-Kwong EOS will be used given as follows: 
+
+
+
+
+
+
+
+
+P
+
+
+=
+
+
+
+
+
+
+R
+
+
+T
+
+
+
+
+
+
+V
+
+
+−
+
+
+b
+
+
+
+
+
+
+−
+
+
+
+
+
+
+a
+
+
+
+
+∝
+
+
+i
+
+
+
+
+
+
+
+
+V
+
+
+
+
+(
+
+
+
+
+V
+
+
++
+
+
+b
+
+
+
+
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(3)
+
+
+
+
+
+where a and b are defined as:
+
+
+
+
+
+
+
+
+a
+
+
+=
+
+
+
+
+
+
+∑
+
+
+
+
+i
+
+
+
+
+
+
+
+
+∑
+
+
+
+
+j
+
+
+
+
+
+
+x
+
+
+i
+
+
+
+
+
+
+x
+
+
+j
+
+
+
+
+
+
+
+
+
+
+(
+
+
+
+
+
+
+a
+
+
+i
+
+
+
+
+
+
+a
+
+
+j
+
+
+
+
+
+
+)
+
+
+
+
+
+
+
+
+0.5
+
+
+
+
+
+
+
+
+(
+
+
+
+
+1
+
+
+−
+
+
+
+
+K
+
+
+
+
+a
+
+
+,
+
+
+i
+
+
+j
+
+
+
+
+
+
+
+
+)
+
+
+
+
+
+
+
+
+
+
+
+
+(4)
+
+
+
+
+
+
+
+
+
+
+
+
+b
+
+
+=
+
+
+
+
+
+
+∑
+
+
+
+
+i
+
+
+
+
+
+
+
+
+∑
+
+
+
+
+j
+
+
+
+
+
+
+x
+
+
+i
+
+
+
+
+
+
+x
+
+
+j
+
+
+
+
+
+
+(
+
+
+
+
+
+
+
+
+
+
+b
+
+
+i
+
+
+
+
++
+
+
+
+
+b
+
+
+j
+
+
+
+
+
+
+2
+
+
+
+
+
+
+)
+
+
+
+
+ 
+
+
+
+
+(
+
+
+
+
+1
+
+
+−
+
+
+
+
+K
+
+
+
+
+b
+
+
+,
+
+
+i
+
+
+j
+
+
+
+
+
+
+
+
+)
+
+
+
+
+
+
+
+
+
+
+
+
+(5)
+
+
+
+
+
+where 
+R
+ is the gas constant (8.314 J/mol·K), 
+T
+ is temperature, 
+V
+ is the molar volume, 
+P
+ is the pressure, 
+K
+a,ij
+ and 
+K
+b,ij
+ are binary interaction parameters, and 
+a
+i
+ and 
+b
+i
+ are empirical parameters, calculated using Equations (6)–(9). The attractive parameter, 
+a
+i
+, depends on the reduced temperature (
+T
+ri
+ = 
+T/T
+ci
+), the critical temperature (
+T
+ci
+) and critical pressure (
+P
+ci
+), the accentric factor (
+ω
+i
+), and an extra polar parameter (
+η
+i
+). The size parameter, 
+b
+i
+, depends only on the critical temperature and critical pressure. 
+γ
+i
+ is a parameter that accounts for accentricity of the molecule.
+
+
+
+
+
+
+
+
+
+
+
+a
+
+
+i
+
+
+
+
+=
+
+
+0.42747
+
+
+
+
+
+
+
+
+R
+
+
+2
+
+
+
+
+
+
+T
+
+
+
+
+C
+
+
+i
+
+
+
+
+2
+
+
+
+
+
+
+
+
+
+
+P
+
+
+
+
+C
+
+
+i
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(6)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+∝
+
+
+i
+
+
+
+
+=
+
+
+
+
+
+
+
+
+[
+
+
+
+
+1
+
+
++
+
+
+
+
+γ
+
+
+i
+
+
+
+
+
+
+(
+
+
+
+
+1
+
+
+−
+
+
+
+
+T
+
+
+
+
+r
+
+
+i
+
+
+
+
+
+
+0.5
+
+
+
+
+
+
+
+
+)
+
+
+
+
+−
+
+
+
+
+η
+
+
+i
+
+
+
+
+
+
+(
+
+
+
+
+1
+
+
+−
+
+
+
+
+T
+
+
+
+
+r
+
+
+i
+
+
+
+
+
+
+
+
+)
+
+
+
+
+
+
+(
+
+
+
+
+0.7
+
+
+−
+
+
+
+
+T
+
+
+
+
+r
+
+
+i
+
+
+
+
+
+
+
+
+)
+
+
+
+
+
+
+]
+
+
+
+
+
+
+2
+
+
+
+
+
+
+
+
+
+
+
+
+(7)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+γ
+
+
+i
+
+
+
+
+=
+
+
+0.48508
+
+
++
+
+
+1.5517
+
+
+
+
+ω
+
+
+i
+
+
+
+
+−
+
+
+0.15613
+
+
+
+
+ω
+
+
+i
+
+
+2
+
+
+
+
+
+
+
+
+
+
+
+
+(8)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+b
+
+
+i
+
+
+
+
+=
+
+
+0.08664
+
+
+
+
+
+
+R
+
+
+
+
+T
+
+
+
+
+C
+
+
+i
+
+
+
+
+
+
+
+
+
+
+
+
+P
+
+
+
+
+C
+
+
+i
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(9)
+
+
+
+
+
+where 
+
+
+
+
+
+
+∝
+
+
+i
+
+
+
+
+
+
+ is a dimensionless factor that becomes unity at 
+T
+ = 
+T
+ci
+. The 
+
+
+
+
+
+
+∝
+
+
+i
+
+
+
+
+
+
+ function was devised to fit the vapor pressure data of hydrocarbons and the equation does fairly well for these materials [
+16
+].
+The yields of FAME obtained in: (a) experiments with corn oil were compared with those of (b) dynamic simulations of a batch reactor (100 mL). As shown in 
+Table 1
+ and 
+Table 2
+ experiments using corn oil were carried out for four molar ratios of MeOH/TG (50, 100, 300, and 550). The first two columns show the mass (g) of corn oil and the volume (mL) of methanol fed to the batch reactor. Note that the corn oil was comprised of three principal fatty acids: palmitic acid (C16:0), oleic acid (C18:1), and linoleic acid (C18:2), with relative FAME yields of 10.4 wt%, 30.8 wt%, 58.8 wt%, respectively. 
+When using ASPEN PLUS Version 10 with the RK-ASPEN EOS, data for CO
+2
+, triolein, methanol, methyl-oleate and glycerol, are available in the ASPEN PLUS component library. However, corn oil, which is a complex mixture of mixed triglyceride containing palmitic, stearic, oleic, and linoleic, and other fatty acid chains, is not available in the data bank library. Therefore, we used final FAME yields as a measure to compare percent oil conversion between experiment and simulations. 
+In 
+Table 1
+, columns 4 and 5 show the experimental FAME and simulation yields in grams. In 
+Table 2
+, columns 4 and 5 show the experimental FAME and simulation yields as the FAME (grams) per gram of corn oil multiplied by 100; i.e., the percent FAME yield. Note that the experimental and simulation yields have similar trends, although some of the values are not in close agreement.
+In lieu of experimental measurements, using ASPEN PLUS, the effects of varying temperature (80 and 95 °C) and pressure (8 and 9.65 MPa) on the FAME yield in the batch reactor after 4-h were investigated at four MeOH/TG molar ratios. 
+Table 3
+ shows a mix of increases and decreases with temperature and pressure. The yield of FAME increased with temperature, which is consistent with the previous work of Farobie and Matsumura [
+18
+] and Rathore and Madras [
+19
+], who reported that the conversion of oil to FAME in supercritical methanol increased with the increase in temperature from 200 to 400 °C. Methyl-oleate conversion increased with temperature and pressure in the transesterification reactor for the conversion of palm oil to biodiesel as reported by Bunyakiat et al. [
+20
+]. The increase also reduced the total batch reaction time.
+As the temperature and pressure in the transesterification reactor increases, it is likely that the triglyceride and methanol mixture in the presence of supercritical CO
+2
+ approaches the critical state. This close proximity of the otherwise partially miscible components enhances the overall solubility, thereby increasing the total yield of methyl oleate. Note that Tsai et al. [
+21
+] reported the reaction rate and FAME yield (conversion of oleic acid) increase with increasing temperature (220 to 260 °C) when other operating conditions are fixed. Kusdiana and Saka [
+12
+], also reported that increasing temperature reduces the transesterification reaction time from 3600 s to 120 s operating from 230 °C to 400 °C without using catalyst. Also, as methanol concentration increases at higher MeOH/TG molar ratios, the FAME yield increases as seen in the 
+Table 3
+, consistent with the observations of Pollardo et al. [
+22
+]. But, the increased methanol recovery and recirculation costs significantly influence the techno-economic optimization of processes to convert triolein to biodiesel. 
+The reaction rate constants were regressed using the bulk concentrations in the experimental 50 mL, agitated reactor vessel [
+9
+]. The relationship of the catalyst surface concentration in Equation (2) to the MeOH/triolein molar ratio deserves experimental study. As shown in 
+Figure 2
+, more than 90% conversion is possible in less than 1/4 h of batch reactor time. 
+The concentration profiles for triolein, methanol, and methyl-oleate during the batch reactor simulations are shown in 
+Figure 2
+. Note that for each MeOH/triolein molar ratio, the CO
+2
+/MeOH molar ratio was fixed at 2.34. Consequently, the CO
+2
+ concentration does not change appreciably in the three phases because CO
+2
+ is inert and is not consumed in the reactions, as clearly seen in 
+Figure 2
+d. Also, due to triolein’s low vapor pressure, it is assumed that the reaction does not occur in the vapor phase. Liquid 1 is principally apolar triolein and liquid 2 is principally methanol. 
+Figure 2
+a shows the triolein to be predominant in the liquid 1 phase and somewhat increasing in concentration in liquid 2 due to the presence of supercritical CO
+2
+ as co-solvent. Note that methanol distributes between the two liquid phases, with supercritical CO
+2
+ increasing its solubility in the apolar phase as seen in 
+Figure 2
+b. The forward reaction occurs principally in the apolar liquid phase. The reverse reaction occurs in liquid 2 with glycerol moving to liquid 2 (principally MeOH) as the batch reaction proceeds in time. Throughout the 4-h reaction time, three distinct phases (vapor and 2 liquids) exist as shown in 
+Figure 2
+ for a 550 MeOH/Triolein molar ratio. FAME and glycerol are the two principal products from the transesterification reaction whose concentrations increase over the 4-h reaction time. The RK-ASPEN EOS without binary interaction parameters gave reasonable agreement with the experimental results. As the methanol critical pressure (7.95 MPa) and critical temperature (240 °C) differ significantly from the experimental reactor conditions, the mixtures are not entirely supercritical, and consequently, the reaction proceeds slower in three phases rather than a single supercritical phase. 
+New experimental data have been reported for the batch transesterification of corn oil to biodiesel (FAME) at lower molar ratios of methanol to oil. These data show unanticipated increases of FAME yields at higher molar ratios, suggesting the need to examine closely the catalyst surface as the MeOH/TG molar ratio decreases. The single reaction kinetic model, solved in ASPEN PLUS simulations, using multiphase equilibrium calculations with the RK-ASPEN equation-of-state and the FLSH_FLASH subroutine, confirms the trends displayed experimentally. The 1-reaction kinetic model performs well, but to obtain better agreement with the experimental results, catalyst surface behavior and additional data for the di- and mono-glyceride species, should be included which can further improve the model performance and should facilitate better the techno-economic optimization of processes to convert triglycerides to biodiesel. 
+The Fulbright-Kalam Climate Fellowship to Geetanjali Yadav, permitting her to visit the University of Pennsylvania for one year, is gratefully acknowledged. Also, the computational files, containing programs used in earlier algae-to-biodiesel research, and the excellent assistance/advice from Cory Silva, is appreciated. We enjoyed much assistance from the support staff at AspenTech and from the CETS IT specialist, Neal Gerrish, at the University of Pennsylvania. Junwei Xiang aided with the corn oil experiments and analysis. The SFC-MS was generously funded by the National Science Foundation under Grant No. 1626100. 
+The authors declare no conflict of interest.

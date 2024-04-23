@@ -1,0 +1,1789 @@
+The design and development of composite structures requires precise and robust manufacturing processes. Composite materials such as fiber reinforced thermoplastics (FRTP) provide a good balance between manufacturing time, mechanical performance and weight. In this contribution, we investigate the process combination of thermoforming FRTP sheets (organo sheets) and injection overmolding of short FRTP for automotive structures. The limiting factor in those structures is the bond strength between the organo sheet and the overmolded thermoplastic. Within this process chain, even small deviations of the process settings (e.g., temperature) can lead to significant defects in the structure. A cyber physical production system based framework for a digital twin combining simulation and machine learning is presented. Based on parametric Finite-Element-Method (FEM) studies, training data for machine learning methods are generated and a FEM surrogate is developed. A comparison of different data-driven methods yields information on the estimation accuracy of task-specific data-driven methods. Finally, in accordance with experimental cross tension tests, the investigated FEM surrogate model is able to predict the interface bond strength quality in dependence of the process settings. The visualization into different quality domains qualifies the presented approach as decision support.
+In the field of automotive structures, lightweight materials such as high-strength steels, aluminum or fiber-reinforced plastics (FRP) are increasingly being used in the production of vehicles [
+1
+,
+2
+]. This results in lower fuel consumption and consequently lower vehicle emissions or, in case of electrical vehicles, to a range extension.
+Fiber reinforced thermoplastics (FRTP) become the subject of research and development as they enable high specific mechanical properties and large scale production due to short cycle times and an efficient cost-benefit ratio [
+3
+,
+4
+,
+5
+]. In particular, the combination of thermoforming of a continuous fiber-reinforced thermoplastic laminate (organo sheet) with injection overmolding of (short fiber reinforced) thermoplastics provides great potential for the economically efficient production of automotive lightweight structures. It allows the implementation of large scale production systems and the manufacturing of structures with high specific stiffness and strength due to the continuous fiber reinforcement in the organo sheet. Furthermore, it offers the potential for a high degree of functional integration as well as net shape manufacturing due to the injection molding [
+6
+]. A schematic illustration of the process chain according to Bouwman et al. [
+7
+] is shown in 
+Figure 1
+.
+First, the organo sheet is heated (1) and then transferred into the mold (2). By closing the mold, the organo sheet is thermoformed (3). When the mold is closed, it is overmolded by an injection molding thermoplastic that is compatible with the matrix system of the organo sheet (4). After cooling, the final part is demolded (5). Combining these two materials allows the increasing of the geometric stiffness by adding for example, reinforcing ribs. For such thermoplastic composites, a proper interface bond strength between the components is the limiting factor regarding its structural integrity. According to Akkerman et al. [
+8
+], the bond strength mainly depends on the interdiffusion (healing) of the thermoplastic matrix system across the interface. In Reference [
+8
+], a healing model describing the degree of healing for semi-crystalline polymers as a function of the thermal history at the interface was developed. Therein, computer simulations of the melt flow have been used to identify the thermal conditions at the interface. Based on the maximum temperature reached during the process, the degree of healing is determined and correlated to ultimate bond strength values from experiments. The experimental results emphasize, that the part insert temperature is the main process variable to influence the resulting interface bond strength. For an economical and environmental sustainable process, the temperatures need to be large enough to ensure a proper bond strength, but also as low as possible to reach short cycle times and the lowest possible energy demand.
+In today’s product development, it is a matter of course to support the product and production engineering by virtual methods [
+9
+]. Thereby, computer simulations analyze the material behavior of products and processes using numerical methods based on Finite Elements or Finite Difference schemes. Especially for composite materials, the simulation of the process chain is necessary for an accurate evaluation of their process dependent structural properties, such as strength or stiffness and the corresponding process design [
+10
+]. Numerical methods for optimizing for example, tooling and product design are well established for injection molding [
+11
+,
+12
+] as well as for fiber reinforced thermoplastics [
+13
+]. Consequently, such a procedure yields optimal process conditions and hence reduces experimental testing and run-in processes. However, within the process chain, even small deviations of the process settings (e.g., transfer time of the heated part insert) influence the interface bond strength between the overmolded organo sheet and the injected thermoplastic significantly. As indicated in Gellrich et al. [
+14
+], data-driven approaches such as machine learning can be exploited to control the increased complexity caused by the manufacturing of composites, for example, the behavior at the interface and more diverse material parameters. A promising strategy to identify and control critical process conditions, are reliable inline quality inspections in terms of digital twins of the manufacturing system that are build by data-driven approaches. By collecting continuously machine, process and product data, it is possible to cluster and detect defects within the production and to correlate them which offers insights towards process-product-property relationships. Measurements within the processes as well as sensor data in the tool or on its surface [
+15
+] further improve the accuracy of the digital twin. For the manufacturing of structural components, several data-driven approaches for virtual quality inspection have been proposed, for example, metal casting [
+16
+,
+17
+], extrusion of tubes [
+18
+], injection molding [
+19
+] as well as automated dry material placement for composite structures [
+20
+].
+These approaches usually do not generate a three dimensional distribution of structural properties (with the exception of Zambal et al. [
+20
+], where a FEM is calculated offline following the quality prediction by a data-driven model). They also do not support a model-based understanding of the process dependencies and the internal properties. On the contrary, physically reliable FEM simulations in the field of computer aided engineering offer here a virtual insight into the structure and the conditions at the interface (e.g., temperature distribution). A critical drawback is that those simulations are usually computationally expensive and not suitable to serve as a digital twin. Hence, surrogate models that enable a fast and accurate search across a large parameter space are crucial. Those surrogates can create an adequate representation within milliseconds.
+The objective of this contribution is the development of a physics-based digital twin using FEM simulations and machine learning to support the quality control for manufacturing FRTP automotive lightweight structures by thermoplastic composite overmolding.
+In order to reduce computation times for suitable inline applications, surrogate models (or virtual twins) are derived from an offline generated parametric solution that contains (all) possible scenarios [
+21
+]. Hereby, methods from model order reduction (e.g., Proper Orthogonal Decomposition) can be exploited to reach real-time suitable applications [
+22
+]. In this contribution, surrogate models are derived by means of numerical parametric studies and machine learning.
+According to Han and Zhang [
+23
+], surrogate modeling is a technique that makes use of the sampled data to build surrogate models. The surrogate is then able to predict the output of an expensive computer code at untried points in the design space. In the context of manufacturing systems and virtual production, the sampled data is derived by numerical simulations within a parametric study. The surrogate models enable a fast and accurate search throughout the parameter space and can serve as real-time capable digital twin for an inline quality control when combined with appropriate machine and sensor data. In this context, Chinesta et al. [
+21
+] propose the concept of a hybrid twin that extends the purely data-driven digital twin with reduced order models (surrogates) derived from physical laws to a digital twin including all physics of the structure. Han and Zhang [
+23
+] describe a general procedure for a data-driven surrogate modeling approach from FEM data. The approach covers the following consecutive phases: definition of design space and sample points via a design of experiment (DoE), a sufficient amount of FEM simulations for the derivation of a sampled data base on which the surrogate models are trained (e.g., through machine learning approaches) and finally, evaluation of the trained surrogate models. A demonstration of machine learning-based surrogate modeling of FEM in the context of biomechanics is shown in Liang et al. [
+24
+]. The deep learning approach comprises three steps—(I) shape decoding of input shape, (II) non-linear mapping of input shape code to output stress code and (III) stress decoding to stress distributions. For shape decoding, a principal component analysis is applied. Machine learning approaches are deployed for non-linear mapping and stress decoding in terms of multilayer neural network and convolutional neural network approaches. Pfrommer et al. [
+25
+] present a FEM-based process parameter optimization by machine learning for the draping of textiles to determine the shear angle distribution.
+The proposed approach for a physics-based digital twin is structured within the framework of cyber physical production systems (CPPS) [
+26
+] as shown in 
+Figure 2
+.
+In general, cyber physical systems are defined as “systems of collaborating computational entities which are in intensive connection with the surrounding physical world and its on-going processes, providing and using, at the same time, data-accessing and data-processing services” [
+27
+]. A CPPS consists of four subsystems (I–IV) and their interconnections for information exchange. As shown in 
+Figure 2
+ the physics-based digital twin approach covers seven steps along the four CPPS subsystems, whereby the steps 1–4 are performed offline for model development and 5–7 online for real-time model deployment. On a high level of description the procedure looks as follows: The main influencing parameters on product quality from the production process are taken into account (I) upon which a large DoE of FEM simulations is calculated (II). Those FEM simulations build the data set for data-driven surrogate modeling, for example, ML-based boosting or bagging and neural networks (III). Consecutively, the FEM surrogate model is validated against a numerical FEM (test data) and an experimental validation set. Finally, the physics-based digital twin is operationalized as an inline quality gate through parameterization with real production data (II, III, IV). In more detail, the seven steps for the physics-based digital twin approach are presented in the following:
+In the beginning, a numerical representation of the physical part is set up in terms of a FEM simulation (1). The FEM simulation is parameterized by production data, that on the one hand, experts assess as critical for product quality and on the other hand, can be measured before or within production. Based on the identified parameters, an extensive FEM DoE is calculated (2), delivering the parameter space and data base for the data-driven surrogate model. The FEM surrogate modeling, in terms of machine learning (3), encompasses the substeps FEM data integration and pre-processing, non-linear modeling as well as model evaluation. At first, the individual numerical simulation data sets that have been generated via DoE are integrated into a raw data set. The raw data set comprises the features of the mesh geometry, the simulated material and process parameters as well as the output variables (e.g., temperature at the nodes of the FEM mesh). In the automotive industry, a complex automotive structure can easily consist of hundred thousands of degrees of freedoms each representing a sample data point that the output is mapped on. In case of those complex parts or an extensive DoE, a data size reduction approach prior to non-linear modeling may be necessary, in order to reduce the computational effort. Regarding the surrogate model output, data-driven FEM surrogate modeling allows the consideration of several part properties. For example, the multi output regression approach could describe the part properties ‘time over melting temperature’ and ‘fiber orientation’ of an injection molded structural component. In the further course of data pre-processing, the integrated data set is separated into training and test data. The latter is kept in reserve for model evaluation. Finally, before training the models, the features are standardized into a common range of values. The non-linear modeling assigns each input sample a set of target variables, that is, part properties. This labeled data set makes FEM surrogate modeling a supervised learning task. Furthermore, the part properties are on a numeric scale of measure, making it a regression task. Data-driven methods that meet these characteristics are, for example, regression trees and regression deep neural networks. In order to find a well-fitting surrogate model, several methods are benchmarked against each other. For each deployed method a hyperparameter optimization is pursued. Due to the multi output modeling approach, the final FEM surrogate model may result in a combination of regression methods, for example, each model being responsible for a specific property. Even with good validation results on numerical data, that is based on the unseen FEM test data, an experimental validation (4) at specific sampling points is required to ensure the surrogate is working appropriately on real production data.
+After satisfying numerical and experimental validation targets, the FEM surrogate can be set online as inline virtual quality gate. Therefore real-time production data, that has been used as input parameters for modeling, is acquired (5). The data is then forwarded to the processing unit (e.g., edge device) of the FEM surrogate model (6). Within the processing unit the incoming data is pre-processed and transformed into the required model input format, for example, discretization of a data series. Based on the transformed data, the stored FEM surrogate model predicts the three dimensional distribution of structural properties or, if trained, other discrete part properties (e.g., part-specific energy consumption). Finally, the predicted properties are visualized within a human-machine-interface that serves as an inline virtual quality gate (7) for decision support on for example, overwork and process control.
+The design of a simulation-based digital twin is investigated for two different geometries. For both models, a numerical parameter study of the injection overmolding of thermoplastic composites is carried out to obtain data for the surrogate modeling. These results are then combined with experimental results to investigate the influence of process parameters on the interface bond strength between composite and injected polymer. Further, the simulation results are used to design and evaluate suitable surrogate models for online applications.
+The structure shown in 
+Figure 3
+a is specifically designed for the manufacturing of cross tension testing specimens in order to experimentally determine the interface bond strength. It consists of the organo sheet as a plane insert and applied ribs on top of it. In the following it is referred to as rib structure. Both, mold cavity and part insert are derived from the tool geometry and imported into A
+utodesk
+ M
+oldflow
+. Due to the complex geometry, the model is discretized with 811,987 4-node tetrahedral elements, where the mesh at the interface region is refined to get a detailed temperature distribution in the area of interest.
+Subsequently, the CPPS based framework (cf. 
+Figure 2
+) for a digital twin by FEM surrogate modeling is tested for the virtual demonstrator geometry displayed in 
+Figure 3
+b. It consists of a u-shaped organo sheet as part insert and reinforcements in form of ribs at the inside and outside of the organo sheet. Analogously, the cavity and the part insert are discretized using 4-node tetrahedral elements with eight elements over the wall thickness to ensure a fine grid for the plastic flow and thermal analysis. The injection location (yellow) is placed at the center of the structure. Within the simulation model in total 872,443 elements are used.
+As a material, polypropylene is used in the simulations since it is widely used in the automotive industry [
+28
+]. The temperature and shear rate dependent material behavior was modeled using a Cross-WLF viscosity model [
+29
+]. The specific material data are taken from the A
+utodesk
+ M
+oldflow
+ material database [
+30
+]. In this study, we parametrize our digital twin by the three process parameters mold temperature, flow rate and part insert temperature. The objective of this study is the temperature at the interface between part insert and injected material. We assume that the interdiffusion occurs for temperatures higher than the melting temperature. Hence, as the objective value in this study, we evaluate the time.
+
+
+
+
+
+
+
+
+
+
+
+t
+
+
+m
+
+
+
+
+=
+
+
+∫
+
+
+
+
+T
+
+
+
+
+i
+
+
+f
+
+
+
+
+
+
+≥
+
+
+
+
+T
+
+
+
+
+P
+
+
+P
+
+
+
+
+*
+
+
+
+
+ 
+
+
+d
+
+
+t
+
+
+,
+
+
+
+
+
+
+
+
+
+
+(1)
+
+
+
+
+
+where the interface temperature 
+
+
+
+
+T
+
+
+
+
+i
+
+
+f
+
+
+
+
+
+
+ is greater than the melting temperature 
+
+
+
+
+
+
+T
+
+
+
+
+P
+
+
+P
+
+
+
+
+*
+
+
+
+
+
+
+ = 163 °C.
+In order to achieve a meaningful database of different process combinations with minimal computational effort, we use a Latin Hypercube Sampling [
+31
+] creating 
+
+
+
+
+n
+
+
+=
+
+
+100
+
+
+
+
+ samples. The sampling space for the Latin Hypercube is designed in a space 
+
+
+
+
+x
+
+
+∈
+
+
+
+
+R
+
+
+3
+
+
+
+
+
+
+, where each 
+
+
+
+
+
+
+x
+
+
+i
+
+
+
+
+∈
+
+
+
+
+[
+
+
+0
+
+
+,
+
+
+1
+
+
+]
+
+
+
+
+
+
+. For each parameter 
+
+
+
+
+x
+
+
+i
+
+
+
+
+, the 
+n
+ samples are taken at the midpoints of the intervals: 
+
+
+
+
+0.5
+
+
+/
+
+
+n
+
+
+,
+
+
+1.5
+
+
+/
+
+
+n
+
+
+,
+
+
+⋯
+
+
+,
+
+
+1
+
+
+−
+
+
+0.5
+
+
+/
+
+
+n
+
+
+
+
+. The combinations of parameters for each simulation are then randomly permuted. In accordance with sampling methods for Monte Carlo techniques, 
+
+
+
+
+x
+
+
+i
+
+
+
+
+ represents the probability of the parameter.
+The recommended processing conditions for the mold temperature are between 30 °C and 100 °C. In order to evaluate the influence for the whole parameter space, the samples follow a uniform distribution. The second process parameter of interest is the flow rate. For that, a uniform distribution between 10 cm 
+
+
+
+
+
+
+
+
+2
+
+
+
+
+/
+
+
+
+
+s and 100 cm
+
+
+
+
+
+
+
+
+2
+
+
+
+
+/
+
+
+
+
+s is chosen to obtain samples for a large range of flow rates in the simulation. The third process parameter investigated is the part insert temperature. In order to avoid polymer oxidation, the maximum temperature in the simulation is chosen to be 240 °C. The smallest value of 20 °C corresponds to the room temperature. The sample distribution is shown in 
+Figure 4
+.
+We assume that a bond strength between organo sheet and injected polymer will only develop if 
+
+
+
+
+
+
+T
+
+
+
+
+i
+
+
+f
+
+
+
+
+
+
+>
+
+
+
+
+T
+
+
+
+
+P
+
+
+P
+
+
+
+
+*
+
+
+
+
+
+
+ holds. Hence, the part insert temperature has a large influence on the bond strength and a temperature of 163 °C or larger will most likely empower the bond strength. For relatively low part insert temperatures (<80 °C), the injected polymer is not able to heat up the organo sheet sufficiently during the overmolding. Therefore, a uniform distribution for the part insert temperature is not suitable since all simulations with low part insert temperature would yield the same result (
+
+
+
+
+
+
+t
+
+
+m
+
+
+
+
+=
+
+
+0
+
+
+
+
+). Hence, in order to still capture the whole parameter space between room temperature and polymer oxidation temperature and at the same time obtain meaningful samples around the melting temperature, the samples follow a modified Log-normal distribution with a mean value of 163 °C.
+In 
+Table 1
+ the minimum and maximum value as well as the corresponding distribution of the varied process parameters are summarized. The melt temperature of the injected polymer is kept constant at 240 °C. The remaining process parameters are automatically adapted during the simulation. In total 100 full-scale computations are carried out using the software A
+utodesk
+ M
+oldflow
+ to generate the training data. For each simulation, the objective value 
+
+
+
+
+t
+
+
+m
+
+
+
+
+ is computed during the post-processing and stored in the database for surrogate modeling.
+The interface bond strength is determined experimentally by cutting cross tension specimens out of the rib structure shown in 
+Figure 3
+a and performing a quasi-static tension test on a universal testing machine (Zwick Z050) at a test speed of 2 mm/min. In total six different process settings have been investigated experimentally. By using three samples per setup with each four ribs, 144 cross tension tests are performed. The process parameters for the overmolding used in the experiments are listed in 
+Table 2
+.
+The sampled FEM data set is taken as input for data-driven modeling. The digital twin should reflect the spatial distribution of the time 
+
+
+
+
+t
+
+
+m
+
+
+
+
+ at the interface when 
+
+
+
+
+
+
+T
+
+
+
+
+i
+
+
+f
+
+
+
+
+
+
+≥
+
+
+
+
+T
+
+
+
+
+P
+
+
+P
+
+
+
+
+*
+
+
+
+
+
+
+ is true during the overmolding process. The set of features consists of the tetrahedral mesh (nodal coordinates x, y, z) of the part insert surface, the flow rate, mold temperature and part insert temperature. In order to provide a sufficient amount of FEM simulations for the model evaluation at non-trained sampling points a share of 20 of the total 100 FEM samplings is kept back as evaluation data. This results in a training data set sized 655,680 × 7. Before proceeding with the actual modeling, the features are standardized into a common value range. For this purpose, the method of MinMax scaling is applied, since no outliers are to be expected on the basis of the simulated data.
+To determine the most suitable modeling procedure for the investigated numerical example, a method comparison of six data-driven approaches is carried out, that is, AdaBoost, Decision Tree, Gradient Boosting (Grad Boost), Polynomial Regression, Random Forest and Extreme Gradient Boosting (XGBoost). To train the models, the open source Python library scikit-learn [
+32
+] is used. For each of the investigated methods a hyperparameter optimization is performed, as shown in 
+Table 3
+.
+Table 3
+ lists the varied hyperparameters, their variation range and the amount of variation steps for each method. As this study intends to investigate the general applicability of machine learning for FEM surrogate modeling, no in-depth tuning of hyperparameters is performed, which should be subject to subsequent studies. Due to this, the most common influential parameters are chosen (e.g., learning rate, maximum tree depth, amount of estimators). In addition, a sound variation range and wider step size is used in order to stay computational feasible, however, still permitting a sufficient tuning of hyperparameters for a solid model comparison. To build a well generalizing model for untested FEM sampling points, a 5-fold cross-validation is carried out on the training data. The column Best Parameters Rib Structure in 
+Table 3
+ reveals the hyperparameters with best score for 
+
+
+
+
+R
+
+
+2
+
+
+
+
+. Some of the best parameters are found at the outer limit of the variation range, for example, amount of estimators = 500 for XGBoost and Grad Boost. Hence, an increase in the parameter limit might result in a further increase in model performance, but may also lead to overfitting.
+The surrogate models have been applied to both structures shown in 
+Figure 3
+. First, the rib structure is investigated. Second, process dependent bond strength values were determined experimentally. Third, the obtained information is transferred on to a study example of a virtual demonstrator structure. Beside the evaluation of the surrogate model for the use case, a digital twin concept is outlined that is able to act as decision support by estimating the structural quality in real time.
+The evaluation of the results intends to discuss anomalies in the performance metrics of the training and test data, investigate the general suitability of data-driven FEM surrogate models for the development of digital twins of automotive structures and to determine the most suitable method for the given numerical example.
+At first, it should be noted that there are significant differences in the achieved coefficient of determination 
+
+
+
+
+R
+
+
+2
+
+
+
+
+ for the different methods based on the test data (cf. 
+Figure 5
+). The methods Decision Tree (
+
+
+
+
+R
+
+
+2
+
+
+
+
+ = 0.81), Grad Boost (
+
+
+
+
+R
+
+
+2
+
+
+
+
+ = 0.73), Random Forest (
+
+
+
+
+R
+
+
+2
+
+
+
+
+ = 0.83) and XGBoost (
+
+
+
+
+R
+
+
+2
+
+
+
+
+ = 0.73) reveal a relatively high goodness of fit on testing data. In contrast, the models AdaBoost (
+
+
+
+
+R
+
+
+2
+
+
+
+
+ = −0.34) and Polynomial Regression (
+
+
+
+
+R
+
+
+2
+
+
+
+
+ = 0.25) show a significantly weaker performance. It is also remarkable that very high scores can be achieved for a large number of FEM samples, but a number of training and test samples deviate significantly from these good results, for example, Random Forest (
+
+
+
+
+R
+
+
+
+
+m
+
+
+a
+
+
+x
+
+
+
+
+2
+
+
+
+
+ = 0.994 for samples 7 and 52 and 
+
+
+
+
+R
+
+
+
+
+m
+
+
+i
+
+
+n
+
+
+
+
+2
+
+
+
+
+ = 0.33 for sample 69). Depending on the model, the number of outliers (defined threshold 
+
+
+
+
+R
+
+
+2
+
+
+
+
+ < 0.7) ranges between 21 and 24 samples for the good models, with Random Forest having the smallest amount of outliers. All samples of AdaBoost and Polynomial Regression do not reach the defined threshold. In order to find the cause for the poor prediction quality, a comparison of all outliers in contrast to the parametrization of the numerical simulation was carried out. The investigation shows that all samples that have not been well-fitted have a low organo sheet and relatively low mold temperature. For those parametrizations, the temperature at the ribs does not reach the target temperature of 163 °C during the overmolding process, which results in a huge amount of zero values for the objective variable 
+
+
+
+
+t
+
+
+m
+
+
+
+
+. To draw a better picture of the model performances for the further course of the study all those outliers with unfeasible process conditions are removed from the data set and their corresponding metrics (except for the weak models AdaBoost and Polynomial Regression to keep the approaches available for comparison).
+Figure 5
+ shows a selection of performance metrics, that is, 
+
+
+
+
+R
+
+
+2
+
+
+
+
+ [%], MSE [%], MAX error [%], MAE [%] (
+Figure 5
+a), and the relative training and prediction times for the six models examined (
+Figure 5
+b). For better comparability, all metrics except for 
+
+
+
+
+R
+
+
+2
+
+
+
+
+ were normalized based on the maximum value per metric. The strong performance of the Random Forest and Decision Tree methods is striking, both for the global model quality 
+
+
+
+
+R
+
+
+2
+
+
+
+
+ and for local deviations at the point of integration (MSE, MAX error and MAE). On the other hand, the comparison of training and prediction times shows the great speed efficiency of the Decision Tree. The prediction is 101 times faster (31 ms) than with the Random Forest approach. For the average full scale simulation a CPU time of approximately 5 h has been used, which can be reduced to 30 to 60 min when computing on parallel threads.
+Especially with regard to the real-time capability for an inline quality gate, short prediction times are crucial and, depending on the application, can be considered as a criterion of exclusion. To examine the local goodness of fit of the models, the Max error is used as a metric.
+Figure 6
+ shows the minimum, mean and maximum MAX error for the test data of all methods. Comparing the four better approaches, Decision Tree, which has been very solid in the previous analysis, generates a relatively high max MAX error (5.09 s). In contrast, Random Forest clearly provides the best values for the max MAX error (3.79 s) and the lowest maximum error (min MAX error) for sample 76 (0.2 s). Even if those errors are relatively high, they only occur at some rare points of the mesh, which should not influence the decision support on part quality. A detailed discussion on this is carried out in terms of the absolute difference and relative error in the following (cf. 
+Figure 7
+ and 
+Figure 8
+).
+The analysis shows that for the given numerical example Random Forest is the best approach for FEM surrogate modeling (high global and local goodness of fit, fewest issues with outliers and acceptable training and prediction times). Decision Tree, with disadvantages in local prediction quality, however, can achieve a similarly good performance, having an advantage in prediction speed. Due to this, the following aspects are discussed in terms of the Random Forest results, representing the best suitable approach for the underlying numerical example.
+Among all computed samples, sample 52 shows the best coefficient of determination (
+
+
+
+
+R
+
+
+2
+
+
+
+
+ = 0.994). In 
+Figure 7
+, a comparison of the numerical simulation (
+Figure 7
+a) with the corresponding surrogate model (
+Figure 7
+b) based on the Random Forest approach is shown. The contour plots are qualitatively similar and show comparable distributions of 
+
+
+
+
+t
+
+
+m
+
+
+
+
+. Only the result in the compensation volume on the right side differs noticeably. Regarding the absolute difference in 
+Figure 7
+c, it can be observed that the maximum deviation at some nodes is up to 0.91 s, which is an error of 14% compared to the maximum value of the sample. However, evaluating the difference of the whole interface domain, a difference of 0.5 s or less is observed for most of the nodes. In order to get a better impression of the approximation quality, the relative error
+
+
+
+
+
+
+
+
+
+ϵ
+
+
+=
+
+
+min
+
+
+
+
+
+
+1
+
+
++
+
+
+
+
+
+
+
+
+t
+
+
+
+
+m
+
+
+,
+
+
+p
+
+
+r
+
+
+e
+
+
+d
+
+
+
+
+
+
+
+
+t
+
+
+
+
+m
+
+
+,
+
+
+n
+
+
+u
+
+
+m
+
+
+
+
+
+
+
+
+
+
+
+
+,
+
+
+1
+
+
+
+
+,
+
+
+
+
+
+
+
+
+
+
+(2)
+
+
+
+
+
+with 
+
+
+
+
+t
+
+
+
+
+m
+
+
+,
+
+
+p
+
+
+r
+
+
+e
+
+
+d
+
+
+
+
+
+
+ denoting the predicted results and 
+
+
+
+
+t
+
+
+
+
+m
+
+
+,
+
+
+n
+
+
+u
+
+
+m
+
+
+
+
+
+
+ the result of the full-scale simulation is depicted in 
+Figure 7
+d. In this plot, two phenomena can be observed. First, due to large deviations at single nodes, large errors can be observed for some singular points. Especially at the boundary of the interface region the largest error is observed. In the center of the rib the error is comparatively small. Second, the Random Forest approach predicts in some points values of 
+
+
+
+
+
+
+t
+
+
+m
+
+
+
+
+>
+
+
+0
+
+
+
+
+, where usually no contact between injected material and the part insert is present.
+A further example of the surrogate model is given for sample 11. It yields the best value of 
+
+
+
+
+R
+
+
+2
+
+
+
+
+ of all samples that are not contained in the training data. Further, it shows one of the smallest min MAX error of (0.8 s) of all samples. Analogously to sample 52, 
+Figure 8
+ shows the performance of the surrogate model. The comparison of the result from a full-scale simulation in 
+Figure 8
+a with the corresponding predicted result by Random Forest in 
+Figure 8
+b shows qualitatively similar distributions. The absolute difference of this example is depicted in 
+Figure 8
+c. Similar to sample 52, the largest differences occur only for singular points. In the average the absolute difference of the predicted solution is less than 0.4 s. The relative error 
+
+
+ϵ
+
+
+ for this sample is depicted in 
+Figure 8
+d. Also for this example the error at the boundary of the interface domain is greater than in the center of a rib. Compared to 
+Figure 7
+d, the number of points where a value 
+
+
+
+
+
+
+t
+
+
+m
+
+
+
+
+>
+
+
+0
+
+
+
+
+ is predicted but the full-scale simulation shows 
+
+
+
+
+
+
+t
+
+
+m
+
+
+
+
+=
+
+
+0
+
+
+
+
+ is significantly larger. These points are mainly clustered along the boundary of the rib interface. Even if these predicted values are insignificant in their absolute value (cf. 
+Figure 8
+b), geometric information about the contact surface must be included to avoid such nonphysical values and to further improve the prediction.
+Another issue in data-driven surrogate modeling concerns the ability to deal with outliers that have been identified as simulated unfeasible process conditions. Those conditions are characterized by almost all target variables to be zero. The phenomena is illustrated for sample 76 in 
+Figure 9
+a where the numerical results are all zero for 
+
+
+
+
+t
+
+
+m
+
+
+
+
+, but the corresponding surrogate predicts small temperatures (
+
+
+
+
+
+
+t
+
+
+
+
+m
+
+
+,
+
+
+p
+
+
+r
+
+
+e
+
+
+d
+
+
+,
+
+
+m
+
+
+a
+
+
+x
+
+
+
+
+
+
+=
+
+
+0.2
+
+
+
+
+ s) at the interface (
+Figure 9
+b). This fact might be caused by the sampling procedure. When no or too few number of samples with unfeasible process conditions are contained in the training set, the surrogate can hardly predict a solution, where all results are zero. However, in this example, the absolute difference is very small and it represents the smallest MAX error of all samples.
+With the surrogate model, we are able to predict temperature profiles within a few seconds or shorter. These models are valid within the investigated space of process variables defined in 
+Table 1
+. In the simulations, the objective variable 
+
+
+
+
+t
+
+
+m
+
+
+
+
+ describes the time, the part insert temperature is greater than the melting temperature 
+
+
+
+
+T
+
+
+
+
+P
+
+
+P
+
+
+
+
+*
+
+
+
+
+ of the polymer. During the manufacturing, this time cannot be measured directly. Hence, results from simulations are needed to estimate the temperature at the interface. In order to qualify the surrogate model based on the simulation results as digital twin, it is necessary to correlate the computed objective variable with a structural quality value. Here, the interface bond strength 
+
+
+
+
+σ
+
+
+b
+
+
+
+
+ between organo sheet and the injected polymer is chosen as quality value. Therefore, cross tension tests are conducted using specimens manufactured in accordance with the process parameters in 
+Table 2
+. In the corresponding simulations, the mean value for 
+
+
+
+
+t
+
+
+m
+
+
+
+
+ in the test domain of each rib is computed to achieve a direct link between 
+
+
+
+
+t
+
+
+m
+
+
+
+
+ and 
+
+
+
+
+σ
+
+
+b
+
+
+
+
+.
+In 
+Figure 10
+, the experimentally evaluated bond strength values are plotted over the computed objective value 
+
+
+
+
+t
+
+
+m
+
+
+
+
+ at the rib interface. For low 
+
+
+
+
+t
+
+
+m
+
+
+
+
+, a large variability in the resulting bond strength can be seen. For 
+
+
+
+
+
+
+t
+
+
+m
+
+
+
+
+<
+
+
+0.4
+
+
+
+
+ s, the bond strength varies between 0.66 MPa and 7.83 MPa. For 
+
+
+
+
+
+
+t
+
+
+m
+
+
+
+
+>
+
+
+1.5
+
+
+
+
+ s on the other hand, the experiments yield in every experiment a bond strength greater than 6 MPa. Also here, a relatively large variability in the experimental values is observed. The maximum bond strength reached in the experiments is 11.3 MPa. The significant difference in the experiments implies that further process parameters, such as injection and packing pressure, also influence the interdiffusion. However, despite the large variability in the results, the trendline shows a significant increase of the bond strength with increasing 
+
+
+
+
+t
+
+
+m
+
+
+
+
+. Hence, the derived FEM surrogate of thermoplastic composite overmolding is suitable to support the quality control in a digital twin application. The quality domains are divided according to 
+
+
+
+
+t
+
+
+m
+
+
+
+
+. The quality domain ‘poor’ is defined in the range 
+
+
+
+
+0
+
+
+≤
+
+
+
+
+t
+
+
+m
+
+
+
+
+<
+
+
+0.4
+
+
+
+
+ since for such short times, bond strength values less than 4 MPa most likely appear in the experimental data. As ‘excellent’, the quality domain is chosen where the experiments yield only bond strength values greater than 6 MPa (
+
+
+
+
+
+
+t
+
+
+m
+
+
+
+
+>
+
+
+1.5
+
+
+
+
+). According to the sampled experimental data, within the intermediate domain a bond strength of at least 4 MPa is ensured, which is denoted as ‘good’ in the diagram. By computing process dependent temperature distributions in real time, the classification into quality domains and the corresponding visualization provides an immediate visual decision support.
+With the FEM surrogate at hand, it is possible to predict process outcomes (here: the time 
+
+
+
+
+t
+
+
+m
+
+
+
+
+, the organo sheet surface is heated above melting temperature) with respect to the process settings in real time. This fast computation enables to include physics-based FEM results in a digital twin concept. In order to evaluate the developed FEM surrogate, we apply the method in a case study to the virtual demonstrator structure depicted in 
+Figure 3
+b.
+For the design of the surrogate, we use the same process parameters as for the rib structure (cf. 
+Table 1
+). Again a 80/20 train-test-split, 5-fold cross-validation on the training data and a MinMax scaling is applied. Due to the higher complexity of the mesh (63,454 nodes per part) more intensive computing times are expected. Hence, the size of the remaining training data is reduced by sampling to 20%, whereas no sampling is applied to the test data. This results in a training data set sized 1,015,264 × 7. For benchmarking, all six data driven approaches investigated above are fitted on the demonstrator data via the same set of hyperparameters as above (cf. 
+Table 3
+). The far right column in 
+Table 3
+ shows the results of the hyperparameter optimization for the demonstrator. The higher complexity of the demonstrator part in contrast to the rib structure is also reflected by the best hyperparameters found. Most of the parameters are either equal or larger for a higher model complexity, for example, amount of estimators in Random Forest, or have a smaller learning rate. As for the rib structure, some of the best parameters lie at the outer limit of the variation range. Hence, further studies should investigate the relationship between part and model complexity to identify optimal hyperparameters.
+In comparison to the study on the rib structure, the FEM surrogate models of the virtual demonstrator structure yield better values in global fit, for example, 
+
+
+
+
+R
+
+
+2
+
+
+
+
+ = 0.9894 for Random Forest or mean MAE = 0.328 for demonstrator and mean MAE = 0.722 s for rib structure. In addition, far less outliers, that is, 
+
+
+
+
+R
+
+
+2
+
+
+
+
+ < 0.7, are detected. Only a single outlier, that is on sample 76, having again only zero values for 
+
+
+
+
+t
+
+
+m
+
+
+
+
+, is created by Grad Boost, Random Forest and XGBoost. Decision Tree and Polynomial Regression add another outlier and AdaBoost is performing weakest with 10 outliers on train and test data. Interestingly, within the case study several approaches achieve results close to each other (see 
+Figure 11
+a), which is especially accounting for Decision Tree, Grad Boost, Random Forest and XGBoost.
+Still, equivalent to the rib structure study, Random Forest has best values for 
+
+
+
+
+R
+
+
+2
+
+
+
+
+, MAE (0.094 s) and MSE (0.146 s
+
+
+
+
+
+
+2
+
+
+
+
+), however Grad Boost performs best in MAX error statistics. As shown in 
+Figure 12
+, Grad Boost has a mean MAX error of 6.14 s in contrast to 7.07 s for Random Forest. As already shown in the study above, besides Random Forest, the Decision Tree is promising for FEM surrogate modeling. In comparison with Random Forest, Decision Tree yields similar results across all metrics, with significant weaker performance in mean MAX error (+29%) but much faster training and prediction, that is, prediction time = 172 ms (cf. 
+Figure 11
+b). As prediction time is crucial for an inline virtual quality gate, this property may be decisive for selecting the appropriate approach.
+Exemplary, the approximation accuracy by the surrogate model is investigated for sample 52, which has shown the best coefficient of determination in the previous study. Analogously to the rib structure (
+Figure 7
+), a 3D plot of the numerical simulation is shown in 
+Figure 13
+a. In this example, the largest value is computed along the edge of the part insert. In this region, the organo sheet is overmolded from both sides and has no direct contact to the tooling. This prevents a fast cooling due to mold contact. In addition, the continuous melt flow heats up the edge. For the interface to the reinforcing ribs, on the other hand, computed and predicted 
+
+
+
+
+t
+
+
+m
+
+
+
+
+ are significantly shorter. This applies to both the inside and the outside. On the inside, the values vary between 2 s and 3 s, where at the outside the maximum time is around 2 s. Hence, the objective value 
+
+
+
+
+t
+
+
+m
+
+
+
+
+ is 5 to 10 times less than for the interface at the edge of the structure. The corresponding result predicted by the surrogate model based on the Random Forest approach is shown in 
+Figure 13
+b. The contour plot shows the same characteristics as for the full-scale simulation. The results are qualitatively very similar and show comparable distributions and maximum values of 
+
+
+
+
+t
+
+
+m
+
+
+
+
+. However, regarding the absolute difference in 
+Figure 13
+c, a maximum difference of up to 4 s is computed, which corresponds to a deviation of 20% according to the maximum value of 20 °C. Here, a closer look into the contour plot shows that the major deviations are mainly local phenomena. The relatively large deviations occur only for single nodes that would be neglected within a visual decision support. The average difference in the domain of interest is less than 1 s, which is an error of 5% compared to the maximum time value of the sample. In this context, the distribution of the relative error 
+
+
+ϵ
+
+
+ (
+2
+) shown in 
+Figure 13
+d is more meaningful. First, due to large deviations at single nodes, large errors can be observed for singular points. Second, the Random Forest approach predicts small values for 
+
+
+
+
+t
+
+
+m
+
+
+
+
+, where usually no contact between injected material and the part insert is present. Here, it is mainly observed, that non-zero values are predicted at positions on the inside of the u-profile, that correspond to the position of the ribs at the outside. The same is observed for the outside and bottom of the structure. This effect is caused by the temperature distribution within the part insert. Inside the organo sheet, the temperature is usually higher than on the surface. Due to the influence of local coordinates, small numerical deviations in the predicted result can occur. Even if these predicted values are insignificant in its absolute value and only numerical in nature, the improvement of the prediction requires the addition of a priori known geometric information on the contact area in order to avoid such nonphysical values.
+The results for the rib structure have shown that the FEM surrogate is able to predict numerical results within milliseconds with acceptable accuracy. The objective value 
+
+
+
+
+t
+
+
+m
+
+
+
+
+ investigated in the studies, however, does not give a direct feedback of the quality of the manufactured lightweight structure. Moreover, the contour plots of the demonstrator structure show a quite large range of values for 
+
+
+
+
+t
+
+
+m
+
+
+
+
+. Due to the structural design, the edge of the organo sheet is heated over melting temperature nearly during the whole process. For example, sample 52 (
+Figure 13
+) shows a maximum value of 
+
+
+
+
+
+
+t
+
+
+m
+
+
+
+
+=
+
+
+20
+
+
+
+
+ s, which is 13 times larger than the value defined to achieve an ‘excellent’ quality of the bond strength (
+Figure 10
+). Thus, the contour plot cannot be interpreted easily in terms of quality assessment. Further, 
+
+
+
+
+t
+
+
+m
+
+
+
+
+ is a quite abstract value that is used as model parameter to evaluate the bond strength. Therefore, the predicted absolute values are transferred into quality domains. In addition, the contact region is defined in accordance with results of the full-scale simulations. The region, where no contact is observed is defined as points (nodes), where no interface temperature greater than the melting temperature 
+
+
+
+
+T
+
+
+
+
+P
+
+
+P
+
+
+
+
+*
+
+
+
+
+ is observed. Otherwise, regions that are not relevant for the structural integrity would be denoted as ‘poor’ since in 
+Figure 13
+d it has been noted, that in some cases very small but nonphysical values are predicted. Eventually, this could lead to misinterpretations eventually to false quality estimates.
+In 
+Figure 14
+, the results of sample 52 are converted into the categories ‘poor’, ‘good’, and ‘excellent’ in accordance with the experimental results from 
+Figure 10
+. 
+Figure 14
+a shows the quality measurement based on the full-scale simulation. Here, the bonding at the inside is supposed to be overall excellent. Some nodes at the boundary of the ribs show only ‘good’ values. The number of ‘poor’ values is negligible. Regarding the bonding at the outside, a decrease in the quality is observed, where the amount of excellent values is reduced and the dominant quality is ‘good’. The number of ‘poor values’ outside is larger but still can be neglected in an overall assessment. Nevertheless, in further studies it must be investigated if such regions can be detected as weak spots where the initiation of damage can be facilitated or if these values are computational inaccuracies. In 
+Figure 14
+b, the quality measurement based on the surrogate is displayed. Regarding the inside of the profile, no significant difference can be seen. The same holds for the outside, where small differences are noticed but the global distribution is quite similar. Hence, for sample 52, both full-scale simulation and surrogate yield an overall quality in the range of ‘good’ to ‘excellent’.
+In 
+Figure 15
+, the quality measure concerning the bond strength are depicted for sample 31. Here, the distribution of bond strength qualities provides a larger range of values. On the inside, the interface bond strength is in accordance with the melt flow. In the center, the melt is injected and the part insert is still sufficiently heated. During the process the organo sheet is cooling down and the melt is not able to heat up the organo sheet above melting temperature. Hence, a distribution from ‘poor’ to ‘excellent’ bond strength values is present in this example. At the outside, the temperature seems to be too low in order to form a suitable bond. Here only ‘poor’ values are computed. In total, 62% of the values are predicted as ‘poor’, 7% as ‘good’ and 31% as ‘excellent’. Comparing the full-scale simulation (
+Figure 15
+a) with the surrogate model (
+Figure 15
+b) the quality measures are slightly better. The number of excellent values is increased by 6% and a shift to a better quality is observed in the surrogate. In this use case, the quality classification is based on temperature effects only. Hence, small inaccuracies in the surrogate model can lead to false quality predictions. Regarding the variance in the experimental tests, we notice that also further process parameters influence the bonding behavior and the quality values are very sensitive. Therefore, even if we observe globally excellent metrics (e.g., 
+
+
+
+
+R
+
+
+2
+
+
+
+
+), we need to adjust the training algorithm and consider more process parameters and material parameters in the bond strength model to get a more robust algorithm.
+The visualization of quality measures enables directly a visual decision support. Due to the coloring it is possible to categorize the whole structure as ‘acceptable’ or ‘not acceptable’. A generalization of the method would be given by an overall quality estimation that is directly computed from the surrogate. At this point, different post-processing steps are possible. One possible definition would be that no ‘poor’ values are allowed for an acceptable part. But, regarding 
+Figure 14
+, this definitions seems not fair since these values are only very local phenomena. Further, it is possible to assign numerical values (weightings) to the quality measures, so that by summing up all values a minimum score has to be defined in advance to reach an ‘acceptable’ status. The practical implementation, however, depends on the objective and boundary conditions of the CPPS. With the presented approach of surrogate modeling, it is possible to predict suitable distributions of structural properties and to provide reliable information for an inline quality control.
+In this contribution, we have investigated an approach for designing a digital twin that enables both, a fast offline analysis of different process conditions and an inline quality gate for the interface bond strength between a thermoformed FRTP sheet (organo sheet) and an injection overmolded thermoplastic polymer. The digital twin is based on a comprehensive numerical parametric study that serves as input data for machine learning to obtain a FEM surrogate model. A comparison of six different data-driven methods shows the general feasibility of the proposed approach. Especially, the methods Random Forest and Decision Tree promise a good suitability for FEM surrogate modeling. In terms of global and local, for example, MAX error, goodness-of-fit Random Forest delivers slightly better results than Decision Tree. The latter has significant advantages in prediction time, which might be a vital property for real-time capability. The surrogate model is able to predict structural properties with respect to the process parameters and provides a detailed and physics-based distribution according to the used discretization. Once the surrogate model is designed, all relevant information on the system behavior are known and it depends on the objective how the raw data are further processed. On the one hand local properties can be investigated and optimized due to the fast prediction time. On the other hand these data can be visualized parallel to the manufacturing. Including experimental results, such as the interface bond strength, the FEM surrogate is used as an inline quality gate. In the presented use case, we were able to classify the predicted bond strength quality and to visualize it for decision support purposes. In the application of the CPPS to real manufacturing processes, those data can be further reduced to one single quality value for the whole structure that allows us to classify in ‘acceptable’ and ‘not acceptable’. Due to the known correlation between process input and output the described approach is also suitable for automated control.
+Besides the general and broad applicability of data-driven FEM surrogate modeling, the paper reveals several issues for further research. The surrogate models predict values where no interaction between part insert and injected thermoplastic is expected. By adding a priori known geometric information, (e.g., surrogate only for interesting regions of the part), nonphysical results can be avoided and further the training time for the surrogate can be reduced. In the use case study, it was observed that at some seldom points relatively high absolute errors are predicted. These values occur often at singular points that might be insignificant for the estimation of overall properties of the structure. However, smoothing algorithms can be suitable to reduce these local singularities. Further, strategies are required to deal with simulated unfeasible process conditions, where for example, almost all target variables are zero (cf. 
+Figure 9
+) and for the application to complex automotive structures, training and prediction needs to be speed up. Even with the mentioned remaining challenges, the presented results emphasize that an integrated virtual and digital product and production engineering based on physical reliable simulation methods and sophisticated surrogates in terms of a CPPS is able to enhance manufacturing efficiency and quality.
+Conceptualization, A.H.; methodology, A.H. and S.G.; software, A.H. and S.G.; validation, A.H., S.G. and T.O.; formal analysis, A.H. and S.G.; investigation, A.H., S.G. and T.O.; resources, J.B., K.D., C.H.; data curation, A.H., S.G. and T.O.; writing—original draft preparation, A.H., S.G. and T.O.; writing—review and editing, A.H., J.B., S.T.; visualization, A.H. and S.G.; supervision, S.T., K.D. and C.H.; project administration, A.H., K.D. and C.H.; funding acquisition, K.D. and C.H. All authors have read and agreed to the published version of the manuscript.
+This research was funded by the Ministry of Science and Culture of Lower Saxony and the Volkswagen Foundation within the research program Mobilise.
+The authors declare no conflict of interest.

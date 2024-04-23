@@ -1,0 +1,1460 @@
+The fabrication of components involves the deposition of multiple beads in multiple layers for wire-arc additive manufacturing (WAAM). WAAM performed using gas metal arc welding (GMAW) allows for the manufacturing of parts through multiple-bead multi-layer deposition, which depends on the process variables. Thus, the selection of process parameters along with their required levels is mandatory to deposit multiple layers for WAAM. To obtain the desired levels of parameters, bead-on-plate trials were taken on the base plate of low alloy steel by following an experimental matrix produced through the Box–Behnken design (BBD) on GMAW-based WAAM. Wire feed speed, travel speed, and voltage were chosen as the input parameters and bead width and bead height were chosen as the output parameters. Furthermore, the robustness and adequacy of the obtained regression equations were analyzed by using analysis of variance (ANOVA). For both responses of BW and BH, values of R
+2
+ and adj. R
+2
+ were found to be near unity, which has shown the fitness of the model. Teaching–learning-based optimization (TLBO) technique was then employed for optimization. Within the selected range of process variables, the single-objective optimization result showed a maximum bead height (BH) of 7.81 mm, and a minimum bead width (BW) of 4.73 mm. To tackle the contradicting nature of responses, Pareto fronts were also generated, which provides a unique non-dominated solution. Validation trials were also conducted to reveal the ability and suitability of the TLBO algorithm. The discrepancy between the anticipated and measured values was observed to be negligible, with a deviation of less than 5% for all the validation trials. This demonstrates the success of the established model and TLBO algorithm. The optimum feasible settings for multi-layer metal deposition were determined after further tuning. A multi-layer structure free from any disbonding was successfully manufactured at the optimized variables. The authors suggest that the optimum parametric settings would be beneficial for the deposition of layer-by-layer weld beads for additive manufacturing of components.
+In recent times, additive manufacturing (AM) was established as a promising technique for manufacturing huge, intricate designs and multiple layer deposition of dense objects. The AM technique has great potential for numerous industrial applications, which is advantageous over traditional manufacturing techniques [
+1
+]. AM performed using gas metal arc welding (GMAW) allows for the manufacturing of parts through multiple-bead multi-layer deposition, which depends on the process variables such as wire feed rate, voltage, gas flow rate, torch speed, and selection of welding path. Surface characteristics, dimensional precision, and mechanical properties of the specimen are affected by the overlapping observed between the adjoining weld beads [
+2
+,
+3
+]. The parts deposited using this process cannot be used in their original state, owing to the requirement of further post-processing, such as grinding or milling whose specifications are set according to the final part. To increase the effectiveness of wire-arc additive manufacturing (WAAM), it becomes essential to reduce post-processing. The buy-to-fly ratio depicts an estimation regarding the productivity of the WAAM process, which can be evaluated by the proportion of erosion of raw materials needed to obtain the finished components and the amount of used material [
+4
+]. Zhong et al. [
+5
+] reviewed 3D metal printing techniques off wire-based and wire-arc techniques. Their detailed review suggested that GMAW-based WAAM is convenient and easier for implementation as the process makes use of continuous wire spools with the welding torch. Other techniques, such as plasma arc welding and tungsten inert gas welding, require an external wire feed machine to source the additive materials. Szost et al. [
+6
+] carried out a comparative study of WAAM processes and concluded that the proper selection of design variables and parametric optimization of the WAAM process reduces the residual stresses and distortion. Tabernero et al. [
+7
+] compared the performance measures of different AM-based processes. They revealed that the GMAW-based WAAM technique is largely suitable for the fabrication of larger size components with reduced costs. Several materials including titanium alloys, low alloy steels, bronze, nickel alloys, aluminium and many others can be utilized to make components. WAAM consists of three key requirements, such as an arc generator and movement system, a wire feed system, and a substrate for accuracy [
+8
+,
+9
+]. Bushachi et al. [
+10
+] evolved a procedure path that was meant to be embedded as a system used for defence platforms that were further used by scientists in an argon recovery equipment, fixed gas distribution system and heat treatment mechanism for research. To relieve the vibration issues, the scientists tried module synchronization so that the component size and jig size were handled properly. On the other hand, design guidelines and evaluation methods for manufacturing aero structure parts and recognizing build aspects were presented by Lockett et al. [
+11
+]. The desired results were obtained by using a thicker substrate plate produced via double-sided WAAM deposition. In order to remove the stress observed at the corners and for uninterrupted deposition, rounded corners were recommended. Even after such practices, it was later deduced that the WAAM technique was inadequate for intricate 3D lattices. Similarly, Yuan et al. [
+12
+] studied a system that was focused on positional beading, deposition process optimization strategy and multi-directional carving, which has its applications in architecture. To obtain favourable path geometry and welding parameters, a parabola model was developed, which proved to be fruitful in determining that low value and low power of wire feed speed and travel speed will result in superior quality and productivity. Thus, the selection of process parameters along with their required levels is mandatory to deposit multiple layers for WAAM. The optimization of those process parameters has been so far attempted for various steels [
+13
+,
+14
+].
+Low alloy steels, such as 1.25 Cr-0.5 Mo, are highly suitable for processing components under high pressure and temperature and for further applications in fabrication [
+15
+]. The mechanical, physical and chemical properties of this low alloy steel certify a safe working atmosphere, particularly for applications that demand varied temperature cycles. At higher temperatures, the degradation processes are distinct and more severe. As a result, the welding and heat treatment methods are simulated to satisfy the desired qualities [
+16
+]. Cr–Mo steels possess good weldability; nevertheless, when exposed to 370–550 °C for lengthy periods, they tend to undergo temper embrittlement [
+17
+]. Gas metal arc welding is the most basic procedure carried out for fabricating solid wires [
+18
+,
+19
+,
+20
+]. To solve the productivity issue faced by the fabricators in solid wires, tubular cores wires are used as an alternate option [
+21
+]. The benefit of using tubular wires is that they highly increase the current density, which further increases the deposition rates. Metal and flux-cored wires are the only two desired cored wires for the process [
+22
+]. The deposition rate is higher in solid wires but the flux-cored wires improve the overall welding quality by filling a shielding flux at the core [
+23
+]. The reason why metal-cored wires are the most efficient is that they increase the deposition and current density by filling filler metal at the core. However, WAAM using metal-cored arc welding (MCAW) process has been meagrely attempted as per the author’s best knowledge.
+To obtain the optimized welding parameters, several attempts have been made to apply the principles of meta-heuristics techniques. Zeqi Hu and Xunpeng Qin [
+24
+] compared two models, namely a forward artificial neural network and a direct artificial neural network. The genetic algorithm (GA) and forward artificial neural network (FANN) model were integrated to determine their advantages over the backward artificial neural network (BANN) model. This model was formerly researched in attempts to obtain the desired height of any component and one that can be further used in surface coating and slicing AM. In order to achieve such parameters, the referred arc voltage and wire feed speed were compared to the parameters obtained by the FANN-GA model, which showed that there was minimal spatter and the bead appearance was better than the BANN model. The error involving the bead width (BW), area and bead height (BH) was found to be 3% in FANN-GA and 18% in the BANN model. Leilei Wang and Jiaxiang Xue [
+25
+] conducted WAAM experiments for SS316L material. Here, the deposition rate was kept constant and the arc modes varied. The results showed that SpeedArc and SpeedPulse manufacturing processes were stable and highly efficient. Alhough the deposition rate of both the processes was the same, the SpeedArc WAAM process depicted a finer solidification structure in comparison with SpeedPulse WAAM structure, owing to their high cooling rate and lower heat input. It was determined that SpeedArc WAAM has higher hardness and tensile strength than SpeedPulse because of the finer solidification structure and lower heat input. More than 540 MPa of ultimate tensile strength was observed along the horizontal direction in both the processes, which helped to understand the formation of ductile fractures and, hence, their toughness value. L.M. Wahsh and A.E. Elshater [
+26
+] used the WAAM technique to improve the structural integrity of aluminium parts. The technique used was pulsed gas metal arc welding, by considering the low heat input requirement for aluminium. The procedure followed during the experimentation was to optimize the input parameters and use robotic operations to predict the bead profile. The results concluded that the voltage range should be between 19.2 and 23.2 V for prismatic blocks. The experimentation would require further in-depth study to produce parts free from volumetric defects. It was also observed that the hardness decreases at the bottom of the blocks due to progressive re-heating. Furthermore, Lei Yuan and Donghong Ding [
+12
+] attempted to eliminate the directional limits of robotic WAAM by developing a multidirectional WAAM process. This experiment was justified by the fabrication of a workpiece with overhangs. The torch angle was maintained vertically while the travel speed was selected according to the stability required for the deposition of vertical walls 1 and 2. The results show that the manufacturing time decreased by 52%, material cost by 57% and material usage by 57%. The parabola bead model helped to obtain the desired bead geometry, while the multi-direction strategy was used by decomposing a CAD model into a sub volume along with the desired build directions. Because of low heat input and short arc transfer behaviour, CMT was preferred for welding deposition. It has also been emphasized that the buY-to-fly ratio plays a vital role in multidirectional WAAM applications. Recently, Subhash et al. [
+16
+] attempted to determine the temper embrittlement susceptibility of a 2.25Cr-1.0 Mo welded joint by sustaining it through step cooling treatment. The welded joint was prepared by regulated metal deposition and GMAW process integrating with metal-cored wire. The study proposes in-depth research and serves as a base for the usage of metal-cored wires. Similarly, Kumar et al. [
+27
+] have performed a study on selected parameters for single bead metal deposition using the gas metal arc welding manufacturing technique. Near the welded region, ferrite with pearlite structures was observed. The upper layers of the weldment showed cracks and signs of porosity because of the increase in deposition height. Different hardness values were obtained on different wall structures, and surface defects by dye penetration tests and weight loss methods for corrosion behavior were also conducted. Due to rapid solidification, the topmost layers of both the square and circular walls were observed to be harder and brittle.
+To minimize post-processing and void, layer thickness, overlapping parameters and bead size of single-layer deposition were taken into consideration at the same time. As per the previous studies from researchers, WAAM for low alloy steel 1.25Cr-0.5 Mo using metal-cored wires has not been researched properly. In the present study, bead-on-plate trials were taken on the base plate of low alloy steel following an experimental matrix produced through the Box–Behnken design (BBD). Wire feed speed, travel speed, and voltage were chosen as the input parameters and bead width and bead height were chosen as the output parameters. Furthermore, the robustness and adequacy of the obtained regression equations were analyzed by using analysis of variance (ANOVA). The teaching–learning-based optimization (TLBO) technique was then employed for single-response and multi-response optimization of BW and BH. To tackle the contradicting nature of responses, Pareto fronts were also generated, which provides a unique non-dominated solution. Validation trials were also conducted to reveal the ability and suitability of the TLBO algorithm. The optimum feasible settings for multi-layer metal deposition were determined after further tuning. The authors strongly consider this study to be very useful for industrial applications.
+Bead-on-plate trials were deposited by the GMAW process using metal-cored wire on 1.25 Cr-0.5 Mo substrate. The Metalloy 80B2 (Hobart Brothers (TRI-MARK) company) wire with a diameter of 1.2 mm was used for investigation. Metalloy 80B2 is a metal-cored wire that was used for single or multi-pass welding of chromoly steels. The shielding gas of 98% Ar and 2% O
+2
+ was used. The chemical composition of the base plate and wire are as shown in 
+Table 1
+. The experiment was conducted on a PRO MIG-530 GMAW setup (Miller). 
+Figure 1
+ represents the complete arrangement of the experimental setup used in the present study. This setup includes a wire feeder, power source, computer interface, automated nozzle controller, welding torch, working table, shielding gas cylinder and a special-purpose machine. The computer interface helps to run the code designed for a particular bead deposition. The code was directly linked with the automated controller, which controls the movement of the nozzle in X, Y and Z directions. Before initiating any program, shielding gas was provided through the setup so that the deposited material does not come in contact with any atmospheric gases. The base metal was clamped from both sides and the material was deposited with the help of the torch, which has the flexibility to move in any required direction. To measure the temperature around the heat-affected zone, a thermocouple was installed between the base plates.
+Single bead deposition was taken on the base plate following an experimental matrix produced through the Box–Behnken design (BBD). In the present study, wire feed speed, travel speed, and voltage were chosen as the input parameters based on device ability and the analysis of recent studies. On the basis of the recent literature and machining capabilities, the constant length of each bead was taken as 90 mm along with a constant gas flow rate of 15 L/min and an arc length of 3 mm. 
+Table 2
+ shows the experimental conditions used in the present study. Box and Behnken utilize the response surface methodology (RSM) method to obtain an optimal response using a proper arrangement of the experimental matrix. RSM design reduces the experimentation required, thereby saving the cost of work material and time. In addition, the BBD technique of RSM generates a correlation between the machining variables and responses. A total of 15 trials were taken by changing the 3 machining variables at 3 levels.
+The impact of the designated variables was studied on BW and BH. Each single bead deposition was cut at a cross-section to evaluate the BW and BH. Optical microscopy was employed to determine the BW and BH. Each experiment was repeated three times, and an average value of that was taken for analysis. 
+Figure 2
+ shows the optical micrographs of the specimens of single bead deposition as per the BBD design.
+The TLBO algorithm developed by Vivek and Vimal [
+28
+] works on the viewpoint of teaching and learning among the teacher and student inside a classroom. The global optimal solution was achieved in TLBO via populations of solutions. Students in the classroom represent the population. Different offered subjects to the students depict the constraints during the implementation of TLBO. The fitness values do not have any meaning, but the marks obtained by students and the student in the entire class who obtains the highest mark is characterized as a teacher. During the implementation, a teacher make an effort to bring the outcomes of the remaining students close to the student who has secured the highest marks by shifting the mean of marks of that student. Two essential elements of the TLBO algorithm comprise (a) the teacher phase where the students learn from the teacher; (b) the learner phase where the students interact among the learners. 
+Figure 3
+ depicts the stepwise methodology for the implementation of the TLBO algorithm.
+The solution is updated in the teacher phase with the reference to the change in the present and the new mean 
+
+
+
+
+
+
+
+
+DM
+
+
+
+
+j
+
+
+
+
+
+
+ as
+
+
+
+
+
+
+
+
+
+
+
+
+
+DM
+
+
+
+
+j
+
+
+
+
+=
+
+
+
+
+r
+
+
+j
+
+
+
+
+
+
+
+
+
+
+M
+
+
+
+
+new
+
+
+
+
+
+
+−
+
+
+
+
+T
+
+
+F
+
+
+
+
+
+
+M
+
+
+j
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(1)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+X
+
+
+
+
+new
+
+
+,
+
+
+j
+
+
+
+
+
+
+=
+
+
+
+
+X
+
+
+
+
+old
+
+
+,
+
+
+j
+
+
+
+
+
+
++
+
+
+
+
+
+
+DM
+
+
+
+
+j
+
+
+
+
+
+
+
+
+
+
+
+
+(2)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+T
+
+
+F
+
+
+
+
+=
+
+
+round
+
+
+
+
+
+
+1
+
+
++
+
+
+rand
+
+
+
+
+
+
+0
+
+
+,
+
+
+1
+
+
+
+
+
+
+
+
+
+
+2
+
+
+−
+
+
+1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(3)
+
+
+
+
+In Equation (2), 
+
+
+
+
+
+
+M
+
+
+j
+
+
+
+
+
+
+ is the mean of the marks at iteration j, 
+
+
+
+
+
+
+M
+
+
+
+
+new
+
+
+
+
+
+
+
+
+ is the new mean obtained as a teacher at iteration j, 
+
+
+
+
+
+
+T
+
+
+j
+
+
+
+
+
+
+ moves 
+
+
+
+
+
+
+M
+
+
+j
+
+
+
+
+
+
+ to its level, 
+
+
+
+
+
+
+r
+
+
+j
+
+
+
+
+
+
+ is any random number from the close interval between 0 and 1. Here, 
+
+
+
+
+
+
+T
+
+
+F
+
+
+
+
+
+
+ is the teaching factor, which determines the change in the mean and is computed from Equation (4). Equation (3) shows how 
+
+
+
+
+
+
+
+
+DM
+
+
+
+
+j
+
+
+
+
+
+
+ improves the existing solution at iteration j, denoted by 
+
+
+
+
+
+
+
+
+
+
+X
+
+
+
+
+
+
+
+
+old
+
+
+,
+
+
+j
+
+
+
+
+
+
+
+
+.
+The student phase is the second phase of the TLBO algorithm. The solutions are improved in the student phase by a random interaction between the other solutions. Firstly, any two random solutions from the population, for example 
+
+
+
+
+
+
+X
+
+
+j
+
+
+
+
+
+
+ and 
+
+
+
+
+
+
+X
+
+
+k
+
+
+
+
+
+
+, are compared for improving the existing solution from 
+
+
+
+
+
+
+X
+
+
+
+
+old
+
+
+,
+
+
+j
+
+
+
+
+
+
+
+
+ to 
+
+
+
+
+
+
+X
+
+
+
+
+new
+
+
+,
+
+
+j
+
+
+
+
+
+
+
+
+. Then, this procedure is repeated for the entire population as follows:
+If
+
+
+
+
+
+
+
+
+
+f
+
+
+
+
+
+
+
+
+X
+
+
+j
+
+
+
+
+
+
+
+
+<
+
+
+f
+
+
+
+
+
+
+
+
+X
+
+
+k
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+X
+
+
+
+
+new
+
+
+,
+
+
+j
+
+
+
+
+
+
+=
+
+
+
+
+X
+
+
+
+
+old
+
+
+,
+
+
+j
+
+
+
+
+
+
++
+
+
+
+
+r
+
+
+j
+
+
+
+
+
+
+
+
+
+
+X
+
+
+j
+
+
+
+
+−
+
+
+
+
+X
+
+
+k
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(4)
+
+
+
+
+Else
+
+
+
+
+
+
+
+
+
+
+
+X
+
+
+
+
+new
+
+
+,
+
+
+j
+
+
+
+
+
+
+=
+
+
+
+
+X
+
+
+
+
+old
+
+
+,
+
+
+j
+
+
+
+
+
+
++
+
+
+
+
+r
+
+
+j
+
+
+
+
+
+
+
+
+
+
+X
+
+
+k
+
+
+
+
+−
+
+
+
+
+X
+
+
+j
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(5)
+
+
+
+
+End
+The experimental matrix, along with the process parameters and evaluated responses of BW and BH as per the BBD design, are presented in 
+Table 3
+. To evaluate these responses in the selected range of the design variables, multivariable correlations were developed through machining variables for BW, and BH.
+For the evaluation of the response variables beyond the experimental matrix, a mathematical regression analysis was employed using the RSM approach. Minitab v17 was utilized for generating the equations. Equations (6) and (7) shows the obtained regression equations for BW, and BH, respectively.
+
+
+
+
+
+
+
+
+
+BW
+
+
+=
+
+
+284.2
+
+
+−
+
+
+9.3
+
+
+ 
+
+
+·
+
+
+ 
+
+
+
+
+x
+
+
+1
+
+
+
+
+−
+
+
+0.331
+
+
+ 
+
+
+·
+
+
+ 
+
+
+
+
+x
+
+
+2
+
+
+
+
+−
+
+
+19.36
+
+
+ 
+
+
+·
+
+
+ 
+
+
+
+
+x
+
+
+3
+
+
+
+
++
+
+
+1.031
+
+
+ 
+
+
+·
+
+
+ 
+
+
+
+
+x
+
+
+1
+
+
+
+
+
+
+
+
+2
+
+
+
+
++
+
+
+0.3326
+
+
+ 
+
+
+·
+
+
+ 
+
+
+
+
+x
+
+
+3
+
+
+
+
+
+
+
+
+2
+
+
+
+
++
+
+
+0.01669
+
+
+ 
+
+
+·
+
+
+ 
+
+
+
+
+x
+
+
+2
+
+
+
+
+ 
+
+
+·
+
+
+ 
+
+
+
+
+x
+
+
+3
+
+
+
+
+
+
+
+
+
+
+
+
+(6)
+
+
+
+
+
+
+
+
+
+
+
+
+BH
+
+
+=
+
+
+75.9
+
+
+−
+
+
+3.88
+
+
+ 
+
+
+·
+
+
+ 
+
+
+
+
+x
+
+
+1
+
+
+
+
+−
+
+
+0.249
+
+
+ 
+
+
+·
+
+
+ 
+
+
+
+
+x
+
+
+2
+
+
+
+
+−
+
+
+0.2462
+
+
+ 
+
+
+·
+
+
+ 
+
+
+
+
+x
+
+
+3
+
+
+
+
++
+
+
+0.511
+
+
+ 
+
+
+·
+
+
+ 
+
+
+
+
+x
+
+
+1
+
+
+
+
+
+
+
+
+2
+
+
+
+
++
+
+
+0.000257
+
+
+ 
+
+
+·
+
+
+ 
+
+
+
+
+x
+
+
+2
+
+
+
+
+
+
+
+
+2
+
+
+
+
+
+
+
+
+
+
+
+
+(7)
+
+
+
+
+
+where 
+
+
+
+
+
+
+x
+
+
+1
+
+
+
+
+
+
+ represents the WFS, 
+
+
+
+
+
+
+x
+
+
+2
+
+
+
+
+
+
+ represents travel speed, and 
+
+
+
+
+
+
+x
+
+
+3
+
+
+
+
+
+
+ represents the voltage.
+Furthermore, the robustness and adequacy of the obtained regression equations were analyzed by using the ANOVA technique. 
+Table 4
+ shows the ANOVA for BW and BH. ANOVA was further utilized for the identification of significant and non-significant models in terms of BW and BH. The relevance of the model terms was assessed at a 95% significance level, which is necessary for identifying relevance of the model terms. A 
+p
+-value lower than 0.05 suggests that the particular model had an influential effect on the respective response values [
+29
+]. Higher F-values at a 95% confidence interval, along with lower probability 
+p
+-values (less than 5%), for the model terms were observed. For BW, the regression model, term along with the linear, square, and interaction terms, was found to be significant as their 
+p
+-values were <0.05. For BH, the regression model term and a linear model had a significant impact on deciding the BH response. For both the responses, a negligible contribution of error term suggests that the developed model is highly suitable for predictions of responses with the least error. The non-significance of lack-of-fit is considered another important aspect for the verification of the ANOVA results. The value of lack-of-fit was observed to be more than 0.05 for both the responses of BW and BH, which shows the non-significance of lack-of-fit. The non-significance of lack-of-fit for the response suggests the suitability of the model to forecast the response value [
+30
+]. This significance of the developed model terms indicates that the obtained regression equations are adequate and reliable for the prediction of future values BW and BH. R
+2
+ values were used to define the adequacy of the proposed model. An R
+2
+ value of 0.9815 and adj. R
+2
+ value of 0.9630 were depicted for BW, and an R
+2
+ value of 0.9494 and adj. R
+2
+ value of 0.9356 were depicted for BH. For both the responses of BW and BH, R
+2
+ and adj. R
+2
+ were found to be near unity, suggesting the fitness of the model for the present data and the prediction of new observations [
+31
+]. The negligible deviance between R
+2
+ and Adj. R
+2
+ recommends the fitness of the model for the present data and the prediction of new observations. Therefore, this determines that the regression equation for BW and BH were appropriate for predicting the response values inside the selected range.
+The main effect plot shown in 
+Figure 4
+ for BW explains the trend that was followed by varying the wire feed speed, travel speed and voltage of deposited material. The graph shows that there was a decrease in BW as travel speed increased. The reason was due to the speed at which the torch deposits the material. As the speed of the torch increased, there were fewer drops of molten metal being deposited, which resulted in a decrease in the BW of the weld bead [
+27
+]. Moreover, the trend for voltage shows an increase in BW of the weld bead. The reason for such an increase in width was due to the widening of the arc, which results in bigger droplets of molten metal being deposited [
+32
+]. Hence, a positive effect can be observed on the BW of the weld bead. Increasing the WFS has a negative effect on width as BW increases. The reason for such an increase in BW was due to the speed of wire coming out from the nozzle and the higher amount of material being deposited [
+33
+].
+Figure 5
+ showed the effect of WFS, travel speed and voltage on the BH of the deposited material. As it can be observed from 
+Figure 5
+, there was a decrease in BH of the deposited material with the increase in travel speed. The reason behind such a trend is that a lower amount of material was deposited as the torch moved at a higher speed [
+34
+]. Because of the high travel speed, a negative effect can be observed on the BH of the deposited weld bead. This shows the effect of travel speed on bead geometry. In the same way, the BH decreases with the increase in voltage. The reason for such a decrease in BH was due to an increase in arc length and more deposition of the molten material [
+35
+]. Thus, with the spreading of those molten droplets, a decrease in BH can be observed. WFS also contributed to varying the bead geometry. When we increase the wire feed speed, the speed at which the wire comes out from the nozzle increases; hence, more material is deposited, which increases the BH of the weld bead [
+36
+].
+Residual plots depict the validation of the satisfactory results of the ANOVA. The ANOVA analysis is considered to be valid and suitable for the selected model, provided it satisfies some assumptions [
+37
+]. For this purpose, validation of the residual plots is very important. 
+Figure 6
+ shows the residual pot for BW. It contains four plots. The normality plot represents linear development. It suggests the suitability of the model. The second plot of versus fits has shown that fits were entirely randomized around the source. The histogram plot depicts a bell-shaped curve that indicates the supportive data for good ANOVA. The absence of any particular trend for versus order plot verifies the ANOVA statistics. According to this, all four plots validated the ANOVA statistics for a better prediction of future results. Similar observations were obtained for BH as per 
+Figure 7
+. This showed that all four plots successfully validated the ANOVA statistics for a better prediction of future results of BW and BH.
+The TLBO algorithm was employed to obtain the desired values of responses by evaluating the important levels of design variables. TLBO was executed by considering BW as minimization, and BH as maximization. The levels of process variables used during the implementation of algorithms include WFS, 4 ≤ WFS ≥ 6; travel speed, 425 ≤ S ≥ 485; and voltage, 19 ≤ V ≥ 21. The TLBO algorithm was implemented for single-response optimization and multi-response optimization. 
+Table 5
+ depicts the single-response optimization of weld bead geometries i.e., BW, and BH. To validate these obtained results, validation trials were conducted for the optimized results. 
+Table 6
+ shows the comparison between the predicted and obtained results. 
+Figure 8
+ shows the optical micrographs of the obtained results of single-response optimization. This also validated the results obtained from the TLBO algorithm. The least deviation of less than 5% suggests the accuracy and capability of the TLBO algorithm. However, it can be observed that during the minimization of BW, the other response BH was also minimized, which was not the desired output for BH. In addition, during the maximization of BH, the other response BW was minimized, which was not the desired output for BW. Thus, single-response optimization gave a conflicting situation. One of the efficient ways to deal with such a situation is to develop Pareto fronts with non-dominated optimum solutions. Pareto fronts present a trade-off between two conflicting objectives, and manufacturers can select any point on the front.
+To obtain the desired optimal levels for BW and BW simultaneously, multi-objective teaching–learning-based optimization (MOTLBO) was employed. MOTLBO is a multi-objective form of the TLBO algorithm. MOTLBO was proven to be vastly capable to deal with two or more objectives simultaneously and has shown the ability to produce non-dominant solutions for conflict situations. In the current study, MOTLBO has produced 48 optimal non-dominant unique solutions for BW and BH. 
+Table 7
+ presents these unique and independent values of responses, along with their respective process variables. The Pareto curve of these optimal points was generated, as shown in 
+Figure 9
+. In the present study, as discussed earlier, BW was considered as a minimization criterion while BH was a maximization. The contradictory nature between BW and BH can be observed from the Pareto chart. For minimum BW, the value of BH was also the lowest, and vice-versa. Therefore, by considering the need for the required values of BW and BH, the user can select the corresponding levels of process parameters from 
+Table 7
+ and 
+Figure 9
+. In addition, Pareto points can be generated if required by employing the MOTLBO algorithm. Validation experiments were performed by randomly selecting five Pareto points to validate the results of the TLBO algorithm. The discrepancy between the anticipated and measured values was observed to be negligible, with a deviation of less than 5% for all the five trials. This demonstrates the success of the established model and TLBO algorithm.
+To prepare a multi-layer structure, a simultaneous objective function was derived by employing the MOTLBO technique. By taking into the consideration of equal importance of BW and BH for the multi-layer structure, an equal weight of 0.5 was given to the objective function. The multi-response objective function yielded optimized values of BW and BH as 7 mm, and 6.07 mm, respectively, at WAAM process parameters of WFS of 5.9 m/min, travel speed of 476 mm/min, and voltage of 18 V. 
+Figure 10
+ shows the multi-layer structure obtained at these optimized parameters. It shows the structure is free from any disbonding and a perfect fusion between the layers can be observed. It was observed that on the extreme sides of the deposition, there was an additional lump of metal. This is due to the usage of metal-cored wires for GMAW. However, the start and stop are always scrapped in the post processing. This demonstrates the suitability of the TLBO technique for accurately suggesting the process parameters for WAAM.
+The present study demonstrates the GMAW-based WAAM of low alloy steels using metal-cored wire. The Box–Behnken design was employed to perform the experiments with the considerations of process variables of wire feed speed, travel speed, and voltage. BW and BH were selected as the response variables. The TLBO algorithm was used for the optimization of the response variables. The following significant conclusions can be drawn from the present study:
+ANOVA was employed for statistical analysis. For BW, the regression model term, along with the linear, square, and interaction terms, was found to be significant, while the regression model term and a linear model had a significant impact on deciding the BH response. Multivariable correlations were developed through machining variables for selected responses of BW and BH. A normal probability plot yielded a good statistical analysis for ANOVA and a better future outcome of the proposed model.
+The non-significance of lack-of-fit for both BW and BH indicated that the obtained regression equations are adequate and reliable for the prediction of future values of BW and BH. The negligible deviance between R
+2
+ and Adj. R
+2
+ values for both BH and BW showed the fitness of the model for the present data and the prediction of new observations.
+The single-objective optimization results showed a maximum BH of 7.81 mm, and a minimum BW of 4.73 mm. Pareto fronts provided a trade-off between two competing objectives, and the operator has the option of selecting the appropriate Pareto point, depending on the specified values of BW, and BH.
+The comparison of the predicted and experimental values for the responses showed an acceptable error. This revealed the ability and suitability of the TLBO algorithm for the evaluation of required bead geometries using the GMAW-based WAAM process.
+A multi-layer structure free from any disbonding was successfully manufactured at the optimized variables. Based on the obtained results, the authors suggest that the optimum parametric settings would be beneficial for the deposition of layer-by-layer weld beads for the additive manufacturing of components.
+ANOVA was employed for statistical analysis. For BW, the regression model term, along with the linear, square, and interaction terms, was found to be significant, while the regression model term and a linear model had a significant impact on deciding the BH response. Multivariable correlations were developed through machining variables for selected responses of BW and BH. A normal probability plot yielded a good statistical analysis for ANOVA and a better future outcome of the proposed model.
+The non-significance of lack-of-fit for both BW and BH indicated that the obtained regression equations are adequate and reliable for the prediction of future values of BW and BH. The negligible deviance between R
+2
+ and Adj. R
+2
+ values for both BH and BW showed the fitness of the model for the present data and the prediction of new observations.
+The single-objective optimization results showed a maximum BH of 7.81 mm, and a minimum BW of 4.73 mm. Pareto fronts provided a trade-off between two competing objectives, and the operator has the option of selecting the appropriate Pareto point, depending on the specified values of BW, and BH.
+The comparison of the predicted and experimental values for the responses showed an acceptable error. This revealed the ability and suitability of the TLBO algorithm for the evaluation of required bead geometries using the GMAW-based WAAM process.
+A multi-layer structure free from any disbonding was successfully manufactured at the optimized variables. Based on the obtained results, the authors suggest that the optimum parametric settings would be beneficial for the deposition of layer-by-layer weld beads for the additive manufacturing of components.
+Conceptualization, J.V., R.C., N.P. and H.P.; methodology, J.V., R.C., N.P. and H.P.; software, V.K.P., D.Y.P. and K.G.; validation, R.C. and J.V.; formal analysis, V.K.P., D.Y.P. and K.G.; investigation, J.V. and R.C.; resources, J.V. and R.C.; data curation, R.C.; writing—original draft preparation, R.C., N.P. and H.P.; writing—review and editing, J.V., R.C., V.K.P., D.Y.P. and K.G.; visualization, R.C.; supervision, R.C. and K.G. All authors have read and agreed to the published version of the manuscript.
+This research received no external funding.
+Not applicable.
+Not applicable.
+Data presented in this study are available in this article.
+The authors would like to thank ORSP and PDEU for sponsoring the research project in the SRP scheme via project number ORSP/R&D/SRP/2021/010.
+The authors declare no conflict of interest.
+Publisher’s Note:
+ MDPI stays neutral with regard to jurisdictional claims in published maps and institutional affiliations.

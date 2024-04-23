@@ -1,0 +1,180 @@
+With the dramatic increment of complexity, more microfluidic devices require 3D structures, such as multi-depth and -layer channels. The traditional multi-step photolithography is time-consuming and labor-intensive and also requires precise alignment during the fabrication of microfluidic devices. Here, we present an inexpensive, single-step, and rapid fabrication method for multi-depth microfluidic devices using a high-resolution liquid crystal display (LCD) stereolithographic (SLA) three-dimensional (3D) printing system. With the pixel size down to 47.25 μm, the feature resolutions in the horizontal and vertical directions are 150 μm and 50 μm, respectively. The multi-depth molds were successfully printed at the same time and the multi-depth features were transferred properly to the polydimethylsiloxane (PDMS) having multi-depth channels via soft lithography. A flow-focusing droplet generator with a multi-depth channel was fabricated using the presented 3D printing method. Experimental results show that the multi-depth channel could manipulate the morphology and size of droplets, which is desired for many engineering applications. Taken together, LCD SLA 3D printing is an excellent alternative method to the multi-step photolithography for the fabrication of multi-depth microfluidic devices. Taking the advantages of its controllability, cost-effectiveness, and acceptable resolution, LCD SLA 3D printing can have a great potential to fabricate 3D microfluidic devices.
+Three-dimensional (3D) printing, which is considered as the key technique for the 4th industrial revolution, uses computer-controlled processes to create a three-dimensional object in a layer-by-layer fashion [
+1
+]. The application of 3D printing in medicine has attracted much interest in recent years. 3D printing of biomaterials and living cells, which is commonly referred to as “bioprinting,” has offered significant advances. The fabrication of complex 3D tissue-like composites with 3D bioprinting has been utilized for conducting fundamental research to investigate the microenvironmental factors regulating the development of cells and organs [
+2
+,
+3
+] and clinical therapies, such as artificial organs for transplantation [
+4
+,
+5
+]. 3D printing has been also applied to the fabrication of microfluidic devices [
+6
+,
+7
+] in the form of microelectromechanical sensors and/or actuators that can process and analyze minuscule quantities of biomedical fluid samples in an inexpensive, accurate, fast, and customizable manner [
+8
+]. 
+In general, microfluidic devices are fabricated through microfabrication processes which include fabricating a channel mold using photolithography, casting a channel device over the mold using soft lithography, and bonding the channel device onto a substrate [
+9
+,
+10
+]. This workflow usually involves cleanroom facilities and harmful chemicals (i.e., photoresist). Introducing 3D printing into microfabrication offers a new way to fabricate microfluidic devices. Currently, there are two strategies to produce 3D printed microfluidic devices. First, one can use 3D printing for directly fabricating the microfluidic devices [
+11
+,
+12
+,
+13
+,
+14
+]. Although this one-step method has the advantages of fabrication simplicity and the rapid development of microfluidic devices [
+15
+], none of the reported devices could achieve a channel width less than 500 μm. Another problem of direct fabrication is the limitation of materials that can be used. The resin for 3D printing is usually translucent. Therefore, the printed channel and fluid flow cannot be well visualized under the microscope, which is critical for microscale experiments. Hampson et al. reported a 3D printed microfluidic device integrated with a microfluidic particle counter [
+16
+]. However, additional post-printing steps were conducted manually to complete the device. The open microchannels were printed in which optical fibers were forced into the grooves and aligned to the channels’ walls by hand under a microscope. Subsequently, the device was sealed manually with double-sided adhesive tape and flattened with a roller. Second, one can use the 3D print to replace the photolithography process for fabricating the molds [
+17
+,
+18
+,
+19
+,
+20
+]. This method can achieve better resolution (~200 μm) and does not require the cleanroom facilities. However, the soft lithography and bonding processes are still required for the final device fabrication. 
+The complexity of microfluidic device functions has dramatically increased in recent years. For example, microfluidic devices referred to as organ-on-a-chip have been used to mimic the function and microstructure of multicellular human organs in vitro [
+10
+]. The complexity has led architectures of microfluidic devices to move to a 3D rather than a 2D planar structure [
+21
+]. Since the traditional photolithography process is generally restricted to planar features [
+22
+], multi-depth photolithography methods have been developed for the fabrication of multi-layer or multi-depth microfluidic devices. However, such methods require multiple photolithography processes [
+23
+,
+24
+] and precise alignment [
+25
+], being labor-intensive and time-consuming methods. With this in mind, we believe using 3D printing to print the multi-depth mold in a single step process will greatly benefit the development of complex 3D microfluidic devices.
+In this research, we employed an inexpensive liquid crystal display (LCD) stereolithographic (SLA) 3D printer to fabricate molds for multi-depth microfluidic devices. Systematic characterization was performed to examine the capability of the printer. Experimental results show that the LCD SLA 3D printer can fabricate features down to a 150 μm resolution in the horizontal direction and a 50 μm resolution in the vertical direction. We further utilized the system to fabricate several multi-depth structures to demonstrate its feasibility and robustness. Finally, by using the multi-depth mold, a flow-focusing droplet generator was fabricated. The droplet generation experiment proves that with the help of a multi-depth structure, the morphology of the droplets can be controlled in a simple and rapid manner. Altogether, the LCD SLA 3D printer offers an inexpensive and rapid way to fabricate multi-depth microfluidic devices with a minimum feature size of approximately 150 μm. This technique is able to greatly simplify the fabrication of multi-depth microfluidic devices and benefit their applications. 
+The 3D printed molds for characterizations of printing resolution and microfluidic devices were designed via a computer-aided design software (Solidworks 2018, v26.3, Dassault Systems, Vélizy-Villacoublay, France). The designed files were saved as STereoLithography (STL) files and sliced by the EZ3DX software (B9, 3D Currax, Kelowna, BC, Canada) with 50 μm layer thickness. Subsequently, the sliced image files were sent to a custom-built liquid crystal display (LCD) stereolithographic (SLA) 3D printer. The LCD SLA printer has a 5.5 inch (12.1 cm × 6.8 cm) LCD screen with 2560 × 1440 resolution, giving a pixel size of 47.25 μm. Translucent resin (clear resin GPCL02, Formlabs, Somerville, MA, USA) was used for the 3D printing. The curing time for each layer was 15 s. However, the curing time for the first five layers was 25 s for enhancing the attachment of cured resins onto the building plate. Once the printing was finished, isopropanol was sprayed on the building plate to separate the printed samples. The printed samples were then washed with isopropanol, reverse osmosis (RO) water, and ethanol, consecutively. The samples were dried in the air for at least 30 min before sputter coating. In the end, the samples were coated with a 10 nm thick gold–palladium layer as a conductive layer for scanning electron microscopy (SEM) imaging and as an isolation layer for the easy separation of polydimethylsiloxane (PDMS) from the molds.
+PDMS (Sylgard 184, Dow Corning, Midland, MI, USA) and a curing agent were mixed at the ratio of 10:1. The PDMS mixture was poured into a Petri dish to cover the entire mold. The Petri dish was then placed in a vacuum desiccator for 1 h to remove bubbles inside the mixture. Subsequently, the Petri dish was cured at 70 °C for 4 h. The cured PDMS was peeled off from the mold and washed with isopropanol and ethanol, consecutively, for examination under the SEM or the device bonding process.
+To fabricate the microfluidic device, the cured PDMS was punched to have inlets and outlets. The punched channel was then treated with an oxygen plasma (BD-20, Electro-Technic Products, Chicago, IL, USA) for 1 min and bonded onto a plasma-treated glass slide (VWR Scientific, Radnor, PA, USA). The bonding was achieved by placing the microchannel and the glass slide in an oven at 70 °C for 30 min with clamping.
+To examine the microstructure of the printed molds, SEM images of the molds coated with a 10 nm thick gold–palladium layer were taken with a field emission SEM system (Mira3 XMU, TESCAN, Brno, Czech Republic, detector: secondary electrons, HV: 20 kV). To examine the microstructures of the peeled PDMS microchannels, the microchannels were also coated with a 10 nm thick gold–palladium layer and then SEM images were taken with the SEM system under the same setting. 
+In addition to SEM images, the surface profile of 3D printed molds and fabricated PDMS microchannels were characterized using a contact stylus profilometer (Dektak XT, Bruker, Tucson, AZ, USA). The radius of the stylus tip was 2 μm and scanning time was maintained constant at 240 s for all samples.
+Two solutions were prepared for droplet generation experiments. The RO-water was used as the water phase. The mineral oil (light, high purity, VWR International, Radnor, PA, USA) with 20% v/v Span 80 surfactant (Sigma-Aldrich, St. Louis, MO, USA) was used as the oil phase. The experimental setup was the same as in a previously reported article [
+26
+]. Briefly, two syringe pumps (Kent Scientific, Torrington, CT, USA) were used to infuse the water and oil phases at the flow rates of 2 μL/min and 5, 10, 20, or 40 μL/min, respectively. The pumps were connected to a host computer via a USB 2.0 cable. An optical microscope (ToupTek, Hangzhou, China, resolution: 872 × 654, frame rate: 24) was set under the microfluidic device to record video clips of the droplet generation process.
+The planar size of droplets was calculated as follows: 1. video clips were exported as a group of frame-based images; 2. representative images of droplets at desired positions were determined manually; and 3. the planar size of droplets in the image was calculated using the built-in measurement function of WCIF ImageJ (University Health Network, Toronto, ON, Canada).
+Figure 1
+A shows the typical structure of an LCD SLA 3D printing system. It contains an LCD screen for projecting sliced images, a vat with non-adhesive treatment for containing uncured resins, and a motorized metal building plate for attaching printed samples. The LCD stereolithographic (SLA) printing is a bottom-up 3D printing method that has several advantages over the top-down digital light processing (DLP) SLA 3D printing system [
+27
+]. These include the smaller volume of resin required during fabrication and the capability of achieving a high vertical resolution and a shorter curing time, since the bottom of the resin is sealed from the oxygen-rich environment which inhibits the photocuring process. 
+The workflow of bottom-up LCD SLA printing is illustrated step-by-step in 
+Figure 1
+B. Before the printing process, the 3D model (i.e., STL file) was sliced to form a stack of 2D images containing details of an object at a specific layer (i.e., representing the cross-section at a specific layer). At the beginning of printing (Step 1), the building plate moves down to be submerged into the uncured resin. The gap between the building plate and vat is defined by the user as the thickness of the first layer (usually between 50 and 200 μm). Next, the LCD screen is turned on to project the sliced image of the first layer. Only the area designed to be cured is illuminated (Step 2). Depending on the reactivity of the resin and the light intensity of the LCD screen, the curing of one layer is finished within 1 to 60 s. The vat is made from a non-adhesive Teflon film to easily separate the cured resin attached to the bottom of the building plate. Once the curing of the first layer is finished, the building plate moves up to release the printed structure from the vat (Step 3) and moves down to the position where the distance between the bottom of the layer and the vat is to form the user-defined thickness of the second layer (Step 4). Subsequently, patterning the second layer starts (Step 5). Once the second layer is cured, it is integrated to the first layer to form the 3D geometry (Step 6). Steps 4 to 6 are repeated until all slices are subsequently projected and corresponding layers are cured.
+It is worth noting that the feature resolution of LCD SLA printing is defined by the pixel resolution of the LCD. The LCD SLA printer uses a 5.5 inch (12.1 cm × 6.8 cm) LCD screen with 2560 × 1440 resolution, giving a pixel size of 47.25 μm. Such high resolution is better than most of the commercially available DLP-based SLA 3D printers (with resolution approximately 100 to 200 μm). The inexpensive LCD SLA printer provides a cost-effective solution for the high-resolution printing.
+We characterized the feature resolution of the printer in the horizontal and vertical directions by printing several line patterns with different widths or heights with the curing time of 15 s for each layer of 50 μm. The entire printing process was done within 20 min. The microstructure of printed objects was examined via an SEM system (
+Figure 2
+ and 
+Figure 3
+). The sample holder was rotated at an angle of 45° to image the vertical face of the samples. Rotating the sample at the given angle resulted in obtaining the projected images of the vertical faces of the sample. Dimensions of the projected images were measured by comparing with the corresponding scale bar on the image and then were used to calculate the actual dimensions of the features using cos(45)·h
+a
+ (actual height) = h
+i
+ (imaged height). As can be seen from the SEM images, the line patterns were printed correctly. The smallest visible pattern was 100 μm in the horizontal direction (
+Figure 2
+A) and 50 μm in the vertical direction (
+Figure 3
+A), respectively. Zoom-in images for different patterns are illustrated (
+Figure 2
+B and 
+Figure 3
+B). For the horizontal features, it was found that the measured width of the designed 100 μm line pattern was around 150 μm. Therefore, the printed sample was slightly overcured. However, the 100 μm line disappeared if the curing time was shorter than 15 s. Therefore, the curing time of 15 s could achieve the minimal feature resolution of 150 μm, although it could result in slight overcuring. We further characterized the line widths of the printed lines (
+Figure 2
+C). It was found that, for all the samples, the printed widths were greater than the designed line widths with a constant offset of 50 μm. For the vertical features, unlike the horizontal features, the printed thicknesses were the same as the designed thicknesses (
+Figure 3
+C). This was because the thickness of a layer was defined by the gap between the cured layer and the vat rather than the curing time as long as the curing time was long enough to completely cure one layer. In summary, with the 47.25 μm pixel size, the LCD SLA printer could achieve 150 μm positive features in the horizontal direction, which is better than similar studies reported previously [
+12
+,
+13
+].
+The fabrication flow of the multi-depth channels is shown in 
+Figure 4
+. First, the positive mold for soft lithography was designed by the computer-aided design software. The designed file was then sliced and printed by the LCD SLA printer to obtain the mold. Soft lithography was then performed by casting the PDMS onto the mold. The cured PDMS with multi-depth channels was peeled off and bonded onto the glass slide via plasma treatment. The whole fabrication process was finished within 6 h.
+We designed and fabricated several multi-depth channels (positive, negative, and intersected) and cast PDMS onto them. The widths of all multi-depth channels were fixed at 500 μm. The heights of the positive (100, 200, 300, 200, and 100 μm), negative (300, 200, 100, 200, and 300 μm), and intersected (300, 100, 300, 100, and 300 μm) channels were casted. The microstructure of the printed molds and corresponding PDMS are shown in 
+Figure 5
+. From the profile measurement data and SEM images, we found that the multi-depth channels could be clearly seen and such features could be transferred to the PDMS properly. Within the field of view (around 4 × 4 mm
+2
+), the consistency of the multi-depth channels was good, proving the feasibility of the 3D printing of multi-depth channels for microfluidic applications.
+The successful fabrication of multi-depth channels using LCD SLA printing led to the design of a flow-focusing droplet generator with multi-height bumps. Li et al. demonstrated that the bumps can regulate the morphology of droplets [
+28
+]. When the droplet moves from the shallow channel to the deep channel, the rod-like compressed droplets are reshaped into spherical balls. The designed flow-focusing device was 400 μm wide and 200 μm high. The bump was 400 μm wide and 600 μm high (
+Figure 6
+A). The SEM picture of the 3D printed device is shown in 
+Figure 6
+B. The multi-depth bump and flow-focusing junction was clearly observed.
+Microfabricated droplets can be useful tools in beam manipulation [
+29
+], food fabrication [
+30
+], and tissue engineering [
+31
+]. Precise control over the morphology of droplets has been proven to be an effective way to manipulate light propagation [
+32
+] and regulate cell proliferation [
+33
+]. Flow-focusing is the most popular design for the microfluidic droplet generation because of its high controllability of droplet size, highly stable generation process, and the ease of device fabrication [
+34
+,
+35
+]. In a flow-focusing device, droplets are formed when the water phase meets the oil phase at the junction (
+Figure 7
+A). When the viscous force of the oil phase overcomes the interfacial forces of the water phase, the water phase starts to break into droplets to minimize its surface tension, according to the Rayleigh instability theory [
+36
+]. By changing the flow rates of two phases, the size of the droplets can be controlled accordingly [
+31
+].
+By casting PDMS on the mold with the bumps, the flow-focusing droplet generator with multi-depth channel was fabricated. The channel is visualized by the yellow food dye (
+Figure 7
+B) in which no leakage was observed. Experimental setup established in our previous study [
+26
+] was utilized in the droplet generation experiment (
+Figure 7
+C). The flow rate of the water phase was fixed at 2 μL/min, whereas the flow rate of the oil phase was changed to regulate the size of droplets. As shown in 
+Figure 7
+D, a rod-like droplet at the shallow channel became a ball-like droplet once it entered into the deep channel to reduce its surface tension because the deep channel gave more space in the vertical direction to allow it to form a round shape, which agreed well with the previous study [
+27
+]. A supporting video showing details of the transition process can be found in the 
+Supplementary Materials
+. Such a phenomenon was investigated under different flow rates of the oil phase (
+Figure 7
+E). The planar size of the droplets, which is the size of the droplets at the focusing plane of the microscope, was quantified using the image processing function provided by ImageJ (
+Figure 7
+F). The planar size of the droplets under the flow rate of oil phases at 5, 10, 20, and 40 μL/min was approximately 351 × 10
+3
+, 232 × 10
+3
+, 178 × 10
+3
+, and 113 × 10
+3
+ μm
+2
+ for the shallow channel and 152 × 10
+3
+, 127 × 10
+3
+, 87 × 10
+3
+, and 61 × 10
+3
+ μm
+2
+ for the deep channel, respectively. The planar size of the droplets in the deep channel was approximately half the size of the observed droplets in the shallow channel. The dramatic changes in planar size and the shape (from rod to ball) of droplets indicate that the multi-depth channel is an effective structure to manipulate droplet morphology. Desired size and shape can be well-tuned by changing the flow rate and/or feeding the generated droplet into the channel with different depths. 
+In this paper, an LCD SLA 3D printer was employed for the fabrication of multi-depth microfluidic devices. The 3D printer, benefitting from a higher pixel resolution, can support the feature resolution down to 150 μm in the horizontal direction and 50 μm in the vertical direction, allowing the creation of fine features for various applications. Multi-depth molds with positive, negative, and intersected features were successfully printed. The multi-depth features were transferred to the PDMS for the fabrication of multi-depth microfluidic devices. The successful implementation of the 3D printed multi-depth flow-focusing droplet generator demonstrated the feasibility of using the multi-depth channels to manipulate the morphology and size of the droplets. In summary, LCD SLA 3D printing was found to be an inexpensive and rapid fabrication method for the generation of multi-depth microfluidic devices. Such a technique has a great potential as an alternative method to the multi-depth photolithography, taking into consideration its simplicity, cost effectiveness as well as acceptable resolution.
+The following are available online at 
+https://www.mdpi.com/2504-4494/3/1/26/s1
+.
+Conceptualization, M.G.A.M., Z.W., H.K., and K.K. Methodology, B.M., N.M., and K.K. Investigation, M.G.A.M., Z.W., H.K., and K.K. Formal analysis, Z.W., H.K., and K.K. Visualization, M.G.A.M., B.M., N.M., and K.K. Writing—original draft, Z.W., H.K., and K.K. Writing—review & editing, M.G.A.M., Z.W., H.K., B.M., N.M., and K.K. Funding acquisition, K.K. Supervision, K.K.
+This work was supported by the Natural Sciences and Engineering Research Council of Canada (NSERC) Engage Plus Grant and the Canada Foundation for Innovation John R. Evans Leaders Opportunity Fund.
+The authors would like to thank David Arkinstall at the UBC Okanagan SEM lab for his assistance in SEM imaging.
+The authors declare no conflict of interest.

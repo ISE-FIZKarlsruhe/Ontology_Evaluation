@@ -1,0 +1,236 @@
+The use of Topology Optimization techniques has seen a great development since the last decade. The principal contributor to this trend is the widespread use of Additive Manufacturing technologies to effectively build complex and performant structures over different settings. Nevertheless, the use of Topology Optimization in Design for Additive Manufacturing processes is not simple and research aims to fill the gap between theory and practice by evolving at the same time both approaches, workflows, and design software that allow their implementation. Since a strong connection between methodologies and tools exists, this work proposes a method to assess computer-aided design tools or platforms. This can be applied to sustain the key phase for selection and adoption of the computer-aided tools in industrial settings embracing Additive Manufacturing. The workflow for Topology Optimization implementation, the structure of the proposed evaluation approach, and its application, are presented to demonstrate effective usability. The automotive case study is the redesign of internal combustion engine piston to benefit of metal Additive Manufacturing based enhanced product performance. A preliminary finite element model is defined and a Topology Optimization based redesign is concurrently set up through four different commercial computer-based platforms. The method accounting for the assessment of required operations for the design optimization is applied to perform the tools selection phase.
+One of the aims of structures design is the minimization of mass and maximization of material usage efficiency, thus a lightweight design has always been a core focus in the engineering field. Generally, implementation of lightweight design leads to high complexity of geometries and thus it has always been hindered by traditional manufacturing technologies. Nature provides several examples of lightweight and functional structures, such as plants’ branched shapes, bone tissues, and honeycomb patterns [
+1
+]. Generally, human structure design leads to simplified geometries, since it is constrained by manufacturing and assembly feasibility. Concurrent engineering approaches based on Computer-aided technologies (CAX) involve design and simulation iterations to achieve structural and functional targets and subsequent redesign for industrialization, introducing process constraints. Additive Manufacturing (AM) implementation allows for a rethink of features, shapes and geometries in order to exploit the functional design and thus make the design driven by engineering specifics instead of production constraints. Currently, the main strategies for the design of optimized lightweight components to be produced by Additive Manufacturing are cellular structures design, or rather Latticing, and Topology Optimization (TO). While the former can be considered as an Expertise-driven process, the latter can be structured as a mathematically driven process [
+2
+], since it can be linked to a numerical function optimization problem. A consolidated and effective approach in advanced settings is based on a combination of results of different kinds of optimization in sequential steps for the design of lightweight structures [
+3
+]. TO allows us to obtain improved solutions for structures with non-conventional shapes, but just Additive Manufacturing has actually bridged the gap between design and manufacturing, allowing us to unlock its potential for practical applications [
+4
+,
+5
+]. Indeed, a shape with an organic and branched aspect computed through TO is a good way to implement a functional design, exploiting the design freedom induced by AM [
+6
+]. Moreover, due to its capability to understand the optimal distribution of the material in advance, it is an interesting method, which is applicable from the earliest design step to cut down the design time.
+The rest of the work is structured as follows. The next subsections provide a synthesis of the state of the art about TO techniques and the workflow for its implementation. Moreover, current TO issues and challenges are summarized and the need for assessment approaches to select design tools for TO is introduced. 
+Section 2
+ describes the assessment method and the Key Performance Indicators (KPIs) matrices it is based upon. 
+Section 3
+ concerns the TO of the automotive Case Study and the application of the proposed method to perform the design tools selection phase. For this purpose, a comparison of four different Tools Systems (TSs) is performed and, finally, the conclusions discuss the proposed approach. 
+Table 1
+ reports the list of abbreviations and acronyms used in the paper.
+TO definition dates back to the early twentieth century [
+7
+]. Its first computational application contributions are due to [
+8
+] in the eighties; nevertheless, its full application in real cases has always been hindered by design software and technological constraints. TO is a numerical method to effectively distribute material into a control volume, which aims to maximize or minimize specific criteria (e.g., weight, stiffness, thermal conductivity, resonance frequency) according to set constraints. In applications for lightweight design, specific design tools for TO can be used to obtain a lighter structure for a set stiffness or to minimize its compliance with a given target mass. Nowadays, many algorithm categories have been developed to solve a TO problem [
+9
+]. The most prominent ones have been classified and described by Sigmund et al.: Density-based; Level Set Evolutionary/Genetic Algorithms; Topological Derivatives and Phase Field [
+10
+]. Most widely used [
+7
+] are homogenization density-based methods such as the Solid Isotropic Material with Penalization (SIMP), even though several research works concern the Evolutionary Structural Optimization (ESO) development, mainly in its more known Bi-dimensional version (BESO). The SIMP method is actually the most implemented algorithm in commercial software [
+11
+], due to its computational efficiency and its ability to generate excellent results in terms of mechanical performance and aesthetics. A lot of research effort has been contributing to the development of the algorithm adding features suitable in industrial applications in real cases [
+12
+,
+13
+]. Moreover, technological and manufacturing features have also been involved, such as constraints for machining [
+14
+] or casting [
+15
+]. The last decade highlights an increased interest in the improvement of AM technologies [
+2
+].
+The Design phase, including Topology Optimization, can be inserted in a higher general workflow of Design for Additive Manufacturing [
+16
+], as is visible in 
+Figure 1
+. The input of this phase is Product Planning includes several activities such as data collection, feasibility studies, preliminary analyses, the definition of projects objectives and constraints. Subsequently, the Design phase can start, with the aim to maximize product performance and thus to optimize its design considering the AM process. Afterward, Industrialization is required, including build preparation to create the job, and eventual process simulation. Finally, the production can start, with product printing and related post-processing and control steps required.
+The Design phase, as the key task of Design for Additive Manufacturing (DfAM), can be based on Topology Optimization approaches to create a lightweight and functional design. In order to perform a topology optimization of a product by using available design tools, the sequence of tasks that are included in the workflow is now described. The main steps are Geometry preparation, Optimization setting, and Results and Post-processing.
+TO1—Geometry preparation.
+The first phase aims to create the 3D geometries to be used to compute a TO by means of CAD tools. The first step can be the direct model import of the original non-optimized part or the retrieve of elements required as boundary conditions, related to the assembly where the part has to fit and work. Subsequently, the Design Space, or rather the volume set for shape computation, must be created. According to geometrical constraints, it must be as large as possible, so that the material distribution can be calculated with maximum freedom. A Non-Design Space is required as well to define the forbidden volumes for shape computation, since they have to be kept for functional reasons. Moreover, a key step is the material definition for further model simulation.
+TO2—Optimization setting.
+The aforesaid 3D geometries need to be discretized by creating a finite element model. The first step is mesh generation, selecting the type and size of elements and introducing the required refinements. Afterwards, in order to simulate product physical behavior, proper sets of loads and restraints need to be created and applied to the model. Finally, the optimization can be set up, including at least one target and one constraint. Moreover, implemented manufacturing constraints and geometrical constraints can be included, as well as the opportunity to interact with algorithm solving by additional settings made available by user interfaces. Solving parameters may also be specified for the iterative computation.
+TO3—Results and Post-processing.
+Once a result has been obtained, in general, the possibility to visualize it and analyze it should be granted. A basic finite element analysis of the computed model can be provided, or a geometry generation can be preliminarily required. This output can be automatically created by the design tools; conversely, in the worst case, no data about the computed result are provided. In this latter instance, firstly a manual geometry interpretation by CAD modelling is necessary and finally, a finite element analysis of the new model can be performed. A key point is the possibility to manipulate the geometry for results displaying, design modification, or further simulations.
+Current issues and possible developments can be encased in two main areas:
+TO algorithms and tools and features development;
+TO workflow and DfAM effectiveness.
+TO algorithms and tools and features development;
+TO workflow and DfAM effectiveness.
+The first point concerns TO usability improvements, such as support-free structures [
+17
+,
+18
+], optimization of supports [
+19
+], or both supports and part orientation [
+20
+]. Currently, a lot of studies are focused on performance maximization subject to support structure constraints [
+21
+,
+22
+]. Nowadays, many Computer-Aided Engineering (CAE) tools implemented TO so that it can be exploited by AM technologies [
+6
+]. Reddy et al. [
+11
+] realized their importance and attempted to benchmark commercial and academic available software. Most current design tools still show room for the development of specific AM constraints. Self-supporting structures [
+23
+], material anisotropy [
+24
+] introduction and implementation [
+13
+] are interesting advances. However, build direction still cannot be computed aiming to minimize supports, build time, or part warping [
+11
+], and other challenges concern functionally graded structures and materials, or TO and lattices integration [
+25
+,
+26
+], as confirmed by recent reviews [
+27
+].
+The second point regards the process chain and the integration within DfAM methods. Workflow steps can be complex and slow [
+28
+] and manual design interpretation is time-consuming [
+29
+] and could benefit from smooth boundary representation to get “ready to print” models [
+30
+], but currently, as Reddy et al. [
+11
+,
+31
+] explain, designers have to interpret design and add further studies taking into account build direction, overhangs, supports and build time by using additional design tools and personal experience. Integration of specific design tools in the design phase could be a great advantage to improve the DfAM process [
+32
+]. In this sense, the holistic approach suggested by Plocher et al. [
+2
+] could be implemented by the use of CAD platforms, their development, and their related-based approaches [
+16
+].
+From the aforementioned points, we can understand that TO approaches are strictly related to the capabilities of computer-aided design tools [
+30
+]. Reddy et al. [
+11
+] and Saadlaoui et al. [
+33
+] realized the importance of the design tools and attempted to benchmark commercial and academic available software. Different design tools not only offer different features, but also they may require different approaches, different number of redesigns, impacting the product development time [
+34
+]. Thus, an evaluation method for design tools for TO is going to be introduced. It can be used for the tools selection phase for TO-based product design or, from a wider perspective, as a support for industrial settings embracing AM for CAX platform selection. Hereinafter, we will discuss TSs referring in general to both sets of standalone design tools and integrated CAD platforms.
+The current work proposes an assessment approach to compare computer-aided design tools with regard to their capabilities to carry out the design phases required for TO and the satisfaction of the designer’s intent as well. Specifically, the focus is to analyze what are the available features included by the design tools under investigation and their respective capabilities. KPI matrices are adopted to associate the features and the tasks that compose the design workflow. Consequently, their development is based on the study of both the general workflow described above (
+Section 1.2
+, 
+Figure 1
+) and the structure of the currently available design tools. The investigation logical path is kept simple by adopting an easy and objective approach which enables a lean data collection and subsequent manipulation for an effective comparison.
+The use of KPIs and the integration of objective approaches proposed in previous works related to assessment and selection of software tools [
+35
+,
+36
+] represents the basis of the suggested assessment approach. KPIs are expressed by the Tasks to be performed to compute a TO, and they are broken down into several matrices. Each matrix was built with the idea of being easily expandable, in order to be able to add as many features as necessary. Furthermore, objectives of clarity and impartiality have been considered during the design of the matrices, and therefore of the method. To fulfil the first, each matrix must be interpreted according to a logical path, which goes hand in hand with the TO workflow. As regards impartiality, the impossibility of expressing personal judgement was satisfied by formulating Requests. A Request is a specific action that can be performed to set up a TO. These have been formulated as direct questions so that they must be answered only in a binary way: positive or negative. A Request is satisfied when a specific implemented feature can perform the described action. In this way, the benchmarking is no more dependent on the user experience for the sake of objectivity. 
+Figure 2
+ depicts the logical path that describes the systematic approach for Request analysis and method application. To avoid flaws in the answer choices, if a request is satisfied only in part, it is possible to indicate the answer “Not completely”, indicating the reason, or what is missing in the software to completely carry out that Request.
+The evaluation approach combines the TO workflow (
+Section 1.2
+, 
+Figure 1
+) and the usability of the selected tool. An overall of 4 evaluation phases are considered:
+I.
+Geometry preparation (GP);
+II.
+Optimization Setting (OS);
+III.
+Result and Post-processing (R&PP);
+IV.
+Interface and user experience (IT).
+Geometry preparation (GP);
+Optimization Setting (OS);
+Result and Post-processing (R&PP);
+Interface and user experience (IT).
+In general, the method is therefore based on sundry matrices arranged following the phases suggested, whose structure is depicted in 
+Figure 3
+ and then described.
+Each matrix, representing a Phase (I, II, ..., 
+n
+) of the workflow, is composed of a series of Tasks (T1, T2, ..., Tn) to be performed. Each Task can be fulfilled through specific Requests (R1, R2, ..., Rn), which represent the object of the evaluation through the described logical path.
+In this specific case, the four evaluation Phases represent respectively matrices I (GP), II (OS), III (R&PP), and IV (IT). In order to organize the structure of the matrices, each of them has been subdivided with respect to the Tasks that the concerned phase of the optimization involves. A Task is a stage or an aspect of the workflow that is essential to set a computation with reliable results and therefore express a KPI. To complete a Task there are several settings and parameters to be set, different between the TSs, which are the already mentioned Requests. A description can be added for each Request to have further information about the question. Each Request is identified by a reference Code to easily organize them. 
+Table 2
+ reports an example of the application of a matrix row. Firstly, the request can be investigated within the software, then, if the analyzed TS allows the user to import an STL and so the Request is satisfied, a positive answer can be inserted in the status column. In case the Request was not completely satisfied, more details can be added to explain the reason or what is missing.
+Investigated Requests and Achieved Requests can be used to evaluate software behavior through the Phases of the workflow as well as to obtain summary data on the TS. Those elements can be manipulated to perform the design tools selection as described in the evaluation approach application section (
+Section 3.3
+).
+The most relevant Requests for each matrix are going to be summarized. 
+Table 3
+ reports an overview of KPI matrices composed of four summary tables related to the four analyzed phases. Each of them reports KPIs expressed by Tasks and the associated Requests to deal with into the matrices.
+In order to embrace the redesign of an automotive component to be produced by metal AM technologies, the method’s application is arranged as follows:
+The redesign project is defined and a simplified model is created;
+The model is concurrently developed by means of four different TSs;
+The assessment method is applied for tools selection scope.
+The redesign project is defined and a simplified model is created;
+The model is concurrently developed by means of four different TSs;
+The assessment method is applied for tools selection scope.
+Afterwards, the final redesign can be performed through the definitive model enriched by further design and simulation steps and a systematic approach to exploit the potentials of the selected TS. The optimization study, therefore, retraces the above-described tasks of the TO workflow: Geometry Preparation; Optimization Settings; Results and Post-processing.
+The redesign subject is the piston of a single-cylinder Internal Combustion Engine (ICE). The application is an interesting example of lightweight design in order to improve engine performance and efficiency. The analyses (e.g., functional analysis, assembly analysis, finite element analysis, etc.) of the original component return the objectives and constraints of the project. The material selected is the AlSi10Mg aluminum alloy suitable for Powder Bed Fusion (PBF) processes. The design objective is a 15% mass reduction together with structural stiffness preservation.
+Four different TSs are selected to develop the optimization of the case study. Each of them is commercial software so it is both available on the market and accessible by users and companies for DfAM implementation. The benchmarked TSs are Dassault Systèmes 3DExperience [
+37
+], Siemens NX [
+38
+], Autodesk Fusion [
+39
+], and PTC Creo [
+40
+], hereinafter respectively identified as TS-A, TS-B, TS-C, and TS-D. They are configurable CAD platforms to support the design process by combining modelling, simulation, and data management through the possible integration of CAD, CAE, CAM, and PLM tools. Actually, all of them represent software from the state-of-art for TO integration into the computer-aided design phase, suitable for DfAM implementation. The TSs list is quite comprehensive, but a remark is that additional software can be considered, as well as such tools being continuously evolving to support designers’ aims, as previously discussed.
+The reference finite element model to be considered for ultimate analyses and validations is composed of four load cases: Top Dead Centre during Combustion (TDCC); Top Dead Centre at the beginning of the Induction stroke (TDCI); Left and Right Piston Thrust (LPT, RPT).
+To compare studies to be performed among different TSs, each of them has been performed using the same parameterization. A simplified model of the piston has been defined so that each software used will fit with the optimization settings. This simplified model is based on the most basic FEM tools, such as:
+Forces and pressures as structural loads;
+Fixed displacements as structural constraints;
+Half-geometry of the piston model.
+Forces and pressures as structural loads;
+Fixed displacements as structural constraints;
+Half-geometry of the piston model.
+Moreover, as every optimization software cannot afford to perform multiple case analyses, a single one will be considered, resuming the key elements of the previously defined load cases.
+TO1—Geometry preparation.
+Geometry preparation requires the initial CAD model design to achieve the correct Design Space definition and the AlSi10 Mg alloy for PBF material definition. In particular, piston crown, pin housing, rings housings, and skirts are set to keep a minimum thickness. 
+Figure 4
+ depicts the simplified model Geometry Preparation phase performed on the different TSs and it shows the different approaches for the Design Space and Non-Design space definition.
+TO2—Optimization settings.
+As explained before, the simplified model is based on a single load case, resuming the key elements of the four reference load cases. 
+Figure 5
+ provides the loads and constraints definitions by analytical calculation and the FEM scheme setup on the different TSs. The load case is modelled in the worst case considering the maximum possible load related to engine working conditions (e.g., 12 MPa comb. pressure, 14,000 rpm).
+As the topology optimization will be performed only with half of the piston, symmetry boundary conditions must be added to the model. Thus, fixed translation displacement constraints have been added to the normal symmetry plane and fixed rotational constraints have been added to the axes lying on the symmetry plane. The optimization algorithms are set up to minimize parts compliance (target) for a given mass (constraint) that is calculated to achieve a 15% weight reduction.
+TO3—Results and Post-processing.
+Figure 6
+ provides preliminary FEA results of the geometries generated by the optimization software. Where possible, automation is exploited to generate a solid model, therefore limiting or potentially avoiding manual geometry redesign.
+In some cases, this feature is not allowed by the software, and design interpretation is required. Moreover, this step becomes necessary to achieve even a preliminary validation with respect to model stress. 
+Figure 7
+ depicts the TO workflow output, to be further improved according to additional simulations and industrialization tasks.
+The procedure to apply the proposed approach is now described. Hereafter the expected output type and the data obtained are described. Method application is based on direct and simple interaction with the KPIs matrices and for each Request selected, according to associated column in 
+Table 3
+, its fulfilment by the TS has been studied through the topology optimization case study. Once each of the four KPIs matrices have been filled-in, it is easy to build a summary table with the results. 
+Table 4
+ returns the level of satisfied Requests for a generic product-process design integrated platform.
+Values related to the different phases that compose the workflow can be obtained, as well as summary data of the evaluated TS, such as the number of Investigated Requests and Achieved Requests. For each TS, starting from considering Requests (see 
+Section 2.3
+, 
+Table 3
+), Investigated Requests is a subset representing the number of Requests that are answered during the investigation, whereas Achieved Requests is a further subset bringing the number of Requests that are satisfied. Then, to evaluate and pair these results, a percentage of Achieved Request (AR%) can be calculated. In this way, software behavior along the process becomes immediately visible.
+Moreover, starting from Achieved Requests, output data can be used to structure Summary Charts that produce a visual impact of software behavior, as depicted in 
+Figure 8
+.
+Specifically, 
+Figure 8
+a immediately returns TS potentials about the four analyzed Phases, while 
+Figure 8
+b graphically represents a deepened focus on the specific Tasks. These allow us to monitor software behavior with respect to specific Phases or Tasks (or rather KPIs), to meet specific designers and project needs.
+Output data obtained from method application can be further manipulated. KPI matrices actually represent an evaluation element for design tools. For example, data related to software evaluation can be used for the selection of tools for topology-optimized component design.
+Not only Summary tables percentage of Achieved Requests can be compared, but also the homogeneity of scores can be evaluated, and it is possible to assign weights to different phases and to further manipulate data to meet the specific needs of the design. As shown in 
+Figure 9
+, data can be combined in order to compare tools involved in the workflow.
+The TS-A, TS-B, TS-C and TS-D have been used for the evaluation method application (
+Section 3.2
+). Summary tables provide detailed data and return the different scores related to the different phases of the TO workflow. The percentage of Achieved Requests shows the trend of the performance of the tools along with the workflow phases. Moreover, the Phase-focused Summary Charts can be considered. TS-B shows good optimization settings and interface but poor result usability. TS-C is the most user-friendly version, but it lacks an optimization settings content. Both TS-A and TS-D present the highest total percentage of Achieved Requests (71%). Nevertheless, by comparing the Phase-focused Summary Charts, TS-A shows a more regular trend along the workflow, since it has fewer weak points. By avoiding assigning weights to different Phases or Tasks, TS-A is selected in order to perform the product development of the topology optimized component.
+A lightweight and functional design has been introduced and potentials offered by a combination of TO techniques and AM technologies have been described. Current TO issues and challenges have been summarized and the connection between design approaches and tool capabilities for actual applications has been highlighted. Thus, since the need for assessment approaches to select proper design tools is relevant, a method for this purpose is presented. It is based on KPI matrices connected with the tasks to implement TO. It relies on clarity and impartiality principles for the sake of objectivity and it is built with the idea of being expandable and customizable to guarantee flexibility and a wide range of applications. In particular, KPIs can be selected and different weights can be assigned to meet different designs and project needs. An automotive ICE piston is the case study for a redesign based on TO, which is concurrently set up through four different pieces of commercial software at the state of art. The assessment approach is therefore applied and the four benchmarked TSs are compared to select the platform to perform the final product development. The approach can be used to evaluate either CAD platforms or different arrays of standalone tools, and can be used to monitor software development over time, since it has universal applicability. Therefore, the method can sustain the key design tool selection phase for DfAM, as well as the CAX platform selection for industrial settings embracing AM technologies. Further developments can concern the approach extension to subsequent phases of a DfAM workflow, such as product simulation, build preparation or process simulation, etc. Considering both product optimization and process optimization, it could be possible to support a holistic approach for the design and manufacturing system.
+Conceptualisation, E.D., F.P. and F.L.; methodology, E.D., F.P.; validation E.D. and F.P.; writing—original draft preparation, E.D.; writing—review and editing, E.D., F.P.; supervision, F.L. All authors have read and agreed to the published version of the manuscript.
+This research received no external funding.
+The authors gratefully acknowledge Lorenzo Gasparroni and Elliot Van Puyvelde for their valuable support.
+The authors declare no conflict of interest.
+Publisher’s Note:
+ MDPI stays neutral with regard to jurisdictional claims in published maps and institutional affiliations.

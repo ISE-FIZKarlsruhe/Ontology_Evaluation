@@ -1,0 +1,169 @@
+A display window or store window is the shop’s window that is designed to display items for sale to attract the customers to the stores. Window dressing that depends on visual merchandising is done to make a better impression and implies something dishonest. Knowing the customer from inside and outside through demographic data like ages, psychographics, lifestyles, and behaviors is the main factor that must be kept in display window designer’s mind. The designer takes display colors, light, and signage in consideration. In the presented paper, factors of designing display windows that affect increasing customer attraction and buying rate are studied. An analysis of this variable is established to select which of them have good effects. Optimizing customers’ attraction and buying rate values is carried out by controlling the selected affected variables through a designed and implemented fuzzy logic control system as an artificial intelligence tool. The fuzzy system, used for optimizing the number of viewers for stores’ display windows by controlling the affected factors, is a new approach used in the display window design field.
+Store layout, window display, color, lighting, and sometime music systems are the main elements of visual merchandising considered as tools used for the innovative design of a store outlet to increase customer satisfaction and competition in the market [
+1
+]. Of the above visual merchandising elements, window displays are the most direct method of attracting new customers because it is the first point of visual contact between the consumer and store. A window display should be eye-catching to make the consumer come into the store to view more of what is inside [
+2
+].
+The window display of any store is the window used for showing examples of the goods sold in that store. Its importance in marketing appears when customers are attracted to the store for shopping [
+3
+]. Window displays are used for the process of attracting customers to bring them into the store. It is the touch point consumers have with the brand; thus, a window display should be attractive as only three to five seconds of attention is enough to draw the consumers. It should create visual appeal, relevance, and interest value. There are many types of window displays, including closed, semi-closed, open, elevated, corner, island, and shadow box [
+4
+].
+As shown in 
+Figure 1
+, this type is like a small room facing the audience only from the street.
+This type is created to mix the structure provided by a closed window [
+5
+] and the inviting feeling created by open windows, such as in 
+Figure 2
+.
+These windows do not have any back wall, but they may have side walls, as shown in 
+Figure 3
+. This type of displays give further glimpses into the store.
+This type is used in jewelry and cosmetic applications for raising featured products enough to catch the eye, as shown in 
+Figure 4
+.
+This type is created on the corner of stores [
+6
+], as shown in 
+Figure 5
+.
+This type of window is usually used in large department and flagship stores [
+7
+], where retailers have a huge space to fill but also want to create a sense of focus on the latest products or promotions, as shown in 
+Figure 6
+.
+These feature heavily in the windows of stores that specialize in smaller items such as jewelry and accessories, as shown in 
+Figure 7
+.
+Digital displays are essentially flat panel screens that rely on different technologies to present multimedia content to an audience, as shown in 
+Figure 8
+.
+Artificial intelligence applications have grown dramatically in both quantity and variety during the past few years [
+8
+,
+9
+,
+10
+,
+11
+,
+12
+,
+13
+]. Modern mechanical systems typically need an optimal control mechanism to keep them in check, incorporating fuzzy logic control (FLC) [
+14
+]. The fuzzy control system is used in many different spheres of life, including autonomous parallel parking [
+15
+], automatic rail operation [
+16
+], molecular membranes separation optimization [
+17
+], elevator control [
+18
+], operation of automatic crane container [
+19
+], nuclear reactor control [
+20
+], and power and water control [
+21
+,
+22
+]. Fuzzy logic has proven to be especially beneficial in expert systems and other applications of artificial intelligence. A knowledge-based management strategy called FLC can emulate the human experience in managing complicated systems [
+22
+]. This approach is a suitable option for display window design with strong nonlinearity, as it can handle system nonlinearity and uncertainty. One of the things that must be taken into account while using fuzzy logic is how to translate input into output using a fuzzy inference system. The input-to-output mapping can be created using the fuzzy inference method. Membership operations, logic operations, and IF–THEN rules are used in this process. This procedure will build a system known as the fuzzy inference system. There are various fuzzy inference system accessible in fuzzy logic, including Mamdani [
+23
+], Tsukamoto [
+24
+], and Sugeno [
+25
+].
+Variables that have an effect on display window design can be concluded as the following: color tone, diffused/spotted lighting, graphical illustration/non-graphical illustration, text/non-text, existence of prop/non-prop, number of prop, level of complexity, existence of mannequin/no mannequin, abstract/realistic mannequins, whole/partial perception, and ordered/disordered displays [
+7
+]. This study summarized the number of the most influential factors that affect the number of viewers for display window shops, which are discussed in detail in 
+Section 3
+. Furthermore, this study utilizes the FLC system as a tool of artificial intelligence to optimize the number of viewers for display window shops.
+The methodology used through the presented work is implemented by applying an artificial intelligence (FLC system) for optimizing the number of viewers of display window by controlling the display window factors (audio system, color of display window background, light of the display windows, the font used to write the name of the store, mannequins used inside the display windows, and the style of clothes they wear).
+Analog input values are evaluated by the FLC system in terms of either 1 (true) or 0 (false) distinct values. To make them useful for approximation models, fuzzy sets class objects smoothly depending on the membership [
+26
+]. Based on the theory of output allocation, the fuzzy logic system relies on the likelihood of the input state. If–then rules are used hereafter, as they are best used in the architecture of FLC [
+27
+].
+The main components of the fuzzy controller framework for any managed system are the fuzzifier, knowledge base, fuzzy rule base, and defuzzifier, as shown in 
+Figure 9
+.
+Crisp input values are converted to fuzzy values via the fuzzification process of the fuzzy controller. Inputs and outputs for each of them and the knowledge of fuzzy relationships are stored in the form of membership functions [
+28
+]. The fuzzy rule base uses the if–then rule to join input and output membership functions. The center of any fuzzy system is the inference engine, as it performs rough reasoning [
+29
+]. The defuzzification process is the final stage in the fuzzy model that transforms fuzzy values of the fuzzy inference engine into new values through the defuzzifier [
+30
+]. MATLAB’s fuzzy logic toolbox is used for designing and implementing the fuzzy logic model.
+Six inputs and one output for the fuzzy logic system are designed and implemented to optimize the number of viewers of display windows. Various data preprocessing steps such as data cleaning, reduction, scaling, transformation, and partitioning were performed to obtain processed data. A display windows fuzzy model structure is shown in 
+Figure 10
+.
+Audio, display window colors, display window light, font of the store name, mannequins, and their clothing style are the inputs of the fuzzy system for the optimization of the numbers viewers of display windows (fuzzy model output).
+A fuzzy set’s membership function is a generalization of the indicator function for classical sets. It is a graphically fuzzy set representation (A) for debate (X) as μA(X) → [0,1], which means the value between 0 and 1 is mapped to 
+X
+. The x-axis is the universe of debase, while the y-axis is the degree of membership in the [0,1] set. The mathematical form of the triangular membership function is shown in 
+Figure 11
+, where 
+a
+ and 
+b
+ are the lower and upper limits, respectively [
+31
+,
+32
+,
+33
+].
+Fuzzification in the fuzzy system is performed by converting a new quantity of inputs into a fuzzy quantity through identifying the deterministic quantities as completely nondeterministic. The triangular membership function is used to fuzzify each input to the designed fuzzy system in three values of fuzzy (low, medium, and high), which are presented in 
+Figure 12
+. The triangular membership function is used for fuzzification of the inputs in the fuzzy system, as shown in 
+Figure 13
+a, 
+Figure 13
+b, 
+Figure 13
+c, 
+Figure 13
+d, 
+Figure 13
+e, and 
+Figure 13
+f, respectively. 
+Table 1
+ explains the range of fuzzy system inputs with three levels: low, medium, and high.
+Defuzzification—needed in a fuzzy model—maps a fuzzy set to a new one through a number of rules that transform several variables into a fuzzy result for defined fuzzy sets and acceptable membership degrees, as shown in 
+Figure 14
+.
+The triangular membership function used in the defuzzification process for the fuzzy output with low, medium, and high levels to optimize the numbers of display windows’ viewers is shown in 
+Figure 15
+. Levels of fuzzy system output are explained in 
+Table 2
+.
+The fuzzy system uses rules based on the if–then rule for assigning relationship between fuzzy system inputs and output. The rules used in display windows’ fuzzy logic system are shown in 
+Table 3
+.
+The results of if–then rules for display windows’ fuzzy system provided maximum and minimum values of numbers of viewers, as shown in 
+Table 4
+ and 
+Figure 16
+, respectively, whereas the error rates for the inputs and output are given in 
+Table 5
+.
+In this paper, different types of stores’ display windows are presented and explained and the factors affecting the attraction of viewers to that window are discussed too. A fuzzy control system as a type of artificial intelligence is used to optimize the number of viewers of display windows by controlling the affected factors.
+Audio, display window colors, display window light, font of the store name, mannequins, and their clothing style are used as affecting factors.
+A fuzzy system is designed and implemented on these factors for controlling their values (fuzzy model inputs) to increase the number of viewers of display windows and are used as the inputs of the fuzzy system for the optimization of the number of viewers of display windows (fuzzy system output).
+The fuzzy system results showed that the effect of display window color, light, name, writing font of store names, and clothing style shown in the display window help in increasing viewers number, with a decrease in the number of viewers of that store window in cases where these factors are neglected.
+The rule database of the recommended fuzzy controller can be taken into account for further studies. The key drawbacks of the discussed fuzzy-based controllers include the use of straightforward FLCs to deal with uncertainty and the lack of research into the stability and resilience of FLC-based controllers.
+Conceptualization, M.M.A.L. and M.I.K.; methodology, M.M.A.L.; software, M.M.A.L.; validation, M.I.K. and N.B.K.; formal analysis, N.B.K.; investigation, S.M.E. and N.B.K.; resources, M.M.A.L.; data curation, M.M.A.L.; writing—original draft preparation, M.M.A.L., M.I.K.; writing—review and editing, M.I.K.; visualization, N.B.K., S.M.E.; supervision, M.I.K.; project administration, M.M.A.L.; funding acquisition, S.M.E. All authors have read and agreed to the published version of the manuscript.
+The authors express their gratitude to Princess Nourah bint Abdulrahman University Researchers Supporting Project (Grant No. PNURSP2022R152), Princess Nourah bint Abdulrahman University, Riyadh, Saudi Arabia.
+Not applicable.
+Not applicable.
+All the data are clearly available in the manuscript.
+The authors express their gratitude to Princess Nourah bint Abdulrahman University Researchers Supporting Project (Grant No. PNURSP2022R152), Princess Nourah bint Abdulrahman University, Riyadh, Saudi Arabia.
+The authors declare no conflict of interest.
+Publisher’s Note:
+ MDPI stays neutral with regard to jurisdictional claims in published maps and institutional affiliations.

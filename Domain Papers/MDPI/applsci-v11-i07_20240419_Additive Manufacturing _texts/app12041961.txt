@@ -1,0 +1,680 @@
+Augmented Reality (AR) has gradually become a mainstream technology enabling Industry 4.0 and its maturity has also grown over time. AR has been applied to support different processes on the shop-floor level, such as assembly, maintenance, etc. As various processes in manufacturing require high quality and near-zero error rates to ensure the demands and safety of end-users, AR can also equip operators with immersive interfaces to enhance productivity, accuracy and autonomy in the quality sector. However, there is currently no systematic review paper about AR technology enhancing the quality sector. The purpose of this paper is to conduct a systematic literature review (SLR) to conclude about the emerging interest in using AR as an assisting technology for the quality sector in an industry 4.0 context. Five research questions (RQs), with a set of selection criteria, are predefined to support the objectives of this SLR. In addition, different research databases are used for the paper identification phase following the Preferred Reporting Items for Systematic Reviews and Meta-Analysis (PRISMA) methodology to find the answers for the predefined RQs. It is found that, in spite of staying behind the assembly and maintenance sector in terms of AR-based solutions, there is a tendency towards interest in developing and implementing AR-assisted quality applications. There are three main categories of current AR-based solutions for quality sector, which are AR-based apps as a virtual Lean tool, AR-assisted metrology and AR-based solutions for in-line quality control. In this SLR, an AR architecture layer framework has been improved to classify articles into different layers which are finally integrated into a systematic design and development methodology for the development of long-term AR-based solutions for the quality sector in the future.
+The industry 4.0 revolution has enabled many improvements and benefits for manufacturing as well as service systems (see 
+Figure 1
+). However, the rapid and remarkable changes that appeared in manufacturing also led to higher requirements in technological knowledge, increasing the degree of task complexity or variability of tasks on the shop-floor level for the operators [
+1
+,
+2
+,
+3
+]. This leads to the demands of systems that intensively adopt the enabling technologies of industry 4.0 to reduce those burdens for the operators.
+The latest key facilitating technologies of Industry 4.0 are Advanced Simulation, Advanced robotics, Industrial “Internet of Things” (IoT), Cloud computing, Additive manufacturing, Horizontal and vertical system integration, Cybersecurity, Big Data and analytics, Digital-twin, Blockchain, Knowledge Graph and Augmented Reality (AR) [
+4
+]. 
+Besides these key technologies, there are some fundamental technologies such as sensors and actuators, Radio Frequency Identification (RFID) and Real-Time Locating Solution (RTLS) technologies, etc. to support them. For the long-term adaptation progress of Industry 4.0, seven design principles need to be considered when designing and developing a solution in general and for manufacturing specifically [
+5
+]. These principles are real-time data management, interoperability, virtualization, decentralization, agility, service orientation and integrated business processes. An important aspect of Industry 4.0 is the synthesis of the physical environment and the virtual elements [
+6
+], which can be achieved by the advantages of AR together with the Cyber-Physical System (CPS).
+In the last few years, Augmented Reality (AR) has been constantly adapted by key companies on industrial innovation, such as General Electrics, Airbus [
+7
+] and Boeing. It has been employed for productivity improvement, product and process quality advancement (reducing error rates) [
+8
+] or higher ergonomics in diverse manufacturing phases to boost the transformation of Industry 4.0. AR studies in the quality sector have emerged, and have shown potential results in enhancing human performance in technical quality control tasks, supporting the Total quality management (TQM) and autonomizing operators’ decision making. Despite the mentioned advantages, there are still limited examples of AR’s concrete implementation in manufacturing, especially for the quality sector.
+For this reason, the main objective of this paper is to conduct a state-of-the-art review of AR systematically in terms of technology used, applications and limitations, focusing on the quality context. This is to prepare for the digital transformation of Industry 4.0, which also leads to the change in the quality sector, known as Quality 4.0, and the adaptation of AR for quality control. However, not only the studies focusing on quality context but also the other relevant studies in the manufacturing context are considered to build a long-term roadmap for AR-based applications supporting Quality 4.0. To achieve this, a Systematic Literature Review (SLR) was performed to assure the reproducibility and scalability of the study, together with the objectivity of the results [
+9
+]. An investigation of the status of AR-based manufacturing applications on the shop-floor level in the context of Industry 4.0 was carried out to give a holistic view about future challenges and to propose roadmaps to implement AR technology for the quality control sector in the short term and Quality 4.0 in the long term.
+The paper is structured in four sections. 
+Section 1
+ introduces the project, AR technology and Quality 4.0. 
+Section 2
+ describes the methodology applied for the SLR. 
+Section 3
+ reports on the results and answers the research questions (RQs) to provide a holistic view about the current AR-based manufacturing in general and AR-based quality control in particular. The final 
+Section 4
+ concludes and proposes future works.
+From a technical point of view, AR is a technology superimposing digital, computer-generated information onto the physical world to enrich humans’ perspectives about the surrounding environment. This innovates regarding the interaction of humans with digital information and the real world. There are different types of augmented information, which are visual augmentation [
+8
+], audio [
+10
+], haptic feedback [
+11
+] and multimodal feedback [
+12
+]. AR applications based on visual augmentation are currently dominant in the manufacturing context. However, there is an emerging interest in multimodal AR applications, which mainly implement visual augmentation with another sensing feedback.
+Although the research interest in AR technology has rapidly evolved and been intensively investigated over the past 20 years, the first immersive reality prototype can be dated back to 1968. In that year, the first head-mounted display (HMD) device connecting to the computer, which provided the earliest of humankind’s experience into augmented reality named “Sword of Damocles”, was invented by Ivan Sutherland [
+13
+]. The way humans interact with industrial AR today is influenced by this invention. However, the term Augmented Reality was first officially formulated years later in 1992 by Thomas Caudell, who was a Boeing researcher. He implemented a heads-up display (HUD) application to demonstrate his idea of designing and prototyping an application to support the manual manufacturing process [
+14
+]. In 1996, immersive reality was classified by different levels of immersive experience, which depends on the type of dominant content—reality information or virtual information—and was introduced into the Reality-Virtuality Continuum (RV continuum) by Milgram et al. [
+15
+] as shown in 
+Figure 2
+.
+One year later, Azuma defined the three main technical characteristics of AR based on its technology, which are combining real and virtual objects, interacting with real/virtual objects in real-time and registering (aligning) virtual objects with real objects [
+16
+].
+Technically, a general AR system is constructed of software built on a selection of four fundamental hardware components: a processing unit, a tracking device, a display device and an input device. The processing unit creates augmentation models, controls devices’ connections and adjusts the position of superimposed information into the real world with respect to the pose and position of the user by employing the information coming from a tracking device. The tracking device is used to track the exact position and orientation of the user to align/register the augmentations accurately to the desired positions. This device usually consists of at least one element of image capture (a Charge-Coupled Device CCD, stereo, or depth-sensing camera Kinect) [
+17
+]. Regarding the tracking technology of AR, depending on the selected tracking devices and tracking methods, it can be classified into three groups: computer vision-based tracking (CV-based tracking), sensor-based tracking and hybrid tracking. The input device is used to obtain the stimulation of the environment or users to trigger the augmentation functionalities. However, the input device is optional because there are some built-in input methods integrated with display devices, especially HMD and HHD. In some cases, the activating elements (images, GPS positions, sensor values, markers, etc.) are pre-defined, thus an input device is not essential in those cases. The current input techniques for HMD are hand-tracking, head/eye-gaze and voice. The processing data are visualized onto the display device via a user interface (UI) enhancing two-way communication between the user and the system. The current display devices can be classified into two groups: in situ display (desktop monitor, projection-based augmentation, spatial augmentation, etc.) and mobile display (hand-held device HHD, head-mounted device HMD).
+Depending on the selection of devices, the overlaying augmentations technique onto the user’s scene can be different. Currently, there are three superimposing techniques. With the first technique, the augmentation can be directly projected to the field of view (FoV) of the user. This one is called optical combination and is implemented with an optical see-through HMD (OST-HMD). The second technique is known as video mixing. The user’s scene is taken by the camera and processed by a computer. After inserting the augmentations on the processed scene, the result is displayed on a display device, on which the user views the real scene indirectly. The last technique is image projection, which directly projects the augmentations onto the physical objects.
+Tracking and registration are the crucial and challenging aspects of AR applications. The accuracy in tracking and registration determines the alignment quality of augmentations. According to [
+18
+], the tracking and registration algorithms are divided into three groups: (1) Marker-based algorithms, (2) Markerless (or Natural feature-based) algorithms and (3) Model-based algorithms. For marker-based tracking, the 2D markers having unique shapes/patterns are placed on the real objects, where the digital information is planned to be overlayed. A digital augmentation is programmatically assigned for each marker in the workplace. When the camera recognizes the markers, the pre-assigned augmentation is displayed onto the marker. In some situations, the markers are occluded and it is not efficient. Thus, natural feature-based tracking (NFT) is more commonly used in computer vision-based tracking. Some well-known natural feature-based tracking algorithms are Speeded Up Robust Features (SURF), Scale Invariant Feature Transform (SIFT) and Binary Robust Independent Elementary Features (BRIEF). This technique extracts the characteristic points in images to train the AR system’s real-time detection of those points. Despite providing the seamless integration of augmentations into the real world, natural feature tracking (NFT) intensively depends on computational power and is slower and less effective at long distances. Therefore, small artificial markers knowns as fiducial markers are used to mitigate the disadvantages of NFT by accelerating the initial recognition, decreasing the computational requirements and improving the system’s performance. Model-based tracking algorithms utilize a predefined list of models, which are then compared with the real-time extracted features.
+In general, a basic pipeline of AR system/application consists of image capturing, digital image processing, tracking, interaction handling, information management, rendering and displaying [
+17
+]. It starts by capturing a frame with the device’s camera. Then comes the Digital Image Processing step of AR software to process the captured image in order to estimate the camera position in relation to a reference point/object (a marker, an optical target, etc.). This estimation can also utilize the internal sensors, which help in tracking the reference object. The camera positioning accuracy is crucial for displaying AR content because it needs to be scaled and rotated according to the scenarios. After that, the processed image is rendered for the relevant perspective and is shown to the user on a display device. In some cases, when certain remote or local information is required, the Information Management module is responsible for accessing it. The interaction handling module is to enable the users’ interaction with the image.
+Besides cost, time and flexibility, quality is one crucial dimension of manufacturing attributes in terms of products and processes [
+19
+]. Its objective is to assure that the service or final product meets the specifications and satisfies the customers’ requirements.
+Total quality management (TQM) is the current highest level of quality in an organization context, which holistically considers internal and external customers’ needs, cost of quality and system development to organize and assist quality improvement. Quality control (QC) is a part of TQM, playing an essential role in fulfilling technical specifications with inspection applying techniques such as statistical process control (SPS), which is statistical sampling to manage the in-line quality on the shop-floor manufacturing level [
+20
+]. Contrastingly, Quality assurance (QA) concentrates more on the pre-manufacturing phases, such as planning, design, prototyping, etc., to ensure the achievement of quality requirements for manufacturing products. The international standard ISO 9001:2015 describes the specific standards of the quality management system [
+21
+]. Many organizations have employed various methods and approaches to improve quality performance such as TQM, Lean Six-Sigma, Failure mode and effect analysis (FMEA), quality function deployment (QFD) and benchmarking [
+22
+]. Furthermore, certain behaviors in the factories, such as process management, customer focus, involvement in the quality of supply and small group activity, are required for the successful application of quality management [
+23
+].
+Industry 4.0 is a new industrial digitization paradigm that may be seen at all levels of modern industry. Quality 4.0 can be considered an integral part of Industry 4.0 when the status of quality and industry 4.0 are combined. It is the digitalization of TQM or the application of Industry 4.0 technology to improve quality. The value propositions for Quality 4.0 include the augmentation or improvement of human intelligence; the enhancement of productivity and quality for decision-making; the improvement of transparency and traceability; human-centered learning; change prediction and management [
+24
+,
+25
+,
+26
+].
+In a holistic view of a smart factory, Big Data, in conjunction with CPS, can be applied to manage the data understanding. Big data analytics play a critical role in supporting early failure detection during the manufacturing process, providing valuable insight into factory management such as productivity enhancement [
+27
+]. IoT provides a superior global vision for the industrial network (including intelligent sensors and humans) as well as the ability to take real-time actions based on data comprehension [
+28
+]. Then it comes to AI, which is currently used to perform visual inspections of products towards quality control evaluation. One of the most critical issues in manufacturing is the ability to visually assess product quality [
+29
+]. AI methods (Machine learning techniques) proved their advancement in assisting inspections based on data analysis. This latter is frequently taken as images collected from sensors/cameras inside manufacturing environments. Finally, AR technologies can be applied to facilitate the inspection process with an immersive experience by superimposing digital information onto the working environment [
+30
+].
+At the time of conducting this study, most enabling technologies of Industry 4.0, especially AR technology, have reached a mature point that could enhance the transformation of quality 4.0. This means that a systematic literature review about AR applied in the quality sector is essential and crucial not only for the digital transformation in quality 4.0 but also for the long-term integration of AR technology in quality sector. All relevant AR-assisted quality control solutions in the manufacturing context are considered for this SLR to observe how the cutting edge AR technology has been applied and evolved in quality sector. The findings of this SLR then can be used as references for further improvement and implementation of AR in quality 4.0. to save costs and resources, as well as to improve productivity, accuracy and autonomy
+The literature methodology is demonstrated in this section. Two successive searches were carried out following the Preferred Reporting Items for Systematic Reviews and Meta-analyses (PRISMA) [
+31
+], which is a straightforward reporting framework for systematic reviews that supports authors to develop their reviews and meta-analysis reporting. The primary search was done on 15 September 2020 and the extended search on 13 August 2021. 
+Then, the predefined inclusion and exclusion criteria were allocated into relevant stages of the PRISMA flowchart to support the paper selection process (see 
+Section 2.2
+ Paper selection).
+The initial step was to identify exactly which areas the study should cover and which are excluded. To fill an essential gap in the AR-based quality control sector, as well as to provide a road map for the further implementation of AR technology to support Quality 4.0 in the future, this study focuses on AR systems and their applications in manufacturing, especially shop-floor processes that require intensive involvement of operators’ activities such as assembly, maintenance and quality control. Hence, the following five research questions are defined (see 
+Table 1
+).
+RQ1: What is the current state of AR-based applications in manufacturing?
+The motivation of this question is to understand the current industry adoption status of AR-based applications, and to determine the gap between applications that were tested in the industry through field experiments and the ones that were still in the novel stage as pilot projects or only tested in a laboratory context. 
+RQ2: How does AR-based quality control benefit manufacturing in the context of Industry 4.0?
+The objective is to observe the evolution of AR-based quality control applications in the manufacturing context. In addition, it is to understand how AR technology is currently applied to support each specific case in the quality sector. 
+Thus, a holistic identification of application areas for AR-based quality control in industrial manufacturing based on technology suitability can be carried out in the future.
+RQ3: What are available tools to develop AR-based applications for quality sector?
+The objective is to systemize the current development tools and frameworks supporting in the AR-assisted manufacturing process development. Thus, when it comes to developing AR-based quality control applications in the future, a useful set of tools and frameworks would be available to consider.
+RQ4: How can AR-based applications for the quality sector be evaluated?
+The motivation is to know which metrics, indicators and methods are utilized to evaluate effectiveness and improvement when applying AR technology to support a quality-related activity.
+RQ5: How to develop an AR-based solution for long-term benefits of quality in manufacturing?
+Based on the results concerning previous RQs (RQ1, RQ2, RQ3, RQ4), a concept of development framework for AR-assisted quality can be generalized and used to answer this question.
+The next step was choosing the databases for document identification. Four well-known technology research databases, which are Scopus, Web of Science (WoS), SpringerLink and ScienceDirect, were used for finding high-quality literature resources. Those databases were selected due to their broad coverage of journals and disciplines. Mendeley was used as a reference manager software. This program is chosen due to its user-friendly aspects such as fast processing of large numbers of references, word citation add-in, integrated pdf-viewer and teamwork collaboration. Microsoft Excel was used for data extraction and evaluation.
+For the systematic search of documents, a set of search strings was determined to search the databases mentioned in the planning phase. The Search strings and search syntax for each database are listed in 
+Table 2
+.
+Comparing to assembly and maintenance, the AR-based applications supporting the quality sector have not been comprehensively investigated in the last few years. Thus, assembly and maintenance sectors can be considered as good references for the development of AR-based quality control applications. In addition, assembly, maintenance and quality control are normally carried out in similar working conditions and all require intensive involvement of the operators. Therefore, keywords such as “assembly” and “maintenance” are included in the search strings besides keywords such as “manufacturing”, “industrial application”, etc.
+After systematically searching with the above search strings on respective databases, there were 1248 documents found (see 
+Table 3
+). On the left side of 
+Figure 3
+, a chart referring to the numbers of publications is illustrated, which were systematically found on databases. The large number of articles found using databases were from Scopus (38%) and WoS (36%). Regarding duplication, 78% of found articles only belong to one single database, 18% to two databases and 4% to three databases shown on the right side of 
+Figure 3
+. In addition, the manual search resulted in 48 more articles by scanning cited references of influential review papers.
+The AR articles were selected and approved based on the following criteria described in 
+Table 4
+: Inclusion and exclusion criteria. The number of publications excluded referring to specific criteria were also included in the table.
+The relevant exclusion criteria were applied for each stage of paper selection flowing PRISMA flowchart as in 
+Figure 4
+.
+The main strategy for paper selection following the adapted PRISMA flowchart is intensively applying exclusion criteria for the first screening and full-text eligibility evaluation. If a paper meets any exclusion criteria, it would be immediately excluded from the search results. The inclusion criteria were used for the second screening to check the quality of articles.
+In the document identification step, there were a total number of 1296 papers found from both systematic searches on the aforementioned databases and a manual search. After removing duplicated documents (318 papers), 978 publications were analyzed by Title and Abstract, referring to exclusion criteria to identify the relevant papers supporting the study’s objective. After the first screening, 361 publications were remaining, which were carefully considered following the exclusion code (NR1, NR2, LR, OE1, OE2, OE3, OE4). A total of 69 publications were rejected, including five papers that could not be accessed as a full text. There were 292 articles qualified for the next screening. The quality assessment at the second screening phase was achieved by evaluating each document through binary decision compliance with a set of criteria HQ1, HQ2, HQ3. If a paper did not satisfy the quality check, it was listed as an exclusion result regarding the OE5 code. The quality check criteria were:
+HQ1: The full text of the article provides a clear methodology
+HQ2: The full text of the article provides results
+HQ3: The article is relevant to the research questions
+However, there were some exceptions, namely that a paper was not required to fulfill all the quality check criteria. If a document did not provide methodology or results but exhibited an interesting concept or potential development, it could be accepted. For example, paper [
+8
+] provides a clear methodology and implementation of in-line quality assessment of polished surfaces in a real manufacturing context, but there is no test or evaluation to validate the results. However, the prototype in the paper was built on a robust development approach, which can be further improved to adopt for long-term implementation. Besides that, most of the remote collaboration articles focusing more on the Human-Computer Interaction (HCI) and human cognition fields, which do not support the RQs of this study, rather than the AR context were also excluded at this step. As a result of paper selection, a total of 200 studies were selected to conduct the systematic review. Figures and tables summing up these papers and their research are provided in the following sections.
+The classification framework used to analyze AR-based publications in manufacturing and extracting relevant information for answering RQs consists of three parts:
+Application area in manufacturing mixed categories of papers:
+Application area in manufacturing mixed categories of papers:
+At the beginning of the 200 selected publications, each can be allocated into five solution groups according to their application field in an industry 4.0 context: (1) Maintenance, (2) Assembly, (3) Quality, (4) Others and (5) General manufacturing context. Next, they were classified into 4 different categories of papers following the benchmark in [
+32
+]: review papers, technical papers, conceptual papers and application papers (see 
+Table 5
+). 
+The correlation between these two classifications formed a matrix giving an overview of the current interest in AR-based solutions in the industry. In more detail, review papers are the ones summing up the current literature on a specific topic to provide the state of the art of that area. Technical papers are mainly about solutions and algorithms for the development of hardware/software and AR systems. Conceptual papers consider specific characteristics of AR solutions to propose advanced concepts for their further practical adoption. Finally, application papers provide works that develop and test AR solutions in a case study or real environment.
+With this classifying approach, the results in 
+Figure 5
+ show that there is currently no systematic review paper about AR technology enhancing quality sector. 
+The general manufacturing context has the highest number of review papers, while Assembly has the highest number of application papers. Although the total number of publications of AR-based quality is less than the total number of articles in AR-based maintenance, AR-based application papers in quality are slightly higher than in maintenance. Considering that the investigation for AR-based quality solution was behind maintenance in the past, this proves that the interest for implementing AR technology in quality sector has significantly grown in recent years.
+The architecture layer framework of AR systems in manufacturing
+After the first classification, each paper’s content was analyzed following the architecture layer framework of the AR system adapted from [
+226
+], as in 
+Figure 6
+, to extract relevant data for answering the RQs. 
+This architecture layer framework of AR systems was adapted and improved from a study in the built environment sector. The framework was chosen for the analysis step because its architecture was constructed in accordance with the standard architecture layer criteria for developing information technology concepts and tools. Besides that, it could cover all essential aspects of an AR application based on system point of view (layer 1, 2), industry point of view (layer 4, 5) and user point of view (layer 3: usability, layer 2: interaction design, content design). 
+In more detail, the framework in the study consists of five layers covering most of the important characteristics of AR-based solutions, from fundamental aspects to advanced intelligent solutions, as in the following:
+Concept & Theory
+Implementation
+Evaluation
+Industry adoption
+Intelligent AR solution
+Concept & Theory
+Implementation
+Evaluation
+Industry adoption
+Intelligent AR solution
+Layer 1: Concept & Theory
+This layer includes Algorithm, Conceptual Framework, Evaluation Framework and Technology Adoption. Algorithm relates to technical aspects of AR/Registration/Tracking methodology. Conceptual Framework supports the development or proposal of AR solutions for proof-of-concept cases. Evaluation Framework assists in grading and selecting the right enabling elements for an AR concept or AR systems. Finally, Technology adoption is relevant to the papers that point out the current challenges, limitations and gaps which needs to be solved to facilitate a wide adoption of AR-based solutions.
+Layer 2: Implementation
+This layer consists of two sublayers, which are Software and Hardware layers. 
+Hardware sublayer
+ includes the fundamental elements of an AR system, which are a Processing Unit, an Input device, a Tracking device and a Display device.
+Due to the fact that the Processing Unit can be flexibly selected depending on the computing workloads of the desired tracking methods and the chosen display techniques, this paper does not consider extracting this information. Besides that, the input device is an optional element of the system because it depends on the system design and specific use case. The stimuli to trigger the AR modules could be automatically included (sensors data, camera, tracking algorithms) in the approach itself. Therefore, the paper aims to concentrate more on extracting the data regarding the Display device and Tracking methods to support for RQs.
+In this paper, the display devices are classified into 2 groups: In-situ display and Mobile display. An In-situ display involves a Spatial display/Projector and a Monitor/Large screen. Mobile display involves HHD and HMD. Tracking methods are categorized into 3 groups: Computer vision-based tracking (CV-based), including marker-based; markerless (NFT), model-based tracking; Sensor-based tracking and Hybrid tracking.
+Software sublayer
+ consists of Interaction design and Content design, as well as Agent-based and Knowledge-based elements. 
+Content design is relevant to those papers that focus more on demonstrating how the AR information is constructed and used. In this, there is no interaction between the user and the virtual information; no external database is required. 
+Interaction design focuses more on developing and enhancing the interaction between the user and virtual objects/contents. 
+An Agent-based system (ABS) applies an agent or multi-agent system, which originates from Artificial Intelligent (AI), enabling the autonomous, adaptive/learning, intelligent characteristics of a system. Agent-based software is a higher evolution of object-oriented software [
+227
+,
+228
+,
+229
+]. 
+A Knowledge-based system (KBS) is a type of AI targeting that captures human experts’ knowledge to support the autonomy of decision-making. The typical architecture of a KBS consists of a knowledge base, which contains a collection of information in each field, and an inference engine, which deduces insights from the information captured/encoded in the knowledge base. Depending on the KBS problem-solving method/approach, it can be referred as a rule-based reasoning (RBS) system that encodes expert knowledge as rules, or a case-based reasoning (CBS) system that substitutes cases for rules [
+230
+,
+231
+,
+232
+].
+Layer 3: Evaluation
+This layer consists of Effectiveness and/or Usability categories that involve a user study. There is a close relationship between these two categories. The more usable a system is, the more effective it could become. 
+Effectiveness evaluation is designed to measure the system’s capability of getting the desired result for a specific task or activity. For example: reducing assembly time, enhancing productivity, etc. [
+30
+].
+Usability evaluation utilizes expert evaluations, needs analysis, behaviors measures, user interviews, surveys, etc. to measure the ease of adaption of AR-based systems. Thus, the system flaws can be identified at the early stages of development [
+194
+].
+Layer 4 Industry adoption
+This layer considers whether an AR prototype/application is tested in industry or not. A prototype/application can be classified into two classes depending on its industry adoption status, which are “Tested in the industry” and “Novel stage”. If the field experiment is carried out for a prototype, it is classified into the “Tested in industry” class. The “novel stage” is relevant to applications, which focus on solving specific issues of AR technology such as tracking, calibration, etc., rather than finding holistic solutions for real industrial case studies, or are only tested in a laboratory environment. A pilot project solves real case studies and has the potential to be applied in the manufacturing environment, but there were no in-depth experiments carried out for it to verify/validate the results. Thus, pilot projects are also classified into the “novel stage” category. 
+Layer 5 Intelligent AR solution
+To support this layer, an article should satisfy at least one of the following questions.
+Does the prototype or application integrate with another industry 4.0 technology such as AI, IoT, CPS, Digital Twin, etc.?
+Does the solution/concept potentially establish the fundamental base for the further integration of AI, IoT, etc. in AR environment to support manufacturing?
+Do the algorithms try to solve a limitation in AI-supporting AR systems?
+Categories of current AR assisted quality sector
+All the AR-based solutions for the quality sector can be classified into 3 groups:
+AR supporting quality as a virtual Lean tool for error prevention (virtual Poka Yoke)
+AR-based applications for metrology
+AR-based solutions for in-line quality control (process, product, machine, human)
+AR supporting quality as a virtual Lean tool for error prevention (virtual Poka Yoke)
+AR-based applications for metrology
+AR-based solutions for in-line quality control (process, product, machine, human)
+Metrology: Applied metrology is a subset of metrology and a measuring science created to ensure the appropriateness of measurement devices, as well as their calibration and quality control, in manufacturing and other operations. Nowadays, measurement technologies are utilized not only for assuring the completed product, but also for proactive management of the entire production process. With AR’s superimposition advantage and metrology’s power, metrology integrated AR might be a promising research area for the long-term success of quality 4.0.
+Based on the proposed classification framework, a pilot datasheet was designed using Excel to extract relevant data for RQs (see 
+Table 6
+). All the selected publications were systematically scanned and extracted by the main author. Two main reviewers were used, as well as a third to resolve any disagreements. Mendeley was used to keep track of references. The final decision to modify, keep or remove any defined categories was made by cross-checking each step of the reviewers, who also verified the extracted information.
+In this section, the results of the SLR are reported and the analyzed papers are synthesized. The objective of the SLR is to answer the defined RQs. In order to guarantee the requirement of the PRISMA method in terms of transparency, there is a table providing all relevant articles of specific classification criteria at the end of each subsection.
+These RQs are discussed, analyzed and answered in the following subsections. While the RQ1 and RQ2 utilized all selected papers to provide a holistic picture about current AR-based applications in manufacturing and their benefits to the quality sector, the RQ3 to RQ5 focus more comprehensively on finding the practical answers to support AR solutions development for the quality field.
+RQ1: What is the current state of AR-based applications in manufacturing?
+RQ2: How does AR-based quality control benefit manufacturing in the context of Industry 4.0?
+The distribution of AR-based solutions in the Maintenance, Assembly, Quality, Other and General manufacturing contexts are 19%, 38%, 16%, 6% and 21%, respectively, as depicted in 
+Figure 7
+. In more detail, the number of AR articles in each application field considered within this paper’s objectives from the year 2010 to 2021 is illustrated in 
+Figure 8
+, which provides a longitudinal viewpoint for analyzing patterns, themes and trends concerning the application field in the quantity of publication. The timeframe from 2010 to 2021 is extensive enough to determine the evolution of literature in each field. 
+It is not surprising that assembly is the leading adopter with 75 articles, or 38% of the total. This demonstrates a sustained interest in AR-assisted assembly, which peaked in 2019. Undoubtedly, assembly is the dominant sector in manufacturing to embrace AR technology. This is due to the nature of manual and semi-manual assembly activities that required the intensive involvement of operators, whose work is visual-oriented and who are in need of visual aid supporting. Next, when it comes to AR-based industrial applications in a specific field, maintenance is the second dominant sector, with 38 articles, or 19% of the total. Although the amount of AR-based maintenance applications fluctuates over time, they get the consistent consideration in 3 consecutive years from 2017 to 2019. Despite the investigation of AR solutions for the quality sector, this area is still far behind with 32 articles, or 16% of the total. Recently, this area has significantly emerged, reaching its peak in 2019, catching up with the AR articles for maintenance sector. Other sectors consisting of AR-assisted robot programming [
+211
+,
+214
+], machine tool setup [
+213
+], real-time manufacturing modeling and simulation [
+121
+] have slowly been considered. General manufacturing context solutions are relevant to those articles investigating generic AR-based solutions that can be customized and adopted for any particular field later to support the objectives of that field [
+123
+,
+221
+].
+Virtual and real context fusion, as well as the intuitive display, is the main advantage of implementing AR-based solutions for maintenance and assembly instructions. Thus, media representation in the forms of text, symbols, indicators, 2D symbols, 3D models, etc. could be directly projected on the relevant objects [
+100
+,
+104
+,
+144
+,
+147
+,
+165
+]. A comparative study for AR-based assisted maintenance was conducted to compare maintenance efficiency in using different assisting tools such as video instructions, AR instructions and paper manuals. The results showed that AR technology could help in productivity enhancement, maintenance time reduction and quality assurance of maintenance tasks compared to other traditional tools [
+233
+]. Similarly, Fiorentino et al. [
+147
+] and Uva et al. [
+142
+] conducted a series of studies comparing AR-based instructions to 2D documents for assembly, finding that AR-based instructions dramatically increased assembly efficiency [
+147
+]. Nevertheless, AR-assisted instructions also enhanced the assembly order memorization of operators [
+142
+].
+Considering the quality field, the AR-supported quality process has evolved from a basic indicating tool of projecting 2D information onto processed parts to support in situ quality inspection of welding spots using Spatial AR (SAR) [
+209
+] to a higher level that combines real-time 3D metrology data and the MR glasses HoloLens for in-line assessing of the quality of parts’ polished surfaces [
+8
+]. In another scenario, SAR is also applied to improve the repeatability of manual spot-welding in the automotive industry to assure the precision and accuracy of the process [
+201
+]. Several types of cues visualized with different sizes and colors (red, green, white, yellow and blue) are defined and superimposed on the welding area to support operators in focusing the weld guns onto the correct welding spot. In a real case at the Igamo company in Spain, AR technology was adopted to work as an innovative Poka-Yoke tool. In the packaging sector, setting up the die cutters is crucial to ensuring the final quality of the cardboard. However, this process is error-prone, causing defects and low-quality products. Thus, correction templates, which are made of paper marked with tapes using different colors, are applied to balance the press differences of die cutters. These correction templates are made based on the traditional Poka-Yoke method for error prevention. The templates are then digitalized and directly projected onto the die cutter, resulting in warehouse cost reduction, which comes from storing correction templates, and data loss prevention, which is caused by damaged templates [
+198
+]. Additionally, 3D models or CAD are implemented into AR tools for design discrepancies [
+206
+] and design variations inspection [
+195
+]. In a quality assurance of sheet metal parts in the automotive industry, an interactive SAR system integrating point cloud data is implemented and validated [
+234
+]. 
+In recent studies [
+30
+,
+210
+], an AR-based solution for improving the original quality control procedure used on the shop floor to check error deviation in several key points of an automotive part has been investigated and developed to automatically generate virtual guidance content for operators during measuring tasks. The main problem of the original procedure is that quality control consists of repetitive and precise tasks, which are frequently complex, requiring a high mental workload for the operator. Although quality control tests are facilitated with documents of static media such as video recording, photos or diagrams to support the operators, they still need to divide the attention between the task and the documents, which also lack in-time feedback. This leads to a slowing of the processes as well as movement waste due to the operator’s need to move between a workstation and a computer to validate measuring results after a certain number of tests. In detail, the original quality control is to measure deviation errors of an automotive part at specific positions in accordance with the essential specification of clients. A wireless measurement device (a comparator) is manually positioned by operators at specific locations for evaluation. During the nine measures, the operators need to move back and forth between the working cell and a display device to verify the measurements. For the AR-based solution, a camera is mounted on a tripod, pointing downwards at the gauge where the test takes place. The correct position for the comparator in each step indicated by green boxes is augmented onto the RGB-D live video stream using the same screen with other methods. In this method, whenever the comparator is detected in the correct position, the measure is taken automatically. The validation of the correct comparator positioning is also used to trigger the transition to the next assembly stage. With this approach, an AR-based quality control system provides automatic in-process instructions for the next steps of measuring and accurate guidance to speed up the workers’ efficiency. A test is carried out with seven operators: four inexperienced users and three experienced users. As a result, the experienced participants performed faster in both non-AR and AR-based methods, but the difference was smaller with the AR-based method. After implementation in an industrial setup by operators working on the shop floor in the metal industry, it was shown that AR-based systems help to reduce by 36% the execution time of a complex quality control procedure, allowing an increase of 57% in the number of tests performed in a certain period of time. It is also concluded that the AR system can prevent users from making costly errors during peak production times, though this has not been tested yet. Besides that, the risk of human errors is also reduced. In another scenario, an AR inspection tool is developed based on a user-centered design approach, following the standard ISO 9241-210:2019 to support workers during assembly error detection in an industry 4.0 context [
+188
+]. Once again, it is mentioned that the inspection activities naturally require high mental concentration and time when using traditional paper-based detection methods. Besides that, when the geometric complexity of the product grows, the probability that an operator makes mistakes also increases. In order to solve this, the research proposed and developed a novel AR tool to assist operators during inspection activities by overlaying 3D models onto real prototypes. When errors are detected, the users can add an annotation by using the virtual 3D models. The AR tool is then tested in a case study of assembly inspection of an auxiliary baseplate system (14 m long and 6 m wide) used for providing oil lubrication of turbine bearings and managing oil pressure and temperature. 16 engineers and factory workers of the Baker Hughes plant, skilled in the use of smartphone and tablet devices but novices to AR technology, were selected for the test. Five markers (rigid plastic QR code size of 150mm x 150mm x 1mm) were placed 1.5 m apart, along with the system for the tracking method. The users went through a demo, performed training steps and indicated a set of six tasks: framing a marker and visualizing the AR scene; detecting a design discrepancy and adding the relative 3D annotation; taking a picture of design discrepancies detected during the task; changing the size of the 3D annotations added during task 2; framing marker 4 and hiding the 3D model of the filter component; sending a picture and 3D annotations to the technical office. By adopting multiple markers to minimize tracking errors, freedom of movement for the user when inspecting large-size products is ensured. Analysis of Variance (ANOVA) is used to evaluate the number of errors and completion time, while System Usability Scale (SUS) and NASA Task Load Index (NASA-TLX) are applied to evaluate user acceptance. The ANOVA and SUS results showed that a low number of errors occurred during the interaction of the user with the proposed tool, which means that the AR tool is easy and intuitive to use. Thus, the AR tool could be efficiently adopted to support workers during the inspection activities for detecting design discrepancies. Nevertheless, the NASA-TLX test proved that the developed AR tool minimizes the cognitive load of divided attention induced to both the physical prototype and the related design data.
+Another interesting AR-assisted quality study relevant to the automotive industry is investigated for car body fitting, correcting alignment errors [
+189
+]. Alignment car panels of exterior bodywork to satisfy the specific tolerances is a challenging task in automotive assembly. The workers need to be guided during the panel fitting operations to reduce errors and performance time. In addition, correcting the positioning of body work components is a key operation in automotive assembly, which is time-consuming and characterized by a strong dependence between the achievable results and the skill level of the worker performing the operation. To solve this, an AR prototype system is developed for supporting the operator during complex operations relating to the dedicated phase of panel fitting for car body assembly by providing gap and flushness information to correct the alignment errors. This system also provides the feature of converting the information on gap and flushness between car panels measured by sensors into AR instructions to support the workers for correcting alignment errors. The main elements of the solution consist of measuring sensors positioned on the wrist of a 6-axis articulated robot for gap and flushness data acquisitions and an AR system utilized for providing instructions and visual aids to the worker through a Head-Mounted Device (HMD). Gap and flush measurements of the component are first acquired for each control point (CP) and analyzed by comparing the extracted features with reference values to decide whether the component position needs correcting with further manual adjustments. Thus, the AR system starts guiding the operator by showing proper assembly instructions. During adjustment operations, gap and flushness are continuously measured and checked, creating, if necessary, further instructions until the assembly phase is completed. With this approach, the system has some outstanding features: immediate detection of alignment errors, in-process selection of the recovery procedure, accurate guidance for reduced time and procedural errors in task execution, real-time information without diverting the worker from the assembly process, fast feedback after adjusting and easy use, thanks to the integration of the real environment and the AR instructions in the user’s field of view. A verified step and a test is carried out for the developed system. The results show a potential for further integration and industry adoption. With the advantage of immediate detection of alignment errors, the same assembly procedure has been able to be completed almost 4 times faster with the AR tool. The data collected from 10 tests are also less dispersed, indicating the robustness of the procedure conducted with the support of the AR system. The gap and flushness are reduced from 12.77 mm and 3.05 mm to 7.17 mm and 0.33mm, respectively. Besides that, the AR system also helped in increasing assembly effectiveness and efficiency as well as reducing errors. The correct positioning of bodywork components no longer depends on the experience and dexterity of the operator. For further improvement, system setup time needs to be minimized, implementing an Artificial Neutral Network (ANN) to support the measurement for gap and flushness error detection as well as reducing the collected data.
+At this point, it is found in this SLR that although the AR-based application proved its strength in assisting quality activities, there are still challenges and limitations. In general, the current AR-assist quality applications can be classified into three groups depending on the features and objectives of their approach: AR as a virtual Lean tool, AR-assisted metrology and AR-based solutions for in-line quality control. The details are included in the following 
+Table 7
+:
+To continue answering RQ1, all the collected data reported are shown in 
+Table 8
+:
+In terms of Layer 1, 63.5% (127 articles) of the selected publications provide important concepts and theory in their research (Layer 1). The largest percentage of AR articles is in Layer 2 Implementation (150 articles, 75%). This indicates that AR technology has matured to the point where it can be implemented using off-the-shelf commercial packages or self-development using less expensive software infrastructure. Significant assessment (Layer 3) of the Effectiveness and Usability studies using scientific and formal methods is found in 31% (62 articles) of the publications. 25 works, or 12.5% of the total, perform field experiments and have significant industry adoption context (Layer 4). An interesting point is that 20 articles, or 10% of the total, have contributed proof-of-concept or a conceptual framework supporting the current stage and further integration of intelligent elements for AR solutions (Layer 5). These five layers’ percentage distribution have already illustrated a holistic view of the ongoing stage and the trend of AR-based application for the manufacturing context. They also depicted a general view of what AR-based solutions for manufacturing context have accomplished (see 
+Figure 9
+). The AR technology has rapidly evolved and reached its mature point to be integrated into manufacturing, equipping operators with immersive interaction tools on the shop-floor level and providing essential manufacturing information for decision making in a short time.
+Regarding Layer 1, “AR Concept and Theory”, the publications can be categorized into four subjects (see 
+Table 9
+ and 
+Figure 10
+). This layer is dedicated to the concept of how AR adoption benefits in solving problems in one specific field of manufacturing: the new theories and fundamentals to build and utilize AR for manufacturing contexts. The algorithm is a crucial element in developing an AR system. It consists of studies relevant to Artificial Intelligent methodology, establishing the base for AR to grow into intelligent systems [
+191
+]. A conceptual framework provides a general view of what the AR systems are and how they can be implemented. It may be relevant to the systems’ capabilities, the system functions of the AR user interface, the system data flow or system management [
+190
+]. The evaluation framework forms the fundamental of heuristic guidelines either for the evaluating and selecting of AR elements for implementation or for analyzing and evaluating the usability of AR solutions in the context of manufacturing. For example, Quality function deployment mixed with an Analytic hierarchy process (QFD-AHP) methodology was applied for the selection of the appropriate AR visual technology in creating an implementation for the aviation industry in [
+123
+] or to support the decision-makers with quantitative information for a more efficient selection of single AR devices (or combinations) in manufacturing [
+87
+]. Technology transfer and adoption in the industry is relevant to articles that provide a holistic view about the current challenges, limitations and potential improvements that could support the adoption of AR technology in an industry context while satisfying the business requirements of companies. Literature review articles about AR in manufacturing usually contribute to the Technology Adoption category [
+77
+,
+190
+,
+235
+].
+After analyzing the data, it showed that there is a nearly balanced investigation into “Conceptual Framework” (48 articles, or 24% of the total) and “Algorithm and Modelling” (47 articles, or 23.5% of the total). Only 9 articles, or 4.5% of the total, contribute to the “Evaluation framework”, while there is a high interest at the moment in “Technology transfer/adoption”, with 57 articles, or 28.5% of the total. Considering this, all selected AR literature review articles can be considered to reuse for AR technology transfer and adoption in the long-term in a manufacturing context.
+In layer 4, the relevant articles are analyzed and divided into two categories based on their industry adoption stages: “tested in the industry” and “novel stage.” When an application has been tested in a real manufacturing context or field experiments are carried out, it is characterized as “tested in the industry.” The “novel stage” is more relevant to applications or implementations that focus on solving specific issues of AR technology, such as tracking, calibration, etc., and is only tested in the laboratory environment. Besides that, pilot projects are relevant to those that implemented AR in an industrial environment but with no comprehensive tests carried out. Those proposing and developing a comprehensive AR-based solution that has high potential to integrate further in a real manufacturing context are also considered as pilot projects. The results reveal that 84% of applications are still in the novel stage, while the remaining 16% are tested in the industry and can be improved further for industry adoption (see 
+Figure 11
+).
+Although the novel stage projects achieve potential results, user acceptance, human-centric issues, seamless user interaction and user interface are still challenges that need investigating for long-term industry adoption in manufacturing [
+2
+]. Because AR is a technology enhancing human perspectives by virtual and real context fusion, a universal human-centered model for AR-based solutions development can help in closing the gap between academia and industry implementations [
+236
+,
+237
+]. Following the international human-centered design standards ISO 9241-210, 2019 [
+188
+,
+195
+], a human-centered model can be developed by combining a simplified AR pipeline [
+17
+] and AR system elements [
+238
+] with a value-sensitive design approach for smart 4.0 operators [
+239
+]. All the AR-based implementations and their industry adoption status are shown in 
+Table 10
+.
+Layer 5 provides an overview of the emerging trend in integrating AR with AI, industrial IoT, Digital twin and other comprehensive industry 4.0 technologies that result in the development of layer 5 Intelligent AR (IAR) solutions. This layer provides the holistic approach for implementing intelligent industry 4.0 elements with AR to enhance the robust and smart features of AR systems/solutions for long-term adoption in industry. This layer considers all studies that propose or involve interesting, significant concepts, algorithms and implementations that show high potential in the further development of the IAR system in the future (see 
+Table 11
+).
+Artificial Neural Networks (ANN) and Convolutional Neural Networks (CNN) are recently applied or proposed for further improvement of the registration methods by enhancing the CV-based tracking algorithms [
+74
+,
+191
+], while Industrial IoTs and Digital Twin are frequently considered in recent studies [
+37
+,
+190
+] to utilize Big data information and the advantages of AR in visualization, fusing digital data with a real working context.
+This section considers all selected articles to establish a broad view about current AR development tools in manufacturing, thus making conclusions about how those tools could be utilized for developing AR solutions for the quality sector.
+RQ3: What are available tools to develop AR-based applications for quality sector?
+Software design
+Regarding Layer 2 Implementation, the number of articles dealing with the software side (150 articles, 75%) and hardware side is nearly balanced (148 articles, 74%). These numbers once more emphasize that AR technology has reached its mature point, where the improvement in either the AR software side or the AR hardware side would boost the technology adoption speed for AR solutions in manufacturing. There are a dominant number of Interaction design articles dealing with high functional user interfaces (95 articles, or 47.5% of the total), which is understandable due to high demands in interactive activities on the shop-floor level in manufacturing. Content design, with 40 articles, or 20% of the total, is the second dominant interest when considering software design. There are 4 articles, or 2% of the total, and 12 articles, or 6% of the total, dedicated to Agent-based AR and Knowledge-based AR systems, respectively. Although these two percentages of Agent-based AR and Knowledge-based AR are not significant, they are essential for the further integration of AI elements into AR systems supporting manufacturing in long term. The articles of each category relating to this sublayer Software design are listed in 
+Table 12
+ and the number of articles of each category over the period 2010–2021 is depicted in 
+Figure 12
+.
+There has been a steady interest in Interaction design for AR-based in a manufacturing context over the years, which reached its peak in 2019. This is a positive trend for the long-term adoption of AR solutions in manufacturing be-cause manufacturing at the shop-floor level consists of lots of interactive activities between operators, especially interaction of operators with working spaces as well as and operators that need essential manufacturing information/data in the right manner of time [
+8
+,
+63
+,
+195
+].
+Content design is the second dominant category in software design for AR solutions in manufacturing. In 2018–2020, AR content design especially focusing on visual elements and the conversion of manufacturing actions into standard symbols for AR content are key points [
+104
+,
+112
+,
+129
+,
+186
+].
+Knowledge-based AR applications are designed to incorporate the domain knowledge of experts during the authoring phase to create a knowledge-based system (KBS) built on technical documents, manuals and other relevant documentation of the authoring domain (assembly, maintenance, quality control, etc.) [
+30
+,
+138
+,
+191
+].
+Agent-based AR utilizes the available entities of a system and their attributes to integrate into the AR solutions, supporting autonomy decision making [
+102
+,
+190
+].
+Display devices
+This subsection presents an overview of the most popular display devices used in the development of AR solutions in manufacturing, which provide good references for the development of AR-assisted quality activities later. 
+Table 8
+ and 
+Figure 13
+ depict in detail the main display devices mentioned and applied in the selected and analyzed articles for this SLR. The implementation of one device rather than another depends on the purpose justification of the AR application. The evolution of display technology is also considered for the analysis of display devices.
+Starting from the most dominant display device, HMD is mentioned in 50 articles, which is 25% of the selected articles, all of which comprehensively included HMD into their content. This is thanks to the advantages of HMD, which are portability, hands-free interaction and user experience enhancement through direct overlaying of computer-generated information onto users’ views. The HMDs mentioned in the selected articles are usually commercial devices that are available on the market. Hololens is the one that is utilized the most among commercial optical see-through HMDs (OST-HMD) [
+8
+,
+52
+,
+53
+,
+220
+]. According to [
+240
+,
+241
+], another type of HMD is video see-through HMD (VST-HMD). In this category of HMD, Samsung Gear VR or Oculus are remarkable candidates. A customized VST-HMD based on the use of Z800 3D visor by Emagin combined with a USB camera—Microsoft LifeCam VX6000—was made to create an interactive AR implementation for virtual assembly in [
+167
+]. In terms of technology, the current HMD devices’ ergonomics (weight, resolution, field of view (FOV)) have improved compared to the past, and have moved closer to the industrial requirements for long-term implementation. The technology of OST-HMD allows users to observe the real context through a transparent panel while at the same time seeing the computer-generated information projected onto it. The VST-HMD has cameras affixed to the front of the HMD which captures the real-world images, superimposes the digital information onto those images and then displays AR content through a small display area in front of the user’s eyes [
+242
+]. Due to the amount of information that needs processing, VST-HMDs usually have higher latency (the time gap between the real world’s occurring events and the ones perceived by users’ eyes). The current challenges of both types of HMD technology are system latency, FoV, costs, ergonomics and view distortion [
+2
+].
+The second dominant display device is HHD, with 42 articles, or 21% of selected articles for this SLR. HHDs utilized in the articles are mainly commercial devices such as tablets and mobiles. The greatest advantage of using these HHDs is that the users are more familiar with the technology because mobiles and tablets are also used in daily activities such as work, entertainment, etc. In addition, their portability, cross-platform development, cost and capabilities also make them promising alternatives to HMDs [
+77
+,
+195
+]. However, in tasks or activities requiring both free hands and intensive manual interaction on the shopfloor, such as assembly [
+160
+], quality control [
+30
+,
+194
+], etc., HHDs were not an appropriate selection in some cases.
+The third and fourth trending display devices providing in-situ, hands-free AR displaying content are Monitors/large screens (34 articles, or 7% of the total) and Project for spatial display (19 articles, or 9.5% of the total). Monitors and large screens are also commonly selected for developing a human-centered smart system to support assembly tasks or quality assurance activities [
+30
+,
+147
+,
+164
+], provide assembly training assistance tools [
+166
+] or real-time data for cyber-physical machine tools monitoring [
+200
+], etc. Monitors and large screens are popular devices that are available in any manufacturing or shop-floor context. By utilizing them for developing AR solutions, the cost aspect can be satisfied. However, these systems usually require an external camera system or webcam for capturing real-world images to support the tracking and registration modules of AR applications. Nevertheless, portability is a limitation of using these display devices. Regarding Spatial AR (SAR) display with a projector, this is a favorite display method applied in spot-welding by utilizing the advantages of direct display digital information onto the work piece to enhance workers’ concentration, thus reducing the process errors [
+201
+]. The system is considered as SAR when the projection is directly displayed onto the physical object. In another scenario of spot-welding inspection, SAR was applied to directly indicate the welding spots for the operators to check during the quality control process of the welding spots, which helped in reducing the inspection process time [
+209
+]. For these applications that support spot-welding relevant processes, one important note is the correct rendering for the readability of the indicator text. Besides that, text legibility is also essential, which was comprehensively investigated in a study to enhance the quality and effectiveness of applying SAR in industrial applications [
+75
+]. The projector is also popularly used in assisting the assembly process. A projection-based AR system was proposed to monitor and provide instruction for the operator during the assembly process in [
+161
+], or to provide the picking information together with assembly data for the operation as in [
+185
+]. Then, in a higher-level conceptual system, real-time instructions for assembly using SAR were comprehensively studied and demonstrated in [
+63
+]. Finally, during implementation at a real working environment in a factory, projected AR was utilized together with data digitalization to support the setting up of a die cutters process, which resulted in effective cost saving and processing error reduction [
+198
+].
+It is crucial to note that the capabilities of the above display hardware are changing rapidly, but they both have their advantages and drawbacks, which are detailed in 
+Table 13
+.
+There is a small percentage of articles—16 articles, or 8% of the total—applying the multimodal displaying technique, and only 1 article, or 0.5% of the total, completely used another technique, which was haptic AR to support assembly process [
+11
+]. Multimodal display provides the immersive experience for more than one human sense, which can be mixed between visual displaying and audio to enrich the capabilities of AR applications in industry 4.0 [
+122
+] or effectively support and attract the awareness of the worker during the mechanical assembly process [
+164
+]. A combination of haptic feedback and visual information is commonly utilized in self-aware worker-centered intelligent manufacturing systems [
+166
+] or in applications that require lots of bare-hand interactions with physical objects such as assembly or maintenance [
+90
+,
+127
+,
+171
+].
+By having a general view about how displaying devices are utilized in manufacturing through the above analysis, a conclusion regarding display device selection for AR assisting in the quality field can be made. By considering the specific working conditions/requirements such as human working environment, movements, flexibility, etc., as well as the advantages/disadvantages of each display technology, the appropriate display devices can be evaluated and selected for each specific AR-assisted quality application. The QFD-AHP methodology mentioned in Layer 1 could be utilized to systematically evaluate all these elements.
+Tracking methods
+By having a general view about how displaying devices are utilized in manufacturing through the above analysis, a conclusion of display devices selection for AR assisting in the quality field can be made. By considering the specific working conditions/requirements such as human working environment, movements, flexibility, etc., as well as the advantages/disadvantages of each display technology, the appropriate display devices can be evaluated and selected for each specific AR-assisted quality application. The QFD-AHP methodology mentioned in Layer 1 could be utilized to systematically evaluate all these elements.
+This subsection provides an insight into the current tracking methods utilized in developing AR solutions in manufacturing, thus giving useful references for working on AR assistance in the quality field in the future. 
+Table 14
+ and 
+Table 15
+ list in detail the tracking methods used in articles on this SLR. In 
+Table 14
+, besides Global Percentage, which is calculated for 200 selected articles, Relative Percentage demonstrates the composition of each tracking method that contributes to 133 tracking relevant articles. Then, 
+Figure 14
+ and 
+Figure 15
+ illustrate the holistic view of the distribution and evolution of tracking methods over the period from 2010 to 2021.
+Tracking plays an important role in the real-time AR assisting in manufacturing application. It calculates the pose and position of the physical components as well as the relative pose of the camera to those components in real-time. The orientation (6DoF) and the position of an object form a pose. High accuracy in tracking this provides the users’ location and their movements in reference to the surrounding environments, which is an important requirement for AR-based manufacturing applications [
+243
+], except in some applications using SAR. Tracking technology is one of the main challenges affecting AR application in support of intelligent manufacturing [
+2
+]. Robustness and low latency at an acceptable computation cost also need considering in terms of AR tracking. It is essential to distinguish between recognition and tracking. Recognition seeks to estimate the camera posture without relying on any previous information provided by the camera. When the AR system is initialized or at any time when there is a tracking failure, recognition is made. In contrast, tracking aims to analyze the camera pose based on the camera’s previous frame [
+244
+].
+Currently, there are three main categories of tracking techniques, known as computer vision-based (CV-based), sensor-based and hybrid-tracking, the latter of which utilizes both CV-based and sensor-based tracking techniques at the same time [
+188
+]. CV-based tracking techniques are usually utilized for indoor environments and can be classified into three categories in terms of “a priori” methods, which are: marker-based tracking, markerless tracking (feature-based or natural feature tracking NFT) and model-based tracking. “A priori” is predefined knowledge about the object, which would be tracked. It could be a marker, a feature map or a model regarding marker-based, markerless and model-based tracking techniques, respectively. In order to initialize “a-priori” knowledge to support the CV-based tracking methods, “ad-hoc” methods can be applied to create the information that establishes “a priori” knowledge. In addition, “ad-hoc” could provide marker tracking methods or feature tracking methods based on Optical flow, Parallel Tracking and Mapping (PTAM) and Simultaneous Localization and Mapping (SLAM) [
+34
+]. A sensor-based method tracks the location of the sensor, which could be Radio Frequency Identification (RFID), a magnetic sensor, an ultrasonic sensor, a depth camera, an inertial sensor, infra-red (IR), GPS, etc.
+Marker-based tracking is the most utilized method for AR-based solutions in the manufacturing context, with 63 articles—31.5% of 200 selected articles or 47% of 133 articles that have a contribution to tracking content. This shows a steady trend in applying marker-based tracking methods for AR-based manufacturing solutions over the period from 2010 to 2021, which reached a peak in 2019 and then slowly reduced in 2020 and 2021. In these two years 2020 and 2021, markerless tracking has grown as the dominant method for AR-based manufacturing solutions. The markerless tracking method also takes the second place in dominant tracking methods for AR-based solutions in manufacturing, with 33 articles, equivalent to 16.5% of 200 selected articles or 25% of 133 tracking relevant articles. Next comes the hybrid tracking method that is applied in 21 articles, equaling 10.5% of 200 selected articles or 16% of 133 articles containing the tracking method. As in 
+Figure 15
+, it also shows that there is a tendency towards using the hybrid tracking method in manufacturing in the last three years. Similar to hybrid tracking, model-based tracking has significantly increased in recent years, which is due to the built-in model tracking packet of popular AR software development platforms such as Unity and Vuforia. This method is implemented in 13 articles—6.5% of 200 selected articles or 10% of 133 articles contributing to tracking content. The sensor-based tracking method is the least favorite tracking technique in implementing AR solutions for manufacturing, with only 3 articles. This can be explained by the high cost and complex hardware that is usually required for indoor tracking, utilizing ultrasound, magnetic sensors, etc. In addition, the indoor environments of factory plants, production lines or laboratories usually consist of several types of equipment, machines, objects and so on, which could block sensor signals, thus reducing this tracking method’s effectiveness [
+245
+]. This is why it only appeared in 1.5% of 200 selected articles or 2% of 133 articles regarding tracking methods.
+In order to gain a more comprehensive understanding of how these tracking methods have been applied in AR-based solutions in manufacturing, some representative works relevant to each type of tracking method are depicted ij more detail in the following, while the rest are listed in 
+Table 15
+.
+The marker-based tracking method is fast, simple and robust, thus it is broadly utilized for various scenarios in the manufacturing context. For instance, it was implemented to facilitate a human-centered intelligent manufacturing workplace with an AR instructional system for assembly processes regarding highly customized products in some cases [
+64
+,
+93
+,
+142
+,
+164
+,
+165
+]. On the other hand, markers could be added to machines as a priori for tracking to assist maintenance processes [
+77
+,
+143
+,
+144
+] or to provide useful instructions to newcomer shop-floor operators [
+199
+]. In an innovative case, the AR marker-based method was applied for measuring and evaluating casting quality through hand-pouring motion tracking [
+193
+]. Furthermore, this tracking method is widely used for applications that provide guidance for operators during process preparation, which is time-consuming, error-prone and costly for small batch production, such as the setup of die cutters in the packaging industry [
+198
+], the setup of machine tools in the smart factory [
+213
+] or programming the trajectory of touching probes for aligning the raw material with the machine reference frame [
+214
+]. Finally, maker-based tracking is the prominent choice when it comes to AR-based solutions that support the welding process in the automotive industry. It was used in an AR-based quality control solution to enhance in-situ inspection of spot welding in the automotive industry [
+209
+], to guide the manual spot-welding process in order to ensure the in-line quality [
+205
+] or to assist intuitively in welding robot programming [
+218
+].
+Despite its advantage, the effectiveness of the marker-based tracking method is not reliable in a working environment that may cause occlusion or damage the marker tag, such as workshops, production lines, etc. Therefore, several AR-assisted manufacturing applications also considered and employed other tracking methods. In a series of works [
+30
+,
+210
+], a markerless tracking methodology is developed to optimize the quality control procedure for automotive parts in terms of measuring deviation errors. An algorithm for extracting and comparing two consecutive 3D point clouds of the workstation, which are captured by the camera, is developed for this specific industrial case. In [
+189
+], the same approach, with control points instead of 3D point clouds, was used in enhancing the panel alignment process in car body assembly. In another scenario, some applications integrate the cloud database with the asset determining a priori in different locations of the plant to support fault diagnosis of the aseptic production line [
+220
+], enhance event-driven for AR-assisted maintenance and scheduling for a remote machine [
+138
+]. Other relevant applications using markerless tracking can be seen in 
+Table 15
+. It is crucial to note that, the markerless or NFT methods often require lots of computing algorithms [
+65
+,
+72
+,
+74
+,
+197
+], as well as a powerful computing system [
+30
+,
+189
+,
+192
+,
+210
+] and a robust information system architecture or cloud platform [
+138
+,
+220
+].
+The AR-hybrid tracking method in manufacturing usually employs data from additional sensors to increase the tracking speeds, reduce the latency and lighten the computing burden of markerless tracking algorithms. In addition, using sensory data also boosts the tracking performance of marker-based tracking or the model-based tracking method. In more detail, a hybrid tracking method using the marker and sensor data was applied in a series of studies to support evaluating the impact of using Hololens 1 for assembly work instructions [
+52
+,
+53
+]. A mock wing assembly task following paper instructions, traditional digital instructions including tablet model-based instructions (MBIs), desktop MBIs and AR-based instructions using different AR hardware such as a tablet and Hololens 1 was implemented to compare the data in terms of completion time, net promoter score (NPS) and error count. The results of these papers provide good references for manufacturing stakeholders regarding the benefits of diverse AR technologies that could be used for manual assembly tasks as well as to address some limitations of using a Hololens for larger-scale applications. In other scenarios, additional sensors are integrated to reduce the latency of markerless tracking systems to support design discrepancy inspections and annotations for flange systems in the Baker Hughes company [
+188
+,
+195
+]. Although the sensor-based technique is usually integrated with other tracking techniques to form hybrid tracking situations, as mentioned in the above part, it is rarely applied alone for AR-based solutions in manufacturing. This is because sensor-based tracking technically requires intensive tracking algorithms [
+11
+] and advanced deep learning methods such as CNN [
+161
+] to boost the tracking performance and reduce latency, thus achieving the real-time feature. Finally, a model-based tracking method is applied when a 3D CAD model of the tracked object’s parts are available to extract, analyze and determine the pose and position for later recognition and tracking [
+8
+,
+73
+,
+139
+].
+To conclude this subsection, similar to the selection of tracking method for a manufacturing context, when considering AR-based solutions for quality sector, different use cases and conditions of the working environment could be taken into account and evaluated to choose the most appropriate tracking method. This subsection provides solid references in terms of tracking methods for further utilization to develop AR-based solutions for the quality sector.
+Software development platform
+Currently, there are lots of available Software Development Kits (SDKs) supporting AR application development in a fast and robust approach. The most well-known SDKs are Vuforia, ARToolKit, Vuforia, Metaio and Hololens. These SDKs provide detailed documentation and functionalities to develop AR applications while not requiring high coding skills and experience. One or more software development platforms can be utilized to develop an AR system. 
+Table 16
+ lists in detail the different software development platforms mentioned across the selected articles in this SLR, which provides good references for the development of AR-based solutions in the quality sector later.
+The development process of software is not always specified in articles. Thus, it is difficult to demonstrate this information about which programming language is mostly used by data collection. Not considering all articles, the most mentioned and utilized languages are C# and C++, shown in 
+Table 16
+. In addition, libraries of functions such as OpenCV (Open-Source Computer Vision), Matlab and OpenGL (for 2D/3D graphics rendering) are also applied for the development of AR solutions. Mid/low programming languages and libraries of functions allow an AR application’s development from scratch, providing high flexibility. However, to be highly skilled in programming is required for developing those systems. The use of SDK was mentioned across selected articles. SDKs’ utilization has increased recently because new devices on the market usually provide them (Hololens, HHD). However, in terms of developing a high functionality AR application, SDKs are not sufficient. More extensive software built with a game engine or mid/low-level programming language must be integrated to achieve a full functionality AR application. Unity3D and Unreal are the two most popular game engines utilized for AR application development. A game engine is technically a user-friendly platform allowing the building of AR applications with minimum programming knowledge, but skilled AR developers are required to use them. In order to create the 3D AR contents, other supporting development platforms are mentioned, such as Blender, Autodesk Inventor, Rhinoceros, SolidWorks, Catia and 3ds-Max.
+Unity 3D engine, developed by Unity Technologies in 2005, is a commercial cross-platform game creation system, which supports C# scripting together with 3D/2D graphics and animations. This development platform consists of a graphical user interface (GUI) and five fundamental windows, which are ProjectWindow, HierarchyWindow, InspectionWindow, SceneView and Toolbar. It is one of the most effective platforms applied for AR applications to assist human-machine interaction (HCI). Unity is compatible with the Vuforia SDK plug-in which enhances the 3D object tracking and detection in AR applications [
+8
+]. In addition, Unity provides pre-defined functionalities to develop interactive 3D content for real scenarios. Nevertheless, it offers the flexibility to export the designed application in different formats of executable files which are compatible with various building platforms such as Windows, Mac, iOS, Android and Universal Windows Platform (UWP).
+Vuforia is the most common SDK for AR application development, launched by Qualcomm for a wide variety of devices. In addition, Vuforia provides some distinguishing features supporting different tracking protocols such as image target, object target, model target, feature tracking, cloud recognition and video playback. CV algorithms are used for Vuforia to assist object recognition in the image frame and 3D model presentation or data visualization in a real-time interface. In summary, Vuforia provides high-speed partly covered recognition, robust tracking of objects and consistent efficient tracking in low-light situations.
+The OpenGL graphics library is usually integrated to render the scene, while the ARToolkit, which is a marker-based tracking library, is used to track and place virtual elements. To detect markers in a captured scene, the ARToolkit employs image processing functions. OpenSceneGraph is a free and open-source framework for computer graphics applications that could be used for rendering 3D graphics. OpenCV is an open-source framework for computer vision programming.
+RQ4: How can AR-based applications for quality sector be evaluated?
+Layer 3 consists of two main categories, which are effectiveness evaluation and usability evaluation. While effectiveness evaluation technically considers evaluation metrics such as completion time, the number of errors, productivity performance and other quantitative key performance indicators (KPIs), usability evaluation concentrates on the study of the user experience via interviews, questionnaires and field evaluations, as well as utilizing expert evaluations of the AR systems. As the complexity of tasks and AR systems has evolved over time, a hybrid evaluation of effectiveness and usability should be applied to holistically consider all impact factors that could help for the improvement of the investigated AR system. In terms of effectiveness evaluation, quantitative methods such as descriptive statistics, t-test and analysis of variance (ANOVA) were applied in several studies included in this SLR [
+92
+,
+188
+,
+195
+]. Regarding usability evaluation, two standard questionnaires, which are NASA Task Load Index (NASA-TLX) and the System Usability Scale (SUS), are usually utilized [
+194
+,
+220
+]. The NASA-TLX questionnaire is widely used to evaluate physical and digital experiences in working environments. The SUS questionnaire is short, concise and widely used too. However, other similar tests are also available for relevant use cases such as the Subjective Workload Assessment Technique (SWAT) [
+246
+], the Unified Theory on Acceptance and Use of Technology (UTAUT) [
+247
+], a Likert Scale questionnaire [
+142
+], a Computer System Usability Questionnaire (CSUQ) [
+141
+], etc. Nevertheless, the standards ANSI 2001 and ISO 9241 [
+195
+,
+206
+] are essential when considering metrics to evaluate the usefulness of a developed AR tool via analyzing human performance towards some target acquisition tasks.
+There are 62 articles (31% of 200 articles in this SLR) that provided rigorous evaluation work, with 13 articles (6.5%) relating to usability evaluation, which is slightly more than half of the number of articles relevant to effectiveness evaluation (24 articles, 12%), and 27 articles (13.5%) conducting both effectiveness and usability evaluation. Considering the nature of AR technology, which mainly enhances user perspectives, usability evaluation should be more frequently employed to heuristically address all potential impacts of the AR system. Thus, more holistic and comprehensive evaluating results can be achieved for further development of the AR system and AR technology in the long term.
+In summary, this subsection provides a useful evaluation methodology as well as different standards that could be reused to analyze the AR-based solutions for the quality sector later. 
+Table 17
+ includes and classifies articles that are relevant to the evaluation of AR systems in manufacturing.
+RQ5: How to develop an AR-based solution for long-term benefits of quality in manufacturing?
+Quality control procedures or activities relating to the quality aspect in manufacturing frequently include intensive repetitive and precise tasks which are regularly complex and require human involvement. In some findings, it was mentioned that in terms of human error controlling, there is a current bottleneck in AR-assisted manufacturing systems. This relates to the artificial intelligence capabilities of AR systems [
+114
+,
+189
+]. Thus, the first factor that should be considered for the long-term benefits of using AR technology for the quality sector is solving the challenge of integrating intelligent agents into each AR-based solution at the beginning. In order to achieve that, a methodology adopted from [
+196
+], combined with the findings in this SLR based on AR architecture layer framework, is created to systematically consider all elements and factors that contribute to the development of AR-based assisted applications. Thus, the further enhancement and integration of AI elements to improve the intelligent capabilities of the AR systems in the long term are also benefited. This methodology is depicted in the following 
+Figure 16
+. On the left side of the model is the systematic flow for the design and development of AR-based applications. Through each stage (Design, Development, Implementation, Evaluation, Improvement) and each step (Mockup design, Client validation, etc.) of the development flow, several valuable findings in this SLR (reference tables) and tools provided on the right-hand side of the model could be adapted as well as utilized to systematically create an AR-based application with a human-centered approach following several standards.
+The second crucial factor for the long-term implementation of AR-based solutions in the quality sector is to employ the ubiquitous computing system or boost the fusion of manufacturing information systems with AR systems [
+37
+,
+221
+], not only to save the information resource and boost the performance speed of AR applications but also to slowly transform to data-driven AR solutions and achieve the real-time feature for AR systems [
+102
+].
+The main objective of this study is to contribute to the current research by providing a holistic view of AR systems and AR-based applications in manufacturing, especially focusing on shop-floor processes that require the intensive involvement of operators’ activities, such as assembly, maintenance and quality control from the year 2010 to 2021. Thus, this review fills an essential gap in the quality sector and provides a systematic model for the further implementation of AR technology to enhance and support Quality 4.0 in the future.
+The main contributions of the study are based on the systematic literature review, which has answered the five research questions relating to AR-based applications in the quality sector within a manufacturing context. The conclusions are drawn as follows:
+Firstly, quality control and quality-relevant activities themselves are important to ensure customer specification. However, quality is a special sector that belongs to non-value-added activities for the functionalities of the product. Thus, the fewer errors and the less process time for these quality control and management activities, the more resources (cost, time, human, etc.) can be utilized. In this regard, the advantages of AR technology could be applied to supporting the reduction of human errors and process time, as well as in-line error-prone process controlling. Although AR-based applications benefit the quality sector in several scenarios, there are also some drawbacks. Therefore, before the implementation of AR technology as a solution for quality sector, pre-implementation evaluation is essential to gain insights into which specific cases AR should be utilized in, how the technology could be integrated, whether employing AR is a long-term solution, etc.
+Secondly, AR technology in manufacturing comes to a point that implementation of software and hardware has improved over time and has gradually reached the essential maturity for long-term industrial AR solutions. However, the current barrier to shop-floor level implementation is user acceptance, which has a long-term impact on the efficiency of the integration of AR solutions in manufacturing. Thus, when it comes to creating a long-term AR-based solution for the quality sector, all relevant elements of AR systems must be systematically evaluated at each step of the design and development process. The model in 
+Figure 16
+ provides a comprehensive approach to address all impact factors, ensuring that a robust and practical AR-based solution is established step by step. 
+Finally, there are several available software development toolkits and hardware devices that have been improved over time to support the development of AR applications in manufacturing. In order to know which ones are appropriate for a specific AR-based solution to support quality enhancement activities, the working environment conditions need to be considered as well as the requirements in terms of cost, time and effectiveness. By considering all these factors using QFD-AHD, the selection of suitable hardware devices, SDKs and tracking methods could be made in a holistic way.
+As the result of the SLR and the analysis of current AR technology development, the potential research areas on the subject of AR applied in the quality sector in industry 4.0 context could be one of the following topics:
+Transformation of a traditional quality Lean tool to a virtual quality tool by identifying and implementing AR technology when it is feasible.
+Integration of AR to assist manual and automatic metrology activities to prevent human errors, reduce setup time, ensure the accuracy of metrology data, etc.
+Standardization of quality-relevant knowledge representation and quality data formats to make AR systems and manufacturing information systems compatible.
+Development of a universal human-centered model for the adaption of AR-based solutions in the quality sector following the international human-centered design standards ISO 9241-210, 2019, to close the gap between industrial and academic implementations. In addition, this human-centered model could also boost AR technology adoption not only for the quality sector but also for manufacturing in general.
+Integration of AR solutions with other enabling technologies of Industry 4.0 such as industrial IoT, AI, Digital twin, etc., to improve the effectiveness, intelligence and real-time performance of the AR-assisted quality sector. Thus, the concept of ubiquitous AR applied in the quality sector in an industry 4.0 context could be achieved in the long term
+Enhancing AR registration and tracking methods by applying ANN and CNN to improve the accuracy of superimposing an AR model onto the real object in a shorter time, which is important for AR-assisted quality control for large-volume size parts in the automotive and aerospace industries.
+Transformation of a traditional quality Lean tool to a virtual quality tool by identifying and implementing AR technology when it is feasible.
+Integration of AR to assist manual and automatic metrology activities to prevent human errors, reduce setup time, ensure the accuracy of metrology data, etc.
+Standardization of quality-relevant knowledge representation and quality data formats to make AR systems and manufacturing information systems compatible.
+Development of a universal human-centered model for the adaption of AR-based solutions in the quality sector following the international human-centered design standards ISO 9241-210, 2019, to close the gap between industrial and academic implementations. In addition, this human-centered model could also boost AR technology adoption not only for the quality sector but also for manufacturing in general.
+Integration of AR solutions with other enabling technologies of Industry 4.0 such as industrial IoT, AI, Digital twin, etc., to improve the effectiveness, intelligence and real-time performance of the AR-assisted quality sector. Thus, the concept of ubiquitous AR applied in the quality sector in an industry 4.0 context could be achieved in the long term
+Enhancing AR registration and tracking methods by applying ANN and CNN to improve the accuracy of superimposing an AR model onto the real object in a shorter time, which is important for AR-assisted quality control for large-volume size parts in the automotive and aerospace industries.
+Besides these key topics, the usability and effectiveness of innovative AR quality systems also depend on how quality knowledge is implemented and fused with AR technology. This matter relates to the familiarity of developers and users with the scientific principles and experiences underlying quality tasks that the new AR applications support. This insight is also crucial to the design and development of suitable system features for AR quality applications, thus ensuring the success of the implementation of AR for the quality sector in the long term. 
+Conceptualization, P.T.H.; methodology, P.T.H.; formal analysis, P.T.H.; investigation, P.T.H.; data curation, P.T.H.; writing—original draft preparation, P.T.H.; writing—review and editing, J.A.A., J.A.Y.-F. and J.S.; supervision, J.A.A., J.A.Y.-F. and J.S. All authors have read and agreed to the published version of the manuscript.
+This research work was undertaken in the context of DIGIMAN4.0 project (“DIGItal MANufac-turing Technologies for Zero-defect Industry 4.0 Production”, 
+http://www.digiman4-0.mek.dtu.dk/
+, accessed on 02 January 2022). DIGIMAN4.0 is a European Training Network supported by Horizon 2020, the EU Framework Program for Research and Innovation (Project ID: 814225).
+Not applicable.
+Not applicable.
+Not applicable.
+The authors express their gratitude to the anonymous reviewers for their valuable comments that helped us to improve the paper significantly.
+The authors declare no conflict of interest.
+Publisher’s Note:
+ MDPI stays neutral with regard to jurisdictional claims in published maps and institutional affiliations.

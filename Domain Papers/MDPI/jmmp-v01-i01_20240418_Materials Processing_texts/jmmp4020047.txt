@@ -1,0 +1,1059 @@
+This paper investigates the quality performance of FDM 3D printed models with thin walls. The design of experiments method (DOE) was used and nine models of the same size were fabricated in a low-cost 3D printer using polylactic acid (PLA) material. Two limited studied parameters were considered (extraction temperature and wall thickness), each one having three levels. External X and Y dimensions were measured using a micrometer, as well as four surface roughness parameters (Ra, Rz, Rt, Rsm) with a surface tester. Two optimization techniques (the Taguchi approach and Grey relational analysis) were utilized along with statistical analysis to examine how the temperature and wall thickness affect the dimensional accuracy and the surface quality of the parts. The results showed that high extraction temperature and median wall thickness values optimize both dimensional accuracy and surface roughness, while temperature is the most important factor.
+Additive manufacturing is an advanced manufacturing technology in which computer-aided designs (CAD) are used for the manufacture of three-dimensional (3D) parts by adding material layer by layer [
+1
+]. This method offers the benefit to produce complex parts with shorter cycle time and lower cost compared to traditional manufacturing processes [
+2
+,
+3
+]. The AM has found applications in various fields such as bioengineering, automotive, aerospace and consumer products [
+4
+]. Fused filament fabrication (FFF) or fused deposition modeling (FDM) is a popular type of additive manufacturing (AM) method [
+5
+,
+6
+,
+7
+]. In FDM, a thermoplastic material is heated and extruded from a hot nozzle, which deposits it in a controlled manner on the printing platform to construct an object [
+8
+]. The main advantages of the FDM process are considered to be its simplicity, the high-speed printing, and its low cost [
+9
+,
+10
+].
+Dimensional accuracy and surface texture of fabricated parts are considered as two of the main quality indicators in the manufacturing engineering process, especially in AM [
+11
+]. Dimensional accuracy refers to the resemblance of a manufactured piece’s actual dimensions to the original part’s nominal dimensions. Products with better dimensional accuracy can achieve tighter tolerances [
+12
+]. The surface quality of a manufactured part is characterized by the surface roughness. Lower surface roughness values indicate better surface texture. Despite the variety of advantages of AM, two limiting aspects of this technology are the obtainable dimensional accuracy and surface roughness [
+13
+,
+14
+]. Many attempts have been made for the identification of the printing parameters which affect the dimensional accuracy and the surface roughness of FDM printed products.
+Alafaghani et al. [
+15
+] investigated the effect of four process parameters namely infill percentage, infill pattern, layer thickness, and extrusion temperature on the mechanical properties and dimensional accuracy of FDM-printed parts. They used PLA as the printing material and Taguchi’s L
+9
+ orthogonal array as the design of experiments. They found that the lowest values of the extraction temperature, layer thickness and infill percentage (i.e., 190 °C, 0.2 mm and 20% respectively) along with hexagonal infill pattern minimized the dimensional errors. 
+Hyndhavi et al. [
+16
+] studied the dimensional accuracy of FDM fabricated prototypes with the use of grey relational analysis. Two printing materials were used (ABS and PLA), while the process parameters whose influence on dimensional accuracy was analyzed were layer thickness, raster angle and build orientation. It was concluded that in the case of ABS, 200 μm of layer thickness, 0° of raster angle, and 90° of build orientation optimized the dimensional accuracy, while in the case of PLA the corresponding process parameter levels were 200 μm, 0°, and 0°. Raster angle and build orientation were found to highly influence the dimensional accuracy for both materials. Sood et al. [
+17
+] used the grey Taguchi method to study the impact of layer thickness, part orientation, raster angle, air gap, and raster width on the dimensional accuracy of PLA printed parts. Taguchi’s L
+27
+ orthogonal array was utilized as the experimental design. The grey relational analysis showed that layer thickness of 0.178 mm, part orientation of 0°, raster angle of 0°, road width of 0.4564 mm, and air gap of 0.008 mm optimize the overall dimensional accuracy. Moreover, it was observed that large numbers of conflicting parameters, independently or in interaction with others, influence the dimensional errors. Few of them were found to have more impact compared with others. Moza et al. [
+18
+] examined the dimensional accuracy of parts created with FFF technology. An L
+9
+ orthogonal array was used as the design of experiments, while the process parameters tested were the printing material (PLA and ABS), infill rate (20%, 50% and 70%), number of shells (1, 2 and 3) and layer height (0.1 mm, 0.2 mm and 0.3 mm). It was realized that PLA and 20% infill rate gave the best dimensional accuracy, whereas layer height and number of shells were the most influencing factors. Tsiolikas et al. [
+19
+] made a study regarding the dimensional accuracy of ABS FFF printed models using robust design. Four printing parameters were analyzed, namely, deposition angle, layer thickness, infill ratio, and infill pattern. It was concluded that the layer thickness was the dominant parameter. 
+Mahmood et al. [
+20
+] conducted an experimental investigation about the impact variation in the printing parameter settings of FDM 3D printers on the dimensional accuracy of the printed parts. A prototype was designed with a variety of geometrical characteristics, while Taguchi’s L
+27
+ design of experiment and statistical analysis were utilized to identify the relationship between the varying process parameter values. These process parameters were chamber temperature, layer thickness, extruder temperature, platform temperature, number of shells, infill shell spacing multiplier, inset distance multiplier, floor/roof thickness, infill pattern, infill density, infill speed, outline speed, and inset speed. It was found that number of shells, inset distance multiplier, chamber temperature, infill shell spacing multiplier and infill density were the most affecting printing parameters. Singh et al. [
+21
+] investigated the FDM and CVS (chemical vapor smoothing) process parameters which influence the linear and radial dimensions of ABS printed parts. The examined FDM process parameter were the orientation and part density, while the corresponding ones for the CVS were number of cycles and cycle time. They concluded that orientation, part density, and their interaction have a significant impact on the dimensional accuracy. Camposeco-Negrete [
+22
+] conducted a study regarding the optimization of three FDM quality indicators, namely processing time, energy consumption of the 3D printer and dimensional accuracy. Taguchi L
+27
+ array was utilized while statistical analysis was employed to identify the effect of five process parameters (filling pattern, layer thickness, orientation angle, printing plane, and position of the piece on the printing table’s surface) on the abovementioned indicators. It was found that in the case of dimensional accuracy, the filling pattern was the dominant factor for width, while length and the part’s thickness were mainly affected by layer thickness and printing plane correspondingly. Aslani et al. [
+23
+] used the grey Taguchi method to specify the effect of four printing parameters namely number of shells, printing temperature, infill rate and printing pattern on dimensional accuracy of FFF printed parts. L
+9
+ orthogonal array was utilized as the experimental design and PLA as the printing material. They realized that the printing temperature (nozzle temperature) was the dominant factor.
+Many studies have examined the surface roughness of parts printed with the use of the FDM method. Galantucci et al. [
+24
+] examined the FDM process parameters’ impact on the surface finish of ABS printed models. A 2
+3
+ full factorial array was the experimental design, while the tested printing parameters were the tip values, raster width, and slice height. It was realized that slice height and raster width were the dominant factors. Barrios et al. [
+25
+] investigated the surface properties (surface finish and hydrophobic features) of FDM printed parts. An L
+27
+ design of experiments with five factors (layer height, print temperature, print speed, print acceleration and flow rate) and three levels was utilized. The obtained results showed that the flow rate and the print acceleration were the parameters with the greatest impact. Anitha et al. [
+26
+] studied the influence of three process parameters (layer thickness, road width and speed deposition) on the surface roughness of prototypes printed with the use of FDM technology. A 2
+3
+ experimental design along with statistical analysis were used for this examination. It was found that layer thickness was the most important factor. Perez et al. [
+27
+] conducted a study regarding the surface quality enhancement of FDM PLA printed samples. Five process parameters, namely, layer height, printing path, printing speed, temperature, and wall thickness were varied. They concluded that layer height and wall thickness were the dominant parameters for controlling surface roughness. When these values increase, surface roughness increases, too, which leads to poor surface quality. Printing speed and temperature were found to be unimportant for surface roughness.
+Various studies have been conducted in order to examine both dimensional accuracy and surface roughness of FDM printed models. Wang et al. [
+28
+] studied the effect of six process parameters (layer thickness, deposition angle, support style, deposition orientation in Z direction, deposition orientation in X direction and build location) on the tensile strength, dimension accuracy and surface roughness of FDM fabricated parts. Taguchi method along with Grey relational analysis were used as the optimization techniques. The results showed that deposition orientation in Z direction was the most influential parameter for the dimensional accuracy, whereas layer thickness was the most important factor for the surface roughness. Moreover, they revealed that the optimal parameter combinations for all responses were obtained with fewer experiments with the use of the Taguchi method in comparison with full factorial design. Nancharaiah et al. [
+29
+] investigated the dimensional accuracy and surface roughness of FDM processed parts with the use of Taguchi’s design of experiments and statistical analysis. This study examined the effect of four process parameters namely layer thickness, road width, raster angle, and air gap, with three levels for each factor. They concluded that layer thickness and road width had great impact on both surface roughness and dimensional accuracy. Raster angle was found to be more important for dimensional accuracy than for surface roughness. Mohamed et al. [
+30
+] reviewed the FDM printing parameters that significantly affect the quality of FDM printed parts. In the case of surface roughness, layer thickness was found to be the dominant parameter. Subsequently, lower value of layer thickness and high model temperature lead to smoother surface finish (i.e., lower surface roughness values). In the case of dimensional accuracy, layer thickness was again the most important factor along with air gap. Most studies investigate the effect of very specific parameters such as layer thickness, part orientation, road width, air gap, and raster angle. Sheoran et al. [
+9
+] also did a review regarding the process parameters which influence the mechanical properties and quality of parts manufactured with FDM technology. They found that one of the most significant and most analyzed process parameters for dimensional accuracy and surface roughness is layer thickness. In general, low layer thickness, print speed, and extrusion temperature values optimized both dimensional accuracy and surface roughness. However, further investigation is needed for the identification of the effect of other printing parameters such as the extrusion temperature and infill density because the influence of these factors (other than layer thickness) on dimensional accuracy and surface roughness is less investigated or still unknown. In this context, Dey et al. [
+31
+] also explored the FDM process parameters and their settings to identify which of them optimize the dimensional accuracy and the surface roughness of the products. Some very important conclusions of this review study are: (i) high dimensional accuracy is achieved with low values of layer thickness, extrusion temperature and number of shells, (ii) high surface quality can be obtained with low layer thickness and high extrusion temperature, (iii) factors such as infill pattern, print speed, shell width, or extrusion temperature are less studied compared to layer thickness, build orientation, raster width, or raster orientation, and (iv) there are limited studies which optimize multiple parts’ characteristics simultaneously (multi-objective optimization).
+Motivated by all the above literature review, the influence of two limited studied process parameters, namely extraction temperature and wall thickness on the dimensional accuracy and surface roughness of FDM printed thin walled parts is investigated. Three levels are considered for each factor and Taguchi’s L
+9
+ orthogonal array is utilized as the experimental design. The printing material used is PLA. Both Taguchi’s method and grey relational analysis are employed as optimization techniques, while statistical analysis (analysis of means (ANOM) and analysis of variance (ANOVA)) are used to identify the process parameters’ impact on the parts’ quality and their optimal levels. To the best of authors’ knowledge, the multi-objective optimization of the dimensional accuracy and surface roughness of FDM printed parts in terms of extraction temperature and wall thickness has not been addressed before. Two previous studies have been conducted regarding the dimensional accuracy and the surface roughness measurements of these FDM thin walled parts, in which no optimization or evaluation analysis was done (see [
+32
+,
+33
+]).
+In this research, a 3D squared model was created as it can been seen by 
+Figure 1
+. The part’s nominal dimensions can be also found in the same figure. This model was designed in AutoCAD 2010 software (AUTODESK Inc, San Rafael CA, US) and it was extracted in STL format. Next, the STL file was sliced and converted to G-Code with the use of the free “Ultimaker Cura” software. The low cost “Ultimaker Original” 3D printer was used for the printing of the nine workpieces. This open source 3D printer manufactured by Ultimaker Ltd. is based on the Replicating Rapid-prototyper technology and it has been awarded as the fastest and most accurate 3D printer in 2012. Some technical specifications of the 3D printer are [
+32
+,
+33
+]:
+Layer resolution: Up to 20 μm
+Build volume: 21 × 21 × 20.5 cm
+Print speed: 30–300 mm/s
+Travel speed: 30–350 mm/s
+Material filament diameter: 2.85 mm
+Nozzle diameter: 0.4 mm
+Operation nozzle temperature: 180–260 °C
+Unheated platform
+Layer resolution: Up to 20 μm
+Build volume: 21 × 21 × 20.5 cm
+Print speed: 30–300 mm/s
+Travel speed: 30–350 mm/s
+Material filament diameter: 2.85 mm
+Nozzle diameter: 0.4 mm
+Operation nozzle temperature: 180–260 °C
+Unheated platform
+As it is mentioned above, the printing material used in this investigation is polylactic acid (PLA). PLA is a thermoplastic polyester material with good processing performance and acceptable mechanical properties [
+34
+,
+35
+]. PLA was found to give better dimensional accuracy in comparison with ABS, which is a commonly used printing material in FDM method [
+18
+].
+As it can be by the literature review, the dimensional accuracy and the surface roughness of the FDM processed parts are strongly influenced by the parameters and their selected levels during the printing process. Τhe printing parameters whose effect on the dimensional accuracy and surface roughness that are examined here are the extraction temperature and the wall thickness. Limited studies exist regarding the impact of these two factors on the dimensional accuracy and surface roughness (see 
+Section 1
+). For experimentation, three levels have been determined for each process parameter. The varied FDM printing parameters and their levels used in this study can been found in 
+Table 1
+. These parameters are briefly defined as follows:
+Extraction temperature: It is the temperature that the material is heated inside the nozzle before extrusion during the printing process. This factor depends upon the type of the thermoplastic material used. The recommended extraction temperature for PLA is 195–230 °C [
+9
+,
+36
+]. The levels of this parameter selected in this study is within this recommended range.
+Wall thickness (or shell thickness): It is the thickness of the parts’ walls as it can be seen by 
+Figure 2
+. This is the parameter that defines the term “thin walled parts”. It is a geometrical factor which is rarely considered in studies regarding the quality of parts manufactured with the use of the FDM technology (see 
+Section 1
+). The levels of this parameter were selected according to the indication that the wall thickness should be two times higher than the size of the nozzle extruder (0.4 mm in our case) [
+9
+,
+37
+].
+Extraction temperature: It is the temperature that the material is heated inside the nozzle before extrusion during the printing process. This factor depends upon the type of the thermoplastic material used. The recommended extraction temperature for PLA is 195–230 °C [
+9
+,
+36
+]. The levels of this parameter selected in this study is within this recommended range.
+Wall thickness (or shell thickness): It is the thickness of the parts’ walls as it can be seen by 
+Figure 2
+. This is the parameter that defines the term “thin walled parts”. It is a geometrical factor which is rarely considered in studies regarding the quality of parts manufactured with the use of the FDM technology (see 
+Section 1
+). The levels of this parameter were selected according to the indication that the wall thickness should be two times higher than the size of the nozzle extruder (0.4 mm in our case) [
+9
+,
+37
+].
+Some other process parameters have kept constant throughout the printing process. The levels of these parameters have been selected according to the optimized levels proposed by other relevant studies (see 
+Section 1
+). These factors are:
+Layer thickness: 0.2 mm [
+15
+,
+16
+]
+Deposition angle: 0° [
+17
+]
+Infill density: 20% [
+18
+]
+Infill pattern: Grid
+Raster angle: 45°
+Printing speed: 100 mm/s [
+9
+]
+Build orientation: 0° [
+9
+,
+16
+]
+Table temperature 20 °C
+Environment temperature 20 °C
+Layer thickness: 0.2 mm [
+15
+,
+16
+]
+Deposition angle: 0° [
+17
+]
+Infill density: 20% [
+18
+]
+Infill pattern: Grid
+Raster angle: 45°
+Printing speed: 100 mm/s [
+9
+]
+Build orientation: 0° [
+9
+,
+16
+]
+Table temperature 20 °C
+Environment temperature 20 °C
+In this study, the experimental design that is utilized is Taguchi’s orthogonal array. In general, Taguchi’s design is used by many engineers and researchers in order to conduct experiments with minimum number of trials [
+38
+,
+39
+,
+40
+,
+41
+]. It is considered as a simple, efficient, and systematic method for the optimization of the performance, quality and cost [
+42
+]. In Taguchi method, it is mandatory to select the appropriate orthogonal array in order to derive statistically valid conclusions. As two factors are examined, each one having three levels, the proper experimental design is Taguchi’s L
+9
+ orthogonal array [
+43
+]. This particular experimental design has been used in a variety of investigations regarding the impact of the FDM process parameters on dimensional accuracy and surface roughness, as it can been seen in the literature review (
+Section 1
+). The L
+9
+ array with all the printing parameters and their levels designed in the study is tabulated in 
+Table 2
+.
+All nine components printed in this study were measured in terms of dimensional accuracy and surface roughness. Three measurements were taken in X and Y direction for every part (see 
+Figure 3
+) and their average value was computed. Next, dimensional deviation was derived, which is the difference between the nominal and the averaged measured values and represents the parts’ dimensional accuracy. A micrometer with a range of 25–50 mm and 0.01 mm accuracy was utilized for the dimensional measurements [
+33
+]. The dimensional measurements for every part and the direction are presented in 
+Table 3
+, while the dimensional calculations are tabulated in 
+Table 4
+.
+In the case of surface roughness measurements, a Mitutoyo Surftest SJ-210 roughness tester was utilized with a “cut off length” of 0.8 mm, along Z axis direction [
+32
+]. The four surface texture parameters measured during this experiment are defined as follows [
+44
+]:
+Arithmetic mean surface roughness Ra (μm). It is the arithmetical mean of the absolute values of the profile deviations from the mean line of the roughness profile.
+Surface roughness depth Rz (μm). It is the mean value of the sum of the height of the highest profile peak and the depth of the deepest profile valley, relative to the mean line.
+Total height of the roughness profile Rt (μm). The difference between the highest peak and the deepest valley.
+Arithmetic mean width of profile elements Rsm (μm). It is the mean value of the width of the profile elements.
+Arithmetic mean surface roughness Ra (μm). It is the arithmetical mean of the absolute values of the profile deviations from the mean line of the roughness profile.
+Surface roughness depth Rz (μm). It is the mean value of the sum of the height of the highest profile peak and the depth of the deepest profile valley, relative to the mean line.
+Total height of the roughness profile Rt (μm). The difference between the highest peak and the deepest valley.
+Arithmetic mean width of profile elements Rsm (μm). It is the mean value of the width of the profile elements.
+All surface roughness measurements can be found in 
+Table 5
+.
+As it is mentioned above, the goal of this study is to optimize the dimensional accuracy and surface roughness of the FDM printed parts. This is achieved by calculating the process parameter levels which minimize the absolute values of the dimensional deviation and the surface roughness parameters. For this reason, two optimization techniques are used, namely the Taguchi approach and grey relational analysis, along with statistical analysis. All plots were created with the use of Minitab 17 statistical software.
+The Taguchi approach (or Taguchi method) is used to identify the influence of the process parameters along with their levels on the selected quality responses. In this context, two very popular statistical tools are employed namely analysis of means (ANOM) and analysis of variance (ANOVA). The results from the statistical analysis are utilized to specify the impact of the extraction temperature and wall thickness on the dimensional deviation in X and Y direction and the surface roughness parameters.
+According to the ANOM calculations (
+Table 6
+ and 
+Figure 4
+), the level parameter’s combination that minimizes the absolute value of the X and Y deviation is, correspondingly: wall thickness: 3 mm, extraction temperature: 230 °C; wall thickness: 1–2 mm, extraction temperature: 220 °C.
+In the case of surface roughness parameters, the ANOM results showed that the factor levels which minimize them are: wall thickness: 2 mm, extraction temperature: 230 °C for Ra; wall thickness: 2 mm, extraction temperature: 230 °C for Rz; wall thickness: 2 mm, extraction temperature: 230 °C for Rt; wall thickness: 3 mm, extraction temperature: 230 °C for Rsm (see 
+Table 7
+ and 
+Figure 5
+).
+Analysis of variance (ANOVA) is used to investigate the parameters’ impact onto the performance indicators. In this analysis, the F value is calculated, which is the variance ratio, i.e., the mean square ratio due to a parameter and the mean square of the error. A parameter with an F ratio greater than 4 is considered as very important. If the F ratio is smaller than 1, it is considered as unimportant. The 
+p
+ value is used to weigh the strength of the evidence (what the data are telling you about the population). A 
+p
+ value smaller than 0.05 implies significance. ANOVA for the dimensional deviation in the X and Y directions is presented in 
+Table 8
+, whereas for the surface roughness parameters are tabulated in 
+Table 9
+.
+Although the Taguchi approach is widely used for the optimization of single performance characteristics, it is unsuitable for multiple response optimization [
+45
+]. In this case, grey relational analysis (grey Taguchi approach) can be utilized. The grey relational analysis is an advanced form of the Taguchi method [
+46
+]. It is employed to analyze various relationships and to optimize multiple attribute characteristics [
+47
+]. In this study, all dimensional accuracy and surface roughness responses (i.e., the dimensional deviation in X and Y direction and the four surface roughness parameters) are optimized with the use of grey relational analysis.
+First, all dimensional accuracy and surface roughness responses are normalized to a range of 0–1. Since they correspond to the lower-the-better, the normalized values are calculated as [
+48
+]:
+
+
+
+
+
+
+
+
+
+
+x
+
+
+
+
+i
+
+
+j
+
+
+
+
+
+
+=
+
+
+
+
+
+
+m
+
+
+a
+
+
+x
+
+
+ 
+
+
+
+
+y
+
+
+
+
+i
+
+
+j
+
+
+
+
+
+
+−
+
+
+
+
+y
+
+
+
+
+i
+
+
+j
+
+
+
+
+
+
+
+
+
+
+m
+
+
+a
+
+
+x
+
+
+ 
+
+
+
+
+y
+
+
+
+
+i
+
+
+j
+
+
+
+
+
+
+−
+
+
+m
+
+
+i
+
+
+n
+
+
+ 
+
+
+
+
+y
+
+
+
+
+i
+
+
+j
+
+
+
+
+
+
+
+
+
+
+,
+
+
+
+
+
+
+
+
+
+
+(1)
+
+
+
+
+
+where 
+
+
+
+
+
+
+x
+
+
+
+
+i
+
+
+j
+
+
+
+
+
+
+
+
+ is the normalized deviation value, 
+
+
+
+
+m
+
+
+i
+
+
+n
+
+
+ 
+
+
+
+
+y
+
+
+
+
+i
+
+
+j
+
+
+
+
+
+
+
+
+ is the lowest value of the 
+i
+th
+ characteristic in the 
+j
+th
+ response and 
+
+
+
+
+m
+
+
+a
+
+
+x
+
+
+ 
+
+
+
+
+y
+
+
+
+
+i
+
+
+j
+
+
+
+
+
+
+
+
+ is the highest value of the 
+i
+th
+ characteristic in the 
+j
+th
+ response. 
+Table 10
+ outlines all the normalized dimensional accuracy and surface roughness response results.
+Next, the grey relational coefficient 
+
+
+γ
+
+
+ is generated in order to connect the desired and actual normalized data [
+48
+] as:
+
+
+
+
+
+
+
+
+
+
+γ
+
+
+
+
+i
+
+
+j
+
+
+
+
+
+
+=
+
+
+
+
+
+
+
+
+Δ
+
+
+
+
+m
+
+
+i
+
+
+n
+
+
+
+
+
+
++
+
+
+ζ
+
+
+
+
+Δ
+
+
+
+
+m
+
+
+a
+
+
+x
+
+
+
+
+
+
+
+
+
+
+
+
+Δ
+
+
+
+
+i
+
+
+j
+
+
+
+
+
+
++
+
+
+ζ
+
+
+
+
+Δ
+
+
+
+
+m
+
+
+a
+
+
+x
+
+
+
+
+
+
+
+
+
+
+,
+
+
+
+
+
+
+
+
+
+
+(2)
+
+
+
+
+
+where 
+
+
+
+
+
+
+Δ
+
+
+
+
+i
+
+
+j
+
+
+
+
+
+
+=
+
+
+
+
+|
+
+
+
+
+
+
+x
+
+
+
+
+0
+
+
+j
+
+
+
+
+
+
+−
+
+
+
+
+x
+
+
+
+
+i
+
+
+j
+
+
+
+
+
+
+
+
+|
+
+
+
+
+
+
+, 
+
+
+
+
+
+
+Δ
+
+
+
+
+m
+
+
+i
+
+
+n
+
+
+
+
+
+
+
+
+ = min 
+
+
+
+
+
+
+Δ
+
+
+
+
+i
+
+
+j
+
+
+
+
+
+
+
+
+ for all 
+i
+ and 
+j
+, 
+
+
+
+
+
+
+Δ
+
+
+
+
+m
+
+
+a
+
+
+x
+
+
+
+
+
+
+
+
+ = max 
+
+
+
+
+
+
+Δ
+
+
+
+
+i
+
+
+j
+
+
+
+
+
+
+
+
+ for all 
+i
+ and 
+j
+ while ζ is called distinguishing coefficient 
+
+
+
+
+
+
+(
+
+
+
+
+0
+
+
+~
+
+
+1
+
+
+
+
+)
+
+
+
+
+
+
+. Here, the distinguishing coefficient is considered as 0.5. The grey relational coefficient results for all responses are presented in 
+Table 11
+.
+Finally, the grey relational grade is computed, by averaging all grey relational coefficient values. The optimization of the grey relational grade is equivalent with the optimization of all the quality responses considered in this study. The optimum process parameter levels can be derived by the highest grey relational grade.
+
+
+
+
+
+
+
+
+
+
+
+α
+
+
+i
+
+
+
+
+=
+
+
+
+
+
+
+∑
+
+
+
+
+
+
+i
+
+
+=
+
+
+1
+
+
+
+
+n
+
+
+
+
+
+
+γ
+
+
+
+
+i
+
+
+j
+
+
+
+
+
+
+.
+
+
+
+
+
+
+
+
+
+
+(3)
+
+
+
+
+Table 12
+ presents all the grey relational grade results of each dimensional accuracy and surface roughness responses and their optimization order.
+Analysis of means along with analysis of variance have been conducted for the derived grey relational grade. The ANOM results (see 
+Table 13
+) revealed that extraction temperature is more influential than wall thickness. The optimal parameter levels are those that have the highest grey relational grade value as it is shown in the plot of means (
+Figure 6
+). These levels are: (a) wall thickness: 2 mm, (b) extraction temperature: 230 °C.
+The ANOVA results for grey relational grade can been found it 
+Table 14
+. It should be noted that the ANOM gave the same results as ANOVA in terms of factor significance (extraction temperature is most important than wall thickness).
+This study concerns the optimization of two very important quality indicators namely the dimensional accuracy and surface roughness for nine FDM printed parts. The process parameters considered are the wall thickness and the extraction temperature; both are limited examined by other researchers (see 
+Section 1
+). The experimental design used is Taguchi’s L
+9
+ orthogonal array, which is commonly utilized by other studies concerning the optimization of the 3D printing parameters (see 
+Section 2.3
+). The dimensional accuracy responses were the dimensional deviation measured in the X and Y directions, while four surface roughness parameters (arithmetic mean surface roughness Ra, surface roughness depth Rz, total height of the surface roughness profile Rt and mean width of profile elements Rsm) were used as the surface finish responses. The optimization techniques employed were the Taguchi approach and grey relational analysis. Taguchi’s method is used for the optimization of single performance characteristics, while grey relational analysis is suitable for multiple data optimization.
+The Taguchi approach results revealed that different printing parameters optimize X and Y dimensional deviations. For X direction, 3 mm of wall thickness, and 230 °C of extraction temperature optimize the dimensional deviation, while the corresponding levels for Y direction are 1–2 mm and 220 °C. In the case of surface finish, 2 mm of wall thickness and 230 °C of extraction temperature optimize all surface roughness parameters expect for Rsm which is optimized with 3 mm of wall thickness and 230 °C of extraction temperature. Moreover, it was found that extraction temperature had higher impact on the X dimensional deviation and all surface roughness parameters than wall thickness. For the Y dimensional deviation, wall thickness was found to be more important than temperature.
+In a similar manner, the results derived from the grey relational analysis are very close to the ones derived from the Taguchi approach. The optimization of the calculated grey relational grade corresponds to the optimization of all dimensional accuracy and surface roughness responses. It was found that 2 mm of wall thickness and 230 °C optimize the grey relational grade, while extraction temperature was more influential than wall thickness. In fact, extraction temperature is a very important parameter for dimensional accuracy and surface roughness (F = 9.72, 
+p
+ = 0.029). Wall thickness was found to be unimportant (F = 0.69, 
+p
+ = 0.553).
+Although this experimental study examines a number of issues of the quality performance of FDM printed parts, it has some limiting aspects. As it is mentioned above, the extraction temperature and the wall thickness are two very limited investigated factors. Investigation of other process parameters such as infill pattern, deposition angle, and infill density should be investigated in future work. For the evaluation of the surface finish, four surface roughness parameters were considered, as in many other relevant studies (see 
+Section 1
+) only the arithmetic mean surface roughness Ra is used. Some other quality characteristics should be studied in future such as shell bonding performance and shell strength. Moreover, this paper is a multi-objective optimization, a method which needs more research as it can been by the literature review. However, other equally important and limited studied process parameters, such as printing speed and infill pattern could have been included. Other tools such as response surface model (which is very interesting when more than three factors are considered) could have been used. The authors are aware of these issues and they will examine them in future studies.
+Following the above discussion, the main conclusions derived from this study are:
+The results from the Taguchi approach showed that different parameter levels optimize the dimensional deviation in X and Y direction, while high extraction temperature values optimize the surface roughness parameters. The extraction temperature is more important than wall thickness in the case of surface roughness parameters and X dimensional deviation.
+The grey relational analysis revealed that high temperature extraction and median wall thickness values optimize both dimensional accuracy and surface finish. Extraction temperature was found to be the dominant factor, whereas wall thickness can be considered unimportant.
+There is a limitation in this examination considering that only the impact of two factors was studied.
+The results from the Taguchi approach showed that different parameter levels optimize the dimensional deviation in X and Y direction, while high extraction temperature values optimize the surface roughness parameters. The extraction temperature is more important than wall thickness in the case of surface roughness parameters and X dimensional deviation.
+The grey relational analysis revealed that high temperature extraction and median wall thickness values optimize both dimensional accuracy and surface finish. Extraction temperature was found to be the dominant factor, whereas wall thickness can be considered unimportant.
+There is a limitation in this examination considering that only the impact of two factors was studied.
+Conceptualization: K.-E.A. and J.K.; data curation: D.C. and J.K.; formal analysis: K.-E.A., D.C., and K.S.; investigation: D.C.; methodology: J.K. and P.K.; project administration: J.K.; resources: J.K.; software: K.-E.A. and P.K.; supervision: K.S.; validation: K.-E.A. and P.K.; writing—original draft: K.-E.A. and J.K.; writing—review and editing: J.K. and K.S. All authors have read and agreed to the published version of the manuscript.
+This research received no external funding.
+The authors declare no conflict of interest.

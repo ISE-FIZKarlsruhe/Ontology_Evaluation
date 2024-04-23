@@ -1,0 +1,556 @@
+Additive manufacturing has already been established as a highly versatile manufacturing technique with demonstrated potential to completely transform conventional manufacturing in the future. The objective of this paper is to review the latest progress and challenges associated with the fabrication of multi-material parts using additive manufacturing technologies. Various manufacturing processes and materials used to produce functional components were investigated and summarized. The latest applications of multi-material additive manufacturing (MMAM) in the automotive, aerospace, biomedical and dentistry fields were demonstrated. An investigation on the current challenges was also carried out to predict the future direction of MMAM processes. It was concluded that further research and development is needed in the design of multi-material interfaces, manufacturing processes and the material compatibility of MMAM parts.
+Additive manufacturing (AM) is an emergent technology with potentials to transform conventional manufacturing. AM processes help to reduce the need for tooling and provide flexibility in design and product customization as compared to conventional processes [
+1
+,
+2
+,
+3
+,
+4
+,
+5
+,
+6
+]. Recent advances in AM processes have enabled the fabrication of multi-material structures with complex geometry and parts with various materials that display different thermal, chemical and physical properties [
+7
+,
+8
+,
+9
+,
+10
+].
+The advantages of manufacturing components with multiple materials with different chemical and physical properties are key for the successful production of customized mechanical components with tailored performance characteristics. Multi-material AM (MMAM) methods have recently been applied to fabricate complex structures in an efficient way to save production time and the cost of the materials used [
+11
+,
+12
+,
+13
+,
+14
+,
+15
+,
+16
+]. With the advantage of fabricating multiple materials in a single manufacturing process, it is possible to produce functionally graded materials (FGM) with improved material interface characteristics. With the help of MMAM, arbitrarily complex and locally controlled FGMs can easily be fabricated. A number of previous attempts have mainly focused on ceramic–metal structures [
+17
+], metal composites fabricated by selective laser melting (SLM) [
+18
+,
+19
+], wire-arc [
+20
+,
+21
+] and other laser deposition processes [
+22
+,
+23
+]. Recently, advances in material jetting processes have enabled the control of the material deposition on a voxel scale [
+24
+,
+25
+,
+26
+]. With the help of these technologies, the spatial distribution of mechanical properties can be controlled over very small dimensions. However, the limitation of materials and cost of these technologies reduce the benefits of the current FGM fabrication. A simplistic outline highlighting the general material combinations based on suitable material type and possible material property improvement is presented in 
+Figure 1
+.
+Multiple material combinations of real structures widely exist in nature. Therefore, the fabrication of multi-material parts using a low-cost manufacturing process is desirable. MMAM enables the manufacture of highly complex parts with site-specific properties without using costly and time-consuming conventional processes. Multi-material parts can be fabricated with graded regions that provide property gradients over the volume that can be used for damping, thermal gradients, fracture resistance, and construction materials. Based on these implementations, it is of great interest to fabricate multi-material parts using AM technologies. Therefore, investigation of the existing literature is an important step to identify the current advantages and limitations of MMAM, which enables the prediction of the future trend of the technology and its possible applications. 
+Figure 2
+ provides examples of multi-material parts fabricated using different manufacturing processes.
+MMAM has been explored in recent years with a variety of processes and methods. Recently, Ituarte et al. conducted research on the design and fabrication of functionally graded structures through multi-material binder jetting technology [
+27
+]. One unique research study performed by Garland et al. investigated the fabrication of multi-material structures with optimal material distributions [
+28
+]. Another research study was performed by Dorcas et al., who used the voxel-based multi-material deposition process to fabricate FGM components for tensile tests [
+26
+]. Moreover, Doubrovski et al. manufactured a prosthetic socket that consisted of various material combinations [
+24
+]. Some research studies investigated multi-material parts made by AM technology where the material joining region had direct contact. Brischetto et al. conducted research to fabricate a sandwich panel using an AM method [
+29
+]. In that study, external layers were produced with acrylonitrile butadiene styrene (ABS), while an internal core was produced using polylactic acid (PLA) material using the multi-extruder fused filament fabrication process. Lopez et al. also investigated the mechanical behavior of tension test specimens made of PLA, ABS and high-impact polystyrene (HIPS) material combinations [
+30
+]. The results show that producing sandwich structures with a PLA–ABS–PLA material arrangement led to a higher mechanical behavior than other design combinations. Some studies reported the combination of polymer-metal and ceramic multi-material parts via the laser powder bed fusion technique [
+31
+,
+32
+]. 
+The purpose of the literature review is to explore the current research studies associated with the fabrication of multi-material parts using AM methods. In addition to the very latest published research, this review explores the conventional multi-material part fabrication techniques, potential materials used, AM processes and their application areas. This paper also outlines the importance of FGM fabrication with the help of MMAM processes.
+Witnessing the advantages of multi-material approaches for part manufacture confirms that there is a need to generate different combinations of materials [
+38
+,
+39
+]. These multi-material parts or structures need to be carefully designed and evaluated to take full advantage of their use. Various conventional manufacturing (CM) methods are already available to join at least two different materials. They are still popular because of the many advantages they present. Spot welding, drilling, riveting, die casting and extrusion are some of the CM methods widely used in producing multi-material parts [
+40
+]. The CM processes presented in 
+Figure 3
+ are significantly different to AM processes due to their shaping operations. In casting, a hollow mold of the desired shape is filled with a molten metal or alloy. Machining produces workpieces made with subtractive steps through automation. In forging, raw stock materials (also known as billets) are reshaped with compressive dies. The joining process involves fusing or connecting two or more components for the purpose of making a new part.
+Metal casting is one of the oldest and simplest processes for producing near net shape products. This process requires a mold cavity of the desired shape and molten metal to pour into the mold cavity, usually sand molds [
+41
+]. Classical foundry is still a relevant technique for producing large functional parts (e.g., engine blocks, gears and chassis) despite advances in big area additive manufacturing [
+42
+]. The build parameters of currently available metal 3D printers and perhaps the physics behind the different AM processes also limit the production of large parts. Using a foundry provides an advantageous solution if there is a need to produce multiple copies of parts. The cost of producing many parts will equally reduce. In contrast, the use of AM could increase the production cost even with reduced labor. Priyadarshi et al. used the in-mold assembly technique to perform the multi-material part manufacturing. Injection molding is a technique that involves melting different polymer materials at their melting point and forcing the resultant substance into a mold to achieve the desired shape, as shown in 
+Figure 3
+. Full assembly of the structure can be produced without the use of other joints such as bolts, glue, welds and fasteners [
+43
+]. Casting materials are usually metals or various time setting materials that cure after mixing two or more components together; examples are epoxy, concrete, plaster and clay.
+Casting is ideal for complex parts that would otherwise be challenging or uneconomical to construct with other manufacturing methods. For instance, machine tool beds and ship propellers are better cast than joined [
+42
+]. In the work of Gouker et al., they successfully applied multi-material molding to different types of compliant joints by combining mold piece joints that provided a degree of freedom ranging from 1 to 3 [
+44
+]. 
+In general, AM processes allow the fabrication of highly complex, customized, lightweight and hollow parts with higher precision, good surface finish, dimensional accuracy and various infill densities. Post processing operations required for some AM processes are much easier and quicker than casting processes. Metal casting always requires extra material removal to cut out the feed head and filling system. 
+The multi-material combination technique is very useful in automobile sectors. Steel is a widely used material in car manufacturing; however, due to its heavy weight factor, there is a significant need to employ different materials to reduce the weight. Joining is considered one of the CM processes that allow the fusing or connecting of two or more components for the purpose of making a new part, as shown in 
+Figure 4
+. Overall, these processes connect two or more components permanently. They also require the use of separate tools. Some of the commonly used joining processes are welding and soldering. Joining two different materials is a key technology that can play a significant role in the development of lightweight vehicles. Meschut et al. investigated various welding technologies for combining different materials to create multi-material structures, establishing the mechanical–thermal joining of dissimilar metals using resistance element and friction element welding [
+45
+]. Similarly, high mechanical strength at the interface was achieved by mechanically joining the two materials using friction stir welding [
+46
+]. The cost of making any metal AM component is always higher than any joining process. The conventional welding of soldering processes are very cost-effective solutions. Post processing is an essential part of any AM and joining processes. There are still no manufacturing methods introduced to eliminate the need of heat treating, grinding and deburring yet.
+Complete material consumption, high strength, better surface quality and short lead times can be achieved using the forging technique for multi-material part fabrication. Forging is one of the oldest manufacturing processes that shapes the raw stock material by applying compressive dies on it. Based on the temperature at which the operation is performed, the process can be classified as “hot forging”, “warm forging” or “cold forging”. Wohletz et al. used the cold and warm forging techniques to combine steel and aluminum for manufacturing multi-material products. The study concluded that to provide significant bonding between the steel billet and aluminum billet, the initial temperature should reach up to 450 °C and 100 °C, respectively [
+47
+]. The forging process improves the mechanical properties of the raw stock material by refining its grain structure, providing a good grain flow, making it tougher and stronger by the end. Behrens et al. combined two CM processes to fabricate multi-material parts. They performed the thermo-mechanical treatment in order to attain grain refinement in the welded materials using the forming process. This led to the enhancement of the mechanical properties of the final multi-material part [
+48
+]. Parts produced by forging have excellent mechanical properties with minimum waste. Through minimal waste and cost, the original material is plastically deformed to the desired geometric shape for targeted and improved mechanical properties [
+41
+]. The main advantage of forging versus AM is the fabrication of large-size objects with less time and cost. However, continuous research on AM will lead to the more economical fabrication of large-size objects with ease in near future.
+Machining is a manufacturing process in which a raw stock material is cut to a desired final shape and size by a controlled material removal operation [
+49
+]. Today, computer numerical control (CNC) is more commonly used due to its advantages in precision and automation and its better surface finish. CNC manufacturing is the process of producing machined workpieces with computerized manufacturing techniques. Although numerical control is the original name given to this technology, it is still used interchangeably with CNC. These CM processes are the most common methods in subtractive manufacturing. In these processes, the final geometry of the workpiece is formed by removing material from the raw stock material. CNC operations use the same G code logic as AM processes. However, their function is to cut the object in order to shape the final geometry [
+50
+]. CNC machining processes many kinds of material (i.e., metal, plastic, wood, ceramic or composite) to meet specifications by following a coded programmed instruction without a manual operator directly controlling the machining operation [
+51
+]. Compared to CNC manufacturing, in AM, complex shapes can be fabricated with ease and in both processes the time it takes to produce a component is dependent on the complexity, size, height and volume for each process. One of the main advantages of AM in comparison with CNC machining is the possibility of creating completely hollow, lightweight and chapter objects with less material waste.
+CM processes usually take separate components and combine them during post processing to produce composite parts. However, in general, MMAM uses a single manufacturing process to make composite parts. Although there are advantages of CM, various disadvantages also need to be addressed. The cost and quality of the finished workpiece are the main factors that need to be considered when selecting the CM technique for multi-material part generation. Conventional methods require a lot of investment in terms of consumables and logistics. CMs also consume more energy to fuse the materials together, which adds on to overall costs. Joining the materials with casting leads to a higher cost because of its heavy initial investment, consumables for post processing, etc. [
+40
+]. Quality is also another factor to be considered for the case of multi-material part fabrication. Welding dissimilar materials leads to poor quality at the interface and hence needs to be addressed critically. The processing time is also a big issue in CMs, most of which involve a long setup time and the movement of bulky devices, which increases the processing time. 
+MMAM technology is becoming ever more popular in industrial and research communities. Layer by layer, material is added to build the desired structure to form a solid 3D model. The raw material used to produce the parts includes metals, thermoplastics, hydrogels, ceramics, composites, hybrids and functionally graded materials in liquid, powder and solid forms. MMAM has several advantages over traditional manufacturing processes, including minimal material wastage, lightweight production, low-cost processes and its ability to easily fabricate complex shapes, along with being affordable and environmentally friendly. Each MMAM technology has its own pros and cons, among them low dimensional accuracy, the size limitation of components, a limited range of materials, required post processing, inefficiency for large volumes and requirements for specific environments. MMAM technology is relevant in diverse applications for industrial sectors such as aerospace, automotive, healthcare, construction and food processing as well as in research and academic institutions [
+39
+,
+52
+]. Broadly, MMAM technology is divided into seven categories: material extrusion, vat photopolymerization, powder bed fusion, material jetting, direct energy deposition, sheet lamination, binder jetting and hybrid additive manufacturing.
+ME is one of the most well-known AM processes that uses various materials such as thermoplastics [
+53
+,
+54
+], composites [
+55
+,
+56
+,
+57
+], metal-filled thermoplastic filaments [
+58
+,
+59
+,
+60
+] and flexible elastomers [
+61
+] to make components in a layer-by-layer fashion. 
+Figure 5
+ provides a schematic representation of the fused filament fabrication (FFF) process, which is one of the subcategories of ME that utilizes thermoplastic filament. Filament material is melted inside the extrusion head and deposited onto a build plate using a bead-by-bead and layer-by-layer technique. The main advantage of this process is the availability of a large selection of materials and the easily customizable process to produce tailored multi-material structures [
+28
+,
+62
+]. The development and advancement of the modern technologies make it possible to manufacture multiple-material parts in a single manufacturing process. Khondoker et al. [
+63
+] designed a static mixer inside the extrusion nozzle head of the FFF machine, which aimed to help mix the two different polymers during the deposition process. The authors revealed that intermixed specimens could increase the interface strength of FFF-made parts. Similarly, Zachary et al. [
+64
+] designed an extrusion system with a dynamic mixer inside the extrusion head of the FFF machine. This addition helped to blend the polymer martials consistently and improved the mixing quality of the polymers. These studies show that the static and dynamic mixing of two polymer materials could affect the interface strength of multi-material parts. Advantages of the FFF process include its fast-processing time, a wide variety of material selection and its low-cost nature. The disadvantages of the multi-head FFF technique are the inherently poor surface quality of the parts, limited printing resolution, slow fabrication time and weak interface strength. 
+Material jetting is one of the most efficient and precise AM methods. The working principle of MJ is the same as conventional printing machines. Micro droplets are deposited layer by layer on the build platform. The fabrication of multiple materials in a single structure is well established in MJ process. In this process, several photo-curable materials are processed using a jetting head. Each of these heads has many tiny nozzles, which allow the printing of multiple materials simultaneously with a high resolution [
+65
+,
+66
+,
+67
+]. The MJ process enables the production of high-resolution materials, which is one of the main limitations of other AM processes. 
+Figure 6
+ highlights a schematic description of this method. 
+Several research studies were performed to fabricate multi-material parts using the MJ process. Vu et al. [
+67
+,
+68
+] fabricated acrylic photopolymers using the MJ process to study the fracture behavior of the material interfaces. In this study, elastomeric (TangoBlackPlus) and acrylic (VeroWhitePlus) materials were processed to produce fracture specimens. It was found that failures mainly occurred at the material interface zones. The results also show that gradient material interfaces could easily be achieved in this process, which eventually enhance the joint strength of the two material components. The advantages and disadvantages of this process are shown in 
+Table 1
+. 
+DIW is one of the simplest and most easily accessible processes amongst MMAM methods. This process allows the use of a wide range of materials to fabricate multiple-material structures with low manufacturing and material cost. Although the process operation is similar to FFF, DIW does use a heating source to produce parts. The materials used in this process are introduced in their liquid form rather than solid. The material is mixed using a rotating impeller and comes through the nozzle when pressure is applied [
+71
+]. 
+Figure 7
+ shows a schematic description of the DIW process.
+The benefit of this process is the availability of a large selection of materials including materials with biological [
+72
+,
+73
+], structural [
+74
+,
+75
+] and electrical properties [
+76
+,
+77
+]. The drawback of the DIW technique is the use of a sequential fabrication process for each material, which slows down the entire manufacturing time. To overcome this challenge, a single-nozzle DIW system has been developed recently [
+78
+]. It allows the fabrication of multi-material structures using a single-nozzle extrusion head based on the adjustable ratio of the material deposition. Moreover, the material mixing process can be improved with the addition of the mixer into the extrusion head, which can increase the homogeneity and uniformity of the material blends [
+25
+,
+79
+]. This allows the operator to quickly switch material blending ratio during the deposition process. The material blending ratio can also be varied, which enables the deposition of FGMs with tailored thermo-mechanical properties. However, changing the material ratio requires more time, and printing extra artifacts increases the production cost and creates material waste. These are still challenges that need to be addressed in the future. 
+Figure 8
+ highlights a DIW system that was configured to mix materials inside the extrusion head to fabricate ceramic carbide specimens. Tailored heterogeneity was achieved using an in-line mixing system. 
+The VAT process through stereolithography (SLA) uses photopolymer resin to fabricate materials with high resolution and better surface quality as compared to other AM processes [
+81
+,
+82
+]. Photopolymerization is the curing process that occurs when UV light is exposed to deposited material and cross connections between polymer chains develop, causing the deposited material to transition from a liquid or semi-solid to a solid state. 
+Figure 9
+ shows a schematic description of the VAT process. Fabricating multi-material parts using this method requires material exchange from one liquid resin to another inside the vat. This process increases the manufacturing time and is extremely laborious [
+83
+]. The use of multiple materials in VAT process creates challenges in managing contamination between materials. However, automating this technique to fabricate multi-material parts was recently proposed [
+84
+]. In this process, swapping between materials was automated using a rotating carousel system. Multiple vats filled with liquid resin were mounted on a rotating platform. At the time of material change, the required vat is rotated to the fabrication platform, where the laser power is used for further processing. The pros of this process include the high dimensional accuracy of the final component and transparent material fabrication. The major drawbacks of this process include the requirement of extra time to change between materials, limitation to only photopolymers, material contamination and possible waste in the process. 
+Lately, metal-based AM methods have evolved to produce direct fabrication of heterogeneous components with full spatial material distributions [
+85
+,
+86
+,
+87
+]. DED is one of the MMAM methods that falls into different processing categories, such as laser metal deposition (LMD), laser engineered net shaping (LENS) and direct metal deposition (DMD) [
+86
+]. In this process material is used in the form of wire or powder. Materials are melted using laser, electron beam or plasma arc energy sources in the controlled region. In this process inert gas is used to prevent the oxidation of the molten pool. In the DED process, powder material is blown through deposition nozzles where it is melted and deposited layer by layer on the substrate, which then solidifies. The nozzle has a multi-axis arm and moves around the object [
+88
+]. This procedure includes the use of a variety of materials such as metal wire and powder, ceramics, functionally graded materials (FGM), metal–matrix composites (MMC) and coatings [
+39
+]. In this technique, powders are deposited at a specific time of build by changing their types dynamically. 
+Figure 10
+ shows the schematic description of the DED process with multi-material capability. The advantage of this process is the ability to change powders at any time during the manufacturing process. Additional pre-mixed powders can also be added without interrupting the fabrication process. Another benefit of the DED technique is the possibility of gradual changes in the material deposition process, which enable the creation of FGM structures with tailored material properties [
+89
+]. 
+The fabrication of multi-material parts using the DED process has been extensively studied among researchers. Recently, Ke et al. [
+90
+] studied on the compositionally graded doped hydroxyapatite coating on titanium using laser and plasma spray deposition techniques for the fabrication of bone implants. This study revealed an innovative way of enhancing mechanical and antibacterial properties of plasma-sprayed HA coating interfaces for load-bearing orthopedic as well as dental implant applications. In another study, Yan et al. [
+85
+] optimized the process parameters on multi-materials, i.e., the fabrication of cermet composite using Inconel 718 and ceramic powders. The results show that in-house-built software helped to reduce energy usage and material waste while increasing powder melting. Detailed studies have been reported in the literature on the use of DED for the fabrication of multi-material structures. Research studies showed that laser engineered techniques can be used to produce metallic multi-material parts with high strength and good surface quality [
+91
+,
+92
+,
+93
+]. The main advantage of the DED process is the availability of a wide range of materials, and material interfaces can be produced with high strength. The disadvantages of this process include the low dimensional accuracy of the printed parts, residual thermal stress, requirement of atmospheric control and machining process, which is important for finishing the part.
+The term hybrid additive manufacturing (HAM) describes the combination of two or more different processes and machines. The primary goal of this method is to overcome the limitations of MMAM techniques and to improve quality and productivity [
+94
+]. 
+Figure 11
+ shows AM techniques combining FFF, DIW and MJ [
+95
+]. In general, HAM combines the cost-saving AM process with dimensionally accurate subtractive process such as CNC machining. Since extensive material waste occurs during the CNC machining process, HAM enables reduced material waste while maintaining the dimensional accuracy of the machined parts. In HAM techniques, first the AM (the DED process is mainly used) process is used to manufacture a part, and then conventional manufacturing techniques are used to increase the surface quality of the final part. Lately, DMG MORI’s Lasertec 125 3D hybrid system was released, which is a HAM process that creates, maintains and repairs workpieces up to 1250 mm wide and 750 mm high, weighing up to 2000 kg [
+96
+]. This system uses a five-axis material fabrication and five-axis milling process within the same machine. It is noteworthy that automatic shifting between laser deposition welding and simultaneously five-axis milling in a single manufacturing process reduces fabrication time by up to 80 percent. Another HAM machine was introduced by Optomec, which uses CNC milling, lathes, robotic operation and more into one process, creating high quality components by providing precise motion control during the production process [
+97
+]. The limitations of this process are the use of CNC machining operations in overhanging areas of the printed parts, the time it takes to change tools, and the huge amount of pre-processing considerations [
+98
+]. Overall, 
+Table 2
+ shows the advantages and disadvantages of the subtractive and additive processes. 
+Figure 11
+ depicts the process description of HAM method.
+Functionally graded additive manufacturing (FGAM) is a layer-by-layer fabrication process that intentionally modifies the processing parameters and gradually changes the spatial material distribution within one component to meet the intended function [
+99
+]. The main goal of using FGAM is to produce performance-based freeform components driven by their gradual change in the material properties. In the case of FGMs, they are fabricated with the FFF process. The FGAM workflow is shown in 
+Figure 12
+.
+MMAM is revolutionary because its applications provide new opportunities for FGMs in aerospace, automobile and medical industries [
+17
+,
+18
+,
+100
+]. The interface of multi-material structures can be fabricated by varying volume concentrations of the materials in a continuous step using a single machine that enables the fabrication of composite parts directly from the design stage to functional parts. Materials are combined in a single process to produce polymer–polymer, metal–metal and polymer–composite combinations at desired locations [
+101
+].
+Currently, the fabrication of multi-material parts using separate nozzles for each material limits the capability of printing FGM components because of direct interface transition. Since a sharp transition at material joints can show high-stress concentrations, the part will show weaknesses under various stress states. This limitation is controlled by utilizing a single-nozzle extruder that enables the change of composition continuously while printing based on the adjustable ratio of the extruder motor. The advantage of the FGAM process over conventional AM is swapping materials without changing the extrusion head [
+9
+,
+28
+,
+101
+,
+102
+]. 
+Figure 12
+ describes the entire FGAM workflow from the design of FGM components to their fabrication and characterization stage. 
+The FGAM process workflow involves several steps, including design modeling (geometrical modeling, microstructural modeling and materials modeling), simulation, the optimization of material distribution, slicing and tool path generation, 3D printing, in situ material characterization and performance analysis [
+16
+,
+101
+,
+103
+]. Since most AM-made parts have anisotropic material properties due to the heterogeneities created during the fabrication process, homogenizing material properties is therefore necessary. This needs to be performed at the initial stage of the material design process. Another important step is the slicing and tool path generation, which involves converting a mesh model into small voxels for material characteristics’ allocation and tool path slicing. After part fabrication, various testing methods are applied to characterize part performance for desired functionality. 
+The accelerating capabilities of AM processes necessitate enhancement of existing CAD programs to assess optimal material allocation and distribution in MMAM parts. Typical CAD workflow is best suited to conventional manufacturing, which requires basic using shapes and modification processes to create 3D objects. However, in multi-material components, a dedicated CAD package is required to explicitly allocate materials at desired locations within the part volume to tailor its functionality. 
+GraMMaCAD is a CAD program developed by the Computer Graphics Research of Fraunhofer Institute for multi-material parts with locally defining material properties. As a graphical interactive tool, it is used for augmenting 3D models stemming from commercial CAD systems with FGM information to be manufactured with corresponding AM technology. It also overcomes the current limitations of many CAD systems that are based on boundary representations and provides user-friendly interface to add FGM information to the interior of CAD geometry. Moreover, Fraunhofer conducts research in alternative volumetric representation schemes to integrate geometric modeling and simulation (IGA) [
+104
+] and multi-material 3D printing [
+105
+]. 
+Figure 13
+ shows a sample part, with a custom-designed interface from hard to soft material, designed using GraMMaCAD and fabricated with the help of multi-material 3D printer.
+Although FGAM is relatively new, it is growing rapidly in popularity. When it is fully developed, software companies and research institutions will be able to provide the manufacturing industry with the needed design approach and solutions. 
+Different materials for fabricating multi-material AM parts have been documented and studied in the literature [
+61
+,
+63
+,
+106
+]. Zhangwei et al. [
+107
+] provided a review on various ceramic materials and their properties and applications. To build MMAM objects, achieving an optimal bond between the materials is fundamental to their performance. Noteworthily, there are variations in MMAM delivery systems and bonding processes for the various materials and techniques. 
+Figure 14
+ shows material classifications used in MMAM. Many materials have been studied in the context of MMAM materials. The following is a summary of these materials and the studies that have been conducted to understand their properties. In the first section pure thermoplastics are covered. Secondly, composites and finally metals and alloys are discussed.
+A combination of various thermoplastic materials has been extensively studied in MMAM. Thermoplastic materials have a variety of applications in medical, automotive and aerospace industries due to their relatively easier processing conditions compared to those of metals [
+8
+,
+44
+,
+45
+,
+84
+]. Among various polymers, PLA is the most widely used plastic filament material in 3D printing. It is the most extensively researched, utilized, biodegradable and renewable aliphatic polyester. The production of PLA has numerous advantages; it is biodegradable, biocompatible, recyclable, compostable and eco-friendly as its production consumes carbon dioxide. Sudhir Kumar et al. presented an investigation dealing with the optimization of printing conditions of FDM for PLA/PA6-TiO2 -based matrix for medicinal applications. Multi-layered components of different materials were printed successfully and tested for various mechanical, rheological, thermal, and surface characteristics. From thermal analysis, it was concluded that the polymeric matrices of PLA and PA6-TiO
+2
+ are thermally stable for the two repeated cycles of heating and cooling. Additionally, peak strength was greater for these material combinations than for pure PLA [
+108
+]. One of the widely used polymer material is ABS because of its favorable mechanical properties, such as impact resistance, toughness, and rigidity, when compared with other polymers. Additionally, it can be modified for improved impact resistance, toughness and heat resistance [
+109
+,
+110
+,
+111
+,
+112
+]. Ranvijay et al. studied multi-material printing of primary recycled ABS, PLA and HIPS in composite form [
+113
+]. Thermal (glass transition temperature and heat capacity) and mechanical properties (break load, break strength, break elongation, percentage elongation at break and Young’s modulus) were analyzed to observe the behavior of multi-material composites. Arash et al. used multi-material 3D printing to deposit an ASA coating on the surface of ABS structures to protect against UV radiation, moisture and heat [
+114
+]. It was observed that ASA coating provides good protection for the underlying ABS specimen. Janusz Kluczynski et al. focused on the examination of the internal quality of joints created in MMAM process [
+115
+]. PLA and ABS were used for making different combinations of joints, i.e., 1—Monolithic, PLA; 2—Pleated connection, PLA; 3—Overlap connection, PLA; 4—Monolithic, ABS; 5—Pleated connection, ABS; 6—Overlap connection, ABS; 7—Overlap connection, PLA/ABS; 8—Overlap connection, PLA/ABS. The study revealed that the samples with an “overlap” joint have greater strength than specimens with a “smooth” joint. 
+Another widely used thermoplastic material in MMAM is nylon, which obtains high-strength, good temperature resilience, abrasion resistance and chemical stability [
+1
+]. Nylon describes a family of synthetic polymers composed of polyamides. It is a silk-like thermoplastic, generally made from petroleum products processed into fibers, films or shapes. Nylon polymers can be mixed with additives to meet different manufacturing requirements. M. A. Wagner et al. studied three classes of hinges using aramid, polyamide and photopolymer materials that were fabricated by different AM processes [
+116
+]. The aramid hinge showed an exceptionally high ultimate line load, outperforming the other two hinge classes investigated. However, the fatigue resistance was very low due to the deformation mode of the composite. Otepbergenov et al. performed a numerical simulation to determine the high stress concentrations of the ankle–foot orthosis model made by PLA [
+117
+]. Nylon was incorporated into the 3D-printed model to reduce high stress concentrations. Other thermoplastic materials used in MMAM are summarized in 
+Table 3
+.
+Composite is a category of material that is composed of more than one constituent combined to produce improved or altered properties that are not attainable in the separate constituent materials. For example, by combining a metal with other metals or non-metals, it may be possible to produce a targeted material that is hard and ductile [
+124
+]. Pure thermoplastics have low strength and stiffness and cannot retain their original shape at high temperatures to meet specific functional requirements; hence, they are replaced with their composite blends [
+118
+]. Various types of composites, such as those in the form of particulate, continuous and discontinuous fiber reinforcements, and nanocomposites were utilized to fabricate multi-material structures [
+53
+,
+125
+,
+126
+,
+127
+]. To fabricate particulate composite filaments for 3D printing, reinforcement particles are infused into a base polymer (matrix) and then processed into extruded filaments. The properties of the final material are dependent on particle size, shape, orientation, volume fraction and the interfaces between these particles and the matrix. Natural or synthetic fibers (e.g., glass, rice husk and carbon) are alternative reinforcements available for strengthening polymer matrices. The functional properties of the reinforced composite depend on the type of fibers and matrix used, fiber volume fraction, fiber alignment, the interfacial bond between the constituent materials and the void content [
+119
+]. Recently, Christ et al. investigated multi-material, bidirectional strain sensors that were fabricated using the FFF process [
+128
+]. Thermoplastic polyurethane (TPU) and multi-walled carbon nanotubes (MWCNT) were used. The 3D printer used for research offered two independent extrusion nozzles, which allowed for the use of two independent materials during printing. One nozzle deposited the pure TPU filament, while the second deposited the TPU/MWCNT filament. The printed sensors showed a strong piezoresistive response and good cyclic repeatability for both electrical and mechanical performance. In another study, Enrique et al. discussed the influence of micromechanical aspects such as fiber orientation, fiber distribution, the orientation distribution of fillers, waviness, and agglomeration on the post-buckling behavior of uniaxially compressed FGCNTRC (functionally graded carbon nanotube-reinforced composites) curved panels. It was found that both the axial and bending stiffness of the fabricated parts were enhanced with the increase in the CNT volume fraction [
+129
+].
+Ceramics are used in the chemical industry, machinery, electronics, aerospace and biomedical engineering because of their functional properties, i.e., their high mechanical strength and hardness, good thermal and chemical stability, and viable thermal, optical, electrical and magnetic performance [
+107
+,
+130
+]. Ceramics were extensively used along with metals to fabricate multi-material structures using AM technologies. Joining metal–ceramic materials is a relatively difficult process due to the different thermal-chemical properties of both material types. This is because the melting point of ceramic materials is higher than metals [
+131
+,
+132
+,
+133
+]. On the other hand, ceramic materials have been incorporated into a metal matrix to enhance the thermal properties, wear resistance, hardness and mechanical strength of the final composite structure [
+134
+,
+135
+,
+136
+].
+Recently Zhang et al. proposed a multi-ceramic device providing both mechanical strength (niobium oxide and titanium dioxide-doped alumina) and electrical conductivity (alumina-doped zinc oxide) [
+137
+]. Gheisari et al. described the direct 3D printing of low temperature co-fired ceramics and floating electrode 3D structures. Slurry-based AM and selective laser burnout (SLB) were used to fabricate bulk dielectric, Bi2Mo2O9 with silver (Ag) internal floating electrodes [
+138
+]. In another study, Mitun et al. combined metal–ceramic parts through AM processes to create metallic structures with high-performance coatings such as silicon carbide composite coatings onto Ti6Al4V [
+139
+]. 
+Manufacturing multi-metal components using AM techniques has gained much attention amongst researchers. The most used metals in MMAM are titanium, stainless steel, aluminum, nickel and copper. Heer et al. fabricated compositionally graded magnetic-nonmagnetic bimetallic structures using a LENS system. A graded magnetic functionality was implemented by directly transitioning from non-magnetic austenitic stainless steel 316 (SS316) to magnetic ferritic stainless steel 430 (SS430) in a single structure [
+140
+]. Yusuf et al. investigated the interfacial region of multi-material 316L stainless steel/Inconel 718 (316L SS/IN718) fabricated by laser powder bed fusion (L-PBF) [
+141
+]. The interfacial region was characterized by extensive scanning electron microscope (SEM) and electron backscattered diffraction (EBSD) observations, porosity analysis, and Vickers hardness testing. The IN 718 region exhibited the highest hardness, compared to the FZ and 316L SS regions. Tan investigated the effect of the elemental composition of materials on the interfacial bond strength through the laser powder bed fusion (LPBF) of two-type iron-based multi-materials, i.e., the AISI 304 stainless steel (SS304) and AISI 1045 carbon steel (CS 45). Mechanical performance was evaluated by static tensile and flexural tests and dynamic tension fatigue testing. The results reveal that the interfacial bond strength exceeds the fracture strength of substrate materials [
+142
+]. Sing et al. investigated the multi-material processing of AlSi10Mg and UNS C18400 carried out by SLM. The interfacial characteristics of Al/Cu bimetallic laminates had been characterized. The bimetallic Al/Cu laminates exhibited a higher tensile strength than that of copper but lesser than that of AlSi10Mg, and the bending test results concluded there is good bonding strength between AlSi10Mg and C18400 [
+143
+]. Demir et al. proposed his work on multi-material SLM platform and demonstrated its use for producing Fe/Al-12Si multi-material structures. The layers of Fe/Al-12Si showed large cracks due to the low compatibility and miscibility of these two materials, whilst the obtained Fe/Al-12Si layers has the advantage of high hardness [
+144
+]. In another study, Singh et al. attempted to develop an Al/Al
+2
+O
+3
+ composite as an FGM by using a reinforced FDM pattern in the investment casting (IC) process [
+145
+]. Similarly, Tan et al. fabricated a W-Cu (tungsten–copper) FGM firstly by SLM. The effects of the laser parameter on the interfacial defects, microstructure and bonding strength were discussed. It was observed that irregular-shaped pores and cracks were the main defects at the interface due to the intrinsic properties of materials [
+146
+]. 
+Table 4
+ shows the various metals used in MMAM processes. 
+Through MMAM, single- and multi-functional structures are built to meet requirements for complexity and improved performance for applications in industries that include aerospace, soft robotics, medical, electronics, automotive and food processing [
+39
+,
+102
+,
+144
+].
+Within the aerospace industry, MMAM is used to achieve complex shapes and processing techniques that are not possible when using conventional methods. Electric motors and turbine engines with integrated sub-elements of different materials and structures are examples of components that are built with the aid of MMAM to attain unique and superior properties (e.g., microstructure, mechanical, electrical, thermal and magnetic) [
+52
+]. Laser-based powder bed fusion is one of the AM processes that can be used or combined with another AM process to build metallic and non-metallic materials (e.g., metal–metal, metal–ceramic, and metal–polymer components) with high geometrical resolution [
+38
+].
+Soft robots are inherently compliant and exhibit large strains in normal operation compared to conventionally rigid robots [
+157
+]. As suggested by their name, they are elastically soft and capable of safely cooperating with humans or steering through constrained environments [
+158
+]. Soft robotic systems in MMAM are now popular by virtue of improved materials, and AM processes offer the possibility of directly fabricating mainly elastomeric components to mimic complex motions such as jumping, movements, gripping and releasing [
+159
+]. The manufacturing process mainly comprises the direct printing of smart materials and molds for soft robotics that are suitable for medical and other industrial applications [
+158
+].
+In biomedical engineering, MMAM has proven to be relevant in the design and manufacturing of hand orthoses using PLA and TPU with comparable results to conventional plaster casts [
+160
+]. In dental technology, support structures of castable multi-material denture frameworks built by material jetting process can be melted away easily in a heated oven [
+5
+]. Similarly, polymeric end-use devices do not require harsh postprocessing like counterparts fabricated with vat-photopolymerization [
+5
+]. Medical models for training and educational purposes (
+Figure 15
+b) exhibit unique and real-life appearances in terms of color and material transitions when built with MMAM [
+161
+].
+Other unique applications include the possibility to print dual-functional scaffolds through the direct incorporation of antibiotics [
+165
+] and dental resins with antibacterial monomers to prevent the formation of secondary caries [
+166
+].
+In general, multi-material systems form essential aspects of 3D bioprinting for tissue engineering and regeneration, including the precise layering of cells, biologic scaffolds and biologic factors with the goal of recapitulating biologic tissue [
+167
+] and associated innovative research [
+168
+]; pharmaceutical development of customized pills [
+169
+]; 4D printing of structures or pre-programmed ‘smart materials’ to assume different shapes and forms when subjected to different stimuli such as a magnetic field, ultrasound, light, temperature, water, pH, mechanical and solvent [
+170
+,
+171
+]; 3D electronic devices of dissimilar materials [
+106
+]; metal material extrusion [
+59
+]; and fiber-reinforced composites [
+55
+,
+57
+].
+MMAM is the process of joining materials with different thermo-mechanical properties to enhance the overall performance of the entire structure. There are limitations of this process, whether it combines multiple polymers, metals or metal and ceramics. Another material- and process-related limitation may relate to real-world applications such as dimensional accuracy and size, the need for post processing, the lack of processability to combine different materials at the same time under the same environment, etc. MMAM has been explored in recent years with a variety of processes and methods, but the majority still tends to produce multiple material structures by assigning materials to different layers. This approach experiences issues associated with the difficulty of bonding dissimilar materials.
+Several research investigations addressed the strength of multi-material interfaces. Lumpe et al. conducted a study on the tensile properties of multi-material interfaces manufactured by material jetting processes [
+172
+]. In this study, it was found that interfaces had strong dependencies on material combination and print orientation. Rigid and compliant material interfaces were mostly found to be strong as compared to the soft material itself. In another study, rigid–soft material combinations were applied for robotic applications [
+173
+]. The elastic modulus of the multi-material part was varied from 1 MPa to 1 GPa, which allowed it to soften external impacts while maintaining a semi-rigid overall shape and survive longer than its purely rigid or flexible counterparts. Vu et al. performed the interface characterization of soft (TB) and stiffer (VW) material combinations using several test methods. The authors found that fracture failures nominally occurred at the interface zones [
+67
+]. They performed a T-peel test, which demonstrated that the gradient pattern yielded much better peel resistance than the direct transition interface (62% higher in terms of both average peel force and energy release rate). Mirzaali et al. [
+12
+] investigated the fracture behavior of bio-inspired functionally graded rigid–soft composites with the help of a material jetting technique. It was found that the fracture properties of multi-material gradient specimens were significantly influenced by the longer transition zone.
+Lately, researchers have investigated the efficient use of multi-material parts using a gradient approach [
+9
+,
+90
+,
+102
+,
+174
+,
+175
+]. These structures with graded regions of varying materials can be built in a continuous way using a single AM machine that combines various steps and eventually reduces the manufacturing time and cost. MMAM is a revolutionary approach, and a broad range of implementations can also generate new opportunities in the fabrication of advanced FGMs as structural materials with new forms of functionalities and properties in aerospace, automobile and medical industries [
+68
+,
+176
+]. The effect of influencing factors of AM processes on the strength of interfaces was investigated. Freund et al. [
+177
+] conducted a research study to find the effect of factors on the interface strength of AM-made components. Ezair et al. [
+178
+] developed a software interface that allows designers to volumetrically apply material choices to their designs. Within this framework, the authors fabricated multi-material structures that demonstrated the control of porous regions and the deposition of differing materials with repeatable patterns. Similarly, Vu et al. [
+67
+,
+68
+] investigated the interface characteristics of soft (TangoBlackPlus, TB) and stiffer (VeroWhitePlus, VW) material combinations using various test methods. The study revealed that the fracture failures nominally occurred at the interface zones. The T-peel test also showed that the gradient pattern at the boundary region yielded much better peel resistance than the direct transition interface (62% higher in terms of both average peel force and energy release rate). Lately, Kuipers et al. performed a new approach to design interfaces with an interlaced topologically interlocking lattice (ITIL) approach [
+179
+] as shown in 
+Figure 16
+A–C. In this approach 3D lattice consisting of interlaced horizontal beams were created at the interface region by vertically aligning them so that they were topologically interlocked. The results show that the ITIL design satisfied the extrusion continuity constraint, which led to improvement in the ultimate tensile strength of the interfaces. Moreover, Stoner et al. designed a multi-material interface mesostructure with triply periodic minimal surface design patterns (
+Figure 16
+D) to improve the joint region [
+180
+]. In other work, Hasanov et al. investigated the gradient interface strength with respect to direct and interlocked pattern [
+9
+] as shown in 
+Figure 16
+E,F. According to the study, joining process occurs at the layer-to-layer contact area of two materials. It is evident that the strength of joining process depends on the intermolecular diffusion quality between PC and ABS polymer chains (
+Figure 16
+H).
+Another research study relating to interface design was conducted by Guessasma et al. [
+11
+]. The Authors investigated the tensile properties of the interfaces between two dissimilar polymers (ABS and TPU) printed using the droplet-based AM process. In this research, porosity analysis was performed using a 3D imaging technique. It was found that the pore connectivity inside the components was surprisingly low compared to the filament-based extrusion processes.
+Apart from interface issues, one must consider the material selection, design and manufacturing aspects of MMAM issues. The main challenge is to select appropriate materials, understanding the composition and optimal distribution of materials inside the fabricated parts [
+63
+]. Since mixing materials with variable and non-uniform properties are complex, background information related to material characteristics, properties, chemical composition, and manufacturing constraints are necessary prior to processing these materials [
+181
+,
+182
+,
+183
+]. Therefore, specific databases should be established to identify the list of relative materials that can be processed under the same conditions.
+As discussed previously, interface issues emerge when joining dissimilar materials in MMAM. To overcome high stress concentrations at the material transition zone, a gradual change in materials has been extensively investigated in the literature [
+101
+]. However, investigation on the microstructural formation and chemical composition must be carefully measured and quantified. Most of the research studies were focused on the processability of various materials using different AM methods. There is a need to investigate the effect of transition length and gradient composition. The characterization of thermo-mechanical properties of the interface zone is still unclear, and more research must be carried out in this direction [
+183
+].
+Overall, several research studies have investigated the interface characteristics of AM-made parts that consisted of different material combinations. 
+Table 5
+ shows the literature review of multi-material AM research studies based on methods used to fabricate multi-material parts and the properties that were investigated. Based on the literature reviews, most of the research investigations were conducted on the interface characterization of rigid–soft material combinations with the help of the material jetting process. In general, according to the reviewed literature, there are challenges in the successful fabrication of multi-material components using MMAM technologies. These are design-, material- and process-related issues. One design-related concern is the development of CAD programs that enable the user to design gradient material interfaces in MMAM. In this context, specific design protocols and procedures need to be developed. One material-related challenge is the compatibility issue, especially between dissimilar materials, which creates weak interface bonds. Another issue could be the contamination between materials during the nozzle changing process. Contamination makes the processes imperfect and the reuse of materials difficult. As a result, MMAM has the potential to become an important resource for the next generation of manufacturing technologies.
+As discussed before, there much effort is still needed to be before multiple materials can be incorporated in AM commercially. Below, the common challenges and technological barriers that need to be addressed in MMAM processes are given.
+MMAM has significant potential that can be explored to expand the scope of current applications as it continues to gain popularity. Among the various AM processes, HAM combined with prefabricated parts in a 3D printer could potentially manufacture dimensionally accurate smart systems in a continuous single process. MMAM is capable of making parts that were previously unheard of. It allows for adaptable designs to be made as well as materials with superior properties in comparison with traditional manufacturing methods. AM technologies allow materials to be joined to form composites, change their thermo-mechanical properties, or create new materials completely. The future of this technology will advance the use of polymers for functional materials, fiber-reinforced composites, metal–matrix composites, and metal–ceramic composites.
+3D printing is suitable for manufacturing various smart structures because of its multi-material compatibility and capacity for personalized customization and integrated fabrication. Although the 3D printing of multi-material parts promises useful applications in the future, there are certain issues that need to be addressed. There are a wide range of functional materials with excellent properties that are not printable because they have unsuitable thermal and rheological properties. Moreover, several enhanced AM methods have been proposed, but effective methods for many materials remain lacking, so this would be an immensely beneficial aim of future work or research directions.
+Improving software capabilities to design highly complex FGM patterns is necessary, as the use of traditional design methodologies limits the ability to exploit the full capabilities of FGAM creatively and intuitively. More control of gradient transition direction and transition length is an essential step in modeling FGM designs. Current commercial slicers are limited to slicing and exporting FGMs to fabricate using FFF technology. Although there have been some attempts to design multi-material components with gradient regions, most of them use in-house computer codes [
+28
+,
+62
+,
+189
+], and defining locally varying material properties on CAD models is a tedious and time-consuming process. There is a need for future developments in the design of computer programs to define material properties interactively and intuitively at specified regions of the components with various directions.
+The defects and interface bonding strength of 3D-printed structures significantly reduce their strength and durability. Since multi-material parts have a wide range of potential application areas, there is a need to produce reliable components with stronger interface joints. Additionally, the interface can also be affected by various temperature conditions, and multi-material parts can be used for energy conversion devices and other energy-related applications. Multi-material parts can effectively provide a thermal barrier and can be used as a protective coating in specific applications. Although there have been some research studies performed to characterize the mechanical strength of the interfaces, the characterization of thermal properties at material joints is an essential step for designing multi-functional products with improved thermo-mechanical properties.
+The large-scale manufacturing process would allow the fabrication of functional parts for aerospace, construction and some other fields. Since material cost and weight are important design considerations, it is very important to fabricate multi-material parts with site-specific material allocation. According to a recent study performed in the Oak Ridge National Lab (ORNL), the fabrication of a sandwich plate with a gradient material core would reduce the weight up to 5% and cut the expense by roughly 45% of the previous cost [
+175
+]. In addition, multi-material structures remain in the demonstration stage with no specific application scenario. Although there were some attempts to characterize material transition using BAAM technology, its full capability in the fabrication of large-scale components is still in its infancy. Accordingly, further research on this field is necessary.
+One of the limiting factors is the need for high precision and accuracy in the material composition during fabrication process. This is especially needed for FFF techniques. FFF is a low-cost technique that is gaining attention among designers, researchers, and engineers. However, the material mixing capability of this technology limits its potential. In this context, the design of a nozzle geometry and mixing chamber with an effective mixing method could be investigated. Since the consistent and uniform mixing of two materials is highly dependent on the nozzle geometry and design of the mixing chamber, computational fluid dynamic methods could be applied for new nozzle design possibilities. In addition, depositing FGMs using dynamic mixers could also be investigated, especially for BAAM, to improve the uniformity of the material mixing.
+In this review paper, the latest developments, challenges, and future potential of MMAM are summarized for various types of materials and their potential applications ranging from electronics, biomedical field, tissue engineering and soft robotics. The paper also outlines the challenges and outlook based on the current applications of the MMAM process. Future improvement of printing hardware, materials and the accurate prediction of interface properties based on numerical and theoretical analysis will widen the use and applications of MMAM. Despite the current challenges, it is evident that the field of AM and, more specifically, AM applied to multi-material fabrication, offers immense potential.
+Conceptualization, S.H., A.G., I.F., F.A.-S.; methodology, S.H., A.G., S.A., M.R., I.F., F.A.-S.; investigation, writing—original draft preparation, S.H., S.A., M.R., I.F., F.A.-S.; writing—review and editing, S.H., S.A., M.R., I.F., F.A.-S., O.H., A.R.; visualization, S.H.; supervision, I.F., A.G., F.A.-S.; project administration, I.F.; funding acquisition, I.F. All authors have read and agreed to the published version of the manuscript.
+This research received no external funding.
+The specifics of the literature review data can be provided upon request.
+The support provided by the team of the Additive Manufacturing Research and Innovation Laboratory located at Tennessee Tech University is acknowledged.
+The authors declare no conflict of interest.
+Publisher’s Note:
+ MDPI stays neutral with regard to jurisdictional claims in published maps and institutional affiliations.

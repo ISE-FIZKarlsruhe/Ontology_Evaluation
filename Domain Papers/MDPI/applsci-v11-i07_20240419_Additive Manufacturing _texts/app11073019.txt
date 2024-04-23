@@ -1,0 +1,1023 @@
+The introduction of Additive Manufacturing (AM) is changing the way in which components and machines can be designed and manufactured. Within this context, designers are taking advantage of the possibilities of producing parts via the addition of material, defining strategies, and exploring alternative design or optimization solutions (i.e., nonviable using subtractive technologies) of critical parts (e.g., gears and shafts). However, a safe and effective design requires specific resistance data that, due to the intrinsic modernity of additive technologies, are not always present in the literature. This paper presents the results of an experimental campaign performed on gear-samples made by 17-4 PH and produced via Laser Powder Bed Fusion (PBF-LB/M). The tests were executed using the Single Tooth Bending Fatigue (STBF) approach on a mechanical pulsator. The fatigue limit was determined using two different statistical approaches according to Dixon and Little. The obtained data were compared to those reported in the ISO standard for steels of similar performance. Additional analyses, i.e., Scanning Electron Microscopy SEM, were carried out to provide a further insight of the behavior 17-4PH AM material and in order to investigate the presence of possible defects in the tested gears, responsible for the final failure.
+Since their introduction on the market in the late 1980s, 3D printing technologies have been shown to be an important growth factor in moving from the production of prototypes up to the possibility of producing metal parts with full structural properties [
+1
+]. It has been proven that Additive Manufacturing (AM) technologies are cheaper than the traditional ones, but only in case of small batch productions [
+2
+,
+3
+,
+4
+,
+5
+,
+6
+] or of parts not realizable via traditional technologies [
+5
+]; these are the reasons why designers are looking for the possibilities of designing and producing parts via AM. AM, in fact, allows the realization of parts with geometry that cannot be realized via the traditional production processes, such as, for instance, internal cavities and lattice structures. It is therefore possible to realize lightweight components as well as to optimize some mechanical properties, such as those related to their dynamic and vibrational behavior.
+With a specific focus on metallic AM gears, in [
+7
+] a methodology to realize a lightweight gear by modifying the gear body is proposed. A tooth lightweight design is proposed in [
+8
+], in [
+9
+,
+10
+] a gear with internal cooling channel is shown, and in [
+11
+] the gear Noise Vibration Harshness (NVH) behavior and weight optimization by replacing a full gear body with a lattice structure is reported. Moreover, in [
+4
+] the design of a gearbox in which gears are produced by using AM technology is presented. The American Gear Manufacturing Association (AGMA) has recently published a document calling for the necessity of investigating all the aspects related to AM steel gear production [
+12
+]. However, despite the fact that static and fatigue properties of AM materials were deeply investigated [
+13
+,
+14
+,
+15
+,
+16
+,
+17
+,
+18
+,
+19
+], the literature is lacking in terms of reliable data that can be used to design such critical components (e.g., tooth root bending properties).
+In any case, the design of critical components, such as shafts or gears, must pass through analytical standardized codes (e.g., see [
+20
+,
+21
+,
+22
+] for gears). Those require reliable resistance data which, if not directly known, can be easily found within the standards too (e.g., see [
+20
+,
+23
+] for gear materials resistance). Unfortunately, due to the modernity of AM technologies, the standard codes do not present any resistance values that can be used to design components produced via AM. Only a few piece of data about the wear behavior can be found in the literature [
+24
+,
+25
+]. In any case, the standards present the possibility of us resistance data coming directly from experimental campaigns. Nevertheless, it is common practice in gear design to perform the resistance tests directly on the gear specimens. This is related to the specific manufacturing technology, typically hobbing, which produces, for example, characteristic surface patterns and residual stresses that cannot be accurately considered with tests on traditional samples.
+Therefore, provided that tooth root fatigue (i.e., bending) is one of the most relevant gear failure phenomena [
+26
+], this work presents the results of an experimental campaign aimed at determining the tooth root stress limit obtained directly by testing AM gears via the Single Tooth Bending Fatigue (STBF) approach. In the STBF tests, the gear-specimens are tested by applying a normal cyclic load to two flanks taking advantage of the involute properties and the Wildhaber distance. While two teeth are tested at the same time, the friction between the teeth flanks and the anvils (used for applying the load), ensures that the forces acting on the gear-sample are automatically balanced and no additional supporting structures are required. On the other hand, this implies the existence of a stress ratio ≠ 0 (the load varies between the maximum values and a fixed percentage of it, e.g., 10% → R = 0.1) to maintain the preload on the system [
+27
+,
+28
+,
+29
+].
+An additional microstructural investigation is carried out to support the results of the mechanical characterization [
+30
+,
+31
+] and to highlight possible mechanisms or defects that could affect fatigue life and trigger the final material failure.
+It is worth noting that testing actual gears instead of standard cylindrical samples helps in reducing many uncertainties related to the manufacturing process. The influences of all the surface durability-related aspects for instance, are automatically incorporated in the proposed approach, without any need for empirical correcting factors. Consequently, the fatigue life or fatigue limit that will be found can be considered quite representative of the actual performance of the tested components, in terms of high cycle bending fatigue behavior.
+To investigate the bending fatigue properties of gears produced via AM technologies, the STBF were performed on a Schenk mechanical pulsator capable of applying a maximum load of 60 kN. This machine, originally developed and usually used for uniaxial fatigue tests, has been equipped with a specifically designed fixture to perform the STBF tests.
+As shown in 
+Figure 1
+, the machine’s working principle is based on two coaxial springs: the inner one applies the constant part of the load, while the outer spring, thanks to rotative unbalanced masses, is responsible for the sinusoidal part of the load. A load cell and a dedicated control unit are responsible for keeping the sinusoidal load at its correct value.
+The equipment used to test the gears consists of two anvils, a fork, and a pin. According to the characteristic dimensions of the equipment (e.g., the distance between the anvils and the contact surface), the STBF test may assume two different configurations: asymmetric and symmetric. In the first configuration two teeth are loaded at different heights; therefore, one tooth root is more stressed. Only one tooth is effectively under test, while the other one just acts as a reacting tooth. On the opposite side, in the symmetric case, two teeth are simultaneously loaded at the same height and, therefore, both teeth are simultaneously under testing. As shown in 
+Figure 2
+, the present research adopts the symmetric configuration together with the induced stress state calculated via FEM.
+For the purpose of obtaining the symmetric configuration, the distance between the contact surfaces of the anvils is equal to the span measure over three teeth (also called the Wildhaber measure over three teeth [
+32
+], W
+3
+), with the axis of the pin/fitting hole positioned in the middle between the two surfaces. The presence of the pin and fork is justified by the necessity of ensuring the correct mounting of the gear during the test set-up phase. As the kinematic chain composed by pin, fork and anvils gives statically indeterminate results, during the test, the pin is removed just after positioning the gear, ensuring the correct teeth/anvils contact. Then, a minimum preload (i.e., 10% of the maximum) is applied. In this way, by removing the pin, the kinematic chain gives isostatic results. The test fixture is also equipped with a spring, which oversees the gear’s quick removal when the test ends.
+Thus, as explained above, to ensure the correct position of the gear during the whole test, a preload always has to be applied to the gear. Therefore, all the tests have been performed with a load ratio R (i.e., minimum to maximum ratio) equal to 0.1. On the basis of the authors’ experience (e.g., see ([
+33
+,
+34
+,
+35
+,
+36
+,
+37
+]) this value of R is sufficient to ensure that no undesired movement will take place. All the tests were performed at a frequency of ≈35 Hz; as a mechanical pulsator was used, the test frequency was not chosen a priori, but it depends only on system mass/stiffness. 
+Figure 3
+ shows the experimental set-up of the present research.
+Figure 4
+ and 
+Table 1
+ report the main characteristics of the gear. The gear dimensions, especially the profile shift coefficient x, were chosen to have a tooth profile highly sensitive to the bending phenomena. The gears, made by 17-4 PH, were produced by Laser Powder Bed Fusion (PBF-LB/M). The gears were manufactured (see 
+Table 2
+ for the main process parameters) and then machined with traditional machine tools (i.e., lathe and hobbing machine) to obtain the proper roughness and the right shape.
+After machining, the surface roughness was measured by means of a roughness meter. The arithmetic mean roughness R
+a
+ is equal to 0.75 µm and mean peak-to-valley roughness R
+z
+ is equal to 2.98 µm. The material was tested as-built without being subject to any thermal treatment. The experimental points are shown in 
+Table 3
+.
+The testing gears have 24 teeth. Tests were performed by applying the load on 2 teeth separated by one tooth, e.g., tooth 1 and tooth 3. Teeth adjacent to the tested ones were not used, e.g., tooth 2 or tooth 6. 
+Table 3
+ shows the teeth pairs tested.
+The tests were performed according to the staircase approach. If a test at a certain force level F
+i
+ ended with a failure, the force for the successive test was decreased by ΔF. If the test ended with a run-out (i.e., the sample withstood 5 M cycles) the force was increased by ΔF. The force interval ΔF was set to 1000 N.
+To compare the bending fatigue behavior with the ones of the common gear materials it is necessary to define the tooth root stress σ
+F0
+. To do that, method B of ISO 6336-3 [
+22
+] was used. According to this, and considering that the applied load is not the tangential one, F
+t
+ defined in the standard for two mating gears, but the one coming from the interaction from the gear-sample and the anvils, σ
+F0
+ can be written as:
+
+
+
+
+
+
+
+
+
+
+σ
+
+
+
+
+F
+
+
+0
+
+
+
+
+
+
+=
+
+
+
+
+
+
+
+
+F
+
+
+t
+
+
+
+
+
+
+
+
+
+
+
+
+bm
+
+
+
+
+n
+
+
+
+
+
+
+
+
+
+
+Y
+
+
+F
+
+
+
+
+
+
+Y
+
+
+s
+
+
+
+
+
+
+Y
+
+
+β
+
+
+
+
+
+
+Y
+
+
+B
+
+
+
+
+
+
+Y
+
+
+
+
+DT
+
+
+
+
+
+
+=
+
+
+
+
+F
+
+
+
+
+
+
+
+
+bm
+
+
+
+
+n
+
+
+
+
+
+
+
+
+
+
+Y
+
+
+F
+
+
+
+
+
+
+Y
+
+
+s
+
+
+
+
+
+
+Y
+
+
+β
+
+
+
+
+
+
+Y
+
+
+B
+
+
+
+
+
+
+Y
+
+
+
+
+DT
+
+
+
+
+
+
+cos
+
+
+
+
+α
+
+
+n
+
+
+
+
+
+
+
+
+
+
+
+
+(1)
+
+
+
+
+As the tested gears are full-body spur gears, Y
+β
+ and Y
+DT
+ have unitary value. The teeth profile was simply finished with the hobbing machine; therefore, it is impossible to reach an accuracy grade of lower than 5 ([
+38
+,
+39
+]) (see [
+40
+] for the definition of gear accuracy). As the gear accuracy is surely >4, Y
+B
+ is equal to 1. Y
+F
+ and Y
+S
+ do not have a unitary value and they are calculated as in (2) and (3).
+
+
+
+
+
+
+
+
+
+
+
+Y
+
+
+F
+
+
+
+
+=
+
+
+
+
+
+
+
+
+
+
+6
+
+
+
+
+h
+
+
+
+
+Fe
+
+
+
+
+
+
+
+
+
+
+
+
+m
+
+
+n
+
+
+
+
+
+
+
+
+cos
+
+
+
+
+(
+
+
+
+
+
+
+α
+
+
+
+
+Fen
+
+
+
+
+
+
+
+
+)
+
+
+
+
+
+
+
+
+
+
+(
+
+
+
+
+
+
+
+
+
+
+s
+
+
+
+
+Fn
+
+
+
+
+
+
+
+
+
+
+
+
+m
+
+
+n
+
+
+
+
+
+
+
+
+
+
+)
+
+
+
+
+cos
+
+
+
+
+(
+
+
+
+
+
+
+α
+
+
+n
+
+
+
+
+
+
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(2)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Y
+
+
+S
+
+
+
+
+=
+
+
+
+
+(
+
+
+
+
+1.2
+
+
++
+
+
+0.1
+
+
+L
+
+
+
+
+)
+
+
+
+
+
+
+q
+
+
+s
+
+
+
+
+
+
+1
+
+
+
+
+1.2
+
+
++
+
+
+2.3
+
+
+L
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(3)
+
+
+
+
+While s
+Fn
+ is related only to the gear data, h
+Fe
+ and α
+Fen
+ are related to the point of load application. As the standards always consider two meshing gears, the outer point of the single contact is considered as the point of the load application. In this case, dealing with the STBF tests, the load application point is defined by the contacts between the gear and anvils (which are shown in 
+Figure 2
+).
+Starting from the geometrical characteristics of the gear (
+Figure 4
+ and 
+Table 1
+), it is possible to determine all the Equation (1) coefficients; the results are shown in 
+Table 1
+. Therefore, h
+Fe
+ and α
+Fen
+ values and, subsequently, Y
+F
+ and Y
+S
+ have been calculated according to that diameter. h
+Fe
+ results to be equal to 0.53 mm,
+α
+Fen
+ equal to 13.79° and, subsequently
+Y
+F
+ = 1.5805 and Y
+S
+ = 1.5805.
+Thus, it is possible to obtain the stress–load relationship by using Equation (4):
+
+
+
+
+
+
+
+
+
+
+σ
+
+
+
+
+F
+
+
+0
+
+
+
+
+
+
+=
+
+
+5.17
+
+
+·
+
+
+
+
+
+
+10
+
+
+
+
+
+
+−
+
+
+2
+
+
+
+
+
+
+F
+
+
+
+
+
+
+
+
+
+
+(4)
+
+
+
+
+
+where F is in N and σ
+F0
+ is in MPa.
+By applying Equation (4) to the experimental points, reported in 
+Table 1
+, it is possible to draw the σ
+F0
+-N curve (at R = 0.1) shown in 
+Figure 5
+. The initial points of 
+Table 1
+ have been used to have an idea about the high cycle behavior of the tested gears. The last four points have been used to calculate the fatigue limit.
+The standards regarding the statistical elaborations of the fatigue data ([
+41
+,
+42
+]) require, even in the case of exploratory research, the use of several points greater than the one presented in 
+Figure 5
+. However, many approaches to short staircase are present in the literature (e.g., [
+43
+,
+44
+,
+45
+]). The short staircase methodologies defined by Dixon et al. [
+45
+] and Little [
+44
+] are used here to calculate the fatigue limit. Both approaches allow us to determine the fatigue limit X
+50%
+ (considered as a sensitivity analysis) at a given number of cycles (i.e., 5 × 10
+6
+ cycles) at a failure probability of 50%.
+Beside the formulas, the practical difference between the two proposed methods is the condition considered to increase/decrease the load during the staircase sequence. For the first method, the failure condition is represented by the breakdown (i.e., tooth breakage) of the specimen, while in the second case, the failure condition is considered as the breakdown of one of the two specimens that are tested at the same time under the same test conditions (i.e., applied load).
+In previous works [
+36
+,
+37
+], the couple of tested teeth is considered as a unique specimen. Therefore, the fatigue limit is calculated according to the first method. X
+50%
+ can be calculated as:
+
+
+
+
+
+
+
+
+
+
+X
+
+
+
+
+50
+
+
+%
+
+
+
+
+
+
+=
+
+
+
+
+X
+
+
+f
+
+
+
+
++
+
+
+kd
+
+
+
+
+
+
+
+
+
+
+(5)
+
+
+
+
+X
+f
+, defined as the last test level, is equal to 440 MPa and k, a constant depending on the failure-runout history, is set equal to 0.50; therefore, X
+50%
+, the fatigue limit with 50% reliability, results to be 453 MPa.
+As highlighted previously, in the symmetric test case, both teeth are subject to the same stress level. If we consider the tested teeth as two separate specimens, the choice to increase/decrease the test load (i.e., the failure condition) is done “ as soon as the first of the two specimen (i.e., the tested teeth) fails under simultaneous testing responds”. This situation is the so-called “specimen in series” [
+44
+].
+In this way it is possible to determine X
+50%
+ also considering the fact that, in reality, only one tooth is broken, while the other one (which is subject to the same stress level) is still intact.
+In this case, X
+50%
+ can be calculated as:
+
+
+
+
+
+
+
+
+
+
+X
+
+
+
+
+50
+
+
+%
+
+
+
+
+
+
+=
+
+
+
+
+X
+
+
+0
+
+
+
+
++
+
+
+d
+
+
+
+
+(
+
+
+Δ
+
+
+)
+
+
+
+
+
+
+
+
+
+
+
+
+(6)
+
+
+
+
+
+where X
+0
+ is the initial test level and Δ is a coefficient related to the staircase sequence and to the hypothesized statistical distribution. X_0 is equal to 446 MPa and, under the assumption of normality, Δ is equal to 0.54. Therefore, the fatigue limit X
+50%
+ is evaluated to be equal to 480 MPa.
+For the sake of completeness, in 
+Figure 4
+, the sloping part of the high-cycle fatigue curve is also shown. This part of the curve has been calculated by fitting the data related to the failed tests [
+45
+] using a least squares regression. As it has been performed by considering the couple of tested teeth as a unique specimen, the fitting has been extended until the limit calculated with the same statistical consideration (i.e., Equation (5)).
+Moreover, while tests on the equivalent wrought counterpart were not conducted, the results of monoaxial fatigue tests have shown that the wrought material performs better by approximately 30% [
+30
+] (
+Figure 6
+).
+Aiming to characterize the gears completely, metallographic observations and fracture surface analysis were carried out on some of the failed teeth. In particular, the crack path was investigated on the A3 tooth: after having cut it along the midplane, the section was mounted in a suitable resin and mirror polished according to the standard metallographic technique. Some porosities were observed on the surface both far from and close to the crack. In 
+Figure 7
+ some examples are reported. After etching, the melt pools were clearly visible both in the build and in the transversal direction. 
+Figure 8
+ shows the observed microstructures.
+In 
+Figure 9
+, the crack path was compared with the tooth microstructural features. It is clearly visible that the propagation direction is not influenced by the melt pool boundaries, but it is instead completely inside the pools.
+The chemical composition of the melt pools was investigated by Energy-Dispersive X-ray Spectroscopy (EDS) analysis as reported in 
+Figure 10
+ and 
+Table 4
+. No appreciable difference was detected among the pool center and boundaries.
+Finally, the fracture surfaces of some of the broken teeth belonging to gears A and B were analyzed by SEM (
+Figure 11
+ and 
+Figure 12
+). The crack origin was often related to surface and subsurface defects related to the production process (lack of fusion and gas porosities). In some cases, nonmelted metallic particles were observed too.
+In the literature there are several studies about the fatigue behavior of AM parts (e.g., [
+46
+,
+47
+,
+48
+,
+49
+]). All of them, even if done on different materials, report that the presence of such defects has a strong influence on the fatigue behavior. These considerations agree with the results coming from the present fatigue campaign.
+The present work is a part of a project aimed at the mechanical characterization of AM materials [
+50
+,
+51
+,
+52
+], specifically the determination of the fatigue limit, and their application to a classical machine element such as gears. In this context, it is of interest to compare the results of the present experimental campaign with the classical gear literature data aiming at evaluating the applicability of AM technologies in the context of gearbox design. ISO 6336-5:2016 [
+23
+] presents fatigue limits for steel which are like the one obtained in this experimental campaign. As an example, according to the aforementioned code, the bending fatigue limit σ
+FE
+ in the case of hardened wrought steel of medium quality (ME), at 1% failure probabilities and without considering any correction factors, typically ranges between 425 and 500 MPa, values comparable with the ones found in this experimental campaign.
+In future works, the effects of the various mechanical and thermal treatments on which the tooth root can undergo, will be studied. In this work, gears have been tested after hobbing and without any thermal treatment to set a reference for future studies. Therefore, there is still room for the increase of the tooth root bearing capacity by improving the tooth root roughness and adopting proper thermal treatment. For instance, ageing and Hot Isostatic Pressing (HIP) have beneficial effects on the fatigue behavior of an AM 17-4 Ph specimen [
+53
+,
+54
+].
+Despite the degree of freedom given by the design of the parts via AM, the low geometrical accuracy often requires the machining of the parts. This aspect is even more crucial in gears because the tooth profile must be as close as possible to the theoretical involute to avoid undesired levels of noise, vibration, wear, and fatigue phenomena. Thus, gear postprocess machining of the meshing parts remains necessary. Regarding the real advantages of producing small batches of full body gears, AM remains necessary when aiming at a gear tuning that wants to overcome the limits of the classic manufacturing processes and become an affordable technique for prototypes. Within this context, the evaluated fatigue resistance properties are a key positive factor.
+The aim of this work was to determine the fatigue limit at 50% failure probability X
+50%
+ for gears made by 17-4 PH produced via Laser Powder Bed Fusion (PBF-LB/M) according to ISO 6336. This was done with STBF tests, the results of which were successively analyzed by means of two different statistical approaches (Dixon and Little). The results could be used in accordance with the ISO 6336 standard for designing gears. In order to have a starting point for the evaluation of the effect that specific treatments (e.g., shoot peening, grinding, etc.) may have on the gear resistance, in the present work the gears have been tested without any treatment, which could further improve the gear resistance, to set a reference.
+By comparing the results with the data provided by the literature and by the standards (425 to 500 MPa for a case-hardened steel with MD quality), it results that the tested material’s properties are similar to the ones that are commonly used steel for gear applications. As confirmed by the SEM analysis, AM gears are affected by an important presence of defects related to the production process. These defects are the main source of nucleation of cracks in AM materials. This evidence supports the literature data (mainly obtained for other components or from cylindrical samples) confirming that the AM defects also negatively affect the gear behavior.
+F.C. followed the development of the rig, postprocessed the results and wrote the paper; L.B. performed the fatigue tests and wrote the paper; R.G. performed the fracture analyses; L.C., F.N., F.R. and C.G. revised the paper. All authors have read and agreed to the published version of the manuscript.
+The authors would like to thank the Free University of Bozen-Bolzano for the financial support given to this study through the project M.AM.De (TN2092, call CRC2017 Unibz PI Franco Concli 
+[email protected]
+).
+The datasets used and/or analyzed during the current study are available from the corresponding author on reasonable request.
+The authors declare that they have no competing interests.
+Publisher’s Note:
+ MDPI stays neutral with regard to jurisdictional claims in published maps and institutional affiliations.

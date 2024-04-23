@@ -1,0 +1,1303 @@
+Four-dimensional (4D) printing technology, as a next-generation additive manufacturing method, enables printed objects to further change their shapes, functionalities, or properties upon exposure to external stimuli. The 4D printing of programmable and deformable materials such as thermo-responsive shape-memory polymers (trSMPs), which possess the ability to change shape by exposure to heat, has attracted particular interest in recent years. Three-dimensional objects based on SMPs have been proposed for various potential applications in different fields, including soft robotics, smart actuators, biomedical and electronics. To enable the manufacturing of complex multifunctional 3D objects, SMPs are often coupled with other functional polymers or fillers during or before the 3D printing process. This review highlights the 4D printing of state-of-the-art multi-component SMP formulations. Commonly used 4D printing technologies such as material extrusion techniques including fused filament fabrication (FFF) and direct ink writing (DIW), as well as vat photopolymerization techniques such as stereolithography (SLA), digital light processing (DLP), and multi-photon polymerization (MPP), are discussed. Different multicomponent SMP systems, their actuation methods, and potential applications of the 3D printed objects are reviewed. Finally, current challenges and prospects for 4D printing technology are summarized.
+Shape-memory polymers (SMPs), whose ability to recover from a temporary programmed shape to a permanent shape in response to an external stimulus, have drawn increasing attention because of their scientific and technological significance [
+1
+,
+2
+,
+3
+,
+4
+]. Typical stimuli to trigger the shape transition in SMPs include heat (i.e., thermo-responsive), light (i.e., photo-responsive), chemicals (i.e., chemo-responsive, e.g., water/moisture, pH change), or mechanical loading (i.e., mechano-responsive). Thermo-responsive SMPs (trSMPs) have been most extensively studied because of their tailorable transition temperature (
+T
+r
+) and the convenience with which their shape change may be triggered [
+5
+,
+6
+]. The activation of trSMPs can be carried out by either directly, by increasing the environmental temperature (
+T
+e
+), or indirectly, by Joule heating (i.e., passing electric current), inductive heating (i.e., exposure to an alternating magnetic field: AMF), or photo-thermal effects (i.e., exposure to light) [
+6
+,
+7
+,
+8
+]. At the molecular level, trSMPs consists of net points and a switching domain. The net points can either be covalent crosslinks (SMP networks) or physical intermolecular interactions such as hydrogen bonds or crystallites (thermoplastic SMPs) and act as memory components of the network. On the other hand, the switching domains are flexible polymer chains associated with a thermal transition (glass transition temperature, 
+T
+g
+, or melting transition, 
+T
+m
+) and are responsible for the shape change process. To observe the shape-memory effect (SME), a thermomechanical programming procedure consisting of deformation to a temporary shape at elevated temperature (
+T
+ > 
+T
+r
+) and subsequent cooling under constraint to a low temperature (
+T
+ < 
+T
+r
+), is required. The recovery to the original shape takes place by reheating the polymer to an elevated temperature (
+T
+ > 
+T
+r
+). The quantification of the SME is carried out by determining the shape-recovery (
+R
+r
+) and shape-fixity ratios (
+R
+f
+), as commonly described in the literature [
+9
+,
+10
+,
+11
+].
+A combination of SMPs and other functional materials is helpful to improve properties and increase relevance in technological applications. Such multicomponent SMPs provide high deformation capability, improved recovery force, faster shape recovery, and better shape fixity/recovery ratios [
+1
+,
+12
+]. The excellent performance of multicomponent SMPs has found potential utility in the aerospace, biomedical, electronic, and textile industries [
+13
+,
+14
+]. However, conventional processing techniques are limited in their ability to produce complex structures with precise dimensions useful for the aforementioned fields [
+15
+,
+16
+]. For this reason, additive manufacturing is being investigated.
+Additive manufacturing, colloquially known as 3D printing (3DP), has attracted increasing interest of academic and industrial researchers and engineers due to its appealing features, such as prototyping freedom and the ability to realize complex structures at high resolution [
+17
+,
+18
+,
+19
+]. The 3DP of smart, deformable materials has resulted in the creation of a new term, “4D printing (4DP)”, which refers to the ability of materials to alter their form after they are printed, with time as the fourth dimension that is controlled through the design of dynamic structures [
+16
+,
+20
+]. Four-dimensional printing provides additional functional capabilities and performance-driven utility in a broad range of domains, such as aerospace, biomimetic, biomedical, electronic, acoustic, textile, fashion, mechanical, defense, retail, and food industry applications [
+21
+]. The term “4D” in combination with “printing” emerged for the first time in 2012 in a conference proceeding, where it referred to a 4D barcode (color + 2D + time) [
+22
+]. However, the first journal publication related to the 3DP of photo-polymeric inks with shape change capability appeared in 2013 [
+23
+]. Here, the initial configuration was created by 3DP, while the programmed action of the polymer created a time-dependent configuration—the 4D aspect. Since then, hundreds of publications related to 3DP with smart, programmable, and stimuli-responsive materials, resulting in such 4D effects, have appeared in the literature, as shown in 
+Figure 1
+. The number of publications and patents based on “Web of Science”, “scopus.com”, and “SciFinder” searches using the term “4D printing” and “4D printing of SMPs” have shown an exponential increase since 2012.
+SMPs are the most investigated 4D printed materials, and this can be attributed to their tailorable elastic properties and immense potential for technological applications [
+24
+,
+25
+,
+26
+,
+27
+]. The increasing number of publications related to the term “4D printing of SMPs” is shown in 
+Figure 1
+b. Various functions such as sensing, degradability, and self-healing have been combined with shape-memory capabilities in 4D-printed objects using different 3DP techniques [
+24
+,
+28
+,
+29
+,
+30
+,
+31
+]. Furthermore, as SMPs can respond to various stimuli (such as temperature, humidity, electric current, magnetic fields, and changes in pH), this opens unprecedented opportunities for 4DP [
+27
+,
+32
+,
+33
+,
+34
+]. However, most current publications deal with the 4D printing of trSMPs, with their shape-memory response activated by direct or indirect heating methods [
+32
+,
+35
+]. With the growth in 3DP technology, it is expected that SMP-based 4D objects responsive to other stimuli will also be developed, which will create a myriad of scientific and technological possibilities [
+36
+].
+Recent advances in 3DP have focused on printing of multicomponent SMPs to produce complex 4D objects with enhanced properties along with the shape-memory effect (SME) [
+16
+,
+28
+,
+37
+,
+38
+]. Generally, in a multicomponent system, polymers are combined with metals or other inorganic materials to realize new functions or improve thermal or mechanical properties [
+1
+,
+34
+,
+39
+,
+40
+]. The fabrication of such heterogeneous systems presents an exciting challenge for fundamental and applied research involving knowledge of physics, chemistry, mathematics, materials science, and process engineering [
+38
+,
+41
+,
+42
+,
+43
+]. Based on growing interest in this area, we aim to review the recent advances in 4D printing of multicomponent SMP formulations with more than one discernible phase (e.g., SMP-based composites and blends), as each of the phases brings new functionality to the printed object.
+The existing surveys and reviews covering the subject of 3D and 4DP of SMPs partially address the multicomponent aspect of SMPs [
+16
+,
+38
+,
+41
+,
+44
+,
+45
+]. Multicomponent SMPs have unique functionalities but complex molecular architecture, including phase-segregated domains associated with different thermal transitions, as well as functional fillers and/or additives [
+1
+,
+44
+]. Three-dimensionally printing these materials is challenging, and it is crucial to show the limitations and possible improvements in the context of different 3DP techniques [
+46
+,
+47
+]. Therefore, the present review article highlights current literature concerning the 4DP of multicomponent SMP formulations using different AM techniques. The review starts with a general overview of multicomponent SMPs, fabrication strategies, limitations, and potential applications. The subsequent sections describe the different 3DP technologies that are particularly applicable for the printing of multicomponent SMP formulations. We start with material extrusion (MEX) printing techniques such as fused filament fabrication (FFF) (
+Figure 2
+a) and direct ink writing (DIW) (
+Figure 2
+b). Next, we summarize the printing of multicomponent SMPs by different vat-photopolymerization (VPP) techniques, including digital-light processing (DLP) (
+Figure 2
+c), stereolithography (SLA), and multi-photon polymerization (MPP). Subsequently, a description of multi-material printing of SMPs by material jetting (MJT) (
+Figure 2
+d) is described. Finally, a conclusion with potential applications, limitations, and future direction in developing 3D/4D printing of SMPs is provided. Printing methods such as powder bed fusion (PBF), binder jetting (BJT), sheet lamination (SHL), and direct energy deposition (DED) are not discussed here as they are generally used with metallic shape-memory alloys. Furthermore, to keep the focus on multicomponent SMP formulation, other aspects of 4DP such as one component SMPs, self-folding/self-expanding systems, self-healing, and shape-changing materials based on liquid crystalline domains have been excluded from this review.
+SMPs are sometimes used in isolation as single materials; more often, they are combined with other functional materials. For example, polymers, metals, or other inorganic materials, in the shape of particles, fibers, and laminates, are combined to create multicomponent systems. Since these multicomponent systems are built up from discrete phases consisting of SMPs mixed with other polymers at the macroscopic or molecular level or reinforced with other domains (e.g., inorganic particle), they are particularly suited for the realization of multifunctionality [
+1
+,
+34
+,
+48
+,
+49
+,
+50
+]. Composites that consist of a polymer matrix with solid filler or reinforcement are common multicomponent systems to enable multiple functions in a single material [
+4
+,
+51
+]. Active fillers such as iron oxide nanoparticles (IONP), carbon black (CB) and carbon nanotubes (CNT) are incorporated into SMPs using conventional processing techniques [
+36
+,
+52
+,
+53
+]. These fillers introduce new functions such as magneto-sensitivity, electric conductivity, or photosensitivity into SMPs along with thermal and structural functionalities [
+50
+,
+51
+,
+54
+].
+Furthermore, when well-dispersed and compatible with the matrix, nanofillers provide much higher interfacial area per unit mass and much lower interparticle distances vs. conventional fillers, resulting in fundamental changes in polymer microstructure and behavior in the resultant nanocomposites. Additionally, high-aspect-ratio nanofillers are less readily damaged than their larger equivalents, providing the potential for much lower percolation thresholds in practice. However, being distinct phases, each constituent in such a multicomponent system remains recognizable and retains its characteristics, and well-defined adhesion levels between these phases are required for the successful realization of new functionalities [
+36
+,
+55
+]. Other possible arrangements to enable SMP-based multicomponent systems are blends, interpenetrating polymer networks (IPNs), and macroscopic layered architectures [
+56
+,
+57
+].
+In the blending approach, instead of non-polymeric domains, SMPs are physically mixed with other functional polymers with or without chemical bonding. The polymer blend not only alters the thermal and mechanical properties of the base SMP but can also offer new functionalities not found in the original polymers. Here, the compatibility of the blend components is an important criterion in the development of high-performance multifunctional materials. However, most polymer blends are heterogenous systems, as sometimes, the structural differences of the individual polymers are more important than their composition. For instance, polyethylene and polypropylene technically have the same composition, since they are both saturated hydrocarbons with the same C:H ratios, but they do not mix [
+56
+,
+57
+]. Another approach with similar spatial organization is an IPN, a thermodynamically stable arrangement of multicomponent crosslinked polymeric materials. An IPN is a combination of two or more polymer networks which are not covalently linked to each other and are obtained by two independent crosslinking reactions occurring sequentially or simultaneously to form two different networks. Numerous IPN-based SMPs have been investigated in recent years, and some have exhibited improved properties and new functionalities as well [
+57
+].
+Among these different techniques, multilayer technology is considered one of the most efficient and practical owing to its simplicity and versatility [
+58
+]. SMPs and other functional polymers with desirable functionalities and architectures can be stacked together in a bi-/multilayer polymer system with a simple interface [
+59
+]. For example, combinations of SMPs with soft and rigid layers or layers with different coefficients of thermal expansion have been produced to enable novel shape change behavior [
+60
+,
+61
+]. However, successful integration of different functions depends on the individual layers, layer geometry and the character of the interface between layers [
+58
+].
+Modern 3DP techniques provide a growing range of possibilities to print multicomponent systems (i.e., composites, blends, IPNs or layered structures) at different dimensional scales [
+21
+,
+30
+,
+46
+]. For example, SMP-based multicomponent systems have been used for the 3DP of responsive mechanical devices, where part geometry has been scaled down to micro- and nanometer levels to form metamaterials [
+62
+,
+63
+]. However, among the list of widely adopted 3DP techniques, few have been used or customized to be suitable for the 3DP of multicomponent SMPs formulations. These mainly include MEX-based 3DP (e.g., FFF and DIW), VPP (e.g., DLP, SLA, and MPP) and MJT [
+38
+]. Here, the selection of a 3D printer is related to its suitability to print either an ink, liquid resin, or filament. Furthermore, the printer should allow for the adjustment of key parameters affecting material deposition and solidification, such as printing speeds, delivery volumes, material, and chamber temperatures [
+37
+,
+41
+,
+42
+]. A schematic demonstration of some of most used 3DP techniques along with their capacity to print different multicomponent SMP formulations is shown in 
+Figure 2
+.
+MEX printers are commonly used to print SMP particulate composites or blends. Additionally, by using print heads with multiple nozzles, MEX systems can simultaneously print several materials (i.e., layered structures), for example, multi-color objects or complex objects with dissolvable support structures [
+64
+,
+65
+]. Nevertheless, there are some limitations in MEX printing, as the printed parts have mechanical anisotropy in the z-direction (vertical direction) and produce parts with stepped structures at their surfaces [
+37
+,
+66
+]. Furthermore, a lack of strong inter-layer bonding can lead to mechanical failure of the printed object, particularly after repeated shape changing cycles [
+16
+,
+67
+]. Nevertheless, the printing parameters and the material characteristics have a significant effect on the fatigue behavior of the printed objects [
+68
+].
+VPP, on the other hand, is limited to the printing of low-viscosity (<10 Pa s) photopolymers that tend to have poor aging characteristics and limited thermal stability but can provide objects with good resolution and surface finish [
+69
+]. The VPP of high-viscosity resins is challenging, as the vertical detachment of the crosslinked layer from vat film can occur. Nevertheless, there are some reports about the heat-assisted VPP of highly viscous photopolymers, as heating can reduce the viscosity [
+70
+]. VPP techniques have also been used to print multicomponent SMP resins with electric or magnetic functionalities [
+71
+,
+72
+]. Here, careful control over the ratio of the reinforcement and matrix is required as high amount of reinforcement can absorb and scatter the light, resulting in partially crosslinked systems with poor mechanical properties [
+73
+]. Nonetheless, by controlling the exposure time or by using multiple vat systems with different photopolymers, multi-material printing can also be performed. However, changing materials during printing significantly slows the printing process since a wiping/cleaning step is needed to avoid cross-contamination [
+74
+].
+Compared to VPP, MJT printing has an intrinsic capability to print multiple materials simultaneously, given the ease with which multiple ink reservoirs and multiple nozzles may be implemented as in a conventional color ink jet printer [
+75
+,
+76
+]. The multi-material printing of a variety of SMP resins via the MJT method is reported [
+31
+,
+77
+]. Such multi-material systems provide novel shape memory functionalities along with tailorable thermal and mechanical properties of the printed objects.
+Anisotropic polymer chain orientation, complex geometries that resemble natural structures, and combinations of different materials in different layouts bring more flexibility to accomplish complex actuation not possible with other shaping methods such as injection molding, extrusion, and thermoforming. One possible disadvantage of AM with respect to other shaping technologies is that AM is prone to small defects that can change the mechanical, optical, thermal, and electrical properties of the produced objects. However, since the scope of this review is on AM, other manufacturing techniques for SMPs are not described. Therefore, the following sections described the different AM techniques that can be used to shape SMPs with a tailored functionality due to the structures resulting from 3D printing.
+In sum, there have been significant efforts in the scientific community to fabricate SMP based multicomponent systems with novel functions via a variety of approaches. In the following sections, further details are given concerning the results obtained in each of the 3DP categories selected for this review.
+ISO/ASTM 52,900 defines MEX as an “additive manufacturing process in which material is selectively dispensed through a nozzle or orifice”. Based on this definition, fused deposition modeling (FDM)/fused filament fabrication (FFF) and direct ink writing (DIW) are MEX technologies. The following subsections of the review discuss these two extrusion technologies and their application to the 4D printing of multicomponent trSMP materials and macrostructures.
+MEX using filaments as feedstock materials was first patented in 1989 by Scott Crump [
+78
+] and later commercialized as fused deposition modeling (FDM) by the company Stratasys, Inc. (Rehovot, Israel) As FDM is a registered trademark of Stratasys [
+79
+]; therefore, the alternative name fused filament fabrication (FFF) was introduced by members of the RepRap project [
+80
+]. Some alternative names such as fused layer modeling (FLM) [
+81
+] and layer plastic deposition (LPD) have also been proposed [
+82
+], but they are not popular. In this review, FFF will be utilized to refer to the most widely used MEX technique for processing thermoplastic-based materials. The versatility and low cost of the equipment and materials, the range of available materials, and the simplicity of operation and troubleshooting are all factors that contribute to FFF’s popularity as a workshop tool in industrial and hobby settings alike [
+83
+]. Therefore, it comes as no surprise that there are numerous examples in the literature where FFF has been used for the 4D printing of multi-material trSMP systems.
+During the FFF process, the feedstock material is forced through a nozzle at temperatures at which it can flow. The generation of flow fields during both extrusion from the nozzle and deposition from a moving head onto the build platform or on top of the previously deposited layers can cause orientation of any anisotropic species present, from fillers down to individual macromolecules. When the material is rapidly (often directionally) cooled during the deposition process, residual texture and thermal stresses arising from both the flow and the cooling processes can result [
+84
+]. Shape memory behavior has been observed in thermoplastics available as filaments for FFF such as polylactic acid (PLA) [
+25
+,
+83
+,
+84
+,
+85
+], polyurethanes (TPU) [
+26
+], acrylonitrile butadiene styrene (ABS) [
+30
+], and poly(vinyl alcohol) (PVA) [
+86
+]. Heating these thermoplastics beyond their 
+T
+g
+ accelerates the stress relaxation process leading to self-deformation, which can be used to prepare self-folding origami by programming the deformation direction based on the deposition pattern of the extruded roads or strands. For example, some layers are printed axially, others transversally and yet others in an isotropic manner to realize twists and bends in selected sections of a printed part [
+30
+,
+83
+]. In this review, the emphasis is placed on the 4D printing of trSMPs, which require thermo-mechanical programming to enable a shape-memory effect (SME). Therefore, it is better to deposit layers in a way that leads to isotropic properties in the deposition plane (e.g., alternating layers with +45° and −45° raster angles) at as high a density as possible to prevent delamination of the layers during the forced deformation [
+87
+]. The shape memory response of thermoplastics processed by FFF can also be changed by using different processing parameters, such as extrusion temperature and speed and layer height. It was observed that PLA processed at 210 °C and 40 mm/s and with a 0.3 mm layer height had a larger recovery ratio compared to when it was processed at 180 °C and 80 mm/s with a 0.15 mm layer height [
+88
+]. Additionally, greater shape recovery could be achieved when programming was performed at 85 °C compared to 65 °C [
+15
+].
+On certain occasions, neat thermoplastics need to be modified to increase their printability, in particular to prevent geometrical distortions during FFF [
+88
+], and provide additional functionalities, such as enhanced thermal [
+89
+] or electrical conductivity [
+90
+], magnetic properties [
+91
+], mechanical reinforcement [
+92
+], or drug release capabilities [
+93
+]. Therefore, thermoplastic blends and composites have been prepared to further enhance the thermos-responsive shape memory capabilities of structures printed via FFF. On other occasions, the deposition of two or more distinct materials in different sections of a 3D object can help to realize the desired shape memory behavior. This is generally achieved using FFF devices with multiple nozzles. Different multi-material SMPs and 3D objects consisting of discernible phases, their properties and applications are described in the following sub-sections.
+As previously mentioned, PLA is a common thermoplastic material used in FFF that shows a thermo-responsive SME. To modify the shape-memory properties, blending of PLA with other thermoplastics is carried out. Jing et al. [
+94
+] prepared mixtures of PLA and TPU at weight ratios of 90/10, 80/20, 70/30, and 60/40 using a twin-screw extruder. The PLA/TPU mixtures were immiscible as observed by scanning electron microscopy images (SEM), with TPU droplets changing to fibrils as the content of TPU increased from 10 to 40 wt.% in the printed specimens thanks to shear elongation. All the samples were able to be fixed into temporary shapes at room temperature without additional heating or cooling cycles (
+Figure 3
+a). It was observed that the blend containing 80 wt.% PLA had the highest 
+
+
+
+
+
+
+R
+
+
+f
+
+
+
+
+
+
+ (
+
+
+
+
+
+
+R
+
+
+
+
+f
+
+
+ 
+
+
+
+
+
+
+
+
+ = 82% in tension, 
+
+
+
+
+
+
+R
+
+
+f
+
+
+
+
+ 
+
+
+
+
+= 91% in compression, and 
+
+
+
+
+
+
+R
+
+
+f
+
+
+
+
+ 
+
+
+
+
+= 84% in bending) at room temperature, but it also displayed brittle behavior and became more brittle as the number of loading cycles reached three. Here, PLA crystalline domains acted as crosslink points, retaining the original shape, while the TPU phase acted to accommodate strain, preventing the PLA from breaking at high deformations. Once heated beyond their 
+T
+g
+ (60 °C), the PLA molecules displayed increased mobility and released the stored stresses, enabling the specimens to return to their original shapes. In another study by Leng et al. [
+95
+], 80/20 TPU/PLA mixtures were compounded via twin-screw extrusion, converted to filaments, and processed via FFF. However, the high content of TPU made the obtained filaments very flexible and difficult to print, necessitating the use of a screw-based MEX system. Leng et al. also observed that PLA tended to fibrillate under certain extrusion conditions when the PLA/TPU viscosity ratio (
+
+
+
+
+
+
+η
+
+
+
+
+P
+
+
+L
+
+
+A
+
+
+
+
+
+
+/
+
+
+
+
+η
+
+
+
+
+T
+
+
+P
+
+
+U
+
+
+
+
+
+
+
+
+) was close to 1, as observed at extrusion temperatures of lower than 190 °C in the 3D printer. The PLA fibrils were visualized by dissolving the TPU in dimethylformamide (DMF) and taking scanning electron microscopy (SEM) images of the remaining material. It was observed that PLA fibrils with large aspect ratios were formed in the nozzle of the printer and were oriented in the direction of deposition in the 3D printed specimens. The degree of crystallinity of the printed specimens was much higher than for samples produced by compression molding due to the different heating/cooling rates, and levels of polymer chain orientation. The higher crystallinity resulted in a higher tensile strength and Young’s modulus for the printed specimens. The shape memory capabilities of these TPU/PLA polymer–polymer composites were later evaluated by Jiang et al. [
+96
+]. In this study, the content of PLA was varied from 0 to 30 wt.%. As the content of PLA increased, 
+
+
+
+
+
+
+R
+
+
+f
+
+
+
+
+
+
+ improved, but the recovery ratio (
+
+
+
+
+
+
+R
+
+
+r
+
+
+
+
+
+
+) decreased. The optimum overall shape memory behavior was achieved by adding 10 wt.% of PLA to TPU (
+
+
+
+
+
+
+R
+
+
+f
+
+
+
+
+ 
+
+
+
+
+= 91%, 
+
+
+
+
+
+
+R
+
+
+r
+
+
+
+
+ 
+
+
+
+
+= 71%). The orientation of the infill also played a role in the shape memory ratios obtained. When the infill was parallel to the direction of the applied force (i.e., 0°), the fixity ratio (
+
+
+
+
+
+
+R
+
+
+f
+
+
+
+
+
+
+ = 90%) was the highest, followed by when the orientation was 45° from the loading direction (
+
+
+
+
+
+
+R
+
+
+f
+
+
+
+
+
+
+ = 72%). Using an infill pattern perpendicular to the applied force (i.e., 90°) yield the lowest 
+
+
+
+
+
+
+R
+
+
+f
+
+
+
+
+
+
+ (
+
+
+
+
+
+
+R
+
+
+f
+
+
+
+
+
+
+ = 65%). In contrast, 
+
+
+
+
+
+
+R
+
+
+r
+
+
+
+
+
+
+ was not significantly affected by the infill orientation, with all specimens having 
+
+
+
+
+
+
+R
+
+
+r
+
+
+
+
+
+
+ values between 71 to 75% [
+96
+] (
+Figure 3
+d).
+Another blend of thermoplastic polymers that has been recently reported to display shape memory capabilities is that of polybutylene succinate (PBS), with PLA at a mass ratio of 9:1. This blend was prepared by melt compounding in a twin-screw extruder, with the resultant filaments used directly for FFF. It was observed that the PBS/PLA mixture had a recovery ratio of 92%, significantly lower than that of pure PLA (99%). It was hypothesized that PBS hindered the formation of PLA chain entanglements, thus diminishing the recovery ratio. A starfish object, an endoluminal stent, an embolization coil and a porous scaffold were printed to demonstrate the actuation capability of the material and its applicability in possible medical applications. The FFF printed objects were programmed in hot water at ~85 °C, after which their shape was fixed at room temperature. As expected, the recovery time of the structures after heating was dependent on the shape and volume of the objects (
+Figure 3
+e) [
+97
+].
+Particulates can bring additional functionalities and can enhance the printability and performance of SMPs; for example, they can be used to make electroactive [
+64
+,
+98
+,
+99
+,
+100
+], photo-responsive [
+32
+,
+85
+], and inductive [
+101
+,
+102
+] materials for indirect heating of the trSMP matrix. They can also be used to improve fixity and recovery ratios by creating different morphologies in SMPs [
+103
+]. In this subsection, research work with particulate filled thermoplastic trSMPs is summarized.
+Using paper as a substrate, Wang et al. [
+98
+] used a PLA/graphene based filament to print single layer structures that could be heated by passing an electric current through them. The shapes were programmed at 70 °C, and as the electric current passed through the composite and heated the structure, it recovered its original shape. Copper tape was placed at the extremities of the printed structure to create electrodes, and wires were soldered to the copper tape to pass the electric current through the printed structure. It was observed that the temperature of the composite and the angle of deformation of the printed structure were proportional to the voltage applied. A voltage of 50 V gave rise to a temperature of approximately 50 °C, and a voltage of 100 V increased the temperature to around 110 °C. As the number of heating cycles increased, the angle of recovery decreased [
+98
+]. Another example was the use of PLA filaments filled with 53 wt.% carbon black (CB), which were used to print structures with different infill orientations (0°, ±45° and 90°); the effect of Joule heating was investigated by applying 30 V (DC) for 20 min. It was observed that specimens with infill orientations of 0° and ±45° could reach higher temperatures of around 46 °C compared to specimens with an infill orientation of 90°, which could only reach 40 °C. However, the temperature distribution along the specimen was more homogeneous for the specimens with a 0° infill orientation [
+100
+] (
+Figure 4
+a). Therefore, the overall part design and infill orientation must be considered when generating structures for 4D printing with electroactive materials, since these two parameters can locally alter the response of such parts.
+Yang et al. [
+32
+] prepared TPU-CB composites that could be processed by a commercial FFF machine. CB has a 92% photothermal conversion efficiency; therefore, addition of CB to a shape memory TPU can be used to fabricate photo-responsive shape memory materials. Exposure to sunlight with an intensity of 76 mW/cm
+2
+ for 160 s was enough to recover the shape of a hollow cube frame with a side length of 30 mm. CB content was varied from 0.1 to 15 wt.%, and it was observed that the higher the content, the higher the temperature that was achieved. For example, when heating with a xenon light source with an intensity of 60 mW/cm
+2
+ for 900 s, the unfilled TPU reached a maximum temperature of 29.3 °C, while TPU filled with 15 wt.% carbon black reached 40.5 °C. Thus, variations in filler content can be used to tailor the response of FFF produced objects. A content of 10 wt.% was selected for 3DP because with this CB content, the filaments with desirable diameter could be extruded and was reliably printable by FFF. Using this material, a sunflower-like object was printed that opened when exposed to light (
+Figure 4
+b). Using solution casting, Hua et al. [
+85
+] prepared mixtures of PLA and multiwalled carbon nanotubes (MWCNT) at concentrations from 0.1 to 0.6 wt.%; the material was then extruded into filaments and used to 3D print objects by FFF. The light source used in this investigation was a 275 W near infrared lamp. A systematic investigation showed that exposing films of the neat PLA to the infrared light for 15 s raised their temperature to approximately 90 °C, while the composites containing 0.6 wt.% MWCNT reached a temperature of approximately 170 °C; therefore, the photo-responsive nature of the composite was demonstrated. Rectangular actuators (60 mm × 6 mm) were fabricated by printing two layers of the photo-responsive composite containing 0.5 wt.% MWCNT and a thickness of 200 µm on top of a piece of paper with a thickness of 300 µm. The actuators were fabricated with infill densities of 100, 66, 60, or 57%. It was observed that an infill density of 100% gave the longest response and recovery times. Infill densities between 57 and 66% gave similar response times, but an infill density of 66% gave the fastest recovery time. This highlighted the effect of infill density on the performance of photo-responsive SMPs. A flower-like structure was printed that opened and closed as the infrared light was turned on and off.
+Lin et al. [
+101
+] added Fe
+3
+O
+4
+ particles to PLA by solution casting and prepared filaments that could be successfully processed using conventional FFF equipment. The addition of Fe
+3
+O
+4
+ particles made the resulting composite magneto-responsive, allowing for inductive heating by exposure to an alternating magnetic field (AMF). An AMF with a frequency of 27.5 kHz and field strength of 4 kA/m was used to investigate the magnetically induced shape memory behavior of PLA composites with different iron oxide concentrations. The PLA composite with 10 wt.% of Fe
+3
+O
+4
+ experienced sufficient inductive heating to initiate shape recovery. All composites had 
+R
+r
+ values above 94% despite adding up to 20 wt.% of magnetic particles. Using a composite containing 10 wt.% iron oxide, it was possible to print occluders to treat a congenital heart disease known as atrial septal defect (ASD). It was observed that the printed occluders could recover their shape within 16 s in the AMF described above (
+Figure 4
+c). In a similar study, Zhao et al. [
+32
+] prepared a PLA-15 wt.% Fe
+3
+O
+4
+ composite filament via solution casting followed by twin-screw extrusion. Using this composite filament, tracheal scaffolds were produced by FFF. These scaffolds showed a recovery time of 35 s when exposed to a magnetic field strength of 4 kA/m and frequency of 30 kHz (
+Figure 4
+d). The printed scaffolds were tested in vitro, and the results showed these devices to be promising for artificial tracheal scaffold repair.
+Hosseinnezhad et al. [
+103
+] added cellulose nanofibers (CNF) to polymer–polymer composites of PLA and polybutylene adipate terephthalate (PBAT) to be used in FFF. The introduction of CNF enhanced the conversion of PBAT droplets to PBAT fibrils during the extrusion process; the thinner PBAT fibrils interacted more strongly with the different phases present (i.e., PLA, CNF). The improved interfacial compatibility between the different components enhanced the strain recovery, strain fixity, and recovery rates. Furthermore, the addition of CNF increased the crystallization temperature of PBAT by 30 K, which further separated the PBAT transition temperature from the 
+T
+g
+ of PLA and enabled a triple-shape effect that was otherwise impossible without the CNF.
+Continuous fiber-reinforced composites can be used to provide lighter, stiffer parts with greater energy absorption capabilities as compared to those provided by particulate-filled composites. FFF is a convenient way to prepare complex geometries with continuous fiber-reinforced thermoplastics using special FFF devices that allow for the co-extrusion and co-deposition of fibers and thermoplastics [
+104
+]. Besides mechanical reinforcement, electrically conductive continuous fibers can be used to heat trSMPs [
+33
+,
+104
+,
+105
+,
+106
+,
+107
+]. In this section, examples of continuous fiber-reinforced thermoplastic structures that change shape due to Joule heating are discussed.
+Yang et al. [
+104
+] investigated the Joule heating of 3D printed structures consisting of continuous carbon fibers (CF) and PLA or PEEK produced by a modified FFF machine. Bar specimens were prepared with one layer of neat polymer and a second layer of polymer reinforced with the continuous CF. The FFF specimens showed a linear relationship between electric power and temperature. The data showed that there were two distinct slopes: one steeper from room temperature to 
+T
+g
+ and another one less steep from 
+T
+g
+ to 
+T
+m
+, indicating a diminution of the thermal conductivity of the respective polymer matrices. Specimens with a PLA matrix needed 0.45 W of electric power to reach PLA’s 
+T
+g
+ of 57 °C and 2.4 W to reach the onset of melting (~155 °C), while specimens with a PEEK matrix required 1.6 W to reach PEEK’s 
+T
+g
+ of 143 °C and 5.1 W to reach the onset of melting (~282 °C) (
+Figure 5
+a). Bilayer specimens fixed as cantilever beams bent up as the temperature increased and down as the temperature decreased due to the different stiffnesses and thermal properties of the layers. The bending degree was proportional to the power applied and followed a similar trend to that of power vs. temperature. Nevertheless, not all specimens were able to fully recover from such deformations following heating and cooling. The authors attributed this to the softening of the polymers and increased shear stress at the fiber–matrix interface at temperatures higher than 
+T
+g
+. This study demonstrated that in such printed bilayer structures, it is possible to control the deformation by controlling the amount of applied power. Zeng et al. [
+33
+] reported the effect of printing parameters on the mechanical properties of continuous CF reinforced PLA specimens produced by FFF. Increasing the extrusion temperature promoted more complete densification, resulting in higher bending performance and lower surface roughness of the printed components. In contrast, higher printing speeds caused weak interfacial bonding, resulting in a poor mechanical response. By increasing the amount of deposited continuous fiber and using a deposition angle parallel to the length of the bending specimen, the bending strength of FFF specimens could be increased. The Joule heating and shape recovery of specimens with the highest bending strengths was evaluated, and it was observed that applying 5 V for 75 s increased the temperature to 75 °C and induced recovery of 95% of the original shape. Here, fiber breakage and delamination were considered as major obstacles to 100% shape recovery (
+Figure 5
+b). The infill geometry used in continuously reinforced structures was also investigated in PLA-CF composites. Zeng et al. [
+106
+] prepared horseshoe lattice structures with different sinusoidal wave amplitudes (
+Figure 5
+c). It was observed that all metamaterial structures had the ability to fix their temporary shapes and freely recover their original shapes. Of particular interest was the fact that the sinusoidal wave amplitude affected the shape recovery and shape fixity ratios of the prepared specimens. A larger sinusoidal wave amplitude gave the highest shape recovery ratio (
+R
+r
+) and the lowest shape fixity ratio (
+R
+f
+).
+Le Duigou et al. investigated a combination of Joule heating and hygroscopic actuation was investigated by adding continuous CF to polyamide [
+107
+]. Two types of polyamide (PA6 and PA6-I) were used as shape memory polymers. PA6-I-CF filaments were used to prepare Joule heating elements in the printed structures. The 3D-printed specimens had one layer of hygroscopically active PA6-based material and another layer of PA6-I-CF based electrically active material in a U-shape configuration at the edge of the layer. Combining these two materials allowed the structure to be straight when fully saturated with moisture and curled when in the dry state (
+Figure 5
+d). Joule heating was used to speed up the drying process since the natural desorption mechanism of PA6 is very slow. The thickness of the different layers was optimized using bimetallic strip theory calculations in order to achieve maximal curvature actuation. The deposition pattern of the CF-reinforced composite was used to control the mechanical reinforcement (i.e., stiffness) and the geometry of the electrically conductive path. The measured peak temperatures generated by Joule heating did not exceed the 
+T
+g
+ of PA6 or PA6-I; therefore, the thermal strains were low, and the hygroscopic strains dominated the actuation in the printed structures. Nevertheless, the authors did not measure the drop in the 
+T
+g
+’s due to moisture uptake.
+Multi-nozzle FFF printers can be used to print complex structures with variable stiffnesses and multiple functionalities by combining different SMPs and/or composites in one 3D object. Here, the printing parameters, the ratio between the different materials, and the geometry of each layer can be used to control the shape-memory response of these multi-material 3D objects. Some examples of multi-material printing of trSMPs are discussed in this section.
+Wang and Lin [
+108
+] prepared laminate structures with reversible shape-change properties by combining TPU and PLA using a dual-nozzle FFF machine. The printed laminates had layers of PLA that acted as an active material and layers of TPU that acted as a passive material, providing the structure with a reversible shape memory capability without an external mechanical programming step. The TPU used had a glass transition below 0 °C but a Shore hardness of 90 A, ensuring that it could be printed as a filament. As pointed out in previous investigations [
+83
+], the printing conditions used for depositing PLA can be used to control the amount of thermal expansion and contraction, in order to maximize bending deformation. By heating the bilayer system through the 
+T
+g
+ = 63 °C of PLA to a higher temperature 
+T
+h
+ = 90 °C and then cooling it to room temperature, a reversible bending behavior was observed. Furthermore, by changing the infill direction, PLA to TPU thickness ratio and overall geometry of the printed specimen, it was possible to control the achievable bending deformation (
+Figure 6
+a).
+Wang et al. [
+109
+] used a triple nozzle FFF machine to fabricate 3D objects with filaments consisting of PLA and thermochromic pigments. The 3D objects had shape changing and color changing capabilities. For example, a multi-material flower was produced with orange and green petals that could open when heated to 
+T
+r
+ = 80 °C, while at the same time, all of the petals turned yellow. Other fabricated structures changed color to camouflage certain information in printed letters or QR codes. Chen et al. [
+64
+] combined an electroactive shape-memory composite with a color changing composite in a single 3D object. The electroactive composite was CB-filled PLA, while the color-changing composite was PLA containing a thermochromic pigment. A custom-built dual-nozzle FFF machine was used to prepare a multi-material starfish object that could change color from purple to pink by electric heating. The starfish consisted of three sections; the bottom and top sections were printed with the thermochromic composite, while the middle section was printed with the electroactive composite. The middle layer had a different inner structure as well, providing variations in electrical resistance and Joule heating capacity in different parts of the printed starfish (
+Figure 6
+b,c). A similar strategy was used with thinner structures resembling the wings of a dragonfly that could change shape and color as an electric current was applied. Using such an approach, control of both shape and visual appearance is possible, which could prove useful in combined sensing/actuating applications.
+Another possibility is to combine FFF with other extrusion-based deposition techniques as reported by Shao et al. [
+110
+]. A gripper was printed with PLA and a suspension of silver nanowires (Ag-NWS) was deposited via syringe at the hinges of the gripper. After the suspension dried, the layer of nanowires was covered by a conductive paste and connected using electrodes and wires. Local Joule heating of the nanowires and supporting PLA film enabled indirect triggering of the gripper structure, as shown in 
+Figure 6
+d.
+Direct–ink–write (DIW) is another MEX technique used to print semi-liquid materials with specific rheological characteristics; such concentrated suspensions are referred to as inks [
+111
+,
+112
+]. These inks are deposited using dispensing robots and should have a suitable viscosity (suggested viscosity in a range between 0.1 to 10
+3
+ Pa·s). Furthermore, inks require an adequate reduction in viscosity under applied shear stress (i.e., shear thinning); the extrusion of the inks from the printing head is typically followed by curing immediately following deposition [
+37
+,
+113
+]. Curing ensures that complex parts may be printed without loss in dimensional stability. A variety of complex, high-resolution 4D printed objects based on multicomponent SMP formulations are reported via this approach [
+29
+]. DIW of concentrated suspensions can be achieved by solvent casting or matrix crosslinking; therefore, both approaches for 4D printing of multicomponent SMPs are discussed here.
+When DIW is used with thermoplastics in solution, rapid solvent evaporation occurs during the printing process [
+114
+]. Bodkhe et al. reported solution-based DIW of a multifunctional particulate composites combining shape changing and sensing functionalities in a single printed structure [
+28
+]. The printing ink consisted of a blend of PLA and polyesteramide (PEA) dissolved in dichloromethane (DCM), with piezoelectric barium titanate nanoparticles (BTN: 0–30 wt.%) added as sensing elements. The composites were used to print different shapes, and the shape-memory and sensing capabilities were investigated. Shape memory investigations resulted in recovery ratios (
+R
+r
+) of more than 95%. For all the composite samples, the piezoelectric voltage output of the materials was studied by applying a compressive impact force in the range of 0.05–2 N at 1 Hz at room temperature. The composite with 10 wt.% of BTN exhibited the highest piezoelectric output. The piezoelectric output voltage could be increased by poling the BNT in the printed specimen (
+Figure 7
+a) and by increasing the dynamic compressive force (
+Figure 7
+b). The combined effect of shape memory and piezoelectric sensing was also monitored in a rectangular printed film which was clamped at one of its edges to act as a cantilever, with silver electrodes deposited on both surfaces at the same edge (
+Figure 7
+c). This beam was then placed in an oven at 100 °C (higher than the 
+T
+g
+ of the film). A 2 g calibration weight was placed near its free edge. Output voltages were measured across the electrodes as the beam softened above its 
+T
+g
+ (~26 °C) and the weight eventually fell. As seen from the insets in 
+Figure 7
+d, the beam deformed with the rapid change in stiffness under the influence of increased temperatures, with a proportional voltage output resulting.
+Solution DIW printing of PLA–iron oxide-based magnetic inks enabled the generation of 4D shape-changing architectures in custom-defined geometries [
+115
+]. To improve the shape-memory capabilities of PLA, a UV initiator was added to the PLA/iron oxide/dichloromethane (DCM) based ink. Exposure to UV irradiation and fast evaporation of DCM facilitated the formation of a crosslinked shape changing 3D architecture (
+Figure 8
+a). These nanocomposites could be magnetically and remotely heated by exposure to alternating magnetic fields (AMF). The printed film was folded into a temporary spiral shape and placed in a tube, which restricted the full shape recovery upon heating. Exposing the tube to 30 kHz AMF, the spiral structure showed self-expanding behavior within 10 s as illustrated in 
+Figure 8
+b. This restricted shape changing behavior could be useful in biomedical applications such as expandable stents (
+Figure 8
+b).
+A similar strategy was used to fabricate lightweight, highly conductive nanocomposites by incorporating silver coated carbon nanofibers (Ag@CNF) as hybrid fillers into PLA-DCM mixture (
+Figure 8
+c) [
+117
+]. One possible application for such composite materials could be smart grippers that open and close as electric current is applied (
+Figure 8
+d). The achieved nanocomposites could be printed in open air under ambient conditions to form freestanding coils (
+Figure 8
+e) and displayed a low percolation threshold (i.e., <6 vol%) and high electrical conductivity (i.e., >2.1 × 10
+5
+ S/m) without any post-treatment. Electric conductivity was confirmed qualitatively by incorporating an as-printed 3D cubic scaffold and a freeform spiral into a circuit with a red light-emitting diode (LED). The LED could be powered at a voltage of 2.5 V with a current of 100 mA, demonstrating utility immediately after printing as shown in 
+Figure 8
+f.
+In another effort, the 3D and 4D printing of poly (D,L-lactide-co-trimethylene carbonate) (PLMC)/CNT nanocomposites with electro-responsive shape-changing capabilities was achieved by solution DIW [
+117
+]. To make PLA more useful for biomedical applications, the copolymerization of d,l-lactide and trimethylene carbonate was carried out, and the 
+T
+g
+ of the resulting PLMC copolymer was tuned to 49 °C. Four-dimensionally printed structures displayed high electrical conductivity even when porous scaffolds were printed (
+Figure 9
+a,b) thanks to appropriate levels of filler dispersion (
+Figure 9
+c). The scaffolds prepared with these composites displayed shape-changing behavior within 16 s following the application of 25 V, as illustrated in 
+Figure 9
+d.
+Addition of UV photoinitiators triggered the hydrogen abstraction from PLMC and resulted a crosslinked system. UV crosslinking helped to significantly improve the mechanical strength and solvent resistance of c-PLMC/CNT, while the actuation temperature and volume electrical conductivity remained almost the same.
+The 3D printing of bone scaffolds based on waterborne shape-memory polyurethane (PU) inks was reported by Wang et al. [
+118
+] The mixing of PU-based ink with polyethylene oxide (PEO) or gelatin improved the biocompatibility of the scaffolds. However, using gelatin reduced the recovery ratios and increased the recovery times (
+Figure 9
+e,f). The addition of superparamagnetic iron oxide nanoparticles (SPIO NP) to the printed inks promoted the osteogenic induction of the printed scaffolds. The printed scaffolds showed better shape fixity and shape recovery in water than in air (
+Figure 9
+g).
+Kuang et al. reported the 3D printing of highly stretchable, shape-memory (SM) and self-healing (SH) elastomers via UV-light-assisted DIW printing [
+47
+]. An ink containing urethane diacrylate, linear semicrystalline PCL and fused silica nanoparticle (200–300 nm) was utilized for UV-assisted DIW printing of semi-IPN elastomer composites. PCL crystalline domains with 
+T
+m
+ = 55 °C acted as switching domains for shape-memory experiments and as healing agents for self-healing behavior. The 3D-printed structures could be stretched up to 600% and showed interesting functional properties, such as high strain SM and SM-assisted SH capabilities (
+Figure 10
+a–c). Potential applications of the printed structures for biomedical devices, soft robotics, and flexible electronics, were proposed.
+Rodriguez et al. reported bio-based thermoset composites via 3D printing [
+119
+]. Renewable and eco-friendly epoxidized soybean oil (EBSO) was used as the matrix material. To tailor the mechanical properties, different concentrations of bisphenol F diglycidyl ether (BFDGE) were added into the matrix. Furthermore, carbon nanofibers (CNF) were used as a filler to render the printed structures electroactive. By varying the ratio of the individual components of the thermoset resin, mechanical, thermal (
+T
+g
+) and transport properties could be tuned. The 3D printing of the composite resin resulted in complex origami-type multi-material architectures that exhibited programmable shape changes triggered by either direct thermal heating or electric (Joule) heating. The programming and shape recovery of a complex box-like printed structure is shown in 
+Figure 10
+d.
+The UV-assisted DIW approach also enabled the 4D printing of epoxy based SMP IPN composites with high mechanical strength and thermal stability [
+120
+]. The base resin consisted of commercial photocurable acrylates, thermally curable epoxy and silica nanoparticles in different weight ratios. The silica nanoparticles were added to modulate viscosity and to realize shear-thinning behavior. In the first curing step, an acrylate network was formed during a UV-assisted printing process. The epoxy oligomer was thermally cured in the second step to generate an IPN composite (
+Figure 11
+a). A variety of complicated architectures such as lattices, gear wheels, swirl bows and locked structures were successfully printed. A lattice structure is shown in 
+Figure 11
+b. These printed IPN composites exhibited clear shape memory effects, including complete shape change within 10 s at 104 °C (higher than 
+T
+g
+ ≈ 76 °C) along with enhanced mechanical toughness.
+The same group reported a multi-material 3D printing approach involving the use of dynamic photomask-assisted DIW together with a two-stage curing hybrid ink [
+29
+]. In particular, a nanocomposite ink containing a photocurable acrylated prepolymer, a thermally curable epoxy resin and fumed silica were utilized. Dynamic photomasks were generated by a nearby projector during the printing process to enable different degrees of cure in different locations, which was further modulated by irradiation time. This enabled the generation of local variations in the extent of cure in each layer being printed, resulting in a graded structure (
+Figure 11
+c-i). The capability to print materials with dramatically different properties was then utilized to give structures with controllable buckling or fracture behavior or sequential shape memory characteristics. The multi-step compression of a truss structure is shown in 
+Figure 11
+c-ii. Such printed multi-materials structures were then combined with triboelectric nanogenerators (TENGs) to fabricate multi-level TENG devices. Highlighting the merits of sequential deformation, the multilevel TENG generated multilevel electric signals in response to different levels of mechanical force, providing opportunities for both energy harvesting and sensing.
+Recently, the high-resolution DIW printing of filler-free epoxy-based SMPs with high transition temperatures and mechanical strength was reported [
+121
+]. In the first step, a cyanate ester and an epoxy resin were reacted to yield a prepolymer with a high viscosity. In the second step, 3D printing and photocuring of the prepolymer with acrylate- or vinyl-functional additives resulted in a hard gel, which was thermally cured in the third step, resulting an IPN structure. DIW through a combination of hybrid pre-polymer formation and a two-step curing process resulted a complex mesh structure with high transition temperature (~170 °C) and tensile strength (~70 MPa) along with excellent shape memory (
+R
+r
+ > 86%, 
+R
+f
+ > 95%). Furthermore, the applicability of this 3D printed SMP was demonstrated via the formation of a spiral spring with high modulus and a deformable sealing ring for easy installation (
+Figure 11
+d).
+Direct bubble writing of thiolene-based inks yielded a rapid means of fabricating foams with narrow cell size distributions in the absence of both surfactant and solvent [
+122
+]. The ink formulation had a viscosity of 0.410 Pa·s and consisted of hexa- and tetra-functional thiol monomers along with a trifunctional alkene and a photoinitiator, as shown in 
+Figure 12
+a. By changing the gas pressure, it was possible to tune the pore size, foam density, and Young’s modulus. Furthermore, a multi-layered construct with layers having different pore sizes could also be printed. The pore size distribution of such a construct is shown in (
+Figure 12
+b). An easily accessible 
+T
+g
+ (~40 °C) of the printed foams was exploited for the purposes of shape-memory experiments. A three-dimensional printed flower was programmed and was then shown to recover its original shape in 10 s by heating to 60 °C in water (
+Figure 12
+c).
+Wu et al. printed porous 3D structures by incorporating two different gas-filled microballoon pore formers with different 
+T
+g
+ values into a siloxane matrix with silica particles (SiO
+2
+) [
+123
+]. The effects of shell stiffness and the 
+T
+g
+ of the microballoons on compressive behavior and compression set in the printed siloxane based structures were evaluated. In the case of lower 
+T
+g
+ microballoon-filled prints, a greater degree of compression and a higher recovery ratio were achieved, while in the case of prints containing higher 
+T
+g
+ microballoons, reduced compression and a lack of recovery upon reheating were observed. The potential use of the lower 
+T
+g
+ prints in wearable protective padding and cushions with 
+T
+g
+ values optimized to match human body temperature was proposed.
+Vat photopolymerization printing (VPP) utilizes a light source to selectively cure the surface of a vat filled with a liquid photosensitive resin, thus enabling the formation of a specified 3D shape [
+124
+]. Specifically, a controlled beam of light is used for the localized irradiation of a photosensitive resin to form or crosslink polymer chains, resulting in the generation of a solid construct. Normally, parts printed with VPP technology must be post-cured following printing to enhance stability. This technique is widely used to print complex geometries with high accuracy and excellent surface finish. A variety of photo-sensitive resins have been developed for 4D printing of multicomponent SMP networks and IPN structures [
+72
+]. Nevertheless, the shielding effect of some of the fillers and additives may result in delayed or slow photopolymerization during VPP of multi-material systems. Commonly used VPP techniques for the 4D printing of SMPs resins such as digital light processing (DLP), stereolithography (SLA), and multiphoton polymerization (MPP) are discussed here.
+The digital light processing (DLP) method employs a digital projector to flash a 2D image across the entire platform and cures an entire layer of material at once. As DLP technology is not restricted to the curing of a single spot at a time, it can significantly reduce printing times. Furthermore, through local variations in light intensity, DLP allows for inhomogeneous cross-linking within a layer, enabling the formation of gradients in mechanical and shape-memory properties [
+125
+]. DLP based 3D printing technologies cover a broad spectrum of printing resolutions from 0.6 µm to 90 μm by adjusting the magnification of the projection lens [
+69
+,
+72
+].
+Photocurable and electroactive shape-memory polymer nanocomposites (SMPCs) based on a thermosetting poly(ethylene glycol) diacrylate/poly(hydroxyethyl methacrylate) matrix containing multi-walled carbon nanotubes (MWCNT) were successfully prepared via DLP 3D printing [
+71
+]. The composition of the photocurable (meth)acrylate system was tuned to tailor the thermomechanical properties of the matrix, whereas the effects of CNTs on the photoreactivity and rheological properties of the formulations were investigated to assess the printability of CNT-containing formulations. When increasing the CNT content from 0.1 to 0.5 wt.%, a delay in the onset of photopolymerization was observed. This delay in curing time was attributed to the UV shielding effect of the MWCNTs, whose light absorption capability affected the efficiency of the photoinitiator. The 3D-printed demonstrators displayed high shape fixity and shape recovery ratios (
+R
+f
+ = 100%, 
+R
+r
+ > 95%) and an electrically triggered shape-memory effect realized via Joule heating. Furthermore, by changing the position of copper electrodes, sequential recovery of different segments of a printed zig-zag shaped demonstrator could be achieved (
+Figure 13
+a,b).
+Zhang et al. used the DLP printing method to produce multiple SMPs within a single construct using the same precursor [
+126
+]. They modulated the intensity of the light to enable the spatio-temporal tuning of material properties, including shape-memory transition temperature, rubbery modulus, and maximum elongation, within a single part. The photo-sensitive ink consisted of comonomers methyl acrylate (MA, 56.9 mole%) and isobornyl acrylate (40.3 mole%) with 1,6-hexanediol diacrylate (HDDA, 2.8 mole%) as the crosslinker and bis(2,4,6-trimethylbenzoyl)-phenylphosphine oxide as the photoinitiator. By digitally controlling the light pattern with different focus time periods, unusual shape shifting 3D nano-photonic and electronic devices combining softer and more rigid regions were constructed.
+Ge et al. used high-resolution projection microstereolithography (P
+μ
+SL) to print multi-material shape-memory structures [
+127
+]. P
+μ
+SL is capable of printing high-resolution (to 0.6 μm) complex 3D architectures covering multiple scales and with multiple materials over a relatively wide printing area (up to ∼90 mm × 50 mm). To print multi-material SMP structures, an automatic material exchange mechanism was integrated into the P
+μ
+SL manufacturing system. The photo-sensitive resin consisted of benzyl methacrylate (BMA) as linear chain extender and poly(ethylene glycol) dimethacrylate (PEGDMA), bisphenol A ethoxylate dimethacrylate (BPA), or di(ethylene glycol) dimethacrylate (DEGDMA) as crosslinker. Tailored glass transition temperatures and thermo-mechanical properties were achieved through variations in crosslinker type and concentration. Using this approach, a multi-material gripper was fabricated whose hinges consisted of an SMP and whose tips consisted of a soft material whose modulus could be adjusted based on the modulus of the target object (
+Figure 13
+c,d).
+Choong et al. developed SMP/nanosilica composite resins for DLP 4D printing and evaluated the effects of nanosilica on the printing process and the shape-memory properties of the resultant parts [
+128
+]. Curing depth studies showed that SiO
+2
+-SMP composites attained higher curing depths at a faster rate in comparison with the neat SMP. The fast polymerization rate of the SiO
+2
+-SMP composites was attributed to the nanosilica particles acting as heterogeneous nucleation sites for polymerization. Silica nanoparticles acted as multifunctional crosslinks enabling excellent dispersion and improved mechanical and shape memory properties of the composites. The SiO
+2
+-SMPs exhibited outstanding shape memory performance with 100% shape fixity and 90–97% shape recovery. Projection stereolithography fabrication was used to print a flower-shaped sample using the developed SMP composites. A printing speed of 2.8 mm/min ≈ 168 mm/h was used to complete the printing of a flower (76 mm in height) in 27 min [
+128
+]. The shape recovery process of an SMP composite of this type under a hot air gun is shown in 
+Figure 13
+d.
+Zhang et al. reported the 4D printing of a photocurable resin to produce chemically crosslinked SMP systems with self-healing capabilities [
+129
+]. These UV cured double-networks were based on the benzyl methacrylate (BMA) monomer and a poly(ethylene glycol)-dimethacrylate (PEGDMA) crosslinker, with linear polycaprolactone (PCL) added to impart self-healing (SH) capabilities to the 4D printed structures. Three-dimensional printing by DLP enabled highly deformable networks with remarkable shape-memory and self-healing capabilities. The effects of PCL concentration on the thermomechanical behavior, viscosity, and the self-healing capabilities of the SH-SMP systems were investigated. The mechanical properties of a damaged structure could be recovered to nearly 100% when more than 20 wt.% of PCL was present in the SH-SMP system.
+In stereolithography (SLA), a spot laser induces localized photopolymerization or crosslinking, enabling layer-by-layer fabrication of the final product [
+69
+]. The layer height of standard SLA printers ranges from 12 to 150 μm, with the printing speed ranging from 10 to 20 mm/h. Like DLP, the platform in SLA printers is immersed in the resin and moves parallel to the 
+z
+-axis, while the laser beam traces the part cross-section and cures the area according to the CAD model. SLA is used to print high-resolution 3D structures with excellent surface finish [
+72
+,
+130
+]. There are only a few reports concerning the SLA printing of trSMP networks using photosensitive resins. For example, a 
+tert
+-butyl acrylate-co-di(ethylene glycol) diacrylate (tBA-co-DEGDA) network with shape memory properties was successfully printed by SLA [
+113
+]. The wt.% of DEGDA crosslinker and photo-initiators in the photo-sensitive resin was varied to tailor the 
+T
+g
+ of the resulting networks. The printed structure showed 100% recovery and stability of its shape-memory properties even after 22 thermo-mechanical cycles. Miao et al. reported the stereolithographic printing of acrylated epoxidized soybean oil to produce smart biomedical scaffolds [
+131
+]. Shape memory tests confirmed that the scaffolds could fix a temporary shape at −18 °C and fully recover their original shapes at human body temperature (37 °C). This indicated the potential of these biobased printed structures for 4D printing. In another study, a photopolymer composed of polyurethane acrylate, epoxy acrylate, isobornyl acrylate, and radical photoinitiator was synthesized and used to print 3D objects via the SLA technique. The printed objects showed high mechanical strength and toughness along with excellent shape memory performance. Nevertheless, none of these reports deals with multicomponent aspects of SMP, which is the major focus of this review.
+Multi-photon polymerization (MPP) is a direct laser writing technology that uses an ultrafast pulsed laser to generate a very high flux of photons in a small volume over a very short period of time [
+132
+]. Typical systems use green light (λ ~ 515 nm or 532 nm), near-infrared light (λ ~ 780 nm, 1064 nm, or 1080 nm), or a combination of these wavelengths. MPP techniques allow for the voxel-by-voxel writing of complex structures with critical dimensions of micro/nano scale size (with sub-micrometer resolution) into a liquid resin by scanning a tightly focused femtosecond-pulse laser beam. Unlike other stereolithographic techniques, MPP can freely cure solid polymer in the resin vat, eliminating the need for material deposition in a layer-by-layer manner [
+132
+,
+133
+].
+Zhang et al. demonstrated the 4D printing of trSMPs at sub-micron length-scales using two-photon lithography [
+134
+]. They showed a remarkable relationship between color transmittance and the nanostructure of 4D printed trSMPs. The SMP photoresist based on VeroClear (Stratasys Inc., Edina, MN, USA) was used to 4D print submicron-scale grids. The grids transmitted only a limited range of wavelengths when illuminated by white light. When the structure was programmed by heating and deforming above its 
+T
+g
+ of 80 °C, it achieved an “invisible” state capable of transmitting visible light of all wavelengths. After reheating above 
+T
+g
+, the nanostructure recovered it original state and again permitted only a certain range of wavelengths to pass through, as the spectrum of wavelengths was scattered differentially by the grid. By varying the printing parameters during additive manufacturing (laser power, write speed, nominal grid height), different colors could be easily realized in the parts and switched by the programming process (
+Figure 14
+).
+In another report, De Marco et al. demonstrated the 4D printing of trSMP-based microstructured stents with minimum features of 5 µm by using the MPP technique referred to as direct laser writing (DLW) [
+135
+]. The limitation associated with printing trSMPs at the microscale were overcome by using an indirect 4D printing approach. In the first step, high-resolution micromolds were produced by DLW of a photoresist. These micromolds were then infused with a photo-sensitive trSMP resin, which was cured by UV irradiation, followed by dissolution of the photoresist-based micromold to yield a microstructured part. Following programmed deformation, the stent-shaped trSMP microstructures recovered their initial shape when the temperature was raised. The printing of microstructured parts could be helpful in the fabrication of soft microrobots to solve medical issues.
+Material jetting (MJT) is another commonly applied 3D printing technique that can be used for the single-step fabrication of 4D multi-material objects [
+38
+]. In this technique, droplets of photopolymer material are jetted onto the build platform and each layer is immediately cured by UV light [
+76
+,
+136
+]. The first ever MJT printers were introduced by Objet Geometries Ltd. (Rehovot, Israel), which later merged with Stratasys Ltd. The nozzles of these printers are able to switch between different materials, including support materials in the case of complex part geometries. The gel-like support material can be easily removed by hand or water jetting. At this time, MJT printers from Stratasys Ltd. are probably the most common commercially available jetting printers, with many authors using them to fabricate 4D multi-material systems based on trSMPs [
+24
+,
+137
+,
+138
+].
+Ge et al. used an MJT printer (Objet 260 Connex, Stratasys, Edina, MN, USA) to directly print glassy SMP fibers in an elastomeric matrix [
+23
+]. Laminated structures with a range of fiber orientations could be printed and thermo-mechanically programmed to assume complex three-dimensional configurations including bent, coiled, and twisted strips, folded shapes, and complex contoured structures with nonuniform, spatially varying curvature (
+Figure 15
+a–h). The strips shown in 
+Figure 15
+c–e had two layers one on top of each other: one with 25% fibers and the other one without. The fibers were oriented at 0° (
+Figure 15
+c), 90° (
+Figure 15
+d) and 30° (
+Figure 15
+e). The strips in 
+Figure 15
+f–h had alternating sections side by side without fibers and with the fibers oriented at 0° (
+Figure 15
+f), 90° (
+Figure 15
+g), and 30° (
+Figure 15
+h). The original flat plate shape was recovered by heating the material again. The printed active composites could be integrated with other structural or functional components to create active devices. For example, hinges were directly printed in a two-layer laminated form: one layer of matrix material and one layer of an active laminate with a prescribed fiber size and spacing. The hinges were then connected to inactive (rigid) panels. These rigid panels were used as end tabs to apply mechanical loads. The hinges function occurs via a mechanism of programmed strain mismatch (eigenstrain) between the two layers that leads to constant bending curvature over the hinge region. The authors developed a theoretical model to describe the behavior of the printed active composite hinges and used it to design several active origami structures, including a self-assembling box, a pyramid and two origami airplanes (
+Figure 15
+i,j) [
+77
+].
+Mao et al. utilized the MJT printing method to fabricate complex structures displaying sequential shape recovery [
+31
+]. Helical 3D objects with rigid (non-active) sections connected by active hinges on each corner with a radius of 5 mm are shown in 
+Figure 16
+a. Two foldable composite strands with hinge structures were printed. The first sample was composed of nine hinges of the same SMP (
+T
+g
+ = ~55 °C), while the second had seven hinges composed of different SMPs having 
+T
+g
+ values ranging from 32 °C to 65 °C, with inner hinges having the lowest 
+T
+g
+ values and outer hinges having the highest 
+T
+g
+ values. After printing, the structures were deformed into a flat configuration in hot water at 
+T
+H
+ = 90 °C, above the 
+T
+g
+ of all of the trSMP sections. Then, the samples were cooled to 
+T
+L
+ = 10 °C, at which point all the trSMP hinges were in the glassy state. During recovery by heating (
+T
+r
+ = 90 °C) in sample 1, all hinges were activated simultaneously, leading to incomplete folding (
+Figure 16
+b). For sample 2 the inner hinges with lower 
+T
+g
+ recovered faster than the outer hinges, thus enabling sequential activation and yielding unconstrained and rapid (~7.0 s) folding to realize the targeted configuration (
+Figure 16
+b).
+Wu et al. used MJT 3D printing to design and manufacture flat layered composites consisting of families of digital trSMP fibers with different 
+T
+g
+ values embedded in a rubbery matrix [
+139
+]. After being programmed into a temporary shape by a simple thermo-mechanical training sequence, the printed composite was able to change into multiple shapes by stepwise increases in environmental temperature. For example, the design and shape changing capability of a two layered composite having SMP fibers with different 
+T
+g
+ values (fiber 1 
+T
+g
+ ~ 57 °C; fiber 2 
+T
+g
+ ~ 38 °C) embedded in a rubbery matrix with a low 
+T
+g
+ (~2 °C) is shown in 
+Figure 16
+c. The composite strip was stretched to a prescribed strain at a programming temperature 
+T
+H
+ that exceeded the 
+T
+g
+ of both fibers, then cooled to a fixing temperature of 
+T
+L
+ = 0 °C, well below the 
+T
+g
+ of both fiber materials. By stepwise heating the 
+T
+g
+ values of the rubbery matrix and the trSMP fibers were exceeded, one after the other, and a series of intermediate bending shapes was realized as a consequence (
+Figure 16
+d). Here, the amount of deformation was dependent on the thermomechanical properties of the fibers and the matrix (such as 
+T
+g
+, stiffness and stress relaxation times), as well as the programming strain and the ambient temperature.
+Four-dimensional printing is a modern state of the art technology that has received growing interest in recent years from the materials science, process technology, and mechanics communities [
+20
+,
+136
+]. A major part of 4DP is based on the 3D printing of SMPs, and tremendous progress has been achieved in this context in recent years [
+38
+,
+61
+,
+113
+]. The 4DP of SMP multicomponent systems such as composites, blends, and layered 3D objects has enabled the fabrication of high precision complex prototypes with unique capabilities and offering multiple functionalities. These functionalities can be activated through external stimuli such as heat, light, electric current or magnetic fields and may be triggered simultaneously or in a sequential fashion [
+26
+]. The importance of 4D-printed SMPs is apparent based on the growing number of studies and research papers related to this subject that have appeared in the last decade [
+36
+]. This review has highlighted different 3D/4D printing methods and strategies investigated in recent years to print multicomponent SMPs formulations. Advanced fabrication methods for the printing of heterogeneous SMP-based structures have been discussed, including MEX techniques (FDM, DIW), VPP (SLA, DLP and MPP), and MJT. Up to this point, the materials selection, functional behavior and working principles of 4D printed trSMP multicomponent constructs have been presented. In this last section, the current limitations and underlying barriers to continued progress are identified and discussed.
+Although most of the printed trSMP-based systems are still in prototype form, they show strong potential to become functional objects with industrial applications in the near future [
+37
+,
+60
+]. Different techniques have been used to print complex, multifunctional geometries impossible to achieve via conventional manufacturing techniques such as extrusion, injection molding or compression molding. These geometries enable complex actuation pathways and mechanical deformations following a predetermined program. Furthermore, the combination of shape memory with self-healing behavior, piezoelectric activity, magnetic sensitivity, electrical conductivity, and structural functionality makes such multifunctional constructs attractive in a broad range of use cases, including intelligent electronics, aerospace, robotics, biomedical, and day-to-day applications (textiles, ornamentals, and footwear) [
+27
+,
+101
+,
+107
+,
+108
+,
+115
+]. Multicomponent approaches not only help to improve the mechanical properties of trSMPs but also allow for the introduction of new actuation methods such as remote triggering via magnetic field, electric current or light, thus increasing the versatility of such 4D objects [
+20
+,
+21
+,
+26
+].
+Though the studies reviewed here demonstrate that significant progress has been made related to the 4DP of trSMPs and composites, several challenges remain. For example, FFF, the most used technique for SMP 4DP, results in anisotropic materials and introduces interfaces and internal defects where mechanical stresses concentrate, leading to delamination after repeated actuation. Likewise, residual stresses arising from temperature gradients during processing can overlap with the recovery stresses generated by the shape-memory effect, thus making the deformation of the polymer more difficult to predict and control. Furthermore, optimizing the printing parameters for a new formulation is always tedious and challenging. In the case of softer polymers, filament buckling occurs, while in the case of reinforced composites, material clogging jams the nozzle; in both cases, the printing process stops. The issue of filament buckling can be avoided by adding fillers or blending with other polymers to improve the filament stiffness [
+24
+,
+44
+]. To avoid the clogging issue, the filler content can be reduced, flow enhancers can be added, and the printing parameters can be optimized to enable the smooth flow of thermoplastic material through the nozzle [
+87
+,
+88
+]. Furthermore, as FFF deals with highly viscous fluids, the nozzles used are the largest of all those used in the context of AM-based materials deposition more generally; as a result, poor surface quality is common, and post-treatment is required to improve it [
+140
+]. New libraries of SMPs and composites combining improved properties, excellent printability and retained shape memory response are required to overcome these challenges and enable the generation of high-quality parts.
+The adaptability of DIW to various materials makes it the second most commonly used MEX technique for 4DP. Various trSMP multicomponent systems, including functional composites and IPNs, have been printed using DIW to produce smart 4D objects [
+111
+,
+115
+]. Here, moderate ink viscosities and shear-thinning behavior are required [
+111
+]. DIW has been used to print a range of polymer systems, including both thermoset and thermoplastic composites [
+115
+,
+116
+]. To enable the printing of thermosets, time consuming post-processing steps are often required, however, while in the case of thermoplastic systems, the polymer must be dissolved in a volatile solvent which should evaporate at just the right rate during the printing process. The latter (solution) method has enabled the printing of multi-material trSMP parts with magnetic, electric, and piezoelectric functionalities [
+28
+]. Nevertheless, DIW has relatively low printing speeds since parts are built by depositing strands of materials, and like FFF, it produces 3D structures with low surface quality due to the size of the nozzles used [
+111
+]. Furthermore, DIW, like FFF, is often used to print trSMPs with amorphous switching domains, which only enable a one-way shape-memory effect. The use of trSMP with crystallizable switching domains would enable reversible bidirectional SME. However, an alignment of polymer chains would be required to achieve well-oriented crystalline domains [
+141
+]. Such type of polymer chain orientations has been used for 4D printing of liquid crystalline elastomers to enable reversible movements in these elastomers, where the drawing force imposed by the movement of the nozzle in the extruded printing process was able to align the mesogen units along the specific printing path [
+142
+].
+In contrast with MEX techniques, VPP techniques are restricted to photosensitive systems, and printing is carried out layer-by-layer using some type of light source [
+69
+]. Though the printing of complex 4D objects based on trSMP multicomponent systems such as composites containing carbon and silica nanoparticles has been reported, VPP is inherently more suitable for single phase materials with photo-sensitive moieties [
+72
+]. In the case of composites, fillers concentrations must be optimized to avoid shielding effects that could interfere with photoinduced polymerization or crosslinking [
+71
+]. Likewise, while VPP has enabled the multi-material printing of complex microstructured trSMP-based parts using different vats filled with different photosensitive formulations, switching between them reduces the speed of an already slow process (thanks to its high resolution) still further [
+125
+,
+143
+]. Furthermore, it is inherently difficult to incorporate crystalline segments because oligomers based on such segments are solid at ambient temperature. One way to make these oligomers printable is to heat the vat above the melting point of the crystalline segments. Nevertheless, controlling unwanted thermal polymerization can be a challenge. Finally, while VPP enables the printing of both macro- and microstructured smart 4D objects with high levels of precision and surface finish, there remains a need for a greater variety of photosensitive formulations yielding materials with broader ranges of properties/offering new functionalities.
+Compared to MEX and VPP, MJT is very well suited for manufacturing 3D objects with very fine features based on different materials [
+75
+]. Different compositions can be readily placed in different locations, bringing additional functionalities. MJT printers are normally equipped with multiple high-resolution nozzles that jet different photopolymers from different reservoirs [
+38
+]. Various multi-material trSMP based 3D objects such as smart hinges and layered architectures have been printed via MJT and can be made to show complex self-folding and shape-memory behavior including sequential transformations [
+20
+,
+23
+,
+31
+,
+77
+]. However, MJT printers are expensive, and materials libraries for such printers are limited [
+76
+]. Nevertheless, it is believed that, with the rapid development of MJT printing, more photopolymers will become available, and the implementation of new design concepts and methodologies will be possible.
+In summary, the 4D printing of trSMP-based systems continues to expand, with many significant achievements reported related to the 3DP of smart multifunctional materials and objects. However, some challenges remain to be overcome, and some research areas would benefit from additional attention. For example, the 3DP of trSMP systems with bidirectional shape changing capability, temperature-resistant SMPs acceptable for space/aerospace applications, and systems capable of realizing high strain energy densities all represent decisive areas where further development is needed to move beyond lab-scale prototypes and more fully realize the promise of such systems. In this context, multi-disciplinary research and development will be crucial to realize the 3DP of novel SMP systems with complex molecular architectures for a range of impactful real-world applications. Finally, one crucial aspect of achieving real-world applications that must be elaborated is the long-term stability of 4DP parts and self-deploying structures. Exposure to environmental fluctuations and aging processes can erode the initially printed properties or generate other unwanted changes that will limit their response and functionality.
+Conceptualization: M.Y.R. and J.G.-G.; methodology: M.Y.R. and J.G.-G.; data collection: M.Y.R., J.G.-G. and D.F.S.; data analysis: M.Y.R. and J.G.-G.; writing of manuscript: M.Y.R. and J.G.-G.; figure arrangement: M.Y.R. and J.G.-G.; correction of manuscript: M.Y.R., J.G.-G., G.M., D.R., D.F.S. and S.W.; supervision: D.F.S. and S.W. All authors have read and agreed to the published version of the manuscript.
+This research received no external funding.
+Not applicable.
+Not applicable.
+Data is contained within the article.
+The authors declare no conflict of interest.
+Publisher’s Note:
+ MDPI stays neutral with regard to jurisdictional claims in published maps and institutional affiliations.

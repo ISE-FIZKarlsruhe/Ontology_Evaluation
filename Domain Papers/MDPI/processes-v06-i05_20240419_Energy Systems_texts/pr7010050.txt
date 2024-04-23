@@ -1,0 +1,912 @@
+This work presents optimization results obtained for a double-effect H
+2
+O-LiBr absorption refrigeration system considering the total cost as minimization criterion, for a wide range of cooling capacity values. As a model result, the sizes of the process units and the corresponding operating conditions are obtained simultaneously. In this paper, the effectiveness factor of each proposed heat exchanger is considered as a model optimization variable which allows (if beneficial, according to the objective function to be minimized) its deletion from the optimal solution, therefore, helping us to determine the optimal configuration. Several optimization cases considering different target levels of cooling capacity are solved. Among the major results, it was observed that the total cost is considerably reduced when the solution heat exchanger operating at low temperature is deleted compared to the configuration that includes it. Also, it was found that the effect of removing this heat exchanger is comparatively more significant with increasing cooling capacity levels. A reduction of 9.8% in the total cost was obtained for a cooling capacity of 16 kW (11,537.2 
+$
+·year
+−1
+ vs. 12,794.5 
+$
+·year
+−1
+), while a reduction of 12% was obtained for a cooling capacity of 100 kW (31,338.1 
+$
+·year
+−1
+ vs. 35,613.9 
+$
+·year
+−1
+). The optimization mathematical model presented in this work assists in selecting the optimal process configuration, as well as determining the optimal process unit sizes and operating conditions of refrigeration systems.
+Compared to vapor compression cycles, the main advantage of absorption refrigeration systems (ARSs) such as water-lithium bromide (H
+2
+O-LiBr) ARSs is that they are activated by low-level energy sources [
+1
+] (such as geothermal or solar energies) or low-grade waste heat rejected from various processes, as opposed to through the use of electric energy. On the other hand, compared to other working pairs, such as ammonia-water (NH
+3
+-H
+2
+O), a LiBr solution has no ozone-depleting potential or global warming effect reported in literature, in line with the Montreal, Kyoto, and Paris Accords.
+The energy efficiency of a single-effect ARS is relatively low. To cope with this weakness, several papers have been published that aimed at improving the performance of single-effect H
+2
+O-LiBr ARSs based on energy [
+2
+,
+3
+,
+4
+], exergy [
+4
+,
+5
+,
+6
+], exergo-economic [
+7
+,
+8
+], or cost [
+5
+,
+9
+] studies. Other authors have addressed such limitations by investigating other process configurations instead, including advanced configurations of multi-effect systems [
+10
+]. Among them, the double-effect schemes have comparatively received more interest, and are, in fact, the most frequently applied in industry [
+11
+,
+12
+]. Many studies on the double-effect H
+2
+O-LiBr ARS were conducted by performing energy analyses [
+13
+,
+14
+,
+15
+], exergy analyses [
+15
+,
+16
+], and exergo-economic analyses [
+1
+,
+17
+,
+18
+]. A special feature of the double-effect ARS is its capability of running in series, parallel, and reverse parallel flow schemes according to the working solution flow through the heat exchangers and generators [
+11
+,
+12
+,
+13
+,
+19
+].
+Despite the fact that systematic computer-aided methods and mathematical programming techniques have been successfully employed to optimize energy processes [
+20
+,
+21
+,
+22
+,
+23
+,
+24
+,
+25
+], not that many publications can be found for ARS [
+5
+,
+9
+,
+26
+,
+27
+,
+28
+,
+29
+,
+30
+]. These methods and techniques make it possible to optimize large mathematical models considering at the same time all the continuous and discrete decisions, which is one of the major advantages over parametric optimization approaches. 
+Chahartaghi et al. [
+27
+] recently studied two novel arrangements of double-effect absorption chillers with series and parallel flow, which differ from earlier conventional absorption chillers by the fact that they have an additional solution heat exchanger. They investigated the effects on the coefficient of performance (COP) of the temperature and mass flow rate of the vapor entering the high-temperature generator (HTG) and water entering the absorber (ABS). One of the results indicated that for an inlet vapor temperature to the HTG lower than 150 °C, the series cycle has a higher COP than the parallel cycle. 
+Lee et al. [
+28
+] employed a multi-objective genetic algorithm (MOGA) and meta-models to optimize several generators for a H
+2
+O-LiBr absorption chiller with multiple heat sources. The integrated generation system included a HTG, a low-temperature generator (LTG), and a waste heat recovery generator (WHRG). The optimization problem consisted of the minimization of the total generation volume and the maximization of the total generation rate. It was found that the WHRG is dominant for reducing the total volume, and the HTG is dominant for improving the total generation rate.
+Sabbagh and Gomez [
+29
+] proposed an optimal control strategy to operate H
+2
+O-LiBr absorption chillers. The aim of the control strategy was to keep the cold water flow at a desired temperature (11 °C). To this end, a dynamic model consisting of differential algebraic equations (DAE) was first developed and then reformulated into a set of algebraic equations by discretizing the state and control variables using orthogonal collocation on finite elements, by dividing the time horizon into finite elements. The resulting model was implemented in the General Algebraic Modeling System (GAMS) and solved with the Interior Point OPTimization (IPOPT) solver [
+31
+]. Both step and sinusoidal perturbations of the hot water inlet temperature were studied. The results obtained are promising because, through the implementation of the optimal control strategy, the COP was significantly improved, thus reducing the operational cost and maintaining the cold water outlet temperature at the desired level.
+In this paper, a mathematical model of a double-effect system with series flow configuration presented by Mussati et al. [
+32
+] is modified to consider another double-effect configuration, where the stream leaving the absorber is now split into two streams: one is passed through a solution heat exchanger (the low-temperature heat exchanger LTSHE) that is placed before the LTG, and the other is passed through another solution heat exchanger (the high-temperature heat exchanger HTSHE) that is placed before the HTG. The effectiveness factor of each solution heat exchanger is a model variable, thus making it possible to remove the corresponding solution heat exchanger, if beneficial according to the objective function that is optimized. Therefore, improved cost-effective process configurations can be found. The cost model presented by Mussati et al. [
+32
+] is employed. To the best of our knowledge, few articles deal with the simultaneous optimization approach presented in this work in order to take into account all the trade-offs existing between the model variables, which include both operation conditions and process unit sizes. The application of the proposed optimization approach leads to the improved configuration, in terms of costs, of a double-effect H
+2
+O-LiBr absorption refrigeration system, which is the main contribution of this paper.
+As shown in 
+Figure 1
+, the stream #1 that leaves the ABS is split into two streams. A fraction (stream #1’) is directed to the LTSHE through the solution pump PUMP1; it is then fed to the LTG (stream #3). The other fraction (stream #1”) is conducted to the HTSHE through the solution pump PUMP2, and then fed to the HTG (stream #12). In both generators, a vapor stream of refrigerant and a stream of concentrated LiBr solution are obtained.
+The heat of the refrigerant generated in the HTG (‘energy stream’ #16)—represented by the dash-dotted line in 
+Figure 1
+—is used in the LTG to produce refrigerant (stream #7) and the strong solution (stream #4). Also, low-grade waste heat rejected from other processes can be additionally used to increase the refrigerant production, which is, in fact, a remarkable feature of multi-stage configurations. This facilitates waste heat recovery as a means of implementing a circular economy strategy [
+33
+,
+34
+]. The streams #18 and #7 (refrigerant vapors) transfer their heat into the condenser COND. The condensed refrigerant (stream #8) is passed through the expansion valve EV1, and then fed to the evaporator EVAP that operates at the lowest pressure of the system. Finally, the stream #10 (vapor) is fed to the ABS and is absorbed in the resulting mixture of the strong solutions coming from LTSHE and HTSHE after passing through EV2 (stream #6) and EV3 (stream #15), respectively. The generated heat is rejected by using cooling water. 
+The mathematical model has been derived considering the following assumptions: (a) steady-state condition [
+12
+,
+19
+,
+35
+]; (b) no pressure drops and heat losses are taken into account [
+12
+,
+19
+,
+35
+]; (c) saturation condition for refrigerant streams that leave the condenser and evaporator [
+12
+,
+19
+]; (d) saturation condition for the diluted (weak) LiBr solution that leaves the absorber [
+12
+]; (e) the concentrated (strong) LiBr solutions leaving the generators are at equilibrium conditions [
+12
+]; and (f) isenthalpic process in expansion valves [
+19
+,
+35
+].
+Each process unit is described by using a similar mathematical model presented by Mussati et al. [
+32
+]. The list of assumptions and the complete mathematical model (mass and energy balances) here employed are provided as 
+Supplementary Materials
+ related to this article. The correlations used to estimate the physicochemical properties of the LiBr solution (stream enthalpy) reported by ASHRAE [
+36
+] and the correlations used to describe the LiBr solution crystallization region given by Gilani and Ahmed [
+37
+] are also included as 
+Supplementary Materials
+.
+The optimal design consists of minimizing the TAC (Equation (1)), which accounts for the annualized capital expenditure (annCAPEX) and he operating expenditure (OPEX), while meeting the process design specifications and operation constraints for a wide range of cooling capacity levels.
+
+
+
+
+
+
+
+
+
+TAC
+
+
+=
+
+
+annCAPEX
+
+
++
+
+
+OPEX
+
+
+
+
+
+
+
+
+
+
+(1)
+
+
+
+
+The annCAPEX is given by Equation (2). The capital recovery factor (CRF) is given by Equation (3), which is computed for a lifetime (n) of 25 years and an interest rate (i) of 10.33% [
+5
+]. The investment (Z
+k
+) of a process unit k is given by Equation (4).
+
+
+
+
+
+
+
+
+
+annCAPEX
+
+
+=
+
+
+CRF
+
+
+·
+
+
+
+
+
+
+∑
+
+
+k
+
+
+
+
+
+
+
+
+Z
+
+
+k
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(2)
+
+
+
+
+
+
+
+
+
+
+
+
+CRF
+
+
+=
+
+
+
+
+
+
+i
+
+
+·
+
+
+
+
+
+
+(
+
+
+1
+
+
++
+
+
+i
+
+
+)
+
+
+
+
+n
+
+
+
+
+
+
+
+
+
+
+
+
+(
+
+
+1
+
+
++
+
+
+i
+
+
+)
+
+
+
+
+n
+
+
+
+
+−
+
+
+1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(3)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Z
+
+
+k
+
+
+
+
+=
+
+
+
+
+A
+
+
+k
+
+
+
+
+·
+
+
+
+
+
+
+
+
+(
+
+
+
+
+f
+
+
+·
+
+
+
+
+
+
+HTA
+
+
+
+
+k
+
+
+
+
+
+
+)
+
+
+
+
+
+
+
+
+
+
+B
+
+
+k
+
+
+
+
+
+
+
+
++
+
+
+
+
+C
+
+
+k
+
+
+
+
+
+
+
+
+
+
+
+
+(4)
+
+
+
+
+The OPEX is estimated by Equation (5), which includes costs associated with the heating (HU) and cooling (CU) utilities, consisting of steam (in t·year
+−1
+) and cooling water (in t·year
+−1
+), respectively. The unitary cost of vapor (C
+HU
+) is 2.0 
+$
+·t
+−1
+ and for cooling water (C
+CU
+) it is 0.0195 
+$
+·t
+−1
+ [
+5
+].
+
+
+
+
+
+
+
+
+
+OPEX
+
+
+=
+
+
+
+
+C
+
+
+
+
+HU
+
+
+
+
+
+
+·
+
+
+HU
+
+
++
+
+
+
+
+C
+
+
+
+
+CU
+
+
+
+
+
+
+·
+
+
+CU
+
+
+
+
+
+
+
+
+
+
+(5)
+
+
+
+
+The cooling capacity in EVAP (Q
+EVAP
+) is the target design specification; it is a model parameter i.e., a known and fixed value in each optimization run. In this optimization study, Q
+EVAP
+ is parametrically varied from 16 kW to 100 kW. The optimization result provides the optimal distribution of annCAPEX and OPEX, the optimal sizes of the process units, and optimal operating conditions (stream pressure, temperature, concentration, and flow rate).
+The computational tools to implement and solve the model equations were GAMS® v. 23.6.5 [
+38
+] and CONOPT 3 v. 3.14W [
+39
+], respectively. Since several nonlinear and non-convex constraints are present in the model and a local solver is used, it cannot be guaranteed that the obtained solutions correspond to the global optimum. However, based on the insights gathered from literature sources [
+2
+,
+5
+,
+32
+], the model was solved using different initial values obtaining the same solutions in all the cases. The latter forms a strong indication that the obtained solution is likely to correspond to the global optimum.
+The optimization results obtained for a wide range of cooling capacity values and two (original and improved) process configurations are discussed. The main model parameter values are related with the cooling capacity, which is varied from 16 kW to 100 kW, and the global heat transfer coefficients, which are: 1.50 kW·m
+−2
+·°C
+−1
+ for the evaporator, 1.0 kW·m
+−2
+·°C
+−1
+ for the absorber, 2.50 kW·m
+−2
+·°C
+−1
+ for the condenser, 1.50 kW·m
+−2
+·°C
+−1
+ for the generators, and 1.0 kW·m
+−2
+·°C
+−1
+ for the solution heat exchangers.
+The external design conditions are:
+
+–
+High temperature generator (HTG): saturated steam at 160 °C.
+–
+Absorber (ABS) and condenser (COND): cooling water at 20 °C.
+–
+Evaporator (EVAP): Inlet and outlet chilled water temperatures: 13.0 °C and 10.0 °C, respectively; evaporator working temperature: 4.0 °C.
+High temperature generator (HTG): saturated steam at 160 °C.
+Absorber (ABS) and condenser (COND): cooling water at 20 °C.
+Evaporator (EVAP): Inlet and outlet chilled water temperatures: 13.0 °C and 10.0 °C, respectively; evaporator working temperature: 4.0 °C.
+In addition, the following lower and upper bounds were imposed, respectively: 40% and 70% for LiBr concentrations, 0.1 kPa and 100 kPa for operating pressures, 0 kg·s
+−1
+ and 100 kg·s
+−1
+ for flow rates, and 75% and 100% for the effectiveness factors of the solution heat exchangers. 
+The optimization runs were performed by varying the cooling capacity from 16 kW to 100 kW. As shown in 
+Figure 2
+, the minimum TAC value and the associated annCAPEX and OPEX values increase almost linearly with increasing cooling capacity levels. Also, it can be observed that the annCAPEX contribution to the TAC is significantly higher than the OPEX contribution, and that the difference between annCAPEX and OPEX increases as the cooling capacity increases. When the cooling capacity increases from 16 kW to 100 kW, the minimum TAC value and the optimal annCAPEX and OPEX values increase, respectively, 2.8, 2.5, and 6.4 times (from 12,794.5 
+$
+·year
+−1
+ to 35,613.9 
+$
+·year
+−1
+, from 12,013.6 
+$
+·year
+−1
+ to 30,644.4 
+$
+·year
+−1
+, and from 780.8 
+$
+·year
+−1
+ to 4969.5 
+$
+·year
+−1
+).
+Figure 3
+ illustrates the individual contributions of the process units to annCAPEX with increasing cooling capacity levels. It can be seen that the HTG and LTG have virtually the same annCAPEX values throughout the examined range, and that they are in the same order of magnitude as the EVAP for the lowest cooling capacity levels. These values are comparatively higher than the values obtained for the other process units. For cooling capacity values between 16 and 30 kW, the contributions of the ABS and COND to the annCAPEX are similar to each other, as is the case for the HTSHE and LTSHE. Also, 
+Figure 3
+ shows that the contribution of EVAP is nonlinear while the contributions of the remaining process units are practically linear. For cooling capacities higher than 18 kW, EVAP is the largest contributor to annCAPEX. When the cooling capacity increases, EVAP and ABS are the process units that increase the most rapidly in annCAPEX compared to the other process units. Indeed, ABS and EVAP increase by around 11 and 3 times, respectively, when the cooling capacity increases from 19 to 100 kW.
+The optimal values of the annualized investment cost for each process unit shown in 
+Figure 3
+ correspond to the optimal values of the heat transfer areas, heat loads, and driving forces shown in 
+Figure 4
+a–c, respectively.
+Regarding the OPEX distribution, 
+Figure 5
+ shows that the contribution of the cost for steam required in the HGT as a heating source is slightly lower than the contribution of the cost for cooling water required in the COND and ABS, but the differences in cost increase with increasing cooling capacity levels. A cost difference of 75.6 
+$
+·year
+−1
+ (352.6 
+$
+·year
+−1
+ vs. 428.2 
+$
+·year
+−1
+) is observed for a cooling capacity of 16 kW and a difference of 371.7 
+$
+·year
+−1
+ (2298.9 
+$
+·year
+−1
+ vs. 2670.6 
+$
+·year
+−1
+) for a cooling capacity of 100 kW.
+Figure 6
+ shows the behavior of the LiBr solution concentrations (X) of the process: weak solution (X
+1
+) and strong solutions (X
+4
+ and X
+13
+ leaving the LTG and HTG, respectively; and X
+15
+ entering the ABS), with increasing cooling capacity levels. It can be seen that that the concentration values increase with the increase of the cooling capacity, but keep similar ratios between the concentration values in the different streams.
+As mentioned earlier, the effectiveness factors η
+LTSHE
+ and η
+HTSHE
+ of the solution heat exchangers LTSHE and HTSHE, respectively, are considered as (free) model variables, i.e., decision variables, as opposed to other published studies, which consider these factors as (fixed) model parameters instead, usually in the range between 65% and 90%, thus always forcing their presence in the process configuration. In this work, by allowing the heat exchanger effectiveness factor to take any value, the presence or absence of the solution heat exchangers is a result of the optimization problem. First, all the solved optimization problems considered the same lower bound for η
+LTSHE
+ and η
+HTSHE
+ of 75%. The results deserve detailed discussion because they may indicate changes in the process configuration, such as the removal of one or even both solution heat exchangers in order to obtain improved solutions, in terms of total annual costs, compared to the current optimal solutions. The optimal η
+LTSHE
+ and η
+HTSHE
+ values remain constant at the imposed lower bound (75%) throughout the range of cooling capacity values.
+Then, it becomes interesting to perform new optimizations while relaxing the lower bounds imposed to η
+LTSHE
+ and η
+HTSE
+ of 75%, in order to see how these bounds affect the current optimal solutions for the same range of cooling capacity values. The obtained optimization results are presented in the forthcoming discussions.
+The process configuration shown in 
+Figure 1
+ and analyzed in the previous section—where both LTSHE and HTSHE are forced to be present—is hereafter named ‘Conf. 1’ and the one obtained in this subsection is referred as ‘Conf. 2’. In all cases, the problem that is solved is the minimization of the TAC.
+Figure 7
+ illustrates the optimal values of both effectiveness factors η
+LTSHE
+ and η
+HTSHE
+ obtained by considering a lower bound of 1%, which, in practical terms, is virtually zero. (Note that, in this case, a ‘very small’ numerical value is imposed as the lower bound, instead of zero, to prevent numerical problems that may lead to model convergence failure). As seen in 
+Figure 7
+, the obtained optimal values for η
+LTSHE
+ result in the lower bound of η
+LTSHE
+, thus indicating that the LTSHE is removed from the configuration for all the specified cooling capacity values. However, the optimal η
+HTSHE
+ values increase logarithmically, from 49.8% to 66.9%, with increasing cooling capacity levels in the examined range. This indicates that the heat integration between the weak and strong solutions leads to cost-effective solutions only when such integration takes place in the high-temperature region of the process through HTSHE (since LTSHE in the low-temperature region is not selected in any case).
+Table 1
+, 
+Table 2
+, 
+Table 3
+, 
+Table 4
+, 
+Table 5
+ and 
+Table 6
+ compare costs, process-unit sizes, and operating conditions obtained for the two configurations corresponding to the extremes of the studied cooling capacity range, i.e., for 16 kW and 100 kW.
+Figure 8
+, 
+Figure 9
+ and 
+Figure 10
+ compare the optimal values of costs obtained for both configurations for the whole range of cooling capacity values. 
+Figure 8
+a,b show that Conf. 2 has lower TAC and annCAPEX values, respectively, than Conf. 1 for all cooling capacity levels. However, Conf. 1 has slightly lower OPEX values than the OPEX values obtained for Conf. 2 (
+Figure 8
+c). The differences in TAC, annCAPEX, and OPEX values between Conf. 1 and Conf. 2 increase with increasing cooling capacity levels. As seen in 
+Figure 8
+a,b and 
+Table 1
+, at a cooling capacity of 16 kW, the TAC and annCAPEX values obtained for Conf. 2 are 9.8% and 11.1% lower than the values obtained for Conf. 1 (11,537.2 M
+$
+·year
+−1
+ vs. 12,794.5 M
+$
+·year
+−1
+, and 10,684.3 M
+$
+·year
+−1
+ vs. 12,013.6 M
+$
+·year
+−1
+, respectively). However, the OPEX in Conf. 2 is 9.2% higher than in Conf. 1 (852.9 M
+$
+·year
+−1
+ vs. 780.8 M
+$
+·year
+−1
+). For a cooling capacity of 100 kW, 
+Table 4
+ shows that the TAC and annCAPEX values obtained for Conf. 2 are, respectively, 12% and 15.1% lower than the values obtained for Conf. 1 (31,338.1 M
+$
+·year
+−1
+ vs. 35,613.9 M
+$
+·year
+−1
+, and 26,001.7 M
+$
+·year
+−1
+ vs. 30,644.4 M
+$
+·year
+−1
+, respectively). While the OPEX for Conf. 2 is 7.4% higher than for Conf. 1 (5336.4 M
+$
+·year
+−1
+ vs. 4969.5 M
+$
+·year
+−1
+, respectively). 
+Figure 9
+a compares the cost for steam (heating utility) required for different cooling capacity levels between both configurations, while 
+Figure 9
+b compares the cost for cooling water requirements. It can be seen that, for all cooling capacity values, the cost for steam obtained for Conf. 2 is slightly higher than the cost obtained for Conf. 1, and that the difference remains almost constant throughout the examined range (
+Figure 9
+a). The cost for cooling water is almost the same for low capacity level values; however, for higher cooling capacity levels, the cost for Conf. 2 is greater than the cost for Conf. 1, and the difference increases with increasing cooling capacity values (
+Figure 9
+b). 
+Figure 10
+ shows the investments associated with the process units obtained for Conf. 2. When comparing this figure and 
+Figure 3
+ corresponding to Conf. 1, it can be seen that the trends of the individual contributions of the process units are similar for both configurations, except for LTSHE. This indicates that the elimination of LTSHE from the configuration does not modify the general trends of the investments required for the other process units as a function of the cooling capacity.
+Finally, it is interesting to compare in 
+Table 3
+ (16 kW) and 
+Table 6
+ (100 kW) the optimal flow rate values of the weak (stream #1) and strong (stream #6) solutions for both configurations. Independently of the cooling capacity level, the optimal values of these variables obtained for Conf. 2 are significantly lower than the values obtained for Conf. 1. Moreover, all the flow rate values of the weak and strong solutions (m
+1
+ to m
+6
+, and m
+11
+ to m
+15
+) obtained for Conf. 2 are comparatively lower than the values obtained for Conf. 1 (by around 30–45% depending on the particular stream considered). For 16 kW, m
+1
+ decreases from 0.085 kg·s
+−1
+ to 0.058 kg·s
+−1
+ (a 32% decrease) and m
+2
+ from 0.045 kg·s
+−1
+ to 0.032 kg·s
+−1
+ (a 29% decrease). However, the weak solution concentration X
+1
+ remains virtually unchanged for 16 kW and changes by only 2.6% for 100 kW. However, the (absolute) values are different; they are 53.7% for 16 kW and 56.2% for 100 kW, in Conf. 2. 
+Another interesting result, from a practical point of view, is that the optimal medium and high operating pressures obtained for Conf. 2 are also significantly lower than the values obtained for Conf. 1. 
+Table 3
+ shows that the medium and high pressures for Conf. 2 are 18% and 28% lower than Conf. 1, respectively, for a cooling capacity of 16 kW. 
+Table 6
+ shows that these reductions are 9% and 23%, respectively, for 100 kW. However, it should be observed that, for Conf. 2 and throughout the examined range of cooling capacity values, the LiBr concentration X
+15
+ and temperature T
+15
+ of stream #15 reached the values of 65.401% and 53.893 °C, respectively, which were obtained from the model constraint that describes the crystallization line. In fact, the inequality constraints that prevent crystallization became active, thus indicating that Conf. 2 operates in a region closer to the crystallization line than Conf. 1. 
+Finally, in order to investigate the influence of the utility costs in the optimal solutions, the same optimization problems were solved by changing the current cost parameters. Specifically, the current cooling water and steam costs were changed to 2.95 × 10
+−2
+ 
+$
+·t
+−1
+ of cooling water and 84 
+$
+·t
+−1
+ of steam, respectively. These numerical values are reported by Khan et al. [
+40
+] and Union Gas Limited [
+41
+], respectively. In addition, the influence of the global heat transfer coefficient values on the optimal solutions was studied. The optimization results showed that the optimal process configuration and the trends of the process variables do not vary with respect to the solutions discussed above when changes in the parameters were introduced.
+This paper addressed the optimization of a double-effect H
+2
+O-LiBr ARS through the minimization of the total annual cost for a wide range of cooling capacity values. To this end, the existing trade-offs between process configuration, sizes of the process units, and operating conditions were optimized by employing a nonlinear mathematical model, which was implemented in GAMS. Interestingly, the effectiveness factors of the solution heat exchangers, which were treated as optimization variables instead of fixed parameters, allowed us to obtain a new process configuration. The low-temperature heat exchanger is removed from the configuration throughout the examined range of cooling capacity levels, keeping only the high-temperature solution heat exchanger, indicating that the heat integration between the weak and strong LiBr solutions takes place entirely at the high-temperature zone of the process. The importance in terms of the effectiveness factor of the high-temperature solution heat exchanger increases with increasing cooling capacity levels; the sizes and operating conditions of the other process units accommodate accordingly, in order to meet the problem specifications with the minimal total annual cost. However, the improved configuration operates in a region closer to the crystallization line than the original configuration.
+For a specified cooling capacity of 16 kW, the improved configuration makes it possible to reduce the total annual cost and the annualized capital expenditures by around 10% and 11%, respectively, with respect to the optimized conventional double-effect configuration, at the expense of increasing the operating expenditures by around 9%. For a cooling capacity of 100 kW, these percentages are 12%, 15%, and 7.4%, respectively. Then, the improved configuration shows better cost performances at the higher cooling capacity levels that were studied. 
+In future work, the proposed model will consider the variation of the heat transfer coefficients with the temperature in each process unit. Then, a superstructure-based representation embedding several candidate configurations, and thereby allowing different flow patterns, will be modeled and solved through a discrete and continuous mathematical programming model. The latter system will also include the possibility of extending the number of effects, and will make it possible to consider other heat sources.
+The following are available online at 
+https://www.mdpi.com/2227-9717/7/1/50/s1
+, Figure S1: Schematic of the studied double-effect H
+2
+O-LiBr ARS; Table S1: Parameter values for estimating process unit investment Z
+k
+.
+All authors contributed to the analysis of the results and to writing the manuscript. S.F.M. developed and implemented the mathematical model of the process in GAMS, collected and analyzed data, and wrote the first draft of the manuscript. S.S.M., K.V.G., T.M. and M.C.M. provided feedback to the content and revised the final draft. M.C.M. conceived and supervised the research.
+This research was funded by CONICET.
+The financial support from the Consejo Nacional de Investigaciones Científicas y Técnicas (CONICET) from Argentina is gratefully acknowledged.
+The authors declare no conflict of interest.
+(*) It is not summed in the TAC and CAPEX.
+(*) It is not summed in the TAC and CAPEX.
+(*) It is not summed in the TAC and CAPEX.
+(*) It is not summed in the TAC and CAPEX.

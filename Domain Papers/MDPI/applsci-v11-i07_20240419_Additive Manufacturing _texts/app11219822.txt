@@ -1,0 +1,411 @@
+3D-printing concrete technology has attracted more and more attention for smart construction due to its advantages of digitization, automation, and high degree of intelligence. This article introduces the basic principles and related processes of concrete 3D-printing technology, and reviews the development from the following four fields: the material properties, preparation technology, printing parameters, and evaluation criteria of 3D-printing concrete technology. Then the existing difficulties, development direction and key technologies of 3D-printing concrete are described. Finally, we look forward to the development prospects of 3D-printing concrete from the aspects of printing materials, software and hardware cooperation, printing technology, etc. All the researches will provide the useful references for the later development and research.
+Concrete material is a mixture made by mixing cementitious materials, water, coarse and fine aggregates in appropriate proportions. It is widely used in construction, water conservancy, bridges, highways, railways and urban infrastructure construction which is one of the important civil engineering materials. As the demand for concrete increases, the problems of high pollution and high energy consumption in production and application process have become increasingly prominent, restricting the green, healthy and sustainable development of concrete materials. At the same time, the increasingly complex concrete structures have put forward higher requirements on the strength and durability of concrete materials due to the environment and stress characteristics.
+For the past few years 3D-printing technology has been widely used in architectural design, industrial manufacturing, aerospace, biological engineering, cultural relics protection and other industries with its advantages of low cost, high efficiency, strong design, and reliable quality [
+1
+,
+2
+]. Especially the 3D-printing technology combined with concrete technology that provides new ideas for the development and application of concrete materials. However, 3D-printing concrete technology has strict requirements in different performance domains, and further, deeper research is still needed.
+This article introduces the research status of 3D-printing concrete technology, summarizes the impact of concrete material properties, key preparation technologies, 3D-printing control parameters and other factors on 3D-printing concrete technology. Based on the current status and problems, looks forward to the research direction of 3D-printing concrete technology and development trends.
+3D-printing concrete technology is a new technology developed on the basis of 3D-printing technology and applied to concrete construction. Its main working principle is to pass the configured concrete slurry through the extrusion device, under the control of the 3D software, according to the preset settings A good printing program is extruded by a nozzle to print, and finally the designed concrete component is obtained. As a new type of concrete moldless molding technology [
+3
+], it can apply the computer-aided design tools to the construction process. Compared with the traditional construction forms, 3D-printing concrete technology consumes less energy when applied to complex structures, and 3D-printing concrete technology can optimize the structure according to the working conditions. With the large-scale application and promotion of 3D-printing concrete technology, it can effectively reduce the input of materials, personnel, and machinery in the building construction process, and promote the development of digital and intelligent building construction technology [
+4
+].
+3D-printing concrete technology originated from Rensselaer Polytechnic Institute in New York, USA. Pegna [
+5
+] first explored 3D-printing construction technology in 1997, which proved the feasibility and prospects of 3D-printing technology in the field of construction. In 1998, at the University of Southern California, Khoshnevis et al. [
+6
+,
+7
+] developed contour crafting
+®
+ (CC), which adopts computer precise control to automatically complete the pouring process and realizes the smooth contour surface and complex feature model pouring by controlling the nozzle. In 2007, Dini demonstrated its D-shape
+®
+ technology [
+8
+]. D-shape
+®
+ technology uses hundreds of nozzles at the bottom of the printing device, which can spray magnesia binders. Fine sand containing magnesia powder is sprayed on the binders to gradually solidify to form a stone solid. The sand layers are glued together to form a stone building in the end. In 2009, Buswell et al. [
+8
+,
+9
+] of Loughborough University in the United Kingdom developed concrete printing technology (concrete printing, Conprint 3D
+®
+). Compared with the contour process, the preparation of the equipment and computer control program used in the concrete printing technology is simpler. In 2012, ETH Zurich [
+10
+,
+11
+] launched the mesh mold project to explore the possibility of digitally manufacturing concrete structures with high geometric complexity. This technology uses 3D-printing to build a polymer network. The mold selects the appropriate particle size aggregate according to the size of the mesh to design the concrete mix ratio, so as to realize the retention of the concrete by blocking the mesh. In 2015, ETH Zurich Lloret et al. [
+12
+] developed smart dynamic casting (SDC
+®
+) based on the fast sliding mold process. Compared with other 3D-printing building technologies, its significant advantage lies in the ability to form a sliding mold around the steel bar, which realizes the enhancement of the printing structure. In 2019, China Construction Industrial Technology Research Institute Co., Ltd. and China Construction Second Bureau South China Company jointly established a project to print “In-situ 3D-printing double-layer demonstration buildings”, marking a breakthrough in In-situ 3D-printing technology in the field of construction [
+13
+].
+Figure 1
+ shows the development history of 3D-printing construction technology based on cement-based materials [
+14
+]. Since the concept of 3D-printing concrete was put forward for more than 20 years, the research and application of 3D-printing concrete technology has developed exponentially, relying on the advantages of short construction period, topology optimization, high mechanization, non-modeling, meeting personalized customization, complex structure building construction and shape Unique architectural construction and other advantages have entered a period of rapid development. The development of 3D-printing concrete technology presents the following characteristics: (1) The scale of the industry continues to grow; (2) New materials and new technologies continue to emerge; (3) New engineering applications continue to emerge.
+3D-printing concrete technology is different from traditional molding concrete technology, and 3D-printing concrete technology has stricter requirements for materials. The printing material not only needs to have enough fluidity to ensure the smooth pumping of the material and continuous extrusion from the nozzle. It also needs to have good water retention to avoid the clogging of the pumping tube due to material segregation, and it also needs to have enough hardening speed to maintain the stable accumulation of subsequent layers to build [
+14
+]. Therefore, the printability of the material mainly includes fluidity, extrudability, buildability, and setting time.
+Fluidity refers to the ability of concrete materials to be easily pumped, transported, and smoothly extruded from the discharge port of the print head. It is an important parameter for evaluating printability. If the fluidity is small, it is likely to cause a high mechanical wear rate and equipment blockage. If the fluidity is large, the printed components are easy to collapse. Therefore, it is necessary to make reasonable adjustments to fluidity to meet printing needs.
+The most important factor affecting fluidity is water content. If the water content is too small, the mixture will become dry and hard and cannot pass the conveying pipeline smoothly. If the water content is too large, it will cause a large number of harmful pores in the printed sample, which will affect the later strength. The water content of cement slurry can be effectively controlled by adding high-performance water-reducing agent to improve the fluidity of cement slurry. Perrot et al. [
+15
+] obtained a mixture that satisfies 3D-printing which contains water-cement ratio of 0.41 and polycarboxylate polymer powder of 0.3% cement mass. Results showed the best construction speed was 1.1m/h. Le et al. [
+16
+] obtained 3D printed mixture could be smoothly extruded through the nozzle and achieved the construction of a specimen with the highest 61 layers. The gelling material is a water-to-binder ratio of 0.26 and a water reducing agent of 1%. The fluidity can also be improved by adding mineral admixtures to optimize the particle size gradation. The more continuous the particle gradation, the more conducive to the formation of a densely packed state of the mixture, resulting in better fluidity. Güneyisi et al. [
+17
+] replaced the mixture produced by Portland cement with 50% fly ash, and the flow time reduced by 43.2%. Zhang et al. [
+18
+] studied the relationship between fluidity and aggregate content and aggregate fineness, and the results showed that there is a linear relationship between fluidity and aggregate, as shown in 
+Figure 2
+. Ting [
+19
+] and others used recycled glass as fine aggregate and added it to concrete, which significantly improved the fluidity of concrete.
+The fluidity test is generally determined by the jumping table test, and its expanded diameter is used as the fluidity index of the material, as shown in 
+Figure 3
+. Zhang [
+20
+] and Ma [
+21
+] etc. used the jumping table test to measure the fluidity range of 170~226 mm and 174~210 mm, respectively. Tay et al. [
+22
+] used slump test and slump flow test to study the 3D printable range of concrete. The results show that a mixture with a slump of 4–8 mm and a fluidity of 150–190 mm can have a better printing characteristic.
+Extrudability refers to the difficulty of 3D-printing concrete in the extrusion process and the continuity and surface quality after extrusion. The study of extrudability can ensure that the slurry can be continuously transported through the feed pipe and deposited smoothly through the nozzle of the print head. It is a guarantee for continuous printing construction and can ensure the integrity of the printing building.
+An important factor affecting extrudability is the ratio of aggregate particle size to the diameter of the extrusion nozzle. If the aggregate particle size is too large, the extrusion nozzle will be blocked. Conversely, if the aggregate particle size is too small, its surface area will increase, and the amount of slurry that required to wrap the surface of the aggregate will increase, causing the concrete to easily crack. Liu [
+23
+] found that the use of fine aggregate materials can ensure good extrudability and effectively prevent concrete materials from blocking the printing pipes and nozzles. Noura et al. [
+24
+] found that when the maximum particle size of the sand in the mixture is 2 mm, and the weight ratio of the cement is 2, and when the ratio of the nozzle diameter to the maximum aggregate particle size is greater than 5, the printing material will not be extruded. Blockage occurred. Malaeb et al. [
+25
+] found that while reducing sand, increasing the amount of cement will make it have better extrudability. When the ratio of fine aggregate to cement is 1.28, the ratio of fine aggregate to sand is 2. The cement ratio required for proper extrudability with minimum water is 0.48, the best nozzle diameter is 2 cm, and the extrudability is the best. Hambach et al. [
+26
+] found that when the content of fiber mixed in cement-based materials exceeds about 1.5%, it will cause the printing nozzle to block.
+The extrudability test is mainly evaluated by the apparent quality of the strip or the extrusion pressure. Le et al. [
+16
+] extruded a band with a total length of 4500 mm from a 9 mm wide nozzle without clogging or breaking, as a criterion for meeting extrudability, as shown in 
+Figure 4
+a. Lafhaj et al. [
+27
+] used the process parameters with a print nozzle diameter of 15 mm and a printing speed of 100 mm/s, as shown in 
+Figure 4
+b, and evaluated the extrudability by observing whether the mixture was blocking the pipe during the process of stacking 20 layers of strips with a length of 500 mm and a width of 350 mm. Chen et al. [
+28
+] used a stamping extruder to quantify the extrusion pressure of different blends to characterize the extrudability.
+Buildability refers to the degree of deformation and overall stability of the 3D printed cement-based material after extrusion under its own weight and subsequent extrusion and gravity of the printed layer. Because the 3D-printing concrete technology does not have templates, it is easy to have interlayer defects or settlement of the printing layer. The previous printing layer must support the subsequent printing layer with better bonding ability with the subsequent printing layer, and the components do not collapse or deform. Thus, the printing material needs to have interlayer support and shape retention. One of the basic requirements of 3D printed concrete is good buildability. The buildability is an index to measure the early stiffness of the structure, the foundation of the integrity of the printed components, and the key to the stability of the layers. Research on the buildability can ensure the printed building stability.
+Buildability can be improved by increasing the amount of aggregate and adding mineral admixtures and additives. Zhang et al. [
+20
+] prepared the slurry by mixing 2% cement to replace silica fume and nanoclay, which greatly improved the construction performance of the slurry, and the construction height was increased from the original 72 mm to 260 mm. Shakor et al. [
+29
+] added 4.5% lithium carbonate to the mixture to promote rapid coagulation of the printing mixture, thereby achieving the purpose of improving buildability. Zhang et al. [
+18
+] found that the buildability of 3D printed concrete is determined by its yield stress, while the yield stress of concrete depends on the ratio of cement paste and aggregate in the mixture. With the same aggregate content, the finer the concrete, the higher the concrete yield stress, which is easier to buildability. Long et al. [
+30
+] controlled the proportion of cement-based materials by controlling a single variable of microcrystalline cellulose (MCC). The detailed parameters are shown in 
+Table 1
+. The study found that, as the addition of microcrystalline cellulose increases, the slump rate decreases. The buildable height is increased, and the buildability is significantly improved, as shown in 
+Figure 5
+.
+The buildability test can directly explore the non-deformation of the stacking and accumulation of concrete through traditional construction test methods. Long et al. [
+30
+] used a print nozzle with a diameter of 20 mm and a printing speed of 80 mm/s to prepare a 5-layer hollow structure with a size of 400 mm × 150 mm × 100 mm, as shown in 
+Figure 6
+. The structure slump was used to characterize the buildability of the mixture. Yuan et al. [
+31
+] used a loading device to detect the deformation of the 20-layer printing structure. The loading rate was set according to the printing construction plan. When the deformation was less than 0.2%, it was deemed to meet the construction requirements. Bhattacherjee et al. [
+32
+] printed a 300 mm × 300 mm rectangular hollow thin-walled structure, stacked 20 layers vertically. Then the difference between the actual build height and the design height was calculated. The above difference value and the thickness of first printed layer were used to evaluate the buildability. Le et al. [
+33
+] proposed quantifying the buildability as the number of filament layers that can be established without significant deformation of the lower layer. The shear strength is measured by the shear blade strain gauge, and the shear strength is in the range of 0.3~0.9 kPa, which can meet the construction requirements, and the best shear strength is 0.55 kPa. Ma et al. [
+21
+] printed 20 layers of extruded filaments with a vertical stacking length of 250 mm and a width of 30 mm, with a layer height of 8 mm, and meeting the construction requirements without collapsing within 10 min of standing time. Ogura et al. [
+34
+] proposed to build a wall of 1000 mm long, 30 mm wide, and 120 mm high composed of 7 layers of filaments. If the wall can maintain its geometric shape and no obvious deformation is observed, it is considered to be buildable.
+Setting time refers to the time that the 3D printed concrete mixture is mixed with water to maintain the printing performance. Setting time is an important parameter of the performance indicators of 3D-printing materials. A longer setting time can obtain good fluidity and extrudability, and a shorter setting time can obtain sufficient early strength. Due to the different scales of structures, the setting time of materials should be adjusted according to the scale of the printed structure to meet different needs. Therefore, the setting time of 3D printed concrete should be adjustable within a certain range.
+Setting time can be adjusted by coagulant, retarder, or by changing the gelling material. Le et al. [
+16
+] found that stirring the cementitious material can increase the setting time; by adding a retarder and a superplasticizer, respectively, the influence of the two on the setting time was obtained, as shown in 
+Figure 7
+. The setting time of the superplasticizer and retarder with the dosage of 1% and 0.5% is 68 min and 100 min, respectively. Zareiyan et al. [
+35
+] mixed 60% calcium sulfoaluminate and 40% type I ordinary Portland cement to shorten the setting time of the cementitious material to 45 min. Khalil et al. [
+24
+] mixed 93% ordinary Portland cement and 7% sulphoaluminate cement, and the obtained mixtures had initial setting and final setting times of 110 min and 150 min, respectively. Kazemian et al. [
+36
+] obtained an initial setting time of 163 min by adding 3% calcium chloride.
+The setting time test is based on different standards, and the instruments and methods used by the researchers are not the same. Chen et al. [
+37
+] started printing a strip of 800 mm × 40 mm every 10 min after a static time of 30 min and recorded the time of rupture as the setting time. Kazemian et al. [
+36
+] used a penetration resistance meter to test the initial setting time of the mixture based on the ASTM C403 standard, and found that the initial setting time of the mixture with 3% calcium chloride was 163 min. Aqel et al. [
+38
+] used a Vicat tester to measure the initial setting time of cement slurry containing limestone fillers according to ASTMC191-08, and found that with the increase of limestone content and its fineness, the initial setting time of the mixture was shortened. Khalil et al. [
+35
+] obtained the initial setting and final setting time of 99 min for the mixture to meet the requirements of 3D-printing through the Vicat tester. Ma et al. [
+39
+] used the penetration resistance method to determine the stiffness development of the cementitious material during the coagulation process in accordance with the Chinese national testing standard GB/T50080-2002 and determined the setting time of the mixture based on the penetration resistance measured at different times. However, now the setting time of printing materials is still relatively long, which makes the advantages of 3D-printing rapid manufacturing unable to be fully utilized.
+During the construction of 3D-printing concrete, slurry is piled up layer by layer. Slurry should not only support its own weight, but also be able to withstand the weight of the slurry accumulated on the upper layer. Thus, the slurry needs certain mechanical properties, strong early strength, and higher late strength, otherwise it will collapse and deform due to insufficient strength.
+Compressive strength and flexural strength are used to characterize the mechanical properties of 3D printed concrete, which can be improved by adding mineral admixtures and optimizing the gradation. Paul et al. [
+40
+] used ordinary cement, fly ash, silica fume, fine sand, glass fiber and other materials to develop new 3D-printing materials. The 28 d compressive strength is in the range of 36 to 57 MPa, and the flexural strength is about 10 MPa. Le et al. [
+33
+] developed a high-performance fiber concrete suitable for 3D-printing by reducing the water-binder ratio and optimizing the material gradation method, which has high compressive strength (about 100 MPa) and flexural strength (11 MPa). Hambach et al. [
+26
+] found that glass, basalt, and carbon fiber can effectively improve the bending strength of concrete. Shakor et al. [
+29
+] studied the 3D-printing calcium aluminate cement water-based adhesive and found that it can effectively enhance the strength of the design structure, and studied the impact of saturation and other compressive strength, at the saturation level of 170% When, the maximum compressive strength of 3DP cementitious material is 8.26MPa, as shown in 
+Figure 8
+.
+Fiber reinforcement is also an effective means to improve mechanical properties such as compressive strength and flexural strength, but too high fiber content will reduce fluidity, increase the risk of nozzle clogging, and reduce bonding strength. Christ et al. [
+41
+] studied the fiber reinforcement effect of different fibers, as shown in 
+Figure 9
+. The mechanical test of the printed sample showed that the bending strength was increased by 180%. Le [
+33
+] and Paul [
+40
+] etc. respectively selected 12 mm/8 mm (length/diameter) polypropylene fiber and 0.5% alkali-resistant glass fiber (6 mm) to improve the surface properties of the sample. Hambach et al. [
+26
+] found that the compressive strength of glass fiber and basalt fiber sample with 1% volume content is only 13 MPa, while the compressive strength of carbon fiber sample with the same content can reach 30 MPa.
+3D-printing concrete has high requirements for compressive strength as conventional concrete, the interlayer bond strength is also a necessary condition for maintaining structural stability. Studies showed the 3D print concrete component is easily destroyed at the interlayer bonding when the load is received [
+42
+]. The weakness of the 3D-printing concrete structure is an inter-interlayer adhesion, and the interlayer bonding performance significantly affects structural mechanical properties.
+Interlayer print interval is a key factor affecting bond strength [
+33
+]. Panda et al. [
+43
+] found that the methods that increasing the interval, print speed and printhead height can reduce the interlayer bond strength of 3D-printing concrete structure. Nerella et al. [
+44
+] observed that the interlayer bond strength decreases over time intervals. When the interval time interval is 1min, the bond strength is reduced by 50%, and when the interval time interval is 1d, the bond strength is reduced by 90%.
+Adding a mortar between the interlayer can effectively improve the interlayer bond strength. Hosseini et al. [
+45
+] added resin mortar to the interlayer, which was composed of black charcoal particles, sulfur, and sand. Results showed that the use of epoxy resins and Kefla fibers can increase the interlayer bond strength 20%. Ma et al. [
+46
+] proposed to add the cellulose fiber mortar between the print layers, which can effectively improve the interlayer bonding performance. When the interval is 60 min, the interlayer bond strength is still higher than 1.91 MPa.
+Later maintenance can also improve the mechanical properties of the components. Because there is no template that constraints the components, a long-range evaporation of the surface of the member generate surface cracking. The cracking not only reduces the strength of the member, but also affects durability. Li et al. [
+47
+] obtained that under standard curing and water care conditions, the anti-bending strength of the sample is substantially equivalent (3.5 MPa), and under steam conservation conditions it is 12.93 Mpa. Xia et al. [
+48
+] studied the effect of maintenance temperature (25 °C, 40 °C, 60 °C and 80 °C) on the strength of the fly ash geological polymer, and found that temperature can increase the strength of 3D-printing geological polymer samples. However, due to large structural dimensions, in a full-size 3D-printing structure, it is more difficult to improve their intensity by high temperature conservation.
+There are fewer reports on the durability of 3D-printing concrete materials, but this is a very important performance indicator, which directly affects the safety of 3D-printing concrete buildings and building structures. Once a problem occurs, it will not only waste a lot of manpower and material resources, but also threaten life safety. Thus, it is necessary to study the durability of 3D-printing concrete materials.
+In 3D-printing buildings, there are many factors that affect the durability of materials, such as temperature, external forces, and chemical effects. Developing materials with good anti-seepage and anti-freezing properties can ensure the durability of the structure. Weng et al. [
+49
+] used peeling test, four-point bending test, and compressive strength test to study the fire resistance and high temperature resistance of 3D-printing fiber-reinforced cement-based composites, and found that PVA fiber can effectively prevent cement-based materials from flaking and bursting when exposed to high temperatures. The bending and compressive strength of 3DPFRCC at different temperatures are higher than those of 3D printed plain concrete, as shown in 
+Figure 10
+. Weger et al. [
+50
+] tested the freeze-thaw resistance and carbonization resistance of 3D printed cement-based materials formed by the powder bonding process. Results showed that the freeze-thaw resistance properties of 3D printed cement-based materials meet the standard requirements. With normal or increasing CO
+2
+ concentration, the specimen did not undergo carbonization.
+The preparation of printing materials is the key of 3D-printing concrete technology. Now concrete is used as the base material of the printing materials, and cementing materials, aggregates, admixtures, admixtures, special fibers, etc., are added to it to meet the required of actual project 3D printed concrete.
+The types of 3D-printing concrete cementing materials are wide, mainly including Portland cement, sulphoaluminate cement, resin, geopolymer, and so on. Cementitious materials have a certain adjustment effect on the setting time, strength, bonding performance, and stability of 3D printed concrete structures.
+Portland cement is the most common coagulation material in the construction industry, but studies have found that ordinary Portland cement cannot bend moments, and it has disadvantageous shear forces, bonding ability, and setting time between layers, which makes it difficult to meet the needs of 3D-printing [
+33
+,
+51
+]. It is necessary to improve the fineness and mineral composition of cement. Sun Jianzhi et al. [
+52
+] modified the properties of Portland cement by adding polymer and other emulsions to reduce shrinkage and improve adhesion. It is also possible to consider mixing ordinary Portland cement and sulfoaluminate cement into 3D printed concrete to adjust the early hydration speed and early strength of the concrete.
+Sulphoaluminate cement has the characteristics of early strength, and the initial setting time is about 6 min. Its early strength is relatively high, applying it to the proportion of printed concrete can get a significant quick setting effect [
+53
+]. Li et al. [
+54
+] found that magnesium oxysulfide cement does not harden in water, and has the advantages of light weight, fast setting speed, early strength, and strong adhesion. The compressive strength and flexural strength of magnesium phosphate cement are higher than other types of cement. The setting and hardening time is 1~10 min, which can meet the requirements of the bearing capacity of 3D printed concrete structures.
+Resin-based cementitious materials can greatly improve the bearing capacity of components. Issa et al. [
+55
+] used epoxy resin to repair concrete cracks. Due to the existence of cracks, the compressive strength of the cube decreased by 40.9%, and only 8% after repair. Ahmad et al. [
+56
+] injected epoxy resin into the flexural-shear cracks to strengthen the cracked reinforced concrete members, which increased the bearing capacity by 49%.
+Geopolymer cementitious materials can repair cracks, improving the mechanical properties of components. The strength of components can also be improved by increasing the ratio of geopolymers. Porto et al. [
+57
+] used polymer-modified cement mortar to repair the reinforced concrete column surface layer, and the axial stiffness of the repaired column was only reduced by 13%. Pellegrino et al. [
+58
+] used geopolymer modified cement mortar to repair the tension zone of the beam, and the load value of the first crack increased by 30%. Sakka et al. [
+59
+] added 7.5% styrene-butadiene rubber polymer to cement-based materials, forming polymer membranes to better combine the cement hydration products which effectively reduced the adverse effects caused by the interlayer tensile strength of the printed specimens. Hosseini et al. [
+45
+] mixed sand aggregate and carbon-sulfur polymer in a ratio of 3:2 to prepare carbon-sulfur polymer modified cement mortar which can enhance the inter-layer tensile properties of the cement mortar. The tensile strength is 100% higher than that of non-adhesive bonded specimens. Yang et al. [
+60
+] mixed cement and styrene-butadiene emulsion in a ratio of 3:2 to prepare a styrene-butadiene emulsion modified cement paste to enhance the interlayer tensile properties of the concrete. The stretched strength of styrene-butadiene emulsion bonded specimens 7 d and 28 d interlayer increased by 144% and 96% respectively. Bong et al. [
+61
+] optimized the ratio of printable geopolymer materials, and the direct tensile strength of the 28d layers of the printed specimen was 2.7 MPa, which was 3 times the direct tensile strength of the 7d layers, as shown in 
+Figure 11
+. Komljenović et al. [
+51
+] found that the types of catalysts HS and SS are the factors that determine the rate of increase in compressive strength, because the increase in the mass ratio of SS/HS increases the soluble silicate content in the geopolymerization system, which increases the compressive strength.
+In order to facilitate the comparison of the effects of different cementing materials on the components, they are summarized, as shown in 
+Table 2
+.
+Aggregate affects the rheology, viscosity, stress characteristics before and after hardening and durability of concrete directly or indirectly from the internal structure [
+62
+]. The aggregate particle size has a great influence on the 3D printed concrete. When the aggregate particle size is too large, it will block the extrusion nozzle. On the contrary, if the aggregate particle size is too small, its specific surface area will increase, and the amount of paste increases that used to wrap the surface of the aggregate which will make the concrete easy to crack. When the ratio of the nozzle diameter to the maximum aggregate particle size is greater than 5, the printing material will not be blocked during the extrusion process. When the maximum particle size of the aggregate is less than 1/10 of the nozzle diameter, the cementitious material can be smoothly extruded through the nozzle [
+24
+,
+25
+]. Lin et al. [
+63
+] measured the fluidity, compressive strength, and flexural strength of mortar influenced by sand of different fineness. Within a certain range, as the fineness modulus of sand increases, the fluidity of mortar, 7 d compressive strength and flexural strength will be improved to varying degrees, as shown in 
+Figure 12
+.
+The active ingredients of mineral admixtures can greatly increase the strength of 3D printed concrete components, the density of the structure, and improve the durability of the material and the service life of the structure.
+The incorporation of fly ash can effectively improve the working performance, mechanical properties, and durability of printed concrete. Fly ash is the main admixture for preparing high-performance 3D printed concrete. However, the incorporation of a large amount of fly ash causes the slow development of the early strength of the printed concrete, and the obvious reduction of carbonization resistance and frost resistance. Therefore, fly ash is generally mixed with other admixtures. Kang Jingfu et al. [
+64
+] mixed fly ash and GH ore powder to prepare high-strength and high-performance concrete. Voigt et al. [
+65
+] observed that the addition of fly ash improved the fluidity of cement-based materials, but reduced the shape stability of the material. The cement-based material obtained by mixing sintered clay and fly ash has good fluidity and shape stability.
+Silica fume has high activity. As an admixture for concrete, it not only increases the initial strength of the printed concrete, but also improves the later flexural strength of the printed concrete. The silica fume particles are very small, which can be used to fill the pores around the aggregate, improving the bonding performance of the concrete, and enhancing the transition zone between the cement slurry and the aggregate interface [
+66
+]. Marchment et al. [
+67
+] added silica fume, which accounts for 10% of the cementitious material, to improve the adhesion and extrusion properties of the printing material. Rahul et al. [
+68
+] found that the addition of silica fume can optimize the particle size distribution of the printing material. After adding silicon powder, the actual and ideal particle size distribution can be more closely matched, as shown in 
+Figure 13
+, increasing its yield stress, and improving the buildability of the printing material. However, it will reduce the fluidity of the material. Zhang et al. [
+69
+] added 2% of the cement mass of nano-clay and silica fume into concrete to prepare a concrete material with high thixotropy.
+Fibrous materials can significantly improve the crack resistance of the printed concrete and the elastic modulus of the maximum load. It can also significantly improve the toughness, ductility of the printed concrete, delay the surface deterioration of the concrete product, and improve its durability. Tohamy et al. [
+70
+] showed that the addition of polypropylene fiber can prevent the printed concrete samples from peeling off, optimize the extrusion process of the concrete in the printer output port to a certain extent, and obtain a uniform and continuous printed sample structure. However, when the content of polypropylene fiber is too much, it will reduce the impermeability of concrete. Feng et al. [
+71
+] used gypsum as the main printing material and tested it with GFRP (Glass Reinforced Plastics) materials, and found that the printing column has a significant increase in axial load-bearing capacity and ductility. Mechtcherine et al. [
+72
+] found that the continuous embedded carbon fiber during the printing process can effectively improve the bending strength and deformation ability of the specimen. Ding et al. [
+73
+] used PE (polyethylene) fiber to reinforce the printing matrix material and found that the addition of PE fiber significantly improved the bending strength of the specimen in different directions, as shown in 
+Figure 14
+. Arunothayan et al. [
+74
+] added steel fibers to concrete materials, which greatly improved the bending resistance of the printed specimens. Ma et al. [
+75
+] added 0.5% basalt fiber to concrete materials, and the basic mechanical properties and anisotropy of printable cement-based materials were significantly improved.
+In order to facilitate the comparison of the effects of different fiber materials on the components, they are summarized, as shown in 
+Table 3
+.
+Admixtures are an important part of 3D printed concrete materials. They can significantly adjust and improve the fluidity, setting time, and mechanical properties of concrete. Adding admixtures to 3D printed concrete appropriately will get a small amount, but have a big effect. Slavcheva et al. [
+76
+] found that by increasing the amount of water reducing agent, the total pore volume of the printed sample was reduced, and the content of nanopores was increased. It also caused an increase in the compactness of the sample, and the drying and shrinkage reduced. Perrot et al. [
+15
+] found that xanthan gum and Brunei gum thickeners can significantly improve the moldability of the accumulated layer of printed concrete test strips. Le et al. [
+16
+] used 1% water-reducing agent gelling materials to improve fluidity and realized the construction of specimens with the highest 61 layers.
+In addition to the material composition, the final performance of 3D printed concrete is also affected by the printing parameters to a large extent. A reasonable choice of printing parameters will greatly improve the printing quality of the components. The printing parameters of 3D-printing include the nozzle size selected by the printer, the height of the nozzle from the printing platform, the movement speed of the print head, and the interval time between layers. Printing process control and printing parameter selection are the key links in the formation of concrete 3D-printing structures, and they are also important factors that affect the final printing quality of concrete.
+The key technology of 3D-printing concrete lies in whether the prepared concrete can pass through the nozzle smoothly, and realize layer-by-layer bonding and solidification to form a whole, so the design of the print head is very important. Khoshnevis et al. [
+77
+,
+78
+] used a large three-dimensional extrusion device and a nozzle with a spatula to achieve layered printing of concrete, which can solve the problem of uneven 3D-printing surface and can be used for printing large buildings. The print head is shown in 
+Figure 15
+. Buswell and Lim et al. [
+8
+,
+9
+,
+79
+] used the main components of concrete container, conveying pipe, printing pump, output pipe, nozzle to form the printing head. The printing of solid components is realized through the cross operation of spraying and extruding material layered printing and implanting transverse steel mesh. It has higher precision and freedom, and has great advantages in printing small and heterogeneous building components, but it has a slight disadvantage compared with printing in large buildings and whole houses.
+The nozzle size and shape in the printing parameters will have different effects on the printing effect, and different nozzle shapes and sizes should be adopted for different printing conditions. Paul et al. [
+40
+] found that the strength of specimens printed with rectangular nozzle holes is higher than that of specimens printed with circular nozzle holes, and circular nozzles are more suitable for printing complex structures. Because the rectangular nozzle has fewer interlayer gaps than the circular nozzle, the strength is higher. Sun Xiaoyan [
+80
+] and others found that under the same extrusion flow conditions, the printed specimens with a triangular extruded shape have the fewest number of interlayer defects and the best mechanical properties. The defects are reduced, and the mechanical properties are improved with the extrusion size larger for the printed specimens of the same shape. When the extrusion shape and size are same, the staggered arrangement of the printing ports can improve the mechanical properties of the printed specimen by 13% to 47%. Tay et al. [
+81
+] found that when the print nozzle area is equal to the cross-sectional area of the actual mortar strip, the printed mortar strip is better. The setting of the print nozzle aperture must be consistent with the content and size of the aggregate to avoid clogging.
+Printing height is the height of the nozzle from the printing platform. Printing height is a parameter that affects the bonding strength and surface quality between layers. Printing height will also affect the settlement of the printed mortar strips. When the printing height is too high, the interlayer bonding strength of the printed mortar strip will be greatly reduced, and the shape of the printed mortar strip will be unstable. When the printing height is too low, the printing nozzle will generate additional pressure on the printed mortar strip, resulting in more Great settlement. Wolfs et al. [
+82
+] believe that the print height should be equal to the width of the nozzle section, because it can smoothly deposit the extruded mortar strip and avoid the interaction between the print head and the mortar strip. Panda et al. [
+43
+] based their tests on the direct tensile test method and found that when the height of the printing nozzle is smaller than the height of the printing mortar strip, the bond strength between layers increases as the height decreases, as shown in 
+Figure 16
+. Panda adjusted the print height of the nozzle to increase the tensile strength between layers. Results show that the direct interlayer tensile strength of the sample prepared with a nozzle height of 0 mm is 53.3% higher than that of a sample prepared with a nozzle height of 4 mm. Zareiyan et al. [
+83
+] reduced the height of the print bar to increase the interlayer cleavage strength, and found that the 28 d interlayer cleavage strength of the 25.4 mm layer thickness sample was 11.4% higher than when the layer thickness was 50.8 mm, and the 25.4 mm layer thickness sample shows a higher splitting crack growth rate.
+The moving speed of the print head is an important printing parameter of 3D-printing technology, and the selection of the moving speed of the print head has a great influence on the bonding strength between layers and the surface quality. Tay et al. [
+84
+] chose a 30 mm × 15 mm rectangular nozzle for printing, and found that the nozzle’s moving speed has a great influence on the cross-sectional shape of the printed mortar strip. Rahul et al. [
+68
+] believe that the extrusion speed of the printer is the same as the nozzle movement speed, which can maintain the shape stability of the printed mortar. Kruger et al. [
+85
+] developed a design model for 3D concrete printing and predicted the printing speed to prevent structural failure under given conditions. Panda et al. [
+43
+] studied the effect of different nozzle speeds on the performance of fresh concrete for 3D-printing, and found that the adhesive strength of the sample decreased slightly as the nozzle speed increased, as shown in 
+Figure 17
+. Panda adjusted the running speed of the nozzle to increase the tensile strength between layers. The results show that the direct interlayer tensile strength of the samples made with the 70 mm/s nozzle operating speed is 10.5% higher than that of the samples made with the 110 mm/s nozzle operating speed. The printing speed used by Nerella et al. [
+86
+] is about 75 mm/s. The initial setting time of concrete materials is controlled within 3 min through the accelerator, and the interval between layers is 30 s, which greatly optimizes the rheological properties of concrete.
+The interlayer interval time is a key factor affecting the bond strength. Optimize the interlayer interval time to prevent significant deformation or collapse and ensure acceptable bonding strength between printed layers. Panda et al. [
+43
+] showed that increasing the time interval between layers, printing speed and print head height reduces the interlayer bonding strength of 3D printed concrete structures, as shown in 
+Figure 18
+. Nerella et al. [
+44
+] showed that the bonding strength between layers decreases with the extension of the time interval. When the time interval between layers is 1 min, the bonding strength decreases by 50%, and when the time interval between layers is 1 d, the bonding strength decreases by 90%. Wolfs et al. [
+87
+] optimized the interlayer interval and surface dehydration to increase the interlayer tensile strength. Results show that reducing the interlayer interval can increase the interlayer tensile strength. The interlayer tensile strength and splitting of the specimens with an interval of 15 s is 19% and 27% higher than that of the 24 h specimen, respectively.
+The forming quality of printed components is also a key issue of 3D-printing concrete technology. It mainly includes geometric quality problems such as the shape and size of the printed components and surface quality problems such as surface roughness. Basic requirements of the construction process are to print components with good forming quality. Therefore, it is very important to systematically evaluate the forming quality of 3D printed concrete components.
+The quality of concrete 3D-printing is affected by many factors such as printing materials, printer systems, pumps, control systems, print heads, and the shape of the discharge nozzle [
+88
+]. Lim et al. [
+9
+] proposed that the surface quality of 3D-printing cement-based materials can be judged by the three criteria of no defects on the surface, clear square boundaries of the printed layer, and meeting the requirements of surface consistency and homogeneity.
+Printing parameters are the most critical factor affecting the surface quality of the parts; thus, scholars focus mainly on adaptive layering and optimization of various printing parameters. Nadiyapara et al. [
+89
+] believe that, compared with equal layer thickness layering, adaptive layering can set a smaller layer thickness in the feature-intensive area of the model, so that the dense features are not easy to lose, thereby improving the surface quality of the part. The algorithm is complex; the quality of the algorithm determines the accuracy of the layering. If the algorithm is unreasonable, it will reduce the surface quality of the model. Kim et al. [
+90
+] believe that the fused deposition printing parameters have strong coupling and influence each other during the printing process, which ultimately determines the surface quality of the parts. Optimizing the molding parameters can significantly improve the poor surface finish of the molded parts. Li Yanru et al. [
+91
+] effectively optimized the surface quality of the part by selecting the optimal forming angle, optimal layer thickness, and optimal extrusion magnification.
+Many challenges and technical problems have always existed in the field of 3D-printing concrete, although much research has been undertaken. A brief list is as follows:
+(1)
+The problem of accurate conversion between software design and real architecture. In contrast to the traditional building structure, 3D-printing construction technology requires the design of the building model on the computer, and then converts it into a physical object through an automated program. The design software has become an important part of the preparation phase of the 3D-printing construction technology, but there are certain errors between the software 3D design and the entity in architectural printing, which lead to construction quality problems and limit the development of 3D-printing concrete technology. How to realize the conversion between software and reality is an indispensable step in the development of printing concrete.
+(2)
+The feasibility of complex architectural printing. The mechanical properties of 3D-printing construction technology are still at the stage of research and development. Although it can be applied to the construction of low-rise and large-area buildings, one-time 3D-printing cannot be done for common high-rise buildings. Thus, the feasible method is to print prefabricated ones first and re-assembly of parts, which is similar to prefabricated buildings. Thus, the advantage of rapid prototyping is lost. Difficulties lie in the high-rise buildings of tens of meters or even hundreds of meters. First of all, it requires a printer compatible with the height of the building. Secondly, to obtain the structural strength of the high-rise building and the problem of the steel bar structure in the building structure, a reasonable solution is needed.
+(3)
+The requirements of building materials is another problem. Most 3D printed buildings are made of high-strength special concrete materials. Ordinary cement cannot meet the requirements of building performance and printing process. It can be seen that the requirements of 3D-printing for material performance must be considered. The 3D-printing building mainly uses printer nozzles to spray materials to build walls. This spraying method not only requires certain stress and mechanical molding characteristics, but also has certain requirements for the quality of coarse and fine aggregates. The requirements for the quality of aggregates are very high, and even new crushing processes are needed. The effect of admixtures in ordinary concrete may be due to the change of materials, which makes it play a role in the specific system of 3D-printing buildings, and even its mechanism of action also changes. Thus, to realize the printing of three-dimensional buildings, materials are the first problem to be solved.
+(4)
+The problem of molding height. The current 3D-printing concrete technology is still in the stage of plane expansion. It can be applied to the construction of low-rise and large-area buildings. However, it is not possible to print the widely used high-rise buildings. It can only be printed by first printing prefabs and then assembling them. To print dozens of floors of buildings, it is necessary to design a giant 3D printer to solve the problem of structural strength of large buildings and the printing of steel bars in buildings.
+(5)
+The problem of anisotropy. This is one of the main challenges to limit the development of 3D printed concrete. The main reason for the anisotropy is that the internal structure of the layers or the internal structure of the material is different due to the layer-by-layer printing, which causes the difference of mechanical properties when the printed components loaded in different directions. It is also related to various factors such as material properties, nozzle types, and steel bar layout besides the impact of the layer-by-layer printing construction process.
+(6)
+Although the 3D printed concrete over traditional concrete pouring methods can adapt to complex designs and free-style buildings, the true connotations of optimization, sustainability and effective weight reduction have not been fully explored. Topology optimization is a mathematical method that has been widely used in optimizing the appearance and layout of materials. Now a topology optimization method has been introduced in the numerical simulation stage of 3D printed concrete, with the purpose of optimizing the printed structure. However, it is difficult to apply this method directly to the structural design of concrete because it fails to consider the nonlinear behavior of the material (such as the significant difference between the compressive and tensile strength of concrete).
+(7)
+The adhesion between different layers of 3D printed concrete is mainly characterized by tensile and shear strength. Most of the current research focuses on tensile strength, and the research on shear strength is relatively insufficient.
+The problem of accurate conversion between software design and real architecture. In contrast to the traditional building structure, 3D-printing construction technology requires the design of the building model on the computer, and then converts it into a physical object through an automated program. The design software has become an important part of the preparation phase of the 3D-printing construction technology, but there are certain errors between the software 3D design and the entity in architectural printing, which lead to construction quality problems and limit the development of 3D-printing concrete technology. How to realize the conversion between software and reality is an indispensable step in the development of printing concrete.
+The feasibility of complex architectural printing. The mechanical properties of 3D-printing construction technology are still at the stage of research and development. Although it can be applied to the construction of low-rise and large-area buildings, one-time 3D-printing cannot be done for common high-rise buildings. Thus, the feasible method is to print prefabricated ones first and re-assembly of parts, which is similar to prefabricated buildings. Thus, the advantage of rapid prototyping is lost. Difficulties lie in the high-rise buildings of tens of meters or even hundreds of meters. First of all, it requires a printer compatible with the height of the building. Secondly, to obtain the structural strength of the high-rise building and the problem of the steel bar structure in the building structure, a reasonable solution is needed.
+The requirements of building materials is another problem. Most 3D printed buildings are made of high-strength special concrete materials. Ordinary cement cannot meet the requirements of building performance and printing process. It can be seen that the requirements of 3D-printing for material performance must be considered. The 3D-printing building mainly uses printer nozzles to spray materials to build walls. This spraying method not only requires certain stress and mechanical molding characteristics, but also has certain requirements for the quality of coarse and fine aggregates. The requirements for the quality of aggregates are very high, and even new crushing processes are needed. The effect of admixtures in ordinary concrete may be due to the change of materials, which makes it play a role in the specific system of 3D-printing buildings, and even its mechanism of action also changes. Thus, to realize the printing of three-dimensional buildings, materials are the first problem to be solved.
+The problem of molding height. The current 3D-printing concrete technology is still in the stage of plane expansion. It can be applied to the construction of low-rise and large-area buildings. However, it is not possible to print the widely used high-rise buildings. It can only be printed by first printing prefabs and then assembling them. To print dozens of floors of buildings, it is necessary to design a giant 3D printer to solve the problem of structural strength of large buildings and the printing of steel bars in buildings.
+The problem of anisotropy. This is one of the main challenges to limit the development of 3D printed concrete. The main reason for the anisotropy is that the internal structure of the layers or the internal structure of the material is different due to the layer-by-layer printing, which causes the difference of mechanical properties when the printed components loaded in different directions. It is also related to various factors such as material properties, nozzle types, and steel bar layout besides the impact of the layer-by-layer printing construction process.
+Although the 3D printed concrete over traditional concrete pouring methods can adapt to complex designs and free-style buildings, the true connotations of optimization, sustainability and effective weight reduction have not been fully explored. Topology optimization is a mathematical method that has been widely used in optimizing the appearance and layout of materials. Now a topology optimization method has been introduced in the numerical simulation stage of 3D printed concrete, with the purpose of optimizing the printed structure. However, it is difficult to apply this method directly to the structural design of concrete because it fails to consider the nonlinear behavior of the material (such as the significant difference between the compressive and tensile strength of concrete).
+The adhesion between different layers of 3D printed concrete is mainly characterized by tensile and shear strength. Most of the current research focuses on tensile strength, and the research on shear strength is relatively insufficient.
+In addition, 3D printed concrete will have major changes in the production process, safety measures, etc., which will cause more or less problems. These all require further research.
+Now 3D-printing concrete technology is in the initial stage of development. In order to realize the universalization of the application of 3D-printing concrete technology, it is necessary to solve its existing problems with key technologies. The future research and development of 3D-printing concrete technology can be carried out from the following aspects:
+(1)
+Research on concrete materials. Although a lot of research on 3D-printing concrete materials has been carried out, and some properties that 3D-printing concrete needs have been proposed, it is mainly based on the preliminary understanding of 3D-printing concrete technology, and there is a lack of systematic, theoretical, and in-depth research. It is necessary to conduct systematic and in-depth research on concrete raw materials and compounding theory for 3D-printing concrete technology to develop rapidly. Thus, the new concrete mix theory and new raw material requirements need to be improved according to performance requirements. This will be the main research topic in the development of 3D-printing concrete technology.
+(2)
+Software and hardware collaboration. The 3D printer needs to recognize the given three-dimensional model to print the building based on the model. The modeling and design software of the architectural field and the CNC software of the 3D printer are effectively docked to realize the seamless recognition of information which is the future software development direction. In addition, using the CNC software to control the hardware device precisely also needs further development.
+(3)
+Research on printing technology. How to reasonably arrange the printing direction and order, control the all-round climb of the print head, etc., are important factors that determine the printing efficiency, and it is also an aspect that needs attention in future research. The achievable printing height of the current 3D architectural printing process is greatly restricted, but the development of the society has gradually made the concrete buildings develop toward the towering direction. It requires a new printing process to achieve high-rise printing and development to the high-rise to solve the problem including the structural strength, reinforcement, and other issues.
+(4)
+Application of micro characterization technology. The current research still focuses on analysis of macroscopic mechanical properties, while the research on micro-scale can provide theoretical support at the specific material level for the macro-performance. The analysis at the micro level will further deepen and improve the understanding of the mechanical properties of 3D printed concrete.
+(5)
+Durability of printing materials. The main focus of study is rheology, buildability, anisotropy of mechanical properties, and interlayer adhesion for extrusion-type 3D-printing concrete. It is necessary to conduct a detailed study on the durability of its material structure considering the service time limit and environment of the printing structure and the building. Quantitatively evaluating the durability of 3D printed concrete is necessary in order to compare the durability of different 3D printed concretes, and finally realize the prediction and improvement of the durability of 3D printed concrete.
+(6)
+Hardening performance is one of the important indicators of 3D-printing concrete materials. Due to the existence of weak surfaces between layers, 3D-printing concrete materials have obvious anisotropy. Although researchers have conducted a lot of research on the factors that influence the interlayer bonding performance of 3D-printing concrete materials, and also have proposed some effective interface enhancement methods, the current methods lack flexibility and universality. It is necessary to further study flexible and effective interlayer performance enhancement methods, and optimize the design of the printing structure and path.
+(7)
+Strengthening and toughening methods are an important guarantee for the safety of 3D printed concrete structures. Adding chopped fibers can effectively improve the tensile strength and toughness of 3D printed concrete materials, but the increase in tensile strength is limited and it is difficult to achieve the enough reinforcement of steel bars. Although the continuous rib co-printing method is effective, its enhancement effect on the structure is limited. Other co-printing methods are in the conceptual design stage and need to be studied further.
+Research on concrete materials. Although a lot of research on 3D-printing concrete materials has been carried out, and some properties that 3D-printing concrete needs have been proposed, it is mainly based on the preliminary understanding of 3D-printing concrete technology, and there is a lack of systematic, theoretical, and in-depth research. It is necessary to conduct systematic and in-depth research on concrete raw materials and compounding theory for 3D-printing concrete technology to develop rapidly. Thus, the new concrete mix theory and new raw material requirements need to be improved according to performance requirements. This will be the main research topic in the development of 3D-printing concrete technology.
+Software and hardware collaboration. The 3D printer needs to recognize the given three-dimensional model to print the building based on the model. The modeling and design software of the architectural field and the CNC software of the 3D printer are effectively docked to realize the seamless recognition of information which is the future software development direction. In addition, using the CNC software to control the hardware device precisely also needs further development.
+Research on printing technology. How to reasonably arrange the printing direction and order, control the all-round climb of the print head, etc., are important factors that determine the printing efficiency, and it is also an aspect that needs attention in future research. The achievable printing height of the current 3D architectural printing process is greatly restricted, but the development of the society has gradually made the concrete buildings develop toward the towering direction. It requires a new printing process to achieve high-rise printing and development to the high-rise to solve the problem including the structural strength, reinforcement, and other issues.
+Application of micro characterization technology. The current research still focuses on analysis of macroscopic mechanical properties, while the research on micro-scale can provide theoretical support at the specific material level for the macro-performance. The analysis at the micro level will further deepen and improve the understanding of the mechanical properties of 3D printed concrete.
+Durability of printing materials. The main focus of study is rheology, buildability, anisotropy of mechanical properties, and interlayer adhesion for extrusion-type 3D-printing concrete. It is necessary to conduct a detailed study on the durability of its material structure considering the service time limit and environment of the printing structure and the building. Quantitatively evaluating the durability of 3D printed concrete is necessary in order to compare the durability of different 3D printed concretes, and finally realize the prediction and improvement of the durability of 3D printed concrete.
+Hardening performance is one of the important indicators of 3D-printing concrete materials. Due to the existence of weak surfaces between layers, 3D-printing concrete materials have obvious anisotropy. Although researchers have conducted a lot of research on the factors that influence the interlayer bonding performance of 3D-printing concrete materials, and also have proposed some effective interface enhancement methods, the current methods lack flexibility and universality. It is necessary to further study flexible and effective interlayer performance enhancement methods, and optimize the design of the printing structure and path.
+Strengthening and toughening methods are an important guarantee for the safety of 3D printed concrete structures. Adding chopped fibers can effectively improve the tensile strength and toughness of 3D printed concrete materials, but the increase in tensile strength is limited and it is difficult to achieve the enough reinforcement of steel bars. Although the continuous rib co-printing method is effective, its enhancement effect on the structure is limited. Other co-printing methods are in the conceptual design stage and need to be studied further.
+As a new type of construction technology in the construction industry, concrete 3D-printing has the characteristics of moldless construction, high efficiency, and high precision, showing a good application prospect. Although there are still some problems with the development of materials and equipment, and the development of construction technology, ideas such as rapid in-situ printing of large building structures on site, simultaneous and coordinated printing of multiple printers, and fine printing of factory components and assembly construction will gradually be realized. This technology will surely lead to great vitality in the field of construction and become an important supplement to traditional construction methods.
+F.L., D.Z., X.H., L.S. and Q.Z., all contributed to the collection of data and preparation of the paper. All authors have read and agreed to the published version of the manuscript.
+This work is supported by National Science Foundation under Grant No. 5210041604, 52174144, 52174120, China Postdoctoral Science Foundation under Grant No. 2021M691967, and Natural Science Foundation of Shandong Province, China under Grant No. ZR202103010529.
+Not applicable.
+Not applicable.
+Not applicable.
+The authors declare no conflict of interest.
+Publisher’s Note:
+ MDPI stays neutral with regard to jurisdictional claims in published maps and institutional affiliations.

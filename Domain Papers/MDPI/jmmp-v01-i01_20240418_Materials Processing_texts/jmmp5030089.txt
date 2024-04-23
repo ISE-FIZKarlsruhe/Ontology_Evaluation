@@ -1,0 +1,876 @@
+Innovations in industrial automation, information and communication technology (ICT), renewable energy as well as monitoring and sensing fields have been paving the way for 
+smart
+ devices, which can acquire and convey information to the Internet. Since there is an ever-increasing demand for large yet affordable production volumes for such devices, printed electronics has been attracting attention of both industry and academia. In order to understand the potential and future prospects of the printed electronics, the present paper summarizes the basic principles and conventional approaches while providing the recent progresses in the fabrication and material technologies, applications and environmental impacts.
+Printed electronics has a great potential to offer biodegradable and recyclable solutions, which is a way forward to minimize the electronic waste (e-waste) caused by the ever-increasing number of disposable electronic devices [
+1
+,
+2
+]. As the demand toward adding intelligence to the objects from our daily life has recently increased, the environmental impact of electronics manufacturing has reached to a significant level. Additive Manufacturing (AM) of these devices, e.g., by conventional and the state-of-the-art printing methods, relieves this impact by decreasing used (and wasted) materials and by allowing manufacturing to be completed without the need for etching and masking [
+3
+]. AM not only improves the resource efficiency but also reduces the fabrication costs since these manufacturing processes remain the same for both design prototyping and their mass production [
+4
+]. In addition, the recent advances also prove that AM methods can be used in hybrid printed electronic circuit fabrication, for which the conventional surface-mount technology (SMT) components are adhesively bonded to the printed substrates [
+5
+,
+6
+]. The full potential of using AM for electronic component manufacturing will be reached by replacing all SMT components with their printed counterparts as the assembly process may be completely eliminated [
+7
+,
+8
+,
+9
+]. Therefore, in the future, the electronic components and devices used in the fields of communication, energy and biomedicine can be viably and sustainably manufactured using various printing technologies [
+10
+].
+Printed electronics are manufactured in a process of registering thin functional material (ink) layer combinations on a low-cost substrate that may be recycled and/or naturally degraded in nature. Correspondingly, the manufacturing process is composed of three complementary stages: material selection, printing and post-printing, as depicted in 
+Figure 1
+. The materials for the printed electronics are principally inks of conducting, semiconducting or dielectric characteristics and substrates, which are derived from synthetic or natural polymers. The inks are transferred with a master through direct contact to the substrate in case of contact printing, while they are deposited onto the substrate typically through nozzles in case of non-contact printing. Posterior to the printing process, it is often necessary to conduct sintering/curing in order to reach the desired functional ink and substrate characteristics. The inks, substrate and the printing technology along with the post printing requirements must be carefully evaluated for quality, repeatability and life-time aspects of the yield.
+Although the requirements for the mass production of printed electronics with the desired specifications are challenging, the current state-of-the-art for the materials, fabrication processes and inspection technologies demonstrate an increasing trend in both repeatability and functional performance [
+11
+]. Undoubtedly, continuous growth of biodegradable and recyclable material portfolios for conductive, semiconductor and dielectric inks, and synthetic and natural polymeric substrates are fostered by the printing and post-treatment technologies, and optical inspection systems [
+12
+,
+13
+]. As a result, printing methods have gained a ground for large area fabrication of flexible electronics including radio frequency identification (RFID) devices; photovoltaic cells; organic light-emitting diodes (OLEDs); thin film transistors (TFTs); diodes; displays; batteries; and sensors measuring temperature, humidity and pH levels [
+14
+,
+15
+,
+16
+,
+17
+]. These developments demonstrate that reliable and repeatable solutions for the mass production of printed electronics with well-defined manufacturing standards will be available in very near future. In this study, we present the printing principles and approaches by surveying the recent investigations in the manufacturing and material technologies, applications and environmental impacts.
+The rapid growth of the Internet-of-Things (IoT) is contributing to the evergrowing interconnection of the digital world with the physical world. IoT is composed of a vast number of 
+smart
+ objects with communications capabilities for transferring data through wired or wireless communication networks. This includes, for example, various personal smart devices, as well as traffic management, security and RFID systems. The smart objects in general contain several sensing components (sensors) to acquire information about physical phenomena of interest and communication electronics to convey the data to the Internet. As such, IoT enables novel applications and services on the cloud. Naturally, IoT is a new frontier of information and communication technology (ICT) and sensor technologies.
+IoT applications in healthcare, transportation, construction, leisure and sports verticals enable transforming the objects from our everyday life into smart objects. This transformation inevitably requires the addition of semiconductors, sensors and related electronics, which are designed to be discarded once the battery lifetime ends (possibly after a couple of thousands charge–discharge cycles). Although adding intelligence to the devices in everyday use is attractive and aids in digitalization of the physical world, it also shortens their lifetime and becomes a major contributor to global e-waste [
+18
+]. The products that might have lasted 15 years must be hence replaced every 5 years after such a transformation [
+19
+]. These periods become even shorter with the consumer intention towards purchasing new models of fully-operational electronic products. In addition, more power is needed to maintain this trend as the volume and use of such electronic devices keep constantly increasing [
+20
+].
+The consequences of the digital transformation and consumer behavior result in massive amounts of e-waste produced globally [
+21
+]. For instance, in 2019, approximately 53.6 Mt of e-waste was generated and it is increasing at an alarming rate of 2 Mt per year [
+22
+]. Out of these, only around 20–25% of e-waste are assumed to be formally recycled while the majority is domestically dumped into the environment or illegally exported to developing countries [
+23
+,
+24
+]. Despite the claimed percentages of formal e-waste recycling, the absence of systematic procedures in the formal processes frequently ends up in the landfill [
+25
+]. Improper handling of the matter, lack of environmental awareness and consumer behavior cause irreversible impacts on both environment and human health [
+26
+]. Therefore, the current trend of adding intelligence into everyday objects and discarding their environmental impact is not sustainable and requires alternative solutions that aims at reducing the looming e-waste stream.
+Printed electronics offer several benefits, which are not likely to be achieved with the conventional electronics manufacturing. Kunnari et al. classified these benefits in terms of ecodesign (efficient use of materials), minimization of energy consumption both in the manufacturing and utilization phases, reduced use of hazardous substances, and improvement of recyclability [
+27
+]. For instance, use of recycled and/or biobased materials to reduce the use of raw/virgin materials as printed electronics substrates, and recovery of precious metals used as inks have been a long-term objective and already accomplished by the researchers in the field [
+28
+,
+29
+,
+30
+,
+31
+,
+32
+]. In addition, the metal inks have been under investigation for depletion of precious materials and ecological aspects (both in raw material mining and recycling) [
+33
+]. Therefore, separation techniques for metals from e-waste and development of energy-efficient and environmentally friendly carbon based or polymer inks have been investigated so as to replace or minimize the use of metal inks [
+34
+,
+35
+].
+Printing technologies, as a part of the additive manufacturing umbrella, have been extending electronics designers toolbox with access to various materials and ability to apply unorthodox structures in their designs. While printing of all the components is the ultimate aim of the electronics printing, most of the research activities are related to design and manufacturing of individual electronic components. Especially, their low manufacturing cost, large-area processability and lower carbon footprints compared with their conventional counterparts has attracted significant interest from the scientific and industrial communities. The printed electronic devices also provide favorable physical characteristics, e.g., low weight, stretching, resistance to folding or bending, which can not be realized with the conventional electronics [
+36
+,
+37
+].
+In printed electronics, it is common for a device to be partly printed and partly fabricated, as elaborated in the literature [
+38
+,
+39
+,
+40
+]. Various rigid components, such as memory units, sensors and chips that are manufactured through conventional methods can be combined with printed parts to form hybrid devices. However, with flexible and stretchable printed electronics, the use of these rigid components impose challenges in terms of mechanical and electrical integration. Although flexible interconnects and thinning of the microelectronic components can be used for this purpose [
+13
+], a more promising solution to this problem is to outright print these components.
+As illustrated in 
+Figure 2
+, researchers have reported passive, active and sensor printed electronic components [
+3
+,
+7
+]. While passive components are designed and manufactured based on electromagnetic properties of printed materials and shapes, active components utilize nonlinear behavior of printed materials, and sensors are designed based on the electro-mechanical features of the printed structures. A diverse range of active, passive and sensor devices have been printed on thin and flexible substrates, which can be recyclable or even biodegradable [
+41
+,
+42
+,
+43
+,
+44
+,
+45
+,
+46
+,
+47
+]. In the following subsection, recently investigated printed electronic component classes are summarized.
+Sensors convert various physical phenomenon, e.g., acceleration, temperature, magnetic field and capacitance, into electrical signals. As such, they are vital components in a myriad of modern electronic across all application verticals. For instance, various sensors are present in common household appliances, such as computers, security systems and smartphones. In industrial manufacturing facilities, sensors are employed to monitor ambient conditions and equipment parameters to ensure the quality of the produced items. Sensors can be manufactured using printing technologies, since flexible, biodegradable and stretchable sensing components compromise one of the most prominent area of printed electronics.
+Various printed sensors are reported in the literature, e.g., carbon nanotube (CNT) based gas sensors [
+13
+], graphene-poly(3,4-ethylenedioxythiophene) poly(styrenesulfonate) (PEDOT:PSS) humidity sensors [
+48
+], PEDOT:PSS based temperature sensors [
+49
+,
+50
+] and active matrix sensor arrays printed on flexible substrate comprising organic TFTs, organic photodiodes [
+13
+]. Recent developments on organic inks and lignocellulosic substrates have demonstrated the printability of biocompatible and/or recyclable sensing devices. To name a few, Kim et al. [
+51
+] fabricated entirely 3D-printed disposable ion sensor, Ling et al. [
+52
+] explored the feasibility of inkjet-printed PEDOT:PSS/nanopaper-based touch sensor and Guo et al. [
+53
+] demonstrated a 3D-printed pressure sensor composed of degradable and fully recyclable thermoset elastomers. These sensors attest to their potential applications in wearable and transient electronics. An example ensemble of printed sensors are depicted in 
+Figure 3
+, and a more comprehensive list is presented in 
+Table 1
+. The tabulated works have demonstrated that printed sensors may be designed to have performance metrics comparable to their conventionally manufactured counterparts.
+Printed temperature sensors have been explored in detail by Rivadeneyra et al. [
+49
+] and Lall et al. [
+50
+]. The temperature sensors studied by Lall et al. were printed in a Wheatstone configuration using silver, carbon and PEDOT:PSS on a flexible polyimide (PI) substrate as presented in 
+Figure 3
+a. In addition, a temperature sensor using this material combination was also presented by Rivadeneyra et al., the purpose of which was to generate a combination of both positive temperature coefficient (PTC) and negative temperature coefficient (NTC) materials to measure a broad range of temperatures. As can be observed in 
+Figure 4
+, the resistance of PTC materials increases as temperature rises, and vice versa; the resistance of NTC materials decreases when temperature increases. Silver functions as a PTC material while carbon and PEDOT:PSS exhibit NTC behavior. Rivadeneyra et al. [
+49
+] also studied specifically PEDOT:PSS based temperature sensors printed on a flexible polyethylene terephthalate (PET) substrate (please, see 
+Figure 3
+d), and the effects of electrode spacing and fabrication methods on the thermal sensitivity of the sensors. In recent years, fabric based NTC thermistors have been also gaining attention due to the demand in wearable electronic textile industries. For instance, a recent work by Li et al. [
+64
+] demonstrated that a novel low-temperature route can be used to print such thermistors on polyester fabric, for which perovskite (Cs
+2
+SnI
+6
+) ink can be used.
+The work by Lall et al. [
+50
+] demonstrated that temperature sensors printed using silver ink can reach to sensitivity values as high as 0.192%/°C temperature coefficient of resistance (TCR). Furthermore, in the measured temperature range, resistivity of silver is reported to behave in a highly linear fashion, as shown in 
+Figure 4
+a. In contrast, the TCR value of carbon is −0.048%/°C and −0.051%/°C with PEDOT:PSS. In addition, the NTC of these materials changes non-linearly in some temperature ranges. The PTC and NTC characteristics of just mentioned materials are given in 
+Figure 4
+.
+In the work by Rivadeneyra et al. [
+49
+], it was concluded that the sensitivity of printed temperature sensors could be increased by altering the order of the fabrication steps. Higher sensitivity values were obtained by first printing and drying the silver electrodes, then printing and drying PEDOT:PSS and finally, sintering the sensor. In addition, it was reported that the sensitivity of these sensors can be enhanced by a factor of 2.2 by increasing the electrode spacing from 150 μm to 200 μm.
+Strain gauge sensors are used across numerous industries for monitoring strains caused by external forces and/or moments. As shown in 
+Figure 5
+, such sensors are used to monitor curing and exerted pressure during the manufacturing process and structural integrity, and to monitor damage during the operation, i.e., for structural health monitoring (SHM) purposes [
+65
+,
+66
+]. Recently, aerosol-jet printed CNT strain gauge sensors with CNT onto buckypaper embedded in composite laminates demonstrated such sensor implementations in both resin flow and curing monitoring [
+62
+]. Thus, the effects of process defects can be simply monitored during the entire life span of the structure, which gives a clear idea about possible structural failures in advance. In a more recent paper by Wang et al. [
+63
+] high sensitivity/low hysteresis screen printed strain sensors were also demonstrated. The presented sensors have performance metrics comparable to their commercial counterparts. This further indicates the great potential for printability of strain sensors.
+Printed organic transistors can be also used for sensing slowly changing physical phenomenon. For instance, a bacteria sensor, in which bacteria binding electrodes are integrated with PEDOT:PSS transistor, was demonstrated by Demuru et al. [
+67
+]. Similar low frequency sensors for measuring arterial pulse waves were reported by Laurila et al. [
+68
+], for which the sensor was printed from piezoelectric poly(vinylidenefluoride-co-trifluoroethylene) (PVDF-TrFE) and accompanied with entirely printed amplifier.
+Digital electronics rely on the nonlinear behavior of diodes and transistors. However, printed transistors are known to be relatively large and requiring high supply voltage. Recently, carbon based transistors have been developed to overcome these issues. For example, Portilla et al. [
+69
+] and Williams et al. [
+70
+,
+71
+] recently demonstrated low power printed thin-film transistors (TFTs), which is a step forward toward fully recyclable electronics.
+In addition to low power TFTs, multiple transistors have been recently combined together by Matsui et al. [
+72
+] and Sun et al. [
+73
+] to develop operational amplifiers. In their investigations, Matsui et al. [
+72
+] used n-type semiconductor from 4,8-bis[5-(3-cyanophenyl) thiophene-2-yl]benzo[1,2-c:4,5-c′]bis[1,2,5]thiadiazole derivative (TU-3) and p-type semiconductor from 2,8-difluoro-5, 11-bis(triethylsilylethynyl) anthradithiophene (diF-TES-ADT). On the other hand, Sun et al. used pentacene as the semiconducting material. Furthermore, printing technologies, especially inkjet printing, have been observed to be suitable for fabricating latches by Weller et al. [
+74
+], AND and OR circuits by Kamali-Sarvestani et al. [
+75
+], and inverters by Singh et al. [
+76
+]. In the investigations by Weller et al. [
+74
+], latch circuits were implemented by using PEDOT:PSS transistors while AND and OR circuits were printed by using single-walled CNT field effect transistors (SWCNT-FET) in the research study of Kamali-Sarvestani et al. [
+75
+]. The inverters, on the other hand, were printed using 7-dihexyl-dithieno[2,3-d;2′,3′-d′]benzo[1,2-b;4,5-b′]dithiophene (DTBDT-C
+6
+) and polystyrene (PS) semiconducting material as part of the investigations carried out by Singh et al. [
+76
+].
+Integration of printed transistors with sensors, antennas and active circuits has been widely investigated in the literature. The current printed transistor technologies cover applications with relatively modest frequency needs, e.g., in sensors, RFID and audio applications. For instance, an interesting audio application was presented by Kheradmand-Boroujeni et al. [
+77
+], for which the printed preamplifier was combined with a printed piezoelectric loudspeaker. The amplifier was constructed from organic FETs (OFETs), printed capacitors and resistors while the whole circuit was printed on recyclable PET sheet.
+RFID aims at replacing the identification methods of goods with smart labels [
+78
+,
+79
+]. As the name suggests, RFID is used to transfer the identification information wirelessly via RF transmissions. As schematized in 
+Figure 6
+, a typical RFID system consists of three parts: a reader (transponder), tag (smart label) categorized as active or passive, and a computer that collects and manages the information [
+79
+]. In numerous RFID applications, the computer manages a database of the supported tag identifiers, and it has the implementation of the application. The transponder is responsible for accessing the tags and supplying them the required energy. In passive RFID tags, no power supply units are integrated into the circuits [
+80
+]. Instead, these tags draw power wirelessly through induction from the device that is reading them. Active tags, on the other hand, have an onboard power supply. However, passive tags are more common than active tags due to their lower cost and compact size [
+78
+].
+Currently, RFID tags can be manufactured in highly cost efficient manner using printing manufacturing technologies. This opens up the possibility of using RFID tags, for example, as part of packaging and other applications (please, see 
+Figure 7
+), for which the device has short life expectancy and is ultimately disposed. Literature on this subject has shown that manufacturing of RFID tags is not limited to a specific printing technology, and gravure, screen, flexographic and inkjet printing technologies have been effectively used [
+38
+,
+39
+,
+81
+,
+82
+]. For instance,
+In RF electronic hardware designs, power losses incurred in components and interconnects need to be minimized, as these losses directly define the quality of the end-product. At mm-wave frequency, inkjet printed interconnects have been found to outperform conventional RF ribbon-bond interconnects, as reported by Eid et al. [
+83
+] and shown in 
+Figure 8
+a. The printed interconnects incur less losses at mm-wave frequency and generally are closer to a continuous transmission line than the ribbon-bond interconnects. Furthermore, a printed antenna targeted to operate at 3.5 GHz for 5G networks and at the frequency band of wireless local area networks (WLAN), was demonstrated by Wang et al. [
+84
+] and shown in 
+Figure 8
+c. In addition to this, Jilani et al. [
+85
+] also presented an inkjet printed antenna for mm-wave 5G, which was able to function in the 28 and 38 GHz frequency bands.
+As the demand for simple gadgets that can acquire data from the physical world has increased, their need for energy related maintenance has become an important issue. This problem, on one hand, is tackled by optimizing the energy storage components such as batteries. On the other, energy autonomous devices that can harvest the required energy from the environment are thoroughly investigated. To this end, novel renewable and light-weight energy harvesting and storage technologies has a considerable potential [
+87
+,
+88
+,
+89
+,
+90
+,
+91
+,
+92
+]. Printed embedded-on-package 5G energy harvester modules converting electromagnetic energy into direct current (DC) voltage (please, see 
+Figure 8
+b), miniaturized silicon solar cells embedded in textile yarns (please, see 
+Figure 9
+a), extremely thin, flexible and transparent organic and perovskite solar cells (please, see 
+Figure 9
+b,c) converting the energy of light directly into electricity, piezoelectric harvesters converting vibration energy into useful electrical signals are some few examples [
+86
+,
+93
+,
+94
+]. Recently, Lin et al. [
+86
+] presented a package-integrated mm-wave 5G energy harvester fabricated with 3D-printing and inkjet printing technologies. As discussed by Eid et al. [
+83
+], these system-on-package energy harvesters could be also designed to harvest other forms of energy, such as solar and vibration energy. The capability of harvesting energy from the environment would allow greater autonomy of various electronic devices compared to their battery powered variants. Moreover, use of novel dissolvable and recyclable polymer materials in energy harvesters, e.g., demonstrated by Shepelin et al. [
+95
+,
+96
+], can pave a way for the next-generation wearable and implantable transient electronics.
+Currently, one of the most important and commercialized forms of the energy harvesters utilize photoelectric effects to generate electricity using photovoltaic cells (also known as solar cells). They are mainly composed of supporting layer covered by photovoltaic or photoemissive cells and conductive transport grid [
+98
+]. The most popular and commercial material for solar cells has been silicon due to its rigidity and physical invariance for indefinite time frames. With a global market share of about 90%, the silicon solar cells have power conversion efficiencies (PCEs) varying between 19 and 25% [
+99
+,
+100
+,
+101
+]. Printable solar cells, on the other hand, are promising candidates to harvest energy for niche applications such as wearable textile electronics to charge low-power devices and building-integrated systems to harvest energy from solar cells placed on roofs, windows or facades of buildings [
+102
+]. In these applications, the fabrication scalability, light-weight, flexibility and transparency are vital. In recent years, printed solar cells have gained a momentum due to their simple preparation methods, low energy input/high-throughput roll-to-roll (R2R) printing, and low carbon footprints. Recently reported PCEs of printed solar cells is similar to commercial viable cells [
+103
+,
+104
+,
+105
+,
+106
+,
+107
+,
+108
+,
+109
+,
+110
+]. For the printable solar cells, various photoactive materials have been implemented in the literature including hybrid organic-inorganic materials like perovskites and organic conjugated polymer blends such as poly(3-hexylthiophene) (P3HT) (as being donor) and [6,6]-phenyl C61-butyric acid methylester (PCBM) (as being acceptor) [
+111
+,
+112
+,
+113
+,
+114
+]. Lab-scale investigations showed that printed perovskite solar cells can reach up to PCE values comparable with those of silicon solar cells, e.g., 16.6% PCE by Zhang et al. [
+115
+], 17.2% PCE by Schackmar et al. [
+116
+], 17.74% PCE by Li et al. [
+117
+], stabilized PCE of 18.5% PCE by Eggers et al. [
+118
+] and 19.6% by Li et al. [
+119
+]. In addition to these developments, the printed organic cells developed by Liu et al. [
+120
+] achieved 15% PCE. Very recently, Ma et al. [
+121
+] built a highly efficient ternary system for as-cast organic solar cells with a 16.68% PCE while organic solar cells developed by Cai et al. [
+122
+] reached up to 18.66% PCE.
+In parallel with the emerging energy harvesting technologies, scientific advancements in energy storage devices play vital role in a wide variety of low-power or self-powered electronics applications [
+123
+,
+124
+,
+125
+]. Recently, Xing et al. [
+126
+], Sundriyal and Bhattacharya [
+87
+] and Aeby et al. [
+127
+] demonstrated flexible and disposable printed supercapacitors, also known as electric double-layer capacitors (EDLCs), by integration of electrodes and separators onto lignocellulosic substrates such as paper. In the upcoming years, the research on energy storage devices are expected to advance the current state-of-the-art and result in more reliable, autonomous and recyclable IoT devices.
+Printed organic transistors are attractive due to their flexibility, low manufacturing cost and possibility to cover large structures or sheets cost efficiently. Those features have fueled the success story of active matrix OLED (AMOLED) displays. Usage of organic transistors in displays have been hindered by their low electron mobility. However, recently, Mizukami et al. [
+128
+] demonstrated how DTBDT-C
+6
+ based organic TFTs (OTFTs) can be used as a light source in printed displays. In their work, flexible color displays were fabricated with inkjet printing technology (please, see 
+Figure 10
+a). As depicted in 
+Figure 10
+b,c, a novel study on printed displays have been reported by Ivanov [
+129
+], in which a screen printed electroluminescent matrix display were developed and described in detail.
+The technologies used for printing electronic components are well-known in the graphic arts. Some examples are gravure printing, flexography, offset printing, screen printing and inkjet printing as depicted in 
+Figure 11
+. These technologies are often grouped into contact printing processes, which use printing master [
+130
+], contactless (non impact) printing processes that do not need a master [
+131
+], and hybrid printing processes combining different printing and deposition techniques. In a nutshell, all these processes are used to deposit stacked layer structures, such as electrodes, conductive layers, isolating layers for electronic components [
+132
+]. After deposition, the ink subsequently changes its phase in the desired site [
+133
+,
+134
+,
+135
+,
+136
+]. The initial state, flow and phase change of the ink on the substrate are mainly affected by the viscosity, density, surface tension, solvent evaporation rate, solubility and curing characteristics of the ink, and wettability and permeability of the substrate in use [
+137
+,
+138
+]. Moreover, multi-layer and multi-material nature of the final device require compatibility and hence treatment of each layer to ensure the desired function, e.g., minimal sheet resistance within a short-time span and without damaging previously deposited layers. As exemplified in the previous section, typical printed devices include sensors, batteries, capacitors, transistors, solar cells, memories, electroluminescent structures, large screens, and light panels [
+34
+,
+139
+,
+140
+,
+141
+,
+142
+,
+143
+,
+144
+,
+145
+,
+146
+,
+147
+,
+148
+].
+A well-known application of printed electronics is RFID systems where the antennas can be printed. Printing the RFID antennas on flexible substrates is a very efficient solution because it provides thinner, lighter and cheaper structures compared to the conventional etching-based manufactured antennas. Gravure printing, offset and flexographic printing methods are more commonly used for high-volume production needs, such as solar cells. Offset and flexographic printing are primarily used for inorganic and organic conductors. Gravure printing is suitable for printing high resolution and high quality structures such as organic semiconductors and semiconductor/dielectric interfaces of transistors. In addition, different printing and deposition techniques, such as gravure printing, via-hole screen printing and electroless plating can be combined in hybrid printing processes [
+149
+,
+150
+]. In recent years, new printing processes have been also introduced. For example, Devaraj et al. [
+151
+] created a novel printing process called as ‘form-fuse’. Through this process, silver nanoparticle patterns are printed onto thermoplastic films using a large-area aerosol jet printer with mask or a large-area inkjet printer without mask. In order to achieve the desired geometrical shape, the printed patterns and substrate are vacuum formed. The 3D patterns are then treated using flash light sintering in order to decrease the resistivity [
+152
+]. Moreover, a 4D printing technique using 3D extrusion and melt-electrowriting has been introduced by Constante et al. [
+153
+], which enables printing of anisotropic structures used in biomedical applications.
+The key properties and parameters of the different printing techniques are summarized in 
+Table 2
+. Inkjet printing has traditionally been better suited for R&D or special applications, screen printing is excellent for stacking multiple thick prints, while gravure and flexographic printing offer more opportunities for mass production of printed electronics [
+154
+]. Flexographic printing creates a thin printed layer with a feature size of 80 μm and a throughput of 3–30 m
+2
+/s. Offset and gravure printing provide similar features, the latter being the fastest printing technology in terms of print press speed. Screen printing and inkjet printing can give a larger layer thickness; inkjet printing up to 20 μm and screen printing up to 100 μm even with a lower throughput of 2–3 m
+2
+/s in screen printing and 0.01–0.5 m
+2
+/s in inkjet printing.
+In contact printing techniques, ink is transferred through direct contact between the ink and substrate. Contact printing is often referred to as transfer printing or R2R printing. These printing techniques typically utilize a roll to transfer ink directly to the substrate. The initial costs are high and these techniques require longer preparation periods [
+135
+]. However, lower production costs, high manufacturing speeds and the repeatability associated with contact printing technologies make them favorable for mass production [
+12
+].
+In gravure printing, the elements of the image are engraved on the surface of the printing cylinder, while the non-image areas remain at the original level. As visualized in 
+Figure 12
+, the engraved printing cylinder rotates in an ink fountain partially filled with ink. The entire surface of the cylinder collects ink from the fountain and the excess ink is wiped off the non-image areas with a doctor blade leaving the ink in the engraved cells. The ink is then transferred from the cells directly to the substrate in a printing nip under pressure. Ink transfer is often improved by using an electrostatic assistance system (ESA) that creates an electric field across the nip. The electric field assist in lifting the ink from the cells onto the substrate. The ink layer is dried by evaporating the ink solvent with hot air [
+130
+,
+157
+].
+Gravure printing is known for its high print quality and speed. For example, the resolution is 20 to 400 lines/cm and the print speed is 13 to 16 m/s. Other benefits include a simple printing process, accurate ink application, and flexibility in press design. Publication presses are designed for fast printing of high-quality magazines, catalogs and brochures. Print quality has further improved when laser engraving came more popular. However, increased demand for short batches and personalization has reduced the market share of gravure printing because the production of a printing cylinder is time consuming and expensive [
+130
+,
+157
+].
+Offset printing is an indirect printing method, in which the ink is transferred from a printing plate to the substrate with an intermediate blanket cylinder, as schematized in 
+Figure 13
+. Damping rollers apply a thin layer of moisturizing water to the hydrophilic non-image areas of the plate. After that ink rollers transfer a thin film of ink over the oleophilic image areas. The image and other areas are at the same level, but their surface energies are different. The surface chemistry has an important role in offset printing; image areas accept ink but repel water and non-image areas accept water but repel ink. This difference in surface energy prevents ink from spreading from the image areas, and a thin layer of wetting water in non-image areas prevents further spreading. The ink layer is then transferred to the blanket cylinder and then to the paper in the nip under pressure. Offset printing is a wet-on-wet printing method in which process inks are printed sequentially without intermediate drying. Therefore, some ink is also transferred to the blanket cylinder of the next print unit. After the last printing, the ink layer is dried by absorption, polymerization, oxidation, or evaporation [
+157
+].
+As illustrated in 
+Figure 14
+, flexography uses soft and flexible printing plates in which the pixels are raised on the top surface of the rest of the printing plate. The printing ink is applied to the pixels through an anilox roll with small cells evenly engraved on the surface. The surface of the anilox roll is applied with ink from the chamber and the excess ink is then removed with a doctor blade. After formulation, the ink is located only in the cells of the anilox roll. The ink is then transferred to the pixels on the surface of the printing plate. The ink transfer takes place in a nip where the prevailing pressure allows the ink transfer by improving the contact between the ink and the substrate. At the nip outlet, the ink layer splits and some of the ink is transferred to the substrate. The ink layer is dried by blowing hot air onto its surface. This causes the ink solvent to evaporate.
+Flexography is used, e.g., for printing RFID antennas, batteries, organic electronic circuits such as OLEDs and solar cells. OLEDs are used to make diode displays (televisions, computer monitors) and lighting (diode lamps). Smart labels and thin films printed on polyester film can be used, for example, to monitor temperature during drug transport [
+158
+,
+159
+]. The resolution is typically 60 lines/cm and the print speed is 3 to 12 m/s. The biggest challenge is maintaining color saturation and density in fixed areas. Flexography is suitable for a wide range of printing media. For example, non-porous and porous substrates can be printed without problems.
+Screen printing is a so-called push-through process, in which ink is pushed through a fine fabric (screen) made of plastic or metal fiber or wire. The non-image areas of the screen are covered with a stencil that defines the printed image and acts as a printing plate. As shown in 
+Figure 15
+, the screen is full of ink that is pushed through the image areas of the screen using a squeegee. The achievable print thickness is greater than it is in other printing methods. Drying of the ink layer is typically accomplished by evaporation, oxidation, or ultraviolet (UV) curing. Drying can be accelerated by blowing warm air onto its surface [
+157
+]. Print quality is determined by the material, fineness and thickness of the screen, the distance between the top and bottom of the screen, and the open area of the screen. The fineness of the screen is typically 90 to 120 fibers/cm.
+Screen printing is a versatile and simple process for transferring ink to the surface of substrates. The range of substrates is wide, from paper to ceramics in both sheets and continuous paths. The technology also allows printing on curved surfaces. Applications range from art to large industrial applications, from small electrical components to multi-square meter commercials, and from single-piece production to long print runs. Screen printing is limited by relatively modest print quality. Screen printing is the oldest technology used to print electronics. In addition, it is the cheapest, simplest and the most flexible printing technology. It can be used, e.g., for printing electromagnetic enclosures, capacitors, membrane switches or transistor electrodes. Screen printing has also been studied to print CNTs and panels of graphene nanoparticles on polymer substrates [
+160
+,
+161
+] and flexible printed supercapacitor structures comprising aqueous electrolyte and carbon electrode [
+150
+].
+Pad printing is a printing process that can be used to transfer a planar image to a 3D object as shown in 
+Figure 16
+. This is accomplished using an indirect offset printing technique in which an image is transferred from a cliché through a silicone pad to a substrate. This process has been used as an alternative to screen printing, e.g., for printing transistor electrodes [
+162
+].
+In non-contact printing, nozzles are typically used to accurately deposit inks onto substrates without direct contact, which in turn reduces nozzle contamination. Non-contact printing technologies are significantly slower than R2R contact printing methods. However, many non-contact printing methods are able to print digital models, unlike contact printing methods that require parts of the printing unit to be changed in order to print various patterns. This is particularly efficient in prototyping where a model may be printed only once, and for on-demand production [
+135
+].
+An inkjet is a digital printing method, in which liquid ink droplets are sprayed from small nozzles directly onto the surface of the paper according to digital page information. Nozzle groups are located at the print heads, which are either stationary and page-wide or smaller elements that scan from page to page. Fixed nozzle groups can be up to 1 m wide, allowing for higher print speeds [
+163
+]. Inkjet printing is a fairly simple printing method and also has a light and compact structure. In addition, each printed page can be different and no printing plates are required, allowing for personalization and on-demand printing. Therefore, the inkjet is suitable for hybrid printing applications used in conjunction with the traditional printing techniques.
+The main advantage of inkjet printing is high print quality (resolution 2880 dpi), but limited print speed (2 to 5 m/s) [
+163
+]. The inkjet is widely used in commercial, graphic and packaging printing as well as in publication printing. For example, direct mail and wide-format products are often printed with an inkjet. In addition, the versatility of the inkjet process for both sheets and web printing increases its use. The use of UV inks has grown strongly because they are suitable for use with a variety of substrates, do not produce volatile organic compounds, and are more durable [
+164
+].
+Inkjet technologies can be divided into continuous-stream (CS) and drop-on-demand (DOD) inkjet. These techniques are further subdivided into sub-technologies that differ in droplet formation or control mechanisms [
+163
+]. CS is mainly used in high-speed and high-volume printing applications such as direct marking, bar coding, personalization, labeling, catalogs, hybrid printing, packaging and direct mail. Typically, there are no speed limits, but print quality depends on droplet size and distance, nozzle diameter, droplet stream quality and continuity, and ink surface tension and viscosity. New developments have increased the resolution of the continuous inkjet printer to 600 dpi. A continuous inkjet generates a continuous stream of ink droplets, but only some of them are printed on the substrate. The ink droplets are charged according to the digital page information, and the charged unprinted droplets are then directed to the gutter and collected to the ink chamber. The ink drop is recycled about 40 times before printing [
+163
+]. The schematics for CS inkjet printing are displayed in 
+Figure 17
+a. On the other hand, the high-resolution DOD inkjet is primarily used for small-scale home and office printing, desktop publishing, and high-quality wide-format printing and color coating. However, the print speed is slow. The maximum resolution (2880 dpi) is up to five times higher than CS inkjet, and the droplet size is also significantly smaller. In the DOD inkjet, every drop of ink hits the paper, and no charging, deflection or recycling systems are required. The most common DOD inkjet technologies are thermal and piezoelectric inkjets, which differ in formation technology. 
+Figure 17
+b shows the schematic of DOD inkjet printing.
+Aerosol jet printing, also known as Maskless Mesoscale Materials Deposition (M3D), utilizes atomization of an ink, which produces very small droplets in the aerosol ranging in size from 1 to 5 μm in diameter [
+165
+]. As presented in 
+Figure 18
+, the atomization of the ink can be achieved using either a pneumatic or ultrasonic technique [
+166
+,
+167
+]. These droplets are delivered to the ceramic nozzle attached to the print head with a vacuum generated by means of a nitrogen sheath gas stream and impinged as a high-velocity jet onto the surface of the substrate [
+168
+]. This process enables printing on both plane and conformal surfaces. In order to print complex and 3D patterns, it is crucial to have accurate control over the beam. Thus, a shutter in front of the nozzle is used to selectively interrupt the beam. In addition, a proper distance between the nozzle and substrate, which should not exceed 10 mm and should not be lower than 1 mm, must be also maintained for the accuracy. Exceeding these boundaries usually cause overspray defects in the printed pattern.
+Similar to inkjet printing, aerosol-jet printing is capable of printing designs based on digital models. As an advantage, aerosol-jet printing does not suffer from nozzle clogging. Feature sizes as small as 10 μm can be produced with this technology, allowing high resolution printing [
+169
+]. However, the main drawback of the aerosol-jet printing is the speed, which is up to 12 m/min; thus, it is not suitable for mass manufacturing of printed electronics [
+135
+].
+In this section, the principle materials used in printed electronics are surveyed. The ink materials are presented before the substrate materials.
+In printed electronics, inks are used for implementing structures that has a certain function. In order to print complex electronic structures, several kinds of inks are required, such as conducting, semiconducting, dielectric (or insulator inks). In some specific cases, light-emitting or photovoltaic inks are also used [
+170
+]. The functional inks used in printed electronics need to be able to form homogeneous layers and should be compatible with the other inks that are simultaneously applied.
+Functional inks usually contain solvents, resins and/or polymers. The components in inks can be both organic and inorganic materials; however, some materials have to be in micro- or nanoscale in order to minimize the printer clogging issues [
+166
+], and instead of pigments, metal particles are commonly used. Additives, such as dispersants, are utilized to modify the ink properties for the application needs. The polymer or resin component of the ink operates as the carrier of the metal particles to the substrate. Solvents are used to adjust the viscosity, optimize the drying and dissolve the polymer or resin while keeping particles of interest intact [
+148
+,
+171
+].
+The conducting inks are synthesized as dispersed nanoparticles, dissolved organometallic compounds, dissolved or dispersed conductive polymers [
+42
+]. Metals are the most commonly used conductive ink materials, which are in the form of nanoparticle suspensions or metal-organic decomposition (MOD) [
+172
+,
+173
+]. Metal-nanoparticles are easy to disperse into inks for different printing methods due to their nanometer size; however, the production of metal-nanoparticles require high labor and energy input. Additionally, stabilizers are required to prevent agglomeration in the inks, and the post-print treatments require high temperatures (simply over 100 °C) but can be reduced by decreasing the size of the nanoparticles [
+148
+,
+158
+]. When silver nanoparticles are submersed in water and exposed to UV-light, dissolved silver ions are released. The silver nanoparticles and the released silver ions have a high toxicity, which limits the potential applications for silver nanoparticle inks [
+172
+,
+173
+,
+174
+]. MOD inks, on the other hand, are based on metal precursor dissolved in a compatible solvent; thus, there are no agglomeration or condensation problems. Due to evaporation of solvent, gaps in the printed patterns can occur, which results in decreased conductivity [
+175
+]. Nevertheless, this can be overcome by printing multiple layers with such inks [
+166
+,
+176
+].
+The most popular metal inks are silver, copper, gold and aluminum. Silver-based inks have high conductivity and resistance to oxidation for long periods of time. Compared to silver-based inks, copper-based inks have only 6% less conductivity. However, their conductivity decreases over time due to oxidation. There are several methods to prevent the oxidation, such as use of antioxidants or carrying out the synthesis in an organic solvent and forming a protective layer. These methods are, nonetheless, short-term solutions while long-term solutions against oxidation are, e.g., forming a dense shell of non-oxidizable conductive material or a biometallic core-shell [
+42
+]. Gold is another easy to prepare metal as a conductive ink, which is environmentally stable and requires relatively low sintering temperatures. Besides, aluminum inks have been also synthesized; however, they have high tendency for oxidation and chemically active characteristics.
+In addition to the metallic inks, carbon-based conductive inks including CNT and graphene have been also formulated, which are tailorable and used for specific applications. For instance, metallic SWCNTs (m-SWCNTs) provide excellent stability, flexibility, light transmittance, the conductivity of which increases with the thickness. Graphene has a high conductivity, light transmittance, mechanical strength and elasticity; however, conductivity increases and light transmittance decreases with increased amount of layers [
+148
+,
+158
+,
+166
+]. In recent years, conductive polymers have been also drawing attention due to their cost, flexibility, light-weight and compatibility with aqueous and organic solvents. However, they usually have lower electrical conductivity than metallic materials and their production is challenging due to limited solubility, stability and processability. Moreover, the concentration of polymer inks is very low (1–6%), which also results in long drying times [
+148
+]. They can be classified as conjugated polymers, polymer electrolytes, organic metal chelates or charge transfer complexes. Among all conductive polymers, PEDOT:PSS has been the most popular due to its high conductivity, moderate band gap, low redox potential, temperature and humidity stability. PEDOT is insoluble but gains the soluble characteristics with PSS as a dispersion. Even, the conductivity of PEDOT:PSS can be further improved by adding organic compounds. Other commonly used conductive polymers in inks can be listed as polyacetylene, polyaniline, polypyrrole, polyacene, polythiophene, polyparaphenylene, polypyrrole and doped polyacetylene [
+158
+,
+166
+].
+Conductive oxide ceramics have been also used as ink materials, which are usually produced by doping in order to alter the cation or the anion lattice. Examples of doped conductive oxide ceramics are antimony tin oxide (ATO), fluorin tin oxide (FTO), indium tin oxide (ITO), aluminum zinc oxide (AZO) and gallium zinc oxide (GZO). Among these materials, ITO is the most popular because of its superior conductivity; however, it is a rare and expensive material [
+166
+]. Two types of ITO inks exist, which are sol-gel and nanoparticle. The sol-gel ink has better conductivity but requires very high sintering temperatures while the nanoparticle ink cannot form dense oxide films with high conductivity [
+158
+].
+The semiconducting layer of the printed electronics, serves as the active layer, where most of the electric activity occurs. Silicon and germanium have been the most common semiconductor materials due to their physical stability and high-performance. In addition to these, CNTs, graphene nanomeshes and nanoribbons with their unique semiconducting and mechanical characteristics have been widely investigated for several decades, which may advance the Moore’s law for packaging to the next level [
+158
+,
+177
+,
+178
+,
+179
+,
+180
+,
+181
+,
+182
+,
+183
+]. Semiconducting SWCNT (s-SWCNT) has high flexibility, light transmittance and mobility [
+184
+]. By using only 1–2 layers of graphene, it can be used as semiconductor [
+148
+]. Many ceramic oxides can be used as semiconductor materials, such as tin oxide (SnO
+2
+), zinc oxide (ZnO), indium oxide (In
+2
+O
+3
+) and gallium oxide (Ga
+2
+O
+3
+) [
+166
+,
+185
+]. The ceramic oxides have non-toxic degradation; however, they require high sintering temperatures and are expensive due to their rarity [
+1
+]. The recent studies also demonstrated that transition metal dichalcogenides have semiconducting properties [
+186
+,
+187
+].
+In printed electronics, semiconducting inks are usually formulated from polymer blends and appropriate solvents. Semiconductors printed with such inks can be used to realize both p-type and n-type materials. Polymers mostly using holes as carriers are p-type polymer semiconductors, the most promising types of which are are polythiophenes (PT) and polyfluorenes (PF). Examples of PTs are poly(3-alkylthiophene) (P3AT), P3HT and poly(3,3′-dialkyltetrathiophene) (PQT). N-type polymer conductors use electrons as carriers sucg as poly(9,9-dioctylfluorene-co-bithiophene) (F8T2) [
+166
+].
+Dielectric inks are used as insulator and capacitor layers in printed electronics. In comparison with conducting or semiconducting inks, it is challenging to make and print dielectric inks since the dielectric layer requires enough thickness in order to prevent electric leakage. Substrate materials, like cellulose, gelatine, shellac and silk, are insulators, and can be used as dielectrics [
+1
+]. Additionally, ceramic oxides can be used as dielectric materials; however, they have a tendency to form pinholes and cracks [
+166
+].
+There is an abundance of polymers suitable as dielectrics, which have low surface roughness, surface trap density, concentration of impurities, cost and sintering temperatures. Additionally, they are also compatible with organic semiconductors. The most commonly used polymer dielectric materials are polymethyl methacrylate (PMMA), PI, polyvinylphenol (PVP), PS, polylactic acid (PLA), polydimethylsiloxane (PDMS), polyvinylalcohol (PVA) and benzocyclobutene (BCB) [
+1
+,
+166
+].
+The substrate is a base for the rest of the electronics and acts as an electric insulator to separate electric devices from each other. Traditional substrates for electronics have been usually rigid and physically invariant for indefinite time frames. Despite their high-performance, they possess brittle characteristics making them difficult to use, e.g., in implantable or stretchable devices. On the other hand, the development of lighter, flexible and recyclable or biodegradable synthetic polymer substrates has been enabling the advancement of such devices within useful time frames [
+188
+,
+189
+,
+190
+,
+191
+]. Additionally, biodegradable and non-toxic natural materials, such as fibers, resins and proteins, have exhibited insulating properties suitable for substrates [
+1
+]. A substrate in printed electronics can be made from synthetic or natural materials; however, different applications may favor flexibility, stiffness, high transparency, surface smoothness, low thermal expansion, heat resistance, low cost, thin and light weight [
+158
+]. In addition, different printers may have different requirements, e.g., certain thickness, flexibility and mechanical properties. The ink used in printed electronics usually requires a treatment after printing, this treatment can require high temperatures, chemicals or UV-radiation, and some substrates can be damaged by these treatments. This should be taken into account when selecting a substrate for the printed electronic device.
+Paper substrate is an attractive alternative for printed electronics, since it is cheap, flexible, environmentally friendly and biodegradable [
+192
+]. The disadvantages of paper are its high surface roughness, porosity, vapor permeability and poor moisture resistance. However, the properties of paper can be improved by coating or laminating [
+193
+]. Another suitable natural polymer substrate is nanocellulose, which possesses properties such as high transparency, mechanical strength, heat resistance, low thermal expansion and high surface smoothness [
+1
+,
+20
+,
+158
+].
+Other natural biodegradable materials, which can be used as substrates are, e.g., silk, shellac, gelatin and starch [
+20
+]. Silk is a biodegradable, biocompatible and nontoxic natural protein fiber material, which has been shown to be a promising candidate for use as a substrate. Silk is easy to process and has excellent chemical stability, mechanical properties, and flexibility. Shellac is a natural resin exhibiting biodegradability, high surface smoothness and high solubility in alcohol solvents, which makes it suitable for forming substrate films [
+1
+].
+Polymer films are the most popular choice for printed electronic substrates but the manufacturing and operational milieu has to be carefully designed and controlled in order to minimize their surface defects and distortions. Polyethylene terephthalate (PET), polyethylene naphthalate (PEN), PI and polycarbonate (PC) are the most commonly used polymer substrate materials in printed electronics [
+1
+]. PET is the most popular polymer substrate, it has high optical transparency, flexibility, solvent resistance, low price and dimensional stability in high temperatures [
+37
+]. PEN and PI on the other hand have better heat resistance, but lower transparency and higher cost [
+158
+]. PC has high stability, low weight and good mechanical properties, such as rigidity, impact resistance and hardness [
+194
+].
+PLA, PDMS, PVA, polycaprolactone (PCL), poly-lactic-co-glycolic acid (PLGA), polyurethane (PU), polybutylene succinate (PBS) and polyethylene glycol (PEG) are examples of biodegradable polymers that can be used as substrate materials. PLA is a stiff, transparent polymer, with a slow crystallization rate and low heat resistance, the mechanical properties and heat resistance of which can be improved by, e.g., nucleation, change in the stereochemistry or the use of additives [
+20
+]. PDMS is a highly elastic biocompatible polymer, which could be used as a substrate in stretchable electronics [
+1
+].
+As the manufacturing demand for wearable electronics has been increasing, the interest in direct writing or printing of electronic devices onto textiles, such as polyester fabrics, has become more important. Due to the commonly used high sintering temperatures, it is unavoidable to damage such fabric substrates. Hwang et al. [
+195
+] demonstrated that the use of low temperature sintering methods, such as intense pulsed light sintering, can successfully overcome this problem while increasing the conductivity of printed patterns on the fabrics. In 
+Table 3
+, the glass transition temperatures, maximum service temperatures and other properties of some substrate materials are listed. Here, the maximum service temperature refers to the highest temperature where the material can be used for an extended period of time without notable problems.
+The materials for printed electronics, presented in the previous section, are used as inks and substrates. In this section, we provide an overview of the methods that are typically used for characterizing the ink, substrate, the interaction with ink and substrate, and finally post-treatment alternatives.
+Ink characteristics such as viscosity, surface tension, particle size and solid content (or solid loading) have large impact on the printed electronics. To elaborate, the viscosity of an ink specifies the resistance against the flow at a specific shear rate. As listed in 
+Table 4
+, different viscosities are required for different printing processes. The viscosity of an ink can be modified; however, it is challenging to keep the same electrical properties with changing the viscosity [
+166
+]. Increasing the temperature decreases the viscosity of the ink while the solvent evaporation increases the viscosity [
+167
+,
+197
+]. The solvent in the ink can be used to tune the viscosity of the ink. Additionally, increasing the dispersant concentration decreases the viscosity of the ink [
+171
+]. Flexography, gravure and inkjet printing use low-viscosity, liquid, inks, while offset, screen and pad printing use high-viscosity, paste-like, inks [
+148
+].
+There is a tension at the surface between a liquid and a gas, because of the asymmetric attractive force between the molecules, this phenomenon is called surface tension. The surface tension of the ink is important for the formation of drops, which also affects the interaction between the ink and the substrate [
+171
+]. Polar liquids usually have high surface tension, and nonpolar liquids low. An increase in the temperature or increase in solid content can decrease the surface tension of an ink [
+167
+,
+197
+].
+The functionality of metal particle inks improve with decreasing particle size [
+148
+]. Decreasing the particle size increases the surface area and increases the amount of stabilizing agents required. Additionally, smaller particle size in the ink cause a high surface to volume ratio, which lowers the required sintering temperature. Small particle size and uniform size distribution in the ink produce higher viscosity inks and denser printed patterns [
+167
+]. Furthermore, particle morphologies, e.g., nanospheres (NS) and nanowires (NW), also affect both the electrical conductivity and energy needed for sintering. In their recent studies, Dexter et al. [
+198
+] and Jahangir et al. [
+199
+] showed that mixing both NS and NW can enhance the conductivity and reduce the energy needed for pulsed light sintering, i.e., lower sintering temperatures. In addition, the investigations by Joo et al. [
+200
+] also demonstrated the decrease in bulk resistivity while the NW weight content in NS:NW mixture is increased up to 5%. As a matter of course, higher conductivity can be also achieved by using inks with higher solid content. In the printing process, fewer gaps in the pattern can be achieved with such inks. An increase in the solid content also leads to viscosity decrease under shear stress, allowing the ink to flow more smoothly from one surface to another while still preventing excessive spreading of the ink after printing. The rheological behavior of the ink can thus be tailored by changing the solid content of the ink [
+167
+].
+Different printed electronic devices require different properties such as flexibility, high light transmittance, low surface roughness, light weight, low thermal expansion, stiffness, heat resistance, low cost and low thickness [
+158
+]. The print quality is affected by the surface roughness and porosity of the substrate [
+201
+]. High porosity and large surface roughness can cause disconnected and nonuniform conductive patterns, due to ink penetration. The disconnection of the conductive particles cause a decrease in conductivity. Nevertheless, this can be avoided by using a coating for the substrate, increasing the amount of conductive ink used or printing wider patterns [
+193
+,
+202
+]. Additionally, the surface roughness has contingent impact on the conductivity of the printed pattern [
+170
+].
+The surface roughness can be analyzed by studying the surface topography and the cross-section of a sample. An atomic force microscope (AFM) or scanning electron microscope (SEM) can be used to analyze the surface topography [
+203
+]. SEM can additionally be used to study the cross-section of a sample after cutting the sample using a focused ion beam (FIB) instrument. Other topographic measurement devices can also be used to study the surface roughness. The porosity can be examined using a print penetration test or a mercury porosimeter [
+170
+].
+The performance of electronics is also affected by the surface energy and absorption capacity of the substrate. The resolution of the printed pattern, ink penetration and ink film thickness are affected by these surface properties. A decrease in porosity, decreases the absorption, and a decrease in capillary absorption, decreases the spreading of the ink laterally, which allows printing more accurate patterns. Substrate properties can be modified for the purpose by using, e.g., chemical modifications, physical modifications or coatings [
+193
+]. The surface energy can be calculated by testing several known liquids, such as water, ethylene glycol and diiodomethane, on the substrate using an optical tensiometer [
+170
+].
+The dimensional stability of the substrate affect how the substrate reacts to changes in the environment. Cracks and discontinuity in the printed patterns can be caused by poor dimensional stability. The dimensional stability can be analyzed by exposing the printed device to different environmental conditions, such as increasing humidity and temperature and study the changes in the topographic and electrical properties [
+170
+]. Furthermore, the substrate is often required to be thermally stable since some inks require high sintering temperatures. The thermal stability can be tested by placing the substrate on a hotplate and analyzing the changes in dimensions and color [
+203
+].
+In some electronic applications, it is important to know the dielectric properties of the substrate. In particular, the dielectric constant and dissipation factor must be known in order to achieve the required precision. In general, the dielectric constant of the printed device has to be low in order not to adversely impact high-speed electrical signals. The dielectric properties of a substrate can be examined using methods, such as a microstrip T-resonator, microstrip ring test or parallel plate capacitor [
+203
+,
+204
+].
+The quality of the printed pattern can be evaluated by the printability, resolution, shelf-life and adhesion to the substrate [
+42
+]. Printed electronics additionally require the ability to form highly conductive patterns, which is achieved by a homogeneous distribution and direct contact between conductive particles in the printed pattern [
+136
+,
+167
+]. The print quality is greatly influenced by the interaction between the substrate and the ink during and after the printing process. Ink-substrate interactions include drop impact, spreading, wetting, solvent evaporation rate and penetration, in addition to the drying and ink particle merging on the substrate. The interaction between the ink and the substrate include three stages, it begins with the ink drop impact on the substrate, continues with the wetting and spreading of the ink on the substrate and finally the ink achieves equilibrium with the substrate and environment. The properties of the ink and the substrate, in addition to the environmental conditions, strongly influence this interaction process [
+171
+,
+197
+].
+The print quality is mostly affected by the equilibrium wetting, which can be determined by the contact angle (CA). The CA of a drop on a surface is the angle between the tangents of the liquid–air and liquid–solid interfaces. The surface tension of the liquid, the surface energy of the substrate and the environmental conditions, determine the CA. If the surface energy of the substrate is higher than the surface tension for the ink, the CA is small with an increased spreading of the ink. On the other hand, a high CA with decreased spreading can be achieved by using a substrate with a lower surface energy than the surface tension of the ink. A higher CA with decreased spreading results in thicker patterns with higher resolution and a decrease in the line width [
+148
+,
+171
+,
+197
+].
+The contact angle changes when it is observed over a longer time. An ink drop loses mass due to evaporation, resulting in a decreased CA over time. It is important that the evaporation rate is not too fast and allows for wetting and spreading of the drop. It should not be either too slow with exaggerated spreading. A low advancing CA is required when depositing individual ink drops on a substrate to form a uniform level high quality pattern. Commonly the advancing CA is larger than the receding CA for most combinations of inks and substrates, the difference between these is the CA hysteresis (CAH) [
+171
+]. If CAH is high or CA is low, it is probable that the receding CA is zero [
+197
+].
+Factors affecting CAH are porosity, surface roughness, chemical heterogeneity and strong attractive interaction between ink and substrate. Surfaces with high porosity absorb ink [
+148
+]. The surface roughness can increase the wetting and decrease the CA if the CA is lower than 90°. On the other hand, if the CA is higher than 90°, the surface roughness restricts the wetting of the surface. CAH is also increased by surface roughness. Additionally, a substrate with a high surface roughness and porosity can cause discontinuity in the printed conductive pattern, which would cause a printed electronic device not to function [
+136
+]. The effects of surface roughness can be minimized by surface treatments or substrate patterning. Chemical heterogeneous materials have areas that are more wettable and other areas that are less wettable, the receding CA is usually on the most wettable areas, while the advancing CA is usually on the least wettable area. A drop and a substrate that do not wet, but have a strong attractive interaction, can cause pinning of the edge of the drop [
+197
+]. Additionally, high viscosity inks are usually more reluctant to spreading compared to low viscosity inks [
+171
+].
+It is often necessary to use some kind of post-print treatment in order to acquire the optimal properties, such as conductivity, for printed electronics. These treatments can be based on physical or chemical reactions and aim to remove solvents and additives from the ink, in addition to improving the morphology and microstructure of the printed pattern [
+166
+]. Depending on the ink and the substrate used in the printed electronic device, different kinds of post-print treatments can be used, such as photonic curing, annealing, thermal-, photonic-, microwave-, plasma- or chemical sintering [
+42
+]. The sintering process is affected by parameters, such as particle size and shape, temperature, time, radiation energy level and printed pattern thickness. Increased temperature and time, increases the degree of sintering [
+171
+].
+Thermal sintering is usually accomplished using an oven or hot plate at a specific temperature. It is also to be noted that high temperatures can have a negative effect on the adhesion of ink to substrate and are not suitable for various substrates. Different inks also have varying thermal stability, some inks can endure very high temperatures without a change in conductivity, while others may unexpectedly lose their conductivity at a specific temperature. Thermal sintering is particularly important post-treatment method for nanoparticle inks. Organic stabilizers are used for metal and oxide particle inks in order to prevent agglomeration; however, after printing, the stabilizers are removed using thermal sintering for the particles to form a continuous pattern. Additionally, by thermally sintering particle-based inks to a temperature below their melting point, the electrical properties can be improved. The melting point and sintering temperature can be decreased by a decrease in the particle size used in the ink due to an increase in the surface-to-volume ratio [
+42
+,
+171
+]. MOD inks usually require very high sintering temperatures, which limits the choices for substrates used, and precipitation of metal [
+176
+]. Material properties can also be improved by relieving internal stresses in solution-processed semiconductors, by using annealing. Annealing is usually completed using an oven, hot air flow or hot plate. The high temperatures used in annealing, limits its application [
+166
+].
+The different temperatures required to thermally sinter various nanoparticle inks on glass substrates are compared in 
+Table 5
+. The silver nanoparticle ink clearly has the lowest resistivity on glass substrate with a relatively low sintering temperature; however, there are other factors affecting the sintering temperature and resultant conductive pattern resistivity, e.g., the size of the conductive particle.
+Photonic sintering transfer energy from a light source, such as flash lamps or lasers, to the surface. Fast, high temperature and selective heating can be achieved by photonic sintering, which is practical when using substrates that cannot withstand high temperatures. The use of flash lamps enables effective sintering of the printed pattern with high-intensity millisecond light pulses, increasing only the ink temperature without damaging the substrate [
+200
+]. Intense pulse lamps can be used to sinter large areas (58 cm
+2
+ or larger) in milliseconds using a broad wavelength spectrum (350–800 nm) [
+198
+,
+199
+,
+211
+]. Both continuous and pulse lasers can also be used for sintering printed metal nanoparticle patterns. High-resolution patterns can be achieved by using laser sintering, the laser beam can be tuned for different patterns by adjusting the size and intensity [
+42
+]. UV-curing, on the other hand, is commonly used for insulating and chemically stable materials, such as dielectrics or insulators. Without heating, UV-curing can swiftly solidify the ink with sharp edges and smooth morphology [
+166
+]. However, since plastic absorbs the wavelength range used in UV-curing, it may cause damage to the plastic substrates [
+158
+].
+High temperature plasma sintering and low pressure argon plasma sintering are also selective sintering techniques [
+166
+]. Low pressure argon plasma is the most commonly used plasma sintering method for printed patterns. The sintering starts from the surface and continues into the bulk, and increasing the treatment time result in decreased resistivity. Plasma sintering can be used for electronics printed on plastic substrates due to the ability to use low temperatures but the penetration depth of the plasma limits the possible achievable thickness of the printed pattern [
+42
+,
+158
+].
+Microwave sintering is a very fast method for sintering metals. The penetration depth of the radiation is, however, very small (approximately 1–2 µm at 2.54 GHz), which limits the supported thickness of the printed pattern [
+158
+]. Metals with high thermal conductivity can still use thicker patterns, due to the thermal conductance, and still form uniform patterns [
+42
+,
+166
+].
+Electrical sintering heats the printed metal pattern using electric current, caused by an application of voltage over the pattern. The printed pattern is required to be somewhat conductive already before the electrical sintering. This sintering method is low temperature and very fast [
+42
+].
+Chemical sintering is performed using chemical agents in order to provoke nanoparticles to merge at room temperature. Oppositely charged polyelectrolytes are applied to the metal nanoparticles to stimulate a spontaneous process where the nanoparticles merge and create a conductive pattern. The polyelectrolyte can be added onto the substrate prior to printing or onto the printed pattern after printing. Chemical sintering enables the use of substrates sensitive to heat, such as plastics and paper. Negatively charged silver nanoparticles can be chemically sintered using poly(diallyldimethyl-ammonium chloride) (PDAC), as a positively charged polyelectrolyte [
+212
+]. Other examples of chemical agents are ascorbic acid, hydrochloric acid (HCl), sodium chloride (NaCl), magnesium chloride (MgCl
+2
+) and chloride ions (Cl
+−
+) [
+42
+,
+136
+,
+166
+].
+The differences in the resistivity of silver nanoparticle inks on glass and PI substrates using different sintering methods are compiled in 
+Table 6
+. In addition to the sintering method, substrate and ink, the resistivity depends on the silver particle size, other materials used in the ink and the printed pattern.
+In order to address the environmental impacts of the printed electronics, comprehensive assessment throughout the device life, known as life cycle assessment (LCA), is a must. As holistically schematized in 
+Figure 19
+, LCA of printed electronics provides relevant quantification of the environmental aspects at different stages, i.e., production, use and end-of-life, which are based on the ISO 14040:2006 (Environmental Management-Life Cycle Assessment-Principles and Framework), ISO 14044:2006 (Environmental Management-Life Cycle Assessment-Requirements and Guidelines) and ISO 14067:2018 (Greenhouse gases—Carbon footprint of products—Requirements and guidelines for quantification) [
+224
+,
+225
+,
+226
+]. These standards complement each other describing the limitations and applications of LCA, data collection and interpretation for the environmental impact assessment [
+20
+]. In alignment with these standards, several studies have been conducted which fully or partially covers the life cycle stages. For instance, aging, degradation, environmental and safety issues of polymer films have been studied and explained in detail by Izdebska [
+148
+] and Radermacher [
+227
+]. Environmental assessments and toxic emission evaluations for printed antennas have been studied by Kanth et al. [
+228
+]. LCA and recycling options for photovoltaics were proposed by Espinosa et al. [
+229
+], Gong et al. [
+230
+], Sondergaard et al. [
+231
+] while energy demand and reusability of biodegradable and recycled printed LED foils were investigated by Valimaki et al. [
+20
+]. In addition, energy demands, performance and life-time comparisons of OFETs were provided by Vladu [
+232
+]. Recent studies by Dinh et al. [
+233
+], Yan et al. [
+234
+] and Zhang et al. [
+235
+] demonstrated the effective printing of carbon based inks on thermoplastic substrates, which are highly recyclable. The leading work by Williams et al. was also a paramount of printable and recyclable sensors and TFTs composed of fully carbon based inks and lignocellulosic substrates [
+70
+]. Although there exist limitations, the recent advancement in printed electronics demonstrate the possibility of manufacturing electronic devices with reduced carbon footprint.
+The present article provides a comprehensive review of advantages and limitations of printed electronics in manufacturing, material, application and environmental aspects. Based on the trends in industrial and scientific communities, and consumer markets, commonly used substrates, inks, and contact and non-contact manufacturing methodologies are outlined in line with their applications. The recent developments in the printed electronics related materials and processes have resulted in not only low-cost/low-power applications but also the creation of international multidisciplinary research teams for long-term collaboration. Owing to these communities, there have been intense efforts to exceed commercially viable thresholds and deliver end-products. Overcoming the limitations related to their performance, durability and reliability, printed electronics will be expected to replace their conventional counterparts and offer rapid and affordable manufacturing with less environmental impacts.
+Printed electronics are foreseen to be more accessible and available in our daily lives, which will be one of the gateways towards a digital 21
+st
+ century. Printed components are progressively utilized not only in consumer electronics but also in the fields of energy, biomedicine, transportation, construction and agriculture. Consequently, automation, communication, sensing and monitoring, data collection and transfer electronics will be affordably and autonomously manufactured with minimum demand for human labor and fossil-based energy.
+Conceptualization, J.W., A.K. and H.Y.; Coordination, A.K. and J.W.; Writing—original draft, J.W., A.K., T.P., H.Y., K.R.; Writing—review and editing, J.W., A.K., T.P., H.Y., K.R., R.J. and J.P. All authors have read and agreed to the present version of the manuscript.
+The authors gratefully acknowledge the funding from Academy of Finland BESIMAL project (decision number 334197). J.W. also acknowledges the funding from Jenny and Antti Wihuri Foundation.
+Not applicable.
+The authors declare no conflict of interest.
+Publisher’s Note:
+ MDPI stays neutral with regard to jurisdictional claims in published maps and institutional affiliations.

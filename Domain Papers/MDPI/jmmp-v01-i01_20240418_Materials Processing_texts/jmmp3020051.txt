@@ -1,0 +1,311 @@
+The quality and reliability in additive manufacturing is an emerging area. To ensure process quality and reliability, the influence of all process parameters and conditions needs to be understood. The product quality and reliability characteristics, i.e., dimensional accuracy, precision, repeatability, and reproducibility are mostly affected by inherent and systematic manufacturing process variations. This paper presents research on dimensional quality and distortion analysis of AlSi10Mg thin-walled parts developed by a selective laser melting technique. The input process parameters were fixed, and the impact of inherent process variation on dimensional accuracy and precision was studied. The process stability and variability were examined under repeatability and reproducibility conditions. The sample length (horizontal dimension) results revealed a 0.05 mm maximum dimensional error, 0.0197 mm repeatability, and 0.0169 mm reproducibility. Similarly, in sample height (vertical dimension) results, 0.258 mm maximum dimensional error, 0.0237 mm repeatability, and 0.0863 mm reproducibility were observed. The effect of varying design thickness on thickness accuracy was analyzed, and regression analysis performed. The maximum 0.038 mm error and 0.018 mm standard deviation was observed for the 1 mm thickness sample, which significantly decreased for sample thickness ≥2 mm. The % error decreased exponentially with increasing sample thickness. The distortion analysis was performed to explore the effect of sample thickness on part distortion. The 0.5 mm thickness sample shows a very high distortion comparatively, and it is reduced significantly for >0.5 mm thickness samples. The study is further extended to examine the effect of solution heat treatment and artificial aging on the accuracy, precision, and distortion; however, it did not improve the results. Conclusively, the sample dimensions, i.e., length and height, have shown fluctuations due to inherent process characteristics under repeatability and reproducibility conditions. The ANOVA results revealed that sample length means are not statistically significantly different, whereas sample height means are significantly different. The horizontal dimensions in the 
+xy
+-plane have better accuracy and precision compared to the vertical dimension in the 
+z
+-axis. The accuracy and precision increased, whereas part distortion decreased with increasing thickness.
+Quality and reliability are major concerns in the state-of-the-art Industry 4.0 technologies including Additive Manufacturing (AM). AM technologies have gained more attention recently due to their ability to manufacture complex and fully functional geometries by sequential addition of material (layer-after-layer) beginning from 3D digital models. AM Research is in progress in multiple directions, and there are many quality related issues that are still challenging and need to be addressed [
+1
+]. Among AM technologies, selective laser melting (SLM) recently emerged as the widely used technique in aerospace, automotive and biomedical productions due to its ability to build complex parts and parts having open cell structures along with the minimum amount of material wastage [
+2
+,
+3
+,
+4
+]. Several parameters and conditions in the SLM process have uncertainties and varying effects on the final product. These process parameters and conditions are under investigation to achieve the desired level of quality and reliability [
+5
+,
+6
+,
+7
+,
+8
+].
+The AlSi10Mg material, due to its hypoeutectic microstructure, is equivalent to A360 die-cast aluminum in additive manufacturing [
+5
+,
+6
+]. The thin-walled parts of AlSi10Mg due to their exceptional characteristics including low thermal expansion coefficient, less weight, stiffness, high specific strength, corrosion resistance, high thermal and electrical conductivities have found wide applications in aerospace, automobile, energy, electronics, and railway industries [
+7
+,
+9
+,
+10
+]. At present, conventional manufacturing techniques including extrusion, casting and forging are used to produce a significant portion of aluminum alloys part of complex geometries, like thin-walled and asymmetrical forms and internal flow capillaries, resulting in lengthy production hold-ups and higher expenditures [
+11
+]. Current industrial applications of AlSi10Mg need innovative production techniques. Selective laser melting, a type of powder bed fusion (PBF) is a favorable AM technique with benefits such as complex geometry design, production flexibility, as well as cost and time savings [
+12
+,
+13
+,
+14
+]. There are different sets of process parameters such as part placement, scanning direction, scanning strategy, inert gas flow velocity, laser power, part built-up direction, hatch spacing, scanning speed, powder bed temperature and layer thickness to control the microstructure and mechanical properties of AlSi10Mg manufactured thin-walled parts with selective laser melting (SLM) technique [
+9
+,
+15
+,
+16
+,
+17
+,
+18
+].
+In AM processes, the dimensional variation among the computer aided designed part, and the actual built part is defined as geometrical accuracy. Due to the layer by layer building process, many factors affect the geometrical accuracy of the actual parts. The mechanical precision of the manufacturing setup, such as layer thickness, concentrated laser spot size, and scanner’s position precision is amongst the factors affecting dimensional accuracy. The surface morphology that is described by numerous factors affects the geometrical accuracy as well. The factors mentioned above greatly depend upon the part positioning relative to the build direction [
+19
+]. Di W et al. [
+20
+] examined the geometrical characteristics of SLM built parts and concluded that the laser penetration, width of the laser beam, stair effect and powder adhesion play a key role in affecting the dimensional accuracy of different geometrical shapes produced by selective laser melting. Davidson et al. [
+21
+] focused upon SLM of duplex stainless steel powders and discovered that the geometrical precision varies with the direction. They found that the laser power and percent dimensional error are directly proportional and a geometrical error of 2–3% was reported on the average.
+Calignano [
+22
+,
+23
+] investigated the dimensional accuracy of laser powder fusion using AlSi10Mg alloy and stated that the accuracy of parts produced is affected by the STL file, build direction, and process parameters. Thermal stress and the setting of process parameters have an impact on surface roughness and dimensional accuracy as well. Yap et al. [
+24
+] studied the effect of process parameters on the dimensional accuracy of parts developed on the PolyJet 3D printer by using three types of benchmarks and concluded that in order to develop thin walls successfully, the wall thickness should be greater than 0.4 mm. Raghunath and Pandey [
+25
+] in their study revealed that laser power and scan length are sources of deviation in the 
+x
+-axis, laser power, and beam speed are sources of deviation in the 
+y
+-axis, whereas, bed temperature, hatch spacing, and beam speed are sources of deviation in the 
+z
+-axis. Han et al. [
+26
+] studied the effects of various process parameters upon geometrical accuracy and established that the precision can be enhanced by high scan speed that results in high density. Majeed et al. [
+27
+] investigated the dimensional and surface quality of parts-built by AM technique and optimized the process parameters. Zhu et al. [
+28
+] concluded that the thermal shrinkage would be higher for high laser power and low scan speed and smaller spacing. Furthermore, as compared to the 
+x
+-
+y
+ plane, the total shrinkage is significantly high in the 
+z
+ plane. Yu et al. [
+29
+] studied the influence of re-melting on surface roughness and porosity of AlSi10Mg parts developed by SLM and found a positive effect on both of these properties. 
+One of the main disadvantages of SLMed parts is residual stress that leads to part distortion. Distortion significantly affects the dimensional accuracy of a part and adversely hinders the efficient working of the built parts. Kruth et al. [
+30
+] concluded that residual stresses cause distortion that affects the geometrical accuracy of the physical parts. It happens due to locally focused energy distortion, resulting in high-temperature gradients, which happens while separating the built part from the substrate. Shiomi et al. [
+31
+] found that rapid cooling and heating produces a high-temperature gradient that further leads to the generation of thermal stress and hence, causes part distortion and cracks. Yasa et al. [
+32
+] and Beal et al. [
+33
+] investigated the effects of SLM process parameters and found that scan strategy has a significant role in cracks formation and distortion of built parts. Li et al. [
+34
+] focused on quick anticipation of distortion in SLMed parts by developing a Finite Element model. The experimental results also confirmed forecast distortions in different scan strategies. Shukzi Afazov et al. [
+35
+] forecast and compensated the distortion in large scale industrial parts by developing two models for distortion compensation. Keller et al. [
+36
+] attained quick simulation of part distortion by establishing a multi-scale modeling technique that implied an intrinsic strain obtained from a hatch model of several laser scans in selective laser melting.
+The researchers in their studies have determined different optimized parameters for porosity, roughness, hardness, dimensions, etc., but in actual practice, even at the optimized setting, there is variation in these quality characteristics of developed parts. These variations can be determined by repeatability and reproducibility experimentation, and analysis. The part-quality characteristics, i.e., dimension accuracy, precision, and distortion, can vary in the different axis or directions or change with dimension. Furthermore, the surface treatment can improve some quality properties, i.e., hardness, porosity, etc., and it can also affect these characteristics. Therefore, exploration of these points is the main objective of this work.
+AlSi10Mg power was used for the building of thin-walled specimens whose morphology is shown in 
+Figure 1
+. Specimens were built on an SLM 280 HL system, which was equipped with two 400 W fiber lasers. The chemical composition of AlSi10Mg powder was 10.1 % Si, 0.30% Mg, 0.11 % Fe, < 0.05% Ni and balance % aluminum. In this study, the processing parameters of 0.320 kW laser power, 0.90 m/s scanning speed, 25% overlap rate, 0.08 mm of hatch distance, 0.03 mm of layer thickness, vertical building direction, and 67° checkerboard scanning strategy were used [
+37
+].
+The two dimensions, length (L), and height (H) of samples were fixed at 56 mm and 10.5 mm respectively, and the wall thickness of each sample was varied from 0.50 mm to 5.0 mm to make 12 combinations. Total 12 × 4 (4 Sets) samples were fabricated with a size of 56 mm × 10.5 mm × W
+t
+; where W
+t
+ is wall thickness (i.e., 0.50, 0.80, 1.0, 1.20, 1.50, 1.80, 2.0, 2.50, 3.0, 3.5, 4.0, 5.0 mm). The third dimension thickness was systematically varied to study the effect of varying thickness on the dimensional quality and distortion.
+The first three sets were fabricated in a single production run. The first set of 12 samples was used in As-Built (AB) condition for repeatability, reproducibility, and distortion analysis. The remaining two sets were analyzed after Solution Heat Treatment (SHT) and Artificial Aging (AA). The fourth set was fabricated at the same settings on the same system using the same material but at different intervals of time for the reproducibility study with the first set. The whole experimental scheme is presented in 
+Figure 2
+. The repeatability and reproducibility were performed with the first and fourth set by using two dimensions, i.e., length (L) and height (H), which are fixed and produced at fixed input process parameters settings.
+The scheme for sample build-up and reference directions is shown in 
+Figure 3
+. The sample length and thickness are created in the 
+xy
+-plane, horizontal direction. The sample height is created in the 
+z
+-axis, vertical direction. The samples were separated from the substrate by using a wire cut electrical discharge machine. The developed samples and AM system are shown in 
+Figure 4
+.
+The length of each sample was measured three times and height five times; the width or thickness measured five times, and the average values were estimated. For distortion analysis, the sample was marked from one edge to another with ten positions 1 to 10 along the length of the sample. The distortion (displacement) values are measured at these marked positions to relate the measured values to the location of the sample.
+The effect of heat treatments is also investigated on the thin-walled specimens by applying SHT and AA. Two sets were applied SHT at 530 °C and 540 °C for 2 h in the electric furnace, and the specimens were instantly exposed to water quenching at room temperature after SHT. AA was performed on 530 °C SHT set at 155 °C for 12 h in the drying oven, and further, the samples were quenched in the air to room temperature [
+38
+,
+39
+]. 
+The powder morphology was tested with SEM Tescan VEGA3 LMU Scanning Electron Microscope system. The samples dimensional quality measurements were taken by using Mitutoyo vernier caliper, and their distortion was examined by using a dial indicator on a flatbed.
+The results and discussion part is distributed into four sections. In the first section, we have fixed the input process parameters and determined the dimensional variations in 12 samples at as-built (AB) condition. The variation in the dimension of the parts depicts the manufacturing process variations at fixed conditions. The accuracy, precision, repeatability, and reproducibility are examined based on as-built samples considering two sides of the sample. In the second section, the variation in thickness accuracy with increasing sample thickness is presented. Further, correlation and regression analysis are studied. In the third section, distortion analysis is presented. The variation and correlation between distortion and sample thickness are discussed. Lastly, the effect of SHT and AA on sample quality characteristics, i.e., dimensional accuracy, precision, and distortion, are discussed. The analysis performed by using MINITAB 18, MATLAB 07R, and Origin Pro 9. 
+The repeatability is a condition in which parameters and conditions, i.e., machine, man, method and material, are fixed and the products are developed repeatedly, or values are taken in a short interval of time repeatedly, and it is represented numerically by the standard deviation. In our study, the design length (L) and height (H) of the samples are fixed at 56 mm and 10.5 mm, respectively. Twelve samples are developed at the fixed input process parameters under same conditions. The dimensional values of the length and height of as-built samples are measured and mentioned in 
+Table 1
+. The length and height are the average value of three and five readings of each sample, respectively. As the inputs parameters and conditions are fixed, the estimated standard deviations in length and height data represent the repeatability of the production process.
+The accuracy and precision are estimated as sample error and standard deviation, respectively. The actual measured length observed between 55.977–56.013 mm, and the maximum error is 0.027 mm (0.048%). Similarly, the actual height observed between 10.422–10.664 mm, and the maximum error is 0.164 mm (1.562%).
+Analysis of Variance (ANOVA) is performed to determine significant differences in the i) mean length and ii) mean height between the 12 samples of set 1 developed under fixed input parameter settings. Each sample has three values of length and five values of height. The 
+p
+-value and 
+F
+-value, mentioned in 
+Table 1
+, shows the statistically significant difference between means and variation in means, respectively. The ANOVA performed at 95% confidence level by using the alpha level of 0.05. The normality of data checked, and normal probability plot of residuals indicated that residual data follow a normal distribution.
+The repeatability estimated from ANOVA results, which is calculated by using the square root of mean squared error (MSE) value, also known as pooled standard deviation. The calculated repeatability (
+σ
+r
+) for length and height is 0.0197 mm and 0.0237 mm, respectively.
+Figure 5
+a shows the variation in the length of samples at repeatability condition. The interval on the bar represents the standard deviation, which is estimated based on three repeated values of each sample. The red line is the design or target length line. The results show a random distribution of values. It can be seen from the graph that the length of each sample is fluctuating and not consistent, which shows the degree of instability of the production process. Secondly, the target line falls within the standard deviation interval of most of the samples. The ANOVA results revealed that the length means of samples in set 1 are not statistically significantly different, which is indicated by 
+p
+-value (
+p
+ = 0.160 > 0.05).
+Figure 5
+b shows the variation in the height of samples at repeatability condition. The standard deviation interval is calculated based on five repeated values of each sample. The height of each sample is inconsistent, which shows higher instability in the production process. The target line even falls within the standard deviation interval of only a few samples. The ANOVA results revealed that the height means of samples in set 1 are statistically significantly different, which is indicated by 
+p
+-value (
+p
+ = 0.000 < 0.05).
+The height means values of some sample, i.e., 1, 4, 5, 8, and 12, are statistically significantly different as revealed from ANOVA results. The variation in the samples is due to the effect of solidification, random shrinkage behavior, and residual stresses. The layers can shrink non-uniformly due to low or high-temperature regions, and this non-uniformity shrinkage results in dimensional variations. The sample 4 and 5 have statistical significance and show a higher value than the target value. This may be due to laser heat, which penetrates more to bond unwanted powder particles. Further, it also can be attributed to the bed temperature variation as the part build at center or region of higher temperature, have larger dimension as compared to part build at the edge of the bed or the region of low temperature.
+The results show variation or fluctuations in dimensional values and standard deviation, which are due to inherent random errors or effects of manufacturing process or system. It can be revealed from the results that the sample height is more inconsistent, have more error and standard deviation as compared to sample length. The sample length and width or thickness boundary is created as a result of the laser beam boundary in the 
+xy
+-plane, as shown in 
+Figure 3
+, whereas the sample height is in the 
+z
+-axis, the direction in which the bed moves equal to one layer thickness and re-coater spread a new layer of powder. The sample dimension, which is created by a laser beam in the 
+xy
+-plane, has more accuracy and precision as compared to the dimension created in the 
+z
+-axis. This is because of internal stresses or shrinkage in 
+xy
+-plane is lesser as compare to the 
+z
+-axis, the vertical direction. 
+This shows that the variation of dimensional quality in different directions and the dimensions created in 
+xy
+-plane will be more accurate and precise as compared to the dimension in the 
+z
+-axis. This will help designers to achieve more accuracy in any specific part dimension which can be done by setting part build up a position in a direction that keeps the dimensions in the 
+xy
+-plane that needs more accuracy and precision.
+The reproducibility is a condition in which one or more conditions are changed, i.e., machine, man, location, or time while keeping the same method and material. Two sets consisting of twelve samples in each set are developed at different time interval and production run. 
+Table 2
+ shows the summarized results of both sets under reproducibility condition.
+Analysis of Variance (ANOVA) is performed to determine significant differences in the i) mean length and ii) mean height between the set 1 and set 4 which are developed under fixed input parameters setting at different interval of time. Set 1 and set 4 considered as two groups having 12 values in each group. The 
+p
+-value and 
+F
+-value, mentioned in 
+Table 2
+, shows the statistically significant difference between means and variation in means respectively. The ANOVA performed at 95% confidence level by using the alpha level of 0.05. The normality of data is checked, and a normal probability plot of residuals indicated that residual data follow a normal distribution.
+The ANOVA results revealed that length means in set 1 and set 4 are not statistically significantly different which is indicated by 
+p
+-value (
+p
+ = 0.086 > 0.05) whereas the height means in set 1 and set 4 are statistically significantly different which is indicated by 
+p
+-value (
+p
+ = 0.019 < 0.05). 
+The reproducibility estimated from ANOVA results, which is calculated by using the square root of mean squared error (MSE) value, also known as pooled standard deviation. The calculated reproducibility (
+σ
+R
+) is 0.0169 mm and 0.0863 mm for length and height, respectively.
+The results revealed that the length and height show inconsistency and variability. The maximum dimensional error of 0.258 mm (2.457%) and a maximum standard deviation of 0.0863 mm observed under reproducibility condition. The height has less accuracy and precision as compared to the length and has shown the same trend as in repeatability condition.
+The dimensional quality is examined with the varying dimension. The sample design thickness is varied from 0.5 mm to 5 mm and, accuracy and precision are calculated from the actual thickness of the samples, as shown in 
+Table 3
+. The results show that both % Error and the standard deviation are decreased with the increasing sample thickness. The maximum error of 0.038 mm is observed in the whole range. 
+The % Error value is random and higher in the region between 0.5 mm to 2 mm sample thickness. Whereas the % Error decrease and remain less than 0.30% in the region from 2 mm to 5 mm sample thickness, as shown in 
+Figure 6
+. Similarly, the precision is higher with increasing the sample thickness. The results show that the dimensional quality will be better with increasing sample thickness, and it will be lower with decreasing thickness. This will be important for a product designer to consider these effects while designing the product, especially where a higher degree of accuracy and precision is required.
+The correlation and regression analysis are performed to determine the strength of the relationship between sample Thickness (T) and % Error. The correlation coefficient r is −0.73, which shows a negative relationship. The % Error decreased exponentially with the increasing thickness, which is presented by the regression model, as shown in Equation (1) and 
+Figure 7
+. The 
+R
+-squared value of the model is 0.6348 (63.48%). The 
+p
+-value is 0.0006 (>0.05), which show the significance of the relationship.
+
+
+
+
+% Error = 4.7792 × exp(−0.814255 × T)
+
+
+
+
+
+(1)
+
+
+
+
+The final quality of part depends on the material characteristics and production process parameters. The part deflection or distortion is a result of a combination of these factors. The residual stresses in a developed part cause the distortion. The distortion is measured by measuring the displacement using a dial indicator on a flatbed at ten points on each sample in as-built condition, and the results are shown in 
+Table 4
+. 
+The shrinkage value is subtracted from the measurement to get the actual distortion value. The positive and negative values indicate the side of deflection with reference to the central axis. The maximum mean distortion is 0.782 mm, and the maximum distortion at any single point is 1.312 mm, which is observed for 0.5 mm thickness. The maximum standard deviation of 0.038 mm is also observed for the 0.5 mm thickness sample.
+Figure 8
+ shows the distortion variation or profile on the sample surface at 1 to 10 marked points. The distortion has higher values and variations in the region between 0.5–1.5 mm thicknesses. The 0.5 mm thickness sample has a maximum distortion and peak value at the middle location of the sample. The distortion considerably decreased after 0.5 mm sample thickness.
+The differences in the distortion values are due to the residual stresses developed in the samples, that are the result of laser heat thermal cycling, i.e., heating and cooling during layer by layer development of samples. There is a temperature gradient between the bottom and each new upper layer. The thin samples are more prone to residual stresses, shrinkage, and bending as compared to thicker samples due to wall thickness, which cause higher distortion comparatively.
+The samples are further analyzed to investigate the effect of SHT and AA on dimensional quality and distortion. 
+Figure 9
+ and 
+Figure 10
+ show the results of % error and standard deviation in sample length and height under AB, SHT, and AA conditions. The result shows that SHT and AA have no clear effect on dimensional accuracy and precision. The results are random and do not depict any trend.
+Figure 11
+ shows the results of distortion under AB, SHT, and AA aging conditions. The results are random and do not depict any beneficial effect of SHT and AA on distortion. Conclusively SHT and AA do not give any advantage in improving dimensional quality, i.e., accuracy and precision and reducing distortion.
+In this paper, the dimensional quality, accuracy, and precision are investigated under repeatability and reproducibility conditions. The effect of increasing sample dimension, i.e., thickness, on the accuracy and precision, is studied followed by correlation and regression analysis. The distortion analysis is performed to examine the effect of SHT and AA for any improvement in dimensional quality and distortion. The following conclusive results are observed based on results and analysis;
+
+The manufacturing process has shown instability and random variations under repeatability condition, which is due to the inherent variability or random errors in the system.
+The dimensional quality results revealed that in sample length (horizontal dimension), 0.05 mm maximum dimensional error, 0.0197 mm repeatability (
+σ
+r
+), and 0.0169 mm reproducibility (
+σ
+R
+) observed. Similarly, in sample height (vertical dimension), 0.258 mm maximum error, 0.0237 mm repeatability (
+σ
+r
+), and 0.0863 mm reproducibility (
+σ
+R
+) observed.
+The ANOVA results revealed that length means (horizontal dimension) is not statistically significantly different under repeatability and reproducibility conditions. Whereas, the height means (vertical dimension) are statistically significantly different under repeatability and reproducibility conditions.
+The results show the variation of dimensional quality in horizontal and vertical directions. The dimensions created in 
+xy
+-plane (horizontal direction) observed more accurate and precise as compared to the 
+z
+-axis dimension (vertical direction).
+The dimensional error decreased with increasing sample thickness. The error reduces to less than 0.3% for thickness greater than 2 mm. The correlation analysis has revealed a negative correlation (r = −0.73) between % error and sample thickness. The regression model revealed an exponential decrease of %error with increasing thickness, 
+R
+sq
+ = 0.6348 (63.48%), and 
+p
+-value 0.0006 (<0.05), which shows the significance of the relationship.
+The sample distortion decreased with increasing sample thickness. The 0.5 mm thickness sample has shown very high distortion, whereas, the distortion reduced significantly for the 0.8–1.5 mm thickness samples.
+The solution heat treatment and artificial aging did not give any advantage in improving dimensional quality or reducing distortion in comparison with as-built condition results. It is not proven suitable for improvement purpose, but these HT conditions may improve other mechanical properties of parts like tensile strength, elongation, etc.
+The manufacturing process has shown instability and random variations under repeatability condition, which is due to the inherent variability or random errors in the system.
+The dimensional quality results revealed that in sample length (horizontal dimension), 0.05 mm maximum dimensional error, 0.0197 mm repeatability (
+σ
+r
+), and 0.0169 mm reproducibility (
+σ
+R
+) observed. Similarly, in sample height (vertical dimension), 0.258 mm maximum error, 0.0237 mm repeatability (
+σ
+r
+), and 0.0863 mm reproducibility (
+σ
+R
+) observed.
+The ANOVA results revealed that length means (horizontal dimension) is not statistically significantly different under repeatability and reproducibility conditions. Whereas, the height means (vertical dimension) are statistically significantly different under repeatability and reproducibility conditions.
+The results show the variation of dimensional quality in horizontal and vertical directions. The dimensions created in 
+xy
+-plane (horizontal direction) observed more accurate and precise as compared to the 
+z
+-axis dimension (vertical direction).
+The dimensional error decreased with increasing sample thickness. The error reduces to less than 0.3% for thickness greater than 2 mm. The correlation analysis has revealed a negative correlation (r = −0.73) between % error and sample thickness. The regression model revealed an exponential decrease of %error with increasing thickness, 
+R
+sq
+ = 0.6348 (63.48%), and 
+p
+-value 0.0006 (<0.05), which shows the significance of the relationship.
+The sample distortion decreased with increasing sample thickness. The 0.5 mm thickness sample has shown very high distortion, whereas, the distortion reduced significantly for the 0.8–1.5 mm thickness samples.
+The solution heat treatment and artificial aging did not give any advantage in improving dimensional quality or reducing distortion in comparison with as-built condition results. It is not proven suitable for improvement purpose, but these HT conditions may improve other mechanical properties of parts like tensile strength, elongation, etc.
+Conceptualization, A.A., A.M. and G.J.; methodology, A.A., A.M.; samples fabrication and measurement, A.M. and Z.A.; validation and formal analysis, A.A. and A.M.; investigation, A.A., A.M. and Z.A.; data curation, A.A. and A.M.; writing—original draft preparation, A.A.; writing—review and editing, A.A., A.M. and Z.A.; visualization, A.A. and G.J.
+This research was funded by the National Natural Science Foundation of China, grant number 51505423 and 51705428.
+The authors would like to thank Yingfeng Zhang, Jingxiang Lv, and Tao Peng for their valuable guidance and support during this research.
+The authors declare no conflict of interest.

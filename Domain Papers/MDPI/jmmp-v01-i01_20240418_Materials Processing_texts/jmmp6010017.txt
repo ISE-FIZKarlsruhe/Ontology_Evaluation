@@ -1,0 +1,522 @@
+Functionally Graded Materials (FGMs) offer discrete or continuously changing properties/compositions over the volume of the parts. The widespread application of FGMs was not rapid enough in the past due to limitations of the manufacturing methods. Significant developments in manufacturing technologies especially in Additive Manufacturing (AM) enable us nowadays to manufacture materials with specified changes over the volume/surface of components. The use of AM methods for the manufacturing of FGMs may allow us to compensate for some drawbacks of conventional methods and to produce complex and near-net-shaped structures with better control of gradients in a cost-efficient way. Vat Photopolymerization (VP), a type of AM method that works according to the principle of curing liquid photopolymer resin layer-by-layer, has gained in recent years high importance due to its advantages such as low cost, high surface quality control, no need to support structures, no limitation in the material. This article reviews the state-of-art and future potential of using VP methods for FGM manufacturing. It was concluded that improvements in printer hardware setup and software, design aspects and printing methodologies will accelerate the use of VP methods for FGMs manufacturing.
+Functionally Graded Materials (FGMs) are a new class of composites in which a continuous, stepped, or spatial change in composition and/or microstructure exists over the volume [
+1
+,
+2
+]. The position-dependent change is gradual change rather than a sharp interface (e.g., as in conventional multilayered composites) in chemical properties, grains size, structure, texturization, porosity, density, and other properties. This grading results in a corresponding change of features (e.g., electrical, magnetic, biological, mechanical properties). As a result, an FGM has properties different from any of the individual materials that form it, reduced residual stresses and stress concentrations at the internal interfaces and improved properties in specific direction [
+3
+,
+4
+]. This concept was first introduced in 1972 for composites and polymeric materials [
+5
+,
+6
+] and applied in Japan in 1984 as a solution to a need for a metal-to-ceramic thermal barrier material that can withstand a surface temperature of 2000 K and a temperature gradient of 1000 K in a cross-section thinner than 10 mm within the framework of a spaceplane project [
+7
+].
+Manufacturing technologies play an important role in obtaining prescribed compositional and/or microstructural gradients. In general, the new material development process is strongly related to the existence of a suitable manufacturing method. This dependence is stronger in FGMs since in most cases, the straightforward conventional manufacturing methods do not satisfy all requirements of complex grading. The integration of these materials to real applications was not totally successful in the past due to the limitations of available manufacturing methods. Parallel to improvements in manufacturing technologies, the interest in FGMs and the number of publications on the processing technologies has increased exponentially for the time duration from 1998 to 2019. A literature survey showed that the four most used FGM manufacturing methods for the time duration from 1990 to 2019 are centrifugal casting, powder metallurgy (PM), AM and vapor deposition methods [
+8
+]. However, for the modern industry, it is still an important challenge to introduce high-quality FGMs in complex shapes and specific grading. Therefore, nowadays many projects are in a process where research institutes and companies give efforts for the development of novel FGM fabrication methods.
+Conventional methods (e.g., chemical vapor deposition, thermal spray, centrifugal casting, spark plasma sintering, powder metallurgy, electrophoretically-depositing) have difficulties in the production of cost-efficient, custom, and complex-shaped FGMs [
+9
+,
+10
+]. Furthermore, there is a need for a unique method that allows near-net-shape FGMs with requested grading properties and sizes [
+11
+]. As a result, the complexity of the new applications demands alternative methods in designing flexible and cost-efficient processing.
+Additive Manufacturing methods open exciting possibilities by providing flexibility for design of the material composition, complicated shapes, and functional complexity. The advancement of today’s AM systems enables the production of FGMs [
+12
+,
+13
+,
+14
+]. Although there are many brand names for AM techniques, they can be classified into seven main categories such as Powder Bed Fusion (PBF), Directed Energy Deposition (DED), Material Extrusion (ME), Sheet Lamination (SL), Material Jetting (MJ), Binder Jetting (BJ), Vat Photopolymerization (VP) [
+15
+]. For some of these categories, there are studies on measuring the performance and capability of some modifications for the manufacturing of FGMs [
+16
+,
+17
+,
+18
+]. VP is an indirect AM method which has ability to deposit materials with high surface finish, high control of properties and low cost [
+19
+]. In VP technique, the selected area on a vat of liquid photopolymer resin is cured by using a light source or laser [
+15
+]. According to the movement direction of build platform after curing each layer, it uses top-down (the platform moves downward) or bottom-up (the platform moves upwards) approaches [
+20
+]. The VP methods can be used nowadays with almost all kinds of commercially available powders, and this provides a great potential to this method to increase the usage areas in the future. Therefore, VP methods may be one of the most suitable AM methods for single-material and multi-material FGM manufacturing [
+21
+,
+22
+].
+This article reviews the state-of-art and potential use of VP methods including capabilities and limitations of currently used equipment and methodologies for fabrication of FGMs. The first part shortly reviews the FGMs in general with respect to their classification, uses and importance for future applications. Secondly, the challenges for widespread use of FGMs in practical applications, limitations of conventional manufacturing methods and the need of Additive Manufacturing methods for novel material development is investigated. In the last section, the state-of-art of VP methods will be analyzed and the future possibilities in terms of points required improvements will be discussed.
+With the development of new industries and technological processes, the use of pure materials in real applications has been decreasing day by day due to the demand for conflicting properties. Therefore, there is a continual need for the development of new combinations of current materials that can tolerate different service conditions by providing varying properties at different positions of a component. For example, a special application may require hardness and ductility or biocompatibility and high strength from the same component. Short and Ballinger [
+23
+] designed a lead-bismuth–cooled reactor composed of a functionally graded composite, that offers corrosion resistance provided by Fe-12Cr-2Si alloy layer and high strength provided by F91 alloy layer. For the cutting tools, high wear resistance is required at the outer surface and high toughness is expected in the inner sides and it was reported in literature that cutting tools developed from FGMs were superior to that of commercially used cutting tools [
+24
+,
+25
+].
+For the satisfaction of specific requirements in the applications, research studies on the combination of materials at different scales with different manufacturing techniques have been carried out in the past. Composites have been developed by using lamination, conventional alloying and alloying with PM methods. Limited number of suitable materials for alloying due to thermodynamic limits and difficulties was the main disadvantage of conventional alloying [
+26
+]. With PM, it was not feasible to produce alloys with intricate shapes and features [
+27
+]. Laminated or multilayered composites have become very popular in the near past however delamination of multilayer structures and microcracking at the interface of dissimilar materials were observed due to thermal residual stresses [
+28
+,
+29
+]. FGMs were developed as an alternative by replacing sharp interfaces with gradient interfaces that results in smooth transition of properties [
+11
+,
+30
+]. Although this concept seems to be relatively new, it can be observed in the nature in bio-tissues of plants, bone, wood, teeth, and fish scales. For example, the microstructure of a bone varies from a dense and stiff external structure to a porous internal structure that provides both biological adaptation and tailored tribological properties at different positions [
+31
+]. The optimization of mechanical and biological properties of a replacement of a bone can only be achieved by development of a biomaterial with graded/gradient porosity, pores size, and/or composition [
+32
+].
+FGMs are formed by introducing variation in composition, microstructure, and some other physical and design attributes [
+33
+]. Changing properties gradually in FGMs at different positions can overcome the drawbacks of traditional composites by offering the following advantages [
+34
+,
+35
+].
+FGMs can behave as an interface layer that creates a strong bond between two dissimilar and incompatible materials
+FGMs can offer reduced interlayer residual stresses that occur due to thermal expansion coefficient difference and stress singularities due to elastic mismatch
+FGMs can alter crack propagation mechanisms and reduce crack driving forces with toughening mechanisms such as crack bridging or crack shielding [
+36
+].
+For example, in 
+Figure 1
+, the SEM images at different layers of a tubular shape part that contains a pure alumina surface layer and an Al
+2
+O
+3
+–Y-TZP graded central layer [
+37
+]. In pure alumina layer and graded layer (see 
+Figure 1
+a,b), an intergranular dominant fracture behavior is observed. At the boundary of graded layer and pure alumina in 
+Figure 1
+c, a crack shielding occurs that will contribute to the overall damage-tolerance (i.e., fracture toughness) of the material.
+In literature, many criteria have been introduced for the classification of FGMs and processing methods [
+38
+,
+39
+]. In general, they can be classified as single-material (homogeneous) and multi-material (heterogeneous) FGMs [
+20
+]. The single-material FGMs create microstructural/morphological grading (e.g., porosity, density, grain size, texturization etc.) however multi-material FGMs consist of more than one type of material with a graded composition ratio. It is also possible to see the combination of them such as variation of both porosity and material composition. This type of differentiation is important since various improvements and/or modifications may be required for the current manufacturing methods for the successful fabrication. In multi-material FGMs, two different materials are used for one printing process, and they can be used at different layers, mixed, or printed on the same layer with different portions. Therefore, the design of the printer that is used for single material deposition should mostly be redesigned for multi-material FGM fabrication. Furthermore, some other issues such as contamination, production rate and material waste become more important. The list of other classification criteria are structure-based (i.e., continuous, discontinuous), gradient type based (i.e., composition graded, microstructure graded, porosity graded) and size/volume based (i.e., thin, bulk) [
+40
+]. The combination of materials or the change of properties is decided in the design stage according to the service conditions of application. For example, the metal-ceramic FGMs can be designed to use the high heat and corrosion resistance of ceramic and high toughness, good machinability, and bonding capability of metal [
+40
+]. Porosity graded FGMs have gained interest, especially in biomaterials applications since bones have also layers that have different pore density/size and this porosity gradient provides fast recovery and blood circulation [
+32
+]. The common material combinations for FGMs are;
+Metal-Metal (e.g., Al-Cu, Al-Ni, Al-Ti, Mo-Ti)
+Metal-Ceramic (e.g., Al-SiC, Al-Al
+2
+O
+3
+, Ni-ZrO
+2
+)
+Ceramic-Ceramic (e.g., SiC-Carbon, Al
+2
+O
+3
+-ZrO
+2
+, Carbon-Carbon)
+Ceramic-Polymer (e.g., Glass-Epoxy, Carbon-Epoxy)
+In 
+Figure 2
+, examples of the common material combinations of FGMs are given. The SEM images of microstructure for different Ni ratios taken from different positions of Al–Al
+3
+Ni produced by vertical centrifugal casting [
+41
+] are shown in 
+Figure 2
+a. In 
+Figure 2
+b grading in AlN ratio in metal-ceramic Cu-AlN is represented [
+42
+]. The AlN offers high thermal conductivity, good mechanical properties, and electrical properties. Furthermore, since AlN has a low thermal expansion coefficient close to silicon, failure due to thermal mismatch does not occur. The microstructural images of tubular material with tough Al
+2
+O
+3
+–Y-TZP composition [
+37
+] graded central layer and a hard pure alumina outer layer are given in 
+Figure 2
+c. It was observed that, in the central layer as the Y-TZP content increased from 0 to 71%, the hardness changed from 19.4 GPa to 10.4 GPa and toughness increased from 3.1 to 7.1 MPa·m
+1/2
+. A ceramic-polymer FGM [
+43
+] obtained by grading the ratio of SiC particles in epoxy is shown in 
+Figure 2
+d. The microhardness measurements showed that the Vickers hardness values increased linearly from 210 MPa to 640 MPa with the increase of SiC content from 7 to 45%.
+The use of FGMs is increasing in almost all application areas especially in aerospace (e.g., rocket nozzle, heat exchanger, panels), automobile (e.g., combustion chambers, engine cylinder liners), medical/medicine (e.g., teeth and bone replacement, heart valves), energy systems (e.g., turbine blades in gas turbine engine), electronics (e.g., magnetic storage media), defense (e.g., armor plates and bullet-proof vests) and nuclear applications (e.g., nuclear fusion reactors) [
+44
+,
+45
+,
+46
+,
+47
+,
+48
+,
+49
+].
+FGMs are especially very suitable candidates in applications where two different properties are required. For example, turbine blades produced with metal-ceramic FGM can provide both thermal resistance/anti-oxidation and mechanical strength/toughness [
+50
+]. In biomedical area, functionally graded prosthesis joints can provide high strength at inside and high biocompatibility at the outer surface so that the neighboring arteries, tissues, or organs will not be damaged and at the same time it will have longer lifetime. Using FGMs for the healing of fractures in bones and replacement of the knee, dental implants and hip prosthesis has become very popular. In nuclear fusion reactors, ceramic/metal combination can be used effectively [
+39
+]. Piezoelectricity and ferroelectricity materials are other suitable application areas for FGMs so that the lifetime and the performance of these materials can be improved by eliminating residual stresses and layer delamination.
+Design of FGMs has always been an important issue to create physically realizable and manufacturable models that provide the best geometry and material distribution and fulfill the functional requirements [
+51
+,
+52
+,
+53
+,
+54
+]. In the design of FGMs, a reverse process that includes specification of the required function and properties of materials, service conditions, material combination and variation, fabrication, and evaluation methods. Therefore, the design process may be complicated since in most cases a multi-objective optimization process should be applied in terms of gradient of properties, processing parameters and expected functions. Commercially available software (e.g., Autodesk Monolith and Grab CAD) depending on computer-aided approaches have been used for the generation of variations in some properties (e.g., graded color, transparency, and stiffness)) but they were not totally successful to generate complex and novel designs requested by the industry [
+11
+]. Explicit functions-based methods have been used for relatively simple material distribution models however they failed for design optimization of FGMs that include variations which cannot be represented as single analytical functions [
+52
+]. In recent years the research focuses on more complex design methodologies. Kou et al. [
+52
+] applied nature-inspired Particle Swarm Optimization (PSO) method for the design optimization of FGM that has generic material variation. Molla et al. [
+53
+] optimized the composition of alloy systems in FGMs by integrating multi-objective genetic algorithm (GA) into computational thermodynamics and physics-based predictive models. Correia et al. [
+54
+] showed that the weight and the material cost of thermo-mechanical loaded metal-ceramic FGM plates with properties varying through the thickness direction can be reduced by multi-objective optimization. Many design methodologies have been proposed to get FGMs with optimal geometric attributes, material variation and grading however one of the most critical issues is that whether the design can be manufactured with the current technologies. This shows that importance of understanding gap between the design techniques and fabrication technologies.
+Although FGMs offer very advantageous properties, there are still some restrictions and limitations that must be investigated through research activities in the future. From a production science point of view, novel manufacturing methods should be developed, and current methods should be adapted to make them suitable for mass production of complex-shaped FGM components with various grading in a cost-effective manner. Here, dimensional accuracy, precision, design guidelines and production cost are the main issues. At this point, technological developments in Additive Manufacturing methods gain high importance for the widespread of FGMs. Furthermore, new data should be generated to obtain process-material-property relations with various combinations of materials. With such studies, defining optimum distribution, prediction of material properties and material selection processes should be defined. From the modeling point of view, there is a need for suitable micro-mesoscale models that will simulate the material behavior under various conditions. In addition to manufacturing, the conventional testing methods may also not be suitable for the correct characterization of FGMs therefore there is a need of modification of currently used standard testing methods.
+Specifically, from manufacturing point of view, the following topics are of importance for the determination of optimal techniques [
+11
+].
+Due to thermal mismatch, a higher attention should be given in case the FGM is composed of two dissimilar materials in terms of layer boundary cracking during sintering.
+The optimized manufacturing parameters should be obtained for different materials.
+The methodology and equipment should be adapted so that a cost-effective mass production is possible.
+The manufacturing techniques have been one of the most important research areas since the processing of FGMs has always been the main limitation against the widespread of FGMs. Development of novel FGMs that includes a combination of a wide range of materials that will increase their use in a reliable manner can be achieved by the development of new and cost-efficient manufacturing processes. For many years, conventional methods, and their variations such as gas-based methods (e.g., chemical/physical vapor deposition, thermal spray, diffusion bonding), liquid-phase processes (e.g., centrifugal casting, tape casting, gel-casting, electrophoretic deposition, laser deposition, directional solidification, electrochemical gradation, infiltration) and solid-phase processes (e.g., spark plasma sintering, powder metallurgy) have been used for the manufacturing of FGMs.
+The most used vapor deposition techniques for fabrication of FGMs are Physical Vapor Deposition (PVD) and Chemical Vapor Deposition (CVD). The PVD includes vaporization of the coating materials and transfer of the vaporized material onto the surface to be coated. In case of FGMs, two crucibles containing materials that will provide gradient are used. In CVD, the coating material is vaporized by means of heating or reducing the pressure and the transferred to the material to be coated that stays in a chamber under vacuum condition. Vapor deposition techniques are used extensively to produce thin FGMs [
+55
+,
+56
+]. Wan et al. [
+57
+] used chemical vapor deposition (CVD) for diamond coating Cu-W and Cu50-WC composites and observed satisfactory bonding strength. A ceramic film in the systems TiO
+2
+ and Ti-O-Si consisting of nanocrystalline grains were produced by the CVD method and a microstructural gradient was obtained by changing the reactor temperature [
+58
+]. From regions 1 to 4 in 
+Figure 3
+, the pore size increases from 3–7 nm to a range of a few hundred nanometers. The main disadvantages of vapor deposition techniques are that they are energy-intensive and produce poisonous gages as their by-products.
+Powder metallurgy method offers gradient in porosity, composition, and microstructure. In principle, this method includes preparation of powders that have or will lead different properties according to predesigned spatial distribution, stacking and ramming of these powders in separate layers and sintering or pressure-assisted hot consolidation. Therefore, stepwise gradient can be achieved. PM methods can be used to produce bulk FGMs that have a discontinuous structure with high productivity and low sintering stresses. This method offers different types of gradients (e.g., porosity gradient or pore size gradient, gradient in chemical composition, and volume content of phases) with low energy consumption. YSZ/Ni samples with the grading of pure YSZ at one side and 50% YSZ at another side were produced by spark plasma sintering and low porosity level and high relative density was exhibited by the samples and good continuity of microstructure was achieved [
+59
+]. PM method becomes economically feasible when many samples is produced, and it is very difficult to offer some details (e.g., low wall thicknesses). Furthermore, high porosity can be observed. Ubeyli et al. [
+60
+] produced SiC–Aluminum Alloy (AA) 7075 functionally graded composites via powder metallurgy method and evaluated the ballistic performance of the samples. They observed that the samples with up to 25 mm thickness were not able to withstand the applied impact due to high porosity, the existence of cracks at the micro and macro level and plug formation. To produce discontinuous (stepwise) gradient FGMs with PM, various processing routes can be applied (e.g., powder stacking, sheet lamination, tape casting, slurry dipping and slip casting) however most of these processes have a limitation in the number and thickness of layers [
+39
+]. Laminar type of functionally graded SiAlON ceramics with two layers was produced by powder bed composition and rapid cooling and the thickness of the product was limited to a few hundred microns with this production method [
+61
+].
+In centrifugal method, the gradient in a material is achieved by using the difference in material densities and spinning motion of a die. By rotating the die, the centrifugal force creates a separation between materials with two different densities and creates a gradient. Centrifugal method can be used to produce bulk FGMs with a high control on composition and microstructure [
+62
+]. Samples of FGMs that include Al/SiC and Al/Al
+3
+Ti combinations have been successfully fabricated by centrifugal casting method [
+63
+]. In 
+Figure 4
+, secondary electron images and the backscattered electron compositional images of the transition area of copper/diamond functionally graded material manufactured by the combination of centrifugal sintering and centrifugal casting is shown [
+64
+]. The main disadvantages of centrifugal casting method are only cylindrical shapes can be produced and limited type of grading can be achieved.
+The selection of most suitable manufacturing method depends on the material combination, the desired grading type, size, and the geometry of the component. Although, conventional methods are capable of manufacturing of simple geometries with uncomplicated gradients, they have in general limitations in production of custom and complex-shaped parts as well as high costs, time, and efforts. Recent developments in the framework of Industry 4.0 in AM methods offer very positive prospects to fabricate FGMs in controlled geometry and gradients.
+The expectations from future FGM manufacturing techniques can be summarized as follows [
+34
+]:
+Development of techniques with low cost and high automation degree
+Manufacturing custom and complex shapes
+Development of gradient with high precision and control
+Improved processing mechanisms for mass production
+Development of techniques with low cost and high automation degree
+Manufacturing custom and complex shapes
+Development of gradient with high precision and control
+Improved processing mechanisms for mass production
+Post-machining processes applied to FGMs fabricated by conventional methods may be difficult, labor-intensive, and expensive since production of near-net shapes is not totally possible [
+12
+,
+65
+,
+66
+]. Furthermore, for different combinations of FGMs, different conventional methods and their combinations must be used. Therefore, a universal conventional method that offers any expected gradient profile in composition or microstructure is of high interest. The most optimal choice of method depends on the required level of properties and experience for the concrete practical application. It is clearly seen that the manufacturing of the FGMs is still a technological challenge. The above-mentioned points introduced a new research area on Additive Manufacturing of FGMs.
+AM is a manufacturing technology that allows manufacturing of high detailed components with higher efficiency and additional functionality. AM technologies have expanded from making one-off prototypes to the creation of full-scale end-use parts driven by improved manufacturability. Most of the AM technologies have been used for AM of single materials in laboratories all over the world since about 25 years [
+10
+,
+67
+,
+68
+,
+69
+]. Among all AM methods, while Fused Deposition Process (FDM) and Selective Laser Sintering (SLS) are more suitable for polymers, Laser Engineered Net Shaping (LENS), Selective Laser Melting (SLM), Electron Beam Melting (EBM) are used mostly for metals. For ceramics, metals and polymers, VP has become more popular in recent years. Nowadays important developments in AM improved their capacity to offer layer by layer deposition with gradients in composition and microstructure to obtain desired properties at desired positions. AM techniques used for various materials can be classified according to type of process (i.e., direct, and indirect AM) and based on raw materials (i.e., dry powder, liquid/slurry, solid state).
+The direct Additive Manufacturing methods (e.g., SLS, EBM) can be used with various materials with low manufacturing cost however, support material and high labor-intensive post processing may be required. Since the sintering is applied during the processing, no remarkable shrinkage occurs after processing. The processing time is relatively low [
+70
+] but the component surface roughness and porosity may be relatively high. Furthermore, these methods may yield many defects due to internal stresses that occur due to temperature gradients.
+Indirect (slurry-based) Additive Manufacturing technologies are based on the selective curing of the deposition material (e.g., stereolithography (SLA), MJ, FDM) [
+71
+,
+72
+]. In indirect AM method, a postprocess is applied after printing since the 3D printed structure contains building material and an organic binder. With the indirect AM methods, materials with low porosity, high strength and high surface quality can be manufactured with high resolution.
+Additive Manufacturing methods are strong candidates to produce homogenous single-material and heterogeneous multi-material functionally graded materials. The advantages such as design freedom, ability to produce complex shapes with low material waste and low energy intensity make them very attractive for the manufacturing of FGMs [
+33
+]. Homogenous single-material FGMs offer porosity of density gradient by changing the microstructure or morphology of the bulk material. The heterogenous multi-material FGMs offer gradient in composition and/or existence ratio of one material through the volume of the workpiece so that transition in weight, toughness, wear resistance, impact resistance or its physical, chemical, or biochemical or mechanical properties [
+13
+]. The capability of application of two or more materials in one single process plays an important role for AM method for cost effective and production rate efficient fabrication of multi-material FGMs. Hasanov et al. [
+73
+] published a comprehensive review that deals with the state-of-art and main challenges of multi-material fabrication with all AM methods. They pointed out that improvements should be done in development of suitable software, characterization of optimal transition zones, large-scale manufacturing capability, materials that allow different combinations and printer design.
+PBF is the process where the thermal energy is used to fuse the selected region on the powder bed. The most used thermal source of PBF technology is laser and the two PBF types that are mostly used are SLS and SLM. The discrete grading is achieved by changing energy density. In general, PBF technology is successful in controlling the porosity and other microstructural gradients [
+74
+,
+75
+] in single-material FGMs. Nieddorf et al. [
+76
+] used SLM method to produce functionally graded 316 L stainless steel with microstructural gradation and reported that changing mechanical properties were obtained through the volume of the samples. FGM components that include gradient of Zirconia composition in a base material Waspaloy (100% Waspaloy on one surface with increased volume concentration of Zirconia (0–10%) through the thickness) were fabricated by SLM [
+77
+]. It was reported that crack-free boundaries were observed in the stepwise composition gradient, but optimization of laser heat distribution plays an important role in controlling the porosity and uniformity in the functionally graded parts. PBF method does not provide enough flexibility to control the gradient in chemical composition. Therefore, the FGMs produced by PBF methods are in the form of cellular forms with gradient in lattice structures or porosity [
+8
+]. Furthermore, regulation of heating and cooling rate during the manufacturing of FGMs with PBF methods is still a challenge.
+Directed energy deposition is more flexible than PBF since gradient in chemical composition of the powder is possible. DED enables the production of parts by melting the material while depositing by using different thermal energy sources as laser, electron beam or plasma. Compositionally gradient structures of vanadium carbide (VC) were coated on stainless steel 304 (SS304) by LENS method to increase the hardness and wear resistance [
+78
+] of the specimen. LENS method was used commonly to produce thin FGMs as graded coatings. A 316 stainless steel sheet surface was coated with a composition gradient from 100% Ni–20 wt% Cr at the substrate to 100% alumina on top by LENS method and a crack-free coating with good microstructural integrity was achieved [
+79
+]. DED method offers the advantages of ability to produce dense materials with high control of microstructure. The material waste is very low, and it has capability of depositing multi-materials. Compared to SLS/SLM methods, LENS method can produce all types of FGMs since in LENS the specific powders are first fed to the specific position and then they are molted by laser and solidified. As a result, by gradually changing the composition of the powder at specified points, gradual changes in composition along multiple directions and dimensions can easily be achieved. However, it has limitations in accuracy and surface finish quality. Furthermore, compared to other AM methods, DED methods cannot produce very complex parts and for most cases there is a need of support structures [
+15
+].
+Binder jetting is an indirect AM method where liquid agglomerates of binder is deposited on specified point of a powder bed and after one layer is finished the powder bed is lowered and new layer of powder is provided onto the surface. There are only few studies that used BJ for manufacturing of FGMs. A binder jetting and material extrusion hybrid AM system was used to produce porosity graded Ti parts by providing encapsulated sacrificial polymer droplets at specified positions. The samples with changing porosity from 6% to 16% were obtained [
+80
+]. Graded titanium carbide preforms with hardness gradient of 700–1600 HV were fabricated as 4 layers by binder jet 3D-printing [
+81
+]. Parts produced by BJ have relatively high roughness and high porosity compared to other AM methods, therefore, the parts have limitations in mechanical properties [
+70
+].
+Material extrusion is one of the most used AM processes since the ME equipment is easy to assemble and less expensive [
+82
+]
+.
+ In this method, the material in filament form is melted, deposited by a 3D nozzle according to pre-designed cross-section. Singh et al. [
+83
+] added SiC and Al
+2
+O
+3
+ particles into recycled low-density polyethylene (LDPE) and produced FGM by FDM. In manufacturing of FDM by ME, binders are preferred that have low viscosity, high strength, and high modulus. In this method, anisotropy may be observed, very fine details cannot be deposited, and some small voids may occur in the parts. Moreover, the material waste is high, and the deposition speed is low among other AM methods. A metal-metal discrete samples were produced by joining stainless steel, Al and Cu foils by ultrasonic welding. It was reported that the types of the materials and parameters that result in grading are limited [
+84
+]. Fused Filament Fabrication (FFF) method has been used for fabrication of functionally graded rigid polymers [
+18
+,
+85
+]. Hasanov et al. [
+18
+] used multi-material FFF printer (see 
+Figure 5
+a) that allows feeding two filaments to the same melting zone with prescribed ratios to fabricate compositional gradient (ABS—SCF Reinforced ABS) tensile specimens. Various transitions zones from 0% (i.e., direct transition) to 100% (see 
+Figure 5
+b) have been introduced and the transition strength values were determined experimentally through tensile tests and numerically by using a three-scale homogenization framework. It was reported that the numerical and experimental results were in good agreement and the stress concentration decreases by increasing the transition region that shows the importance and advantage of smooth transitions in FGMs from strength point of view.
+In material jetting process, the use of multiple material is easy and therefore it is suitable for production of complex grading in color, transparency, and stiffness [
+13
+]. However, only a few materials can be used nowadays (limited to polymers and waxes, that can form drops) and they are still expensive. The accuracy in manufacturing of large-sized parts is not as good as in other methods such as VP. In addition, there is significant material waste in this method and the parts may contain more defects inside compared to other AM methods [
+9
+].
+The working principle of VP is curing a photopolymer (i.e., a liquid resin or slurry) that is a light-curable resin in a vat and creating a solid preform by chains of polymers or crosslinks. The main advantages of VP methods are the smooth surface finish, high part size precision with high-resolution details, ability to produce wall thicknesses from 50 µm to 150 µm and can be used with a wide range of commercially available materials. Furthermore, this method can be used in machines with different configurations, size scales and light sources. The advantages offered by VP methods make them strong candidates for cost-effective and near-net shape production of multi-material and FGM components.
+The light source may be a normal laser beam, visible lights or ultraviolet (UV) light spectrum. With the light sources it is possible to cure a full layer of resin however with laser the whole surface should be illuminated by drawing it. In general, the photopolymer consists of monomers, oligomers, photoinitiators and other additional materials. After curing each layer surface, the part moves upwards or downwards according to the top-down or bottom-up configurations. In the top-down approach, the light source is provided from the top and after deposition of each layer, the part is moved downwards. In the bottom-up approach, the light source cures the resin of the bottom, and the mechanism moves upwards after curing [
+70
+]. The top-down approach has been being used for many years for different applications. In the top-down approach, there exists less force on the part that will reduce failure of the parts during printing. The most important disadvantage of the top-down setup is that much more time is needed to provide the correct liquid level after every single layer is printed. However, in the bottom-up approach it is easier to set the desired layer thickness and less amount of slurry is required since the part is pulled out of the resin upwards. In general, VP methods can be used in machines with different configurations, size scales and light sources.
+The most popular Vat Photopolymerization 3D printing technologies are Stereolithography (SLA), Two-Photon Lithography (2PL), Digital Light Processing (DLP) and Continuous Digital Light Processing/Continuous Liquid Interface Production (CDLP/CLIP) [
+86
+,
+87
+]. SLA and DLP methods were used commonly for the manufacturing of FGMs. SLA, also known as SL, was first invented in 1980s [
+88
+] and it generates 3D complex-shaped objects by providing a photopolymerization reaction to a selected are of resin on a layer by a concentrated beam of a laser. The cross-linking or degradation occurs on the area where the laser beam is focused. Therefore, the resolution of the layer depends on the size of the laser spot. The SLA methods are nowadays used often in electronic devices, biological/medical applications, and energy storage components [
+89
+,
+90
+,
+91
+,
+92
+,
+93
+,
+94
+].
+DLP is another type of photopolymerization method where the vat of liquid polymer is exposed to UV light from a projector. Unlike SLA where the laser beam moves to cure the selected areas, the UV light source is stationary and cures a single image of each layer at once by using LEDs and a Digital Mirror Device (DMD) chip that introduces images with a dynamic mask. This results in faster processing in DLP compared to SLA. Furthermore, the UV light intensity can be controlled for adjusting its effect on the resin and is less expensive than the laser beam [
+95
+]. The requirement of support structures can be eliminated for the fabrication of most porous and hollow structures. From the group of binder-based methods, the techniques based on lithography provide the best resolution; thus have the potential to open new possibilities for the fabrication of FGMs, especially regarding intricate geometries, complex shapes, and fine details with desired gradient.
+VP methods have been used very extensively for Additive Manufacturing of advanced ceramics. Lithography-based Ceramic Manufacturing (LCM) is a kind of DLP method that was commercialized by Lithoz GmbH, Austria that works in principle selective curing of ceramic slurry via blue light with the wavelength of 460 nm. Schwentenwein and Homa [
+96
+] fabricated alumina with a density of 99.3% with LCM method. LCM method offers manufacturing of very complex and net-shaped structures that have very high resolution up to 100 μm wall thickness [
+97
+]. Different sintering methods have been used for stereolithographic Additive Manufacturing of SiC ceramics and it was reported that liquid phase sintering (LPS) offers a promising process for manufacturing of dense SiC with good mechanical properties [
+98
+]. DLP-based ceramic stereolithography was also applied successfully for the Additive Manufacturing of controllable β-TCP scaffolds with delicate trabeculae and complex pores for bone tissue engineering [
+99
+]. For the manufacturing of high complex ceramics, different topology optimization method has been applied according to “Design for AM” approach and it was reported that most optimal unit cell in a structure depends on the final application [
+100
+]. In 
+Figure 6
+, some examples to VP manufacturing of ceramic structures are shown.
+There are mainly three types of FGM production with AM methods. Single-material, multi-material, and combination of them. For the single-material FGM production, current VP printers that include single vat can be used directly. For example, grading in porosity or some mechanical properties can be achieved by using gray level scaling. The porosity of a material can be varied by introduction of macropores by CAD modelling. However, to produce multi-material FGMs, the printer setup should be adapted so that more than one material can be used deposited in a single process. Nowadays, new studies can be observed that investigate multi-vat systems. For example, a new SLA printer was developed that includes a rotating vat carousel system that rotates about the vertical axis (see 
+Figure 7
+), an automatic levelling system and with the developed setup, multi-material complex parts were produced successfully [
+22
+].
+In the following, the previous studies related to VP applications for both single-material and multi-material FGM production will be provided for the exploration of state-of-art. High-temperature Co-fired Ceramics (HTCC) are composed of Si
+3
+N
+4
+ matrix with Ni, Wo and Wu metal circuits. If Si
+3
+N
+4
+ is additively manufactured directly contacting with metals, stress concentrations and boundary layer cracking may occur due to significant difference in thermal expansion coefficient. To solve this problem, Si
+3
+N
+4
+-Al
+2
+O
+3
+ functionally graded ceramic was produced by SLA that has a gradual change of 0–100% Al
+2
+O
+3
+ content [
+104
+]. It was aimed to enable stress relaxation during the solidification since Al
+2
+O
+3
+ can fuse the metal better in terms of thermal expansion. The traditional SLA machine used for single material additive deposition was modified as shown in 
+Figure 8
+a. The multi-material SLA machine was composed of SL-3D printer, the manipulator, and the gradient paste barrels. The gradient pastes were transferred to the suspension using the manipulator system. In 
+Figure 8
+b,c, the SEM images of the fabricated samples were represented. It was reported that no cracks at the layer boundaries existed and the optimization of printing parameters and rheological UV curing properties of pastes play an important role in successful fabrication of FGMs with SLA.
+Beer et al. [
+105
+] demonstrated a novel SLA approach (see 
+Figure 9
+a) that performs volumetric patterning by curing with light sources at two different wavelengths one of which applies photochemically activation of polymerization and another applies inhabitation of the reaction. It was observed that the controllable, concurrent photoinitiation and photoinhibition may allow grading in properties of the part in a single-step fabrication and by eliminating the need for O
+2
+-permeable windows, very large objects can be printed that will broaden the use of this method for serial production. It was reported that the design that was used for two color system (see 
+Figure 9
+b) can be used for grading in mechanical and chemical properties by overcoming time-consuming steps.
+Recently, hydroxyapatite (HA) scaffolds with graded aspect ratios between 1.2 and 2.0 were manufactured by using the SLA method [
+102
+]. As a reference for selecting the aspect ratios, the human bone porosities that is composed of an inner porous core and outer dense layer with a changing volume fraction range from 50% to 80%. The fine hydroxyapatite was added to a ceramic precursor produced by SLA with a prescribed volume content of 45%. The samples were produced by a layer thickness of 50 μm and deposition energy intensity of 50 mW. In 
+Figure 10
+a,b, the images of the porosity graded scaffold after debinding at 600 °C and after sintering at 1250 °C for 2 h are given respectively. The size accuracy of the printing process was reported to be 10 μm. In 
+Figure 10
+c, the SEM image of the microstructure is shown. No cracks were observed after the sintering process and the average grain size and density were measured to be approximately 4 μm and 98% respectively. During the design of structures with this technology, an approximate shrinkage of 23.2% and 24.8% should be considered respectively in horizontal and vertical directions.
+Cellular structures in the form of foams, honeycombs, lattices are used in some engineering applications that demand low weight, energy and noise absorption capacity, thermal insulation. The use of cellular structures that contain prescribed changing properties over volume has become very important in tissue engineering. The CAD design of cellular structures can be optimized to achieve more versatile and functional structures. However, the AM method that will be used for the fabrication of the optimized structure plays an important role in terms of providing the required speed, precision, and flexibility. Stereolithography was successfully combined with topology optimization to produce FGMs with controlled porosity by using unit cell design [
+106
+]. In 
+Figure 11
+, a part with porosity that varies at different positions was produced by SLA from a photopolymer liquid resin (SPR6000 epoxy) and it was reported that a stiffness gradient was achieved within the volume. This part has a dimension of 144 × 144 × 15 mm
+3
+ and is composed of 24 × 24-unit cells. The resolution of the printer forced to round the domains that results in staircase morphologies. Furthermore, during the compression test, a typical brittle behavior was observed with multiple peaks that represent local ruptures at different locations.
+In general, one material is deposited at once in VP technology and this limits the application of multi-material functionally graded material approach. With the Grayscale masked stereolithography (MSLA), this can be realized by varying the degree of curing of the photopolymer by changing the light intensity through grayscale masks at different positions of one layer of the part. Therefore, by generating grayscale pixels, a gradient in some materials properties (e.g., porosity, density, stiffness) can be provided. MSLA was used for the design and manufacturing of hyperelastic materials with varying material properties for the purpose of finite deformations [
+107
+]. The gradient was provided by controlling the light intensity (i.e., grayscale value) and the curing degree of photopolymers. The change of grayscale value and the gradient in bulk density and shear density are shown in 
+Figure 12
+. In the design of grayscale map, a grayscale between 60% and 100% was selected. For the functionally graded material, a hyper elastic constitutive model was developed to simulate the behavior of the FGM under tensile loading. The experimental and numerical results were in good agreement.
+Yu et al. [
+108
+] manufactured Triply Periodic Minimal Surfaces (TPMS) as graded Schwarz P and Gyroid structures by continuously changing the wall thicknesses along the build direction by using SLA method (see 
+Figure 13
+). They observed that the produced samples matched well with the models with high accuracy and compressive stress in the parts changed gradually. For both uniform Schwarz P and uniform Gyroid, the failure occurred through the diagonal direction however for graded samples, the deformation started at the regions that have thin walls and extended to the thicker parts. With providing grading in the microporosity, the failure behavior of such structures can be controlled.
+Within the scope of the CerAMfacturing European research project, SLA/DLP printing device based on digital light processing containing a digital micromirror device chip (DMD), was developed for the realization of an Al
+2
+O
+3
+ implant that is composed of a dense outer shell and a porous inner core and a gradient in porosity between them [
+109
+]. The gradient in the porosity was introduced by changing the volume fractions of alumina and polymer. It was reported that in the nonporous areas, a high density >99% was achieved.
+In principle, DLP method uses one vat of resin therefore it is suitable for single material deposition. To make DLP suitable for printing parts with multi-properties, studies were carried out to use multiple vats or to use grayscale lights [
+110
+,
+111
+,
+112
+] with the integration of a cleaning stage to avoid contamination. In most of these studies, the reduced deposition rates due to vat change and addition of cleaning process, damage, and loss of some details of the parts during the cleaning process were reported to be the main challenges.
+Kowsari et al. [
+113
+] developed a novel DLP system that uses a movable glass plate to enable depositing two different materials and between of which an air-jet cleaning process to minimize the slurry waste and contamination. It was reported that the system can be successfully used for multi-material printing that includes a gradient of material properties. Cylinder and bar test specimens were produced by DLP method with a variation in light intensity to provide cross-link density control and gradient in mechanical properties. In the tested specimens, a gradient in strain-to-break value was observed [
+111
+]. Single-vat 3D method using a grayscale light pattern was used to obtain functionally graded material with tunable mechanical property gradients a novel two-stage curing hybrid ink system [
+114
+]. In this two-stage curing process, the part was first printed by hybrid ink and then thermally cured in a heating oven. The intensity percentage of the grayscale light (represented as 
+G
+) was changed during the curing process to give gradient material properties. A DLP approach was used to fabricate FGMs from resin that contains Magnetite (Fe
+3
+O
+4
+) magnetic particles [
+115
+]. The distance of the magnet to the print bed (see 
+Figure 14
+a) was controlled to achieve various degrees of the gradient of the magnetic particles. They reported that changing the distance between the magnet and the resin bed is an effective way to control the gradient of magnetic particles in the material (see 
+Figure 14
+b). Furthermore, this method allows the fabrication of FGMs without expensive modification of a single material DLP machine.
+A TPMS structure used in hip implant was produced with porosity gradient by using different unit cells via Lithography-based Ceramic Manufacturing (LCM) [
+116
+]. The structures in millimeter-scale were made of Alumina Al
+2
+O
+3
+. In the volume of the samples, there existed no macrocracks however some defects occurred on the surface of the parts. The volume of the parts was like that in STL file however a large deviation in mass of the objects were observed due to unremoved slurry on the bottom layer of the parts. It was reported that, with correct selection of FGMs design, process and material, customized bone implants can be printed by LCM method.
+Loh et al. [
+13
+] reviewed the capability and applications of some AM methods to produce FGMs and following challenges were reported.
+Lack of guidelines and standards for the selection of best AM method in terms of characterization of grading in materials
+Scatter of measured properties between batches and type of machines
+Low tolerance control and material defects
+Low speed, accuracy, and surface quality
+Lack of microstructure-process-property relations for current AM methodologies
+Commercial methodologies for the mass production via AM methods
+Hasanov et al. [
+73
+] reported in their review article that improvements in following points are needed for the design and manufacturing of complex FGMs.
+Software that will allow the design of FGMs from preparation of CAD to slicing and exporting with predefined material properties in different directions.
+New design of hardware setup (e.g., new extruder design for FFF method)
+Thermo-mechanical characterization especially for the transition interfaces
+Although various VP methods have been introduced for the FGM production, they are still far away from the real applications not only due to lack of process efficiency in terms of processing time and cost, but also lack of information in optimal process parameters methodologies. Vat Photopolymerization methods offer many advantages, however there are still some challenges that should be solved. For example, recent technologies cause poor dimensional control of property gradients. There exist quality differences between different batches of the same material or machines that use the same techniques [
+12
+].
+One of the important topics that should be researched is finding the optimum solution between single-vat and multi-vat systems. Limited number of FGM combinations can be applied with single-vat systems. For example, for a single-material FGM, the lighting parameters (e.g., grayscale levels) can be changed through the layer. For multi-material FGM production with single vat, manual or automatic dosing of material can be applied. Here, the determination of exact dosing frequency and amount is a big challenge. Furthermore, the two slurries need to be suitable for mixing. These difficulties direct the researchers for the development of multi-vat, especially two-Vat Photopolymerization printer setups. Although using multi-vat systems may increase the processing speed, in future it will be more critical for deposition of multi-materials. Zhou et al. [
+117
+] used digital materials to introduce gradient in material and structure by DLP method. The DLP printer used for this work was modified to avoid contamination and decrease the separation force between the resin and the cured layer. It was reported that by using multiple vat systems, it is possible to develop dual materials with spatial control of material and structure. With the multi-vat printing setup, it should be possible to assign different materials to any predefined layer. Furthermore, the hardware and software setup should allow printing different portions or regions of each layer with different materials. These possibilities will allow introduction of various complex gradients parallel as well as perpendicular to deposition direction. In case a precise grading is desired, high attention should be given to exact characterization of the polymerization properties (e.g., curing depth, over-polymerization) of each single material. As in single-vat case, also in multi-vat systems, ability of mixing the slurries will give the designers high freedom of generating more advanced gradients in FGMs. Therefore, development of slurries that can be mixed during the printing process is another critical issue to be investigated.
+Another important point of interest is cleaning of the part after deposition of each layer to avoid cross-contamination. For a two-vat VP system, the contamination may be helpful for a smoother transition from one material to another material in FGMs. However, due to a contamination after each layer, the two materials (i.e., Material-A and Material-B in Vat-1 and Vat-2 respectively) with which the fabrication started will be contaminated until the end of the whole process. As a result, the first and the last printed layers will not include the same materials. Therefore, for multi-vat systems, development of an effective cleaning mechanism that will not harm the part and will not decelerate the process will be an important research area.
+When the contamination and used amounts of slurries are considered, bottom-up VP systems seem to be more convenient for multi-material FGM production. In 
+Figure 15
+, the possible two-vat VP systems were represented schematically. During the production of multi-material FGMs, the vats will be changed after each layer or even within each layer. Since in the top-down approach (see 
+Figure 15
+a), the whole part and the building platform is under the slurry, the contamination problem may be relatively more critical than as in bottom-up approach. Furthermore, during the cleaning process in top-down approach, the total surface area that should be cleaned will be higher. Therefore, it is believed that bottom-up approach-based printer setups will be used more in the future for manufacturing FGMs.
+In fabrication of high quality FGMs by VP methods, the optimization of design, printing parameters and suspension properties is very important. Topology optimization, multi-criteria optimization and genetic algorithms can be integrated into VP processes to find out optimum parameters [
+106
+,
+118
+,
+119
+,
+120
+]. In recent years, the data-driven machine learning algorithms has become powerful for the optimization and prediction of parameters and properties. In the future, integration of machine-learning algorithms into process and material development of FGM fabrication by VP methods will allow a faster spread of use of VP methods.
+It is evident that, improvements in manufacturing technologies play an important role in meeting new demands for development of novel FGMs for various application fields. In this article, the state-of-art of utilization of VP methods for FGM manufacturing is reviewed. The studies in literature mostly focused on single-material deposition and therefore the developments in multi-material printer setup that provide fabrication of materials with graded properties remain relatively limited. This article highlights the main challenges for the multi-material FGM production and suggest critical research areas such as elimination of contamination, design of printer setup and development of new slurries. In the future, the research on photopolymerization will furthermore concentrate on methodology development to allow high quality, cost-efficient mass production of complex shapes that provide gradient in properties i.e., physical, mechanical, and microstructural properties. Despite the challenges, developments in Vat Photopolymerization that can be used in single-vat and multi-vat systems will facilitate the fabrication of FGM and further increase the widespread use of VP methods in various applications and areas.
+This article is prepared in the framework of GraCerLit project where S.N. is the Postdoctoral fellow and M.S. is the supervisor. S.N. performed the literature survey and wrote the first draft and M.S. determined the main content of the article and revised the manuscript. All authors have read and agreed to the published version of the manuscript.
+This work is part of the Marie Skłodowska-Curie Individual Fellowship (H2020-MSCA-IF-2020) project entitled “GraCerLit–Development of Functionally Graded Ceramics by Lithography-based Ceramic Manufacturing (LCM)”. This project has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement No 101020104.
+Not applicable.
+The authors declare no conflict of interest.
+Publisher’s Note:
+ MDPI stays neutral with regard to jurisdictional claims in published maps and institutional affiliations.

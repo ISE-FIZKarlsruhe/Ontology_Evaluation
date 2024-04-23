@@ -1,0 +1,1602 @@
+Binary cycle experiment as one of the Organic Rankine Cycle (ORC) technologies has been known to provide an improved alternate scenario to utilize waste energy with low temperatures. As such, a binary geothermal power plant simulator was developed to demonstrate the geothermal energy potential in Dieng, Indonesia. To better understand the geothermal potential, the laboratory experiment to study the ORC heat source mechanism that can be set to operate at fixed temperatures of 110 °C and 120 °C is conducted. For further performance analysis, R245fa, R123, and mixed ratio working fluids with mass flow rate varied from 0.1 kg/s to 0.2 kg/s were introduced as key parameters in the study. Data from the simulator were measured and analyzed under steady-state condition with a 20 min interval per given mass flow rate. Results indicate that the ORC system has better thermodynamic performance when operating the heat source at 120 °C than those obtained from 110 °C. Moreover, the R123 fluid produces the highest ORC efficiency with values between 9.4% and 13.5%.
+Indonesia is the largest archipelago in the world with the number of islands exceeding 17,000, of which only 922 are inhabited. Indonesia is located in Southeast Asia, between the Pacific and the Indian oceans, and the Asian and Australian continents. The country lies on the equator, and thus falls in the tropical region. Geologically, Indonesia encompasses three active plates which are the Indo-Australian plate, the Euro-Asia plate, and the Pacific plate [
+1
+,
+2
+]. As shown in 
+Figure 1
+, the volcanoes stretch from the Aceh province at the eastern most tip of the country, down through the Sumatra island, across to the Java island, Nusa Tenggara, Maluku, and end on the Sulawesi island [
+3
+]. The number of volcanoes has been recorded to total more than 200, 129 of which are considered active and have the potential to cause volcanic eruption and earthquake at any time. Many researchers such as Budi et al. (2014) [
+4
+], Manfred et al. (2008) [
+5
+], Hall et al. (2002) [
+6
+], Simandjuntak et al. (1996) [
+7
+], and Hamilton (1979) [
+8
+] have studied Indonesia’s geographical conditions and its volcanoes. One conclusion that their studies share is that Indonesia has the significant potential for earthquake disasters and volcanic eruptions. However, despite the disadvantage of being prone to natural disasters, the country’s geological location does offer many benefits including one that pertains to today’s increasing demand and interest on non-fossil based energy sources, namely geothermal energy.
+Geothermal energy is the thermal energy source from the earth. More specifically, the geothermal energy is generated from hot water and hot rock, which are stored a few miles beneath the earth’s surface [
+10
+]. The water heats up and becomes pressurized steam underneath a permeable layer [
+11
+]. Prince Piero Ginori Conti was the first to utilize geothermal energy for conversion into electricity in July 1904. He was a pioneering scientist in Lardarello city Italy who created a mini geothermal power plant to power several incandescent lamps [
+12
+]. As an alternative energy source, geothermal energy has the important advantage of being one of the cleanest energy sources since the energy production process lacks CO
+2
+ and/or greenhouse gas emissions, unlike its fossil-based energy source counterparts. Geothermal energy resources will never run out because if utilized in power plant, pressurized steam experiences a renewable and sustainable natural circulation process [
+13
+,
+14
+]. Geothermal energy is environmentally friendly, meaning it does not cause pollution (air pollution, noise pollution, gas pollution, liquids pollution, and other toxic materials) [
+15
+]. Compared with other alternative energy sources such as wind energy and solar energy, geothermal energy source is more stable even under weather and seasonal changes. In addition, the electrical energy generated from geothermal does not require the use of energy storage since geothermal energy source is dispatch able, and thus it operates according to the power plant capacity and load demands. Furthermore, geothermal power plants require a narrower physical area than the conventional power plant [
+16
+,
+17
+].
+Dieng area has been identified, investigated, and explored for its geothermal potential since 1918. The Dieng geothermal field in the Dieng plateau sits at 2000 m above sea level in the Central Java province. Based on local meteorological data, the atmospheric pressure at Dieng is 78.06 kPa with an average annual ambient temperature of 18 °C [
+18
+]. The United States Agency for International Development (USAID) together with the United State Geological Survey (USGS), state owned utility (PLN) and Institute Teknologi Bandung (ITB) [
+5
+,
+8
+] teamed up from 1970 to 1972 to investigate the Kawah Sikidang region of the Dieng area. According to Radja (1975) [
+19
+], in 1972 the team drilled several exploration holes with depths reaching 145 m and obtained temperatures reaching 175 °C, but the wells had been considered unproductive. Additionally, Pambudi [
+1
+] corroborated this finding by reporting that in 1973 the geothermal wells gained geothermal potential with temperatures ranging from 92 °C to 173 °C.
+The binary cycle power plant has been used for geothermal reservoir with low operating temperature condition down to 100 °C. The fluid cannot be used to control the turbine directly; however, the geothermal reservoir can be applied as a heat source to vaporize working fluids [
+20
+,
+21
+]. The hot fluid from the geothermal reservoir flows through the pipe to a heat exchanger, which then combines with a working fluid such as butane or pentane hydrocarbon having lower boiling point temperature. The working fluid changes from liquid phase to vapor phase and then streamed through a pipe to drive a turbine. The turbine couples with a generator to produce electricity as the turbine turns. After driving the turbine, the vapor comes out and flows into the condenser. In the condenser, the vapor is cooled under liquid to yield waste water which is then injected back into the geothermal reservoir in the earth. Thus, two types of fluid, hot water and secondary fluid as working fluids, are required in this type of geothermal plant. When compared to other types of geothermal power plant, the binary cycle geothermal power plant works well in the lowest heat source condition and produces the best efficiency at the same temperature as the resources. If the secondary fluid is chosen to have a high-density vapor, then the dimensions of the turbine and heat exchanger could be made smaller. Another benefit of the binary cycle power plant is the absence of the flashing process with its associated issues in the condenser such as non-condensable gases resulting in decreased generated power and worsening of emissions. However, the use of the binary cycle power plant entails a technical challenge from the occurrence of scaling in the primary heat exchanger [
+22
+].
+Geothermal resources with latent heat at 150 °C (423 °F) and medium temperatures have also utilized the binary cycle power plant. Such application of the binary cycle may make use of several thermodynamic systems including the Organic Rankine Cycles (ORC) and the Kalina cycles [
+23
+]. Some researchers such as Madhawa et al. (2007) [
+24
+], DiPippo (2012) [
+25
+], Bayer et al. (2013) [
+26
+], Guzovic´ et al. (2014) [
+27
+], Liu et al. (2014) [
+28
+], and DiPippo (2015) [
+29
+] explained that the appropriate binary plant technology for low temperature should implement the ORC, especially to convert geothermal energy into electrical energy. Geothermal energy conversion process produces a hot fluid called brine which is streamed through a heat exchanger (evaporator) to transfer heat energy to a second working fluid and to further be re-injected to the earth. The working fluid changes to a superheated vapor when exiting the evaporator. The superheated vapor streams through a turbine and exits into a condenser. The working fluid comes out of the condenser as a feed liquid in the reservoir tank and is pumped back to the evaporator to complete the Rankine cycle [
+30
+]. Typically, the working fluid uses organic fluid which has a low boiling point temperature and high pressure vapor [
+31
+,
+32
+]. These conditions are needed to allow for size reduction of the turbine. Moreover, the binary system offers another benefit in terms of flexibility in the plant’s power capacity which may vary from hundreds of megawatts to a few megawatts [
+33
+]. Bertanni [
+34
+] and Franco et al. [
+35
+] revealed that about 70% of geothermal sources in the world have the potential for use with hot water with low enthalpy running at temperatures below 150 °C. This further demonstrates the importance of the binary cycle plant.
+Implementation of the binary cycle technology for geothermal power plants will also require the use of the most suitable type of working fluid. To this extent, Franco et al. [
+36
+] conducted further experiments by testing several working fluids in their ORC system. They concluded that working fluids isobutane, n-pentane, and R152a had better performance than others being used in their experiments. Liu et al. [
+37
+] performed a similar study and were captivated by using isobutene and R245fa as the working fluids. Coskun et al. [
+38
+] discovered that isobutene was the most appropriate as an ORC working fluid by utilizing geothermal heat sources. Along the same line, Budisulistyo et al. [
+39
+] recommended the use of n-pentane as a working fluid based on economic analysis reasons. Shengjun et al. [
+40
+] investigated the use of 16 different working fluids at 80 °C to 100 °C. Their study discovered that isobutene required the lowest cost to produce electricity and R152 required the smallest area of heat exchanger per unit of output power.
+Based on the aformentioned studies, we conducted a research to investigate the potential of Dieng’s geothermal source for electricity generation. The research utilized a laboratory setup to simulate the binary cycle plant in an ORC system. The potential heat source in the Dieng mountains was simulated using heated lubricant oil to obtain continuous controllable temperature. Refrigerants R245fa, R123, and mixtures of both refrigerants were selected as the working fluids in the ORC system. Comparison of thermodynamic performance with geothermal heat source operating at 110 °C and 120 °C as well as other pertinent results of the research are presented and discussed in this paper.
+The principal operation and heat transfer of the ORC system are illustrated in 
+Figure 2
+ which shows the T–S diagram of the thermodynamic cycle. The second law of thermodynamics, conservation of energy, conservation of mass, and thermodynamic parameters are parts of the thermodynamic analysis. Relevant to thermodynamics, major components of the ORC plant should consist of pumps, heat exchanger for the evaporator, scroll expander, and heat exchanger for the condenser. For testing purpose, thermodynamic properties of working fluids on each individual component in the ORC system can be evaluated by observing their pressure and temperature.
+The mathematical model of each individual component is calculated as follows:
+Input Power Pump
+The input power pump increases working fluid pressure from state 1 to state 2 in order to match the operation rate of the evaporator. Volume control was built around the pump as a barrier for incoming and outgoing heat transfers with the surrounding. The pump power can be written as: 
+
+
+
+
+
+
+
+
+
+
+W
+
+
+p
+
+
+
+
+=
+
+
+
+
+m
+
+
+˙
+
+
+
+
+
+
+(
+
+
+
+
+
+
+h
+
+
+2
+
+
+
+
+−
+
+
+
+
+h
+
+
+1
+
+
+
+
+
+
+)
+
+
+
+
+,
+
+
+
+
+
+
+
+
+
+
+(1)
+
+
+
+
+
+where 
+ṁ
+ represents mass flow rate for working fluid. Isentropic efficiency (
+η
+is, pump
+) and mechanical efficiency (
+η
+me, pump
+) can be expressed as:
+
+
+
+
+
+
+
+
+
+
+η
+
+
+
+
+i
+
+
+s
+
+
+,
+
+
+p
+
+
+u
+
+
+m
+
+
+p
+
+
+
+
+
+
+=
+
+
+
+
+
+
+
+
+h
+
+
+
+
+2
+
+
+s
+
+
+
+
+
+
+−
+
+
+
+
+h
+
+
+1
+
+
+
+
+
+
+
+
+
+
+h
+
+
+2
+
+
+
+
+−
+
+
+
+
+h
+
+
+1
+
+
+
+
+
+
+
+
+,
+
+
+
+
+
+
+
+
+
+
+(2)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+η
+
+
+
+
+m
+
+
+e
+
+
+,
+
+
+p
+
+
+u
+
+
+m
+
+
+p
+
+
+
+
+
+
+=
+
+
+
+
+
+
+
+
+m
+
+
+˙
+
+
+
+
+
+
+(
+
+
+
+
+
+
+h
+
+
+2
+
+
+
+
+−
+
+
+
+
+h
+
+
+1
+
+
+
+
+
+
+)
+
+
+
+
+
+
+
+
+
+
+W
+
+
+
+
+e
+
+
+l
+
+
+e
+
+
+,
+
+
+p
+
+
+u
+
+
+m
+
+
+p
+
+
+
+
+
+
+
+
+
+
+,
+
+
+
+
+
+
+
+
+
+
+(3)
+
+
+
+
+
+where 
+h
+2
+s
+ and 
+h
+2
+ are the specific enthalpies of the working fluid at the outlet of the pump under ideal and actual conditions, respectively.
+Evaporation Process
+The compression vapor flows throughout an evaporator at state 3. During heat exchange process (state 2 to state 3), the hot oil infiltrates heat into the working fluid. The total heat transfer rate (
+Q
+evap
+) from the heat source to working fluid in the evaporator is represented in (4):
+
+
+
+
+
+
+
+
+
+
+Q
+
+
+
+
+e
+
+
+v
+
+
+a
+
+
+p
+
+
+
+
+
+
+=
+
+
+
+
+m
+
+
+˙
+
+
+
+
+
+
+(
+
+
+
+
+
+
+h
+
+
+3
+
+
+
+
+−
+
+
+
+
+h
+
+
+2
+
+
+
+
+
+
+)
+
+
+
+
+,
+
+
+
+
+
+
+
+
+
+
+(4)
+
+
+
+
+
+where 
+h
+3
+ is the specific enthalpy of working fluid at the evaporator outlet.
+Expansion Work of Scroll Expander
+The superheated vapor at state 3 flows in scroll expander where it expands and produces output power by rotating the shaft. The pressure and temperature drop during this process then discharge to state 4. By neglecting heat transfer flow in and flow out to the surrounding, the scroll expander output power (
+W
+t
+) can be written as:
+
+
+
+
+
+
+
+
+
+
+W
+
+
+t
+
+
+
+
+=
+
+
+
+
+m
+
+
+˙
+
+
+
+
+
+
+(
+
+
+
+
+
+
+h
+
+
+3
+
+
+
+
+−
+
+
+
+
+h
+
+
+4
+
+
+
+
+
+
+)
+
+
+
+
+,
+
+
+
+
+
+
+
+
+
+
+(5)
+
+
+
+
+
+where 
+h
+4
+ is the specific enthalpy of working fluid at the expander outlet.
+Condensation Process
+A condenser facilitates heat transfer from steam to cooling water that flows in a separate channel. According to the principle of mass and energy balance for a controlled volume at a condenser, the output heat can be written as:
+
+
+
+
+
+
+
+
+
+
+Q
+
+
+
+
+c
+
+
+o
+
+
+n
+
+
+d
+
+
+
+
+
+
+=
+
+
+
+
+m
+
+
+˙
+
+
+
+
+
+
+(
+
+
+
+
+
+
+h
+
+
+1
+
+
+
+
+−
+
+
+
+
+h
+
+
+4
+
+
+
+
+
+
+)
+
+
+
+
+.
+
+
+
+
+
+
+
+
+
+
+(6)
+
+
+
+
+
+where 
+Q
+cond
+ is the condenser output heat and 
+h
+4
+ is the specific enthalpy of working fluid at the condenser inlet.
+Thermal Efficiency
+The thermal efficiency can be represented as the ratio between total output to input powers and heat transfer rate. The thermal efficiency can be described as:
+
+
+
+
+
+
+
+
+
+
+η
+
+
+
+
+t
+
+
+h
+
+
+
+
+
+
+=
+
+
+
+
+
+
+
+
+W
+
+
+t
+
+
+
+
+−
+
+
+
+
+W
+
+
+p
+
+
+
+
+
+
+
+
+
+
+Q
+
+
+
+
+i
+
+
+n
+
+
+
+
+
+
+
+
+
+
+=
+
+
+
+
+
+
+
+
+(
+
+
+
+
+
+
+h
+
+
+3
+
+
+
+
+−
+
+
+
+
+h
+
+
+4
+
+
+
+
+
+
+)
+
+
+
+
+−
+
+
+
+
+(
+
+
+
+
+
+
+h
+
+
+2
+
+
+
+
+−
+
+
+
+
+h
+
+
+1
+
+
+
+
+
+
+)
+
+
+
+
+
+
+
+
+
+
+h
+
+
+3
+
+
+
+
+−
+
+
+
+
+h
+
+
+2
+
+
+
+
+
+
+
+
+.
+
+
+
+
+
+
+
+
+
+
+(7)
+
+
+
+
+Since work input and output powers are equal to total operating heat, another expression of the thermal efficiency may be calculated as follows:
+
+
+
+
+
+
+
+
+
+
+η
+
+
+
+
+t
+
+
+h
+
+
+
+
+
+
+=
+
+
+
+
+
+
+
+
+Q
+
+
+
+
+i
+
+
+n
+
+
+
+
+
+
+−
+
+
+
+
+Q
+
+
+
+
+o
+
+
+u
+
+
+t
+
+
+
+
+
+
+
+
+
+
+
+
+Q
+
+
+
+
+i
+
+
+n
+
+
+
+
+
+
+
+
+
+
+=
+
+
+1
+
+
+−
+
+
+
+
+
+
+
+
+Q
+
+
+
+
+o
+
+
+u
+
+
+t
+
+
+
+
+
+
+
+
+
+
+
+
+Q
+
+
+
+
+i
+
+
+n
+
+
+
+
+
+
+
+
+
+
+=
+
+
+1
+
+
+−
+
+
+
+
+
+
+
+
+(
+
+
+
+
+
+
+h
+
+
+4
+
+
+
+
+−
+
+
+
+
+h
+
+
+1
+
+
+
+
+
+
+)
+
+
+
+
+
+
+
+
+
+
+(
+
+
+
+
+
+
+h
+
+
+3
+
+
+
+
+−
+
+
+
+
+h
+
+
+2
+
+
+
+
+
+
+)
+
+
+
+
+
+
+
+
+.
+
+
+
+
+
+
+
+
+
+
+(8)
+
+
+
+
+The schematic flow diagram of an experimental ORC operation is displayed in 
+Figure 3
+. The system consists of three sections: heating cycle, ORC cycle, and cooling cycle. 
+Figure 4
+ depicts the laboratory implementation of the ORC experiment showing the various equipment used in the setup.
+An external heat source comprising four electric heating rods with capacity of 80 kW heats up lubricant oil (S-OIL Total Lubricants Co., LTD., Seoul, Korea) that serves as a heat source simulator to provide input heat to the ORC system. The selected lubricant oil has excellent thermal stability even at high temperature, providing a stable 120 °C operating temperature. The axial pump (SAER Elettropompe, Guastalla, Italia) adjusts the mass flow rate of lubricant oil. Moreover, the evaporator’s heat transfer rate can be changed by adjusting the electric heating input power, controlled by the electric heating rods. The hot oil operation is controlled to yield a fixed 110 °C and 120 °C in the evaporator inlet.
+The ORC system has four main components: pump (Wuli Agriculture Machine CO., LTD., Taichung, Taiwan), evaporator (Kaori Heat Treatment CO., LTD., Taoyuan, Taiwan), expander (Shenzhen Sino-Australia Refrigeration Equipment Co., Ltd., HuiZhou, Chinna), and condenser (Kaori Heat Treatment CO., LTD., Taoyuan, Taiwan). The main components are integrated into one closed cycle system to take advantage of low waste heat into electrical energy as seen in 
+Figure 4
+a. The amount of electrical energy consumed by the piston pump could be identified by gauging current and voltage, whereas the pump shaft’s power could be counted with thermodynamic indicators in the pump inlet and outlet. The piston pump passes the working fluid from the holding tank to the evaporator by escalating the working fluid pressure to match the operating pressure required by the evaporator. Pressurized working fluid enters the evaporator in which the working fluid is vaporized by hot oil as a heat resource. Vapor in high-pressure streamed into scroll expander to expand enthalpy to produce output power. After the expansion process, the vapor in low-pressure streams out from a scroll expander and leads to a condenser for releasing heat energy and then it turns into a liquid in the subcooled-phase position. The working fluid in subcooled-phase flows and it is collected into the reservoir tank to be re-pumped to start a new cycle.
+Evaporator and condenser use a heat exchanger with plate heat exchanger (PHE) type. Compared to other heat exchangers, PHE has several advantages such as flexible thermal size, easy cleaning to maintain extreme hygienic conditions, great approaching input heat temperature, and improved heat transfer performance [
+41
+]. For the interest of energy conservation and space saving, the PHE is used in the experimental ORC system. Since the refrigerant used in the ORC is highly corrosive and high-pressured substance, the brazing plate heat exchanger (BPHE) (Kaori Heat Treatment CO., LTD., Taoyuan, Taiwan) is particularly suitable to utilize where stainless steel vacuum brazing plates use copper as the brazing material, as shown in 
+Figure 4
+c. The BPHE evaporator and condenser have heat transfer area of 4.157 m
+2
+ which employs glass wool and barrier foam around the evaporator to prevent escaping heat.
+The expansion process area utilizes a scroll expander which is taken from a cool storage compressor. The mechanical power of the expander rotates the shaft and the coupled generator (as displayed on 
+Figure 4
+a) by adding pulleys and belts. An induction motor is used as the generator due to its low cost and availability. Re-magnetization in the rotor is generally sufficient to generate the initial voltage of the generator. To fulfill the reactive power requirement to generate a rotating magnetic field, an excitation capacitor is implemented, as depicted 
+Figure 4
+b.
+The cooling cycle for the ORC system utilizes cooling towers with closed circuits operating in a counter-flow basis. The cooling tower system delivers cooling fluid to infiltrate heat energy from condenser and dissipates the heat energy into the ambient air through spray at the top of the cooling towers. There are two separate and distinct functions of fluid circuitry (as displayed in 
+Figure 3
+). The external fluid circuit decreases the temperature of the ORC system and it is called the cooling cycle. The second circuit, the internal fluid circuit, is in the center of the ORC system and the fluid acts as a working fluid. The cooling tower is on the rooftop as part of the building cooling system. This causes the cooling water temperature to fluctuate due to the surrounding environment temperature. Cooling tower’s water circulation is controlled by a needle valve to enable adjustment of speed and mass flow rate.
+The ORC laboratory experiments were conducted to simulate the operation of an actual ORC system. All parameters were considered to represent the whole ORC operation. The main indicators measured were temperature and pressure at the pump inlet and pump outlet, mass flow rate of working fluid, temperature and pressure on expander inlet and outlet, temperature inlet and outlet of heat resources, temperature inlet and outlet of cooling water, and swivel speed of the expander and power generator. The T-type thermocouple (Deange Industry Co., Ltd., New Taipei, Taiwan) was used to measure the temperature, and the piezo-resistive pressure transmitter (Jetec Electronics Co., Ltd., Taichung, Taiwan) was used to measure the pressure. The measurement results combined with NIST Refrigerant Properties (NIST REFPROP) can be used to determine the enthalpy value and entropy for each state. The NIST REFPROP database provides the most accurate thermo-physical property model for a range of industry-important fluids and fluid mixtures, including accepted standards. Based on the model, pump work input, pump isentropic efficiency, evaporator heat input, expander work output, condenser heat output, and thermal efficiency can then be calculated.
+Measurement uncertainty is an expression of statistical dispersion of values associated with measured quantities. Error propagation theory revealed the measurement uncertainties is calculated using the root-sum-square method. Account results of the uncertainty 
+U
+y
+ from variable 
+Y
+ are calculated as a function of the uncertainties 
+U
+xi
+, for each measured variable 
+x
+i
+, which are presented in Equation (9). 
+Table 1
+ presents a list of the accuracy of the measuring instruments obtained from the manufacturer’s data sheet.
+
+
+
+
+
+
+
+
+
+
+
+U
+
+
+y
+
+
+
+
+=
+
+
+
+
+
+
+
+
+
+
+∑
+
+
+
+
+i
+
+
+
+
+
+
+
+
+
+
+(
+
+
+
+
+
+
+
+
+∂
+
+
+Y
+
+
+
+
+
+
+∂
+
+
+
+
+x
+
+
+i
+
+
+
+
+
+
+
+
+
+
+)
+
+
+
+
+
+
+2
+
+
+
+
+
+
+U
+
+
+
+
+
+
+x
+
+
+i
+
+
+
+
+
+
+2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(9)
+
+
+
+
+The choice of a working fluid for the ORC operation is crucial since it affects the dimension of system components, design of the expansion machine, system efficiency and cost [
+42
+,
+43
+]. Safety of the working fluid is another main requirement, and so the important features of working fluid should be low toxicity, controlled explosion and flammable characteristics, chemical stability, thermal conductivity, boiling temperature, blow-off point, latent heat, and specific heat. Environmental hazards: GWP (Global Warming Potential) and ODP (Ozone Decrease Potential) are in fact the main issues for researchers in the ORC operation to determine the most suitable working fluid.
+Working fluids R123 (Dupont Taiwan Ltd., Taipei, Taiwan ) and R245fa (Hangzhou Xianglin Chemical Industry Co., Ltd., Hangzhou, China) are commonly applied for experimental ORC operation due to their preferred thermodynamic performance and environmental advantage (low GWP and ODP effects). Based on the slope of the T–S diagram, working fluids R245fa and R123 could be categorized into highly profitable dry fluids in the expander area because if applied in the wet working fluid, they naturally generate droplets which are affected in expander failure. Hence, the dry and isentropic working fluids will work well and should yield precise results [
+44
+,
+45
+].
+As previously discussed, there are many working fluids used for low-temperature heat sources. However, this is not the case high-temperature heat sources. Chen et al. [
+46
+] revealed that the temperature range contained in the heat source potential has a highly influential relationship. Heat source temperature provides an idea for researchers to determine the appropriate working fluid, one of which was done by Xu et al. [
+47
+]. They recommended applying R245fa as a working fluid due to its capability to operate in a wide range of heat resource temperature. An application was directly carried out by Feng et al. [
+48
+] using the working fluid R245fa by considering thermal efficiency and environmental performance. In addition, they revealed that the working fluid of R245fa was suitable for heat source with 125 °C temperature. 
+Table 2
+ provides a list of other researchers, which in their study used working fluid R245fa and R123.
+The idea of mixing working fluids to get different results and better impact to heat source potential in the ORC system was investigated further by Li et al. [
+60
+]. Several studies have been conducted to compare pure and mixed working fluids such as Feng et al. [
+48
+] and Pang et al. [
+61
+] who used a mixed working fluid R123 with R245fa. Prior to conducting research experiments, Pang et al. [
+61
+] conducted a safety test by heating the sealed container in two working fluid mixtures. In this study, we employed working fluids R245fa, R123, R245fa 1:1 R123 (admixture R245fa 50% and 50% R123), R245fa 2:1 R123 (admixture R245fa 66.6% and 33.3% R123), and R245fa 1:2 R123 (admixture R245fa 33.3% and 66.6% R123). We also determined the working fluid cycles in the system with mass flow rate set at 0.1 kg/s, 0.13 kg/s, 0.15 kg/s, 0.175 kg/s, and 0.2 kg/s. The thermos-physical characteristics of working fluid R245fa, R123 and mixture ratio are both listed in 
+Table 3
+.
+The T–S diagram of working fluids could be explained as displayed in 
+Figure 5
+ with data presented in 
+Table 3
+ using the NIST REFPROP program to obtain the properties in saturated liquids, saturated gas, and entropy data.
+Geothermal energy potential in the Dieng plateau in Indonesia was simulated using a laboratory setup with the heat source temperature set at 110 °C and 120 °C. The heat source is generated from several heaters to heat up lubricating oil to simulate heat energy from geothermal. The mass flow rate can also be changed by varying the pump frequency. Experimental data obtained from laboratory tests reveal the thermodynamic performance of the ORC operation.
+The simulated heat source used 40 kW to heat the oil in the tube resources until the temperature reached 110 °C and 120 °C at the inlet evaporator. Hot oil circulation used an adjustable axial pump to convert the mass flow rate of hot oil to an evaporator. All experiments used an axial pump at speed of 55 Hz, and therefore, it was likely the heat flow conditions flowed into the evaporator at a constant speed without any change. The lubricating oil was from the TOTAL Company with SERIOLA K 3120 type with a specific heat (cp) of 0.535 kcal/(kg°C) at temperature 120 °C. 
+The mass flow rates of hot oil are presented in 
+Table 4
+.
+Cooling utilized water from cooling towers with a mass flow rate ranging from 2.12 kg/s to 3 kg/s. According to data presented in 
+Table 5
+, the mass flow rate in a condenser indicated a uniform value for all experiments. Temperature of air cooling tower fluctuated due to the influence from the surrounding environment. The cooling tower was located on the roof of a manufacturing factory building to serve the cooling system. Fluctuations in the operating condition of cooling water are important factors that affect for ORC system. To control the influence of the mass flow rate in the cooling cycle, a needle valve is installed and arranged the valve opening.
+The evaporator intake temperature was maintained at a constant value of 110 °C and 120 °C. Data were collected every 5 s under steady-state conditions for 20 min, resulting in a total of 240 data points for each experimental condition. Mass flow rate was varied in five conditions to produce 1200 data points. As previously stated, this study employed five working fluids: R245fa, R123, mixtures of R245fa and R123 with the three different compositions: (1) R245fa 2:1 R123, (2) R245fa 1:1 R123 and (3) R245fa 1:2 R123. Thus for the experiments, these five types of working fluids produced 6000 data points for further analysis.
+Observing the working fluid behavior in the ORC cycle section is the focus of the experiment. To explore the experiments, it was carried out by varying the mass flow rate ranging from 0.1 kg/s, 0.125 kg/s, 0.15 kg/s, 0.175 kg/s, and 0.2 kg/s with temperature at the inlet evaporator at 110 °C and 120 °C. A number of datasets such as pump inlet temperature, pump outlet temperature, inlet expander temperature, outlet expander temperature, heat source inlet temperature, heat source outlet, cooling water channel, and cooling water outlet were recorded and presented in 
+Figure 6
+. The error bar shows data variation due to error deviation or uncertainty in performing the measurements. The 10 data samples were in steady-state condition for 20 min operation, where the heat source inlet at evaporator was kept constant and recorded temperature (Thin) from 120.205 °C to 120.309 °C, then flowed out from the evaporator with heat source outlet temperature (Thout) recorded from 105.048 °C to 105.075 °C. The working fluid operated at the pump inlet temperature (T1) ranging from 28.637 °C to 28.666 °C, and the pump outlet temperature (T2) were recorded to range from 29.058 °C to 29.11 °C.
+When the working fluid was in the expander the inlet temperature (T3) ranged from 117.231 °C to 117.482 °C, the working fluid underwent expansion and flowed out from the expander with the temperature (T4) ranging from 87.586 °C to 87.672 °C. In the cooling process, cooling water flowed in the condenser with temperatures (TLin) from 28.61 °C to 28.646 °C, then flowed out with temperatures (TLout) from 31.267 °C to 31.347 °C.
+Figure 7
+ presents 10 experimental data for pressures and volume flow rates in steady state condition using R245fa 1:1 R123 working fluid, mass flow rate 0.125 kg/s and heat source 120° C with a 5% bar error. The volume flow rate of the working fluid was controlled by adjusting the frequency of the pump motor. The recorded data were 5.409 liters per minute (L/min) up to 5.430 L/min. The working fluid, before passing the pump, has an inlet pressure pump (P1) from 2.456 bar to 2.483 bar. Afterwards, the pump performed a compression process and made an outlet pressure pump (P2) from 10.513 bar to 10.589 bar. When the working fluid streamed into an expander, it should be noted that expander inlet pressure (P3) of 9.66 bar to over than 10 bar were measured, then the working fluid expanded processing onward and streamed out with an expander outlet pressure (P4) from 2.718 bar to 2.737 bar.
+The highest achievement of working fluid pressure occurred in state 2 because the subcooled working fluid was compressed by the pump to pressure P2 (indicated by the pink box in 
+Figure 7
+) at constant temperature T2 (indicated by the pink box in 
+Figure 6
+). Compressed working fluid enters the evaporator to be converted into superheated vapor at temperature T3 (indicated by the blue box in 
+Figure 6
+) and constant pressure P3 (indicated by the blue box in 
+Figure 7
+). If it works ideally, pressure P2 is equal to pressure P3, but in reality pressure P3 is lower than pressure P2. This is caused by the use of a plate heat exchanger (PHE) as an evaporator. When working fluid flows inside the PHE, pressure drops occur due to friction with a narrow corrugated wall.
+The indicator chart in 
+Figure 8
+ demonstrates the variation of pump inlet pressure (P1) and outlet (P2) as a function of mass flow rate for R245fa, R123, and mixed working fluids. As reviewed in 
+Figure 8
+, the pump inlet pressure (P1) was not affected by changes in the mass flow rate due to almost remained unchanged. Individual working fluid was difficult to observe because the indicators showed coincide position with suppress each other. Meanwhile, the pink circle indicators are easier to see than others, representing R245fa 1:1 R123 with a slightly higher pump inlet pressure with solid circles for heat source 110 °C and hollow circles for heat source 120 °C. Adjustment of the heat source at 110 °C have produced pump inlet pressures ranging from 2.08 bar to 2.16 bar and when heat source changed to the temperature of 120 °C, pump inlet pressures ranged from 2.46 bar to 2.50 bar.
+The main function of the ORC pump is to increase the working fluid pressure as can be observed from the pump outlet pressure (P2) in 
+Figure 8
+. All working fluid presents P2 uniform movement and trends increase with the addition of mass flow rate. R123 generates the lowest P2 when the heat source temperature is at 110 °C, which are in the range from 7.73 bar to 8.00 bar. Furthermore, higher heat source witnessed higher pump outlet pressures, as noted R123 with heat source 120 °C produces P2 in the range of 8.88 bar to 9.89 bar. The highest of pump outlet pressures is obtained by R245fa, which recorded P2 with values ranging from 9.88 bar to 12.43 bar at heat source 110 °C. While using heat source 120 °C, R245fa yielded P2 values in the span of 8.89 bar to 13.01 bar.
+Figure 9
+ demonstrates the transformation in mass flow rate with the pump work input for R245fa, R123, and mixed working fluid. The pump work input escalates with increasing mass flow rates, which is associated with large frequencies of the pump.
+The mixed working fluids produces pump work input ranging from 0.155 kJ/s to 0.388 kJ/s, while the pure working fluids give a lower value in the range 0.1095 kJ/s to 0.214 kJ/s. Notably, the three mixed working fluids (R245fa 2:1 R123, R245fa 1:1 R123, and R245fa 1:2 R123) have a relatively higher pump work input with spacing from 0.243 kJ/s to 0.388 kJ/s. When compared with working fluid R245fa, the pump work input for the mixed fluids are higher by 10%–70%, and if compared with R123 the values are higher by around 20%–80%. This phenomenon is due to mass flow rate and enthalpy changes in the pump. At a predetermined mass flow rate, R245fa 2:1 R123 has a specific heat of 1.2312 kJ/(kg·K) (18.041 °C and 8.34 bar), and therefore it is higher than R123 which has 1.0097 kJ/(kg·K) (18.041°C and 8.34 bar). Accordingly, R123 requires a pump work input smaller than R245fa 2:1 R123. Therefore, this reveals that the mixed working fluids require a pump work input greater than the pure working fluids. For a specific mass flow rate of 0.15 kg/s, the pump work input requirement for working fluids R245fa, R123, R245fa 2:1 R123, R245fa 1:1 R123, R245fa 1:2 R123, and R123 are at 0.1599 kJ/s, 0.1602 kJ/s, 0.2919 kJ/s, 0.2202 kJ/s, and 0.2299 kJ/s, respectively.
+Dynamic changes of the pump isentropic efficiency are related to the mass flow rate for R245fa, R123, and mixed working fluids as displayed in 
+Figure 10
+. By adjusting the mass flow rate from 0.1 kg/s to 0.2 kg/s, the pump output parameters and pump work input requirements changes and forces the pump’s performance to approach isentropical operation. When using a pure working fluid, the pump isentropic efficiency has a similar behavior, where the trend increases from the beginning of a mass flow rate of 0.1 kg/s to the highest at a mass flow rate of 0.2 kg/s. The experimental data show that R245fa working fluid has a pump isentropic efficiency starting from 42.66% to 52.06%, while the lowest pump isentropic efficiency is obtained from R123 working fluid with magnitudes between 25.15% and 36.12%. Furthermore, the mixed working fluids produces the position of pump isentropic efficiency between pure working fluids (R245fa and R123) with values ranging from 25.15% to 45.88%. According to Feng et al. [
+48
+], transformation in a fluid mass fraction will affect the density of a mixed working fluid, resulting in decreased pump isentropic efficiency. At specified mass flow rate of 0.15 kg/s, the pump isentropic efficiency for R245fa, R123, R245fa 2:1 R123, R245fa 1:1 R123, and R245fa 1:2 R123 are 47.68%, 35.27%, 45.25%, 40.66%, and 37.77%, respectively.
+The geothermal heat source provides some energy in the evaporator as illustrated in 
+Figure 11
+. The figure also depicts the dynamic movement of evaporator heat input against changes in the mass flow rate. Increasing the mass flow rate for R245fa, R123, R245 2:1 R123, and R245 1:1 R123 produces a uniform heat input, except for the mixed R245 1:2 R123 working fluid which yields a constant increase of heat input with mass flow rate at 0.1 kg/s to 0.15 kg/s and at 0.175 kg/s. At the end of the experiments, an increase in the mass flow rate of 0.2 kg/s is observed. When a pure working fluid (R245fa or R123) is applied, the evaporator develops the highest heat input range from 27.79 kJ/s to 50.09 kJ/s, whereas the mixed working fluids (R245fa 2:1 R123, R245fa 1:1 R123, and R245fa 1:2 R123) produces the lowest evaporator heat input ranging from 27.79 kJ/s to 50.09 kJ/s. This is caused by R245fa, and R123 working fluids having the highest evaporator heat transfer coefficient and the largest increase in Logarithmic Mean Temperature Difference (LMTD) when compared with the mixed working fluids. For the specific mass flow rate of 0.15 kg/s, the evaporator heat input for R245fa, R123, R245fa 2:1 R123, R245fa 1:1 R123, and R245fa 1:2 R12 are 39.67 kJ/s, 38.82 kJ/s, 34.93 kJ/s, 32.59 kJ/s, and 31.44 kJ/s, respectively.
+Figure 12
+ describes the variation in mass flow rate with the expander work output for R245fa, R123, and mixed working fluids. As seen in 
+Figure 12
+, the trend for expander work output shows the same increasing behavior, specifically with mass flow rates of 0.1 kg/s to 0.2 kg/s for all working fluids. Increased mass flow rates provide more heat energy to create torque power in the expander. Furthermore, R123 causes an increase in one experimental parameters for expander work output with values ranging from 2.78 kJ/s to 6.5 kJ/s. In addition, R245fa generates the lowest expander work output, which is between 1.6 kJ/s and 5.02 kJ/s or a decrease of around 30%. Nevertheless, all working fluids produce work input values in the range of 1.84 kJ/s to 6.30 kJ/s or a decrease of about 20% in the overall mass flow rate. The work output of an expander is affected by the parameters from working fluid inlet and outlet, which represent how much energy can be expanded to the shaft. Experiments with specific mass flow rate of 0.15 kg/s produce an expander work output for R245fa, R123, R245fa 2:1 R123, R245fa 1:1 R123, and R245fa 1:2 R123 of 2.53 kJ/s, 4.14 kJ/s, 2.91 kJ/s, 3.66 kJ/s, and 3.604 kJ/s, respectively.
+Figure 13
+ discloses the effect of changes in mass flow rate on the condenser heat output when simulating a heat source at 110 °C. As seen in the graph, the trend of condenser heat output increases significantly and uniformly except for the R123 and the mixed R245fa 2:1 R123 working fluids. The line appears to fluctuate slightly which means that there is a change in the amount of energy of the condenser heat output. R245fa has the highest trend with results ranging from 26 kJ/s to 43.35 kJ/s and followed by R123 with 24 kJ/s to 40.35 kJ/s. However, the mixed R245fa 2:1 R123, R245fa 1:1 R123, and R245fa 1:2 R123 working fluids produce a condenser heat output with ranges of 22.85 kJ/s to 37.7 kJ/s, 21.36 kJ/s to 36.27 kJ/s, and 20.77 kJ/s to 35.72 kJ/s, respectively. The condenser heat output represents the amount of condenser energy transferred from the ORC system to the surrounding environment. The amount of energy released into the environment is influenced by the magnitude of coefficient heat transfer condenser and Logarithmic Mean Temperature Difference (LMTD) which are sensitive to increased mass flow rate. This phenomenon is caused by R245fa and R123 working fluids having the highest heat transfer coefficient and the largest increase in LMTD when compared to the mixed working fluids. Experiments with specific mass flow rate of 0.15 kg/s for R245fa, R123, R245fa 2:1 R123, R245fa 1:1 R123, and R245fa 1:2 R123 produce condenser heat outputs of 36.99 kJ/s, 31.38 kJ/s, 28.78 kJ/s, 27.65 kJ/s, and 30.99 kJ/s, respectively.
+Figure 14
+ reveals ORC’s efficiency which is produced by controlling mass flow rate of the working fluids. Each working fluid is found to have an effect on increasing and varying the ORC system efficiency. R123 working fluid produces the highest efficiency as compared to other working fluids with significant increase occurring from mass flow rates of 0.1 kg/s, 0.125 kg/s, and 0.15 kg/s with efficiency values of 7.38%, 8.59%, and 11.04%, respectively. Afterward, the efficiency decreases to 10.74% at mass flow rate of 0.175 kg/s and then sharply increases to 12.75% at the end of the experiment with mass flow rate of 0.2 kg/s. The lowest efficiency occurs from R245fa working fluid with mass flow rate of 0.1 kg/s, 0.125 kg/s, and 0.15 kg/s and efficiency of 6.21%, 6.34%, and 6.05%, respectively. Subsequently, the efficiency climbs from a mass flow rate of 0.175 kg/s with efficiency of 6.79% to the end of the experiments with a mass flow rate of 0.2 kg/s giving efficiency at 12.27%. On the other hand, the mixed working fluids are measured to have random efficiency with values between those of the two pure working fluids in the range of 6.32% to 12.33%.
+The changes in mass flow rate for all working fluids affect pump work input with heat source at 120 °C as presented in 
+Figure 15
+. All working fluids also increase pump heat input, especially for mixed working fluids, which moves up dramatically with values ranging from 0.1571 kJ/s to 0.37 kJ/s. Pure working fluids have lower position compared to mixed working fluids. More specifically, R123 is followed by R245fa as producing the lowest pump work input. Starting with the highest pump work input at mass flow rate of 0.1kg/s, R123 generates an increased pump work input but located at relatively low position with the values ranging from 0.1765 kJ/s to 0.2176 kJ/s. Meanwhile, with R245fa, the ORC system generates the lowest position with pump work input ranging from 0.097 kJ/s to 0.216 kJ/s. At mass flow rate of 0.15 kg/s, the pump work input requirement for R245fa, R123, R245fa 2:1 R123, R245 1:1 R123, and R245 1:2 R123 are recorded at 0.162 kJ/s, 0.1937 kJ/s, 0.266 kJ/s, 0.246 kJ/s, and 0.248 kJ/s, respectively. Comparing the experimental results of heat source at 110 °C and 120 °C shows a similar trend. R245fa with mass flow rate of 0.1 kg/s up to 0.2 kg/s produces changes in efficiency ranging from 1.54% to 13.41%, while for R123 the changes are from 6.35% to 9.7%. In addition, when applying the mixed working fluids (R245fa 2:1 R123, R245fa 1:1 R123, and R245fa 1:2 R123) the efficiency increase varies from 1.69% to 27.67%.
+The effect of changes in mass flow rate on the dynamic movement of pump isentropic efficiency with applied heat source at 120 °C for R245fa, R123, and mixed working fluids is shown in 
+Figure 16
+. With mass flow rate of the working fluid varied from 0.1 kg/s to 0.2 kg/s, the line graph shows that the pump isentropic efficiency trend increases gradually. R245fa produces the highest pump isentropic efficiency, which starts with a mass flow rate of 0.1 kg/s resulting in an isentropic efficiency of 53.75%, then when the mass flow rate is increased to 0.15% the pump isentropic efficiency amounts to 69.79%. Moreover, experiments at a mass flow rate of 0.175 kg/s result in isentropic efficiency decreasing slightly to 69.28%; however, at a mass flow rate of 0.2 kg/s, the isentropic efficiency rises significantly to 78.2%. On the other hand, R123 gives pump isentropic efficiency in the lowest position ranging from 26.76% to 43.42%, while the mixed working fluid produces results ranging from 30.91% to 46.18%. For specific mass flow rate of 0.15 kg/s, R245fa, R123, R245 2:1 R123, R245 1:1 R123, and R245 1:2 R123 working fluids with heat source at 120 °C produce pump isentropic efficiency of 69.79%, 38.82%, 45.77%, 41.3%, and 42.11%, respectively. The addition of mass flow rate notably results in an energy increase. Changing the heat source from 110 °C to 120 °C changes the enthalpy to be higher. Consequently, magnitude of enthalpy at pump input and pump output are affected causing pump performance to be closer to its isentropic performance. If the experimental results of pump isentropic efficiency with heat source at 110 °C and 120 °C are compared, as an example for R245fa, both have the highest position, but the heat source at 120 °C yields higher pump isentropic efficiency as evidenced by 
+Figure 10
+ and 
+Figure 16
+. If the differences are calculated at mass flow rates of 0.1 kg/s, 0.125 kg/s, 0.15 kg/s, 0.175 kg/s, and 0.2 kg/s, then difference values of 20.63%, 22.84%, 31.67%, 30.03%, and 33.42% are obtained, respectively. 
+Figure 17
+ demonstrates the effect of changes in mass flow rate against dynamic movement of heat input received by evaporator from heat source at 120 °C. Overall, the line graph increases sharply when the mass flow rate is varied from 0.1 kg/s to 0.2 kg/s. R245fa with R123 showing the highest value even though the line graph fluctuates and coincides between 27.85 kJ/s to 50.58 kJ/s. Whereas, for R245fa 2:1 R123, the values are observed to be from 25.81 kJ/s to 45.6 kJ/s. The lowest is obtained from R245fa 1:1 R123 and R245fa 1:2 R123 mixed working fluids. However, both fluids seem to increase with heat inputs of 23.86 kJ/s to 43.3 kJ/s. This is due to the heat source transferring some amount of energy to the evaporator. If mass flow rate is varied, then the heat transfer coefficient of the evaporator will change, and eventually will affect evaporator heat input whose value corresponds to enthalpy and LMTD. For specific mass flow rate of 0.15 kg/s, R245fa, R123, R245 2:1 R123, R245 1:1 R123, and R245 1:2 R123 working fluids with heat source at 120 °C produce evaporator heat inputs 39.86 kJ/s, 39.35 kJ/s, 36.86 kJ/s, 33.78 kJ/s, and 33.59 kJ/s, respectively. Comparing the results with heat source at 110 °C and 120 °C as presented in 
+Figure 11
+ and 
+Figure 17
+, the evaporator heat input showed the same trend. The pure working fluids (R245fa and R123) produces the difference in heat input between 1% with 7%, while the mixed working fluids (R245fa 2:1 R123, R245fa 1:1 R123, and R245fa 1:2 R123) have the difference ranging from 1.5% to 8.7%.
+Figure 18
+ illustrates the effect of changing mass flow rate against expander work output. Overall, increasing the mass flow rate results in the rising movement of the expander working output. Expander power output for R123 moves with the highest, where at mass flow rate of 0.1 kg/s, 0.125 kg/s, 0.15 kg/s, 0.175 kg/s and 0.2 kg/s the move increases rapidly by 2.32 kJ/s, 3.11 kJ/s, 4.55 kJ/s, 5.7 kJ/s, and 6.5 kJ/s, respectively. Experimental result using R245fa with mass flow rate of 0.1 kg/s up to 0.15 kg/s yields work output position almost in the middle of the other working fluids with the amount recorded from 1.85 kJ/s to 2.57 kJ/s. Afterward mass flow rate 0.175 kg/s and 0.2 kg/s produce work output that slowly increases with the lowest values occur from 3.14 kJ/s and 5.19 kJ/s. For specific mass flow rate of 0.15 kg/s, R245fa, R123, R245 2:1 R123, R245 1:1 R123, and R245 1:2 R123 working fluids with heat source at 120 °C produce expander work output of 2.57 kJ/s, 4.55 kJ/s, 2.79 kJ/s, 2.51 kJ/s, and 2.76 kJ/s, respectively. Comparison of expander work output when the applied heat source are at 110 °C and 120 °C show a random movement as illustrated in the line graph of 
+Figure 12
+ and 
+Figure 18
+. The R123 produces an increased on expander work output with values ranging from 8.85% to 19.68%, while R245fa generates an increase with 1.76% up to 13.79%. Lastly, R245fa 2:1 R123, R245fa 1:1 R123, and R245fa 1:2 R123 working fluids yield values ranging from 3.84% to 8.82%, 0.31% to 45.81%, and 3.18% to 17.91%, respectively.
+Figure 19
+ reveals some important information which affects for the amount of expander work output. The box indicator shows a mass flow rate of 0.2 kg/s and a round indicator shows a mass flow rate of 0.125 kg/s. The picture graph clearly provides information that the mass flow rate of 0.2 kg/s has produced a greater output expander compared to the mass flow rate of 0.125 kg/s. This event is caused by the 0.2 kg mass of a substance which passes per unit of time are more weight than 0.125 kg mass, certainly when multiplied by enthalpy will result in a large expander work output. This means that the expander receives a larger mass to expand into mechanical power.
+The comparison of the heat source 110 °C with 120 °C was also expressed in 
+Figure 19
+. The blue indicator represented a heat source of 110 °C and the red color represented a heat source of 120 °C. Based on the picture showed a tiny difference of expander work output, even though in generally, the heat source 120 °C produced a slightly larger expander work output. This case is caused by temperature as a measure of the ability of a substance to transfer heat energy, consequently, the higher the temperature generated the more the expander power output. 
+Discussing working fluid, R123 has produced the highest of expander work output compared to other working fluids. Mass flow rate of 0.125 kg/s on the heat source 110 °C and 120 °C produced an expander work output of 3.41 kJ/s and 3.49 kJ/s, respectively, while for the mass flow rate 0.2 kg/s on the heat source 110 °C and 120 °C yielded of 6.17 kJ/s and 6.57 kJ/s, respectively.
+Changes in the mass flow rate have an effect on the condenser heat output when heat source at 120 °C is applied as illustrated in 
+Figure 20
+. The graphical trend illustrates that the greater mass flow rate contributes to the increase in energy heat output which transfers out of the system. Working fluid R245fa has the highest position with a range between 25.73 kJ/s and 42.3 kJ/s. The working fluid R123 produces heat output which coincides with those from R245fa at 42.2 kJ/s, with the mass flow rate of 0.2 kg/s. The results from mixed working fluids increase to a range from 21.76 kJ/s to 40.46 kJ/s. For a specific mass flow rate at 0.15 kg/s, the condenser heat output for R245fa, R123, R245fa 2:1 R123, R245fa 1:1 R123, and R245fa 1:2 R12 are at 37.08 kJ/s, 31.53 kJ/s, 33.88 kJ/s, 31.29 kJ/s, and 30.79 kJ/s, respectively. Comparison of condenser heat output when applying heat source at 110 °C and 120 °C shows overall increasing trend, but the value decreases for heat source at 120 °C as illustrated in 
+Figure 13
+ and 
+Figure 20
+. The pure working fluids (R245fa and R123) have the difference ranging from 0.22% to 9.59%, while the mixed working fluids (R245fa 2:1 R123, R245fa 1:1 R123, and R245fa 1:2 R123) decrease by 3.3% to 11.36%.
+Efficiency of the ORC exhibits the overall performance of the system, consisting of thermal efficiency and system-making efficiency for R245fa, R123, and mixed working fluids as presented in 
+Figure 21
+. R123 shows the gradual increase in ORC efficiency with values from 9.4% to 13.5%. R245fa at mass flow rates of 0.1 kg/s, 0.125 kg/s, and 0.15 kg/s have relatively stable changes at 6.01%, 6.10%, and 5.8%, respectively. At a mass flow rate of 0.175 kg/s the ORC efficiency rises slowly by 6.73% and finally at a mass flow rate 0.2 kg/s the efficiency rises drastically by 12.03%. The ORC efficiency is influenced by heat transfer coefficient at evaporator and how much the expander produces work output as illustrated in 
+Figure 12
+. This is because the addition of mass flow rate rises the heat transfer in evaporator and increases the amount of energy produced by the expander. For specific mass flow rate at 0.15 kg/s, the ORC efficiency for R245fa, R123, R245fa 2:1 R123, R245fa 1:1 R123, and R245fa 1:2 R123 working fluids are at 5.79%, 10.64%, 9.48%, 10.27%, and 8.59%, respectively. Comparing the ORC efficiency from heat source at 110 °C and 120 °C shows quite similar trend but with an increase for heat source at 120 °C as illustrated in 
+Figure 14
+ and 
+Figure 21
+. R123 working fluid results in an increase in OCR efficiency with values ranging from 3.61% to 27.4%. R245fa has a lower trend with magnitudes ranging from 0.91% to 4.21%. Furthermore, when using mixed working fluids R245fa 2:1 R123, R245fa 1:1 R123, and R245fa 1:2 R123, the ORC efficiency increases with a wider range from 0.65% to 38.35%. 
+To study the potential of geothermal energy in Dieng Indonesia, an ORC system laboratory setup was constructed which enables us to simulate the geothermal heat source at 110 °C and 120 °C utilizing various working fluids. Several working fluids were used in the study including R245fa, R123, and three mixed ratios R245fa 2:1 R123, R245fa 1:1 R123, and R245fa 1:2 R123. Additionally, the frequency of the pump was also varied to obtain different mass flow rates; and thus, will change the main operating indicators of the Rankine cycle. Several main conclusions from the study are summarized as follows:
+(1)
+The heat source 110 °C and 120 °C does not influence significantly on behavior of expander work output and the other equipment, trend charts tend to be uniform when compared in one image. The expander work output presents an increase sharply with an escalation of mass flow rate.
+(2)
+The heat source at 120 °C has a higher pump isentropic efficiency from 0.5% to 33.5% when compared to the heat source at 110 °C, and the R245fa as a working fluid produces the highest efficiency ranging from 53.75% to 78.2%.
+(3)
+Expander work output increases when the applied heat source is at 120 °C, specifically with working fluid R123 which was observed to have the highest change with the range of 8.85% to 19.68%.
+(4)
+The highest evaporator heat input of 50.58 kJ/s is produced by R123 working fluid with heat source at 120 °C and mass flow rate of 0.2 kg/s, and when comparing the evaporator heat input between 110 °C and 120 °C, the difference ranges from 1% to 7%.
+(5)
+Condenser heat output changes uniformly for both heat source temperatures 110 °C and 120 °C, with the pure working fluid (R245fa and R123) having a difference ranging from 0.22% to 9.59% while mixed ratio fluids yield a decrease with the scale ranging from 3.3% to 11.36%.
+(6)
+The highest thermal efficiency is generated when R123 working fluid is applied with heat source at 120 °C whose efficiency values range from 9.41% to 13.53%, but when comparing both heat source temperatures the highest change in thermal efficiency is produced by R245fa 1:1 R123 whose value is 53.01%.
+(7)
+Working fluid R123 is feasible as working fluid recommendation due to produced significant expander work output with temperature 110 °C or 120 °C. When compared with other working fluid, R123 recorded a higher difference in the range of 10.39% to 61.89%.
+The heat source 110 °C and 120 °C does not influence significantly on behavior of expander work output and the other equipment, trend charts tend to be uniform when compared in one image. The expander work output presents an increase sharply with an escalation of mass flow rate.
+The heat source at 120 °C has a higher pump isentropic efficiency from 0.5% to 33.5% when compared to the heat source at 110 °C, and the R245fa as a working fluid produces the highest efficiency ranging from 53.75% to 78.2%.
+Expander work output increases when the applied heat source is at 120 °C, specifically with working fluid R123 which was observed to have the highest change with the range of 8.85% to 19.68%.
+The highest evaporator heat input of 50.58 kJ/s is produced by R123 working fluid with heat source at 120 °C and mass flow rate of 0.2 kg/s, and when comparing the evaporator heat input between 110 °C and 120 °C, the difference ranges from 1% to 7%.
+Condenser heat output changes uniformly for both heat source temperatures 110 °C and 120 °C, with the pure working fluid (R245fa and R123) having a difference ranging from 0.22% to 9.59% while mixed ratio fluids yield a decrease with the scale ranging from 3.3% to 11.36%.
+The highest thermal efficiency is generated when R123 working fluid is applied with heat source at 120 °C whose efficiency values range from 9.41% to 13.53%, but when comparing both heat source temperatures the highest change in thermal efficiency is produced by R245fa 1:1 R123 whose value is 53.01%.
+Working fluid R123 is feasible as working fluid recommendation due to produced significant expander work output with temperature 110 °C or 120 °C. When compared with other working fluid, R123 recorded a higher difference in the range of 10.39% to 61.89%.
+Knowledge of the pump type and availability in the market is very important. When using PHE as an evaporator, a large pump power is required to reach the evaporator operating pressure. Furthermore, the challenge of getting the appropriate seal is very serious because working fluid can cause rubber seal in expand and be easily damaged.
+Conceptualization, M.D.S., W.C., and T.P.; methodology, M.D.S., W.C., and T.P.; software, W.C. and T.P.; validation, M.D.S., W.C., and T.M.I.M.; formal analysis, M.D.S., W.C., and T.P.; investigation, M.D.S., W.C., and T.M.I.M.; resources, M.D.S. and W.C.; data curation, M.D.S. and W.C.; writing—original draft preparation, M.D.S. and W.C.; writing—review and editing, M.D.S., W.C., T.P., T.M.I.M., and T.; visualization, M.D.S and W.C.; supervision, W.C., T.P., T.M.I.M., and T.; project administration, M.D.S.; funding acquisition, T.P. and W.C.
+This research received no external funding. 
+The authors declare no conflicts of interest.

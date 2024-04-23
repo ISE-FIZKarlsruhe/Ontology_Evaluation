@@ -1,0 +1,1837 @@
+Low-temperature cracking is one of the most common road pavement distress types in Poland. While bitumen performance can be evaluated in detail using bending beam rheometer (BBR) or dynamic shear rheometer (DSR) tests, none of the normalized test methods gives a comprehensive representation of low-temperature performance of the asphalt mixtures. This article presents the Bending Beam Creep test performed at temperatures from −20 °C to +10 °C in order to evaluate the low-temperature performance of asphalt mixtures. Both validation of the method and its utilization for the assessment of eight types of wearing courses commonly used in Poland were described. The performed test indicated that the source of bitumen and its production process (and not necessarily only bitumen penetration) had a significant impact on the low-temperature performance of the asphalt mixtures, comparable to the impact of binder modification (neat, polymer-modified, highly modified) and the aggregate skeleton used in the mixture (Stone Mastic Asphalt (SMA) vs. Asphalt Concrete (AC)). Obtained Bending Beam Creep test results were compared with the BBR bitumen test. Regression analysis confirmed that performing solely bitumen tests is insufficient for comprehensive low-temperature performance analysis.
+One of the most frequent failure types of asphalt pavements that occur at low temperatures are transverse cracks, which are caused by thermal tensile stresses induced under cold winter conditions. Low-temperature cracking starts at the surface of the asphalt pavement and progresses downward with time, due to low winter temperatures as well as rapid drops in ambient temperature. The existence of transverse cracks caused by low temperature leads to other types of degradation of pavement structure. Pavement base, subbase and subgrade can be weakened by water entering the pavement through the cracks.
+The general mechanism of the development of low-temperature cracking indicates that cracks occur when thermal tensile stresses exceed the fracture strength of the asphalt pavement layer [
+1
+,
+2
+,
+3
+,
+4
+,
+5
+,
+6
+,
+7
+]. Another theory explains low-temperature cracks as an effect of thermal cycling and thermal fatigue failure [
+8
+,
+9
+]. The number of low-temperature transverse cracks can be reduced by improving the fracture resistance of the asphalt mixtures and by reduction of tensile stresses induced in the asphalt layers. The values of tensile stress in asphalt layers result directly from pavement temperature and viscoelastic properties of asphalt mixtures [
+10
+,
+11
+]. The viscoelastic properties indicate asphalt mixtures with higher resistance to low-temperature cracking. Therefore, application of adequate test methods for low-temperature performance of asphalt mixtures poses a very important priority in the effort to reduce the occurrence of thermal cracks and it is the main scope of the paper. 
+The low-temperature properties of an asphalt mixture seen as a composition of bitumen and aggregate mostly depend on the type of bitumen. The quality of bitumen depends on the bitumen source, which can influence the chemical composition, as well as the production processes used during refining and blending of bitumen [
+12
+]. Bitumen is a temperature-susceptible material that becomes soft at high temperatures and harder and brittle at low temperatures. For low-temperature behavior of asphalt binders, there are two leading test methods developed in the USA during the Strategic Highway Research Program (SHRP): the BBR and the Direct Tension Test (DTT) [
+13
+,
+14
+,
+15
+]. The standard BBR test is employed to perform low-temperature creep tests on beams of bitumen conditioned at the desired temperature for one hour. The final result is the limit temperature determined from the stiffness and m-value, which represents the slope of stiffness versus time curve in a double logarithm plot. Both values are determined for the time of loading equal to 60 s. The DTT is used to apply uniaxial tension to a bitumen specimen at a constant strain rate of 3% per minute. As a result, the average stress and strain at failure are obtained. Some studies indicated that the BBR, used to specify asphalt binders, could be also employed to obtain reliable measurements of creep properties of asphalt mixtures [
+16
+,
+17
+,
+18
+,
+19
+]. In comparison with standardized BBR method, in the case of asphalt mixtures the time of loading is extended up to 1000 s, and the applied load is properly increased (either 4400 or 6000 mN) [
+20
+,
+21
+,
+22
+,
+23
+,
+24
+,
+25
+,
+26
+,
+27
+,
+28
+]. Since the introduction of the modified BBR method, a significant amount of research has been conducted to determine the low-temperature performance of asphalt mixtures using the scheme of Bending Beam Creep [
+29
+,
+30
+,
+31
+,
+32
+,
+33
+,
+34
+]. The significance of that method of research was also proved by numerical simulations with the use of ABAQUS software [
+35
+] and during evaluation of asphalt mixture performance at low temperatures [
+36
+,
+37
+]. Nevertheless, the effect of mix composition on low-temperature viscoelastic properties of asphalt mixtures still has not been well recognized.
+The creep test method in the 3-point bending beam scheme that was presented in the paper can be employed in the following applications:
+-
+Comparative classification of asphalt mixtures by determining stiffness and rheological parameters, including elastic moduli and viscosity coefficients. The viscosity coefficient is directly related to the time of relaxation of thermal stresses at low temperatures. Stiffness, on the other hand, is a parameter directly affecting the amount of generated thermal stresses.
+-
+Determination of advanced characteristics of asphalt mixtures for the purpose of modeling asphalt pavement behavior at low temperatures using thermo-viscoelastic models. The material can be modeled with parameters of the rheological model and/or master curves.
+-
+In combination with the strength of the material, the method can be used to calculate thermal stresses in asphalt pavements and predict the probability of thermal cracking at variable cooling rates.
+-
+Development of functional requirements for asphalt mixtures in the field of resistance to low-temperature cracking according to Construction Products Regulations (in the future).
+Comparative classification of asphalt mixtures by determining stiffness and rheological parameters, including elastic moduli and viscosity coefficients. The viscosity coefficient is directly related to the time of relaxation of thermal stresses at low temperatures. Stiffness, on the other hand, is a parameter directly affecting the amount of generated thermal stresses.
+Determination of advanced characteristics of asphalt mixtures for the purpose of modeling asphalt pavement behavior at low temperatures using thermo-viscoelastic models. The material can be modeled with parameters of the rheological model and/or master curves.
+In combination with the strength of the material, the method can be used to calculate thermal stresses in asphalt pavements and predict the probability of thermal cracking at variable cooling rates.
+Development of functional requirements for asphalt mixtures in the field of resistance to low-temperature cracking according to Construction Products Regulations (in the future).
+The main objective of the paper is to assess the impact of asphalt mix composition and properties of the asphalt binder on low-temperature viscoelastic properties of the asphalt mixture, which affect the thermal tensile stresses inducing in pavement structure under winter conditions. For this purpose, the master curves of stiffness modulus were analyzed, viscoelastic parameters of asphalt mixtures were evaluated and the relationships between BBR test for bitumen and Bending Beam Creep test for asphalt mixture were determined and discussed.
+Five types of bitumen were selected for low-temperature tests: two neat road bitumens 70/100 and 50/70, two polymer SBS-modified bitumens (PmB) 45/80-55A, 45/80-55B and one highly SBS-modified bitumen 45/80-80. Modified bitumens (PmB) 45/80-55A and 45/80-55B came from two different Polish refineries (Lotos Asfalt, Gdansk, Poland and Orlen Asfalt, Plock, Poland). The standard properties of bitumens used in this research are shown in 
+Table 1
+.
+Laboratory tests were conducted on three types of asphalt mixtures: 2 asphalt concretes for wearing courses (AC 11 S for low traffic classes KR1-2, AC 11 S for standard traffic classes KR3-4) and 1 stone mastic asphalt for wearing courses (SMA 11 for medium and high traffic KR3-7). All mixes for wearing courses were designed in compliance with the Polish Technical Guidelines WT-2 2014 [
+38
+] and were prepared in the laboratory. The composition of mixtures and types of bitumen used are presented in 
+Table 2
+. Before the test mixtures were subjected to short-term ageing according to R-28 Standard Specification [
+39
+].
+Bitumen creep tests were conducted using Bending Beam Rheometer according to the T-313-12 Standard Specification [
+40
+]. For each bitumen type, two separate prismatic specimens (102.0 ± 5 mm × 12.7 ± 0.5 mm × 6.25 ± 0.5 mm) were tested at the temperature equal to lower PG + 10 °C. Before the test, each specimen was conditioned at the test temperature for the period of 1 h. The test was conducted for standardized load of 980 mN and the time of loading equal to 240 s. The creep stiffness was calculated on the basis of beam deflections for the time periods of 8.0, 15.0, 30.0, 60.0, 120.0, and 240.0 s using the following equation:
+
+
+
+
+
+
+
+
+
+
+S
+
+
+
+
+(
+
+
+t
+
+
+)
+
+
+
+
+=
+
+
+
+
+
+
+P
+
+
+
+
+L
+
+
+3
+
+
+
+
+
+
+
+
+4
+
+
+b
+
+
+
+
+h
+
+
+3
+
+
+
+
+δ
+
+
+
+
+(
+
+
+t
+
+
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(1)
+
+
+
+
+
+where: 
+S
+(
+t
+)—time-dependent flexural creep stiffness, MPa; 
+P
+—constant load, N; 
+L
+—span length, mm; 
+b
+—width of the beam, mm; 
+h
+—thickness of the beam, mm; 
+δ
+(
+t
+)—deflection of the beam at the time “
+t
+”, mm. 
+m
+-value was calculated on the basis of binder stiffness using equations:
+
+
+
+
+
+
+
+
+
+
+
+
+|
+
+
+
+
+m
+
+
+
+
+(
+
+
+t
+
+
+)
+
+
+
+
+
+
+|
+
+
+
+
+=
+
+
+
+
+
+
+d
+
+
+
+
+[
+
+
+
+
+l
+
+
+o
+
+
+g
+
+
+
+
+S
+
+
+′
+
+
+
+
+
+
+(
+
+
+t
+
+
+)
+
+
+
+
+
+
+]
+
+
+
+
+
+
+
+
+d
+
+
+
+
+[
+
+
+
+
+l
+
+
+o
+
+
+g
+
+
+
+
+(
+
+
+t
+
+
+)
+
+
+
+
+
+
+]
+
+
+
+
+
+
+
+
+=
+
+
+B
+
+
++
+
+
+2
+
+
+C
+
+
+
+
+[
+
+
+
+
+l
+
+
+o
+
+
+g
+
+
+
+
+(
+
+
+t
+
+
+)
+
+
+
+
+
+
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(2)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+l
+
+
+o
+
+
+g
+
+
+
+
+S
+
+
+′
+
+
+
+
+
+
+(
+
+
+t
+
+
+)
+
+
+
+
+=
+
+
+A
+
+
++
+
+
+B
+
+
+
+
+[
+
+
+
+
+l
+
+
+o
+
+
+g
+
+
+
+
+(
+
+
+t
+
+
+)
+
+
+
+
+
+
+]
+
+
+
+
++
+
+
+C
+
+
+
+
+
+
+
+
+[
+
+
+
+
+l
+
+
+o
+
+
+g
+
+
+
+
+(
+
+
+t
+
+
+)
+
+
+
+
+
+
+]
+
+
+
+
+
+
+2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(3)
+
+
+
+
+
+where: 
+S
+’(
+t
+)—time-dependent flexural creep stiffness estimated using Equation (3), MPa; 
+t
+—time of loading, s; 
+A
+, 
+B
+, 
+C
+—regression coefficients; 
+S
+(
+t
+)—time-dependent flexural creep stiffness, MPa.
+The basic procedure of the bending creep test was developed by Judycki [
+29
+] and later successively improved [
+30
+,
+41
+], due to greater availability of more precise and modern equipment. Also, the range of obtained data increased as the method was improved. In this article, the latest modification is presented. While there is a complex state of stresses in the pavement under the influence of low temperatures, the low-temperature cracks are mainly caused by tensile stresses in the asphalt layers. The bending beam creep test chosen for this study was not meant as a direct representation of the stress state, but was used mostly for determination of low-temperature rheological properties of the tested asphalt mixtures. Moreover, the testing method that was applied does not require very sophisticated equipment and may be performed in ordinary road laboratories.
+In the test, at least 5 prismatic specimens (50 × 50 × 300 mm
+3
+) are used for one test temperature. Specimens are sawn from plates (300 × 300 × 50 mm
+3
+) made of asphalt mixture, compacted using standard laboratory compactor (Cooper Technology, Ripley, UK). The dimensions of prismatic specimens were selected based on applied asphalt mixtures grain size distribution (up to 11 mm) and the literature review [
+19
+,
+23
+] to reduce the scale effect on the results obtained. The degree of compaction is equal to 99% of Marshall specimen bulk density. The test can be conducted for different temperature sets, depending on the quality of the cooling equipment available in the laboratory. The basic temperature set comprises 4 temperatures: −20 °C, −10 °C, 0 °C and +10 °C. Before the test, each specimen is subjected to a target temperature for 24 h. The curing period was precisely specified in order to avoid the influence of various time-related phenomena, such as physical hardening [
+42
+,
+43
+,
+44
+,
+45
+,
+46
+,
+47
+].
+The test is comprised of two main stages. In the first stage, the prismatic specimen is subjected to constant load for 3600 to 10,800 s (dependent on the test temperature) and one linear variable differential transformer (LVDT) transducer (Cooper Technology, Ripley, UK) measures horizontal deformation on the lowest layer of the specimen. In the second stage, the specimen is unloaded, and the LVDT transducer measures the elastic recovery of the specimen. The duration of the first stage was assumed on the basis of previous experience, which showed that for shorter times of loading there are difficulties in determination of rheological parameters. Shorter test times resulted in “diminishing” the steady creep state. Upon extension of the test time, the specimen presented creep, but in a very slow manner.
+The level of the test load is determined on the basis of the three point bending test with a constant deformation rate of 1.25 mm/s [
+48
+]. For each test temperature, the test load is selected as 30% of the ultimate flexural strength of the weakest tested material in the test series. The aforementioned restrictions were introduced to prevent excessive deformation of the test specimen and to ensure that the results will remain in the linear domain [
+49
+,
+50
+]. Specimens mounted in the test equipment and assumed levels of load for specific temperatures are presented in 
+Figure 1
+.
+The following parameters are measured during the whole test: displacement of the LVDT transducer and force applied by the CRT-HYD25 universal test machine (Cooper Technology, Ripley, UK). On the basis of specimen dimensions, the strains and stresses at the bottom of the specimen are calculated using the following equations:
+
+
+
+
+
+
+
+
+
+
+ε
+
+
+=
+
+
+
+
+p
+
+
+e
+
+
+
+
+·
+
+
+
+
+c
+
+
+
+
+c
+
+
++
+
+
+a
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(4)
+
+
+
+
+
+where: 
+ε
+—strain at the bottom of the specimen; 
+p
+—displacement of the LVDT transducer; 
+e
+—the length of the measuring base, mm; 
+c
+—the distance between the center and bottom of the specimen, mm; 
+a
+—the distance between the bottom of the specimen and the center of the LVDT transducer, mm;
+
+
+
+
+
+
+
+
+
+
+
+σ
+
+
+=
+
+
+
+
+M
+
+
+W
+
+
+
+
+=
+
+
+
+
+
+
+3
+
+
+F
+
+
+l
+
+
+
+
+
+
+2
+
+
+b
+
+
+
+
+h
+
+
+2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(5)
+
+
+
+
+
+where: 
+σ
+—stress at the bottom of the specimen in its mid-length, MPa; 
+M
+—bending moment in mid-length of the specimen, kNm; 
+W
+—moment of inertia in the cross section, m
+3
+; 
+F
+—force applied by the CRT-HYD25 universal test machine, kN; 
+l
+, 
+h
+, 
+b
+—specimen dimensions, mm. All of the described distances and dimensions are presented in 
+Figure 2
+.
+Rheological properties of asphalt mixtures comprise the main information determined from the Bending Beam Creep test. It is possible to derive at least two sets of data to compare the tested materials or to obtain material properties for further computational analyses. 
+Primary usage of the Bending Beam Creep test was to obtain Burgers rheological model parameters, which were later utilized for calculation of thermal stresses. Despite existence of newer models, as yet only the Burgers model has been validated for description of the long-term low-temperature properties [
+33
+]. Burgers model parameters are determined using the least square method. For this purpose, each of the creep curves is described using Equation (6), where Burgers model parameters are treated as fitting parameters.
+
+
+
+
+
+
+
+
+
+
+
+ε
+
+
+
+
+(
+
+
+
+
+T
+
+
+,
+
+
+t
+
+
+
+
+)
+
+
+
+
+=
+
+
+
+
+σ
+
+
+0
+
+
+
+
+·
+
+
+
+
+{
+
+
+
+
+
+
+1
+
+
+
+
+
+
+E
+
+
+1
+
+
+
+
+
+
+
+
++
+
+
+
+
+t
+
+
+
+
+
+
+η
+
+
+1
+
+
+
+
+
+
+
+
++
+
+
+
+
+1
+
+
+
+
+
+
+E
+
+
+2
+
+
+
+
+
+
+
+
+
+
+[
+
+
+
+
+1
+
+
+−
+
+
+
+
+e
+
+
+
+
+
+
+(
+
+
+
+
+
+
+
+
+−
+
+
+t
+
+
+
+
+λ
+
+
+
+
+
+
+)
+
+
+
+
+
+
+
+
+
+
+]
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(6)
+
+
+
+
+
+where: 
+
+
+
+
+
+
+λ
+
+
+=
+
+
+
+
+η
+
+
+2
+
+
+
+
+/
+
+
+
+
+E
+
+
+2
+
+
+
+
+
+
+
+
+, 
+E
+1
+—instantaneous modulus of elasticity, MPa; 
+E
+2
+—modulus of retarded elasticity, MPa; 
+η
+1
+—coefficient of viscosity of steady flow, MPa·s; 
+η
+2
+—coefficient of viscosity of retarded flow, MPa·s; 
+t
+—time of loading, s, 
+σ
+0
+—constant stress during load phase, specific for each temperature, MPa.
+Exemplary fittings of the test data for the AC 11S KR3-4 50/70 mixture for selected temperatures are presented in 
+Figure 3
+.
+Secondary material description derived from the Bending Beam Creep test data include the Master Curves of stiffness modulus. The concept of parameterizing the whole spectrum of behavior using one equation was introduced first for polymers [
+51
+] and later adapted for bitumen and asphalt mixtures [
+52
+]. Currently, numerous models of this concept are extensively utilized for description of viscoelastic behavior of bituminous materials [
+33
+,
+53
+,
+54
+,
+55
+,
+56
+,
+57
+,
+58
+]. On the basis of the authors’ experience and a literature review, it was assumed that that the best fitting is obtained with Richards model, which is given by the Equation (7):
+
+
+
+
+
+
+
+
+
+
+l
+
+
+o
+
+
+g
+
+
+
+
+|
+
+
+
+
+
+
+E
+
+
+*
+
+
+
+
+
+
+|
+
+
+
+
+=
+
+
+δ
+
+
++
+
+
+
+
+
+
+α
+
+
+−
+
+
+δ
+
+
+
+
+
+
+
+
+
+
+
+
+[
+
+
+
+
+1
+
+
++
+
+
+λ
+
+
+
+
+e
+
+
+
+
+β
+
+
++
+
+
+γ
+
+
+l
+
+
+o
+
+
+g
+
+
+f
+
+
+
+
+
+
+
+
+]
+
+
+
+
+
+
+
+
+
+
+(
+
+
+
+
+
+
+1
+
+
+λ
+
+
+
+
+
+
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(7)
+
+
+
+
+
+where: 
+f
+—reduced frequency, Hz; 
+α
+, 
+δ
+, 
+β
+, 
+γ
+, 
+λ
+—master curve fitting parameters.
+Previous applications of the Bending Beam Creep test presented major drawbacks in the case of the lowest temperatures, especially in the case of the temperature of −20 °C. For shorter times of loading, equal previously either to 2400 or 3600 s, the creep curve appeared to reach the horizontal asymptote, as in Zener model [
+51
+]. A detailed investigation showed that the result was not affected by the equipment. The steady creep was very slow, so it was impossible to derive rheological parameters from the creep curve. From two possible solutions—either an increase in the level of load or an increase in the time of the test, the second option was selected. In the first case there was always the possibility that the measured results could exceed the assumed linear viscoelasticity limits.
+As the methodology and testing equipment were assumed and validated, excessive testing of one selected mixture (typical asphalt concrete for binder course with SBS-modified bitumen) was conducted. To simulate field conditions, the mixture was mixed in the asphalt plant and later compacted in the laboratory. In order to cover a wide range of temperatures using the highest possible number of specimens for each temperature, only three test temperatures were selected: +15 °C, 0 °C and −15 °C. At each temperature, 20 different randomly selected beam specimens were tested. The test load was assumed as 30% of the ultimate flexural strength. To avoid the impact of physical hardening and excessive aging of the specimen, technological periods were assumed as narrow as possible—all specimens were tested from 7 to 13 weeks after compaction, the conditioning time at the target test temperature was assumed as 24 h, and strictly controlled. All test results for the two selected temperatures are presented in 
+Figure 4
+.
+As shown in 
+Figure 4
+, apart from single creep curves, the test results presented narrow scatter, which is typical of complex materials, such as asphalt mixtures. The coefficient of variation for 20 separate specimens in the case of measured strains is around 20% for both test temperatures. In the case of determined Burgers rheological model parameters, the coefficient of variation is higher and ranges from 10 to 25% for 
+E
+1
+ modulus, from 18 to 40% for 
+E
+2
+ modulus, from 30 to 60% for the 
+η
+1
+ coefficient of viscosity and from 18 to 40% for the 
+η
+2
+ coefficient of viscosity. Nevertheless, the coefficients of variation range from 5 to 25% even in typical tests in which only 4 or 5 separate specimens are tested.
+For the purpose of this study, 8 different asphalt mixtures were tested. Mixtures differed both by mixture type and the binder used (neat, polymer-modified, highly modified bitumen). Using the procedure described in 
+Section 2.2.3
+, Burgers rheological parameters as well as master curve parameters were determined for each mixture, and are presented in 
+Table 3
+ and 
+Table 4
+, respectively. Shift factors 
+α
+T
+, additionally derived from the Bending Beam Creep test, are presented in 
+Figure 5
+.
+All presented results are the mean values of the results obtained for five different beam specimens. In the case of master curves, all observed deviations from the time-temperature superposition principle were omitted in the determination of the master curve equation parameters.
+Table 5
+ presents results of the three point bending test with constant deformation rate of 1.25 mm/s conducted at the temperature of −20 °C for all tested mixtures. As was stated in 
+Section 2.2.2
+, the basic purpose that the data presented in 
+Table 5
+ served was the determination of load value for the bending creep test. Connecting the results of the two tests—the Bending Beam Creep test and the three point bending test with constant deformation rate conducted in wider range of temperatures—allows us to perform a more detailed analysis of the tested mixtures. For example, it is possible to determine the approximate fracture temperature of the tested mixture or the probability of a fracture event for specific cooling events [
+10
+,
+11
+].
+From all the determined Burgers model parameters, the two most significant for the low-temperature performance are 
+E
+1
+ instantaneous modulus of elasticity and 
+η
+1
+ coefficient of viscosity of steady flow. The first one is directly connected to the value of thermal stress induced in the asphalt layers by a decrease in temperature. The second one is connected to the relaxation of induced thermal stresses. Values of 
+E
+1
+ modulus determined from the Bending Beam Creep test are presented in 
+Figure 6
+ and values of the 
+η
+1
+ coefficient of viscosity are presented in 
+Figure 7
+. All of the presented results are grouped on the basis of mineral mixture used.
+An increase in modulus 
+E
+1
+ causes an increase in tensile stresses during cooling of asphalt layer. In the case of 
+E
+1
+ modulus, values obtained for typical asphalt concretes presented similar levels. There were slight differences in the case of asphalt concrete for heavier traffic (KR3-4) at the temperature of −20 °C. Both mixtures with modified bitumen presented lower 
+E
+1
+ stiffness values than the reference mixture with 50/70 neat bitumen. A slight difference was visible between mixtures with polymer modification as well. The mixture with bitumen from refinery B presented better low-temperature performance (lower value of modulus 
+E
+1
+). However, the differences in this case were not significant and lay within the range of scatter of the test results. A more evident situation is visible for stone mastic asphalt mixtures. Mixtures with polymer-modified bitumen presented significantly better low-temperature performance in comparison with the reference mixture with 50/70 neat bitumen. Interestingly and surprisingly, the differences between typical 45/80-55 and highly modified bitumen 45/80-80 were not significant. 
+Similar behavior is visible in the case of the 
+η
+1
+ coefficient of viscosity of steady flow. Lower values of 
+η
+1
+ are more desirable because of faster relaxation of the thermal stresses in the asphalt layer. In the case of asphalt concretes, while almost all of them presented the same value, some significant differences are visible, especially in the case of polymer-modified bitumen from the refinery B. In the case of the n
+1
+ coefficient, AC 11S KR3-4 45/80-55 (B) presented significantly better low-temperature performance in comparison with other mixtures. This is an evident indicator that the basic bitumen tests are not sufficient to predict the low-temperature behavior. As shown in 
+Table 1
+, in the case of penetration grade both polymer-modified bitumens presented similar values. As for stone mastic asphalt mixtures, their performance was similar to the indications of 
+E
+1
+ modulus. While both mixtures with polymer modification presented significantly better performance in comparison with reference mixture, the mixture with highly modified bitumen was only slightly better than the mixture with typical modified bitumen.
+In summary, the most advantageous viscoelastic performance expressed by values 
+E
+1
+ and 
+η
+1
+ was presented by SMA 11 with modified bitumen, and among other mixtures it was on a lower, comparable level. This observation indicates that, beside asphalt binder properties, the mixed composition can improve low-temperature performance of asphalt pavement as well. It can be explained by the thicker film of the bitumen in the SMA type compared with the AC type of mixture.
+Master curves determined from the Bending Beam Creep test were developed using the procedure given in 
+Section 2.2.3
+. Lower values of stiffness modulus delivered from master curves express better performance due to lower values of thermal stresses induced in pavement layers. 
+Figure 8
+, 
+Figure 9
+, 
+Figure 10
+ and 
+Figure 11
+ present the impact of mixture type, bitumen type and content of SBS in modified binder on the values of stiffness moduli in the range of temperatures and time of loading probable under winter conditions. The shift between master curves expresses significance of a given factor (mixture type, bitumen or content of SBS in asphalt binder) on low-temperature performance of asphalt mixture.
+As was expected in the case of mixture type, the lowest values of stiffness moduli were obtained for the SMA11 mixture, followed by asphalt concrete for lower traffic. Highest values were obtained for asphalt concrete for heavy traffic. This kind of behavior is strongly connected to the amount of bitumen in the mixture—the higher the amount of bitumen, the stronger the impact on the mixture behavior, and in the result, the lower the value of measured stiffness moduli. 
+Also in the case of the type of bitumen, the obtained results present the low-temperature performance in accordance with the expectations. The higher the modification of bitumen, the lower the stiffness modulus at low temperatures. But, similar to the results of the Burgers model rheological parameters, the difference is more visible between neat and modified bitumen. In the case of typical and highly modified bitumen, while the highly modified bitumen presented lower values of stiffness modulus for smaller reduced times (corresponding to lower temperatures), the differences were slight. What is more interesting, for much longer reduced times, the mixture with highly modified bitumen presented higher values of stiffness modulus in comparison with typical modified bitumen, which was probably connected to the lower values of the creep slope obtained for highly modified bitumen at the temperatures of 0 °C and +10 °C.
+Unexpectedly, the largest differences in the values of stiffness modulus for all tested mixtures were observed taking into consideration the source of the bitumen. While both modified bitumens presented lower values of the stiffness moduli in comparison with the reference mixture with 50/70 neat bitumen, the difference between bitumen from two different refineries was much larger than in the case of other mixture aspects. This different behavior was probably influenced by the bitumen source and the modification process. As the exact composition of both bitumens was unknown, it could also be assumed that both bitumens probably differed in the amount of the SBS polymer used. The observed difference is more alarming as both commonly used EN and SHRP bitumen tests did not present an evident and significant difference in the low-temperature performance of both tested polymer-modified bitumens. 
+Asphalt mixtures and binders were tested under the same conditions: temperatures −10 °C and −20 °C, and results were obtained for the same times after load application: 8, 15, 30, 60, 120 and 240 s. Both stiffness moduli and m-values of bitumen and asphalt mixtures were determined. Results from the BBR test for bitumen were related to those obtained for asphalt mixtures in the Bending Beam Creep test by means of least squares approximation with linear function. An example of the relationship obtained for stone mastic asphalt SMA 11 with neat bitumen 50/70 is presented in 
+Figure 12
+. The linear regressions were performed for all tested mixtures listed in 
+Table 6
+ and yielded a coefficient of determination R
+2
+ > 0.99 in all cases. This indicates very strong correlation between the results obtained from the creep of bitumen (
+S
+bit
+, 
+m
+bit
+) and the creep of asphalt mixture (
+S
+mix
+, 
+m
+mix
+). The relationships are expressed by general formulas:
+
+
+
+
+
+
+
+
+
+
+
+
+S
+
+
+
+
+m
+
+
+i
+
+
+x
+
+
+
+
+
+
+=
+
+
+
+
+a
+
+
+S
+
+
+
+
+
+
+S
+
+
+
+
+b
+
+
+i
+
+
+t
+
+
+
+
+
+
++
+
+
+
+
+b
+
+
+S
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(8)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+m
+
+
+
+
+m
+
+
+i
+
+
+x
+
+
+
+
+
+
+=
+
+
+
+
+a
+
+
+m
+
+
+
+
+
+
+m
+
+
+
+
+b
+
+
+i
+
+
+t
+
+
+
+
+
+
++
+
+
+
+
+b
+
+
+m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(9)
+
+
+
+
+
+where:
+S
+mix
+—stiffness modulus of asphalt mixture obtained from the Bending Beam Creep test;
+S
+bit
+—stiffness modulus of asphalt binder obtained from the BBR test;
+m
+mix
+—slope of creep curve of asphalt mixture obtained from the Bending Beam Creep test;
+m
+bit
+—slope of creep curve of asphalt binder obtained from the BBR test;
+a
+S
+, 
+b
+S
+, 
+a
+m
+, 
+b
+m
+—regression parameters for a given mixture and test temperature, presented in 
+Table 6
+.
+S
+mix
+—stiffness modulus of asphalt mixture obtained from the Bending Beam Creep test;
+S
+bit
+—stiffness modulus of asphalt binder obtained from the BBR test;
+m
+mix
+—slope of creep curve of asphalt mixture obtained from the Bending Beam Creep test;
+m
+bit
+—slope of creep curve of asphalt binder obtained from the BBR test;
+a
+S
+, 
+b
+S
+, 
+a
+m
+, 
+b
+m
+—regression parameters for a given mixture and test temperature, presented in 
+Table 6
+.
+In the case of the regression obtained for stiffness modulus, an increase in parameters 
+a
+ and 
+b
+ results in an increase in 
+S
+mix
+, which is an adverse effect due to an increase in thermal stresses in the asphalt layer and a potential increase in the number of low-temperature cracks in the pavement. As for the regression obtained for the 
+m
+-value, an increase in parameters 
+a
+ and 
+b
+ results in an increase in 
+m
+mix
+, which has a positive effect due to higher potential of stress relaxation of the asphalt mixture. 
+The test temperature has an effect on parameters of regression. For all the tested mixtures, a decrease in temperature from −10 to −20 °C caused a decrease in 
+a
+S
+ and an increase in 
+a
+m
+, which suggests that the creep parameters of bitumen working within the asphalt mixture are less sensitive to temperature decrease than creep parameters measured for a specimen of asphalt binder.
+It was noted that regression performed for the same bitumen applied in different asphalt mixtures yielded different parameters 
+a
+S
+ and 
+a
+m
+, which is presented in 
+Figure 13
+ for neat bitumen 50/70 applied in three different mixtures. These observations indicate that mixture composition has a significant effect on the low-temperature performance of asphalt mixture. Among three asphalt mixtures: AC 11 for low traffic volume KR1-2, AC11 for medium traffic KR3-4 and SMA for medium traffic KR3-4 with the same neat bitumen 50/70, SMA 11 revealed the best low-temperature performance due to lowest values of 
+S
+mix
+ (see 
+Figure 13
+a). On the other hand, it was not possible to assess the low-temperature performance on the base of the 
+m
+-value assessment (
+Figure 13
+b). 
+The effect of the application of different types of bitumen in SMA is presented in 
+Figure 14
+. Regardless of the same mineral composition and bitumen content, the SMA 11 with neat bitumen 50/70 revealed highest values of 
+S
+mix
+ and the lowest values of 
+m
+mix
+ as a function of 
+S
+bit
+ and 
+m
+bit,
+ respectively. This indicates the worst low-temperature performance of SMA 11 with neat bitumen 50/70. It should be stated that the usage of the bitumen test method alone is insufficient for assessment of asphalt mixture low-temperature properties, based only on the current standardization of the bitumen binders. This means that the same asphalt binder in different asphalt mixtures may exhibit different low-temperature properties.
+Based on the test results and analysis, the following conclusions can be drawn:
+The impact of the asphalt mix composition and properties of the asphalt binder on the low-temperature viscoelastic properties of the asphalt mixture was analyzed and discussed in the paper. The three-point bending beam test of asphalt mixtures was used after detailed validation.
+The three-point bending beam test of asphalt mixtures was used to determine the low-temperature performance of asphalt mixtures. The performance was evaluated by means of master curves of stiffness modulus, viscoelastic parameters and regression parameters between binder and mixture properties at low temperature. Results obtained from both validation and main test presented highly accurate results. The average coefficient of variation for the validation and main test was in the range from 5 to 25%.
+The Burgers model parameters 
+E
+1
+, 
+E
+2
+, 
+η
+1
+, 
+η
+2
+ were used to characterize the viscoelastic behavior of asphalt mixtures. An increase in modulus 
+E
+1
+ causes an increase in tensile stresses during cooling of the asphalt layer and contributes to an increase in the number of low-temperature cracks. Lower values of 
+η
+1
+ are more desirable, as they indicate faster relaxation of thermal stresses induced in the asphalt layer.
+SMA 11 with polymer-modified bitumen 45/80-55 and 45/80-80 presented the best low-temperature performance expressed by the lowest values of 
+E
+1
+ and 
+η
+1
+ in comparison with remaining mixtures: AC 11 with neat and modified bitumens and SMA 11 with neat bitumen 50/70. Promising 
+η
+1
+ values were also presented by the AC 11S mixture with one of the polymer-modified bitumens 45/80-55.
+The analysis of master curves of stiffness modulus indicates that the source of the bitumen as well as the modification process both have a strong impact on low-temperature performance of the asphalt mixture. While both modified bitumens 45/80-55 presented lower values of the stiffness moduli in comparison with the reference mixture with 50/70 neat bitumen, the difference between bitumens from two different refineries was much larger than in the case of other mixture aspects.
+Mixture type and the level of modification of the bitumen had an impact on the low-temperature performance of the tested mixtures as well. The best performance was observed for the SMA mixtures. A higher polymer content improved the low-temperature performance as well.
+The conducted tests showed that the impact of the source of bitumen and its production process (and not necessarily bitumen penetration) on the low-temperature performance of the asphalt mixture is comparable to the impact of mixture type and the impact of polymer content in the binder.
+Both stiffness moduli and m-values of bitumen and asphalt mixtures were obtained at the same times after load application: 8, 15, 30, 60, 120 and 240 s. Results are given for two test temperatures: −10 °C and −20 °C. The results obtained from the bending beam test for asphalt mixtures are very well correlated with those obtained for asphalt binders from the BBR test with coefficient of determination R
+2
+ > 0.99.
+The analysis of viscoelastic parameters, master curves and correlations between binder and mixture stiffness and m-value indicates that the same asphalt binder applied in different asphalt mixtures can provide different low-temperature performances of the asphalt mixture. This indicates that analysis based solely on bitumen testing will not evaluate the low-temperature performance appropriately.
+The bending beam creep test method can be applied in development of functional requirements for asphalt mixtures in the field of resistance to low-temperature cracking according to Construction Products Regulations (in the future).
+The impact of the asphalt mix composition and properties of the asphalt binder on the low-temperature viscoelastic properties of the asphalt mixture was analyzed and discussed in the paper. The three-point bending beam test of asphalt mixtures was used after detailed validation.
+The three-point bending beam test of asphalt mixtures was used to determine the low-temperature performance of asphalt mixtures. The performance was evaluated by means of master curves of stiffness modulus, viscoelastic parameters and regression parameters between binder and mixture properties at low temperature. Results obtained from both validation and main test presented highly accurate results. The average coefficient of variation for the validation and main test was in the range from 5 to 25%.
+The Burgers model parameters 
+E
+1
+, 
+E
+2
+, 
+η
+1
+, 
+η
+2
+ were used to characterize the viscoelastic behavior of asphalt mixtures. An increase in modulus 
+E
+1
+ causes an increase in tensile stresses during cooling of the asphalt layer and contributes to an increase in the number of low-temperature cracks. Lower values of 
+η
+1
+ are more desirable, as they indicate faster relaxation of thermal stresses induced in the asphalt layer.
+SMA 11 with polymer-modified bitumen 45/80-55 and 45/80-80 presented the best low-temperature performance expressed by the lowest values of 
+E
+1
+ and 
+η
+1
+ in comparison with remaining mixtures: AC 11 with neat and modified bitumens and SMA 11 with neat bitumen 50/70. Promising 
+η
+1
+ values were also presented by the AC 11S mixture with one of the polymer-modified bitumens 45/80-55.
+The analysis of master curves of stiffness modulus indicates that the source of the bitumen as well as the modification process both have a strong impact on low-temperature performance of the asphalt mixture. While both modified bitumens 45/80-55 presented lower values of the stiffness moduli in comparison with the reference mixture with 50/70 neat bitumen, the difference between bitumens from two different refineries was much larger than in the case of other mixture aspects.
+Mixture type and the level of modification of the bitumen had an impact on the low-temperature performance of the tested mixtures as well. The best performance was observed for the SMA mixtures. A higher polymer content improved the low-temperature performance as well.
+The conducted tests showed that the impact of the source of bitumen and its production process (and not necessarily bitumen penetration) on the low-temperature performance of the asphalt mixture is comparable to the impact of mixture type and the impact of polymer content in the binder.
+Both stiffness moduli and m-values of bitumen and asphalt mixtures were obtained at the same times after load application: 8, 15, 30, 60, 120 and 240 s. Results are given for two test temperatures: −10 °C and −20 °C. The results obtained from the bending beam test for asphalt mixtures are very well correlated with those obtained for asphalt binders from the BBR test with coefficient of determination R
+2
+ > 0.99.
+The analysis of viscoelastic parameters, master curves and correlations between binder and mixture stiffness and m-value indicates that the same asphalt binder applied in different asphalt mixtures can provide different low-temperature performances of the asphalt mixture. This indicates that analysis based solely on bitumen testing will not evaluate the low-temperature performance appropriately.
+The bending beam creep test method can be applied in development of functional requirements for asphalt mixtures in the field of resistance to low-temperature cracking according to Construction Products Regulations (in the future).
+The limitations of the study conducted are as follows:
+-
+The test is long and time-consuming; however, previous tests have confirmed that at low temperatures, it is necessary to take into consideration longer load times, such as 10,800 s.
+-
+Sample dimensions and scale effect. Asphalt mixtures with maximum grain size reaching 16 mm and more require a larger sample dimensions.
+-
+There is a complex state of stresses in the pavement under the influence of low temperatures. The bending beam creep test does not directly represent the tensile stresses generated in asphalt mixtures at low temperatures.
+-
+In order to prepare the criteria for asphalt mixture resistance to low-temperature cracking, it is necessary to carry out field assessment and calibration of the method—this subject will be addressed in further research.
+The test is long and time-consuming; however, previous tests have confirmed that at low temperatures, it is necessary to take into consideration longer load times, such as 10,800 s.
+Sample dimensions and scale effect. Asphalt mixtures with maximum grain size reaching 16 mm and more require a larger sample dimensions.
+There is a complex state of stresses in the pavement under the influence of low temperatures. The bending beam creep test does not directly represent the tensile stresses generated in asphalt mixtures at low temperatures.
+In order to prepare the criteria for asphalt mixture resistance to low-temperature cracking, it is necessary to carry out field assessment and calibration of the method—this subject will be addressed in further research.
+The research project was completed under GRAM grant, awarded in a competitive procedure by the Dean of the Faculty of Civil and Environmental Engineering, Gdansk University of Technology, who is acknowledged for the support. The grants are funded from science funds as specified in Journal of Laws No. 96, heading 615. The part of the research was supported by the project RID-1B financed by the National Center for Research and Development and the General Directorate for National Roads and Motorways under the program “Development of Road Innovations”.
+Marek Pszczola, Mariusz Jaczewski, Dawid Rys and Piotr Jaskula conceived and designed the experiments; Cezary Szydłowski performed the experiments; Mariusz Jaczewski, Dawid Rys, Piotr Jaskula and Marek Pszczola analyzed the data; Mariusz Jaczewski performed viscoelactic analysis of asphalt mixtures; Dawid Rys analyzed correlations between bitumen and asphalt mixtures test results; Marek Pszczola, Mariusz Jaczewski, Dawid Rys and Cezary Szydlowski wrote the paper; Marek Pszczola coordinated and edited the paper.
+The authors declare no conflict of interest. The founding sponsors had no role in the design of the study; in the collection, analyses, or interpretation of data; in the writing of the manuscript, and in the decision to publish the results.

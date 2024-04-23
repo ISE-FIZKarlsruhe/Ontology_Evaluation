@@ -1,0 +1,1619 @@
+The laser powder bed fusion (L-PBF) technology was adapted for use with non-spherical economical water-atomized iron powders. A simplified numerical and experimental modeling approach was applied to determine—in a first approximation—the operation window for the selected powder in terms of laser power, scanning speed, hatching space, and layer thickness. The operation window, delimited by a build rate ranging from 4 to 25 cm
+3
+/h, and a volumetric energy density ranging from 50 to 190 J/mm
+3
+, was subsequently optimized to improve the density, the mechanical properties, and the surface roughness of the manufactured specimens. Standard L-PBF-built specimens were subjected to microstructural (porosity, grain size) and metrological (accuracy, shrinkage, minimum wall thickness, surface roughness) analyses and mechanical testing (three-point bending and tensile tests). The results of the microstructural, metrological and mechanical characterizations of the L-PBF-built specimens subjected to stress relieve annealing and hot isostatic pressing were then compared with those obtained with conventional pressing-sintering technology. Finally, by using an energy density of 70 J/mm
+3
+ and a build rate of 9 cm
+3
+/h, it was possible to manufacture 99.8%-dense specimens with an ultimate strength of 330 MPa and an elongation to failure of 30%, despite the relatively poor circularity of the powder used.
+To manufacture components with the highest achievable density, mechanical properties, surface finish, and precision using laser powder bed fusion (L-PBF) additive manufacturing technology (AM), the following two main issues must be addressed: (a) optimization of the powder feedstock with respect to its capacity to form a uniformly spread layer; and (b) identification of the L-PBF processing parameters, such as laser power, scanning speed, hatching space, and layer thickness. 
+Given the automotive industry’s interest in the AM of functional prototypes, it would likely be beneficial to adapt iron-based powders, which are commonly used in this industry for near-net shape part production via the conventional pressing-sintering (P-S) technology, for this process. However, the feedstock involved here is generally produced by water atomization and so, while significantly less expensive, contains highly irregularly-shaped particles. This latter feature can affect the powder’s flow properties, the powder bed density in an L-PBF system and, thus, the final density of L-PBF-produced components [
+1
+]. 
+The powder bed density is governed not only by powder characteristics, but also by the way the powder is delivered. For the EOS (Germany) L-PBF system, for example, powder spreading (recoating) is ensured via the use of a doctor blade, whereas for the Renishaw (UK) L-PBF system, a roller is used for simultaneous spreading and compaction. Consequently, the use of the same powder in different L-PBF systems may result in different powder bed densities, and, therefore, different mechanical properties of a printed product.
+The powders used in this study are obtained by water atomization of molten iron using the proprietary Rio Tinto process [
+2
+]. It was already demonstrated that such water atomized iron powders could be used to print components with a final density of up to 99.7% using a 250HL L-PBF system (SLM Solutions Group AG, Luebeck, Germany) [
+3
+]. 
+In this article, we cover the development of a processing map for these water-atomized iron powders, which would consider a trade-off between the building rate, the mechanical properties and the surface finish of printed components; we further proceed with the evaluation of their physical, mechanical and geometrical characteristics as a function of the L-PBF processing and post-processing conditions.
+Two Rio Tinto ATOMET water-atomized iron powder feedstocks A and B with the same chemical composition (Fe: bal., Mn: 0.04, C: 0.004, O: 0.08, S: 0.007, N: 0.004 in weight %), but with different particle size distributions (PSD), were studied. Both powders were provided from the same powder batch, but they were subjected to different sieving conditions. The powder batch chemistry was analyzed as follows: Fe and Mn, using a Spectro ARL 3460 Thermofisher Scientific system (ASTM E-415); O, N and C, S using a LECO TC436DC and a LECO CS844 systems, respectively (ASTM E-1019). The powder PSD was measured using a Master Sizer 3000 laser diffraction particle size analyzer. The powder circularity was calculated using the following formula:
+
+
+
+
+
+
+
+
+
+
+C
+
+
+=
+
+
+
+
+
+
+4
+
+
+×
+
+
+π
+
+
+×
+
+
+A
+
+
+
+
+
+
+
+
+P
+
+
+2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(1)
+
+
+
+
+
+where 
+A
+ and 
+P
+ are the area and the perimeter of iron powder particles calculated from the images obtained by scanning electron microscopy. 
+The apparent (ρ
+a
+) and tap (ρ
+t
+) powder densities were measured as follows: first, a 50 g powder specimen was placed in a graduated cylinder to measure its apparent volume (V
+a
+). Next, using a vibrating table, the powder was tapped in the same cylinder to measure its tap volume (V
+t
+). Finally, using the calculated apparent and tap density values, the Hausner ratio was calculated as ρ
+t
+/ρ
+a
+ = V
+a
+/V
+t
+. Finally, the powder flowability (shear torque and cohesion strength) was evaluated using two different instruments: Modular Compact Rheometer (Anton Paar, Graz, Austria) equipped with a “Powder Cell” accessory for the normal stress-free flowability evaluation, and an FT4 Powder Rheometer (Freeman Technology, Gloucestershire, UK) for the flowability evaluation under variable normal applied stress. Based on the results of this powder characterization study, the feedstock with potentially better flow properties was selected for the next steps of the work. 
+This part of the work contained the following three phases:
+Simplified modeling of the L-PBF melt pool with the objective of delimiting the processing window to be studied experimentally;
+Application of the numerically justified L-PBF processing parameters and selection of the most appropriate set of parameters;
+Post-processing and mechanical characterization of L-PBF specimens.
+Simplified modeling of the L-PBF melt pool with the objective of delimiting the processing window to be studied experimentally;
+Application of the numerically justified L-PBF processing parameters and selection of the most appropriate set of parameters;
+Post-processing and mechanical characterization of L-PBF specimens.
+The initial selection of the L-PBF parameters, such as the laser power (P, W), the scanning speed (v, m/s), and the hatching space (h, µm), was carried out using the analytical model of a semi-infinite solid with a moving Gaussian heat source [
+4
+]. This model was already successfully used for the determination of L-PBF processing parameters for Ti-Zr-Nb alloy in [
+5
+]. The Gaussian model involves a symmetrical distribution of laser irradiance across the beam. The energy from the laser is assumed to be applied on the powder bed surface for a time interval defined by the scanning speed and the laser spot size. In this case, for a Gaussian beam moving with a given velocity, the temperature distribution (
+T
+(
+x
+,
+y
+,
+z
+), °C) in the powder bed is calculated by Equations (2)–(4):
+
+
+
+
+
+
+
+
+
+
+T
+
+
+
+
+(
+
+
+
+
+x
+
+
+,
+
+
+y
+
+
+,
+
+
+z
+
+
+
+
+)
+
+
+
+
+=
+
+
+
+
+T
+
+
+0
+
+
+
+
++
+
+
+
+
+
+
+A
+
+
+P
+
+
+
+
+
+
+k
+
+
+
+
+r
+
+
+f
+
+
+
+
+
+
+π
+
+
+
+
+
+
+3
+
+
+2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+∫
+
+
+
+
+∞
+
+
+0
+
+
+
+
+
+
+1
+
+
+
+
+1
+
+
++
+
+
+
+
+τ
+
+
+2
+
+
+
+
+
+
+
+
+exp
+
+
+
+
+(
+
+
+C
+
+
+)
+
+
+
+
+d
+
+
+τ
+
+
+
+
+
+
+
+
+
+
+
+
+(2)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+C
+
+
+=
+
+
+−
+
+
+
+
+
+
+
+
+τ
+
+
+2
+
+
+
+
+
+
+
+
+1
+
+
++
+
+
+
+
+τ
+
+
+2
+
+
+
+
+
+
+
+
+
+
+[
+
+
+
+
+
+
+
+
+
+
+(
+
+
+
+
+ξ
+
+
+−
+
+
+
+
+
+
+
+
+P
+
+
+e
+
+
+
+
+
+
+
+
+2
+
+
+
+
+τ
+
+
+2
+
+
+
+
+
+
+
+
+
+
+)
+
+
+
+
+
+
+2
+
+
+
+
++
+
+
+
+
+η
+
+
+2
+
+
+
+
+
+
+]
+
+
+
+
+−
+
+
+
+
+τ
+
+
+2
+
+
+
+
+
+
+ζ
+
+
+2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(3)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ξ
+
+
+=
+
+
+
+
+2
+
+
+
+
+
+
+x
+
+
+
+
+
+
+r
+
+
+f
+
+
+
+
+
+
+
+
+ 
+
+
+,
+
+
+ 
+
+
+η
+
+
+=
+
+
+
+
+2
+
+
+
+
+
+
+y
+
+
+
+
+
+
+r
+
+
+f
+
+
+
+
+
+
+
+
+ 
+
+
+,
+
+
+ 
+
+
+ζ
+
+
+=
+
+
+
+
+2
+
+
+
+
+
+
+z
+
+
+
+
+
+
+r
+
+
+f
+
+
+
+
+
+
+
+
+ 
+
+
+,
+
+
+ 
+
+
+P
+
+
+e
+
+
+=
+
+
+
+
+
+
+
+
+r
+
+
+f
+
+
+
+
+v
+
+
+
+
+
+
+2
+
+
+
+
+2
+
+
+
+
+α
+
+
+
+
+
+
+,
+
+
+ 
+
+
+τ
+
+
+=
+
+
+
+
+
+
+
+
+r
+
+
+f
+
+
+
+
+
+
+
+
+2
+
+
+
+
+
+
+2
+
+
+α
+
+
+t
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(4)
+
+
+
+
+
+where 
+T
+0
+ is the powder bed temperature (°C); 
+A
+, the absorptivity; 
+P
+, the laser power (W); 
+k
+, the thermal conductivity (W/m·K); 
+r
+f
+, the laser beam radius (m); 
+Pe
+, the Peclet number; 
+ν
+, the scanning speed (m/s); 
+α,
+ the thermal diffusivity (m
+2
+/s); 
+ρ
+, the density (kg/m
+3
+); 
+c
+p
+, the specific heat (J/kg·K), and 
+t
+, the time (s). 
+The laser energy absorptivity 
+A
+ is estimated using Equation (5) [
+6
+]:
+
+
+
+
+
+
+
+
+
+
+A
+
+
+ 
+
+
+≈
+
+
+0.365
+
+
+
+
+
+
+
+
+(
+
+
+
+
+λ
+
+
+
+
+σ
+
+
+0
+
+
+
+
+
+
+)
+
+
+
+
+
+
+
+
+−
+
+
+0.5
+
+
+
+
+
+
+=
+
+
+0.365
+
+
+
+
+
+
+
+
+(
+
+
+
+
+
+
+
+
+
+
+ρ
+
+
+0
+
+
+
+
+
+
+λ
+
+
+
+
+
+
+)
+
+
+
+
+
+
+
+
+0.5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(5)
+
+
+
+
+
+where 
+λ
+ is the laser wavelength (μm), 
+σ
+0
+, the electrical conductivity (S/m) and 
+ρ
+0
+, the electrical resistivity of the irradiated material (
+
+
+
+
+
+
+Ohm
+
+
+·
+
+
+m
+
+
+
+
+
+
+).
+An EOSINT M280 (EOS GmbH, Munich, Germany) L-PBF system equipped with a 400 W ytterbium fiber laser was employed in this study. According to the data available for this system, the initial temperature of the substrate (build platform) 
+T
+0
+ = 60 °C, and the laser beam radius 
+r
+f
+ = 50 μm. Given the lack of experimental values for the thermal conductivity and specific heat of ATOMET iron powders, the corresponding values for similar AISI 1006 alloy were applied. 
+Furthermore, since laser energy is applied on the powder bed surface, the physical properties of the material should take into account the powder bed density. Considering the apparent powder density of 40% and the fact that the preceding layer of the powder bed is already melted and solidified, a weighted powder bed density of 60% was used in calculations. The following equations were used to estimate the physical properties of the surface powder bed layer as a function of the relative powder bed density 
+ϕ
+, such as the thermal conductivity 
+k
+0
+ [
+7
+], the specific heat 
+c
+p
+0
+ [
+8
+], and the electrical resistivity 
+ρ
+0
+ [
+9
+] :
+
+
+
+
+
+
+
+
+
+
+k
+
+
+=
+
+
+
+
+k
+
+
+0
+
+
+
+
+×
+
+
+
+
+φ
+
+
+
+
+0.5
+
+
+∗
+
+
+
+
+(
+
+
+
+
+3
+
+
+−
+
+
+φ
+
+
+
+
+)
+
+
+
+
+
+
+
+
+;
+
+
+ 
+
+
+
+
+C
+
+
+p
+
+
+
+
+=
+
+
+
+
+C
+
+
+
+
+p
+
+
+0
+
+
+
+
+
+
+×
+
+
+φ
+
+
+;
+
+
+ 
+
+
+ρ
+
+
+=
+
+
+0.696
+
+
+×
+
+
+
+
+4
+
+
+φ
+
+
+
+
+×
+
+
+
+
+ρ
+
+
+0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(6)
+
+
+
+
+All the alloy’s properties were taken at room temperature, and it was assumed that the preceding layer cools down to 60 °C between two scanning runs. 
+Finally, the physical material characteristics used in Equations (2)–(6) were collected in the left part of 
+Table 1
+ and used to calculate the temperature distribution map shown in 
+Figure 1
+a, where the melt pool width and depth were delimited by the alloy’s melting temperature of 1538 °C. 
+The melt pool dimensions (
+Figure 1
+a) calculated using the simplified melt pool model of Equations (2)–(6) were used next for the preliminary definition of the laser power, scanning speed, hatching distance and layer thickness ranges, which would respect some additional conditions related to the melt pool depth and width (see 
+Figure 1
+b for graphical support). 
+First, the powder layer thickness must be established in accordance with the particle size distribution to ensure the highest powder bed density. Since it was demonstrated that the layer thickness of a given powder must correspond to (0.8–0.9)D
+90
+ [
+10
+,
+11
+] and that D
+90
+ of the powder selected for this study is 50 µm (see 
+Section 3.1
+), the layer thickness was fixed to 40 μm.
+To ensure a metallurgical bond between the layers, the melt pool depth (D) should be greater than at least one layer thickness (t) [
+12
+]. In the framework of this study, we target a D/t ratio ranging from 1.3 to 3, which corresponds to a laser power ranging from 170 to 370 W and a scanning speed from 400 to 1200 mm/s. Following these recommendations, the laser power used in this work was set at 170, 200, 240, 250, and 370 W, and the scanning speed at 400, 660, 940, 1000, and 1200 mm/s (see right part of 
+Table 1
+).
+Next, to ensure a uniform in-layer fusion, two subsequent laser tracks must overlap, that is, the melt pool width (W) should be at least 1.5–1.6 times larger than the hatching space (h) [
+13
+]. In the framework of this study, we target a W/h ratio ranging from 1.7 to 5, which correspond to a hatching space ranging from 80 to 120 μm. The effective W/h ratio was calculated at the powder layer-solid substrate interface (i.e., at a depth of one layer thickness), as shown in 
+Figure 1
+b. Following these recommendations, the hatching space used in this work was set at 40, 60, 80 and 120 μm (
+Table 1
+).
+Using the processing parameters in 
+Table 1
+, it is possible to calculate that the volumetric energy density, E = P/vht, ranges from 50 to 190 J/mm
+3
+, and the build rate, BR = vht, from 4 to 25 cm
+3
+/h. 
+Using an EOSINT M280 L-PBF system and the processing parameters defined in 
+Table 1
+, cubic and prismatic specimens were built (
+Figure 2
+a,b). After L-PBF processing, the as-built specimens were cut from the build plate and their density and mechanical properties measured. 
+The density evaluation was realized using two complementary techniques: computed tomography (μ-CT) and the Archimedes’ technique (ASTM B962-15). The 10 × 10 × 10 mm cubic specimens (
+Figure 2
+a) were first scanned using a Nikon XT H 225 X-ray μ-CT system (Nikon, Brighton, MI, USA). These scans were performed with a reflection target configured with 220 kV tube voltage and 350 µA current, and complemented with a 1 mm-thick copper filter. The volume was then reconstructed with a voxel size of 12.6 µm
+3
+ using the CT Pro 3D software (Nikon, Brighton, MI, USA), and analyzed in the Dragonfly V2 (Object Research Systems, Montreal, QC, Canada) environment. 
+The specimens’ density was also measured using the Archimedes’ method. Using an Acculab LA-60 balance, the mass of the parts was measured in the air and then in a mixture of distilled water and wetting agent, and the density calculated using the following formula: 
+
+
+
+
+
+
+
+
+
+
+d
+
+
+=
+
+
+
+
+
+
+
+
+m
+
+
+
+
+a
+
+
+i
+
+
+r
+
+
+
+
+
+
+
+
+
+
+
+
+m
+
+
+
+
+a
+
+
+i
+
+
+r
+
+
+
+
+
+
+−
+
+
+
+
+m
+
+
+
+
+w
+
+
+a
+
+
+t
+
+
+e
+
+
+r
+
+
+
+
+
+
+
+
+
+
+×
+
+
+
+
+ρ
+
+
+
+
+w
+
+
+a
+
+
+t
+
+
+e
+
+
+r
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(7)
+
+
+
+
+
+where the water density was taken at room temperature. 
+Afterwards, rectangular prismatic 31.7 × 12.7 × 6.35 mm (1.25 × 0.5 × 0.25 inch), 
+Figure 2
+b, transverse rupture strength (TRS) specimens (MPIF Standard No.41) [
+14
+] were mechanically tested using a three-point bending configuration. The tests were conducted on a Minibionix 858 testing machine (MTS, USA) with a crosshead speed of 0.008 mm/min, as recommended in ASTM B528-12. The TRS was evaluated using the following equation:
+
+
+
+
+
+
+
+
+
+
+T
+
+
+R
+
+
+S
+
+
+=
+
+
+
+
+
+
+3
+
+
+F
+
+
+l
+
+
+
+
+
+
+2
+
+
+b
+
+
+
+
+h
+
+
+2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(8)
+
+
+
+
+
+where 
+F
+ (N) is the force required to rupture the specimen, 
+l
+ (mm) is the distance between the centers of the supporting rods, and 
+b
+ (mm) and 
+h
+ (mm) are the specimen’s width and thickness, respectively.
+Finally, to evaluate the dimensional accuracy, the length and the width of the cubic specimens were measured using a digital caliper (accuracy ±0.1 mm). The surface roughness (Ra) of these specimens was evaluated on their side and top surfaces using a Mitutoyo SJ-400 contact stylus profilometer (cut-off length, 800 µm; total evaluated length, 4 mm). 
+For grain size analysis, some specimens were cross-sectioned, mounted in bakelite, manually polished, observed by light microscopy and processed using ImageJ software. The vertical (parallel to the build direction) and horizontal (perpendicular to the build direction) faces of the specimens were analysed in three states: 1st as-built; 2nd after stress relief annealing, and 3rd after stress relief annealing and hot isostatic pressing (HIP) treatment. The stress relief annealing was carried at 650 °C for 30 min and air-forced cooled down to room temperature [
+15
+], using a Nabertherm N 41/H furnace (manufacturer, Lilienthal, Germany), and the HIP was performed at 1300 °C/150 MPa for 2 h [
+16
+], using an Avure QIH-3-HIP furnace. Both post-processing treatments were carried out under argon atmosphere.
+Additionally, some as-built and HIP-ed specimens were subjected to X-ray diffraction analysis using an X’Pert Pro Panalytical diffractometer, Co-Kα radiation (λ = 1.79021 Ȧ) at 40 kV and 40 mA, using a scan mode over a 40–110° 2theta range. 
+For tensile testing, rectangular prismatic 80 × 16 × 3 mm
+3
+ (3.15 × 0.63 × 0.12 inch
+3
+) specimens with different build orientation (0 and 90°) were produced using the selected set of L-PBF processing parameters. The specimens produced were once again divided in three groups; as-built, stress-relieved, and stress-relieved & HIP-ed. The specimens of all three groups were machined to produce dumbbell-shaped tensile specimens with a gauge length of 27 mm (1.06 inch), in conformity with the ASTM E8 standard, and tested using a Minibionix 858 testing machine (MTS, Eden Prairie, MN, USA) with a crosshead speed of 0.375 mm/min, equipped with an MTS 634.12e-25 extensometer. 
+As a benchmark, the TRS and tensile tests were also carried out on specimens produced using the conventional pressing-sintering (P-S) technology. The TRS and tensile specimens were compacted using a mixture of the same water-atomized ATOMET iron powder and 0.5% admixed lubricant (ZnSt135 from H.L. Blachford Ltd., Mississauga, ON, Canada). The green specimens were then sintered at 1120 °C for 30 min under a 90% N2 and 10% H2 atmosphere, and final densities of 89%, 92%, and 94% were obtained (considering a bulk density of pure iron corresponding to 7.87 g/cm
+3
+). 
+Finally, the minimum printable wall thickness was evaluated using the artifacts adapted from [
+17
+] and containing walls, sinks and gaps with a thickness ranging from 0.1 to 2 mm (
+Figure 3
+). The thickness was measured using a numerical caliper (accuracy ±0.1 mm) for walls and sinks, and metallic shims (accuracy ±0.2 mm) for gaps. 
+Comparing the two water-atomized ATOMET iron powders A and B (
+Figure 4
+ and 
+Table 2
+), it can be seen that powder B shows a higher circularity (
+Figure 4
+a), while having a slightly wider particle size distribution, compared to powder A (
+Figure 4
+b,c). In terms of circularity, powder B appears to be more suitable for L-PBF than powder A, since, in general, better powder circularity results in better powder flowability and powder bed layer uniformity [
+18
+].
+Next, the ratio of the apparent and tap densities, represented by the Hausner ratio, estimates the flowability and compaction capacities of powders [
+19
+]. Since the Hausner ratio of powder B is closer to unity (1.14) than that of powder A (1.27), the former should manifest a better flowability than the latter, thus making it once again more suitable for AM.
+Finally, both rheological tests on powders A and B (Anthon Paar and the Freeman Technology systems) indicate that the torque needed to shear powder B is lower than that for powder A (
+Figure 5
+). This also indicates that powder B more readily transitions from a static, consolidated state to a dynamic state, irrespective of the normal stress applied, which confirms the previous statement. 
+In summary, considering the circularity, the Hausner ratio and the shear measurement results, powder B (ATOMET Fe AM) was selected for the remainder of this study. The PSD of powder B allowed us to work with a layer thickness of 40 µm.
+The highest densities of the printed specimens, as evaluated using the μ-CT and the Archimedes’ techniques, were obtained when the energy density varied from 50 to 130 J/mm
+3
+ (
+Figure 6
+a), the melt pool depth from 1.75 to 2.6 layer thicknesses (
+Figure 6
+b), and the melt pool width from 1.75 to 3.75 hatching space (
+Figure 6
+c). These results are in agreement with the values found in the literature: the best melt pool depth-to-layer thickness ratio is reported as ~2.5 and the best melt pool width-to-hatching space ratio is reported as ~2.8 [
+21
+]. Despite the poor circularity of water-atomized powders and contrary to the results obtained in the literature [
+22
+,
+23
+], we were able to optimize the printing parameters and manufacture specimens with a density higher than 99.5%. Such a low porosity can reduce the need for HIP treatment for the densification of L-PBF parts. 
+The L-PBF TRS specimens with the highest densities (97–100%) were then tested (
+Figure 7
+), giving similar results irrespective of the L-PBF energy density applied. It must be noted however that starting at E = 65 J/mm
+3
+, the specimens were too ductile to break at the end of the tests. A comparison of the L-PBF-built specimens with pressed-sintered (P-S) counterparts with 88–94% density demonstrated that the former have their TRS values at least twice as high as the latter, which can be explained by their higher density, stronger metallurgical bonds and finer microstructure (additional information will be given in 
+Section 3.2.4
+). 
+The cubic specimens’ lateral dimensions were measured and compared to their CAD (Computer-Aided Design) equivalents. Regarding the cubic specimens, it can be seen that the higher the energy density, the greater the difference of the printed specimens compared to the CAD design (
+Figure 8
+). This is a consequence of a so-called “curing zone” resulting from sintering of loose powder immediately surrounding the part [
+24
+]. The higher the energy density, the longer the powder near the part is maintained at an elevated temperature, and the thicker the “part growth” due to solid state sintering. For better precision and dimensional repeatability, this part growth can be compensated by offsetting either the laser beam or the CAD (STL-stereolithography file) model. Furthermore, mechanical, chemical or electrochemical finishing can be used to control the final dimension and the surface finish of the part [
+25
+]. 
+The surface roughness measurements revealed that the higher the energy density, the lower the Ra of the top surface of printed specimens. Since the top surface roughness is mostly due to the laser track, increasing the energy density by reducing the hatching space and increasing the overlap improves the surface finish [
+26
+] (
+Figure 8
+b). For the side surfaces, the roughness was not affected by the energy density, but rather by the layer thickness, and this parameter was kept constant throughout the study (t = 40 µm, see 
+Table 1
+). 
+It is known that L-PBF processed alloys are characterized by high anisotropy of their microstructure and mechanical properties [
+27
+]. The main objective of this part of study was therefore to characterize the effect of different build orientations and post-processing treatments on the mechanical properties of iron-based specimens. 
+Based on the preliminary results, only one combination of the L-PBF processing parameters, which corresponded to a volumetric energy density of E = P/vht = 70 J/mm
+3
+ and a build rate of BR = vht = 9 cm
+3
+/h and resulted in the highest density, mechanical properties, and an acceptable surface finish was used to manufacture prismatic specimens with two orientations: 0 and 90 degrees to the build plate. Tensile test samples were machined from these specimens and tested in the as-built, stress-relieved and hot isostatically pressed (HIP) conditions. Four tests were carried out for each build orientation. Typical diagrams for each orientation are shown in 
+Figure 9
+.
+The as-built specimens showed a relatively low elongation at failure (δ) (13.7 ± 0.8%), but a relatively high yield stress (YS) (554 ± 5 MPa (0°), 450 ± 3 MPa (90°)) and ultimate tensile stress (UTS) (599 ± 9 MPa (0°), 500 ± 4 MPa (90°)). Moreover, according to the X-ray diffraction study (
+Figure 10
+), the main phase constituent of this alloy is ferrite. However, there is some broadening of the (110)
+α
+ peak foot (indicated by vertical arrows corresponding to (110) and (101) martensite peaks). In fact, a cooling rate exceeding 35,000 °C/s could lead to martensitic transformation even in iron-based alloys containing less than 0.002% °C [
+28
+], and the cooling rate during L-PBF processing can exceed 10
+6
+ °C/s [
+29
+]. Thus, the processing-induced combination of high internal stresses, a relatively fine grain structure (10–15 μm) and small quantities of martensite results in an increased material strength, but this increase occurs at the expense of a significant reduction in ductility [
+30
+]. 
+In addition, tensile testing specimens manufactured with 0° orientation in respect to the build plate demonstrated higher YS and UTS values than those built with 90° orientation, and this difference is most probably due to the difference in their respective levels of internal stresses and grain orientations (texture) [
+27
+]. Note that an 8% difference in ultimate stresses of 0 and 90° oriented 316 L alloy specimens was also observed in [
+31
+]. 
+As expected, the stress-relieving treatment at 650 °C reduces the anisotropy between the two build orientations, but it also reduces the UTS from 600 to 500 MPa (0°-built specimen) and increases the elongation to failure from 14 to 18% (both orientations). This reduction in anisotropy and mechanical strength is mainly due to the reduction in internal stresses, since the average grain size was not significantly modified by this treatment (12–13 μm), and there was still a small quantity of martensite (
+Figure 10
+). Hot isostatic pressing (HIP) triggers material recrystallization: average grain size grows from 10 to 90 μm. After HIP, UTS of the L-PBF specimens decreases from 500 to 330 MPa, thus approaching that of pure iron (305–360 MPa, [
+32
+]), while the elongation to failure increases from 18 to 30%, thus remaining slightly lower than that of pure iron (32–48%, [
+32
+]). 
+It must be noted that HIP is generally used to densify the material and homogenize its microstructure, both phenomena affecting the mechanical properties of printed parts. In this work, we applied HIP to assess the effect of this treatment on the printed material density and microstructure and, as a consequence, on its mechanical properties. After the first verification (by Archimedes’), the densities of the as-built, stress-relieved and HIP-ed specimens were identical and equal to 99.8 ± 0.1%. Then the mechanical properties of the HIP-ed and the stress-relieved specimens were compared, and almost no differences in the vertically and horizontally-oriented specimens were observed in both cases. However, the HIP-ed specimens showed twice as high ductility as their stress-relieved counterparts. This means that the HIP treatment did not improve either the material density or its homogeneity, while it significantly increased the material ductility as a result of material recrystallization. Considering these results, if higher ductility is required for highly-dense as-printed components of our study, HIP could effectively be replaced by a conventional heat treatment performed under the same temperature and atmospheric conditions.
+A comparison of the L-PBF-built specimens with their pressed-and-sintered counterparts reveals that the YS and UTS values of the L-PBF specimens are 12–15% higher and their elongations to failure are more than double those of the P-S specimens (
+Figure 11
+), given their higher density and stronger metallurgical bonding (melting versus sintering).
+The minimum wall thickness study showed that with this powder, EOSINT M280 was able to manufacture walls with thickness of ~0.2 mm (~0.008 inch) (
+Table 3
+). As a comparison, EOS indicates that the minimum wall thickness achievable for Maraging steel alloy is approximately 0.3 mm (0.012 inch).
+The simplified melt pool model used in this study does not take into account heat losses to the environment and the mass transfer-related phenomena, such as the Marangoni convection and the Rayleigh capillary flow [
+33
+]. Despite these significant limitations, it allows calculations, for a given “laser power-scanning speed” combination, of a temperature distribution map, and thus of the melt pool width and depth. This model can therefore be used to build the processing map for a given feedstock to be processed using a given laser powder bed metal fusion system.
+Considering all the results of this study, the L-BPF processing map presented in 
+Figure 12
+ was built using the energy density-build rate coordinates. Note that the same approach was used for Ti-Zr-Nb alloy in [
+5
+]. It is important to mention that this map is valid for ATOMET Fe AM Powder processed with an EOSINT M280 system only. The build rate (BR) represents the time needed for fabrication: the higher the build rate, the higher the productivity of the process. 
+The L-PBF processing window for ATOMET Fe AM can be divided into six zones numbered in the clockwise fashion. The zone delimited by a build rate lower than 4 cm
+3
+/h is considered as “inefficient” in terms of processing performance (Zone VI). The one with the energy density lower than 40 J/mm
+3
+ is considered as “unreliable” because this energy density value is insufficient to melt ATOMET Fe AM powder (Zone V). The remaining space can be divided into four zones: Zone I, II, III and IV. 
+Zone I corresponds to a combination of high energy density and low build rate, resulting in parts with a density lower than 99%. The processing-induced porosity is due to powder overmelting, which creates small spherical pores filled with gas [
+34
+].
+Zone III corresponds to a combination of a low energy and a low-to-intermediate build rate. With this processing configuration, a relative density of printed specimens ranges from 98 to 99%. The irregular pores observed in this case are due to incomplete melting and insufficient overlapping of the melt pool. Raising the build rate with the same energy density leads to the melt pool instability and to a relative density decrease under 98% (Zone IV). 
+Finally, the remaining Zone II, delimited by the energy density from 60 to 140 J/mm
+3
+ and a build rate from 4 to 21 cm
+3
+/h, corresponds to high-quality processing. It was also demonstrated that in this zone, the higher the build rate, the higher the surface roughness. If a better surface finish is required, the building rate should be decreased.
+The mechanical properties of L-PBF-built specimens are summarized in 
+Figure 13
+. The UTS of the as-built specimens was as high as ~600 MPa. This increase, however, was reached at the expense of a relatively low ductility (δ = ~12%) and a strong build orientation anisotropy. Both problems were mitigated by applying post-processing treatments on the parts. As a result, after HIP, an interesting combination of strength (UTS = 330 MPa) and ductility (δ = ~30%) was obtained, without any significant anisotropy in material properties. 
+Note that 0°-oriented tensile specimens with a density of up to 99.7%, UTS of ~450 MPa and an elongation to failure of ~20% were built using the same iron-based powder feedstock as that of this study but a different L-PBF system (250HL SLM Solutions Group) [
+3
+]. By changing the building system and optimizing the printing parameters, we were able to manufacture an equally dense and a mechanically comparable product, but with a significantly smaller energy input: 70 J/mm
+3
+ for M280 compared to 120 J/mm
+3
+ for 250HL system. It can also be mentioned that the mechanical strength of L-PBF-built specimens is ~34% higher and their elongation to failure ~2.5 times greater than the same characteristics of P-S-built specimens made of the same feedstock powder (
+Figure 13
+).
+Specimens were built from a non-spherical water-atomized iron powder with a scanning speed varying from 400 to 1200 m/s, a laser power, from 170 to 370 W, and a hatching space from 40 to 120 µm, with a constant layer thickness of 40 µm. In this processing window, the volumetric energy density ranges from 50 to 190 J/mm
+3
+ and the build rate, from 4 to 25 cm
+3
+/h. It was found that working with an energy density ranging from 60 to 140 J/mm
+3
+ and a build rate ranging from 4 to 21 cm
+3
+/h, and performing stress relief (650 °C, 30 min) and HIP (1300 °C/150 MPa for 2 h) post processing treatments, allows the production of almost fully dense (~99.8%) isotropic parts with relatively high mechanical resistance (YS = 210 MPa, UTS = 330 MPa) and ductility (δ = 30%). It was demonstrated that this economical powder feedstock can effectively be used for laser powder bed metal fusion. It was also found that the higher the build rate, the higher the surface roughness and the greater the difference between the CAD and the actual dimensions of the parts. To be capable of producing parts with improved precision and surface finish, different combinations of processing parameters could be used, while printing the skin and the core of a part. It was experimentally proven that when printing the skin of the part (last three layers) with a very low build rate (~3 cm
+3
+/h), the top surface roughness reduces from 9 to 3 µm. For the core of the part, however, the build rate can be tripled (~9 cm
+3
+/h) without affecting the part density. 
+The authors would like to express their appreciation for the financial support provided by NSERC (Natural Sciences and Engineering Research Council of Canada) and Rio Tinto Metal Powders.
+The work plan was developed by M. Letenneur to meet the study objectives defined by V. Brailovski and V. Paserin. The specimen design and the alloy selection were carried out by all the coauthors based upon the state of the art, previous research of V. Brailovski, and the current trends in the field. The design, fabrication and testing of the specimens were performed by M. Letenneur with the aid of A. Kreitcberg, V. Brailovski and I. Bailon-Poujol. V. Brailovski and Alena Kreitcberg contributed to the data organization, results interpretation and manuscript redaction.
+The authors declare no conflicts of interest.
+* HR < 1.25—good flowability; HR > 1.45—poor flowability [
+20
+].
+* HR < 1.25—good flowability; HR > 1.45—poor flowability [
+20
+].

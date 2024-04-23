@@ -1,0 +1,289 @@
+Machine learning (ML) is one of the artificial intelligence tools which uses past data to learn the relationship between input and output and helps to predict future trends. Powder bed fusion additive manufacturing (PBF-AM) is extensively used for a wide range of applications in the industry. The AM process establishment for new material is a crucial task with trial-and-error approaches. In this work, ML techniques have been applied for the prediction of the density of PBF-AM. Density is the most vital property in evaluating the overall quality of the AM building part. The ML techniques, namely, artificial neural network (ANN), K-nearest neighbor (KNN), support vector machine (SVM), and linear regression (LR), are used to develop a model for predicting the density of the stainless steel (SS) 316L build part. These four methods are validated using R-squared values and different error functions to compare the predicted result. The ANN and SVM model performed well with the R-square value of 0.95 and 0.923, respectively, for the density prediction. The ML models would be beneficial for the prediction of the process parameters. Further, the developed ML model would also be helpful for the future application of ML in additive manufacturing.
+The unique capabilities of the additive manufacturing (AM) process such as complexity-free, customization and functionally gradient part properties, offers a broad application of AM in industries [
+1
+]. Specifically, AM is advantageous for developing complex turbine blades, customized bio-implants, and internal cooling channels [
+2
+]. As the AM is growing in the industry, process establishment for new materials with better processibility, functionality, and desired mechanical properties are challenging task that needs to be explored. In the powder bed fusion additive manufacturing (PBF-AM) process, various parameters are involved starting from the laser system parameter, build chamber parameter, design parameter, and machine parameters, making process establishment more complex, as shown in 
+Figure 1
+ [
+3
+]. The conventional process optimization techniques such as the trial-and-error approach, the finite element method, the design of experiments, numerical and mathematical modeling, and physics-based simulation are used to stabilize the newly developed process [
+4
+]. These conventional techniques need expertise in material science as well as knowledge in the mechanical domain.
+Additionally, these techniques work under certain assumptions and require more time and high computational power [
+5
+]. Machine learning (ML) provides an advanced prediction tool developed under artificial intelligence’s umbrella [
+6
+]. ML is the technique that makes the machine learn from past data to achieve prediction with maximum accuracy [
+7
+]. ML techniques for additive manufacturing have become a focus area for researchers to benefit from the process [
+8
+,
+9
+,
+10
+,
+11
+,
+12
+]. The motivation of this work is to combine machine learning techniques to achieve a dense structure in powder bed fusion AM.
+The present study explores the application of ML techniques such as ANN, KNN, SVM, and linear regression to predict the density of additively manufactured parts. ANN technique utilizes a principle similar to human intelligence [
+13
+]. Further, it establishes the relationship between input and output parameters using past experience and trends. It contains numerous neurons and hidden layers associated with parameter complexity [
+14
+]. K-nearest neighbor (KNN) is used for classification and regression analysis and does not store any learning outcome from the training dataset [
+15
+]. Support vector machine (SVM) is one of the most promising supervised machine learning algorithms applied for regression and classification problems [
+16
+]. The linear regression model is simple to perform and easy to interpret the output analysis. However, linear regression assumes a linear relationship between the parameters. Linear regression also looks at a relationship between the mean of dependent variables and independent variables. Linear regression is not a complete description of relationships among variables. The data-driven ML model was developed in this work to predict the density of SS316L built by powder-based AM. SS316L has extensive applications in the bio-implant where the complexity and mechanical property must be precisely taken care [
+17
+]. The density is directly related to all other mechanical properties. The higher density would improve tensile strength, hardness, and other mechanical properties [
+18
+]. Controlling density is crucial in the powder-based AM due to several parameters at deposition [
+19
+]. The layer-wise deposition in AM is prone to more porous parts than in other manufacturing processes. Hence, density optimization is significant in measuring the quality of the AM-built part. The selection of process parameters concerning optimum density will help predict the quality of the part and the mechanical properties. The data used in the present work is collected from previous studies based on the powder-based AM of SS316L, as shown in 
+Table 1
+ [
+17
+,
+20
+,
+21
+,
+22
+,
+23
+,
+24
+]. The data was first classified and filtered according to input and output parameters. The input parameters include laser power, layer thickness, hatch spacing, and scanning speed, whereas density of SS316L is observed as the output parameter. The final collected data utilized as an input set for developing an ML model is given in 
+Appendix A
+.
+Several researchers have attempted to apply ML approaches to predict the output with respect to different manufacturing processes. For instance, density prediction was attempted using ML for the flash sintering process [
+25
+], the porosity of the building part was predicted using physics-based ML techniques showing good performance with a minimum error rate of 10–25% [
+26
+] and the random forest technique was used to predict the density of build part [
+27
+]. Despite the different ML applications for additive manufacturing, the density prediction of powder-based AM of SS316L has not yet been reported. This study covers a novel approach to predicting the density of additively manufactured SS316L parts. The developed models are also compared to select the best model for predicting density.
+The density of the building part influences mechanical and microstructure properties. In additive manufacturing, material densification is the most crucial factor to consider [
+28
+]. The optimum range of process parameters is required to achieve a denser product. The part produced with the lower energy density may have unmelted particles, which results in a porous structure. The higher energy density creates a steep “V” shaped melt pool and leads to micro evaporation; thus, gas gets trapped below the melt pool and results in porosity. Tucho et al. [
+21
+] experimentally obtained the energy density levels for minimum and maximum porosity for SS316L as 80 J/mm
+3
+ and 50 J/mm
+3
+, respectively. Hence, optimization of process parameters needs to be explored to get minimum porosity. Cherry et al. [
+24
+] also investigated the importance of optimum laser energy density for minimum porosity. They observed a similar trend; as energy density increases, porosity increases to a certain level and then decreases. Further, Li et al. [
+29
+] correlated the melt pool shape variation with the porosity. The higher scanning speed creates a tiny size melt pool, leading to a higher porous structure with lower tensile strength. Dewidar et al. [
+30
+] also experimented with the porous structure for bone implants with 40 to 50% porosity which has desired elastic modulus of 26 GPa for the human body. ML can improve the AM process capability in many ways, such as topology optimization, online monitoring, design features optimization, defect detection, and parameter optimization [
+28
+]. The application of ML for AM is presented in 
+Figure 2
+ [
+31
+].
+The various techniques of ML have been utilized in their intelligence to learn complex interactions between numbers of input parameters and the outputs [
+19
+,
+21
+]. Most of the work has been reported in areas such as process monitoring, defect detection, and design optimization [
+32
+,
+33
+,
+34
+,
+35
+,
+36
+,
+37
+,
+38
+]. Tapia et al. [
+39
+] used a gaussian-based model for the process planning of SS316L concerning melt pool conditions. Osswald et al. [
+40
+] also used the Gaussian process for optimizing the post-processing time by controlling the cooling rate. The ML models also recognize the types of defects in AM. The insufficient energy density leads to a lack of fusion defects, whereas high energy density input leads to keyhole porosity. Aoyagi et al. [
+41
+] developed a random forest model to predict the keyhole and lack of fusion defect in the sintering of Inconel-718. Silbernagel et al. [
+42
+] used a support vector machine (SVM) to classify good and bad layer deposition concerning surface morphology. Baturynska et al. [
+43
+] utilize the ML model to predict the geometrical deviation in the deposited layer. The optimum parameters play a crucial role in enhancing the quality of the building part and its mechanical properties. Most of the researchers utilized different ML techniques to optimize process parameters [
+44
+,
+45
+,
+46
+].
+The developed model in this work shows that the ML can be utilized as an optimization prediction tool in predicting the density of the building part. Tapia et al. [
+3
+] developed a Gaussian model to optimize the porosity for the PBF of stainless steel. Further, Liu et al. [
+26
+] used a gaussian-based regression analysis to predict the density of AlSi10Mg for the PBF process. Rathi et al. [
+13
+] explained the application of artificial neuron networks (ANN) to optimize the manufactured part. Marmarelis et al. [
+47
+] used a data-driven ML model to optimize the process parameter and predict the tensile strength for the PBF of AlSi10Mg. Moreover, Silbernagel [
+42
+] developed an ML model to optimize the process parameters using the numbers of in situ images as input to the algorithm. Since the powder sintered parts are porous, their density represents the quality of the parts. The density depends on various input parameters, and it controls the output properties of the material, such as roughness, hardness, corrosion resistance, and wear resistance. The density prediction provides the ability to produce denser parts which influence the mentioned output properties. However, density prediction using experimental and numerical analysis is challenging. Numerical analysis such as finite element analysis (FEA) strongly depends on operator mathematical knowledge and precision of the PBF model [
+48
+]. Moreover, the PBF process includes physical effects and depicts chemical changes. The relationship between part density and process parameters is non-linear and hence complicated to develop a function representing the part density through process parameters. Thus, this study has deployed four ML techniques in density prediction, and their comparative analysis is performed.
+An artificial neuron network (ANN) is one of the most powerful techniques for prediction purposes. ANN model learned from the input data and made accurate predictions of future results. ANN technique works on the same principle as our human intelligence works. ANN develops a relationship between input and output parameters from previous trends and experience [
+13
+]. In addition, ANN contains several hidden layers and neurons connected according to the complexity of parameters [
+14
+]. 
+Figure 3
+ shows a vector flow diagram of the developed ANN model.
+The general ANN structure contains the input layer, hidden layers, neurons, weights, activation function, and output layer [
+49
+]. The ANN algorithms first pick random data to build a relationship between the input parameters and neurons with different weights and activation functions. The ANN algorithm starts with the interlink neurons with different weights and continuously builds relationships to reach output values from training data. The weight in the ANN algorithm controls various input parameters on neurons [
+13
+]. Weights are multiplied with each neuron’s input and the activation function triggers the output of the neurons [
+50
+]. The activation function is a mathematical mechanism that passes information to subsequent neurons. An individual neuron works only when the activation function is triggered. Several activation functions are utilized in ANN algorithms, such as linear, Gaussian, sigmoid, hyperbolic tangent, saturated linear, etc. The sigmoid is the most used function in ANN, as shown in 
+Figure 4
+ [
+51
+].
+The main challenge in the ANN model is over-fitting, where the model continuously tries to match the outputs of the training dataset. The over-fitting may occur when more numbers of neurons learn relationships from data for a more extended period. The over-fitted model worked well with a known data set. However, the over-fitted model cannot predict an outcome with good accuracy for the unknown data set [
+52
+]. ANN is mainly used where the relationships between input and output data are very complex. The ANN algorithm learns complex interactions and helps to predict the data without giving any significant interpretation. Hence, it is also termed as Black box method. ANN is mainly used nowadays in sophisticated applications such as self-driving cars, speech, and handwriting recognition, and weather forecasting [
+13
+]. Researchers recently started exploring the ANN model for complex manufacturing processes to save material, time, and cost. This is especially true for the additive manufacturing process, where many parameters are directly or indirectly involved in the building part. Researchers recently reported the application of the ANN model for the selective laser sintering (SLS) process [
+53
+,
+54
+].
+The ANN helps to optimize process parameters for newly developed materials to achieve desired mechanical properties. Desai et al. [
+55
+] used the ANN model to predict the effectiveness of the powder spreader for PBF of Ti-6Al-4V with 96% accuracy. Shen et al. [
+18
+] predicted the density of a Nylon-36 with 93% accuracy. Ahmadloo et al. [
+50
+] also used the ANN model to predict thermal conductivity with the minimum error of predicted vs. actual value of 1.26%.
+K-nearest neighbor (KNN) is preferred to be an accurate model for classification and regression analysis. KNN does not store any learning outcome from the training dataset. KNN classifies the unknown data with the most similar dataset [
+15
+]. KNN works on predicting results based on the nearest group of similar known outcomes from the training dataset, as shown in 
+Figure 5
+. The only parameter involved in the KNN prediction model is the number of nearest neighbors (k) considered by the intellect to predict the output. The distance with the nearest neighbors is mostly calculated with the Euclidean distance measurement equation [
+15
+].
+The large number of k reduces the error between predicted and actual value; however, it also increases the risk of avoiding the effect of minor variation in the input data set. This variation is referred to as underfitting the data. Similarly, the small value of k over fits the data set [
+56
+]. The optimum value of k decides with the cross-validation for the minimum value of RMSE (root mean squared error) or ROC. They studied the optimum value of k calculated with the minimum RMSE for the k value of 1 to 70 nearest neighbors. The KNN method is mainly used where the complex dependency between the parameters is difficult to understand [
+55
+]. There are several benefits of KNN in the parameter optimization of manufacturing processes. It is the simplest form of the algorithm with only one parameter to control. It is easy to implement even with undefined input data set [
+15
+]. 
+Support vector machine (SVM) defines the boundary between two different data types. These defined boundaries are used for the classification and complex regression problems [
+16
+]. The boundary is technically called a “hyperplane”. The hyperplane divides the group of similar data by measuring the distance between the parting line and the nearest data point in both groups; such hyperplane is the maximum margin hyperplane, as shown in 
+Figure 6
+A [
+57
+]. The hyperplane shown in 
+Figure 6
+A is for the linear data set. However, it is not always the case in an actual application as there are complex non-linear relationships between data sets.
+The SVM algorithm involves two more parameters to solve any complex interrelationship: cost function and kernel function. Cost function (C) allows some data points to classify into an opposite group of data. Cost function plays an important role when the data points are not linearly separable. Hence, smooth hyperplane can be obtained with the misclassified data points as shown in 
+Figure 6
+B [
+58
+]. The Cost value decides the hyperplane’s smoothness and correctly classified data count [
+58
+]. Aoyagi et al. [
+41
+] used the SVM algorithm to predict the optimum energy density level for defect-free layer deposition by EB-AM. The cost function of 50 and 100 gives the minimum error rates. The KNN algorithm is beneficial in classifying the defects. The higher value of C increases the risk of over-fitting in the developed model [
+59
+].
+The kernel function, which converts the non-linear hyperplane into a linear hyperplane with a higher dimensional function, aids in speculating data from a different perspective [
+59
+]. The kernel functions are mathematical relationships between datasets to simplify the hyperplane [
+51
+]. Several mathematical relationships are used as kernel functions in the SVM model, as shown in 
+Table 2
+ [
+60
+]. There is no constructive rule that a particular kernel gives better accuracy; it depends on the data set and their interrelations. The cross-validation and various error terms are used to get the optimum SVM model by trial-and-error approaches [
+42
+].
+Several pieces of literature reported that the SVM performs better concerning parameter optimization of additive manufacturing. Joshi et al. [
+60
+] explained the overall idea about the application of the SVM algorithm in additive manufacturing. ML could be implemented in various areas such as parameter prediction, defect detection, printing fault reorganization, and process map development. SVM can be used for classification as well for regression. Ahmad et al. [
+61
+] showed that SVM works accurately to forecast electrical energy consumption with the help of past datasets. Gejji et al. [
+62
+] also compared the SVM for quality prediction model of honing process concerning neural networks, logical regression, and decision trees. Razvi et al. [
+6
+] mentioned the application of SVM in different additive manufacturing domains as regression and classification to predict the defects, melt pool analysis, and parameter optimization. The SVM works more accurately than other ML models with a small dataset. Martín et al. [
+63
+] performed the defects analysis in the fabricated part and reported that SVM provides good results by lowering the processing time. Wu et al. [
+16
+] implemented a different ML model for roughness prediction in an FDM machine with the SVM Gaussian RBF kernel; they achieved a minimum 0.043 error rate. Lia et al. [
+64
+] also compared the ML models for roughness prediction for the FDM process and observed that the SVM algorithm performs better than RR and RF.
+In this study, different ML techniques have been utilized to optimize the process parameter for the density of SS316L. The input process parameters are used to predict the build part’s density, based on the parameters shown in 
+Appendix A
+ (
+Table A1
+). The linear regression, ANN, KNN, and SVM models are applied to training data to predict the density of the model. The predicted and actual data of density were compared with R-squared value, correlation factor, and various error bars, and mean absolute percentage error (MAPE), mean absolute error (MAE), and mean absolute deviation (MAD) were obtained. 
+The ANN model with stochastic average gradient is used here to predict the density of the building part. The ANN model with different hidden layer numbers was developed. The developed ANN model uses the feedforward network with the 1200 layers and sigmoid activation function. 
+Figure 7
+A compares actual vs. predicted density values for the ANN model. The predicted model shows a reasonably good comparison with actual density values. The 1200 set of neurons provides good accuracy with a 0.955 R-squared value, as shown in 
+Figure 7
+B. The statistical line fit between actual and predicted density is also mentioned in the form of a mathematical equation. The hidden layer extracts data from one set of neurons (input layer) and provides it to the output layers. The layers do not provide any explanation about the developed relationship. Hence, they are referred to as hidden layers. The output layer offers the result in an understandable form. Many hidden layers make a complex structure and increase the accuracy in predicting the test data. However, it may lead to over-fitting the model. Over-fitting is when the model adjusts itself to fit too precisely with the training data set. In other words, it decreases the training error. However, the model may not be accurate for future predictions with new data. The over-fitting must be avoided by stopping the learning phase of a model at some level.
+The KNN model is also developed to predict density with 70% of training data. The KNN is an instant-based learning model unusual from general explicit algorithms learning. KNN model is cross verified with the minimum RMSE value, and with the eight neighbors, the optimum value of RMSE was found to be 1.2331, as shown in 
+Figure 8
+.
+The actual vs. predicted density value with the KNN model is compared as shown in 
+Figure 9
+A. The predicted KNN model shows a sensibly good comparison with actual density values. The developed model accurately predicts the testing data set with a 0.863 R-squared value, as shown in 
+Figure 9
+B. The only limitation of the KNN model is the sensitivity to the unbalanced data set, where most entities belong to one or a few classes, and infrequent classes are often dominated in most neighborhoods. This can be alleviated through the balanced sampling of more popular classes in the training stage, possibly coupled with ensembles.
+The actual vs. predicted density value with the SVM model is compared as shown in 
+Figure 10
+A. The predicted SVM model shows a rationally good comparison with actual density values. SVM model with the polynomial kernel was developed for density prediction.
+The developed model accurately predicts density with an R-squared value of 0.923, as shown in 
+Figure 10
+B. The SVM model was validated with RMSE value with different cost functions, as shown in 
+Figure 11
+. The cost value ensures the smoothness of the hyperplane by selecting the different cost values. This graph shows the optimum value of the cost function for the minimum RMSE value. The minimum RMSE value of 2.096 was obtained at the cost value (C) equal to one. The SVM models are easy to formulate to improve the model’s accuracy. The SVM model performs well even with less sample size than the number of dimensions in the sample data. One of the limitations of the SVM algorithm is the lack of a probabilistic explanation of how the hyperplane classifies the model. The SVM model underperforms with the new dataset consisting of more features.
+The most common statistical analysis, linear regression performed to predict a density of SS316L. The regression models predict density based on independent variables. The actual vs. predicted density value with the linear regression model is compared as shown in 
+Figure 12
+A. The linear regression shows a good density prediction with an R-squared value of 0.864, as shown in 
+Figure 12
+B. The 
+p
+-value of the prediction model is found to be 0.02721, which shows changes in the interrelation between the parameters.
+The R-squared value of predicted vs. actual density of dataset for each ML model is compared in the earlier section, as shown in 
+Figure 13
+. This section compares the prediction error for different ML techniques with the RMSE, MAE, and MAD, as shown in 
+Figure 14
+.
+In the present study, the most suitable ML model for density prediction in the PBF process is SVM compared to the other three techniques, i.e., LR, ANN, and KNN. The linear regression always tries to fit the parameters in a straight line. However, this is not necessary in all cases. Therefore, the R-squared value for LR is lesser than the ANN and SVM models. The linear regression prediction on the test dataset also shows a significant variation with the actual data, which can be observed with the RMSE, MAE, and MAD values. The overall error rate for LR is found to be higher than the SVM and KNN models. De Abreu et al. [
+25
+] also used different ML techniques to perform a density prediction model for the flash sintering process. They observed that SVM performs better compared to ANN, KNN, and random forest ML techniques, which is in line with the results obtained in the present study. Liu et al. [
+26
+] also performed physics-based ML techniques to predict the porosity of the building part. The developed ML model showed good performance with a minimum error rate of 10 to 25%. Kosicki et al. [
+27
+] also developed an ML model with a random forest technique to predict the density of build parts under different environmental conditions. Rankouhi et al. [
+65
+] performed a similar approach with conventional techniques. They utilized dimensionless numbers for density prediction for various metal powder-based additive manufacturing materials.
+The KNN model is performed well with a minimum RMSE value of 1.83. KNN is the only model that works with one parameter, i.e., the numbers of neighbors. However, the KNN model cannot find the unique relationships between the features. The KNN model has less R-squared value compared to SVM and ANN models. The KNN algorithm does not develop the model or learn the interrelationship between the parameters. The KNN works better for classification problems or regression with the minimum number of parameters. Hence, gives a less error rate. However, based on the results from this study, it is not advisable to implement it for the prediction of the parameter in the PBF process.
+ANN and SVM are the most suitable ML models for density prediction in the PBF process. The SVM is also sometimes referred to as a shallow type of neural network model. Generally, the ANN model outperforms many training datasets. However, with the given data set, both ANN and SVM models performed well in predicting the results. A single ANN can be trained to solve hand-written digits problem while 10 SVMs (one for each digit) are required. In the ANN model, there are more parameters to control, such as input nodes, numbers of hidden layers, model structure, activation function, epochs, etc., making the model complex to handle. However, it is said to be the best ML model extensively used for prediction. The main limitation of the ANN model is over-fitting issues, as explained in the earlier section. ANN models are more prone to being trapped in the local minima to predict a value and miss the global picture.
+ANN is a flexible and complex algorithm. It dynamically picks the best regression model, i.e., linear, logistic, or polynomial. The accuracy of an ANN model is higher than other models because their arsenals in the hidden layer boost accuracy by over-fitting towards the training dataset. The R-squared value with the ANN model is found to be 0.95, which is the highest among them. However, at the same time, RMSE, MAE, and MAD are found to be 4.01, 3.56, and 5.93, respectively. The error value was observed higher here because of irregular weights, many hidden layers, and limited datasets. The overall error rate is observed to be higher in the ANN model. This finding illustrates that the higher accuracy with lower error rate could achieve by further improving the ANN model with many input datasets. Hence, from the present study, SVM is found to be the best model for density prediction due to over-fitting and complexity issues associated with the ANN model. Most ML models were over-fit to the training data set when insufficient data were unavailable. The SVM model does not stick in over-fitting issues and can work well for future predictions. The SVM models are easy to understand and apply as fewer parameters are involved compared to ANN. The developed SVM model can predict density with an R-squared value of 0.923 and with the RMSE, MAE, and MAD of 2.096, 1.3102, and 0.3825, respectively. The process parameter can be optimized for density with the different ML models. In the present study, the SVM model predicted the density with better accuracy of 96.01% compared to other ML models.
+The density plays a vital role in the additively build part of powder-based additive manufacturing. The experimental and numerical analysis requires more time and expertise and incurs huge costs to find the optimum parameters. ML techniques are utilized for density prediction with higher accuracy. Therefore, in this work, four different ML techniques have been used and executed in R-studio to predict the density of additively manufactured SS316L. The data from previous results are divided into the training and testing dataset, and the prediction accuracy is evaluated with different error values. The study’s findings revealed that the SVM method is comparatively better for density prediction than other methods. The results obtained from the SVM technique showed 96.01% accuracy in the predicted vs. actual value for the density. The second-best model was found to be the ANN, which provided the highest correlation values, i.e., 95.5%. However, there exists a high risk of getting over-fitted in the ANN model. The error values such as RMSE, MAE, and MAD were obtained and observed to be higher in the ANN model. The KNN gives limited performance for the density prediction with the R-squared value of 0.862. AM industry is still growing, and thus limited data set of process parameters available for analysis. Hence in the future large data set could be trained using ML techniques to predict the parameters of the building part. One of the limitations of the current study is that it deals with the small data. This limitation can be overcome by utilizing other techniques to help accurately analyze the ML models. In the future, the researchers may use the findings from the study to develop the different ML models for analyzing other mechanical properties such as tensile strength, hardness, fatigue strength, etc. Feature importance analysis of the identified ML model could be performed to realize the material science interpretation.
+Conceptualization, M.G.; methodology, M.G., A.D. and V.W.; validation, M.G., A.D. and V.W.; formal analysis, M.G.; data curation, M.G.; writing—original draft preparation, M.G.; writing—review and editing, P.S.; visualization, P.S., K.G., J.Ł. and J.K.; supervision, P.S., K.G., J.Ł. and J.K.; project administration, P.S., K.G., J.Ł. and J.K. All authors have read and agreed to the published version of the manuscript. 
+This research was funded by the Military University of Technology, grant number 22 889.
+Not applicable.
+Not applicable.
+The authors declare no conflict of interest. The funders had no role in the design of the study; in the collection, analyses, or interpretation of data; in the writing of the manuscript, or in the decision to publish the results.
+The data were collected from literature published on powder bed fusion AM of SS316L. The data is first classified according to output mechanical properties such as density, tensile strength, and hardness. In this work, the data for density is utilized to build different ML models. The data is filtered to eliminate a few outliers.
+Publisher’s Note:
+ MDPI stays neutral with regard to jurisdictional claims in published maps and institutional affiliations.

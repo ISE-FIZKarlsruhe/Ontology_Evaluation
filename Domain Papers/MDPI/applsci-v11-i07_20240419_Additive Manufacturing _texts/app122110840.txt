@@ -1,0 +1,1030 @@
+In this work, blends that were based on first use PP added with talc (PPt) and recycled polypropylene (r-PP) were designed and formulated, aiming at producing filaments that are suitable for 3D printing fused filament fabrication (FFF) processes. A preliminary characterization of PPt/r-PP blends at different weight ratios allowed selecting two systems showing adequate rheological behavior for FFF. The selected blends were melt compounded in a twin-screw extruder, optimizing the processing conditions through a design of experiments approach, involving the use of Taguchi’s method. The materials that were prepared with the optimized processing conditions, hence showing the best performance in terms of rheological behavior and thermal characteristics, were then selected for the production of the filament and for the subsequent FFF processing. Finally, the morphology of the filament and the mechanical properties of 3D-printed samples were assessed, demonstrating the achievement of satisfactory results in terms of performances. In general, the obtained results clearly demonstrated that a proper optimization of both material and processing conditions offers the possibility of using recycled PP-based formulations for additive manufacturing processes, hence allowing a remarkable valorization of a low added-value material through its utilization for an innovative and sustainable manufacturing approach.
+In the last few years, the environmental concerns that are related to the plastic waste pollution have triggered a gradual transition from linear to circular economy models, which allow the production of sustainable plastics with several socio-economic and environmental benefits. The extension of material life and the recovery of materials at the end of their service life are the basic components of this new economic paradigm [
+1
+]. In this framework, the development of efficient recycling strategies for polymer-based materials is of crucial importance, since the continuous re-utilization of wastes and scraps should ideally eliminate the use of virgin resources and promote the complete valorization of material wastes [
+2
+].
+From the report of curbsides in the U.S., if all of the approximately 37.4 million tons of recyclable materials that were generated were delivered back to productive use, it would reduce U.S. greenhouse gas emissions by 96 million metric tons of carbon dioxide equivalent, conserve an annual energy equivalent of 154 million barrels of oil, and achieve the equivalent of taking more than 20 million cars off the road [
+3
+].
+Polypropylene (PP) items are highly recyclable; however, recycling is limited due to difficulties in collection, contamination, and mixture with other materials. Despite these problems, the directives e.g., Packaging and Packaging Waste Directive (PPWD) (Directive 94/62/EC—Amended by Directive EU/2018/85) targets for recycling by 31 December 2025 at least 65% weight of all packaging waste is recycled and at least 50% weight of all plastic waste is recycled [
+4
+].
+From a report that was made by “The Recycling Partnership” and “Association of Plastic Recyclers”, approximately 3.5 billion pounds of rigid PP packaging is sold every year but has been commonly recycled for less than a decade, thus the recycling rate was reported to be only 14% in U.S. in 2018 [
+5
+]. The average of recycling rate is 21% with peaks for PET and HDPE of over 30%. It is, therefore, necessary to enhance the recycling of polymers such as PP which today has a low recycling rate.
+Additive manufacturing (AM) technologies in the last few years are becoming key industrial processes, mainly due to the several benefits of the layer-by-layer approach which offers the opportunity to produce parts with complex geometries that are generally not achievable with the traditional production processes for thermoplastics (i.e., extrusion or injection molding) [
+6
+,
+7
+,
+8
+]. Besides, through the utilization of AM processes, fully customizable items that are characterized by tailored specific properties and functionalities can be obtained, also reducing the typical high cost that is associated with traditional manufacturing methods [
+9
+].
+Among the various AM processes for thermoplastics, material extrusion-based methods (MatEx) are the most commonly used technologies [
+10
+,
+11
+]. These technologies include fused filament fabrication (FFF), also known as fused deposition modelling (FDM—3D printing), exploiting filaments as feedstocks; and fused granular fabrication (FGF), employing thermoplastic pellets, 3D fiber deposition, and 3D plotting [
+12
+]. Despite the high versatility of MatEx, the portfolio of thermoplastics that are suitable for this AM method is still limited [
+12
+]; typical materials for FFF printing are PLA and ABS, which are generally sold in controlled diameter filaments [
+13
+]. As widely documented in the literature, there are several requirements that are associated with the mechanical, rheological, and thermal characteristics of the candidate thermoplastic, which need to be fulfilled in order to classify a polymer as “MatEx -printable” [
+14
+]. In particular, the rheological behavior of the polymer plays a very important role, since the extrudability of the filament through the print nozzle, as well as the shape stability of the extrudate during the deposition step and the adhesion between subsequently deposited layers, are dictated by the material viscoelastic properties [
+15
+]. In a previous work [
+16
+] we have shown that the strictest criterium to classify a polymer as FFF-printable from a rheological point of view is the occurrence of a yield stress behavior in quasi zero-shear conditions, which guarantees low propensity of the filament to drip after the extrusion step and a good shape stability of the extrudate at the exit of the nozzle and also during the deposition step. Additionally, a thermoplastic that is suitable for FFF processing should have a low degree of crystallinity and slow crystallization kinetics [
+17
+]. These characteristics could minimize the issues that are associated with the volumetric contraction that are experienced by semi-crystalline polymers during crystallization, which causes the entrapment of high residual stresses within the printed part, resulting in warpage, shrinkage, or even delamination and cracking [
+18
+]. Quite recently, it has been demonstrated that the introduction of different micro- or nano-fillers in a polylactic acid (PLA)-based formulation can promote several beneficial effects on the 3D printability of the base material, also allowing obtaining printed samples with enhanced mechanical properties as compared to their unfilled counterparts [
+19
+].
+Currently, the use of waste or recycled thermoplastics for the development of 3D-printed parts is an emerging area. In this context, some authors have started studying the formulation of filaments using homogeneous plastic wastes that are derived from 3D printed parts, polyethylene terephthalate bottles, or low-density polyethylene bags; besides, some recycled filaments are already commercially available [
+20
+,
+21
+]. Cafiero et al. [
+22
+] demonstrated the possibility of formulating filaments for FFF starting from a material that is derived from mechanical recycle processes of the plastic fraction of the waste of electrical and electronic equipment (WEEE). Preliminary physico-chemical analyses that were performed on the WEEE wastes showed a high heterogeneity of the starting material, involving the presence of 11 different polymers or blends. The selected samples were then subjected to a cleaning procedure to reduce or remove foreign materials, reduced into small flakes and extruded in filaments, and subsequently used to print test parts. The quality control of the printed objects proved that FFF printed specimens had no remarkable deviations from the model design as compared to the same objects that were printed using commercial filaments, thus demonstrating the possibility of exploring recycled heterogeneous thermoplastics for FFF applications.
+In this work, we clearly demonstrated the suitability of blends containing r-PP for FFF processing. In particular, the research was carried out following three different stages:
+The first step focused on the production and the preliminary characterization of PPt/r-PP blends at different weight ratios, aiming at selecting the formulations showing the best performances in terms of rheological and thermal properties, for a FFF process.
+In the second step, the processing conditions of the selected blends were optimized through a design of an experiment approach, involving the use of Taguchi method. This procedure allowed producing two r-PP-based materials having optimal rheological and thermal characteristics for the desired processing.
+Finally, in the third step, the production of the filament and the subsequent 3D printing of the selected materials were carried out, also evaluating the morphology and the mechanical properties of the printed specimens.
+The first step focused on the production and the preliminary characterization of PPt/r-PP blends at different weight ratios, aiming at selecting the formulations showing the best performances in terms of rheological and thermal properties, for a FFF process.
+In the second step, the processing conditions of the selected blends were optimized through a design of an experiment approach, involving the use of Taguchi method. This procedure allowed producing two r-PP-based materials having optimal rheological and thermal characteristics for the desired processing.
+Finally, in the third step, the production of the filament and the subsequent 3D printing of the selected materials were carried out, also evaluating the morphology and the mechanical properties of the printed specimens.
+In all, the obtained results established that a proper optimization of both material and processing conditions allows the achievement of r-PP-based formulations that are suitable for FFF processes, paving the way for the development of more sustainable manufacturing approaches, fully enclosed in the general framework of the new circular economy paradigm.
+The materials that were used in this work were:
+Polypropylene PP ISPLEN
+®
+ PB 170 G2M from Repsol (main properties: melt flow rate 12 g/10 min; density 905 kg/m
+3
+; flexural modulus 1200 MPa; impact strength notched 8 kJ/m
+2
+; heat deflection temperature 85 °C).
+Talc powder HTP1 produced by IMI FABI with a 2 µm average diameter. Talc powder (20 wt.%) was used to produce the first use polypropylene (PP ISPLEN
+®
+ PB 170 G2M) formulation (hereinafter coded as PPt) through the same equipment and procedure that was reported in a previous paper [
+7
+].
+Recycled PP, a commercial grade Bretene 003GR160 (hereinafter coded as r-PP) was bought from Breplast S.p.A. According to the supplier, the origin of this material is the urban waste, and it is made up 80% of PP (melt flow index 4.5–9.5 g/10 min; strain at break 26%; Flexural Modulus 950 MPa).
+The characterization of the thermal properties and rheological properties of the base PPt and r-PP materials are reported in the 
+Supplementary Material (see Figures S1 and S2 and Table S1
+).
+Polypropylene PP ISPLEN
+®
+ PB 170 G2M from Repsol (main properties: melt flow rate 12 g/10 min; density 905 kg/m
+3
+; flexural modulus 1200 MPa; impact strength notched 8 kJ/m
+2
+; heat deflection temperature 85 °C).
+Talc powder HTP1 produced by IMI FABI with a 2 µm average diameter. Talc powder (20 wt.%) was used to produce the first use polypropylene (PP ISPLEN
+®
+ PB 170 G2M) formulation (hereinafter coded as PPt) through the same equipment and procedure that was reported in a previous paper [
+7
+].
+Recycled PP, a commercial grade Bretene 003GR160 (hereinafter coded as r-PP) was bought from Breplast S.p.A. According to the supplier, the origin of this material is the urban waste, and it is made up 80% of PP (melt flow index 4.5–9.5 g/10 min; strain at break 26%; Flexural Modulus 950 MPa).
+The characterization of the thermal properties and rheological properties of the base PPt and r-PP materials are reported in the 
+Supplementary Material (see Figures S1 and S2 and Table S1
+).
+In the first step of the research, blends of PPt and r-PP at different weight ratios were produced through melt compounding using a mini-extruder Xplore MC 15. The screw speed was maintained at 50 rpm for the feeding time and increased up to 100 rpm for the residence time, fixed for all runs at 3 min. The heating temperature was selected at 190 °C. Specimens for the rheological characterization were obtained through a compression molding step using a hydraulic press Collin P200T, operating at 190 °C under a pressure of 100 bar for 3 min.
+The second compounding step (performed on selected PPt/r-PP blends, as detailed in the following) was performed with a Thermo Fisher Process 11 twin-screw extruder. The used screw profile, whose scheme is reported in 
+Figure 1
+, consists of three different blocks with kneading elements and different zones with conveying elements (a more detailed representation of the elements that are present in the screws is reported in 
+Figure S3
+). After the compounding step, the extrudates were rapidly cooled in a water tank at the exit of the extruder die and then pelletized using a Varicut pelletizer. The processing conditions for this second step were optimized following a design of experiments approach, using the Taguchi method as reported elsewhere [
+23
+,
+24
+,
+25
+]. In particular, the experiments were carried out considering three controllable two-level processing parameters (temperature profile, feed rate, and screw speed) as shown in 
+Table 1
+. The orthogonal array (OA) that was designed by using Taguchi method is shown in 
+Table 2
+.
+After the production of the PPt/r-PP blends, carried out following the Taguchi OA, specimens for the rheological characterization were obtained through a compression molding step using a hydraulic press Collin P200T, operating at 190 °C under a pressure of 100 bar for 3 min.
+Next, 1.0 Advanced filament making machine by 3Devo (Utrecht, The Netherlands) was used to produce a filament with a nominal diameter of 1.75 mm. The process was carried out following a procedure that was reported in [
+16
+]. The processing parameters that were selected for the filament production will be discussed in 
+Section 3.3
+.
+A Roboze One 3D printer (Bari, Italy) that was equipped with a 0.4 mm nozzle was used to prepare tensile test specimens (ISO 527 standard type 5A) with the help of Simplify 3D software. Due to the low adherence of PP-based materials to any surface, the printing bed was fully covered with a PP layer. Additionally, aiming at further improving the adhesion of the printed part, a raft was used. The specimens were placed for each material in the XY plane. The adopted process parameters were: infill percentage 100%, deposition pattern ±45°, extrusion width 0.4 mm, layer thickness 0.2 mm, extrusion temperature 260 °C, and an extrusion speed of 30 mm/s.
+Differential scanning calorimetry (DSC) analyses were performed using a Q20, TA Instruments (New Castle, DE, USA) apparatus. The samples were placed in aluminum crucibles and subjected to the following thermal treatment: (i) a first heating ramp from −50 to 300 °C, (ii) a cooling ramp from 300 to −50 °C, and (iii) a second heating ramp from −50 to 300 °C. For all the ramps, the heating/cooling rate was maintained at 10 °C/min.
+The rheological behavior of all the investigated materials was investigated using an ARES (TA Instrument, New Castle, DE, USA) strain-controlled rheometer, equipped with a parallel plate geometry (plate diameter = 25 mm, typical gap imposed during the tests = 1 mm). Frequency sweep tests were performed at 230 and 260 °C, from 100 to 0.1 rad/s and using a strain amplitude of 5% (which preliminary strain sweep tests demonstrated to be in the linear viscoelastic range of the tested materials). The obtained complex viscosity curves were then fitted using the following models to evaluate the yield stress value of the tested materials:
+
+
+
+
+
+
+
+
+
+
+η
+
+
+∗
+
+
+
+
+=
+
+
+
+
+
+
+
+
+η
+
+
+0
+
+
+∗
+
+
+
+
+
+
+
+
+1
+
+
++
+
+
+λ
+
+
+
+
+ω
+
+
+n
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+(1)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+η
+
+
+∗
+
+
+
+
+=
+
+
+
+
+
+
+
+
+η
+
+
+0
+
+
+∗
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1
+
+
++
+
+
+λ
+
+
+
+
+ω
+
+
+2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+n
+
+
+−
+
+
+1
+
+
+
+
+2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(2)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+η
+
+
+∗
+
+
+
+
+=
+
+
+
+
+
+
+
+
+η
+
+
+0
+
+
+∗
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1
+
+
++
+
+
+λ
+
+
+
+
+ω
+
+
+2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+n
+
+
+−
+
+
+1
+
+
+
+
+a
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(3)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+η
+
+
+∗
+
+
+
+
+=
+
+
+
+
+
+
+
+
+σ
+
+
+y
+
+
+
+
+
+
+ω
+
+
+
+
++
+
+
+
+
+
+
+
+
+η
+
+
+0
+
+
+∗
+
+
+
+
+
+
+
+
+1
+
+
++
+
+
+λ
+
+
+
+
+ω
+
+
+n
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(4)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+η
+
+
+∗
+
+
+
+
+=
+
+
+
+
+
+
+
+
+σ
+
+
+y
+
+
+
+
+
+
+ω
+
+
+
+
++
+
+
+
+
+
+
+
+
+η
+
+
+0
+
+
+∗
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1
+
+
++
+
+
+λ
+
+
+
+
+ω
+
+
+2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+n
+
+
+−
+
+
+1
+
+
+
+
+a
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(5)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+η
+
+
+∗
+
+
+
+
+=
+
+
+
+
+
+
+
+
+σ
+
+
+y
+
+
+
+
+
+
+ω
+
+
+
+
++
+
+
+
+
+
+
+
+
+k
+
+
+1
+
+
+
+
+n
+
+
+ 
+
+
+
+
+
+
+(
+
+
+λ
+
+
+ω
+
+
+)
+
+
+
+
+n
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+1
+
+
++
+
+
+
+
+
+
+(
+
+
+λ
+
+
+ω
+
+
+)
+
+
+
+
+n
+
+
+
+
+
+
+
+
+
+
+2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(6)
+
+
+
+
+
+where 
+
+
+
+
+
+
+η
+
+
+∗
+
+
+
+
+
+
+ is the complex viscosity, 
+
+
+ω
+
+
+ is the frequency, 
+
+
+
+
+
+
+η
+
+
+0
+
+
+∗
+
+
+
+
+
+
+ is the zero-shear complex viscosity, 
+λ
+ is the characteristic relaxation time, 
+n
+ is the power-law exponent, 
+a
+ is a corrective factor, 
+
+
+
+
+
+
+σ
+
+
+y
+
+
+
+
+
+
+ is the yield stress, and 
+
+
+
+
+
+
+k
+
+
+1
+
+
+
+
+
+
+ is the shear stress at infinite shear rate. The main difference between the selected models is the presence or not of a term accounting for the occurrence of an apparent yield stress behavior at low frequencies. In particular, the models that were described by Equations (1)–(3), are able to predict the rheological behavior of linear viscoelastic fluids (presenting either a Newtonian or a non-Newtonian behavior) which do not possess yield stress. At variance, models that are presented in Equations (4)–(6) contain the term 
+
+
+
+
+
+
+σ
+
+
+y
+
+
+
+
+
+
+/
+
+
+ω
+
+
+ accounting for yield stress. Apart from the presence of this term, the selected models differ from some details allowing a better fitting of the shear thinning region or of the so-called transition zone of the complex viscosity curve, registered at intermediate frequencies (between the low frequency region and the shear thinning zone). All the models that are presented in Equations (1)–(6) were used to fit the experimental data; however, for each studied formulation the model allowing minimizing the cost function was selected. To this purpose, Matlab software was used as a computational resource.
+The morphology of the produced filaments (in terms of both external surfaces and internal microstructure) was evaluated using a scanning electron microscope (SEM) EVO 15 by Zeiss (beam voltage: 20 kV working distance: 8.5 mm). To evaluate the microstructure of the filaments, the samples were fractured in liquid nitrogen and the obtained fracture surfaces were covered with a sputtered gold layer.
+The mechanical properties of the 3D printed specimens were evaluated through tensile tests, using an Instron
+®
+ 5966 (Norwood, MA, USA) equipped with 2 kN load cell. The crosshead speed was set at 1 mm/min until 0.25% of deformation was reached, and then at 10 mm /min. A total of five specimens for each formulation were tested.
+The main objective of this work is the evaluation of the suitability of PP derived from mechanical recycling processes for a FFF processing. To this aim, we first tried producing a filament that was fully based on r-PP. Unfortunately, due to the high heterogeneity of the starting material, this attempt resulted in an unsuccessful processing. Therefore, we decided to blend r-PP with different amounts of a first use PP filled with 20 wt.% of talc, that previous studies [
+16
+,
+26
+] demonstrated have the proper rheological and thermal properties for an FFF process. Then, the first step concerned the formulation of PPt/r-PP blends, characterized by different weight ratios of the two components, aiming at optimizing the formulation of the material for the subsequent FFF processing. Unfortunately, formulations containing more than 50 wt.% of r-PP resulted in unsuccessful processing since, due to the high heterogeneity of the recycled material, extrudates with irregular morphology were obtained. For this reason, it was decided to keep the amount of r-PP in the blends lower than 50 wt.%. The composition of the formulated blends is reported in 
+Table 3
+; after the melt compounding step, the rheological and thermal properties of the as-obtained materials were evaluated.
+Figure 2
+ reports the complex viscosity curves as a function of frequency for all the formulated blends. In addition, the rheological curves of the two components (i.e., PPt and r-PP) and of unfilled PP are also depicted. Looking at the behavior of PPt and r-PP, that were evaluated either at 230 (
+Figure 2
+a) or 260 (
+Figure 2
+b) °C, it is clearly observable that both polymers show a marked non-Newtonian behavior, involving a continuous decrease of the complex viscosity as a function of frequency for the whole investigated frequency range. More specifically, both materials show an apparent yield stress behavior at low frequencies, and a well-developed shear thinning in the high frequency region. Both these features can be attributed to the presence of talc particles in PPt and of some inorganic fillers in r-PP (as demonstrated by TGA analyses reported in 
+Figure S2
+) which are able to interfere with the relaxation dynamics of PP macromolecules, hence causing the disappearance of the typical Newtonian behavior of PP. The rheological behavior of the PPt/r-PP blends is very similar to those of the two base polymers, and also in this case, significant non-Newtonian features (i.e., yield stress and shear thinning) can be recognized. In particular, looking at the curves that were recorded at 230 °C and depicted in 
+Figure 2
+a, it is possible to observe that the blend containing 10 wt.% of r-PP presents a similar behavior to PPt. Otherwise, the blends containing 20 or 30 wt.% of r-PP show complex viscosity trends intermediate between those of the neat components. Finally, the behavior of the systems 40r-PP and 50r-PP is quite close to that of PPt. On the other hand, 
+Figure 2
+b shows that all the blends exhibit a rheological behavior more similar to that of r-PP. Furthermore, it can be noticed that the non-Newtonian behavior of all the investigated materials is more pronounced at 260 °C, as in this case a more prominent yield stress behavior can be observed. To qualitatively evaluate the yield stress behavior of the formulated blends, the complex viscosity curves were fitted using the models that were reported in Equations (1)–(6). More specifically, the experimental complex viscosity curves, that were collected at both 230 and 260 °C, were fitted with the aforementioned Equations and the model showing the best fit of the experimental data (evaluated through the minimization of the cost function) was selected for each sample for the assessment of the yield stress. The obtained values of yield stress, listed in 
+Table 3
+, confirmed that higher yield stresses were achieved when the rheological behavior of the samples was assessed at 260 °C. Besides, among the studied materials, blends containing 30 and 40 wt.% of r-PP showed the highest values of yield stress values at 260 °C. 
+Aiming at assessing the thermal properties of the formulated blends, significantly affecting the quality of the printed part in terms of shrinkage, warpage, and distortion, their melting enthalpy was evaluated, and the obtained values are reported in 
+Table 3
+. Similarly to what was observed for the rheological behavior, also the melting enthalpy of the blends show intermediate values between those of the starting materials, indicating that the introduction of r-PP is beneficial in minimizing the total melting enthalpy of the samples.
+Therefore, considering the results of the rheological and thermal characterizations of the blends, 30r-PP was selected for the production of the filament and for the FFF printing, since the presence of 30 wt.% of r-PP allowed maximizing the yield stress of the materials, while minimizing their total melting enthalpy.
+Before proceeding with the production of the filament and with the 3D printing of the selected materials, the processing conditions of 30r-PP were optimized using the Taguchi method. In particular, the selected blend was processed through melt compounding in a twin-screw extruder, varying the process parameters according to the Taguchi orthogonal array that was reported in 
+Table 2
+. Since the aim of this step is the obtainment of a PPt/r-PP blend with an optimal rheological behavior for FFF printing, the yield stress value (which represents the crucial parameter dictating the FFF processability) was selected as a quality factor for the optimization of the processing conditions. 
+Figure 3
+ reports the main effect plots for yield stress for the 30r-PP system that were evaluated at 260 °C. In such kinds of representation, the main effect of each considered parameter on the yield stress can be evaluated by observing the slope of the line which links the experimental data. In particular, if the slope of the line is zero, the considered factors and levels have a similar effect on the yield stress; at variance, when the slope is different from zero, the factors and levels strongly affect the selected quality factor. According to the trends that were reported in 
+Figure 3
+, the yield stress value (and, hence, the material rheological behavior) appears strongly affected by the screw speed, while the effect of the other considered parameters is quite negligible. More specifically, the higher the screw rotation speed the higher the yield stress, likely due to the beneficial effect of the shear that is experienced by the melt during the compounding at high rotation speeds on the morphology and, hence, on the rheological response of the blend.
+The parameters that were thus optimized to maximize the yield stress at 260 °C were: temperature profile centered at 190 °C, screw speed of 400 rpm, and a flow rate of 700 g/h. With these parameters, a 30r-PP formulation was produced. At the same time, considering that the rheological behavior of this blend is very similar to that of 40r-PP blend and that the yield stress values for both materials were very close (see values in 
+Table 3
+), the blend containing 40 wt.% of r-PP was also produced using the same optimized processing conditions, aiming at maximizing the amount of recycled polymer in the final material.
+Filaments that were based on blends 30r-PP and 40r-PP formulated using the optimized processing conditions were then produced. For both materials, different trials were performed, aiming at optimizing the filament production conditions in order to obtain filaments with a constant diameter of 1.75 mm and an adequate quality of the external surface. In particular, the extrusion temperature was carefully optimized since this parameter is of paramount importance in dictating the flowability of the melt into the nozzle. From a general point of view, the selection of a low temperature value could induce high viscosity values, likely compromising the extrudability of the material due to the occurrence of filament buckling, and the achievement of a regular diameter [
+27
+]. On the other hand, high extrusion temperatures could result in uncontrolled flow of the melt exiting the nozzle (due to the low melt viscosity), negatively affecting the homogeneous solidification of the deposited material [
+28
+]. A further important parameter which needs to be optimized during the stage of filament production is the rate of cooling, remarkably affecting the regularity of the filament in terms of diameter and shape. For this reason, the cooling fans [%] had to be taken particularly into account. Aiming at homogenizing the cooling flow along the whole circumference of the filament, minimizing ovalization phenomena, for the production of 30r-PP and 40r-PP filaments, a diffuser that was designed on-purpose was used, as already described in a previous work [
+16
+].
+The optimized process parameters that were adopted to achieve filaments with the required characteristics are reported in 
+Table 4
+.
+The quality and the regularity of the diameter of the obtained filaments were evaluated through morphological observations. As can be observed from the SEM micrographs that are reported in 
+Figure 4
+, the filaments show a quite regular circular section, without significant issues related to oval sections, and a satisfactory surface roughness. The circularity of the filaments was assessed by measuring the minimum and maximum diameter of the filaments. For the filament that was based on 30r-PP, a minimum and maximum diameter of 1.70 and 1.83 mm were measured, while for 40r-PP formulation a slightly higher variability was found.
+Both materials were then 3D printed through FFF and in 
+Figure 5
+, some optical observations of details of FFF printed parts are reported. A good adhesion between the subsequent deposited layers can be noticed; besides, a homogeneous fill pattern was achieved, confirming the suitability of the produced materials for FFF applications.
+Finally, the mechanical properties of the FFF-printed specimens were evaluated through tensile tests. The obtained stress-strain curves are reported in 
+Figure 6
+, while 
+Table 5
+ presents the measured values of elastic modulus, yield stress, and elongation at break. Furthermore, in the same Table, the values of the mechanical properties of a commercial PP-based 3D printable material (“P-LENE T15”) [
+26
+] are also reported for comparison.
+The obtained results pointed out that the content of r-PP has a negligible effect on the elastic modulus and yield stress values, while it has a more pronounced influence on the elongation at break of the samples. In particular, higher elongational at break values were obtained for the blend containing 40 wt.% of r-PP, notwithstanding the adequate ductility of the system containing a lower loading of the recycled phase. The neat r-PP was evaluated to have a modulus of 605 ± 57 MPa, a strength of 16.4 ± 1.1 MPa, and an elongation of 6.2 ± 1.2 % for compression-molded films [
+21
+]. The comparison of the data of the r-PP-based blends with those of a commercial PP-based formulation demonstrated the achievement of satisfactory results in terms of mechanical performances, also considering the intrinsic eterogeneity of r-PP based formulations as compared to that of a virgin PP-based material, properly designed for FFF applications.
+This work clearly demonstrated the possibility of exploiting recycled PP for the formulation of filaments that are suitable for FFF 3D printing processes. In particular, a Taguchi design of an experimental method was used to optimize the processing conditions of PPt/r-PP blends showing adequate rheological and thermal characteristics for FFF. Blends containing 30 or 40 wt.% of r-PP were selected for the production of filaments and for the subsequent 3D printing through FFF. The morphological observations allowed for verifying the quality of the produced samples, confirming the effectiveness of the proposed method in achieving FFF-printable materials. Finally, the mechanical characterization of the printed samples showed that adequate tensile properties were achieved. Overall, the obtained results demonstrated the possibility of using recycled polymers for AM processes, therefore, allowing the valorization of a waste material through its exploitation for an advanced and sustainable manufacturing approach.
+The following supporting information can be downloaded at: 
+https://www.mdpi.com/article/10.3390/app122110840/s1
+, Figure S1. TGA and dTG in air for r-PP and PPt; Figure S2. DSC thermograms recorded during the second heating scan for both r-PP and PPt; Figure S3. Screw profile selected for the material compounding and details of the screw elements. Table S1. TGA and DSC data of r-PP and PPt.
+Conceptualization, A.F., R.A. and D.B.; investigation, G.B., F.C. and D.N.R.P.; writing—original draft preparation, D.B.; writing—review and editing, A.F., R.A. and D.B.; visualization, D.B.; supervision, A.F. All authors have read and agreed to the published version of the manuscript.
+This research received no external funding.
+Not applicable.
+Not applicable.
+The data that are presented in this study are available on request from the corresponding author.
+The authors declare no conflict of interest.
+1
+ In both cases, a flat profile centered at 190 or 210 °C was used.
+1
+ In both cases, a flat profile centered at 190 or 210 °C was used.
+Publisher’s Note:
+ MDPI stays neutral with regard to jurisdictional claims in published maps and institutional affiliations.

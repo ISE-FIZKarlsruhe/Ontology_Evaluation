@@ -1,0 +1,129 @@
+The success of an implant depends on the type of biomaterial used for its fabrication. An ideal implant material should be biocompatible, inert, mechanically durable, and easily moldable. The ability to build patient specific implants incorporated with bioactive drugs, cells, and proteins has made 3D printing technology revolutionary in medical and pharmaceutical fields. A vast variety of biomaterials are currently being used in medical 3D printing, including metals, ceramics, polymers, and composites. With continuous research and progress in biomaterials used in 3D printing, there has been a rapid growth in applications of 3D printing in manufacturing customized implants, prostheses, drug delivery devices, and 3D scaffolds for tissue engineering and regenerative medicine. The current review focuses on the novel biomaterials used in variety of 3D printing technologies for clinical applications. Most common types of medical 3D printing technologies, including fused deposition modeling, extrusion based bioprinting, inkjet, and polyjet printing techniques, their clinical applications, different types of biomaterials currently used by researchers, and key limitations are discussed in detail.
+Three-dimensional printing is a process of building 3D objects from a digital file. In this process, a digital 3D object is designed using computer aided design (CAD) software. SolidWorks, AutoCAD, and ZBrush are some examples of popular CAD software used commercially in industries. Blender, FreeCAD, Meshmixer, and SketchUp are some examples of the freeware commonly used to make 3D models. These 3D objects are saved in a 3D printer-readable file format. The most common universal file formats used for 3D printing are STL (stereolithography) and VRML (virtual reality modeling language). Additive manufacturing file format (AMF), GCode, and ×3g are some of the other 3D printer readable file formats. 
+Figure 1
+ shows the steps involved in 3D printing of an object from a CAD design.
+In additive manufacturing, material is laid in layer-by-layer fashion in the required shape, until the object is formed. Although the term 3D printing is used as a synonym for additive manufacturing, there are several different fabricating processes involved in this technology. Depending on the 3D printing process, additive manufacturing can be classified into four categories, including extrusion printing, material sintering, material binding, and object lamination. 
+Table 1
+ shows a broad classification of the different types of 3D printing techniques and their working principles.
+The 3D printing technology has been in use more than three decades in the automobile and aeronautical industries. In the medical field, the use of this technology was limited only to 3D printing of anatomical models for educational training purposes. Only with the recent advancements in developing novel biodegradable materials has the use of 3D printing in medical and pharmaceutical fields boomed. Today, additive manufacturing technology has wide applications in the clinical field and is rapidly expanding. It has revolutionized the healthcare system by customizing implants and prostheses, building biomedical models and surgical aids personalized to the patient, and bioprinting tissues and living scaffolds for regenerative medicine. 
+Table 2
+ shows the applications of 3D printing technology in various sectors.
+Biomaterials are natural or synthetic substances that are in contact with biological systems, and help to repair, replace, or augment any tissue or organ of the body for any period of time. Based on the chemical nature of the substances, biomaterials used in 3D printing are broadly classified into four categories, as show in 
+Table 3
+. An ideal 3D printing biomaterial should be biocompatible, easily printable with tunable degradation rates, and morphologically mimic living tissue.
+The selection of biomaterial for a 3D printing mechanism depends on the application of end product. For instance, biomaterial used for orthopedic or dental applications should have high mechanical stiffness and prolonged biodegradation rates. By contrast, for dermal or other visceral organ applications, the biomaterial used should be flexible and have faster degradation rates. The majority of biomaterials used in current medical 3D printing technology, such as metals, ceramics, hard polymers, and composites, are stiff, and thus widely used for orthodontic applications. Soft polymers, including hydrogels, are widely used in bioprinting cells for tissue/organ fabrication. The hydrogel microenvironment mimics the extracellular matrix of a living tissue, and thus, cells are easily accommodated.
+Among the various types of 3D printing techniques described in the 
+Table 1
+, FDM, extrusion based bioprinting, inkjet, and polyjet are the most common types of additive manufacturing techniques used in the medical field.
+FDM is the most common and inexpensive type of additive manufacturing technology. In this technique, a thermoplastic filament is passed through a heated print head and is laid down on to the build platform in layer-by-layer fashion, until the required object is formed. MakerBot, Ultimaker, Flashforge, and Prusa are some of the commercially available inexpensive desktop 3D printers. These printers are limited by the variety of the materials being used, and produce lower resolution objects. Expensive FDM printers, which can use wide varieties of materials and can print at higher resolutions are also available, such as Stratasys 3D printers. FDM printers can accommodate more than one print head, and thus, can print multiple types of materials at a time. Usually, among these multi-head printers, one of the print head bears a supporting filament which can be easily removed or dissolved in water. 
+Figure 2
+ shows the parts of FDM 3D printer.
+ABS is the most common thermoplastic polymer used for FDM process. PLA, nylon, polycarbonate (PC), and polyvinyl alcohol (PVA) are some of the other commonly used printing filaments. Lactic acid-based polymers, including PLA and PCL, are well known for their biocompatible and biodegradable properties, and hence, are extensively used for medical and pharmaceutical applications. Additionally, PLA and PCL melt at low temperatures, 175 °C and 65 °C respectively, making it easy to load drugs without losing their bioactivity due to thermal degradation. These polymers undergo hydrolysis in vivo, and are eliminated through excretory pathways [
+6
+,
+7
+]. Comparatively, PCL has lower mechanical strength than PLA, and thus, used for non-load bearing applications.
+Printing parameters, such as raster angle, raster thickness, and layer height, play a crucial role in fabricating biocompatible scaffolds with required pore size and mechanical strength. Combinations of materials, such as PCL/chitosan [
+8
+] or PCL/β-TCP (tricalcium phosphate) [
+9
+] are also used in the FDM process to enhance the bioactive properties of the scaffolds. FDM has the ability to build constructs quickly, with dimensional accuracy and excellent mechanical properties. Hence it is used widely for prototyping in industry. In medicine, FDM is used for fabricating customized patient-specific medical devices, such as implants, prostheses, anatomical models, and surgical guides. Various thermoplastic polymers are doped with variety of bioactive agents, including antibiotics [
+10
+], chemotherapeutics [
+11
+], hormones [
+12
+], nanoparticles [
+13
+,
+14
+], and other oral dosages [
+15
+,
+16
+] for personalized medicine. Using this technology, non-biocompatible materials, such as ABS [
+17
+] or thermoplastic polyurethane (TPU), are used for creating medical models for perioperative surgical planning and simulations [
+18
+]. These models are also used as a tool to explain the procedures to the patients before they undergo surgery. 
+Table 4
+ shows the types of biomaterials used in FDM technique for clinical applications.
+In this method, materials are extruded through a print head either by pneumatic pressure or mechanical force. Similar to FDM, materials are continuously laid in layer-by-layer fashion until the required shape is formed, as shown in 
+Figure 3
+. Since this process does not involve any heating procedures, it is most commonly used for fabricating tissue engineering constructs with cells and growth hormones laden. Bioinks are the biomaterials laden with cells and other biological materials, and used for 3D printing. This 3D printing process allows for the deposition of small units of cells accurately, with minimal process-induced cell damage. Advantages such as precise deposition of cells, control over the rate of cell distribution and process speed have greatly increased the applications of this technology in fabricating living scaffolds.
+A wide range of materials with varied viscosities and high cell density aggregates can be 3D printed using this technique. A large variety of polymers are under research for the use in bioprinting technology. Natural polymers, including collagen [
+20
+], gelatin [
+21
+], alginate [
+22
+], and hyaluronic acid (HA) [
+23
+], and synthetic polymers, such as PVA [
+24
+] and polyethylene glycol (PEG), are commonly used in bioinks for 3D printing. Often these bioinks are post-processed either by chemical or UV crosslinking to enhance the constructs mechanical properties. Depending on the type of polymer used in the bioink, biological tissues and scaffolds of varied complexity can be fabricated. Multiple print heads carrying different types of cell lines for printing a complex multicellular construct can be possible with this technique. Lee et al., have used six extrusion headed 3D printer with six different bioinks, including PEG as a sacrificial ink to fabricate a living human ear [
+25
+]. Laronda et al., has used this extrusion bioprinting to fabricate gelatin based ovarian implants which can accommodate ovarian follicles. These implants restored the ovarian functions of the sterilized mice, and they even bore offspring [
+21
+].
+Extrusion bioprinting has been used for fabricating scaffolds for regeneration of bone [
+26
+], cartilage [
+22
+], aortic valve [
+27
+], skeletal muscle [
+28
+], neuronal [
+29
+], and other tissues. In spite of all this success, material selection and mechanical strength still remains a major concern for bioprinting. Fabricating vascularization within a complex tissue is still an unanswered problem faced by this technology. To address this issue, researchers have focused on using sacrificial materials, which are incorporated within the construct while 3D printing, and are removed in post-processing, leaving the void spaces to act as vascularization channels [
+30
+]. 
+Table 5
+ shows some of the biomaterials currently used by researchers, and their applications.
+In material sintering type of 3D printing technique, the powdered form of printing material in a reservoir is fused into a solid object, either by using physical (UV/laser/electron beam) or chemical (binding liquid) sources. SLA type is the oldest and widely used technology among metal sintering 3D printers. Unlike extrusion based printers, there is no contact between the print head and printing object. The objects can be 3D printed with high accuracy and resolution with this technique. The major limitation of this technology includes limited availability of photocurable polymer resins. Majority of the SLA resins currently available are based on low molecular weight polyacrylate or epoxy resins. For biomedical applications, polymer ceramic composite resins, made up of hydroxyapatite based calcium phosphate salts, are commonly used.
+This process is similar to SLS; instead of fusing the powder bed with laser or electron beam, binding liquid is selectively dropped on to the powdered bed to bind the materials in a layer-by-layer fashion as shown in 
+Figure 4
+. This process is continued until the final object is formed. Thermal and piezoelectric are two types of printing heads used in this technique. In thermal print head systems, an electric heating unit is present inside the deposition head, which vaporizes the binding material to form a vapor bubble. This vapor bubble expands due to pressure, and comes out of the print head as a droplet. Whereas in the piezoelectric print head system, the voltage pulse in the print head induces a volumetric change (changes in pressure and velocity) in the binder liquid, resulting in the formation of a droplet. These printers are known for their precise deposition of the binder liquid with speed and accuracy.
+Water, phosphoric acid, citric acid, PVA, poly-DL-lactide (PDLLA) are some of the commonly used binding materials for inkjet 3D printing. A wide range of powdered substances, including polymers and composites, are used for medical and tissue engineering applications. Finished 3D printed objects are often post-processed to enhance the mechanical properties. Wang et al., have used phosphoric acid and PVA as binding liquids to bind HA/β-TCP powders for bone tissue regeneration applications. The accuracy and mechanical strength of constructs printed using phosphoric acid were higher than constructs printed using PVA [
+35
+]. Sandler et al., have fabricated precise and personalized dosage forms using concentrated solutions of paracetamol, theophylline, and caffeine [
+36
+]. Uddin et al., have surface coated metallic transdermal needles with chemotherapeutic agents using Soluplus, a copolymer of PVC–PVA–PEG, for transdermal drug delivery [
+37
+]. 
+Table 6
+ shows the types of binding liquids and respective powder materials used for inkjet printing.
+Similar to inkjet printing, layers of photopolymer resin are jetted on to the build platform and are simultaneously cured using UV light source, as shown in 
+Figure 5
+. Unlike inkjet process, multiple types of materials can be jetted simultaneously and cured. This gives us the ability to fabricate a complex multi-material object. Due to these capabilities, polyjet is widely used in the medical field to fabricate anatomical models for surgical planning and pre-operative simulations. High resolution objects with varied modular strengths can be 3D printed with high dimensional accuracy using polyjet technique. Since the UV source is right next to the jetting nozzle and cures the resin instantaneously, post-processing of the construct will not be necessitated. This technology is relatively new to the additive manufacturing field. Many types of photopolymers, such as ABS like, Veroclear, Verodent, and Fullcure are commercially available for use in polyjet printing. 
+Table 7
+ shows some of the photopolymers used in medical applications.
+In this type of 3D printing technology, thin layers of paper, plastic, or metal sheets are glued together in layer-by-layer fashion, and cut into the required shape using a metallic cutter or laser. This process is inexpensive, fast, and easy to use. It fabricates relatively lower resolution objects and is used for multicolor prototyping.
+Although 3D printing has the ability to fabricate on-demand, highly personalized complex designs at low costs, this technology’s medical applications are limited due to lack of diversity in biomaterials. Even with the availability of variety of biomaterials including metals, ceramics, polymers, and composites, medical 3D printing is still confined by factors such as biomaterial printability, suitable mechanical strength, biodegradation, and biocompatible properties.
+Usually, in extrusion based bioprinting, higher concentrations of polymers are used in fabricating bioinks to obtain structural integrity of the end product. This dense hydrogel environment limits the cellular network and functional integration of the scaffold. For any moderate sized biological scaffold to be functional, vascularization is of utmost importance, and is not possible with the current 3D printing technology. Small scale scaffolds currently printed in the laboratories of researchers can easily survive through diffusion, but a life-size functional organ must have a profuse vascularization. To address this problem, incorporation of sacrificial materials during the scaffold fabrication has been used by many researchers. These materials fill up the void spaces, providing mechanical support to the printing materials, and once constructs are fabricated, they are removed by post-processing methods. Many sacrificial/fugitive materials including carbohydrate glass [
+55
+], pluronic glass [
+56
+], and gelatin microparticles [
+57
+] are currently under investigation [
+5
+].
+Additionally, design induced limitations cause material discontinuity, due to poor transformation of complex CAD design into machine instructions. Process induced limitations include differences in porosities of CAD object and finished 3D printed product [
+58
+].
+In summary, 3D printing has been revolutionizing the medical field, and is still rapidly expanding. Popular clinical applications include fabrication of patient-specific implants and prostheses; engineering scaffolds for tissue regeneration and biosynthetic organs; personalization of drug delivery systems; and anatomical modeling for perioperative simulations. The use of 3D printing in the medical field is continuously growing, due to its capabilities, such as personalization of medicine, cost efficiency, speed, and enhanced productivity [
+59
+]. With the advancement in 3D modeling software and mechanics of the printing machine, the dimensional precision, speed, and tunability of a 3D printer has been vastly improved. Using finite element analysis, the change in the mechanical properties of the finished product with respect to printing parameters can be simulated, and best suiting parameters can be obtained beforehand. Even with all these advancements, medical 3D printing is still budding and has incredible potential.
+Currently, there are only a limited number of biodegradable polymers available for 3D printing. Most of these 3D printing biomaterials are used for either drug delivery or space-filling implantation purposes. Therefore, there is a major need for research to fabricate novel biopolymers with tunable bio-properties and that can restore functionality at the site of application. Inexpensive, readily available lactic acid based polymers (such as PLA and PCL) are focused on, mainly due to their abilities to perform well in most types of 3D printing technologies. Additionally, they have excellent mechanical and biodegradable properties. These polymers are also mixed with traditional biomaterials (such as HA, TCP) and used as composites to provide higher printability, mechanical stability, and greater tissue integration for orthopedic applications.
+With continuous research in bioprinting and biomaterials technology, we are getting closer to fabricating life-sized, fully functional 3D printed organs. Bioprinting is still in its early stages, where many researchers have proved the feasibility of 3D printing a functional organ in a laboratory. Soon, there will be an advancement in use of these biomaterials/bioinks from labs to clinical trials, and eventually, in everyday clinical practice. This could be a potential solution to address the problem of continuous organ donor’s shortage. Moreover, the ability of the 3D printer to fabricate tissues/organs from the host cells will reduce the immune response of the implant, and in turn, reduce tissue rejection.
+The authors received no specific funding for this work. 
+Authors Karthik Tappa and Udayabhanu Jammalamadaka contributed equally. 
+The authors declare no conflicts of interest.
+* PMMA—poly (methyl methacrylate).
+* PMMA—poly (methyl methacrylate).
+* TPU—thermoplastic urethane.
+* TPU—thermoplastic urethane.
+* EDC/NHS—(1-ethyl-3-(3-dimethylaminopropyl) carbodiimide hydrochloride)/N-hydroxysuccinimide; HPMC—(hydroxypropyl methylcellulose); hMSCs—(human mesenchymal stem cells); hBMSc—(human bone marrow stromal cells).
+* EDC/NHS—(1-ethyl-3-(3-dimethylaminopropyl) carbodiimide hydrochloride)/N-hydroxysuccinimide; HPMC—(hydroxypropyl methylcellulose); hMSCs—(human mesenchymal stem cells); hBMSc—(human bone marrow stromal cells).

@@ -1,0 +1,169 @@
+Thoracic endovascular aortic repair (TEVAR) is a life-saving therapy for type B aortic dissection (TBAD). However, surveillance computed tomography (CT) scans in post-TEVAR patients are associated with high radiation dose, thus resulting in potential risk of radiation-induced malignancy. In this study, we developed a patient-specific three-dimensional (3D) printed phantom with stent grafts in situ, then scanned the phantom with different CT protocols to determine the optimal scanning parameters for post-treatment patients. The CT scans were conducted with different kVp and pitch values (80, 100, 120 kVp and pitch of 1.2, 1.5, 2.0, 2.5), resulting in a total of 12 datasets. Signal-to-noise ratio (SNR) was measured to determine and compare the image quality between different datasets. Results showed no significant differences in SNR between different kVp when the pitch value was 1.2. At low pitch values, a decrease in kVp from 120 to 80 led to a significant effective dose reduction by more than 20%. SNR decreased by 30% when pitch was increased from 1.2 to 2.5 at 80 kVp, and 20% at 120 kVp. In contrast, there was only a 3.9% decrease in SNR when kVp was reduced from 120 to 80 at pitch 1.2, and 15.9% at pitch 2.5. High pitch with 100 kVp can effectively reduce the dose while maintaining image quality.
+Thoracic endovascular aortic repair (TEVAR) can be a life-saving therapy for treating aortic disease. Compared to open surgical repair, TEVAR is a valid therapeutic option for type B aortic dissection (TBAD) because of its lower mortality, morbidity, and paraplegia rate in the past decade [
+1
+,
+2
+,
+3
+]. However, management algorithms remain controversial and long-term follow up is required to determine outcomes and reintervention rates [
+4
+,
+5
+,
+6
+,
+7
+].
+Computed tomography angiography (CTA) is currently the preferred imaging modality for diagnosis, treatment planning, and follow up for AD patients. With improved spatial and temporal resolution available with modern computed tomography (CT) scanners, CTA plays an important role in the diagnosis and follow up of aortic dissection (AD) [
+8
+,
+9
+]. However, the high radiation dose associated with CTA is still a concern for the well-being of patients [
+10
+,
+11
+,
+12
+]. To monitor patients after TEVAR, the pursuit of high-resolution and higher-quality images may bring unnecessary radiation doses. Therefore, it is necessary to reduce the radiation dose while maintaining the quality of CT images.
+Finding a balance between image quality and radiation risk has always been a challenging issue in achieving optimal scanning protocols. A number of studies describe different strategies to lower the radiation dose including the use of iterative reconstruction (IR) for reducing image noise, use of low tube kilovoltage peak (kVp), and use of high-pitch protocols with fast speed CT scanners [
+13
+,
+14
+,
+15
+]. Despite these studies providing promising results, research is still limited with regard to the reduction of radiation dose for aortic dissection patients who require repeat scanning for many years.
+Compared with preoperative planning when detail is paramount, postoperative patients could receive a lower dose for routine follow-up examinations to reduce cumulative radiation dose. Thus, the purpose of this study was to investigate the optimal CTA protocols for surveillance of TBAD patients after EVAR. We employed a patient-specific three-dimensional (3D) printed TBAD model with a stent-graft TEVAR in situ.
+Patient-specific 3D printed phantoms have been proven to be valuable in multiple medical applications [
+16
+,
+17
+,
+18
+,
+19
+,
+20
+,
+21
+]. In our previous study, we described how we developed a patient-specific 3D printed TBAD aortic model, and confirmed its accuracy in resembling the mechanical and radiological properties of in vivo imaging under CT scanning modalities [
+22
+]. In this study, we extended our application of a 3D printed aorta model to focus on the study of optimal CT protocols by deploying a bespoke stent graft inside the true lumen of the AD aorta model to simulate the TEVAR process, and then scanning the model with different CT protocols.
+Suitable patient data and materials were required for the preparation and implementation of the 3D printed aorta model used in the study. These components were identified and then utilized as per the methods outlined in the following sections.
+Contrast-enhanced CT (CECT) image data of 11 patients who had TBAD were de-identified and retrieved from public hospital records between November 2015 and March 2016 after ethics approval (Curtin Human Research Ethics (HRE) Committee, approval number: HRE2018-0087). One of the patient datasets (CECT performed on a 128-slice CT with 120 kVp tube potential, 128 reference mAs, and 1.0 mm reconstructed slice thickness) was selected due to high image quality and contrast medium being present in the false lumen, allowing for identification of the aortic shape. The selected CT image dataset was imported into 3D Slicer (Version 4.9.0, 
+www.slicer.org
+ accessed on 26 July 2021; MA, USA) to proceed with segmentation. The chosen segment had a perfect description of both lumens and intimal flap and the border of the aortic wall could be clearly identified (
+Figure 1
+). After segmentation, a 3D outer surface reconstruction model was generated. Post-processing of the 3D reconstruction model was necessary to ensure model integrity and printing success including checking the thickness, filling of defects (for example, holes inside the models, discontinuous surfaces), and surface smoothing. The 3D reconstruction model was transferred into the stereolithography (STL) format for post cleaning and pre-print checking. The final model was directly ordered from the online customer service of 3D Systems Inc. (Valencia, CA, USA).
+The selection of a suitable printing material depends on three considerations: the mechanical properties, radiological properties, and transparency. To represent the mechanical properties of the human aorta, the material of the model must have similar flexibility and elasticity. The tensile strength in elderly patients with cardiovascular disease should be around 0.39 MPa and have a modulus of elasticity of 0.628 [
+23
+]. The elongation at breaking point of the aorta is around 82% to 140% and the hardness is between Shore A12 and A18 throughout the ascending, descending, and abdominal aorta [
+24
+].
+Based on our previous study, we chose four different 3D printing materials that had mechanical properties close to that of patients with aortic dissection [
+22
+]. In terms of transparency, a completely transparent model would enhance stent graft deployment without the need for imaging and contrast. This would enable good vision of intravascular structures and be useful in academic applications. However, a transparent elastomer printing material was not available from commercial companies, therefore, a translucent material was the next best option. After scanning samples of several available materials with the current clinical thoracic CTA protocol, one of the materials, Visijet CE-NT (3D systems Inc., Wilsonville, OR, USA), was selected as it had the same radiological properties to in vivo aorta [
+22
+]. The reason for choosing Visijet CE-NT is due to the following reasons: first, it is a rubber-like material suitable for printing aorta-like models. Second, it has a light yellow and translucent appearance allowing for visualization of the deployed stent grafts inside the aorta. Third, the Visijet CE-NT material has two different hardnesses, A30 and A70, with A30 having a tensile strength between 0.2 and 0.4, which is close to elderly cardiovascular tissue properties. Finally, our recent study confirms that Visijet CE-NT A30 is the most appropriate material for printing aorta models because its CT attenuation is similar to that of the contrast-enhanced CT images of aortic dissection [
+22
+].
+Three commercially available thoracic stent grafts (Medtronic) were deployed into the model after planning and sizing by an experienced vascular surgeon. The proximal piece deployed into the arch to cover the subclavian artery measured a length of 150 mm and diameter tapering from 42 to 38 mm, which was placed in the aortic arch. The second overlapping piece was 90 mm long by 31 mm in diameter. The final distal piece measured 94 mm in length and 25 mm in diameter (
+Figure 2
+).
+The 3D printed TBAD model was placed in a plastic container that was filled with a contrast medium to simulate CECT examinations. Due to the flexibility of the model, air bubbles inside the model were expelled by aspiration via a syringe (
+Figure 3
+). The iohexol contrast medium OmnipaqueTM 350 (GE Healthcare Australia Pty Ltd., New South Wales, Australia), which is routinely used in contrast-enhanced CT scans, was diluted to 7% with a resulting CT attenuation of 300 HU, similar to that of routine CECT. The model was scanned by a 192-slice CT scanner (Siemens Force, Siemens Healthcare, Forchheim, Germany). The CECT scans were conducted with different kVp and pitch values (80, 100, 120 kVp and pitch of 1.2, 1.5, 2.0, 2.5), resulting in a total of 12 datasets. A slice thickness of 1.0 mm with a 0.5 mm reconstruction interval was applied to all images. An iterative reconstruction technique was used (advanced modelled iterative reconstruction (ADMIRE) algorithm with level 3, Siemens Healthcare) and a tissue convolution kernel of Bv40.
+In order to determine the image quality in these CTA protocols, the image quality was quantitatively evaluated by measuring the signal-to-noise ratio (SNR) of the proximal and middle descending aorta. Regions of interest (ROI) were placed in the true and false lumens with an area of 25 mm
+2
+ (containing at least 300 voxels) to measure SNR. 
+Figure 4
+ shows the ROI measurement of SNR in the aorta of the model. To minimize the difference between observers, the SNR measurement was repeated three times at each location, and the average value was used to minimize the difference between observers, and the average value between two observers was used as the final result.
+The volume CT dose index (CTDI vol) and dose length product (DLP) were recorded and compared between different CTA scanning protocols. The effective dose was calculated using a tissue conversion coefficient of 0.014 mSv/mGy/cm, which is commonly used for the calculation of chest CT dose [
+25
+].
+All data were imported into SPSS 26.0 (IBM Corporation, Armonk, NY, USA) for statistical analysis. A paired sample t-test was used to determine whether there were any significant differences in SNR measured with different CPA protocols. A P value of less than 0.05 indicated a statistically significant difference.
+Different CTA imaging protocols were successfully tested on the 3D printed model. All measurements were performed by two observers, with excellent correlation between the observers. 
+Table 1
+ shows the SNR measurements at images acquired with different CTA protocols. SNR measurements did not vary significantly when the kVp value range was close such as a comparison between 80 and 100 kVp or between 100 and 120 kVp (
+p
+ > 0.05), regardless of the pitch values. However, the measurements showed that at pitch 1.5, 2.0, and 2.5, SNR at 120 kVp was significantly higher than 80 kVp (
+p
+ < 0.05) in both true and false lumens. SNR showed no significant differences between different kVp when the pitch value was 1.2. At low pitch values such as 1.2 and 1.5, a decrease in kVp from 120 to 80 led to a significant effective dose reduction by more than 20%.
+Unlike kVp, a variation of pitch values can significantly affect SNR measurements. When the kVp value is kept constant, SNR showed significant differences with different pitch values. SNR measured significantly higher in images acquired with low pitch values such as 1.2 and 1.5, compared to those acquired with the high 2.0 and 2.5 protocols (
+p
+ < 0.05), regardless of the location of measurements. SNR measurements showed that image quality significantly dropped when the pitch value increased from 1.5 to 2.0 in all kinds of kVp protocols (
+p
+ < 0.05). SNR dropped 30% when pitch value was raised from 1.2 to 2.5 at 80 kVp, and 20% at 120 kVp. In contrast, SNR dropped only 3.9% when kVp was reduced from 120 to 80 at pitch 1.2, and 15.9% at pitch 2.5.
+Under low pitch protocols such as 1.2 and 1.5, there were no significant differences in SNR measurements between the proximal and middle descending aorta. In contrast, at high pitch value protocols such as 2.0 and 2.5, the proximal descending aorta tended to have a higher image quality than the middle descending aorta, especially in the false lumen. 
+Figure 5
+ is an example showing the reformatted images of these CTA protocols. When kVp decreased to 80, image noise was increased with the use of high pitch value protocols such as 2.0 and 2.5, as shown in 
+Figure 5
+. However, the shape of the stent graft and the location of the intimal flap are clearly displayed in these images, despite the use of low-dose protocols.
+In this study, we simulated a postprocedural surveillance CT scan of a patient with TBAD with different scanning protocols on a 3D printed aortic model. Quantitative assessment of image quality showed no significant differences between different kVp when the pitch value was 1.2. More than 20% dose reduction was achieved with the use of low kVp such as 80. Compared to the change in kVp, image quality had significant differences between low and high pitch values, although there was no significant impact on the visualization of the stent graft and other structures. Thus, a low-dose aortic CTA is suggested for the follow-up of patients after EVAR.
+For patients with aortic dissection, follow-up CT is mandatory and continues for many years [
+8
+,
+11
+,
+26
+]. Various dose-reduction strategies continue to develop with the advancement of CT imaging technology, striving to reduce the risk of patients being exposed to excessive radiation while maintaining image quality including low kVp, use of IR algorithms, tube current modulation, high-pitch protocol, and use of dual energy CT [
+10
+,
+15
+,
+25
+]. Low-dose CTA using low kVp and high-pitch protocols has been proven to achieve diagnostic image quality compared to the standard aortic CTA protocol while significantly reducing radiation dose [
+10
+,
+13
+,
+27
+]. However, the image quality research for post TEVAR follow-up patients is still limited [
+28
+,
+29
+]. This study adds valuable information to the current literature by exploring a variety of CTA protocols and supporting the value of patient-specific 3D printed phantoms.
+A CT protocol with high-pitch is available with fast speed CT scanners and will decrease radiation dose significantly when the pitch is increased. However, pitch value also significantly affects image quality with compromising spatial resolution; higher pitch leads to an increase in image noise, which could possibly affect the diagnostic quality. This has been confirmed by our study as image noise was significantly raised when the pitch was increased (
+Figure 5
+). Despite this potential limitation, some other studies have still shown the possibility of using high-pitch CTA protocols in the diagnosis of aortic dissection without losing image quality [
+10
+]. Shen et al. claimed that the use of a proper iterative reconstruction algorithm is able to maintain image quality while reducing the dose by using a low kVp, high pitch scanning protocol [
+13
+]. Freyhardt et al. also investigated low-kV CT protocols with IR, allowing for CTA of the entire aorta with excellent image quality and diagnostic confidence with a dose reduction of up to 80% compared to 120 kV [
+27
+]. In our study, we showed the influence of pitch value on image quality, which is more obvious than adjusting kVp, especially at low kVp.
+The novelty of this study lies in the use of a personalized 3D printed aortic model to simulate TEVAR of TBAD. Use of 3D printed models to study optimal CT scanning protocols has been supported in previous studies including the assessment of coronary artery plaques [
+30
+], coronary stenting [
+31
+] and detection of pulmonary embolism [
+32
+,
+33
+]. In order to evaluate the impact of different protocols on radiation dose and image quality, CT scans have to be conducted multiple times with different scanning parameters. However, it would be unethical to scan the same patient multiple times and performing this experiment with different patients would lose accuracy due to different body types. With the development of 3D printing technology and the advancement of its application in the medical field, patient-specific 3D printed models could potentially become the new option for these kinds of experiment [
+16
+,
+18
+,
+34
+].
+Previous literature has discussed the use of 3D printed models to plan stent graft treatment in patients. Tong et al. deployed stent grafts in short 3D printed aortic models with thoracoabdominal aortic disease. They used these models to guide pre-fenestration of the stent grafts before re-deploying them in patients, believing that 3D printing technology could potentially improve both the accuracy and efficiency of the TEVAR procedure [
+35
+]. Li et al. also used 3D printed models to guide total endovascular repair for a patient who had a stent graft incorrectly deployed in the false lumen [
+36
+]. Zhang et al. performed pre-fenestration on a stent graft in a 3D printed model. They thought stent graft pre-fenestration guided by the 3D printed aortic model provided a new solution for aortic dissection treatment planning and claimed that this could improve accuracy of the fenestration location [
+37
+]. Although these previous studies of stent graft deployment inside 3D models are of interest, most did not specify the materials they used to make the models, or attempted to use materials that have mechanical and radiological properties close to the real human aorta. In our study, we provide a new possibility for the medical application of 3D printing by using 3D printing materials with accuracy in vivo representation to obtain more realistic experimental data.
+We recognize that there are some limitations to our experiment. First, despite a realistic 3D printed model being used for studying different CTA protocols, the model was not placed in an environment that simulated normal surrounding anatomic regions such as the lungs, ribs, spinal column, or heart. Therefore, the radiation dose associated with these protocols were lower than the actual values reported by other studies. In addition, the 3D printed aorta model was placed in a customized box and immersed inside a dilute contrast medium instead of the perfusion of contrast medium into the lumen. Furthermore, the contrast was not flowing. Future research could focus on improving this aspect of the model. Connecting the 3D printed aortic model to a pulsatile flow circuit with a cardiac pump or printing a controllable syringe pump could be a solution as this will allow for accurate measurement under more dynamic conditions. This can be addressed by further studies when our printing capabilities meet these requirements. Despite this limitation, the current measurements are still acceptable and consistent with what has been reported in the literature regarding measurements of dimensional accuracy based on 3D printed static cardiovascular models [
+21
+]. Second, no contrast-to-noise ratio (CNR) was measured. In this study, only SNR was measured to determine image quality because the model was immersed in the contrast medium. A more robust conclusion could be reached with the measurement of both SNR and CNR when the 3D printed models are placed in a realistic chest phantom in future studies. Third, the measurement of SNR and effective dose could be different in patients. Although we selected a 3D printing material that had mechanical and radiological properties approximating those in the human, due to the limited choice of commercial 3D printing materials, we could not exactly match the human aorta.
+Different slice thicknesses, use of IR strengths, and image post-processing algorithms to suppress the artifacts from stents could also affect the SNR measurements. Additionally, we did not undertake a qualitative assessment of image quality in this study. In future research, the application value of 3D printed models could be verified through scoring by clinical imaging professionals.
+In this study, we demonstrated the use of a 3D printed full-sized aortic dissection model to investigate the possibility of lower radiation dose for the surveillance of TBAD post TEVAR using CT with different scanning parameters. Low-dose CT with acceptable image quality can be achieved by lowering the tube voltage. Compared to adjusting kVp, increasing the pitch can effectively reduce the radiation dose, but will also reduce the overall image quality. High pitch with medium kVp can effectively reduce the dose while maintaining image quality. The contribution of 3D printing to medical applications was also explored in this study. However, since the model was not placed in a realistic chest cavity environment, the radiation dose reports in this study were lower than the actual values. Improvements in materials and design could add further details and will be explored in future studies.
+Conceptualization, C.-A.W., A.S., and Z.S.; Methodology, C.-A.W., A.S., and S.J.; Formal analysis, C.-A.W.; Investigation, C.-A.W., A.S., S.J., and Z.S.; Data curation, C.-A.W. and Z.S.; Writing—original draft preparation, C.-A.W.; Writing—review and editing, all authors; Visualization, C.-A.W.; Supervision, A.S., S.J., and Z.S.; Project administration, Z.S. All authors have read and agreed to the published version of the manuscript.
+This research received no external funding.
+The study was conducted according to the guidelines of the Declaration of Helsinki, and approved by the Human Research Ethics Committee of CURTIN UNIVERSITY (approval number: HRE2018-0087).
+Patient consent was waived due to the use of anonymized data for 3D printing purposes with no patient information identified.
+The datasets used during the current study are not publicly available due to strict requirements set out by the Human Ethics Research Committee regarding the storage and use of the data by authorised investigators.
+The authors would like to thank Tom Tiang from the Perth Children’s Hospital for his assistance in CT scanning the 3D printed models.
+The authors declare no conflict of interest.
+Publisher’s Note:
+ MDPI stays neutral with regard to jurisdictional claims in published maps and institutional affiliations.

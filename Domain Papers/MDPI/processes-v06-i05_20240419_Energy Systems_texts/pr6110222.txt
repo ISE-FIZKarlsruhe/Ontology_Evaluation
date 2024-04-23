@@ -1,0 +1,2135 @@
+The focus of this study is to present the adherent transients that accompany the combustion of waste derived fuels. This is accomplished, in large, by developing a dynamic model of the process, which can then be used for control purposes. Traditional control measures typically applied in the heat and power industry, i.e., PI (proportional-integral) controllers, might not be robust enough to handle the the accompanied transients associated with new fuels. Therefore, model predictive control is introduced as a means to achieve better combustion stability under transient conditions. The transient behavior of refuse derived fuel is addressed by developing a dynamic modeling library. Within the library, there are two models. The first is for assessing the performance of the heat exchangers to provide operational assistance for maintenance scheduling. The second model is of a circulating fluidized bed block, which includes combustion and steam (thermal) networks. The library has been validated using data from a 160 MW industrial installation located in Västerås, Sweden. The model can predict, with satisfactory accuracy, the boiler bed and riser temperatures, live steam temperature, and boiler load. This has been achieved by using process sensors for the feed-in streams. Based on this model three different control schemes are presented: a PI control scheme, model predictive control with feedforward, and model predictive control without feedforward. The model predictive control with feedforward has proven to give the best performance as it can maintain stable temperature profiles throughout the process when a measured disturbance is initiated. Furthermore, the implemented control incorporates the introduction of a soft-sensor for measuring the minimum fluidization velocity to maintain a consistent level of fluidization in the boiler for deterring bed material agglomeration.
+Circulating fluidized bed (CFB) boilers have been gaining ground as a viable standard when it comes to thermally treating municipal waste. Despite the complex inherent nature of refuse derived fuels (RDF), waste can be thermally treated to produced heat and power. This approach can in turn impact the environment in a positive way by reducing the need for antiquated techniques such as land filling, as well as alleviating the need for coal and oil fired boilers. The complexities of RDF are matched by the advantages of CFB boilers, which can accommodate a high degree in the fluctuation of fuel composition, high combustion efficiency, lower emissions, and have a rather quick response to load changes [
+1
+,
+2
+,
+3
+].
+The complications that can arise during the combustion of RDF are necessary to predict or better yet avoid in order for large scale industrial CFBs to provide heat and power at a consistent rate. For this reason, a multi-functional dynamic modeling library has been developed to aid in maintaining a high level of operation by detecting and/or preventing any unwanted phenomenon due to the transient behavior of RDF. The implementation of more advanced control has the ability to reduce the magnitude of potential peaks and dips in boiler temperature profiles. This paper addresses the issues by developing a dynamic model of RDF combustion. Showing that a model based on first principal modeling techniques can be used to design and implement a model predictive control strategy for better control of the boiler temperature profiles. The short literature review that follows dictates this.
+Modeling industrial applications is a standard practice which allows one to firstly determine the feasibility of any new industrial installation, but secondly to provide insight into how the process will operate under different operating conditions. For example, coal, biomass, and RDF all have unique inherent characteristics, i.e., heating value (
+
+
+
+
+H
+
+
+V
+
+
+
+
+). As well as each one being able to present a different series of problematic outcomes during the combustion process, i.e., efficiency and emissions. The focus of this paper is on a CFB fired with RDF. However, previously published works on the combustion of coal and biomass are to be presented first. Because these practices, in many cases, are the corner-stone for developing applicable modeling techniques with respect to RDF combustion.
+The aforementioned attributes of CFB combustion have been tested through modeling schemes in order to further understand the process of combustion and the associated generation of pollutants. In a review for the combustion of coal in CFBs, Basu [
+4
+] outlined three levels of consideration for predictive models and their possible applications:
+Level I: The 1D approach, the boiler is considered to be either a plug flow or stirred tank and mass and energy balances are used to describe the phenomena occurring.
+Level II: The boiler region is split into core and annulus regions, quasi-2D model, to incorporate the changes in solid and gas temperatures and concentrations to achieve a higher resolution.
+Level III: The combustion process is based on the Navier–Stokes equation, a 3D model, and chemical kinetics and physical processes are incorporated in detail.
+Level I: The 1D approach, the boiler is considered to be either a plug flow or stirred tank and mass and energy balances are used to describe the phenomena occurring.
+Level II: The boiler region is split into core and annulus regions, quasi-2D model, to incorporate the changes in solid and gas temperatures and concentrations to achieve a higher resolution.
+Level III: The combustion process is based on the Navier–Stokes equation, a 3D model, and chemical kinetics and physical processes are incorporated in detail.
+At the 1D level, in an approach presented by Gungor et al. [
+3
+], they developed and validated a model for coal combustion, by splitting the boiler bed and riser into two separate regions. In this approach, they were able to predict the temperature, carbon and oxygen concentrations, and emissions in both regions. Huang et al. [
+5
+] express the need for a dynamic model of the combustion process in CFBs in order to more accurately describe and quantify the process due to its transient behavior. They presented two dynamic modeling approaches for the combustion of coal in the riser of a CFB, which predict the dynamic response of the boiler by determining the phase shift and pressure drops at different locations in the riser. In a review of modeling techniques for a single fuel particle by Jiang et al. [
+6
+], it was determined that the drying and combustion modeling of biomass are similar to that of coal, but that the devolitilization models differ due to chemical and physical characteristics. A number of publications present combustion models that focus on splitting the boiler into two distinct regions, the boiler bed (dense region) and the boiler riser (dilute region), and further distinguish the dilute region into two sections, e.g., the core-annulus approach (quasi-2D modeling). This approach has been thoroughly reviewed by Huilin et al. [
+7
+] and Pallarés et al. [
+8
+]. The same approach has also been used in detail to describe the hydrodynamics and particle velocity behaviors in CFBs. Pugsley and Berruti [
+9
+] developed a model for predicting boiler hydrodynamics, where a similar goal was also achieved by Davidson [
+10
+]. A framework for identifying parameters associated with hydrodynamics has been presented by Xu and Gao [
+11
+]. The effects that different operating conditions have on the hydrodynamics can be found in the work presented by Wang et al. [
+12
+], where efforts on identifying the fluidization state in CFBs have been presented by Cai et al. [
+13
+]. The different types of modeling approaches presented above highlight the achievements when considering the combustion of coal, where such methods can be applied to the combustion of biomass and waste.
+In order to incorporate the ever increasing popularity of biomass fuels, Wang et al. [
+14
+] presented a 1D model for evaluating the combustion behavior and ash characteristics for several different types of biomass fuels and RDF. They found that the yield of particle burnout values are comparable between biomass and coal fuels, where particle size and moisture content are important factors on burnout. A 2D modelling approached, for biomass combustion, was developed by Gungor [
+15
+], which was used to analyze the effects that different operational parameters have on boiler temperature profiles and emissions. By adapting coal-fired combustion models, Saastamoinen [
+16
+] was able to develop a simplified model suitable for biomass fuels with a varying size, moisture content, and shape, but was only used to compliment computational fluid dynamics calculations. Several publications take into consideration the adherent problems that accompany the combustion of biomass and waste fuels. Liu et al. [
+17
+] investigated the the impact of bed material size and agglomeration tendencies at different gas velocities. The affects of fuel composition on emissions have been investigated by Demirbas [
+18
+] and Krzywanski et al. [
+19
+]. The influence of fuel properties on heat exchanger fouling have been thoroughly investigated by Tang et al. [
+20
+], Lindberg et al. [
+21
+], and Pettersson et al. [
+22
+]. In regards to emissions, Desroches-Ducarne et al. [
+23
+] presented a model for determining the gaseous pollutants that can form during the combustion of waste derived fuels by adopting reaction rates from coal combustion.
+When it comes to the temperature behavior, heat transfer, and combustion characteristics in CFBs, there is a lack of information in the literature when pertaining to RDF fired CFBs—specifically, by using a dynamic model to capture the transient temperature behavior and heat transfer associated with a complex fuel source. Despite rigorous fuel preparation methods, the composition of RDF can vary from one hour to the next and this has a direct impact on the operating temperatures within the boiler. If not controlled properly, it can lead to the aforementioned issues presented earlier.
+Historically, the fuel of choice in the heat and power industry can be attributed to the use of oil and coal. Managing the boiler output could in a large part be easily controlled by adjusting the the fuel feeding rate via simple proportional-integral control loops. With the trend of transitioning further away from fossil fuels into renewable energy sources, more robust control schemes are needed to combat fuels that can experience a large variance in composition in a short amount of time. Alamoodi and Daoutidis [
+24
+] state that, in power generation, there is a strong nonlinear relationship between the boiler, superheaters, and steam turbine. These complex highly nonlinear systems complicate control strategies, and conventional proportional-integral (PI) and proportional-integral-derivative (PID) control schemes are incapable of achieving satisfactory performance [
+25
+]. With model predictive control (MPC), a prediction on the future outputs, in a multiple input multiple output (MIMO) system, over a finite prediction horizon can be made. Based on the past values of the manipulated variables, the calculated future values of manipulated variables, and the past values of any disturbances (feedforward variable). The performance of the MPC algorithm is directly linked to the model’s accuracy in simulating the process’s dynamic behavior [
+26
+].
+Several groups have been working towards control strategies within the heat and power industry. Hadavand et al. [
+27
+] developed a coal combustion model based on mass and heat transfer processes using mass and energy balances, which incorporate process dynamics such as gas and particle interactions, to develop a state space dynamic model to control the boiler bed temperature. By using multiple inputs and multiple outputs, Alamoodi and Daoutidis [
+24
+] developed a nonlinear decoupling controller to control the superheated steam temperature in a coal fired plant allowing for frequent changes in the power demand. Ji et al. [
+26
+] presented three control schemes with Linear Parameter Varying MPC in a coal fired CFB with favorable results. Sun et al. [
+25
+] showed that MPC produced more favorable results when compared to PI control schemes in a coal fired bubbling fluidized bed boiler. Havlena and Findejs [
+28
+] applied an MPC approach to better control coal-fired boilers. With a selection of control variables, in particular the disposition of the air and fuel flows, the boiler efficiency could be increased while reducing NO
+
+
+
+
+
+
+x
+
+
+
+
+. Kortela and Jämsä-Jounela [
+29
+] presented a MPC strategy for a biomass fired grate boiler, which incorporated fuel soft-sensors to estimate the variation in the fuel’s moisture content.
+Presented in this paper is a dynamic modeling library for CFBs that has been constructed in Modelica programming language, version 3.4, developed by the Modelica Association, Linköping, Sweden. The boiler model has been validated using online measurements from a 160 MW installation at Mälarenergi in Västerås, Sweden. The model’s functionality is that it can predict the boiler bed, riser, live steam temperature profiles, and load. This has in turn allowed for the potential to model the onslaught of bed material agglomeration, through the continuation of work by Zimmerman et al. [
+30
+], by calculating the minimum fluidization velocity in the boiler. To combat the fluctuating degree in RDF heating value, and in turn have a higher consistency in boiler bed, riser, and steam temperatures. Two different multivariate model predictive control schemes are introduced and are compared with the more traditional PI controlled scheme. In all three control schemes, the same set-points were used on the boiler bed, riser, steam temperatures and load, as well as the minimum fluidization velocity. The MPC approaches incorporated a linearized model based on the physical model constructed using subspace identification.
+Based on the knowledge gaps presented in the previous section, the following two questions are defined as the contributions of this paper:
+Can a dynamic modeling library for the the combustion of waste fuel, based on first principle modeling techniques, be used to improve RDF fired CFB plant operations?
+To what degree does implementing feedforward MPC on a waste-fired CFB compare to that of MPC without feedforward and traditional PI-control schemes?
+Can a dynamic modeling library for the the combustion of waste fuel, based on first principle modeling techniques, be used to improve RDF fired CFB plant operations?
+To what degree does implementing feedforward MPC on a waste-fired CFB compare to that of MPC without feedforward and traditional PI-control schemes?
+Circulating fluidized bed boilers are a unique type of boiler that have the ability to combust problematic fuels with a varying composition and characteristic makeup of density, moisture content, heating value, and ash content [
+2
+,
+31
+], due to the high heat capacity of the bed material. The system uses sand as a fluidizing medium in order to create a more uniform distribution when fuel is fed in. A degree of solid reflux of bed material (sand, fuel, char) occurs within the boiler providing a better temperature distribution. The illustration in 
+Figure 1
+ is that of a CFB boiler and its constituent sections.
+The primary air source entering the boiler bed allows for the mixing of bed material and fuel to begin. Fuel enters the boiler bed where it is engulfed with hot non-combustible solids (sand and ash), which heats and drys the fuel. This is followed by the devolitilization step, which releases a wide range of condensible and non-condensible gases. The devolitilization stage is proceeded by the combustion of char, the devolitilized mass of the fuel, or can also overlap with the devolitilization step. The secondary air enters just above the boiler bed and this is to promote a better unification and mixing of solids and theoretically a more uniform temperature profile [
+2
+]. The residual carbon is burned until the particle size is small enough to be transported by the fluidizing gas into the riser. The amount of carbon utilized in the process is a function of the fuel’s heating value. Therefore, lower combustion losses can be achieved with a more reactive fuel or with longer residence times from larger boiler dimensions. However, it has been determined by Xiao et al. [
+32
+], who with prolonged residence times a portion of the unburnt carbon, can become inert and will be discharged along with the fly ash. It has also been shown by Gungor [
+3
+] that the carbon content can be reduced when the superficial velocity is decreased and as the bed temperature rises, or when the air-to-fuel ratio is lowered along with the bed temperature. However, the former is achieved due to a reduction in the fuel feeding rate and therefore a reduction in carbon content of the fuel being injected into the boiler. If large particles escape the riser, the circulating aspect of the CFB allows for unburnt char and carbon to be recirculated back to the boiler via the cyclone and loopseal in order to be further utilized. The size, density, and moisture content of the fuel source plays a big roll in how quickly each of these stages occur as well as affects temperature profile variation in the boiler. The boiler is also comprised of evaporator tubes, which allows for a fraction of the combustion heat to be absorbed, and is further utilized in the convection sections after the cyclone. The top of the boiler is connected to a cyclone (gas-solid separator) and this allows for the majority of particles (bed material and unburnt char) to be separated from the flue gas to then be returned to the boiler bed.
+To date, it appears that CFB technology is second to grate-fired boilers when it comes to producing heat and power via waste/biomass. In a review of developed regions using MSW as a fuel stock, Lu et al. [
+33
+] determined from a report by The International Solid Waste Association [
+34
+] that 4.5% of the implemented technologies are from fluidized bed boilers, 87.9% are of grate boilers, and 7.6% are of type “other”. Lu et al. also determined the highest penetration of fluidized bed technology, as a percentage of different incinerator types in a given region, are in China (28.9%), Sweden (20.1%), U.S. (19.6%), and Japan (11.8%). The possible reasons for a lower utilization is that fluidized bed boilers have a higher capital/operation cost and are more difficult process to control, when compared to grate-fired boilers [
+35
+,
+36
+].
+Refuse derived fuels come from the process of gathering and sorting municipal solid waste (MSW). MSW is an unavoidable by-product of human nature and over the past several decades has led to negative environmental impacts due to land filling [
+37
+]. The reason it is imperative to first sort MSW is that it is comprised of organics, paper, plastics, metals, glass, combustible, and non-combustible materials. The sorting process initially starts with a shredding process that breaks the incoming material into credit card size pieces. This is proceeded by the removal of metals, to be recycled, and then an air classifier is used to allow for other heavy materials to be separated. The separation of the unwanted fractions also increases the effective energy of the by product, where Redemann et al. [
+38
+] found that they had a heating value increase of 6 
+
+
+
+
+M
+
+
+J
+
+
+ 
+
+
+k
+
+
+
+
+g
+
+
+
+
+−
+
+
+1
+
+
+
+
+
+
+
+
+ post sorting. From the sorting process, the goal is to accomplish:
+Create a more uniform size distribution in the final RDF product,
+Sort out the recyclable fraction, i.e., metal, glass, and plastics,
+Sort out the non-combustible fraction, i.e., ceramics and rocks.
+Create a more uniform size distribution in the final RDF product,
+Sort out the recyclable fraction, i.e., metal, glass, and plastics,
+Sort out the non-combustible fraction, i.e., ceramics and rocks.
+Post sorting, the heterogeneous high calorific by-product, can officially be labeled as RDF, and it can be further classified into biomass- and fossil-based fractions. The fossil-based portion is what in essence leads to RDF having such a high lower heating value, and from the literature can vary between 12.9 to 25.1 
+
+
+
+
+M
+
+
+J
+
+
+ 
+
+
+k
+
+
+
+
+g
+
+
+
+
+−
+
+
+1
+
+
+
+
+
+
+
+
+ [
+14
+,
+31
+,
+39
+]. This variability can be interpreted as quite high. However, it is not too far off from that of biomass. With technological advancements in boiler design and regulations against land filling, waste incineration has become a popular alternative for producing heat and power in Northern Europe, despite its complex nature.
+The concept of MSW incineration is by no means a new concept for producing heat and power. According to Lu et al. [
+33
+], as of 2015, there are 1179 plants in operation with an approximate capacity of 700,000 tonnes per day, where the EU-27 is second to China, and accounts for 40% and 30% of the plants operating and global capacity, respectively. Ripa et al. [
+40
+] heed caution to increasing the use of MSW as a fuel source, and that it should not decrease the capability of obtaining and recycling materials from MSW. Furthermore, a holistic approach is necessary in order to connect local waste management authorities and the different ministries responsible for policies on waste management and energy, in order to explore the full potential of waste to energy [
+41
+]. Global implications have been observed, for instance, China’s decision to restrict the importation of certain wastes have made waste disposal problematic for some countries who depend upon high volumes of imported goods [
+42
+]. There are also environmental concerns that accompany MSW incineration. An increased complication of dioxin and furans can be accompanied with RDF fuels due to plastics. However, these levels can be managed, along with traditional concentrations of NO
+x
+ and SO
+x
+, by operating the boiler within optimal temperature ranges and flue gas cleaning. The benefits that CFB combustion present allows for such a complex fuel to be utilized due to its unique design of allowing for unburnt char to be recirculated back into the boiler bed to be completely combusted. However, due to the biomass-based portion of RDF, the moisture content can fluctuate. This can lead to unforeseen and unwanted bed temperature fluctuations and therefore a difficult system to control.
+The model proposed has been modeled after a 160 MW industrial installation at Mälarenergi in Västerås, Sweden. The unit provides roughly half of the district heating needs of the surround municipality by utilizing up to 60 
+
+
+
+
+t
+
+
+ 
+
+
+
+
+h
+
+
+
+
+−
+
+
+1
+
+
+
+
+
+
+
+
+ of RDF. The boiler is 60 m long, 32 m wide, and 55 m tall. There is an on-site state-of-the-art sorting facility for processing waste from the local municipality and from abroad, and has the capacity to sort 480,000 tonnes of unsorted waste per year. After the sorting process, the fuel is fed and stored in four fuel bunkers that have a combined capacity to provide the boiler with several days of operation. There are five sets of heat exchangers incorporated into block 6: economizer, evaporator, superheater 1 (SH1), superheater 2 (SH2), superheater 3 (SH3). The purpose for having three superheaters is to achieve a steam temperature of 470 
+
+
+
+
+
+
+°
+
+
+
+
+C in SH3. SH1 and SH2 are located in the 2nd draft of the back pass and are convective, and SH3 is located in the loopseal, and is a superheated fluidized bed.
+CFB models can generally be characterized into two main approaches: steady-state and dynamic modeling. The steady-state approach is where the variables controlling the system do not change over time. This means that any observed behavior in a system will continue to be as such, and that any change in state variables over time will equal zero. In a dynamic approach, the state variables are changing with respect to time, and this makes it possible to monitor transitions and events occurring over time. The model presented in this paper is characterized as a dynamic model. The reason this approach has been chosen is because the transient behavior of the changing fuel composition has a direct effect on the boiler operating temperature. Looking at process information, the boiler bed and riser temperatures can fluctuate significantly over the course of daily operation.
+The model has been developed using Modelica programming language. This offers a unique opportunity to model multi-domain dynamic systems by solving ordinary differential equations and algebraic differential equations, by employing a solver for both differential and algebraic equations. Using this tool also allows for one to use an object-oriented modeling approach. Blocks for each necessary component can be developed and connected together; the CFB library constructed is illustrated in 
+Figure 2
+. Process signals are incorporated as input into the model, and are represented in 
+Table 1
+. From these input parameters, Equations (
+1
+) and (
+2
+) were used to calculate the mass and energy balances, respectively.
+
+
+
+
+
+
+
+
+
+
+
+
+
+d
+
+
+(
+
+
+
+
+M
+
+
+
+
+i
+
+
+,
+
+
+j
+
+
+
+
+
+
+)
+
+
+
+
+
+
+d
+
+
+t
+
+
+
+
+
+
+=
+
+
+Σ
+
+
+
+
+
+
+m
+
+
+˙
+
+
+
+
+
+
+in
+
+
+,
+
+
+i
+
+
+,
+
+
+j
+
+
+
+
+
+
+−
+
+
+Σ
+
+
+
+
+
+
+m
+
+
+˙
+
+
+
+
+
+
+out
+
+
+,
+
+
+i
+
+
+,
+
+
+j
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(1)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+d
+
+
+(
+
+
+
+
+M
+
+
+
+
+i
+
+
+,
+
+
+j
+
+
+
+
+
+
+
+
+H
+
+
+
+
+i
+
+
+,
+
+
+j
+
+
+
+
+
+
+)
+
+
+
+
+
+
+d
+
+
+t
+
+
+
+
+
+
+=
+
+
+Σ
+
+
+
+
+
+
+m
+
+
+˙
+
+
+
+
+
+
+in
+
+
+,
+
+
+i
+
+
+,
+
+
+j
+
+
+
+
+
+
+
+
+H
+
+
+
+
+in
+
+
+,
+
+
+i
+
+
+,
+
+
+j
+
+
+
+
+
+
+−
+
+
+Σ
+
+
+
+
+
+
+m
+
+
+˙
+
+
+
+
+
+
+out
+
+
+,
+
+
+i
+
+
+,
+
+
+j
+
+
+
+
+
+
+
+
+H
+
+
+
+
+out
+
+
+,
+
+
+i
+
+
+,
+
+
+j
+
+
+
+
+
+
++
+
+
+α
+
+
+
+
+Q
+
+
+
+
+H
+
+
+,
+
+
+i
+
+
+
+
+
+
+−
+
+
+
+
+Q
+
+
+
+
+c
+
+
+,
+
+
+i
+
+
+
+
+
+
+,
+
+
+
+
+
+
+
+
+
+
+(2)
+
+
+
+
+
+where the mass flow, 
+
+
+
+
+m
+
+
+˙
+
+
+
+
+ (
+
+
+
+
+k
+
+
+g
+
+
+ 
+
+
+
+
+s
+
+
+
+
+−
+
+
+1
+
+
+
+
+
+
+
+
+), is used to calculate the mass, 
+M
+ (kg), in each control volume 
+i
+, i.e., the boiler bed and riser, cyclone, loop-seal, backpass, and economizer. Within each control volume, the subscript 
+j
+ denotes the difference in species, i.e., solids or gas. The enthalpy, 
+H
+ (
+
+
+
+
+k
+
+
+J
+
+
+ 
+
+
+k
+
+
+
+
+g
+
+
+
+
+−
+
+
+1
+
+
+
+
+
+
+
+
+), 
+
+
+α
+
+
+ is the percentage of combustion occurring in boiler bed, 
+
+
+
+
+Q
+
+
+H
+
+
+
+
+ is the amount of heat (kW) released from the fuel, and 
+
+
+
+
+Q
+
+
+c
+
+
+
+
+ is the amount of heat transferred (kW) from convection. In Equation (
+3
+), the enthalpies for each species 
+j
+ in the given control volume 
+i
+ are calculated by
+
+
+
+
+
+
+
+
+
+
+
+
+
+d
+
+
+(
+
+
+
+
+H
+
+
+
+
+i
+
+
+,
+
+
+j
+
+
+
+
+
+
+)
+
+
+
+
+
+
+d
+
+
+t
+
+
+
+
+
+
+=
+
+
+c
+
+
+
+
+p
+
+
+
+
+i
+
+
+,
+
+
+j
+
+
+
+
+
+
+
+
+
+
+d
+
+
+(
+
+
+
+
+T
+
+
+i
+
+
+
+
+)
+
+
+
+
+
+
+d
+
+
+t
+
+
+
+
+
+
+.
+
+
+
+
+
+
+
+
+
+
+(3)
+
+
+
+
+The enthalpy, 
+H
+ (
+
+
+
+
+k
+
+
+J
+
+
+ 
+
+
+k
+
+
+
+
+g
+
+
+
+
+−
+
+
+1
+
+
+
+
+
+
+
+
+), is calculated by using the corresponding specific heat, 
+
+
+
+
+c
+
+
+p
+
+
+
+
+ (
+
+
+
+
+k
+
+
+J
+
+
+ 
+
+
+k
+
+
+
+
+g
+
+
+
+
+−
+
+
+1
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+K
+
+
+
+
+−
+
+
+1
+
+
+
+
+
+
+
+
+), and temperatures, 
+T
+ (k),for each control volume 
+i
+ and evolved species 
+j
+.
+The achieved simulation results for the boiler bed, riser (temperature at the top of the boiler), and live steam temperatures are illustrated in 
+Figure 3
+, for an evaluation period during full load operation. The fourth plot represents the four fuel feeders into the boiler. The fuel feeders feed fuel into the boiler laterally, but it can be seen that, during a good portion of the time, the rate of each feeder is not consistent with the next. This can lead to an instability, not captured by the model, of the temperature profiles, despite assistance from the fluidizing medium. It can be observed that the simulation profiles (solid-lines) do follow the process sensor values (dash-lines). Despite the fact that the values from 
+Table 1
+ are incorporated, continuous information on the fuel’s 
+
+
+
+
+H
+
+
+V
+
+
+
+
+ and composition are not available. The volumetric flow rate for the fuel is given from process information as 
+
+
+
+
+m
+
+
+
+
+
+
+3
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+h
+
+
+
+
+−
+
+
+1
+
+
+
+
+
+
+
+
+, which was converted to the mass flow rate 
+
+
+
+
+k
+
+
+g
+
+
+
+
+ 
+
+
+
+
+
+
+s
+
+
+
+
+−
+
+
+1
+
+
+
+
+
+
+
+
+ by using an average bulk density of approximately 200 
+
+
+
+
+k
+
+
+g
+
+
+
+
+ 
+
+
+
+
+
+
+m
+
+
+
+
+−
+
+
+3
+
+
+
+
+
+
+
+
+. The heating value of the fuel is unknown, so, for the purposes of this work, an energy balance on all heat exchanger surfaces has been carried out to back calculate the heating value using available process data. Consequently, a higher relative error is believed to be because of a significant deviation in the fuel’s 
+
+
+
+
+H
+
+
+V
+
+
+
+
+ because a constant bulk density is assumed. Therefore, the trends in the temperature change are captured, but there are deviations in the magnitudes. This can be quantified by looking at the percent error between the simulation and actual measurements. For the simulated model results, the percent error are between 0 & 3%, but, around days 6 & 10, there is a higher percent error of up to 5%. With respect to control, the model’s level of accuracy in capturing trends is satisfactory for implementing different control schemes, and will be discussed in detail in later sections.
+It was previously mentioned how there are five sets of heat exchangers throughout the process. The main objective of the superheaters are to use energy from the flue gas in SH1 and SH2, and hot solids in SH3 to achieve a steam temperature of approximately 470 
+
+
+
+
+
+
+°
+
+
+
+
+C. Due to the problematic ash composition from RDF combustion, there is an inherit risk of fouling on the heat exchanger surfaces. One way to avoid fouling is through periodic soot-blowing, which will help in removing any “loose” buildup on the heat exchanger surfaces, which is easily done in the back pass section of the thermal network, SH1 and SH2, but not in SH3 or the evaporating tubes because the latter are in constant contact with high temperature bed material and ash.
+By following a similar practice as that of Sandberg [
+43
+], the overall heat transfer coefficient, 
+U
+ (
+
+
+
+
+k
+
+
+W
+
+
+
+
+ 
+
+
+
+
+
+
+m
+
+
+
+
+−
+
+
+2
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+K
+
+
+
+
+−
+
+
+1
+
+
+
+
+
+
+
+
+), from January 2015 to January 2018 has been analyzed. During this period, there have been three scheduled shutdowns for maintenance. By looking at the overall heat transfer coefficient before and after maintenance, it has been determined that there is an amount of fouling occurring. For these three years, the 
+U
+ values corresponding to when the boiler was operating at a full load are considered. Illustrated in 
+Figure 4
+, there are four distinct periods, before and after maintenance for each year. There are distinguished jumps between before and after maintenance, and there are corresponding negative slopes preceding the maintenance period. This phenomenon is not observed during the fourth period of SH3, and is attributed to not having data for 2018 in order to continue the analysis. The overall negative trend for each period represents a decrease in heat exchanger performance by quantifying a reduction in heat transfer. Thus, it is possible that more attention is needed during maintenance or that maintenance should be scheduled earlier, when the evaporator and SH3 are considered.
+Mechanisms for the formation of agglomerates have been thoroughly reviewed by Yan et al. [
+44
+] during multi-waste incineration, Lin et al. [
+45
+] during straw incineration, and Skrivfars et al. [
+46
+] during biomass incineration. The main factors that can lead to agglomeration are temperature fluctuations in the boiler, inconsistent fluidization, and fuel composition. The content of Alkali and alkali earth metals in the fuel, such as K, Na, Ca, Mg can increase agglomeration potential significantly, and if Cl is present this can facilitate the progression even further. Furthermore, modes for agglomeration prediction have been presented by Gatterning [
+47
+], agglomeration detection methods have been presented by Bartels et al. [
+48
+,
+49
+], and the mitigation of agglomeration have been presented by Morris et al. [
+50
+]. Proven methods for predicting agglomeration, controlled agglomeration test as well as fuel and ash analysis, work only for fuels that are relatively homogeneous. Since these tests are done at sampling intervals and not in real time, an online detection method is needed. Agglomeration indexes have also been used by Visser [
+51
+] and Vamvuka et al. [
+52
+], but these indexes rely on a fuel composition that is relatively consistent. The above-mentioned methods should be used cautiously as they neglect fuel-ash-bed material interactions and therefore can only give insight into agglomeration prediction. Another option for reducing the tendency of agglomeration is to avoid using sand as the bed material, and, instead, replace it with less reactive materials [
+53
+]. When agglomerates form, they disrupt the boiler dynamics and it is from this perspective that the changes in the boiler velocity profiles can be observed, specifically the minimum fluidization velocity, 
+
+
+
+
+U
+
+
+mf
+
+
+
+
+ (
+
+
+m
+
+
+ 
+
+
+
+
+
+
+s
+
+
+
+
+−
+
+
+1
+
+
+
+
+
+
+
+
+), to detect agglomeration. Within the physical model, it is possible to calculate 
+
+
+
+
+U
+
+
+mf
+
+
+
+
+, Equation (
+4
+), by using a derivative form of the Ergun eqution [
+54
+] expressed in [
+55
+]: 
+
+
+
+
+
+
+
+
+
+
+1.75
+
+
+
+
+
+
+ϵ
+
+
+
+
+mf
+
+
+
+
+3
+
+
+
+
+ϕ
+
+
+
+
+
+
+
+
+·
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+d
+
+
+p
+
+
+
+
+
+
+U
+
+
+mf
+
+
+
+
+
+
+ρ
+
+
+g
+
+
+
+
+
+
+
+
+μ
+
+
+g
+
+
+
+
+
+
+
+
+2
+
+
+
+
++
+
+
+
+
+
+
+150
+
+
+(
+
+
+1
+
+
+−
+
+
+
+
+ϵ
+
+
+mf
+
+
+
+
+)
+
+
+
+
+
+
+
+
+ϵ
+
+
+
+
+mf
+
+
+
+
+3
+
+
+
+
+
+
+ϕ
+
+
+2
+
+
+
+
+
+
+
+
+
+
+·
+
+
+
+
+
+
+
+
+
+
+d
+
+
+p
+
+
+
+
+
+
+U
+
+
+mf
+
+
+
+
+
+
+ρ
+
+
+g
+
+
+
+
+
+
+
+
+μ
+
+
+g
+
+
+
+
+
+
+=
+
+
+
+
+
+
+
+
+d
+
+
+
+
+p
+
+
+
+
+3
+
+
+
+
+
+
+ρ
+
+
+g
+
+
+
+
+
+
+(
+
+
+
+
+ρ
+
+
+p
+
+
+
+
+−
+
+
+
+
+ρ
+
+
+g
+
+
+
+
+)
+
+
+
+
+g
+
+
+
+
+
+
+μ
+
+
+
+
+g
+
+
+
+
+2
+
+
+
+
+
+
+,
+
+
+
+
+
+
+
+
+
+
+(4)
+
+
+
+
+
+where the particle diameter 
+
+
+
+
+d
+
+
+p
+
+
+
+
+ is taken to be 500 
+
+
+
+
+μ
+
+
+m
+
+
+
+
+, sand density 
+
+
+
+
+
+
+ρ
+
+
+p
+
+
+
+
+=
+
+
+1600
+
+
+ 
+
+
+
+
+k
+
+
+g
+
+
+ 
+
+
+
+
+m
+
+
+
+
+−
+
+
+3
+
+
+
+
+
+
+
+
+
+
+, assuming that the sand is round by using 
+
+
+ϕ
+
+
+ = 0.86, voidage at minimum fluidization, 
+
+
+
+
+ϵ
+
+
+mf
+
+
+
+
+ = 0.44 from [
+55
+], gravitational constant, 
+g
+ (
+
+
+m
+
+
+ 
+
+
+
+
+
+
+s
+
+
+
+
+−
+
+
+2
+
+
+
+
+
+
+
+
+), and the gas density, 
+
+
+
+
+ρ
+
+
+g
+
+
+
+
+ (
+
+
+
+
+k
+
+
+g
+
+
+ 
+
+
+
+
+m
+
+
+
+
+−
+
+
+3
+
+
+
+
+
+
+
+
+) and viscosity, 
+
+
+
+
+μ
+
+
+g
+
+
+
+
+ (
+
+
+
+
+k
+
+
+g
+
+
+ 
+
+
+
+
+m
+
+
+
+
+−
+
+
+1
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+s
+
+
+
+
+−
+
+
+1
+
+
+
+
+
+
+) are calculated internally.
+During the evaluation period illustrated in 
+Figure 3
+, a campaign was led to take daily samples of the bed material and recirculated fines within the boiler. Illustrated in 
+Figure 5
+a is a breakdown of the size distribution from the sampled bed material.
+It can be observed that there is a large change, from day-to-day, when compared to virgin sand. A sample of virgin sand shows that it primarily consists of particles less than 0.4 mm. From the model’s prediction of the minimum fluidization, a correlation between 
+
+
+
+
+U
+
+
+mf
+
+
+
+
+ and agglomeration has been detected and is illustrated in 
+Figure 6
+. From day one, it can be observed that there is a good correlation between the particle size decreasing along with a reduction in the minimum fluidization. The size of the bed material particles sampled then begin to increase along with an increase in minimum fluidization up to days 4 and 5, where both proceed to decrease and increase in similar trends up to day 11. Since roughly three quarters of the virgin sand is comprised of having a diameter of less than 0.4 mm, the change in particle size diameter between 0.4 and 0.63 mm was observed. The idea is that agglomeration has occurred when the size distribution has increased above 0.4 mm due to the binding of bed material. It was also discovered that recirculated fines greater than 0.63 mm correlate to 
+
+
+
+
+U
+
+
+mf
+
+
+
+
+. In comparing 
+Figure 5
+a to the models prediction of 
+
+
+
+
+U
+
+
+mf
+
+
+
+
+, 
+Figure 6
+, there is a noticeable trend between agglomeration and increased 
+
+
+
+
+U
+
+
+mf
+
+
+
+
+. This is because, as there is an increase in the particle size of the bed material, there is also an accompanied increase in the boiler’s velocity in order to achieve an adequate level fluidization. Further analysis on the samples taken, illustrated in 
+Figure 5
+b, shows that the major elemental components that lead to agglomeration have a significant presence in the bed material and fly ash. For reference, the percent composition distribution in virgin sand is presented, which is comprised of 91% Si. The bed material shows a significant increase in the content of Ca and Na and over 60% of the fly ash is composed of Ca and Al, which are heavy proponents of agglomeration.
+From 
+Figure 4
+, it was observed that the further away from a given maintenance period, the slope of the heat transfer coefficient represents a negative trend. This negative trend can also be attributed to the percent composition distribution in 
+Figure 5
+b as these elements can also lead to fouling. By examining 
+Figure 5
+a and 
+Figure 6
+, it can be observed that there is a driving force for agglomeration when there is an increase in 
+
+
+
+
+U
+
+
+mf
+
+
+
+
+ throughout the evaluation period. In 
+Figure 5
+b, it can be observed that approximately 15%, 60%, and 90% of the fly ash, bed material, and sand, respectively, are comprised of Si. It is intuitive that a larger fraction goes to Si when considering virgin sand. The higher percent in the bed material, with respect to other elements, can be attributed to ash melts coating the sand particles, hence agglomeration is occurring. The driving forces behind ash melts can be attributed to hot regions within the boiler and/or a lack of proper fluidization. It should also be noted that a fraction of the Si reported could be attributed to glass in the fuel, but this value is not known.
+The agglomeration of bed material is prominent in waste fired CFBs, as was described in the previous section. However, since it has been shown that the minimum fluidization can be of value in detecting agglomeration, it can be used as a soft-sensor to assist in better control. This is due to the fact that 
+
+
+
+
+U
+
+
+mf
+
+
+
+
+ is calculated within the model. For this reason, it can be used as a control variable along with other designated control variables in a control scheme. In order to replicate the control scheme currently being used in the plant, a PI control scheme has been implemented. It will then be used as a base case comparison to MPC control. Noise has been added to the measured outputs, as well as low-pass filters, in order to further replicate the real process. The PI control was executed by implementing set-points on calculated boiler outputs: boiler bed temperature, boiler riser temperature, steam temperature, minimum fluidization, and the load. The control variables for the respective measured outputs are the tertiary air, secondary air, fuel, primary air, and feed water, respectively.
+The measured outputs and corresponding control variables, at a 30-s sampling interval, are illustrated in 
+Figure 7
+, where a step change in the fuel’s heating value has been initiated. The step change serves as an unmeasured disturbance, and the five control variables in each PI controller signal actuators in order to meet the required set-points in the measured outputs. It can be observed that, when there is a step change in the heating value, the measured outputs trend towards the desired set-point values. When tuning the controllers there was a trade-off between maintaining performance and noise sensitivity and can be observed by a noisy control variable response in the tertiary air flow in 
+Figure 7
+. The tertiary air is actually the flue gas from downstream being recirculated back into the system. The reason for this is that it has a high impact in controlling the boiler bed temperature by reducing the amount of available oxygen. Hence, it is reasonable to have more excitation in this control variable because the bed temperature will affect all other temperatures downstream.
+When it comes to handling complex systems with MIMO, it was previously discussed how conventional PI control schemes are lacking in robustness. Model predictive control techniques have been gaining ground in process industries as a way to better improve plant operations over that which can be achieved by using a series of PI controllers. One of the underlying concepts in MPC is to predict future process behavior by minimizing the difference between the predicted process response and the reference points with a prediction model [
+56
+]. MPCs have the ability to address different control strategies, where, at a sampling interval, the problem is solved and updated up to a set prediction in the time horizon [
+57
+]. The ability to add weights and constraints on control variables and measurable outputs makes MPC a very powerful tool in large process industries.
+The MPC approach was implemented by estimating a discrete-time model from the validated dynamic model by using subspace identification (SID), where a 30 s sampling time was used. Model identification methods, like SID, identify the system matrices and system order by a non-iterative method to determine a state-space linear time invariant model [
+58
+]. By using Numerical Subspace State-Space System Identification (N4SID), it was possible to identify a linear relationship between the inputs and outputs. In turn, this reduces the complexity of the dynamic model into an adaptable “lighter” model for implementing control. Studies for MPC approaches based on a linearized plant model around an operating point have been achieved by Khani et al. [
+59
+] and Al Seyab et al. [
+60
+] with favorable results. Therefore, with the developed validated model, it is possible to develop a linearized model, to be used for model predictive control, to, in turn, be used to control the dynamic model around multiple operating points.
+It was essential to first generate adequate input signals of a sufficient excitation in both amplitude and frequency for the control variables, which do not cause the measured output signals to deviate too far from normal operating conditions [
+61
+]. Ten sets of input signals were generated, and sequentially each data set was used as input into the physical model to acquire the outputs. The next step was to detrend the data by removing the mean values to eliminate any bias in the trend. N4SID was then used to create the state-space model, where several model orders were tested and it was determined that a second order model provided sufficient results, illustrated in 
+Figure 8
+.
+The estimated model was then used to design and develop a feedforward MPC (FFMPC) controller, and an MPC controller without feedforward (NFFMPC). A step change was implemented in the fuel’s heating value, the same as in the PI-control case illustrated in 
+Figure 7
+, to test the response of the control schemes. Taking this value to be known allows for the implementation of a FFMPC controller, or, in other words, the heating value is considered to be a known measurable disturbance. In the MPC approach, without feedforward, the fuel’s heating value is considered as an unmeasured disturbance, i.e., there is no cognizant knowledge of the fuel’s heating value. For the MPC structure, there are five manipulated variables, same as in the PI controllers: fuel mass flow, feed water, primary, secondary, and tertiary air mass flow rates. There is also one measured disturbance, the fuel’s heating value. There are five measured outputs: boiler bed, flue gas, steam temperatures, and load. The fifth measured output is a soft-sensor measurement of the minimum fluidization taken from the dynamic model. The MPC controller was connected directly with the described dynamic model, and noise has been added to the measured outputs to exhibit a more realistic sensor reading. These signals are then used as feedback into the MPC. The MPC in turn uses its internal state-space model and signals a change to the actuators controlling the manipulated variables into the plant.
+Illustrated in 
+Figure 9
+ and 
+Figure 10
+ are the measured outputs and control variables respectively from the two different MPC schemes and the PI-control scheme. The same heating value disturbance is taken as input into the models. It can be observed that both MPC approaches are capable of combating a high fluctuation in the quality of the fuel. The bed, flue gas, steam, minimum fluidization, and load profiles are operating around their set-points. However, it is noticeable that when FFMPC control is implemented that it offers better control in minimizing the swings in measured outputs while also producing a more consistent control variable operating point. The reduction in temperature spikes, that FFMPC provides, means that it is achievable to operate a waste fired boiler at a more efficient level. This is because the combustion in the boiler will be more stable, which will provide a more uniform temperature profile throughout the boiler and there would be a foreseeable reduction in potential hot zones.
+To quantify the performance of each control scheme the standard deviation for each measured output (MO) and control variable (CV) were calculated, observed in 
+Table 2
+. For the MOs, i.e., the boiler bed, riser and steam temperatures, and the plant load, it can be observed that FFMPC offers a much smaller deviation from the set-points. This means that FFMPC can provide a more stable temperature in the boiler during operation, and therefore help to deter unfavorable emissions. The CV actuators, i.e., the fuel, air, and feed water mass flow rates, operate at a more consistent frequency, and are therefore not changing as often, leading to smoother operation. The response in the measured outputs, when speaking about FFMPC, is reflected in the control variables. There is a noticeable degree of an earlier reaction time for the actuators when FFMPC is implemented. Because both MPC approaches incorporate a state-space model of the validated process, it can be observed that the CV actuators are able to handle a disturbance more robustly than the PI case. This is because the state-space model is able to handle multiple inputs and control multiple outputs simultaneously, whereas with the PI case the CVs and MOs were coupled together. A step-response for one of the MO would show that it is not clear as to which CV to control because more than one CV would actually adjust to this step change. Therefore, better control has been obtained in both MPC cases, which both provide more stable operation conditions.
+In this study, a method for modeling and controlling the transient behavior associated with waste fuel combustion has been presented. The model can simulate the boiler bed temperature, riser temperature, live steam temperature, and load profiles by using process sensors. The validated model has then been used to show its capability in detecting the agglomeration of bed material, and the boiler’s performance based on heat transfer in the thermal network. In respects to control, three cases have been presented that adequately keep the boiler temperature profiles and fluidization velocity at a more consistent operating point, and maintains an adequate live steam temperature and boiler load. Great detail has been put into presenting the difficulties that come with modeling the combustion of waste because of the severity of its heterogeneous composition. It has also been demonstrated that, with a validated dynamic model, it is possible to improve a boiler’s performance with or without information on the fuel’s heating value, i.e., with feedforward or without feedforward model predictive control. Both of which have been shown to outperform the PI-control case. Model predictive control with feedforward shows a significant potential in reducing temperature swings in the boiler as well as maintaining a more consistent fluidization velocity for deterring agglomeration. The model predictive control approach provides a solid platform, and flexibility, for constraining states and inputs, and produces a better response than PI-control when transient conditions are imminent.
+The manuscript was conceptualized by all three authors, where N.Z. developed the models, analyzed results, and wrote the manuscript, K.K. contributed in model methodology and validation and manuscript review and editing, and C.-F.L. contributed in control methodology and implementation, and manuscript review and editing.
+The funding for this research is supported by The Swedish Knowledge Foundation (KSS-20120276) and The Future Energy Research Profile at Mälardalen University, Västerås, Sweden.
+The authors want to acknowledge Mälarenergi AB, Västerås, Sweden, for their support in data acquisition and process information.
+The authors declare no conflict of interest.
+MO = measured output; CV = control variable; FFMPC = feedforward model predictive control; NFFMPC = model predictive control without feedforward; PI = proportional-integral control.
+MO = measured output; CV = control variable; FFMPC = feedforward model predictive control; NFFMPC = model predictive control without feedforward; PI = proportional-integral control.

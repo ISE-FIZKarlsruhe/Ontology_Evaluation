@@ -1,0 +1,536 @@
+Microstructured steel 40Cr13, which is considered a hard-to-machine steel due to its high mechanical strength and hardness, has wide applications in the dies industry. This study investigates the influence of three process parameters of a 355 nm nanosecond pulse laser on the ablation results of 40Cr13, based on analysis of variance (ANOVA) and back propagation (BP) neural network. The ANOVA results show that laser power has the greatest influence on the ablation depth, width, and material removal rate (MRR), with influence levels of 52.5%, 60.9%, and 70.4%, respectively. The scan speed affects the ablation depth and width to a certain extent, and the influence of the pulse frequency on the ablation depth and MRR is non-negligible. BP neural network models with 3-8-3, 3-10-3, and 3-12-3 structures were applied to predict the ablation results. The results show that the prediction accuracy is relatively high for the ablation width and MRR, with average prediction accuracies of 96.0% and 93.5%. The 3-8-3 network model has the highest prediction accuracy for the ablation width, and the 3-10-3 network model has the highest prediction accuracy for the ablation depth and MRR.
+In recent years, nanosecond lasers have been widely used in the manufacturing of surface microstructures [
+1
+,
+2
+]. Laser ablation processing has the advantages of being applicable to a wide range of materials, has low processing stress, and has high processing efficiency. Therefore, it has become a feasible alternative to conventional methods for fabricating complex microstructures on hard-to-machine materials, such as die steels, cemented carbides, and ceramics [
+3
+,
+4
+].
+Laser ablation is a complex material removal process, in addition to material properties and laser characteristics, process parameters including laser power, pulse frequency, and scan speed are the key factors that determine the ablation quality [
+5
+,
+6
+]. Many previous theoretical analyses and experiments have shown that selecting a suitable combination of process parameters can significantly improve the laser processing quality [
+7
+,
+8
+]. However, it is difficult to optimise the process parameters through simple repeated experiments, owing to the large number of process parameter combinations [
+9
+].
+The artificial neural network (ANN) is an algorithm model with adaptive and organisational capabilities that can imitate the behavioural characteristics of animal neural networks for distributed and parallel information processing [
+10
+]. ANN has been successfully applied in the industrial field to realize the prediction and improvement of device accuracy [
+11
+,
+12
+]. Another important application of it is to assist the selection of process parameters in laser processing, which cannot be achieved by traditional technical methods [
+13
+]. Chen et al. used an ANN to optimise the parameters of non-vertical laser processing, and they showed that the “quality point” calculated using an ANN is close to the actual cutting result [
+14
+]. Teixidor et al. studied the effects of scan speed, pulse intensity, and pulse frequency on the depth, width, surface roughness, and material removal rate(MRR) for the processing of microgrooves in the laser milling process; they used k-nearest neighbours, an ANN, and a decision tree to build predictive models [
+15
+]. Dixit et al. used the response surface method, an ANN, and a genetic algorithm to optimise the dimensional accuracy of laser processing based on 32 sets of experimental measurement data. The results showed that the ANN prediction model based on the 5-8-8-3 architecture had the highest prediction accuracy [
+16
+]. Yousef et al. proposed a neural network model to predict the pulse energy level required to produce pits with a predetermined depth and diameter during laser micromachining [
+17
+]. From the above studies, it is apparent that ANNs can been successfully applied to the prediction of laser processing results. There are many applicable ANN algorithms, among which the BP neural network is currently the most successful [
+18
+,
+19
+,
+20
+]. Therefore, in this study, we used BP neural networks to predict laser ablation results of 40Cr13 die steel.
+Because of its high mechanical strength and hardness, 40Cr13 is considered a hard-to-machine steel. Nevertheless, microstructured 40Cr13 has numerous applications in the dies industry. To the best of our knowledge, there are few scientific studies on laser ablation of this kind of die steel to obtain microstructures. Due to the variety of elements inside the material and its uneven texture, it is difficult to ensure the uniformity of the microstructure processing quality during the laser ablation process. The goal of our work is to bridge this knowledge gap and improve the processing of inhomogeneous materials.
+This study presents the first application of BP neural networks for the laser ablation results prediction of hard-to-process 40Cr13 steel. Our primary aim was to present a systematic investigation of the effects of nanosecond laser ablation of 40Cr13 die steel. This paper is organised as follows. 
+Section 2
+ introduces the experimental materials and methods. 
+Section 3
+ presents an analysis of the influence of three laser process parameters on the ablation results based on ANOVA. In 
+Section 4
+, the ablation results are predicted based on three types of BP neural networks, and the prediction accuracy is analysed. Finally, 
+Section 5
+ presents the concluding remarks of this study.
+The material used in this study was 40Cr13, which has high hardness, good wear resistance, and good corrosion resistance. This material is also widely used in the manufacturing of high-precision dies. The main components of 40Cr13 are listed in 
+Table 1
+. The surfaces of the tested samples were milled, ground, and finally mirror-polished to 
+
+
+
+
+R
+
+
+a
+
+
+
+
+ ≤ 0.035 
+
+
+μ
+
+
+m to ensure low and consistent surface roughness.
+This experiment used a nanosecond pulse laser (FORMULA-355, Advanced Optowave Co., Ronkonkoma, NY, USA) with a wavelength of 355 nm. Its main parameters are listed in 
+Table 2
+. The output spot diameter of the laser was 0.55 mm. The beam passed through a beam expander and a three-dimensional (3D) scanning galvanometer with a focal length of 290 mm before finally being focused by an 
+F
+-
+
+
+θ
+
+
+ field lens on the surface of the ablation sample. The positioning of the sample was ensured using a camera (CV-X100, Keyence, Japan), and the laser power was measured using a power meter (Ophir 30A-SV-17, Thorlabs, Newton, NJ, USA). A schematic of the experimental platform is shown in 
+Figure 1
+.
+The nanosecond pulse laserspot moves on the surface of the sample part at a specified speed, and it produces a micro-groove structure via ablation. A laser confocal microscope (LEXT OLS5100, Olympus, Japan) was used to measure the size of the micro-groove structure. The measurement conditions are listed in 
+Table 3
+.
+The energy distribution of the laser beam is Gaussian; therefore, the cross-section of the micro-groove structure produced by laser ablation is approximately “V”-shaped. A typical micro-groove structure is shown in 
+Figure 2
+, where three indexes are defined on the cross-section to characterise ablation results [
+15
+]:
+Ablation depth (D): the distance from the lowest point of the cross-section to the upper surface.
+Ablation width (W): the maximum distance between the two sides of the cross-section.
+MRR: the product of the cross-sectional area and the distance that the laser moves per unit time.
+Ablation depth (D): the distance from the lowest point of the cross-section to the upper surface.
+Ablation width (W): the maximum distance between the two sides of the cross-section.
+MRR: the product of the cross-sectional area and the distance that the laser moves per unit time.
+During the measurement, several sections of 200 
+
+
+μ
+
+
+m micro-groove structures were cut along the length direction, and the average value was used as the measurement result of each index.
+The laser ablation process parameters include laser power, pulse frequency, and scan speed [
+5
+]:
+Laser Power (LP): the real power value reaching the surfaces of tested samples considering the lost through a series of optical devices.
+Pulse Frequency (PF): the number of laser pulses repeated in one second.
+Scan Speed (SS): the moving speed of the laser focus on the surfaces of tested samples.
+Laser Power (LP): the real power value reaching the surfaces of tested samples considering the lost through a series of optical devices.
+Pulse Frequency (PF): the number of laser pulses repeated in one second.
+Scan Speed (SS): the moving speed of the laser focus on the surfaces of tested samples.
+The ranges of the process parameters used in this study are shown in 
+Table 4
+. The value of a single process parameter was changed during each processing, and the other parameters remained unchanged.
+In the laser ablation process, the fundamental factors that affect the ablation results are the single-pulse energy and pulse coincidence rate [
+21
+]. The ablation depth and width increase with the increase in the single-pulse energy and pulse coincidence rate, and the MRR under the same scan speed is higher. The single-pulse energy can be calculated as follows:
+
+
+
+
+
+
+
+
+
+
+E
+
+
+s
+
+
+
+
+=
+
+
+
+
+
+
+L
+
+
+P
+
+
+
+
+
+
+P
+
+
+F
+
+
+
+
+
+
+.
+
+
+
+
+
+
+
+
+
+
+(1)
+
+
+
+
+Figure 3
+ shows a schematic of several pulses during the laser ablation process. Assuming 
+d
+ is the diameter of the focused spot, the pulse coincidence rate can be calculated as follows:
+
+
+
+
+
+
+
+
+α
+
+
+=
+
+
+(
+
+
+1
+
+
+−
+
+
+
+
+
+
+
+
+S
+
+
+S
+
+
+
+
+
+
+d
+
+
+×
+
+
+P
+
+
+F
+
+
+
+
+
+
+
+
+)
+
+
+×
+
+
+100
+
+
+%
+
+
+.
+
+
+
+
+
+
+
+
+
+
+(2)
+
+
+
+
+In this study, a total of 48 micro-groove structures were processed, and the results of the three indexes of the micro-groove structure are shown in 
+Appendix A
+. Based on these data, the effects of laser process parameter changes on D, W, and MRR were analysed using ANOVA.
+Figure 4
+ shows the effect of laser power and scan speed on D for a pulse frequency of 50 kHz. It can be observed that D decreases with an increase in scan speed at the same laser power. With an increase in scan speed, the coincidence rate of the laser pulses decreases according to Equation (
+2
+); therefore, the energy absorbed by the material per unit length decreases.
+Figure 5
+ shows the effect of laser power and pulse frequency on D for a scan speed of 150 mm/s. It can be observed that D increases with an increase in pulse frequency. With an increase in pulse frequency, the coincidence rate of the laser pulses increases according to Equation (
+2
+); therefore, the energy absorbed by the material per unit length increases.
+Figure 4
+ and 
+Figure 5
+ show that D increases significantly with laser power. Under the same repetition frequency, the single-pulse energy increases with an increase in laser power, according to Equation (
+1
+). This study conducted ANOVA to investigate the influence of laser power, scan speed, and pulse frequency on D. The results are presented in 
+Table 5
+. The 
+p
+-values of the three process parameters are all 0, which indicates that all three parameters affect D. Laser power has the highest degree of influence, at 52.5%, followed by the pulse frequency and scan speed, at 28.9% and 18.6%, respectively.
+Figure 6
+ shows the effect of laser power and scan speed on W for a pulse frequency of 50 kHz. It can be observed that W decreases with an increase in scan speed at a constant laser power. However, W does not decrease indefinitely; the lower limit of W is approximately the diameter of the laser focus spot.
+Figure 7
+ shows the effect of laser power and pulse frequency on W for a scan speed of 150 mm/s. It can be observed that W increases with an increase in pulse frequency, and this relationship is approximately linear.
+Figure 6
+ and 
+Figure 7
+ show that W increases significantly with laser power. 
+Table 6
+ shows the ANOVA results for W. Laser power has the highest degree of influence, at 60.9%, followed by pulse frequency and scan speed, at 30.6% and 8.5%, respectively.
+Figure 8
+ shows the effect of laser power and scan speed on the MRR and cross-sectional area for a pulse frequency of 50 kHz. The cross-sectional area clearly changes with the laser power and scan speed; the cross-sectional area increases with an increase in laser power, and it decreases with an increase in scan speed. However, the change rule of the MRR based on laser power and scan speed is unclear because the MRR is the result of the combined effect of the cross-sectional area and scan speed.
+Figure 9
+ shows the effect of laser power and pulse frequency on the MRR and cross-sectional area for a scan speed of 150 mm/s. The cross-sectional area increases with an increase in laser power or pulse frequency. The change rule of the MRR with the pulse frequency is unclear. 
+Table 7
+ shows the ANOVA results of the MRR. Laser power has the highest degree of influence, at 70.4%, followed by pulse frequency and scan speed, at 27.4% and 2.1%, respectively.
+Laser processing is complex, and different process parameters have significantly different effects on ablation results. In this study, the BP neural network was used to establish a machine learning model and predict the ablation results of the laser processing of 40Cr13 die steel. The supporting software is MATLAB R2018a, and the establishment and training of neural networks are realized through this software.
+The neural network structure designed in this study is shown in 
+Figure 10
+. It includes a three-layer structure: an input layer, hidden layer, and output layer. The input layer contains three neuron nodes, which correspond to LP, SS, and PF. The output layer also contains three neuron nodes, which correspond to D, W, and MRR. The number of hidden layer nodes can be calculated according to [
+22
+]:
+
+
+
+
+
+
+
+
+m
+
+
+=
+
+
+
+
+
+
+n
+
+
++
+
+
+l
+
+
+
+
+
+
++
+
+
+a
+
+
+,
+
+
+
+
+
+
+
+
+
+
+(3)
+
+
+
+
+
+where 
+m
+ is the number of hidden layer nodes, 
+n
+ is the number of input layer nodes, 
+l
+ is the number of output layer nodes, and 
+a
+ is the adjustment coefficient that varies between 1 and 10. In this study, the number of hidden layer nodes was sequentially set to 8, 10, and 12, thereby forming three types of network models: 3-8-3, 3-10-3, and 3-12-3, respectively.
+From the data in 
+Appendix A
+, we selected the first 45 groups to be the training set of the BP neural network, and the last three groups to be the testing set. The values of LP, SS, and PF in the training set data were used as the inputs for the three network models, and D, W, and MRR were used as the outputs. The logsig function was selected as the transfer function between neurons, and the learning rate was set to 0.001, which was used to control the convergence speed and stability of the network model. The minimum error was set to 0.0001, and the maximum number of learning times was set to 1000 [
+23
+].
+The values of D, W, and MRR in the training set were defined as the measurement values, and the values obtained after the simulation calculation were defined as the prediction values. 
+Figure 11
+, 
+Figure 12
+ and 
+Figure 13
+ show a comparison between the measurement and prediction values for D, W, and MRR that were obtained by the three types of network models.
+The data of the testing set were simulated to verify the accuracy of the network models, and the measurement and prediction values of the three types of network models are shown in 
+Table 8
+. The prediction accuracy is defined as follows:
+
+
+
+
+
+
+
+
+a
+
+
+c
+
+
+c
+
+
+=
+
+
+(
+
+
+
+
+
+
+
+
+|
+
+
+P
+
+
+V
+
+
+−
+
+
+M
+
+
+V
+
+
+|
+
+
+
+
+
+
+M
+
+
+V
+
+
+
+
+
+
+
+
+)
+
+
+×
+
+
+100
+
+
+%
+
+
+.
+
+
+
+
+
+
+
+
+
+
+(4)
+
+
+
+
+
+where PV and MV are the prediction value and measurement value, respectively. It can be observed from 
+Table 8
+ that the BP neural network has a high prediction accuracy for the three indexes of laser ablation. Among them, the prediction accuracy for the W was the highest, followed by MRR, with the average prediction accuracy for these values being 96.0% and 93.5%, respectively. The prediction accuracy of D was relatively low, with a average accuracy of 84.3%.
+The root mean square errors (RMSEs) between the measurement and prediction values of the three types of network models were used to characterise the prediction accuracy. The calculation results are presented in 
+Table 9
+. It can be observed that neural networks of different structures had different prediction accuracies for the three indexes of laser ablation. The neural network with the 3-10-3 structure had the highest prediction accuracy for D and MRR, whereas the neural network with the 3-8-3 structure had the highest prediction accuracy for W.
+This study used ANOVA to analyse the influence of three process parameters on the nanosecond pulse laser ablation of 40Cr13 and used BP neural networks to predict the ablation results. The main conclusions are summarised as follows:
+Laser power had the strongest influence on D, W, and the MRR; the influence levels were 52.5%, 60.9%, and 70.4%, respectively. The main reason is that laser power mainly determines the single-pulse energy, which is the decisive factor for the ablation results.
+The scan speed had an effect on D and W to a certain extent; the influence levels were 28.9% and 30.6%, respectively. However, the effect of the scan speed on the MRR was only minor, with an influence level of 2.1%. The main reason is that scan speed and pulse frequency jointly determine the pulse coincidence rate, which is another factor that affects the ablation results.
+The influence of pulse frequency on D and the MRR was non-negligible; the influence levels were 18.6% and 27.4%, respectively. The pulse frequency had little effect on W; the influence level was 8.5%.
+Three types of BP neural network models were used to predict the ablation results. The results show that the prediction accuracy for the W was the highest, followed by MRR and D. The average prediction accuracies reached 96.0%, 93.5% and 84.4%, respectively.
+The network model with the 3-10-3 structure had the highest prediction accuracy for D and the MRR, the minimum RMSEs reached 0.096 and 1.660, the network model with the 3-8-3 structure had the highest prediction accuracy for W with the minimum RMSE of 0.940.
+Laser power had the strongest influence on D, W, and the MRR; the influence levels were 52.5%, 60.9%, and 70.4%, respectively. The main reason is that laser power mainly determines the single-pulse energy, which is the decisive factor for the ablation results.
+The scan speed had an effect on D and W to a certain extent; the influence levels were 28.9% and 30.6%, respectively. However, the effect of the scan speed on the MRR was only minor, with an influence level of 2.1%. The main reason is that scan speed and pulse frequency jointly determine the pulse coincidence rate, which is another factor that affects the ablation results.
+The influence of pulse frequency on D and the MRR was non-negligible; the influence levels were 18.6% and 27.4%, respectively. The pulse frequency had little effect on W; the influence level was 8.5%.
+Three types of BP neural network models were used to predict the ablation results. The results show that the prediction accuracy for the W was the highest, followed by MRR and D. The average prediction accuracies reached 96.0%, 93.5% and 84.4%, respectively.
+The network model with the 3-10-3 structure had the highest prediction accuracy for D and the MRR, the minimum RMSEs reached 0.096 and 1.660, the network model with the 3-8-3 structure had the highest prediction accuracy for W with the minimum RMSE of 0.940.
+Although only 40Cr13 was tested in this study, the abovementioned methods should be applicable to the laser ablation processing of other die steel materials as well. These techniques can be used to guide the setting of process parameters during laser ablation processing, which will help improve processing accuracy and efficiency. However, the experimental data in this study is based only on the results of single-pass processing. In the future, our group will conduct research on the quality control and prediction of multi-pass processing or even the processing of entire surfaces, which is a more complex task.
+Conceptualization, Z.Y.; methodology, Z.Y., P.S. and J.W.; software, Z.Y. and P.S.; validation, Z.Y., P.S. and J.W.; formal analysis, Z.Y.; investigation, Z.Y. and Q.L.; resources, Q.L.; data curation, Z.Y.; writing—original draft preparation, Z.Y.; writing—review and editing, Z.Y. and Q.L.; supervision, Q.L.; project administration, Q.L.; funding acquisition, Q.L. All authors have read and agreed to the published version of the manuscript.
+This research was funded by the National Key Research and Development Program of China (Grant No. 2016YFB1102503).
+Not applicable.
+Not applicable.
+Not applicable.
+The first author would like to express his thanks to Hang Z. and Libin L. for offering valuable guidance and support during the writing of this manuscript.
+The authors declare no conflict of interest.
+The following abbreviations are used in this manuscript:
+
+ANOVA
+Analysis of variance
+BP
+Back propagation
+MRR
+Material removal rate
+W
+Ablation width
+D
+Ablation depth
+LP
+Laser power
+PF
+Pulse frequency
+SS
+Scan speed
+Publisher’s Note:
+ MDPI stays neutral with regard to jurisdictional claims in published maps and institutional affiliations.

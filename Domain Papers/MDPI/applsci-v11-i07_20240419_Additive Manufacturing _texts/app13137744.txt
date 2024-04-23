@@ -1,0 +1,964 @@
+In a variety of industries, Additive Manufacturing has revolutionized the whole design–fabrication cycle. Traditional 3D printing is typically employed to produce static components, which are not able to fulfill dynamic structural requirements and are inappropriate for applications such as soft grippers, self-assembly systems, and smart actuators. To address this limitation, an innovative technology has emerged, known as “4D printing”. It processes smart materials by using 3D printing for fabricating smart structures that can be reconfigured by applying different inputs, such as heat, humidity, magnetism, electricity, light, etc. At present, 4D printing is still a growing technology, and it presents numerous challenges regarding materials, design, simulation, fabrication processes, applied strategies, and reversibility. In this work a critical review of 4D printing technologies, materials, and applications is provided.
+Additive Manufacturing (AM) or 3D Printing (3DP) is a digital manufacturing technology that provides nearly limitless potential to construct structures by precisely adjusting material properties, process parameters, and shapes [
+1
+]. The invention of AM techniques has pushed the limitations set by traditional manufacturing processes, leading the world into the “third industrial revolution”, in which computers and automation work together to produce items quickly [
+2
+]. AM methods enable the construction of complex structures with little material waste. This digital manufacturing technique involves adding materials layer by layer to construct components directly from 3D model data. 3DP has grown in popularity over the last two decades due to a variety of compelling benefits, including the capacity to make inexpensive, multipurpose items characterized by intricate structures [
+1
+]. 3DP is a rapid and affordable manufacturing technique that finds a wide range of applications in biomedicine [
+3
+], aerospace [
+4
+], the automotive industry [
+5
+], robotics [
+6
+], smart textiles [
+7
+], soft electronics [
+8
+], and wearables [
+2
+].
+Recent breakthroughs in AM have offered revolutionary printing technologies for producing smart objects that can be switched between numerous configurations via environmental inputs [
+9
+]. This innovative approach, originally referred to as 4D printing (4DP) by a research group at the Massachusetts Institute of Technology in 2013 [
+10
+], produces 3D-printed structures that can actively modify their configuration in reaction to an external stimulus or interaction mechanism; consequently, the mechanical condition of the 4DP item may be observed to transition from static to dynamic [
+11
+]. Advanced research on 3DP dynamic shape-shifting has recently received attention as the next significant advance in AM methods [
+12
+]. In contrast to typical 3D-printed components, which are frequently stiff and static [
+13
+], 4DP is the next generation technology because of the merged dynamic behaviors inside the Smart Material (SM) [
+2
+]. 4DP dynamic structures with changeable shape modifications have attracted industrial interest, since they can provide advanced features such as self-assembly, self-repair, and self-adaptability [
+14
+].
+4DP can be defined as a combination of different factors, including 3DP technology, SM, shape-shifting behavior, design for 4DP, stimuli, applications, mathematical modeling, and finally the programming process [
+12
+,
+14
+,
+15
+]. Important elements to be considered in 4DP are summarized in 
+Figure 1
+. Each element is intimately connected to the others, and particular attention must be paid to the integrated framework design. 
+The literature survey methodology employed in this review was structured by following the search, inclusion, and exclusion criteria listed in 
+Table 1
+. The initial research returned 31,016 papers, but not all were concerned with 4DP. The exclusion/inclusion criteria allowed us to filter the studies and increase their relevancy. As a result, 1204 articles were analyzed, and an in-depth analysis was undertaken, allowing a reduction to 197 papers. The analysis was focused on the applications, materials, stimuli, technologies, and programming strategies. The publication period was 2013–2023, and the number of papers is distributed as shown in 
+Figure 2
+.
+As a significant development in 3DP technology, 4DP is recognized as the next manufacturing evolution. 4DP can provide flexible structures capable of geometrical transformation in response to an environmental stimulus regarding the characteristic behavior of the material. 4DP offers the option to change the geometry of 3D-printed components over time. The new technique combines advanced material science, physics, and applications with 3DP.
+4DP using Shape Memory Materials (SMMs) has a wide range of industrial applications, including aerospace [
+16
+] and biomedical [
+17
+] ones in addition to packaging, electronics [
+18
+], and textiles [
+7
+]. The self-operation characteristics of the 4DP structures, including self-assembly, self-adaptability, and self-repair, have increased their viability in various applications [
+19
+,
+20
+]. Self-assembled 4D structures can be designed as independent geometries; while exposed to stimuli they self-organize into an overall structure depending upon the interactions of the geometrical elements and the energy distribution given to the system. Such properties of 4DP materials might be quite useful, with 4DP being far more effective in large-scale businesses. It has potential aerospace applications, since in-space manufacturing is fundamental for future missions. 3DP fabrication in space currently has cost, performance, and energy consumption issues. As a result, instead of employing 3D-printed materials, 4DP could be employed to take advantage of the transformable nature of such products. 4DP can provide solutions the manufacture of bridges, shelters, and installations, since it can provide self-reconfiguration in the case of weather interruption [
+21
+,
+22
+]. Furthermore, for long-duration space travel to be viable, a paradigm shift in the design and production of space architectures is required. The In-Space Manufacturing (ISM) initiative aims to create technology for these exploratory missions [
+23
+]. Additionally, as components can be self-assembled in space, the aerospace industry can use 4DP to manufacture self-deploying devices and elements related to air control, engine cooling, and other applications [
+24
+]. This capability can be used for the building of satellites and antennae [
+25
+]. It allows for reducing launch costs by providing flexible tools and avoiding resupply from Earth [
+26
+]. NASA is changing its manufacturing approach for space applications from Earth-based to exploration-based, with the potential goal to reach Mars by 2040. In addition, the ESA is planning the development of lunar-based regular missions. 
+The crucial feature of 4DP is its ability to achieve different shape-morphing behaviors. Other manufacturing techniques cannot, or scarcely can, encode the structures of materials. For instance, the interior structure of an organ, where numerous cells are held in a multiscale structure, is what drives bioengineers to build tissues and organs through bioprinting. In [
+27
+], the authors used a biomimetic hydrogel composite for 4DP that allowed for local properties. However, the effectiveness of this biomimetic 4DP technique depends on its capacity to local regulate the orientation of cellulose fibrils inside the hydrogel composite to determine the elastic and swelling anisotropies.
+4DP offers various industrial opportunities. It has the potential to alter the way things are created by developing objects with programmable capabilities. Nevertheless, 4DP remains in the testing and experimentation phase, and corporations still have a long way to go to make the technology commercially viable. However, as research proceeds, 4DP’s potential uses in a wide range of industries will become clear [
+28
+]. 4DP has enormous potential for today’s smart-goods production. The capacity to develop SMs that respond to external factors will lead to significant improvements for the aerospace industry. The defense sector may greatly benefit from 4DP. Currently, 4DP is available for a variety of applications. Military outfits that can change appearance or protect individuals from harmful gases might be one of the most intriguing applications for 4DP [
+29
+,
+30
+,
+31
+].
+4DP offers much potential for making intelligent fluid valves. When exposed to high temperature fluids, a valve closes and reopens when heated conditions change due to the use of heat-sensitive hydrogel ink. 4D-imprinted biocompatible devices capable of expanding or contracting an entity are also expected. These items can be utilized as coronary stents, expanding the shape and keeping blood vessels undamaged to reduce complications caused by traditional stent implants [
+24
+]. 
+Manufacturing must become smarter in order to avoid wasting enormous quantities of resources. These problems may be handled by employing informatics tools and integrating relevant data into materials, which improves the accuracy of manufacturing processes [
+32
+]. Therefore, 4DP technology can help reduce waste, errors, and process inefficiencies in industrial operations [
+21
+]. In comparison to previous production methods, many studies have defined 4DP as energy-efficient [
+22
+], green [
+23
+], and quick [
+24
+].
+Despite its many benefits and wide range of applications across several sectors, 4DP still faces several difficulties that prevent its widespread use on an industrial scale. Because most SMMs only allow for one-way shapeshifting, this presents a hurdle to the design of active structures. However, there are certain intelligent materials that can address this issue. The use of these materials in reconfigurable structures is, however, extremely difficult because of the laborious production process and the limited load-carrying capacity. 
+Homogeneous or heterogeneous 4DP is a complicated procedure requiring numerous actions [
+33
+] to build smart entities, to program [
+34
+,
+35
+], to stimulate, to actuate, and to recover [
+36
+]. Certainly, the programming of operations is one of the most challenging steps; this can be performed after printing or it can be implanted in the printed part during fabrication. The actuation and recovery steps have a direct impact on the efficiency of the final printed items, and some limits may be seen in terms of procedures, methods, and the stages of stimulation that integrate material and physics concerns. 
+To achieve the preferred performance, printing via non-composite SMs has revealed restrictions regarding mechanical performance as well as shape change. For these reasons, research studies extensively considered multi-material active functional parts. Nevertheless, through using more advanced methods of 4DP with heterogeneous principles, the understanding of multi-material and multi-voxel systems through one or more 3D printers becomes feasible, and in the future, it will lead to high performance in industrial applications. As opposed to the use of SMMs to change the shapes of 3D-printed parts, 4DP has also been employed for fabricating multi-materials with different swelling or deformation properties [
+35
+,
+37
+]. Unfortunately, the need for specific 3D printers limits the use of 4DP [
+38
+]. In other circumstances, researchers mentioned the connecting multi-material drawbacks, such as poor bi-material bonding and residual stress at the interface. In addition, managing the AM process is difficult because of the miscibility and wetting restrictions of diverse materials, as well as the differences in their characteristics (e.g., thermal conductivities and expansions, melting points). Coefficient mismatches are caused by using comparable or different materials in multi-material systems, such as metal-polymers and metal-ceramics. Polymers and ceramics may cause massive mismatches, resulting in defects such as cracks, pores, and residual stresses that impair component integrity, dimensional stability, fatigue resistance, and mechanical characteristics in industrial applications [
+39
+]. As a result, the issue created by AM of multi-materials should be considered during material selection, part geometry, and manufacturing parameters. The composition and optimal geometrical arrangement of materials, as well as methods of reaction kinetics, bonding, stress formation, and cracking mechanics, are critical aspects for multi-material design [
+40
+].
+Many of the commercial machines are not suitable for new or customized materials, since printer manufacturers cannot guarantee the results. As regards the multi-material 3DP aspect, certain AM technologies, such as Vat Photopolymerization and Laser-Powder Bed Fusion techniques, present new challenges, since only one resin or powder can be processed in the vat or chamber. This is an unlucky limitation considering the high quality provided by these technologies; thus, creative solutions should be investigated. Moreover, the slow printing speed also hinders the capability of employing AM in a large-scale part, since conventional processes such as injection molding can quickly produce high-quality simple components [
+2
+].
+Even though many scientific papers have focused on various SMs, further investigation is required for creating smart 4D objects. Composite materials and their availability limit the capability of 4DP. For example, according to the operating concept of the 3DP equipment, there are currently two printing processes for continuous fiber-reinforced composites: pre-impregnation and real-time in situ impregnation. Pre-impregnation is the process of covering continuous fiber filaments with an exterior layer of resin before pre-impregnating them with thermoplastic polymers [
+41
+]. A complicated structure with remarkable mechanical qualities might be difficult to construct due to an inadequate amount of research on 4DP technology and materials [
+42
+]. 
+This work is a review paper considering different AM technologies applied in the field of 4DP, with a focus on the technologies, materials, applications, and case studies. 
+4DP technology combines material science and mathematics. Mathematical models are necessary for carefully predicting shape-morphing behaviors, which are one of the most challenging stages of this new technology. However, no general formula for modeling and predicting smart evolution over time is known [
+43
+]. 
+In many studies, authors have employed beam and plate theories, including the Euler–Bernoulli [
+27
+,
+44
+,
+45
+] and Timoshenko bimetal [
+46
+] models, to investigate 4D material dynamic properties [
+47
+,
+48
+,
+49
+,
+50
+].
+The Timoshenko bimetal model, while useful for analyzing time-independent behaviors like the impact of thickness on bending, is limited in achieving the true time-dependent behaviors of 4D materials, except for specific cases or linear regions. As a result, the time-dependent behaviors, crucial attributes of 4D materials that are responsive to stimuli, have not been extensively modeled in research studies. Consequently, there is a pressing need for qualitative and quantitative analyses to understand the fourth dimension. In addition, various formulas used or developed to model the shape-morphing behaviors of 4DP structures are organized and analyzed.
+To better understand how 4DP operates, three criteria that serve as general modeling principles for future 4DP architectures are presented in [
+51
+]. The primary principle states that proportional expansion is a common multi-material self-morphing behavior. The second rule asserts that the four physical characteristics of mass diffusion, thermal expansion, molecular change, and organic development are differentiating elements. The third rule is that most structures created with 4DP have one active layer and one dormant layer. 
+However, careful prediction and modeling of shape-memory behavior must continue to be investigated. For instance, deep learning algorithms can be developed before fabrication for optimizing the geometry design and, at the same time, minimizing the necessary material. Modeling the behavior of these materials is challenging; nevertheless, several works have been undertaken to better understand the mechanisms that affect them [
+51
+]. This is a key role for future AM-based manufacturing [
+2
+]. Several studies have considered beam and plate theories [
+14
+], where the deformation behavior of printed parts was studied via numerical simulation of bilayers using the classical Timoshenko bimetal model [
+46
+], which does not model the time-dependent behavior since it is linear over time. Furthermore, it cannot be considered for general modeling of the various stimuli and materials [
+52
+]. 
+The software side of 4DP is tied to mathematical modeling as well as understanding and forecasting the behavior of SMs. These are also significant design difficulties that software attempts to address. Understanding a material’s properties and how it responds to input is critical when building 4D structures. To do this, sophisticated modeling and topological transformations are used to address manufacturing and material restrictions. It is incredibly challenging to design 4D actuating structures using novel and somewhat unknown materials to create responses that cannot be observed until the structure is tested. This necessitates a high degree of material and manufacturing process understanding, which is unreasonable to anticipate from the 4DP userbase. That is why the design process must be dedicated to software that can forecast how the material will behave and then iterate from the simulations to obtain the desired output for the construction. When it comes to bioprinting and tissue printing, one challenge is duplicating existing biological systems so that they operate similarly to the existing ones. However, biological processes are challenging to emulate even with computer systems, let alone imitate and replicate using SM structures and their natural stimulus reactions. Yet, developing 4D structures that properly mimic current systems using biocompatible SMs is a key step in bringing the technology to biomedicine. Mechanical straining is required to prepare printed structures for the stimulus response, which causes them to release the accumulated strain. It would be more beneficial if the 4D constructions could be printed pre-strained. There is currently no technology that allows for the direct printing of pre-strained objects. It makes them far less practical, since every structure must be mechanically stretched to work properly. For such technology to gain widespread adoption as well as attention, it must be made more accessible by simplifying the design process. Steps like these would decrease the barrier of entry for firms and certain other researchers, therefore speeding up progress [
+7
+,
+11
+,
+44
+].
+Currently, most of the research in 4DP is concentrated on the shape-changing capabilities of SMs, such as the elongation, bending, corrugation, expansion, and curling of 4DP materials. [
+15
+]. These basic transformations are all goals of shape-changing mechanisms [
+53
+]. They conceptually reflect the spectrum of changes through time and space to truly describe a change in shape, property, condition, or functioning. This is especially true for functions like helixing, buckling, curling, waving, etc. Such transformations provide an initial conceptual step for the definition and specification of smart devices, upon which further needs might be specified. The ideas and theories of transformation and reconfigurable systems emphasize these functions and fundamental transformations [
+54
+]. To incorporate 4DP information into mechanical design, traditional product models must be updated. Given that this technology primarily enables shape, function, and property transformations, as well as multi-material fabrication, it is critical to reexamine traditional design and models in order to support multi-purpose knowledge and rules spanning space and time [
+53
+].
+One issue with 4DP is that research studies continue to rely on the “trial-and-error” method. A wide range of research initiatives have been sparked by the incorporation of AM in design and engineering, including topologically optimized solid or lattice, multi-material geometries, organic structures inspired by biotechnology, and multiscale systems [
+55
+,
+56
+,
+57
+,
+58
+]. Except in deliberate instances, relatively little focus has been placed on designing and manufacturing more complicated 3D structures or folded or creased structures. Therefore, 4DP requires math to design the material distribution and structure to produce the desired change in form, property, or effectiveness. To establish the links between the four basic elements—material structure, desired final form, material characteristics, and stimulus attributes—theoretical and numerical models must be constructed [
+25
+]. Researchers have presented models and simulations [
+7
+,
+59
+] to better understand and anticipate the shape-shifting behavior of 4DP objects [
+20
+]. 
+Indeed, recent attempts have stressed the need to approach 4DP from a design standpoint, introducing the concept of design for 4DP. To achieve a desirable shape-changing and active structure, understanding the appropriate material distribution (passive and active) at the appropriate location plays an important role. In addition, the proper stimulus at the right time and location to alter the part’s shape needs to be considered [
+60
+]. Conversely, the design of an active composite geometry to accomplish a goal shape change is difficult because it demands solving an inverse problem with spatially heterogeneous, markedly nonlinear material behavior within a complicated boundary problem. As a result, computational assistance and adequate geometric representation are required. The primary determinant of the precise form changes caused in an active material or composite is the spatial arrangement of both materials, commonly referred to as the material distribution. Conceptually, this offers a significant design advance in the form of a parameter that unlocks a virtually limitless range of options that were not previously possible for special standard materials. Inversely, this complicates finding the appropriate method or plan of action to achieve the optimum material distribution for a particular demand [
+61
+].
+This inevitably results in two distinct design approaches: knowledge-based design, which is intuitive, and computational design, which may be contrary to intuition [
+62
+]. The former offers simple answers for fundamental demands that may then be compounded to address more complicated requirements by utilizing experience, knowledge, human intuition, and understanding of basic difficulties. Examples include simple patterns and multi-layer designs. The second type of design was prompted by the limitations of human capabilities and the iterative nature of testing. On the other hand, using modeling and simulation techniques along with developments in computer programming and machine learning, it is possible to produce a solution that is specifically designed to achieve a very complicated shape change encompassing the concept of “optimization” [
+53
+].
+To attain an industrial maturity level, the domains of chemistry, physics, and materials science must be (1) correctly matched with end-user needs and (2) organized to work at the system, product, or object level, which requires a problem-solving approach. Moreover, there has been minimal attempts to incorporate 4DP into the design and development processes of smart gadgets. As a result, it is critical to bring these developments to the attention of designers and product engineers in order to address “design for 4DP” challenges [
+62
+]. 
+In this case, knowledge-based design can help overcome the limitations of trial-and-error design. In Ref. [
+63
+], a computational framework based on a finite element analysis-based evolutionary algorithm is described, with the main objective of achieving the “optimal” distribution of material attributes in a voxelized structure. Material distributions provide a chance to broaden the range of design concepts available using computational methodologies. It combines the benefits of improving material arrangement inside a design space through topology optimization to address the inverse design challenge of finding an optimal geometry to accomplish a goal shape change by using empty voxels. The results show that the suggested technique is effective and provides a highly skilled tool for the development of a 4DP smart composite.
+Voxelated matter that is created and designed voxel by voxel is becoming more popular. Today, the only commonly used technique for producing 3D voxelated materials with great precision is inkjet-based 3DP [
+64
+]. In Ref. [
+60
+], a voxel-based modeling framework is proposed. This study focuses on a computational method for multi-material 4DP design. The technique seeks to construct interconnecting modules that may be fabricated individually and then joined to build the multi-material 4D construction by considering a given digital material distribution that fulfills a specified shape-changing characteristic. This method enables the exploration of new sorts of complicated assemblies that would be hard to print in one step using a single AM technology. However, the suggested voxel-based modeling and simulation system is not intended to be a replacement for existing approaches such as the Finite Element Method; rather, it is a complementary design tool used prior to design efforts employing this method. 
+In Ref. [
+65
+], a computational approach is used to model the deformations caused by the residual stress in mesh-like thermoplastic composite structures using hex-dominant meshes, hybrid finite element isogeometric analysis, and a polycube-based random forest regressor. Many intricate concept instances are used to illustrate the efficiency of the suggested model.
+To trigger the transformation functions and the form modifications of a 4DP geometry over time, an environmental stimulus is required. As mentioned, the state and properties change based on the geometrical design during the 4DP of an SMM. The stimuli that researchers have used in 4DP thus far include heat, light [
+19
+], water [
+14
+], pH [
+66
+], etc. The combination of SM, design, and stimuli is required for the development of intelligent devices and systems [
+67
+]. Within different 4DP studies, the SMMs are the most common stimulus-responsive materials. Programming is one of the most challenging steps in 4DP addressed in the literature [
+68
+]. In general, to have a better understanding and functional structure in this area, a strong knowledge base of the stimulation, and actuation process geometry, manufacturing models are required. In order to build complex SMP-based structures, design standards that link basic forms to temporary shapes remain necessary [
+69
+]. The development of this technology is further hampered by a lack of knowledge about the design formulation of 4DP [
+28
+]. A mathematical model that can forecast the behavior of 4D-printed components is thus required, since one of the challenges facing 4DP is a lack of knowledge of the behavior of 4D-printed parts [
+15
+,
+70
+,
+71
+]. This will hasten the development of the area through the introduction of various characteristics and their impact on the 4DP design.
+A specific type of material that responds dynamically to environmental stimuli has been called intelligent or smart material (SM) [
+72
+]. These materials play an important role in 4DP as they can change their properties over time [
+73
+]. Among the different types of SMs with different activation mechanisms, the materials characterized by the Shape Memory Effect (SME) are the most well-known for their suitability for AM technologies [
+74
+,
+75
+]. This effect allows recovering a large mechanical strain by heating the material above a critical temperature. This feature provides large contractions in the SMMs and enables their use as thermomechanical actuators [
+1
+]. Those SMs that show SME are known by many names: SMMs, Shape Memory Polymers (SMPs), Shape Memory Alloys (SMAs), Shape Memory Ceramics, Shape Memory Hybrids, Shape Memory Gels, and Shape Memory Hydrogels [
+44
+]. SMMs can also be classified as one-, two-, or three-way materials based on how many shape alterations they undergo. In one-way SMMs, the initial shape cannot be recovered, whereas in multiple-way SMMs, the initial shape is regained as a temporary shape. Depending on the environmental conditions, the SMMs can also exhibit the Shape Change Effect (SCE) along with SME [
+15
+].
+4DP consists of a shaping phase realized by 3DP technology and the subsequent application of external stimuli to bait a dynamic response of the material to change its properties or shape [
+76
+]. In the literature, researchers have primarily addressed their attention to study the various stimuli employed. The most explored was temperature, followed by light, water, magnetic field, pH level, electric field, and humidity [
+77
+,
+78
+].
+SMPs and hydrogels are the most recent smart materials to be utilized in 4DP, and they are mostly sensitive to temperature [
+79
+]. Composites of these materials are sensitive to various stimuli, such as light, electric, and magnetic fields, making them ideal for remote-controlled actuation [
+80
+]. Temperature is a versatile trigger for shape changes in shape memory materials, and it can induce these modifications through the glass transition temperature (Tg) of the polymer. In some cases, the temperature variations can lead to structural transformations in one of the monomers, such as the effect observed in sol-gel processes. For instance, agarose nanofibers can undergo a transition from a linear fibrous form to coiled structures when the temperature increases, and they can return to the original structure upon cooling. This phenomenon highlights the temperature-dependent shape memory behavior of some materials, offering additional opportunities for shape manipulation in various applications [
+81
+].
+The temperature affects how SMAs convert. It is a change from the low-temperature phase to the high-temperature phase, or from martensite to austenite. When the temperature decreases, the opposite phenomenon takes place. It changes from twinned martensite to detwinned martensite under the influence of loading, and under the influence of heat, detwinned martensite turns into austenite. As a result of cooling, the reversible transition from the high-temperature phase of austenite to the twinned low-temperature phase of martensite takes place. Pseudoelasticity does not provide a significant contribution to the shape memory effect [
+82
+].
+In liquid-responsive materials, the transformation is designed to induce different swelling in distinct compartments, which is dependent upon spatial and temporal factors. 
+The behavior of polymeric materials is influenced by moisture. Hydrophilic polymers contain functional groups that form secondary bonds with water molecules, leading to absorption and swelling of the polymer and an increased volume. Functional groups such as carboxyl, hydroxyl, and amines facilitate water absorption, while methyl groups increase hydrophobicity, preventing water absorption. Moisture acts as a trigger in 4DP, particularly in hydrophilic polymers. The combination of active single layers, which respond to moisture, and flexible passive layers allows for volume variations and shape changes. The active layer reacts to moisture, while the passive layer adapts to the shape changes induced by the active layer. However, restoring the original dimensions after cycles of water sorption and desorption may not be guaranteed. Acrylamide-based hydrogels and PEG derivatives are examples of polymeric materials that exhibit shape-changing responses to moisture stimuli [
+83
+,
+84
+,
+85
+].
+Liquid-responsive materials supply different functionalities, such as cell encapsulation, controlled drug delivery, and reversible actuation for smart valves. However, it is important to consider some factors when the suitability for specific applications is evaluated, such as the response time, the mechanical properties after expansion, and the possible degradation or hydrolysis after various swelling and de-swelling cycles. It is important to address these challenges to ensure the long-term performance and durability of liquid-responsive materials [
+86
+].
+Light activation (e.g., UV, visible light) offers significant advantages over thermal activation in shape-memory polymers [
+7
+]. Unlike thermal stimuli, light stimuli in SMPs do not create the risk of damage that could result from heat treatments. This makes light activation highly attractive for various biomedical applications [
+87
+]. 
+The alteration of polymer properties occurs when ionizable functional groups within the material become ionized and acquire a charge at specific pH levels. The repulsion force between the SMP chains with similarly charged groups causes an expansion in their dimensions. Consequently, when the pH changes back, the repulsion subsides, and the material returns to its original shape. However, the reversibility and changes associated with pH-responsive materials can be considered a drawback due to the requirement for solvent replacement, which is environmentally unfavorable. Despite these limitations, pH-responsive polymers have demonstrated potential in various fields, including drug delivery and microprocessing [
+87
+]. The use of printing techniques has facilitated the creation of drug delivery systems with unique designs and precise dimensions that are not achievable through traditional production methods. By leveraging these innovative techniques, drug delivery systems can be tailored to specific requirements, enabling more efficient and effective drug release [
+88
+].
+A magnetic field can be applied to SMMs to produce induced heat [
+79
+].
+Using magnetic fields as actuators offers several advantages. Firstly, they respond quickly [
+89
+,
+90
+], allowing for efficient and timely actuation. Secondly, they possess a low safety risk [
+86
+], ensuring the well-being of users and minimizing potential hazards. Moreover, magnetic fields enable remote guidance [
+91
+], allowing for control and manipulation from a distance. They can accelerate the speed of movement, enhancing their dynamic capabilities.
+Some limitations are also present. The first one is the highly reactive nature and aggregation affinity of magnetic-response materials in biomedical applications [
+86
+], which can prevent their usage. Moreover, complications may arise when dealing with magnetic nanoparticles in living systems [
+89
+,
+92
+,
+93
+,
+94
+,
+95
+,
+96
+,
+97
+,
+98
+]. Magnetic fields have low operating temperatures and traditional magnetic absorbents exhibit high density. Moreover, under certain circumstances, magnetic fields may cause a rise in temperature during experiments [
+11
+].
+Nevertheless, materials that are sensitive to magnetic fields find applications in drug-delivery systems and fastening purposes. These applications leverage the unique properties of magnetic fields to enable controlled release and secure attachments [
+11
+].
+Some SMAs are magnetic field sensitive; they are known as magnetic shape memory alloys or ferromagnetic SMAs. These SMAs are also known as magneto-responsive shape memory alloys. A magnetic field is responsible for the structure’s change in orientation, i.e., the movement of the twin boundary in the martensitic structure. Magnetization is responsible for the shape alteration, which is a result of the magnetically induced reorientation [
+82
+].
+SMAs are programmable alloys able to recover their initial shape through external stimulus [
+98
+]. Typically, SMAs go through a programming procedure in between two metal alloy transformation steps via a temperature or magnetic field. The transformation phenomenon is known as SME. There are various publications [
+94
+,
+95
+,
+96
+] providing an in-depth study of SMAs characteristics; which is not the aim of this section, we will just refer to two important characteristics of these materials for better understanding. The shape shifting capability of SMAs is due to the thermoelastic phase transformation between austenite and martensite. Through heating at a certain temperature, martensite shifts to austenite and shape recovery takes place, returning to the original shape. This reversible transformation can also be provided by using special training processes based on magnetic fields, but they show limitations by means of process repeatability. These alloys are characterized by excellent super-elastic properties [
+97
+] and can be used in a wide range of applications: aerospace, biomedical, civil, automotive, and aeronautics [
+63
+]. SMAs are typically of two types: “copper-based”, such as Cu-Al (Zn, Ni, Be, etc.), and nickel-titanium, with a small number of elements such as NiTi (Fe, Cu, Co, etc.). NiTi is the most popular among SMAs, since it allows exceptional applications in orthopedics, cardiology, and neurology [
+67
+]. A critical drawback in the NiTi SMA fabrication of complex shapes is the high sensitivity to composition change. Fe-Mn-Si–based SMAs are less sensitive to compositional change and have attracted interest as a cost-effective alternative to NiTi alloys [
+98
+].
+One of the issues limiting the application of SMAs is the functional fatigue life due to repeated actuations through mechanical or thermal loading. The increasing accumulation of irreversible strain dictates the SMAs’ performance, toughness, and service life. In order to reduce or eliminate this problem, a pathway is added to the typical martensitic phase transformation: it is known as the symmetry-dictated non-phase-transformation pathway. This additional pathway may play a crucial role in functional fatigue. 
+SMAs for printing or manufacturing are frequently related to Selective Laser Melting (SLM) technology. Due to their slow rate of degradation, the use of these kinds of SMs is constrained. For example, it is crucial that manufactured implants (like bone scaffolds) that play a significant role in tissue regeneration are absorbed by native tissues at the proper time, atomically, over the course of time. However, because alloys have a low biodegradability rate, the implant may stay in the body for years, leading to the need for additional surgery. So, it appears that further research is needed before SMA can be used in 4DP to meet current limits and concerns [
+99
+].
+SMPs are the most employed materials in 4DP [
+3
+]. They can respond to a variety of stimuli, such as light, heat, electricity, moisture, and pH [
+100
+,
+101
+]. As a result of the stimulus application, a movement in the shaped body takes place until a memorized shape can be recovered [
+100
+,
+102
+]. Growing research in the 4DP sector also shows that some polymeric materials alter other properties, such as color, rather than their structure [
+33
+]. Compared with SMAs and ceramics, SMPs exhibit the capabilities of high strain recovery, easy recovery temperature control and programming, low cost, and low weight [
+103
+]. Moreover, they can be chemically tuned to obtain biocompatible and biodegradable materials, thus attracting research interests in many applications, including bio-medical devices [
+69
+], deployable space structures, and micro-electro-mechanical systems. For these materials, the programming step is based on heating the part above the Tg; a deformation is applied to obtain the desired shape, and the part is then cooled by maintaining the deformation strain. The recovery is provided by heating at Tg temperature. SMPs are classified based on the number of programmed temporary configurations [
+2
+].
+SMPs can be used for interior surfaces in airplanes and automobiles since they are lighter than SMAs and provide lightweight construction. SMPs’ manufacturing costs for raw materials and processing are significantly lower than those of SMAs. Complex forms using SMPs may be readily created with excellent quality and dimensional precision using traditional or modern manufacturing techniques. SMPs were developed for 4DP with a wider range of Tg than SMAs, which ranged from 100 to 700 °C. Furthermore, strain recovery outperforms SMAs by 400% [
+104
+]. Fillers with various compositions can be used to simply customize thermo-mechanical characteristics. The SMPs may be activated by more than one stimulus in various task-oriented tasks. In the transition range, SMPs have a noticeably greater damping ratio. 
+Hydrogels are water-swollen visco-elastic materials characterized by a 3D microstructure transformation ability based on wettability and solubility [
+3
+]. They can respond to water or moisture [
+22
+] by expanding their original volume up to 200% [
+15
+]. These hydrophilic crosslinked polymers are widely employed to fabricate 4DP components for soft robotics, microgrippers, micro-actuators, and biomedical applications [
+105
+] with a biocompatibility obtainable by employing Direct Ink Writing (DIW). Unfortunately, they exhibit a very slow reverse response, which requires hours for drying and shrinking. A solution is a particular programming method able to provide anisotropy to the swelling. Moreover, 3D components can be composed of a series of hydrogel-based inks sensitive to hydration and temperature. By adding UV-curable monomers, interpenetrating polymer networks are obtained after the polymerization. 
+Typical stimuli for 4DP Shape Memory Hydrogels are pH, temperature, and ions. These materials possess the ability to swell by absorbing water, allowing the fabrication of water-sensitive micro-actuators [
+92
+,
+106
+] and reversible origami architectures [
+107
+]. Unfortunately, the absorption of water is provided until saturation is reached, making it difficult to control it at intermediate steps. A way to overcome this problem is to control the temperature of the aqueous medium [
+15
+]. The slow response speed mainly depends on the diffusivity of water (10
+−10
+ to 10
+−9
+ m
+2
+ s
+−1
+) and its small modulus (in the range of a few hundred kPa), thus requiring a large swelling for shape change. 
+Conversely to the Shape Memory Hydrogels, the SMPs show a very fast response, but they are one-way. A good solution is the combination of both materials: hydrogels are combined with a non-swelling polymer or filament in the hydrogel-based 4DP environment [
+108
+]. The hydrogel expands when the printed structure is submerged in a solvent, causing mismatch stresses between two materials that result in a general form shift. With this method, activation programming requirements can be completely disregarded. Unfortunately, hydrogels’ rigidity and strength both fall short of expectations. Effective reduction of this flaw is possible using a composite method that combines rigid SMPs and soft gel [
+27
+].
+Lastly, a new material category able to provide a fast and reversible shape change is Liquid Crystal Elastomers. The principle is based on the transition between the liquid crystal (nematic) state and the isotropic state. Stimuli can be light, heat, and electrical or magnetic fields [
+109
+]. 
+Different AM techniques have been explored 4DP, including Fused Filament Fabrication (FFF) or Fused Deposition Modeling [
+25
+,
+110
+], Electro Hydro Dynamic printing [
+111
+], DIW, Material Jetting, Selective Laser Sintering, Stereolithography (SLA), Digital Light Processing (DLP), Multiphoton Lithography, and SLM [
+112
+,
+113
+]. The most common types of 4DP are polyjet printing and syringe printing; however, these printing technologies require multiple materials and nozzles, which restricts the 3DP techniques [
+32
+]. However, the most suitable method will vary depending on the desired structural response and the appropriate selection of SMs. Current SMs include SMPs, hydrogel composites, SMAs, and Shape Memory Composites. SMP-based structures are 4D-printed through DIW, FFF, SLA, DLP, and Multiphoton Lithography. Although a higher percentage of published articles are on FFF-based 4DP processes [
+54
+], an analysis of all available techniques is necessary to select more versatile processes to successfully print the 4D structures. By experimenting with various printing techniques, different SMs that are stronger, lighter, induce diverse property changes, and react to various stimuli could be 3D printed.
+DIW and FFF are extrusion-based technologies in which inks or solid filaments are extruded through nozzles for fabricating 3D objects [
+114
+].
+DIW involves the extrusion of gel-like materials characterized by specific rheological properties, known as shear-thinning [
+115
+]. The ink consists of two materials: one allowing it to undergo plastic deformation, the other showing viscoelastic recovery after deformation. Several configurations can be provided: bending, helical spiral ribbons, and planar letter formations [
+2
+]. The DIW technique shows the great capability to fabricate high-resolution, complexly shaped parts in multi-materials by using SMPs, Shape Memory Hydrogels, and SMP composites. Materials suitable for clinical settings can be developed, including self-healing [
+116
+,
+117
+] and highly stretchable polymeric objects [
+33
+]. 
+In FFF, a thermoplastic filament is extruded via a nozzle and deposited along with a toolpath on a layer, resulting in an anisotropic property of the manufactured object. The obtained pre-strain and residual strain have been employed in 4DP to provide 3D deformations by heat shrinkage of 2D patterned lattice structures [
+3
+]. The filament path, controlled in a unidirectional manner, was recently used to enable shape transformation [
+14
+]. Fast fabrication speed and scalability promoted diffusion in industrial and research laboratories [
+92
+,
+118
+]. However, the low printing resolution and the degradation caused by the fabrication above the melting temperature cause invalidation of temperature-sensitive components, thus reducing possible applications requiring long periods of stability [
+102
+]. Moreover, the FFF process is relatively slow and has limited options for its minimum nozzle size.
+DLP, Multiphoton Lithography, and SLA are Vat Photopolymerization technologies that process photopolymers using UV light. The SLA source is a laser-emitting diode and employs acrylate photocurable resins. The obtainable surface quality, both in terms of accuracy and roughness, is very high. DLP uses light projection to cure full layers. The incorporation of ureido-pyrimidinone hydrogels into polycaprolactone promotes excellent shape memory abilities. Multiphoton Lithography is a technology able to fabricate objects at high resolution with microscale precision. It is based on a polymerization that occurs near the focal point of a beam [
+33
+].
+At present, SLA, including Multiphoton Lithography, has the highest resolution, and it can be utilized with a wide variety of materials [
+119
+]. However, only photocurable resins can be employed, and the use of non-transparent fillers is limited by the optical requirement for photocuring. Accordingly, the stimulus usually used for actuating 4DPed components made by SLA and DLP is heating [
+120
+].
+Powder Bed Fusion 4DP has mostly been used for Selective Laser Melting (SLM) of metallic powders and Selective Laser Sintering of polymeric powders. More knowledge on metal AM processes has been disclosed through SLM. It is a quick, extremely flexible method that uses a laser beam to selectively scan and melt a powder bed [
+54
+,
+118
+]. To print shape-memory structures, researchers have generally employed SLM with materials such as NiTi-based alloys, Cu-based alloys [
+121
+], and Fe-based alloys [
+98
+]. Different studies have investigated the printability and characteristics of these SMAs [
+122
+]. The reproducibility of material created by SLM is likely higher than that of a traditional SMA. However, the use of SLM is associated with several issues. For example, Ni has a lower evaporation temperature than Ti, leading to a lower concentration of Ni after SLM processing. The phase-transformation temperature has been observed to rise as Ni concentration decreases [
+118
+].
+The essential difference between 4DP and 3DP is the smart design of responsive materials for a time-dependent shape self-transformation of an object when subjected to an external stimulus. The programming of the structures in form or function brings major challenges to the part and process design [
+3
+].
+Most current 4DP demonstrations are one-way (
+Figure 3
+a), which means that the devices must be reprogrammed after each recovery [
+123
+]. The manual establishment of a temporary form is referred to as programming or reprogramming in this context. Reversible two-way SMMs provide two different shapes when exposed to specific stimuli. Thus, these types of materials memorize shapes at both low and high temperatures. The reversibility in 4DP allows repetitive actuation and eliminates the need for reprogramming, which is time- and labor-consuming. Two-way SMEs (
+Figure 3
+b) are specifically used in the creation of microrobots and actuators [
+124
+]. Polycaprolactone and polyurethane are two-way SMMs commonly actuated in response to environmental temperature. Three-way SMMs, also known as multiway SMEs (
+Figure 3
+c), allow an intermediate shape between temporary and original shapes [
+33
+].
+The shape changing mechanisms can be classified into three types: stimuli-responsive materials, multi-material layouts, internally induced artificial stresses [
+54
+]. In this section, different strategies used in the literature for fabricating 4D structures are detailed.
+These materials are the most widely employed in 4DP. Programming is typically used to shape the part into a temporary geometry. As it is subjected to a stimulus, the structure recovers its original printed shape [
+126
+]. 
+During the fabrication process, the heating and cooling cycles accumulate internal stress and strain because of the constraints of the platform or the previous layers. Such stored strain and stress can be utilized to trigger the pattern transformation and make active shape changes [
+102
+]. 
+The programming is usually manual. Different studies have used this characteristic of SMMs to print active structures. Among all SMPs, polylactic acid (PLA) is the most used and studied [
+127
+]. PLA structures with a self-tightening mechanism are reported in [
+128
+], as illustrated in 
+Figure 4
+a. This type of 4DP is highly applicable in minimally invasive surgery. Following this approach, in [
+129
+], the authors provided different part designs to test the shape memory capabilities of PLA. The parts were immersed and compressed in water at 70 °C for 60 s and cooled to room temperature. The parts maintained their temporary shape under Tg. When placed back in the 70 °C water pool, the compressed shape soon regained its former shape. The authors in [
+130
+] used PLA-based filament to print Miura-origami. For shape shifting and shape recovery, the specimen was initially deformed in an oven at the deformation temperature (higher than Tg) to an intermediate shape while being subjected to an unfolding load. When the specimen was cooled to the fixity temperature and unloaded, the intermediate shape remained. The specimen, without an external force, returned to almost its former shape after heating to the recovery temperature (higher than Tg). 
+Active lattice and metamaterial structures are becoming increasingly popular in 4DP technology [
+68
+] as they can increase the flexibility and durability of origami and kirigami structures. They have generated great interest in a wide range of industries, such as bioelectronics [
+26
+], robotics [
+126
+], and microelectromechanical fields. Numerous investigations have examined the design and characteristics of lattice and metamaterial constructions [
+74
+,
+131
+]. They show high deformation and energy absorption [
+132
+]. Recent advances in the mechanical properties of auxetic materials and structures are studied in [
+133
+]. Particular attention is paid to the experimental research focusing on large deformation and energy-absorption capability under quasi-static and dynamic loading. In Ref. [
+110
+], architected metamaterials were designed as a repeated arrangement of re-entrant auxetic, hexagonal, and AuxHex unit-cells and fabricated in PLA filament via FFF (
+Figure 4
+b). According to the results, metamaterials with re-entrant auxetic unit-cells exhibit good energy absorption capabilities. In fact, metamaterials with elastoplastic behaviors show mechanical hysteresis under a loading–unloading cycle. It has been experimentally demonstrated that simple heating may totally undo the remaining plastic strain and dissipation processes brought on by cold programming.
+Using a similar strategy in designing re-entrant honeycombs, active auxetic meta-materials were 3D printed by [
+134
+], and the behavior regarding shape shifting and recovery was studied. It revealed that printed structures can achieve up to a 200% variation in area. Active meta-materials were parametrically modeled and fabricated via an inkjet 3D printer. However, the programming was manual, as discussed earlier, with the printed structure being warmed, deformed, and recovered at a temperature higher than Tg. 
+In Ref. [
+134
+], the authors printed a complex structure in the permanent shape of a bucky-ball via SLA. The ball was submerged in hot water at 65 °C (above its Tg) and manually flattened and cooled down to 27 °C (below its Tg). The flattened ball recovered its original shape in hot water in 11 s, demonstrating its speed and ability to resist high strain. 
+Shape-memory polymer-based systems with auxetic structure and hierarchical motion that can be 4D printed were created in [
+135
+], made from a commercial photopolymer resin using SLA. Uniaxial tensile tests were used to describe the mechanical behavior of the systems by measuring the strains parallel and perpendicular to the load direction. The photopolymer exhibited the so-called Temperature-Memory Effect, which is characterized by the region of thermal recovery moving to higher temperatures as the deformation temperature increases. This property makes it possible to use the deformation temperature to adjust the thermal region that causes the shape memory response. In order to create thermally induced hierarchical movements and self-deployment capabilities, structures were coded. Through a suitable specification of the thermo-mechanical history, it was demonstrated that even complicated responses, such as successive in-plane and out-of-plane motions, were simply regulated and could be readily managed.
+The SME is not an intrinsic property of SMPs and can be attained by using the combination of a mechanical force and heat, usually provided by human intervention in single-material SMP [
+54
+]. 
+The recovery temperature and the loading type significantly affect the shape memory behavior. Additionally, the specimens that were treated to an unfolding load showed higher recovery forces than those that were submitted to a folding load. The significant volume variation throughout the form recovery process suggested that 4D-printed origami structures can be used for self-assembly structures, which take up less room. This functionality makes them attractive for space-missions, where reducing weight and volume is important.
+The properties of 3D-printed parts are markedly affected by processing parameters such as printing temperature, printing speed, layer thickness, etc. Therefore, by altering process parameters and print strategies, desired behavior can be programmed during fabrication. Consequently, stored energy regarding internal stress and strain can be released, allowing the shape recovery step [
+102
+,
+136
+,
+137
+]. The shape change is influenced by the residual stresses introduced into the thermoplastic materials throughout the 3DP process. The thermoplastic materials are viscoelastic throughout the extrusion process, and the high temperature allows the polymer chains to stretch and align in the direction of the material flow via the extrusion nozzle [
+138
+]. Researchers have found that parameters such as heating and cooling temperatures, extrusion rate, printing speed, deposition path, and extrusion head diameter affect material microstructures such as crystallinity and anisotropy and mechanical properties [
+139
+].
+Adjusting the design and process parameters can provide complex changes in the part structure when the memory shape physical principle is based on the releasing of mechanical stresses [
+2
+]. In AM, stresses are created by tailoring parameters such as strategy direction, infill type, road width, nozzle diameter, and platform temperature [
+140
+]. In Ref. [
+25
+], the influence of process factors such as printing speed, layer thickness, nozzle temperature, and printing pattern on shape-shifting behavior using FFF was investigated. By modifying such factors, the internal stress can be tailored, and many complex designs can be created [
+141
+]. The major advantage is that the programming phase is not necessary, since the ability is incorporated into the fabrication process. Nevertheless, considerable design and modeling are required to predict and control the deformation [
+92
+]. Works are now focusing on increasing the stress that can arise during the manufacturing process by printing on pre-strained substrates. A typical method is to employ a bilayer configuration characterized by layers having opposite, internal, directional stresses. This way, the generation of specific shape-changing response can be designed, e.g., bending or curling [
+2
+]. Stress-induced methods can be used to create 4DP structures from single materials and those materials with no SME. 
+A 4DP method using FFF technology and, as the material, a single thermoplastic filament of Acrylonitrile Butadiene Styrene without an SME, is studied in [
+14
+]. A self-assembly function was obtained by alternating anisotropic regions and isotropic regions. Some layers were printed transversely and longitudinally, as shown in 
+Figure 5
+a–c. However, as the authors reported, no reversibility could be achieved. 
+To produce bilayer composites with a single material (PLA), the authors of [
+142
+] designed the tool path geometry by adjusting printing patterns per layer to create a differential expansion between layers. In this study, to create constraint layers and active layers via a single material, the authors used the printing angle as the main variable parameter; active layers were those printed at 90 degrees, and constraint layers at 0 degrees. The distribution of the constraint layers and the active layers in the bilayer configuration considerably affected the shape change. When immersed in hot water, the constraint layer triggered the shape change. On the other hand, the active layers defined the main direction of curvature as they shrank along the direction of the print pattern longitudinally when heated. The result of this study shows that the proportions (length-to-width ratio) of the printed samples, as mentioned in [
+72
+], affect the bending angle. The bending angle increases as the length of the rectangles increases, while the width is kept constant. In addition, varying the printing angles with reference to the main geometry leads to complex geometries when activated. 
+Software was developed in [
+57
+] for designing, simulating, and generating the toolpath of bilayer structures for combining passive and active layers. This strategy was used for designing a compliant structure with self-deployable, self-locking features (
+Figure 6
+a,b). The passive segments could be either a straight line or a planar curve. On the other hand, the arrangement of active and passive layers through the structure could lead to different shape-shifting behaviors and create complex features like twisting ties and springs. Samples were printed in PLA, via a commercial desktop FFF system, demonstrating that the bending direction and angle were controlled by changing the printing path. 
+The lengthy polymer chains found inside their networks determine the mechanical characteristics of the hydrogels made from the inks, which have strong mechanical performance. 
+Biomimetic composite hydrogel architectures inspired by the anisotropy of the cell walls of botanical systems are used in [
+27
+]. The print strategy provides anisotropic swelling capability obtained by a specific filament path giving the alignment of cellulose fibrils. Through designing the patterns for prescribed target shapes, they could program plant-inspired structures that modify the shape in water. However, the efficacy of the represented method relies on the ability to predict the elastic and swelling anisotropies by tailoring the local orientation of cellulose fibrils within the hydrogel composite. In addition, processing parameters such as the nozzle size and the deposition speed affect the anisotropic swelling since they affect the shear-induced alignment. In particular, the bigger the nozzle diameter, the smaller the shear forces that align the cellulose fibrils, and hence the longitudinal and transverse swelling strains. 
+According to the work represented in [
+143
+], 3DP can be used to explore the shape-morphing behavior of hydrogels. The hydrogel precursors’ composition had a significant impact on the composite’s physical characteristics and thermal actuation. The hydrophilic polyethylene glycol diacrylate crosslinker used to join the poly(N-isopropylacrylamide) network, an adaptive metamaterial manufactured by functionally graded 4DP, caused the lower critical solution temperature to increase to 37 °C. The temperature-dependent asymmetric swelling/shrinking behavior controlled by the anisotropic characteristics of the composites led to actuators with extremely strong actuating performance in response to temperature. Single-crosslinked sheets rolled up into a tubular structure when submerged in 12 °C water. The tubes quickly unfurled when placed in water at 42 °C before bending up slightly in the other direction. It is feasible to reverse temperature-dependent shape morphing and induce self-folding and unrolling at higher and lower temperatures, respectively, by the dual photo crosslinking of Poly(N-isopropylacrylamide).
+The 4DP programming approach used in [
+144
+] enables local shape-morphing in a single material by modifying process parameters such as the deposition speed and path. The local nematic arrangements and the shape-morphing behaviors of the Liquid Crystal Elastomers were successfully programmed. By changing the deposition speed in specific areas, locally programmed popping-up, self-assembling, and oscillating capabilities were designed and obtained. 
+DLP is used in [
+85
+] to create programmable hydrogel structures made of composite material that can conduct a variety of intricate 3D shape deformations; notably, 2% 3-Sulfopropyl Methacrylate Potassium salt of total weight was introduced to the mixed material to generate large stresses and enlarge the swelling. The fundamental idea is that secondary microstructures are inserted into the hydrogel strip’s side, causing bending or twisting deformations because of asymmetrical swelling. Different hydrogel structures, including strips, sheets, and 3D objects, are constructed using SLA thanks to the advantages of free-form design and production.
+Due to the limits of a single SM’s physical qualities, imperfect structures are frequently produced while printing with them. To promote the regulated shape-memory behavior of the printed structure, desirable thermomechanical behaviors may be achieved by mixing printing materials and using multi-material printing processes. Hinges, joints, bends [
+118
+], or twists [
+25
+] can be produced at the structure’s interfaces by printing a mix of rigid and inactive materials with various thermomechanical characteristics. These features respond to the stimulus by producing differential stresses. Multi-material structures utilize the differences in material properties (i.e., thermal expansion coefficient, elasticity, swelling ratio, etc.) to produce a structural change. 
+The combined printing of SMs with each other or with static ones adds different design properties when creating actuating parts. SM printed regions may serve as a component’s hinge or actuation zone, while static material serves as the stiff framework that ensures the component retains its shape. Conversely to an overall transformation, only specific zones characterized by SMs react and actuate as exposed to stimuli [
+129
+]. Heterogeneous lattices were made in [
+52
+], combining several materials. It was found that the 2D and 3D open cell lattices may be swiftly and frequently actuated in a steady, well-controlled, and dependable manner by employing temperature as a stimulus. A diverse medium for the integrated design and production of challenging shape-morphing structures is also made available by this multi-material 4DP lattice.
+The printing of multiple materials in a single component is an effective method to fabricate dynamic 4DP structures. There are different approaches in the literature: some uses of blend materials are reported [
+145
+] where, to simulate sequential petal opening and sequential drug-releasing effects, samples with different PLA and polycaprolactone ratio composites were printed by using ink based on the DWI technique. The findings proved that these 4DP composites can be employed in the manufacture of bio-inspired robots and biomedical equipment. In another approach, the SME in biodegradable blends based on PLA and polycaprolactone in different concentrations was studied in [
+146
+]. Regarding their results, the thermal degradation of PLA was improved by the polycaprolactone addition and the Tg decreasing from 67.2 to 55.2 °C. 
+In bilayer multi-material printing, the shape-morphing ability of multi-materials typically depends upon the different reaction to the applied stimuli. Complex shape transformations can be designed based on this difference, e.g., by employing a combination of active and passive materials.
+Figure 7
+a–c shows the schematic of multi-material transformation before and after stimuli application. Numbers 1 and 2 indicate the passive and active layers, respectively. 
+In Ref. [
+147
+], PLA was printed via Fused Deposition Modeling on a paper substrate with a thermo-responsive composite bilayer. The actuation capabilities were described and compared by tailoring the printing raster angle. As a result, the anisotropic stiffness of the method and the polymer layer’s other characteristics were determined. The softening of the polymer layer above the Tg and the bilayer effect during the heating and cooling processes made the material a reversible soft actuator. 
+A multi-layer membrane structure composed of alternating different materials can spontaneously provide a 3D geometry under heating and recover its original shape after cooling, due to the difference in the thermal expansion coefficient. In Ref. [
+117
+], the 4DP self-morphing composite was characterized by two distinct parts: the bottom layer consisted of homogeneous resin, and the top layer was made of fiber-reinforced composites. The deformation was caused by the difference in thermal expansion coefficients between continuous fibers and the deformable matrix. These materials can provide the desired transformation in a controllable way. 
+Additionally, multiple stimulus-responsive materials can be employed to promote sequential deformations. This method has been extensively investigated in the literature [
+99
+,
+148
+] since it allows designing self-assembly 4D objects (
+Figure 8
+a) [
+22
+]. In Ref. [
+149
+], the authors developed a bi-layer reversible structure employing a rigid material (VeroWhitePlus) and a soft and rubbery material (TangoBlackPlus) characterized by a Tg of 58 °C and 10 °C at room temperature, respectively. Heat was employed in the programming stage, and elastomer swelling and heat were used in the recovery step. In a dual-layer arrangement, scientists were able to adjust the curvature by linking the swelling of the elastomer to the bilayer structure of a shape-setting polymer and changing the temperature and elastomer layer thickness.
+In Ref. [
+107
+], the authors developed used a multi-material design, combining an active layer composed of highly hygroscopic bio-composite materials with hydrophobic restrictive and blocking layers made of PLA and Thermoplastic Polyester copolymers (
+Figure 8
+b). They adopted the functional bilayer scheme to develop hygromorphic motion mechanisms. It consisted of two or more layers with low and high hygroscopic expansion ratios. As a result, a hygro-responsive sequential bending motion was provided. Following this approach, the bioinspired 4DP method was used in [
+150
+] for printing structures with tailored movement responses. The method was based on introducing local hygroscopic anisotropies and local non-hygroscopic anatomic features in the same process. Samples with several different raster patterns were produced using Acrylonitrile Butadiene Styrene and Wood Polymer Composite to demonstrate the bilayer structure suitability. Regarding the anisotropies introduced by the material and printing strategy, different movements were observed.
+An investigation aiming to deliver the advantages offered by the combination of material and geometry design in direct 4DP was attempted by [
+151
+]. Flat samples were printed with two different materials, including SMP (in its glassy state) and an elastomer (in its rubbery state). With increasing of the temperature, a difference in the SMP thermal expansion coefficient occurred, leading to a bending. As the temperature reached the SMP Tg, the material softened and released the compressive strains in the elastomer. This led to deformation of the component when mechanical equilibrium was reached when coupled with the mismatch in the coefficient of thermal expansion between the SMP and the elastomer (
+Figure 9
+a).
+Swelling-induced shape transformation using gels and hydrogels has been widely investigated and applied to the design and fabrication of smart polymer devices, such as soft robotics, biomedical devices, and origami patterns [
+152
+,
+153
+]. Because swelling is typically isotropic, hydrogels must be combined with other elements to provide non-isotropic deformations. An elastomer–hydrogel laminate was used in [
+154
+] for printing self-evolving structures. The printed structure’s superior load-bearing capability was preserved by the dehydrated 3D structure up to a high temperature (100 °C). Inspired by a bio-prototype, a programmable and responsive bioinspired structure was created in [
+155
+]. A monolithic SU-8 (a commonly used epoxy-based negative photoresist) gel film was used, characterized by tailorable concentrations of the swellable cyclopentanone, within a non-swellable host matrix of SU-8. Upon organic solvent stimuli, the origami and kirigami dual-gradient films showed complex 3D shape transformations from their 2D counterparts. To generate a cyclopentanone vertical gradient in the SU-8 gel film, skin surface polymerization induced by heating was used. 
+Using photopolymers, a hydrophilic/hydrophobic composite structure was developed in [
+156
+]. The rubbery nature allowed for a desirable actuation speed and force printable via DLP. The composite comprised a poly-ethylene glycol diacrylate hydrophilic layer that expands upon swelling in water and a poly-propylene glycol dimethacrylate hydrophobic layer acting as a soft support. The former was printed in two separate structures with different light patterns. The latter was injected and cured at the end of the fabrication of the total structure. Regarding the pattern of printing the material, different shape shifts, such as bending, swelling, opening, closing, and even sequential movement, were achieved. However, none of the abovementioned approaches are reversible, and for repetition, manual programming is necessary. 
+For many technical and biological purposes, designing structures with significant reversible form changes is particularly desirable. However, the materials that can change their structure significantly and irreversibly are few. Hydrogels are typically soft, with a shear modulus ranging between 20 and 300 kPa. Combining SMPs with hydrogels is a solution to achieve the reversible shape change of structures with relatively complicated geometries. 
+In Ref. [
+109
+], a hybrid DIW system was employed to fabricate in the same layer a soft elastomer, a glassy polymer, and Liquid Crystal Elastomers. The resulting 2D shape was able to achieve transformations into 2D configurations by heating and cooling. Using this approach, different structures were printed according to the monitoring behavior of auxetic structures; this showed that by fabricating the Liquid Crystal Elastomer pattern and modifying the elastomer and glassy polymer architecture, it is possible to obtain controllable geometry deformations in x- and y-directions. The multi-material was used to create active hinges to achieve reversible bending in a variety of applications: a box that can open and close, a pick-and-place soft robotic gripper, and a hand with five reversible actuating fingers to produce American sign language. In Ref. [
+157
+], the authors used bilayer printing and combined stimuli to achieve reversible 4DP. The forward programming was obtained through asymmetric swelling with heated ethanol, and the recovery was achieved by dry heating. 
+A different approach to pattern printing using hydrogel was introduced in [
+158
+]. In this work, a polystyrene pane was remotely stimulated via light emission, and a chitosan hydrogel ink was employed to manufacture actuating hinges. The actuation principle was the thermal stress gradient caused by the heating of the hinges, which converted infrared light into energy. 
+Another method for manufacturing multi-materials is the combination of structures able to react to the same stimulus in different ways. 
+A substantial part of the reason for the increased interest in biopolymeric gels is due to their great biocompatibility and rapid water absorption. Biocompatible gels, including protein-based gels, are studied comprehensively in the literature [
+159
+,
+160
+,
+161
+]. However, there are few studies regarding 4DP with protein-based hydrogels. 3DP protein-based hydrogels, as presented in [
+162
+], transform their shape with programmed motions when subjected to temperature, pH, and enzymatic degradation. Temp-Ink, pH-Ink, and Enz-Ink were used in methacrylated bovine serum albumin as building blocks. These shear-thinning gels are perfect for 3DP of multi-layered stimulus-responsive hydrogels using DIW. An exclusive aspect of this approach is an enzyme-triggered shape change based on the breakdown of the bovine serum albumin network. By creating protein-based hydrogels that may reversibly change form in response to ambient temperature and pH and irreversibly change due to enzyme degradation, this technology highlights the complexity that can be added to 4DP systems. In another study [
+137
+], bovine serum albumin-based resin was used for SLA to present bioplastic objects with shape-memory behavior. Furthermore, components characterized by several geometries, such as a cylindrical puck, a hollow lattice, a sphere, a “W”-shaped tube, and a stent, were manufactured and dehydrated at ambient temperature. While the plastically deformed objects retained their shape for an indefinite time, heat or submersion in water provided the recovery of the originally printed shape. However, the programming in this job was performed manually.
+In Ref. [
+163
+], a technique for programming protein hydrogels and inducing shape changes in aqueous solutions at room temperature was introduced. The method was illustrated by utilizing hydrogels generated in a cylindrical or floral form from serum albumin, the most prevalent protein in blood plasma. These gels were then designed to take the form of a spring or a ring. The adsorption of Zn
+2+
+ or Cu
+2+
+ cations caused a significant change in stiffness (up to 17-fold), which was how the programming was carried out. As the cations dispersed outside the hydrogel substance, it could be demonstrated that these programmable biomaterials could transform back into their original structure (
+Figure 9
+b).
+The actuation of stimuli-responsive hydrogels and composites is usually driven in water by slow volume changes upon anisotropic swelling and deswelling. Magnetoactive particles may be an effective filler for hydro-polymers to introduce remote and contactless actuation in water and air. They are composed of ferrites, superparamagnetic iron nanoparticles, or neodymium particles. A simple method of assembling nonmagnetic and magnetic hydrogels into single constructs via AM was demonstrated in [
+164
+]. 4DP magnetic actuators proved their response to the magnetic field, allowing for steerable motion in the air (
+Figure 9
+c). 
+4DP of various structures made of PLA and PLA/Fe3O4 composite filaments was studied in [
+165
+]. The recovery was obtained using a magnetic field [
+144
+]. Outcomes promoted applications in biology and medicine. 
+Different parameters can control shape shifting, as discussed in the investigation in [
+166
+], where a bilayer structure printed from PLA as the active layer and Thermoplastic Urethane as the restrictive layer was reported. By printing structures on a cooler surface and deciding on faster printing rates, the deformation angle may be adjusted. When employed for constructions with more active layers, these two printing settings can result in larger residual stresses being stored in the material, allowing the structures to bend even farther after the recovery stage while still maintaining their higher overall stiffness (
+Figure 8
+d). According to different review studies [
+115
+], an increase in the activation temperature, layer height, and nozzle temperature can markedly improve the shape recovery ratio. The opposite result is obtained by increasing the total thickness. The results of the study [
+130
+] showed the effect of recovery temperature on the shape recovery behavior of the deformed sample. The plot of shape recovery vs. time of the Miura-origami sheet shows that the deformed specimen can recover its original shape faster at a higher temperature. Furthermore, increased cantilever thickness provided a lower bending position angle and slower bending rates for increased thickness. As discussed in [
+107
+], a delay in the motion is observed at higher layer thicknesses. The infill strategy can cause anisotropy in the component, leading to a change in mechanical properties such as elasticity, viscoelasticity, and SME.
+The shape transformation can be improved by controlling the conditions and by improving the 3DP repeatability. 
+By altering the angle or radius of the active portion of the 3D-printed structure, the extent of transformation is determined. The shape of the active segment, the kind of thermal stimulus, activation temperature, and activation duration are all factors that impact the creation of residual stresses during 3DP. It also depends on the type of thermoplastic material and its qualities. Depending on the filament deposition direction, the 3D-printed structure must change in the expected plane in order to accurately adapt its shape. The accuracy of numerous active segments that were printed and converted under identical circumstances serves as a benchmark for the repeatability of shape transformation. The characteristics of 3DP filaments, process variables that impact the deposited filament precision, and transformation circumstances all affect the repeatability and accuracy of the shape transformation. There is limited information on the precision and repeatability of shape transformation in studies on 3DP filaments and printing process parameters [
+112
+,
+167
+].
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figure 9.
+
+4DP multi-material: direct 4DP of structural parts with architecture-driven deformation modes (
+a
+) [
+151
+]; protein hydrogel cation programming and morphing through mechanochemical alterations (
+b
+) [
+163
+]; magnetic cantilevers sensitive to the magnetic field (
+c
+) [
+164
+]; shape-shifting cycle of a PLA rectangular multi-ply structure and TPU (
+d
+) [
+166
+].
+
+
+
+
+
+
+
+
+ 
+Figure 9.
+
+4DP multi-material: direct 4DP of structural parts with architecture-driven deformation modes (
+a
+) [
+151
+]; protein hydrogel cation programming and morphing through mechanochemical alterations (
+b
+) [
+163
+]; magnetic cantilevers sensitive to the magnetic field (
+c
+) [
+164
+]; shape-shifting cycle of a PLA rectangular multi-ply structure and TPU (
+d
+) [
+166
+].
+
+
+
+
+SMPs have been widely utilized for 4DP in the literature because of their outstanding manufacturability [
+9
+]. However, the low stiffness (less than 1 GPa), tensile strength (1–30 MPa), and Tg (≈95 °C) limit the possible applications. Conversely, metallic SMAs exhibit much higher stiffness (200 GPa) and strength (1000 MPa) than SMPs. Additionally, metallic SMAs have a much larger transformation hysteresis, leading to a wider application temperature. Although there are many studies regarding SMA printability [
+168
+,
+169
+], few studies are available regarding SME realization of 4DP SMAs, and typically they involve TiNi (Ti-rich) and NiTi (Ni-rich) powders. 
+One of the most popular alloys with the SME is nitinol (nickel-titanium, or NiTi), which has various uses in the aerospace, automotive, biomedical, and other industries. In [
+170
+], the authors used Ni-based SMA for fabricating and pre-programming a prototype of a crawling robot inspired by inchworms. The robot body is built as a monolithically flexible sheet that unites the “torso” and “feet” through the extraction and synthesis of the functional elements of the bionic device. Under the torso, an SMA spring is put together to mimic the abdominal longitudinal muscles. A foot layout was designed with “one edge and two facets”, using silicone rubber as the high-friction surface and polytetrafluoroethylene as the low-friction material. This provides continuous movement of the body without jumping. A strip-type scanning strategy was employed to print samples and shorten the backfill time. A scanning angle of 67 was chosen for layer-to-layer stacking; investigations have suggested that this angle may lead to more random crystal orientations and refined grains. Although the authors introduce the sample as a two-way 4DP structure, the two-way shape shifting is not achieved by 4DP but by adding an SMA spring to the structure 1.
+A new approach using SMAs is presented in [
+171
+]. NiTi SMAs show excellent SME super elasticity and good biocompatibility, making them suitable for sensing, actuating, and biomedical applications. Bulk NiTi SMAs were fabricated via SLM with large elastocaloric effects, tailorable by varying the processing parameters of AM technology and heat treatment. 
+In particular, the microstructure depends upon the laser power, the scanning speed and strategy, the layer thickness, and the hatch spacing [
+168
+]. As mentioned in 
+Section 4.3
+, magnetic SMAs are another type of material used for 4DP. The advantage of these materials over conventional SMAs lies in their ability to actuate by using a magnetic field. In [
+172
+], adapted 3DP Ni-Mn-Ga powders were employed for creating net-shaped porous structures with good mechanical strength via binder jetting and sintering at 463 K for 4 h. Upon heating and cooling, printed components experience reversible martensitic change. The samples revealed a reversible magnetic-field-induced strain of about 0.01%, proving that magnetic shape-memory alloys are capable of being printed in 4D. Furthermore, controlling powder morphology can improve the final porosity of other metallic 3DP technologies.
+Different studies have attempted to fabricate shape-shifting structures using Fe-SMAs. In Refs. [
+98
+,
+173
+], a similar approach was applied for printing various complex 3D flower shapes and spring-like samples, lattices, and metamaterial structures via Laser Powder Bed Fusion. The strategy was characterized by 90° hatch bidirectional scanning and removing the primary bcc-
+δ
+ phase via heat treatment at 800 °C for 30 min. To test the shape morphing and shape recovery of printed samples, after heat treatment, the samples were deformed manually, and by applying heat, they recovered the as-fabricated shape. According to the findings of the experimental tests, the lack of the bcc-phase caused the heat-treated samples to exhibit substantially greater SME than they did in the as-fabricated condition. The recovery of strip samples resulted in a yield strength greater than 230 MPa and a maximum elongation greater than 50%. This study shows the ability of SMA applications in self-folding robotics and energy impact absorption, allowing interesting applications in biomedical bone or joints and in aerospace for high-strength structures.
+In Ref. [
+174
+], multi-material inkjet 3DP was used to manufacture variable stiffness composite devices able to retain and recover their shape. Through a modulable heating source, it was possible to change the stiffness by modifying the SMP temperature. The energy necessary to maintain the actuated shape was reduced by shape retention. Moreover, SMP recovery required no external mechanical load.
+Resonant vibrations jeopardize space missions and the functioning of mounted equipment in topology-optimized and additively built aeronautical components (e.g., cameras). The incorporation of piezoelectric arrays serves as the foundation for active and passive vibration dampening of such devices. A revolutionary 4DP integration strategy was illustrated in [
+175
+] for utilizing the SME of NiTi as pre-stress actuation, with little installation and post-processing activity and a strong probability of shock absorption. The effect of pre-stressing, which is the most important prerequisite for piezoelectric stacks, was examined. When surpassing the lower pre-stress limit, piezoelectric stack manufacture was achieved.
+The use of 4DP is growing in a variety of fields, including the aerospace, automotive, defense, textile, and soft robotics industries [
+33
+]. The need to create clever, practical designs for several challenging applications makes the use of AM technologies and 4DP inviting.
+Sustainable and environmentally friendly, 3DP and 4DP technologies are now bringing an industrial revolution to several fields, including pharmaceuticals, chemicals, medicine, aviation, the military, the automobile industry, space exploration, etc. [
+176
+].
+The intricacy of the components and the challenges in assembling them are one issue in the aircraft sector. The high cost of replacing parts for airplanes and the interruption of the global supply chain are further issues. These issues are lessened by 4DP technology, since it produces smaller assembly pieces and saves time.
+In space-limited aerospace applications, self-assembling is of great interest from a time and cost point of view [
+54
+]. In the aerospace area, the design phase has been challenging for engineers, based on aircraft specs and performance criteria. It is necessary to optimize aircraft design, and by reshaping SMs, it is possible to optimize structures, especially wings, for all flying conditions [
+177
+]. Engineers are significantly freer to ignore design constraints and expand the boundaries of “trade-offs” when employing proper Computer-Aided Design tools for modeling, simulation, and multi-objective design optimization based on SM requirements. 4DP could aid in the formation of a self-deploying structure, which is useful in the aerospace sector. The authors of [
+174
+] created and tested a deployable morphing wing made of SMP composite. To achieve a higher degree of compression, the developed morphing wing underwent two deformations during deployment: wing shape recovery from the bending state and SMP filler shape recovery from the compressed state. This type of design can reduce the volume of the wing for storage in a small space. 
+By 2025, 4DP technology in aircraft is expected to have a market share of more than 25%, trailing only the military and defense sectors [
+178
+]. 4DP might reduce the value of replacement parts by reducing their use and service requirements. 4DP might aid in the formation of a self-deploying structure, which is useful in the aerospace sector. Airbus is collaborating with researchers to revolutionize the aerospace industry with a new generation of intelligent materials. In order to demonstrate the first programmable carbon fiber jet engine air inlet, they cooperated with MIT’s Self-Assembly Lab [
+111
+]. In addition, using programmable materials, a research group at MIT demonstrated a non-mechanical morphing car airfoil [
+179
+]. Depending on the type of applications in the automobile sector, SMA and SMP components can be employed as thermal actuators in various temperature ranges. Many pre-commercialized technologies, including smart vehicle lighting systems, fuel management, climate control, mirror adjustments, locking systems, suspension adjustments, and others, utilize SMMs actuators.
+Aircraft design and current morphing structures are linked in a unique way; for example, there will be an appropriate wing configuration for every mission based on power and velocity. It is feasible to create Morphing Aircraft Structures such as wings that alter geometry during flight using modern actuators and gadgets [
+180
+]. In 2016, Airbus introduced a bilayer structure containing multi-material for manufacturing a shell-like structural component [
+181
+]. The technique, in concept, appears to be 4DP that can revolutionize large-scale manufacturing by promoting the ability to 3DP entire airplanes. 
+SMPs and SMAs can be merged in 4DP to create active compliant hinges in small satellites, significantly increasing energy harvesting without adding mechanical complexity. An active compliant hinge with selectively changeable bending stiffness was created by [
+182
+] using fusing SMPs and SMAs. The hinge can be activated repeatedly in a slow and controlled way, it can retain any angular position between −90° and +90° and satisfies the stowing requirements of a 6U CubeSat with orientable solar panels. 
+Shape-morphing methods have been employed in aircraft manufacturing to improve the aerodynamic performance, cost, drag, and noise [
+183
+]. For morphing actuators, NiTi SMAs have traditionally been widely employed. SMAs have been used for solar protection, including self-actuating or biomimetic structures [
+98
+] Moreover, according to the results in [
+110
+], 4D structures with lattice and metamaterial can be used as absorption and dissipation systems in the aerospace field. Applications such as self-deploying sun sails or antennas for satellites require no extra energy source, leading to weight savings. Solar-arrays made of carbon-fiber fabrics can be impregnated with shape-memory resins. In aviation, SMPs are used for morphing wings that can change their shape according to the operation, including takeoff, landing, and flight, thus achieving energy savings.
+Many biological applications, including drug delivery systems, self-expanding stents, implanted devices, catheters, guidewires, atrial occlusion, and thrombectomy devices, benefit from the features of SMMs [
+184
+]. 4DP can boost the possibility of reimagining a customized medical treatment. Recent research has shown that 3D-printed components allow developing therapeutic and rehabilitative devices, since they can be customized for patients [
+105
+]. With the 4DP integration, this customization can be enhanced by adding functionalities from the SMs for novel specialized therapies, e.g., compression treatment of edemas [
+118
+]. The future development of smart medical devices is strictly related to the enhanced functionalities given by the SMM, such as self-healing ability [
+162
+]. 
+Significant 4DP biomedical examples are self-expanding stents [
+105
+] and scaffolds for tissue engineering [
+159
+,
+161
+]. In Ref. [
+185
+], an extrusion-based deposition system was used to fabricate reinforced hydrogels, which can be used as a technique for printing artificial tendons. Auxetic materials with negative Poisson’s ratios have important applications across a broad range of engineering areas, especially biomedical and tissue engineering. They can act as deployable systems that can be moved to inaccessible zones in the human body. For example, cardiovascular diseases can be treated using self-expandable vascular stents, particularly through the creation of vascular grafts, stents, and devices for left atrial appendage closure [
+92
+].
+Polymeric stents find good use in drug delivery systems. Curved shape-changing specimens with different lattice structures were designed and printed as drug delivery reconfigurable structures in [
+119
+]. In another example, magnetic Fe
+3
+O
+4
+ nanoparticles were employed to functionalize PLA-based Shape Memory Composite spiral intravascular stents as magnetic-response devices able to complete the unfolding in 10 s. 
+4DP can be used to create self-healing products. For example, the authors of [
+21
+] developed inks with a photocurable resin and a semicrystalline thermoplastic polymer to simplify DIW-based printing of semi-Interpenetrating Polymer Network elastomer composites. The ink can be utilized to 3DP extremely stretchy, shape-memory and self-healing elastomers via UV light-assisted DIW. Urethane diacrylate and a linear semicrystalline polymer are combined to create an ink that can be used to 3D print an elastomer that can be stretched up to 600%.
+In an access-limited surgical space, SMA devices allow release of external loads; thus, they are used in the neurosurgical field as coils, stents, and micro-guidewires, mainly to treat cerebral aneurysms [
+4
+]. The TiNi alloys have been successfully applied as biomaterials in orthodontic and orthopedic implants. Such devices are predicted to enhance pathological responses and enable the use of less invasive surgical methods and the insertion of implants into areas that would otherwise be inaccessible [
+92
+].
+This field is based on the use of low-compliance and deformable materials with 4DP, allowing the possibility to design and fabricate internal structures such as channels and shafts that enable robots to achieve complex movements. Furthermore, the 4DP multi-material allows soft robots to simultaneously manufacture integrated sensing and actuation [
+186
+]. 
+The advantages of mechanotherapy for the treatment of various injuries or sick tissues are discussed in [
+187
+]. Further research should be done on these systems, which through stretching and compressive stress, could aid in cell regeneration. The use of SMP filament fibers for therapeutic compression and massage therapies was investigated in [
+177
+]. Through cyclic heat activation, massage was obtained by taking advantage of the embedded stress memory fiber. Additionally, the ability of the origami structure to absorb impacts is an intriguing topic for wearable technology for the elderly or others who are prone to falling. Impact absorption might significantly lessen the force placed on joints and knees for athletes and other active people, potentially reducing the risk of injury. Furthermore, the potential of multi-material devices can introduce new functionalities through a variety of means, such as multi-position actuation and multi-activation stimuli.
+Controlled microstructural architectures have demonstrated superior performance over conventional materials as rationally planned structures on the micro- or nanoscale because of their new optical, mechanical, or electrical capabilities [
+53
+]. A potential method that enables the production of many sophisticated 2D and 3D devices from particles, pillar plates, walls, or films is capillary-force-driven self-assembly. This can be employed for the development of microrobots and actuators [
+67
+]. A few mechanical metamaterials with intricate microstructures, including lattice structures and hierarchically architected metamaterials, have been successfully created via 3DP. The configuration and spatial arrangement of the microstructures determine the mechanical characteristics of metamaterials, which implies that the qualities are fixed and irreversible after production. These characteristics are reversible thanks to 4DP [
+26
+]. 
+Smart devices able to form 3D origami and kirigami structures are applied in bioelectronics, metamaterials, micro robotics, and microelectromechanical systems [
+107
+]. Dual-photon lithography-based 4D microprinting, which was employed by [
+53
+], allows for the reversible and bidirectional self-assembly of systems. Using a variety of hatching distances, each liquid responsive micro-sheet was printed as two separate pieces with asymmetric crosslinking densities. The 4DP curved microstructures spontaneously had regulated thickness, curvature, and smooth morphology when generated in n-pentane, which is difficult to create using the conventional 3DP method. To produce a strain differential between the layers, the actuators in [
+152
+] were printed in two pieces: the bottom passive layer and the top active layer. The actuator was forced to bend upward because the top layer was designed to have a larger strain stored in the printing lines. To guarantee that no SME was added to the gripper or the passive components of the design, the same set of parameters was employed at the bottom layers of the actuators as for the gripper’s body.
+Furthermore, 4DP is the major driver for smart autonomous system creation. Reactive actuators fabricated through 4DP can intrinsically respond to the environment. SMA’s ability to reversibly change mechanical properties in response to heat stimulus has found applications in robotics. SMAs may be utilized as integrated sensors and actuators in thermomechanical systems, allowing them to track certain intended functionalities while sensing changes in external stimuli. The unique characteristics of SME and super elasticity/pseudoelasticity have made SMAs the material chosen for applications such as sensing and control, vibration damping, robotics, and automotive and aerospace areas. A bioinspired microstructure was designed and fabricated in [
+178
+] as a high-performance integrated sensor–actuator able to simultaneously actuate and self-sense the contact by measuring the resistance modification. 
+To create extremely adaptable soft robots, energy sources and electrical controls may be incorporated into 4DP stretchable and flexible devices. The authors created 4DP electronic sensors for a variety of technical applications. For example, [
+188
+] used liquid substrate electric-field-driven microscale printing to create a 4DP resistive transparent strain sensor-based Flexible Transparent Electrode device. The proposed sensor’s real-world use was successfully proven by sensing strain variables at several places in the human body.
+In addition, 4DP technologies have shown excellent results in many optical sensor applications. For instance, Fresnel lenses with critical characteristics were created in [
+179
+] using a UV-curing based DLP 3DP technology and commercially available resin and thermochromic powder (pigment). These sensors can detect temperature changes on surfaces of interest remotely, as well as monitor strains, stresses, and pressures on specific surfaces. In Ref. [
+54
+], the authors used the DIW approach with cholesteric liquid crystal oligomer ink to create a humidity-responsive photonic actuator with a colorful look. Alternatively, if subjected to humidity and dry air, reversible actuation is provided by using a structurally colored scallop-inspired actuator selectively treated with acid. The ink enables additive manufacturing of 4D structurally colored gadgets.
+Notwithstanding the abovementioned studies, further investigations are required in the field of soft robotics. 
+Electrical devices are usually designed with a rigid form, offering user-friendly and easy solid interfaces that simplify the tabletop or portable arrangement. This strategy proved to be the best way to preserve general device efficiency as well as dependability. The employment of SMMs in smart electronics can enable more adaptable and accommodating systems for a wider range of applications. For example, wearable and implantable electronics are better suited to soft, flexible, and stretchy electronics [
+189
+]. Soft electronics and wearable devices’ capacity to accept the natural deformation of biological tissue can significantly increase the comfort, portability, and convenience of continuous physiological monitoring. They can be set inside stretchable/flexible products to develop extremely flexible soft robots. They can serve as modern sensors due to the 4DP structures’ responsiveness to stimuli such as pH, humidity, temperature, stress, and strain. SMAs may be used to assess temperature and strain as well as detect wear and damage inside a structure in addition to acting as actuators [
+15
+].
+In Ref. [
+178
+], a sensor–actuator was created with 4DP using nanocarbon black/PLA composites. The device achieved independent heat stimulation and strain sensing capabilities. Consequently, it could effectively interact with thermally stimulated objects, while simultaneously detecting changes in resistance to self-assess their contact status. 
+As discussed in [
+190
+], SMMs can be used to harvest energy and can be self-powered sensors. SMP-based sensors can harvest energy and act as self-powered, wearable, bio-mechanical sensors. These multi-functional electronic controllers can be employed to improve the flexibility of soft robots [
+15
+].
+In Ref. [
+191
+], conductive nanocomposites with electro-responsive shape-changing capabilities were used. These shape-changing liquid sensors were manufactured using modified composite ink via DIW. The sensor showed adaptability to various situations and high detection precision. 
+The authors of [
+192
+] proposed the use of strained-tailored, multi-stable, shape-morphing 3D structures for integrating 3D electronics and adaptable wearable sensors. A composite film was created using a silicone elastomer-based material with phase-changing wax microparticles. It exhibited various buckling modes when subjected to strains in different directions and formed a 3D architecture. Silver nanowires were sprayed on a silicone composite sheet to demonstrate functionality through an electrical circuit connection while switching on some LEDs.
+In the age of Industry 4.0, 4DP has the potential to give the manufacturing industry a significant competitive advantage by reducing the required assembly parts and resources. Because of their biocompatibility and qualities comparable to natural materials, SMMs offer considerable promise in biomedical applications, biosensors, drug delivery systems, and tissue regeneration. The development of novel materials such as non-invasive biomedical devices is extensive, and procedures depend critically on the analysis and simulation of natural phenomena. New composite SMs are an intriguing solution in tissue engineering applications. In addition, printable materials for tissue repair and regeneration must have sufficient printability, mechanical strength, interfacial strength, and biocompatibility. However, obtaining suitable printable biomaterials remains difficult. As a result, it is critical to create novel printable biomaterials for 4DP constructions in tissue repair and regeneration.
+In addition, this technique offers enormous promise for overcoming the numerous inherent flaws of functional components. Although 4DP as a technology is relatively new and requires time and effort for its adoption, it has the potential to provide possibilities for many sectors. Innovative 4DP processes can reduce the number of components and consequently the assembly time. Following the polymer revolution, SM and AM technologies are predicted to drastically cut fuel consumption and emissions in the aircraft sector.
+The use of advanced composite materials for 4D structures has received more attention, as researchers have developed structures that respond to stimuli by producing differential strains. Printing SMs or smart voxels leads relevant study areas and scientific communities to new multidisciplinary and convergent research paradigms. Various research initiatives on increased SMAs and SMPs are documented in the literature; however, certain issues require further research. 4DP as a multi-material structure allows for more flexibility in shape shifting by printing passive and active bilayers. Furthermore, SMs are tailored on a laboratory scale in various research projects by merging two or three SMMs using particular form changes. 
+Scientists and engineers are focusing on the improvement of multi-material design for specific applications; however, understanding of the technology should consider various factors. The 4DP process factors and parameters impacting SMs should be thoroughly examined, as should their interrelationships, particularly as a function of time. 
+Digital materials might be used for smaller interconnecting parts, which may help in the transport and assembly of large components. Materials may be turned into simple, repetitive, useful pieces rather than large, monolithic, single-use components. The expanding materials could be carefully positioned on the main structure to make joints that stretch and fold when triggered by water, generating a wide diversity of forms. The process is designed to yield larger structures that can handle more complicated transformations in the future, as well as smaller, miniaturized ones that can be employed in an aircraft’s fuselage. Electroactive polymers, pressurized fluids or gases, chemical stimuli, and even light have all been successful in changing form.
+4DP can be used in the logistics sector to reduce production and transportation costs, improving the global supply chain system. In addition to self-assembly and self-expansion abilities, self-repair is a key element. On the other hand, 4DP might be the next generation of lean manufacturing [
+193
+]. Further advancements can be provided by 5D printing [
+194
+,
+195
+] and 6D printing [
+196
+,
+197
+]. In particular, the combination of both the print head and the component allows for reducing the fabrication time of curved surfaces without supports [
+197
+].
+4DP has drawn the attention of academics in fields such as chemistry, applied sciences, physics, material science, and mechanics. The proof-of-concept–focused contributions in this developing research field are promising and comprehensive, merging AM techniques, stimuli, and material functionality. 4DP part reusability can boost the material circular economy. It is still a developing industry in its initial stages, with a corresponding opportunity to create objects via AM technologies. 4DP can be a key element in Industry 4.0, with particular regard to soft robotics and the Internet of Things. Notably, 4DP of SMAs and SMPs is gaining increasing interest by providing solutions that may be integrated in the industry 4.0 project.
+While 4DP is conceptually appealing, studies only give partial answers that are difficult to apply in real-world application circumstances. This is because most research efforts are incremental and result in incomplete data and consideration by scientific fields that support technological breakthroughs. So far, little effort has been made to integrate 4DP into smart component design. As a result, it is critical to bring such advancements to the attention of product designers and engineers in order to improve the design of 4DP, as previously successfully accomplished in integrating assembly, subtractive, and AM challenges in product design. To achieve industrial maturity, the domains of chemistry, processes, and materials sciences must consider end-user demands as well as the part functionality design, which necessitates the employment of a problem-solving methodology (i.e., teleology, inverse problem-solving, and user-centered and system-centered design).
+The field of 4DP is still developing; some limitations are still present, such as manufacturing scaling up and predictive modeling, thus limiting its potential. The process parameter design is lacking in-depth knowledge and requires more research, even though a number of scientific and technical works on innovative manufacturing techniques, stimuli, materials, behaviors, and programmable forms have been provided.
+Conceptualization, S.V. and L.B.; data curation, S.V.; writing—original draft preparation, S.V. and L.B.; writing—review and editing, S.V., L.B. and A.B.; supervision, P.G. and A.B. All authors have read and agreed to the published version of the manuscript.
+This research received no external funding.
+Not applicable.
+The authors declare no conflict of interest.
+Disclaimer/Publisher’s Note:
+ The statements, opinions and data contained in all publications are solely those of the individual author(s) and contributor(s) and not of MDPI and/or the editor(s). MDPI and/or the editor(s) disclaim responsibility for any injury to people or property resulting from any ideas, methods, instructions or products referred to in the content.

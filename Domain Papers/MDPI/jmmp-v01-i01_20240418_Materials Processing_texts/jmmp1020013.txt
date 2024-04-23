@@ -1,0 +1,311 @@
+A major advantage of additive manufacturing (AM) technologies is the ability to print customized products, which makes these technologies well suited for the orthopedic implants industry. Another advantage is the design freedom provided by AM technologies to enhance the performance of orthopedic implants. This paper presents a state-of-the-art overview of the use of AM technologies to produce orthopedic implants from lattice structures and functionally graded materials. It discusses how both techniques can improve the implants’ performance significantly, from a mechanical and biological point of view. The characterization of lattice structures and the most recent finite element analysis models are explored. Additionally, recent case studies that use functionally graded materials in biomedical implants are surveyed. Finally, this paper reviews the challenges faced by these two applications and suggests future research directions required to improve their use in orthopedic implants.
+Recent progress in Additive Manufacturing (AM) technologies has allowed for the development of novel applications in various industries. The aerospace, automotive and tooling industries, for example, are increasingly beginning to use AM technologies. AM is no longer just a rapid prototyping technique; in fact, the applications of AM in the medical segment are numerous [
+1
+]. Some of these applications include the planning of surgical operations, printing of biodegradable tissues, and, most importantly, the development of orthopedic implants. Moreover, the application of reverse engineering in AM technology ensures the customization of the printed implants [
+2
+]. The reverse engineering process starts with data acquisition or obtaining the exact anatomical data from scanning techniques, such as computed tomography (CT) or magnetic resonance imaging (MRI). The 2D images can then be converted to a 3D CAD model using specialized software. Afterward, the CAD model is converted to a stereolithography (STL) file to be fed to the AM machine for printing. 
+AM techniques are favorable, as compared to other traditional methods such as casting and forging, because of their ability to tailor the implant according to the patient’s anatomy. Other various benefits of AM technologies include their lower cost, shorter lead time, and the lack of tooling as compared to other manufacturing methods. According to the ASTM committee F42 on additive manufacturing technologies, AM technologies can be classified into seven categories according to the state of the material used. These seven categories are material jetting, binder jetting, material extrusion, powder bed fusion, directed energy deposition, sheet lamination, and vat photopolymerization. Comparative studies outlining the advantages and limitations and applications of each method has been presented in several reviews [
+3
+,
+4
+,
+5
+]. The techniques used for biomedical applications will be discussed in more details later in the review.
+Different materials have been developed to suit the numerous functions of the orthopedic implants, including metallic, ceramic, and polymers. The material selection criteria may vary depending on both the application and the implant type. For instance, most of the load bearing implants are fabricated from metallic materials, since these have higher mechanical reliability than other materials [
+6
+]. On the other hand, for articulating surfaces, two material combinations are used: hard on soft couples and hard on hard couples [
+7
+]. The hard materials refer to metal and ceramics, while the soft materials refer to polyethylene. Some of the most suitable metallic biomaterials are titanium alloys, cobalt-chromium alloys, and various stainless steels [
+8
+]. One downside of metallic materials is the high stiffness and weight, which sometimes make them unsuitable for orthopedic implant. Therefore, a lot of research has been directed to reduce their stiffness and weight.
+The most significant benefit of reducing the stiffness of the metallic material used in orthopedic implants is to avoid the “stress shielding” phenomenon [
+9
+]. This phenomenon is associated with the fact that the stiff metal implanted beside the bone will bear most of the load, leaving the bones with less load. Conforming to Wolff’s Law [
+10
+], bone requires continuous mechanical stimulation to regrow, or else it will start reducing its mass by getting thinner or becoming more porous (external and internal remodeling). Commercially pure titanium printed using AM technology showed low stiffness [
+11
+] when compared to other titanium alloys fabricated by powder metallurgy [
+12
+]. The replacement of aluminum elements by titanium showed a reduction of 5% in the stiffness of titanium alloys [
+13
+]. The use of porous metallic materials has also been considered for reducing metallic material stiffness [
+14
+].
+The fabricated porosity also enhances the metallic material from the biological point of view, since porous metals have better osseointegration [
+15
+]. Osseointegration, first described by Bothe et al. [
+16
+] and Leventhal [
+17
+], denotes the fixation of synthetic material to bone without the formation of any other tissues. Thus, bone grows into the porous structure and enhances the fixation of the implant to the host bone. The designs that can be used by AM technologies to print porous implants are numerous, and the ability of AM to precisely control the shape and size of these porosities is impressive as well. Harryson et al. [
+18
+] were among the first groups to discuss the suitability of AM technologies for fabricating patient-specific implants. The fabrication of a femoral stem using a lattice structure was suggested to reduce stiffness while maintaining strength. Murr et al. [
+19
+] worked on the application of AM to manufacture customized implants, taking into consideration its ability to fabricate porous structures. Novel designs for the femoral and tibial components were suggested, and lattice structures were used instead of the porous coating. Therefore, cracking, de-attachment, and instability drawbacks resulting from porous coating were prevented. Bose et al. [
+20
+] focused on the application of AM in bone tissue engineering, wherein the mechanical properties of some 3D printed scaffolds material were summarized.
+Another advantage of AM is the possible printing of functionally graded materials (FGM). FGM are materials that vary in composition or microstructure following a certain deign law [
+21
+]. A major benefit of these materials over composite and coated materials is that for FGM, the variation in composition is gradual, which reduces the stress concentration effects near the interface between different phases [
+22
+]. The human body is composed of several functionally graded materials, the most important of these being bone and teeth. Bone tissues are composed of compact bone layer (cortical) that changes in porosity and distribution to form a less dense bone (cancellous) [
+23
+]. Since bones and joints are prone to failure due to natural wear or accidents, there is a need to mimic natural joints and fabricate orthopedic implants with FGM. The use of FGM can ensure improvement in both the mechanical properties of implants and the interaction of the implant with the host body [
+24
+]. The 3D printing of load bearing implants having FGM was discussed by Sola et al. [
+25
+]. Several research case studies have been recently proposed, as will be discussed later.
+This paper aims to focus on the applications of lattice structures and FGM in the orthopedic implants industry, more specifically concerning load bearing implants. Although the customization of implants is a key factor in choosing AM technologies as a manufacturing method for implants, the ability to print implants using lattice structures and FGM is an important added benefit. In what follows, manufacturing of lattice structures using AM technologies is first discussed, followed by a description of how lattice structures can be characterized to evaluate its performance. One contribution of this review is the emphasis on the numerical modelling of lattice structures, illustrating the difference between different modelling methods reported in the literature. In addition, the manufacturing of FGM using AM technologies is presented, and various types of FGM that can be applied in orthopedic implants are discussed. Finally, some challenges are discussed to identify future research directions for both lattice structures and FGM applications in orthopedic implants.
+The terms cellular material and lattice structure are often used interchangeably in the literature; in fact, the lattice structure is one type of cellular material [
+26
+]. Cellular materials are usually classified according to their porosity type (open, closed) and their building unit cells order (stochastic, non-stochastic). There are several applications for cellular materials including heat exchangers, filters, load bearing components, and biomedical implants [
+27
+]. Some typical examples of cellular materials are: foam, honeycomb, sponges, folded materials and lattice structures. Lattice structures are characterized by open pores and non-stochastic orientations of the building unit cells. The unit cell geometry and topology are used to tailor the mechanical properties of the part. Tan et al. [
+28
+] indicated that the unit cells used in biomedical implants can be classified according to their form or deformation behavior. The form of the unit cells can be reticulated or stochastic. If the unit cells are arranged in a specific order, they are called reticulated (non-stochastic). The deformation behavior dictates how unit cells fail, and this behavior can take the form of stretching or bending. Reticulated meshes were found to be favorable to stochastic meshes when mechanical properties were compared, while stretch dominated unit cells proved to be more satisfactory in orthopedic implants than bend dominated unit cells [
+28
+].
+The lattice structures used in tissue engineering and bone scaffolds is usually classified according to the unit cells design. This design can be divided into the following four groups: CAD-based [
+29
+], image-based [
+30
+], implicit surfaces [
+31
+], or topology optimized unit cells [
+32
+]. 
+Figure 1
+ represents the different types of lattice structures used in biomedical implant applications. The CAD-based design uses unit cells that are adopted from Platonic and Archimedean polyhedral solids [
+33
+]. Examples include simple cube, diamond, tetrahedral, and dodecahedron unit cells. Implicit-based unit cells, are sometimes referred to as triply periodic minimal surfaces (TPMS). These minimal surfaces are based on the concept of the differential geometry of surfaces [
+34
+] and are gaining attention in bone tissue engineering as they have a mean curvature of zero, like the trabecular bone. An example of TPMS based on implicit surfaces is the gyroid and Schwartz’s diamond unit cells [
+35
+]. Load bearing implants have multiple requirements, such as low stiffness, high strength, and high permeability. Recent research has been oriented towards the topology optimization (TO) of the base unit cell [
+36
+]. This technique relies on numerical methods to change the shape of the unit cell to satisfy the multiple objective functions required for enhanced performance.
+Various manufacturing methods have been used to create porous metallic implants, including powder metallurgy [
+39
+,
+40
+], metal foaming techniques [
+41
+], and space holder methods [
+42
+]. However, these techniques are limited to fabricating randomly organized porous structures, providing limited control of pore size, geometry, and distribution. AM processes, on the other hand, offer methods capable of manufacturing parts with a predefined customized external shape, as well as providing accurate control of internal cell geometry [
+43
+]. A comparison between conventional manufacturing methods and AM technology was provided by Rashed et al. [
+27
+]. AM technologies were clearly distinguished due to their accuracy and precision. Therefore, they are now being used more frequently than other methods. As discussed in the introduction, metallic materials are the most common materials used for load-bearing implants. 
+The powder bed fusion technique (PBF) and the directed energy deposition method (DED) are the most common AM technologies used to print metallic orthopedic implants. In PBF, an energy source (electron or laser beam) is used to selectively melt parts of the powder bed based on the data fed to the machine. When one layer is fused, the building platform is lowered by a predetermined distance via a piston. A mechanical coater (roller or blade) places a new layer of powder on top of the platform, and the process is repeated until the final shape has been reached [
+4
+]. The literature reports two main PBF technologies that can print metallic parts. These are Electron Beam Melting (EBM) and Selective Laser Melting (SLM). The second AM technology, DED, is also known by the commercial name laser engineering net shaping (LENS). In DED, an energy source (electron or laser beam) is used to build complex parts as the material is being deposited from a nozzle [
+4
+]. Material can take the form of powder or wire, and there is no powder bed to support the parts as in PBF. Parts are built directly on the substrate, so this method has the advantage of being able to build new parts or fix old ones. 
+SLM and EBM are both more accurate and can achieve a better resolution. Therefore, they can be used to print lattice structures. LENS, on the other hand, can be used to print porous structures without the capability of controlling the unit cell size or shape. Irregular porous structures have been fabricated using LENS where porosity is controlled by the laser power and scanning speed [
+44
+]. When comparing SLM, EBM, and LENS, some differences are noted in the mechanical properties of the printed part. These differences are usually related to the difference in the microstructure of the parts [
+45
+]. The high energy resulted from the EBM is attributed to the electron energy source, thus fully dense parts can be printed. SLM has higher cooling rate than EBM, resulting in coarser microstructure, higher tensile strength, and lower ductility than parts [
+46
+]. Both SLM and LENS were used to produce commercial pure titanium samples with mechanical properties better than conventional methods [
+47
+]. The cooling rate in SLM is also higher, which resulted in finer microstructure and therefore produced more desirable mechanical properties.
+The dimensional and mechanical properties of lattice structures can be improved by choosing the optimum process parameters [
+48
+]. For SLM, the most significant process parameters are laser power, scan speed, hatch spacing, and layer thickness. Overall energy input was found to be the most significant factor affecting the dimensional accuracy. The energy input can be calculated from the laser power, scan speed, and the laser spot diameter. Moreover, the higher the energy input, the more susceptible the strut is to have internal porosity [
+48
+]. Ahmadi et al. [
+49
+] studied the effect of laser power and exposure time on the mechanical properties of lattice structures. The diamond unit cell was studied, where the authors developed a novel method of printing the lattice by using a vector-based approach. The struts were defined by their start and end coordinates in the absence of diameter data. Therefore, the laser power and exposure time were used to determine the strut diameter. Since maximum laser power with maximum exposure time will develop a thick strut, the highest mechanical properties were obtained at this point. Another important factor that can affect the lattice structure’s mechanical properties is the build orientation. It was noted that the horizontal struts of the diamond unit lattice structures had the worst quality in terms of dimensions and internal porosity, leading to its poor mechanical properties [
+50
+]. 
+Statistical analysis can be used to determine which of the process parameters have the most significant effects on lattice structures. Sing et al. [
+51
+] used analysis of variance (ANOVA) to determine the most significant factor in determining the elastic constant of lattice structures. In their study, laser power, scan speed, strut diameter, and unit cell shape were varied, and the mechanical properties of lattice structures was evaluated. It was found that only the cell geometry and strut diameter effected the elastic constant. These two parameters changed the porosity of the structure, which is directly related to its stiffness. In a further study, the same authors used a regression analysis to study the effect of process parameters on the dimensional accuracy of lattice structures [
+52
+]. The lattice structure examined had simple cube unit cells, having diagonal struts on all four sides. In this study, the laser power, scanning speed, and layer thickness of an SLM machine were changed, and the horizontal, vertical, and diagonal struts were characterized. The experimental results show that laser power has the most significant effect on dimensional accuracy, porosity, and stiffness. 
+Dimensional accuracy plays an important role in obtaining the proper mechanical properties of lattice structures. The proper choice of process parameters results in better and enhanced lattice structure quality [
+53
+]. More research is needed in this area to investigate different unit cells (implicit and topology optimized), different materials, and different pore sizes. Moreover, appropriate dimensional and mechanical characterization protocols should be put in place to ensure the proper characterization of different lattice structures.
+Achieving the accurate characterization of lattice structures is necessary for several reasons, including assessing the quality of printing. Characterization includes microstructure, dimensional, and mechanical properties. The microstructure of lattice structures is expected to be different than that of bulk, since its strut thickness decreases significantly as compared to bulk parts. Another factor impacting the microstructure is the cooling rate, which depends on the thickness of the part being printed [
+54
+]. Algardh et al. [
+55
+] investigated the change in microstructure for different wall thicknesses printed using EBM. It was noticed that the thinner the wall, the faster the cooling rate, and the finer the grain structure. Cheng et al. [
+56
+] studied the microstructure of lattice structures and concluded from their experimental work that, as the strut thickness decreases, the hardness increases. Dimensional characterization is related to the evaluation of the strut size, pore size, and pore shape. A few techniques are used in the literature to measure this diameter/size, such as optical microscopes (OM), scanning electron microscopes (SEM), and micro computed topography (CT) [
+57
+]. 
+The mechanical properties of lattice structures depend mainly on the following three parameters: the material, the cell topology, and the relative density of the part [
+58
+]. One technique used to assess the mechanical properties of lattice structures is to perform a static compression test for the printed samples. The difference in mechanical properties between a stochastic foam and a non-stochastic lattice structures was evaluated by Cheng et al. [
+56
+]. The non-stochastic lattice was found to have higher specific strength than that of the foam specimens. Li et al. [
+37
+] studied the effect of different unit cells on the mechanical properties of lattice structures that could be used in biomedical applications. It was suggested that the mechanical properties depend mainly on the failure mechanism of the unit cell being either bending or stretching dominated. Ahmadi et al. [
+59
+] studied the effect of unit cell design and porosity on the mechanical properties of lattice structures. It was noted that stiffness decreased with the increase of porosity, which is desirable for reducing the stress shielding effect. Yánez et al. [
+60
+] evaluated the compressive behavior of gyroid lattice structures for cancellous bone applications. The strut angle was found to be a critical factor that affected the compressive properties: as the strut angle decreased, the stiffness and compressive strength increased. 
+Although increasing the controlled porosity reduces the stiffness and provides space for bone ingrowth, fatigue properties may suffer [
+61
+]. Therefore, relying on static mechanical tests alone is not sufficient. More research should investigate the fatigue properties of lattice structures. The effect of porosity and unit cell shape on the fatigue strength of lattice structures was investigated by Harbe et al. [
+62
+]. Normalized fatigue strength was found to be less than that of solid samples of the same material. This difference was traced to the presence of stress concentrations (from un-melted powder or closed pores) and the martensitic microstructure resulting from the process. Yavari et al. [
+63
+] investigated the effect of different unit cells and porosity on the fatigue properties of a titanium lattice fabricated by SLM. It was noted that high porosity structures had shorter fatigue life than structures with low porosity. In addition, it was noted that, for some unit cells, the fatigue resulted in compressive loading of the struts. This led to the shrinking the of the fatigue cracks which enhances fatigue life. 
+The dimensional characterization, mechanical properties, and fatigue properties of some lattice structures reported on in recent literature are summarized in 
+Table 1
+. It is noted that both the material and unit cell shape play a key role in defining the mechanical and fatigue properties of lattice structures. As expected, the higher the relative density, the better the yield and normalized fatigue strengths. The stiffness values for different lattice structures follows the same pattern as the yield strengths [
+64
+]. The difference between nominal values and measured values could be traced back to defects resulting from poor choice of process parameters. Additional research in this area should focus on creating process-structure-property (PSP) relationships to relate the defects of AM processes with their root causes. Data on the mechanical properties for the different unit cells are still limited, and more information about different biomaterials is still needed. The possible combinations of different unit cell size, shape, and porosity lead to numerous design options. Therefore, accurate numerical modelling is needed to assess the mechanical properties of lattice structures.
+Finite element methods (FEM) can be used to predict the mechanical properties of lattice structures and test the several possibilities of different unit cell shapes and sizes. One major benefit of these methods is that they reduce a significant amount of the experimental work needed to fully characterize the printed lattice structures. Another key advantage for using FEM is that a detailed stress-strain distribution can be obtained, which is useful for the design optimization of lattice structures. Moreover, FEM can be used to evaluate the failure modes of lattice structures, which is important for biomedical implants. The accuracy of FEM depends on the material properties assigned to the model, the meshing element geometry (struts representation), size (finite or infinite), and the model design (CAD/implicit surface). 
+The material properties of struts are needed to be known for characterization, since this information will affect the predicted results. Yavari et al. [
+61
+] predicted that using the same energy density in all lattice structures would result in the same material properties and that there would be no significant differences between the bulk and strut material properties. Experiments performed by Tsopanos et al. [
+69
+] indicated a reduction of 74% in the stiffness of struts as compared to bulk. The difference was attributed to the drastic change in surface area, orientation angle, and laser exposure time when printing struts. The mesh elements used can be classified into one dimensional (1D) and three dimensional (3D) models. The 3D mesh elements deal with the struts as a volume rather than a beam, meaning that better accuracy can be obtained, but longer computation time is needed. Gumruk et al. [
+70
+] attributed deviations between numerical models with 1D and 3D elements to the fact that the 1D models cannot represent the actual material volume at the nodes. Smith et al. [
+71
+] suggested increasing the material volume at the nodes of the lattice structures to enhance the accuracy of 1D mesh elements. The size of the model is another important factor to be considered. 
+With infinite models, only the periodically repeating part of the structure is modeled; thus, a small model size can be obtained, and less computation time is required than with finite models. Finite models were found to be more accurate when predicting the mechanical properties of implants made from lattice structures, since they are more accurate [
+72
+]. Reducing the volume of the CAD model by voxelization is a research direction being pursued to reduce the computation time in FEA modelling. Where the 3D model is presented in a discretized method instead of continuous [
+73
+], this technique represents the model as discrete voxels that give a suitable approximation for the continuous model. Dumas et al. [
+74
+] proposed a novel approach to model the lattice structures: the model itself was generated in MATLAB using the voxelization method. It was proved that this model would require less computation time as compared to those designed in CAD software. The difference between both experimental and numerical techniques are considerably high, reaching an average of 40%. Another method proposed to reduce the volume of CAD models is to use voronoi tessellations [
+75
+]. This method requires less space; however, it might not be able to mimic abrupt changes in the lattice as well as CAD designs.
+The difference between numerical and experimental results can be traced to several factors, including the process parameter’s effect on the build, un-melted powder, and broken struts if they exist in the part [
+76
+]. Campoli et al. considered the strut variation diameter and the internal porosity defects resulting from the EBM process when modelling lattice structures. Gonzalez et al. [
+77
+] proposed accounting for three manufacturing errors: strut diameter variation, strut inclination, and fractured struts. Although these methods will reduce the significant gap between numerical and experimental results if successfully applied, the application of such methods on different unit cells requires significant dimensional characterization and may be challenging to achieve.
+Table 2
+ summarizes some of the recent and important research that has been conducted on the modelling of mechanical properties of lattice structures used in biomedical implant applications. The different mesh size, material property, model size, model input, and deviations between experimental and numerical results are presented. The 3D mesh elements and finite size are preferred when modelling small objects, such as those needed for biomedical applications. It was noted that most of the research conducted assumes the material property model to be the same as the bulk material. Although voxelization can reduce the numerical modelling computation time, more effort is needed to improve the complex geometrical representations of this method. Finally, the gap between experimental and numerical modelling is presented. One possible approach to reducing the gap between numerical and experimental results is to develop methodologies for optimizing process parameters, thus limiting manufacturing errors.
+FGM can be classified into three distinct groups: gradient microstructure, gradient composition, and gradient porosity [
+82
+]. 
+Figure 2
+ represents a schematic illustration of the three different types of FGM. The functionally graded composition can be defined as “A change in composition across the bulk volume of a material aimed to dynamically mix and vary the ratios of materials within a three dimensional volume to produce a seamless integration of monolithic functional structures with varied properties” [
+83
+]. FGM can provide an enhanced substitute for the coating in orthopedic implants, thus avoiding the sudden change in chemical composition and the “peeling-off” effect of the coated layer [
+84
+]. Functionally graded coating (FGC) was developed prior to FGM. The fabrication of FGC can be accomplished using vapor deposition techniques, plasma spraying, and Ion Beam Assisted Deposition (IBAD) [
+85
+]. These methods are energy extensive and are therefore not suitable for bulk FGM parts fabrication. Techniques like powder metallurgy [
+86
+] and the centrifugal method [
+87
+] are more commonly used in the fabrication of bulk parts. However, the 3D shapes obtained from these techniques are relatively simple and limited to cylinders or blocks. Accordingly, AM technologies may be considered a suitable method of fabricating customized parts with the required accuracy [
+25
+]. The ability to use more than one material using the DED technique is employed to print FGM parts from two, and sometimes three, materials. 
+Functionally graded porosity can be created in materials by changing the porosity across the bulk volume. The variation in density will combine variation in mechanical properties, which can make the part more functional than a single constitutive material for some applications. Parts of the implants with low porosity have high mechanical stability, while high porosity regions support bone ingrowth and help with the implant’s fixation [
+88
+]. The functionally graded porosity can be manufactured using any method used to fabricate lattice structures, as mentioned earlier. However, AM remains an attractive method for fabricating such structures with the required geometry and precise control of unit cells [
+89
+]. Two common AM technologies used to print this type of functional gradation are PBF and DED technologies. In general, when using the DED technique, porosity shape, size, and distribution cannot be controlled [
+90
+]. Differentially, the use of PBF techniques, like SLM and EBM, can result in precisely controlled pores that follow a specific design rule in size and allocation [
+91
+].
+A material with varying microstructures along its volume could be achieved by controlling heat treatment. This recent progress in the fabrication of gradient microstructures was investigated by Popovich et al. [
+92
+]. In this study, the precise control of laser power and scanning speed of a DED technology was used to create specimens of graded microstructure in Inconel. The advantage of this technique is that a tougher core can be obtained, with a hardened surface that would increase wear resistance. Although this technique has not been applied in the biomedical realm, it suggests a direction for improving the hardness of articulating surfaces
+The aim of most research is to use FGM in orthopedic implants to achieve a better mechanical or biological advantage. Several advantages can be achieved, such as improving the fixation of implant to bone, enhancing the stress shielding phenomena, hardening the articulating surface, and removing interfacial stresses between the implant and bone. The method used to evaluate the performance of the implant is usually based on numerical optimization. The use of FGM in orthopedic implants reported in the available literature has been limited to gradation in porosity and composition. Most of the case studies discussed numerical models, but only a small amount of research has validated the model by using AM technologies. In this section, some examples of functionally grading porosity will be illustrated, followed by examples of functionally graded composition. A detailed description for some important case studies from the literature is presented in 
+Table 3
+.
+An implant’s stability after implantation depends on the pore shape and size of the implant surface facing the host bone. Wang et al. [
+95
+] suggested the use of SLM to print a functionally graded porosity for the acetabular cup to enhance its stability after implantation. The proposed lattice structure had octet truss unit cells that varied in length across its design. Mathematical analysis and manufacturability issues for the proposed design were discussed, and it was shown that this design could withstand the maximum stresses that this area is usually subjected to in normal daily activities. España et al. [
+96
+] also suggested the use of the DED process to print an acetabular cup from functionally graded composition. For the part mating with the femoral head, cobalt alloy was suggested. For the part mating with the bone, titanium alloy with fabricated porosity was proposed. DED techniques have the advantage of printing more than one material. However, they cannot obtain precise and controlled unit cell shapes, as can SLM. 
+To reduce the femoral stem stiffness and avoid the stress shielding phenomena, the use of functionally graded porosity is a new approach that has recently generated significant attention. Hazlehurst et al. [
+97
+,
+98
+] proposed the fabrication of an implant from cobalt-based alloys using SLM. The internal lattice for the design had a simple cube shape. A 3D FEA model was developed to model the proposed designs. An experimental cantilever bending test was performed to validate the efficiency of the designs. Both experimental and numerical results proved that functionally graded porosity would reduce overall stiffness. However, a difference between experimental and numerical results was noted. The difference, in this case, was attributed to the SLM accuracy and manufacturing errors. Functionally graded porosity in both axial and radial directions of a CoCr femoral stem have been suggested by Limmahakhun et al. [
+99
+]. This innovative design was proposed to work on solving the proximal bone stress shielding problems while also trying to maintain the implant’s stability. The unit cell chosen for this lattice structure was pillar octahedron. A 3D FEA analysis model was developed to evaluate the stress shielding effect on the implant. Furthermore, a three-points bending test was performed for the printed femoral stems to validate the model. Numerical and experimental results both proved an enhancement in the stress shielding effect when compared to solid titanium femoral stems. 
+The use of optimization models to numerically assign the porosity in the femoral stem is another promising approach. Fernando [
+100
+] proposed an optimization method to reduce the stress shielding and the interfacial stresses. The developed FEA model considered the additive manufacturing errors. The proposed model was a 2D model, which might be a significant approximation. Arabnejad et al. [
+101
+] proposed a similar optimization method based on the homogenization concept. The authors were able to develop a 3D FEA model and extended their research to cover femoral stems generated from a tetrahedron unit cell lattice structure [
+102
+]. The same authors extended their optimization method to enhance the design of the implant against fatigue fractures [
+103
+] caused by the cyclic loading associated with walking stresses. This opens a wide area of research possibilities to experiment with other lattice structure unit cells, such as gyroids, and evaluate their performance in the fully porous femoral stem.
+The functionally grading of metals with other materials such as ceramics and hydroxyapatite has shown superior performance results and increases in service life of implants in several case studies. A 3D FEM was developed by Oshkour et al. [
+104
+,
+105
+] for the femoral component of a knee through functionally graded composition. Three different material combinations were suggested: titanium, cobalt chromium, and hydroxyapatite. Hedia et al. [
+106
+] compared numerical models of 1D FGM and 2D FGM for the acetabular cup of a hip implant. A combination of titanium, bio-glass and hydroxyapatite was suggested. All numerical results pointed toward a reduction in stress shielding. Low modulus at the distal end and high modulus at the proximal end was suggested by Al-Jassir et al. [
+107
+] to improve the performance of the femoral stem. The proposed material combination was titanium alloy and cobalt chromium alloy, which may be challenging to grade together. To overcome aseptic loosening, Bahraminasab et al. [
+108
+] suggested using a gradient from titanium alloys and alumina-ceramic for a knee femoral component. Moreover, some porosity was added to the surface of the implant mating with the bone to improve fixation and eliminate the effect of soft tissue formation. The manufacturing of such a part using AM technologies could only be done using DED in the present time. The bonding of the metallic and ceramic material needs to be further researched, specifically when printing complex parts, to validate the model.
+The employment of lattice structures and FGM in the design and manufacturing of orthopedic implants should have a promising future. In order to substantially increase the use of these technologies in the biomedical implant industry, several challenges need to be addressed:
+
+The overall characterization of lattice structures needs to be improved. A standard protocol for assessing the dimensions/microstructure/mechanical performance needs to be developed.
+There is a need to trace the defects of lattice structures manufactured by AM technology to their root causes. This can be performed by creating a process-structure-property (PSP) relationships for different lattice structures.
+A library for the different unit cells used in orthopedic implants should be established to allow for the assessment of different unit cells’ performances in different applications. Moreover, the database should contain both mechanical and biological information about the different unit cells.
+The development of new FGM designed from biomaterials using AM technologies should be studied in more depth. The combination of metallic, ceramic, and inorganic materials could result in an implant having high functionality.
+Integration between the simulation and AM of implants fabricated from FGM is needed to ensure that the gap between modelling and fabrication is eliminated.
+The long-term performance of functionally graded implants produced by additive manufacturing technologies needs to be assessed. The in vivo performance determines the benefits and limitations from a biological point of view.
+The overall characterization of lattice structures needs to be improved. A standard protocol for assessing the dimensions/microstructure/mechanical performance needs to be developed.
+There is a need to trace the defects of lattice structures manufactured by AM technology to their root causes. This can be performed by creating a process-structure-property (PSP) relationships for different lattice structures.
+A library for the different unit cells used in orthopedic implants should be established to allow for the assessment of different unit cells’ performances in different applications. Moreover, the database should contain both mechanical and biological information about the different unit cells.
+The development of new FGM designed from biomaterials using AM technologies should be studied in more depth. The combination of metallic, ceramic, and inorganic materials could result in an implant having high functionality.
+Integration between the simulation and AM of implants fabricated from FGM is needed to ensure that the gap between modelling and fabrication is eliminated.
+The long-term performance of functionally graded implants produced by additive manufacturing technologies needs to be assessed. The in vivo performance determines the benefits and limitations from a biological point of view.
+This review highlights that AM technologies can add more benefits to the key advantage, which is customization, in the manufacturing of the orthopedic implants. Lattice structures can be used to reduce stress shielding and enhance osseointegration, while the use of FGM addresses significant issues such as: stress shielding, implant stability and aseptic loosening. To obtain high quality lattice structures, the process parameters of AM technologies need to be optimized. Different factors affect the mechanical properties of these structures, such as material, shape of unit cells, and porosity. More accurate FEA models should be developed to assess the seemingly limitless combinations that could be obtained from these factors. AM technologies have been studied to create functionally graded composition implants, as well as functionally graded porosity for customized implants. The modelling of the biological and mechanical performance of implants fabricated from FGM has been well established. More experimental studies are needed to validate these models and further enhance their applicability in orthopedic implants.
+Dalia Mahmoud wrote the first draft and organized the skeleton of the review. Mohamed A. Elbestawi revised and edited the manuscript and gave final approval of the version to be submitted.
+The authors declare no conflict of interest.
+1
+ BCC: Body centered cube. 
+2
+ BCC-Z: Body centered cube with a vertical strut in the middle. 
+3
+ I-WP and F-RD: are TPMS unit cells based on implicit equations.
+1
+ BCC: Body centered cube. 
+2
+ BCC-Z: Body centered cube with a vertical strut in the middle. 
+3
+ I-WP and F-RD: are TPMS unit cells based on implicit equations.
+Enhance joint stability
+An increase in strut diameter of octet truss unit cell from the exterior to inner surface is proposed
+Mechanics analysis of the design was provided.
+Enhance joint stability and reduce wear.
+Cobalt alloy mating with the metallic part to reduce the wear rate.
+Porous titanium alloy mating with the bone to enhance osseointegration and stability.
+Reduce the stress shielding effect
+A porous femoral stem with a functionally graded square pore cellular structure.
+Strut thickness changes from thin to thick towards the femoral head.
+Printed from Co-Cr alloy using the SLM process.
+Validation by the cantilever bending test.
+Reduce the proximal bone stress shielding, while preserving the stability.
+Comparison of axially and radially gradation using a developed 3D model.
+Octahedron unit cell was used for the functionally gradation.
+Printed using Co-Cr alloy and the SLM process and validated by the 3-point testing method.
+Minimize bone resorption and optimize the interfacial stress distribution.
+Optimization of the functionally graded porosity based on 2D numerical modelling.
+Considered the manufacturing errors from SLM process.
+Improve bone resorption and implant interface failure
+Optimization of functionally graded porosity based on 3D numerical modelling.
+Model enhanced to cover more unit cells and fatigue stresses as well.
+Printed from titanium alloy using SLM process.
+Reduce stress shielding
+Suggested materials: titanium and cobalt chromium alloys.
+Femoral stem has high modulus at proximal end, low modulus at distal end.
+Developed 3D finite element model to assess its performance
+Prevent aseptic loosening and reduce wear.
+Hard ceramic surface at the articulation reduces wear.
+Titanium at the bone interface
+Added porosity enhances the osseointegration.

@@ -1,0 +1,1476 @@
+The proposal of a conceptual approach towards the application and evolution of continuous improvement in the context of Industry 4.0.
+Continuous improvement (CI) is a key component of lean manufacturing (LM), which is fundamental for organizations to remain competitive in an ever more challenging market. At present, the new industrial revolution, Industry 4.0 (I4.0), is taking place in the manufacturing and service markets, allowing more intelligent and automated processes to become a reality through innovative technologies. Not much research was found regarding a holistic application of I4.0′s technological concepts towards CI, which clarifies the potential for improving its effectiveness. This clearly indicates that research is needed regarding this subject. The present publication intends to close this research gap by studying the main I4.0 technological concepts and their possible application towards a typical CI process, establishing the requirements for such an approach. Based on that study, a conceptual approach is proposed (PDCA 4.0), depicting how I4.0 technological concepts should be used for CI enhancement, while aiming to satisfy the identified requirements. By outlining the PDCA 4.0 approach, this paper contributes to increasing the knowledge available regarding the CI realm on how to support the CI shift towards a I4.0 industrial paradigm.
+Continuous improvement (CI) is a key component of lean manufacturing (LM) [
+1
+], being generally defined as a culture of sustained improvement targeting the elimination of waste in all systems and processes of an organization [
+2
+]. In highly dynamic and demanding markets, the CI of production processes and other value chain activities is crucial for organizations to remain competitive [
+3
+]. In this regard, the current fourth industrial revolution, Industry 4.0 (I4.0), is taking place in manufacturing companies, causing the shifting, or at least the adaptation, of the LM and CI paradigms [
+4
+]. Recently, several approaches on the integration between the LM realm and I4.0 were formulated, and authors reached important conclusions on how both paradigms can work together to enhance manufacturing performance and flexibility [
+5
+,
+6
+].
+Approaching LM in its purest form does not require information technology [
+7
+]. However, both LM and I4.0 paradigms aim to solve present and future challenges in manufacturing [
+8
+]. Among the publications that study the applicability of I4.0, several mention CI as a part of LM (e.g., [
+4
+,
+8
+,
+9
+]), whereas others focus exclusively on CI (e.g., [
+10
+,
+11
+,
+12
+]). The existing contributions in the literature show, directly or indirectly, the potential of CI enhancement under a I4.0 context, referring to various I4.0 technological concepts to support this transformation. However, they do not propose a holistic methodology or a complete strategy for the CI shifting towards I4.0. Therefore, the present article proposes PDCA 4.0: a new conceptual approach for CI in the I4.0 environment, aiming to cover the knowledge gap found in the literature.
+A thorough literature review was performed to craft a complete and reality-adapted conceptual approach. For the systematization of the review and to organize the conceptual approach, the application of CI was formalized as a project-based activity, with the following eight subsequent actions: CI’s documentation management, problem identification, problem mapping, and the problem-solving sequence, with the Plan-Do-Check-Act (PDCA) cycle at its core, i.e., diagnosis, root cause analysis, countermeasures, implementation, follow-up, and standardization. To support the build-up of the approach, the work begins with the study of the roots of traditional CI practices in order to understand their purpose and identify their current limitations. Secondly, the design principles of I4.0 were studied and 10 of I4.0′s technological concepts were considered for the analysis. Thirdly, conceptual, empirical, and practical approaches to the application of I4.0 technologies on LM/CI tools and methods were studied, and their potential was discussed. This analysis allowed for the identification and characterization of the challenges and limitations of conventional CI practices, based on published literature, which, analyzed together with the potential of the I4.0 concept, allowed for the statement of eleven functional requirements for the implementation of CI/LM in the Industry 4.0 paradigm.
+The article concludes by proposing a new conceptual PDCA 4.0 approach, including how the technological solutions should be used and explaining the mechanisms of interaction and data management (satisfying the identified requirements). By outlining the PDCA 4.0 approach, this paper contributes to increasing the knowledge available regarding the CI realm on how to support the CI shift towards a I4.0 industrial paradigm.
+LM is rooted in the Toyota production system (TPS) [
+11
+,
+13
+]. TPS integrates a set of methods and tools with a management philosophy, aiming at the constant identification and elimination of waste [
+14
+]. TPS principles follow the logic of a house, with CI at its core [
+13
+]. Bhuiyan and Baghel [
+2
+] define CI as a culture of sustained improvement that aims at eliminating waste in all organizational systems and processes involving people. CI consists of solving problems that were previously identified. Therefore, preliminary tasks of identifying opportunities for improvement are essential to this matter. This section presents a summary of conventional CI practices and how a typical management process of CI projects works. An analysis on their challenges and limitations is the other main objective of this section.
+At an early stage of a CI project, several methods can be used to enhance the identification of improvement opportunities. Using tools for key process indicators (KPI) analysis, mapping the value chain, or “simply” considering workers’ suggestions are typical practices at the beginning of a CI project. KPIs are defined as a set of indicators aiming to analyze and control the process under investigation [
+15
+]. Dashboards are typically used to represent them [
+15
+,
+16
+]. The mapping activity can be performed using tools such as SIPOC (suppliers, input, process, output, customers) and value stream mapping (VSM) [
+17
+]. Problems and waste identified in this phase result in opportunities for improvement that can be prioritized through a matrix of effort vs. impact [
+18
+].
+With an efficient identification process, several problems will be solved in the problem-solving phase. CI has its origins in the PDCA cycle: a problem-solving method consisting of a four-step iterative cycle: Plan, Do, Check, and Act [
+11
+,
+19
+]. The PDCA cycle’s logic is patent in several problem-solving methodologies, such as the eight disciplines (8D) [
+20
+] and the A3 problem solving [
+20
+,
+21
+,
+22
+]. This last one is a visual tool in an A3 sheet format that enhances the communication of complex problems existing in the production system and stands out for being one of the most complete tools for LM and CI-specific problems [
+22
+]. Based on [
+23
+,
+24
+], a PDCA problem-solving structure can be systematized in the following steps: diagnosis (including problem description and problem analysis), root cause analysis, countermeasures’ definition (which includes the definition of the target value), implementation, follow-up, and standardization.
+Thus, as referred to in 
+Section 2.1
+ before assigning a problem for the problem-solving approach, two activities are necessary: the KPI analysis and the value chain mapping for the identification of potential problems. These are a crucial part of the planning phase of the PDCA cycle or culture [
+15
+,
+17
+]. One activity that is usually not mentioned in problem-solving strategies is the information management, representing the tasks of managing the PDCA projects and controlling its development, usually carried out in an 
+obeya
+ room [
+25
+]. Therefore, based on these PDCA related activities, the sequence depicted in 
+Table 1
+ was used in this research to systematize the literature analysis and the proposed approach explanation.
+An analysis about the challenges and limitations of the conventional CI practices is important in order to identify gaps that can be mitigated by the proposed PDCA 4.0 approach. A comprehensive survey was carried out through the use of the Google Scholar search engine, using the keywords “Limitations of Continuous Improvement”, “Limitations of Problem Solving”, “Limitations of Kaizen”, and “Limitations of Lean Manufacturing”. In total, 16 related publications were found. Three major aspects were identified among the selected publications regarding the challenges and limitations of CI practices (
+Figure 1
+).
+The typical pen-and-paper format of documentation [
+7
+,
+10
+,
+22
+] implies several constraints in CI projects and is not ideal to achieve an effective documentation management, as is further described. Despite their team building usefulness, the existence of Obeya rooms made the access to CI information by all the elements involved in the CI projects difficult [
+25
+]. Some authors describe the limitations of the traditional pen-and-paper value stream mapping (VSM) [
+7
+,
+17
+], indicating that this aspect is also relevant in the mapping activity. According to Hambach et al. [
+10
+], due to the physical format of CI documentation, the lack of aggregated and simplified information about the status of problem-solving projects may constrain the implementation and follow-up activities. In addition, pen-and-paper formats do not allow for the storage of CI information in a computer system [
+22
+], resulting in the inexistence of a database with previous problem-solving projects, which is a need addressed by some authors [
+10
+,
+26
+]. Therefore, the inexistence of an effective information system (IS) and its regular documentation management leads to not using knowledge acquired in previous CI initiatives, which might result in reworks in finding root causes and countermeasures.
+The inexistence of an IS, or its lack of application for CI purposes, leads to more challenges and limitations. In addition, the absence of an automatic data collection and result analysis platform also contributes to limit and constrain the CI project’s impact and assertiveness. Regarding the KPI analysis activity, production planning using ERP combined with manual Excel sheets is a conventional practice in organizations that do not support reliable and real-time data collection to the dashboards [
+27
+]. This difficulty is also felt for the VSM because it offers only a “photograph” of the system, and a small change in the real situation would change its validity [
+7
+]. Concerning the diagnosis, various authors point out that data are typically collected and analyzed manually, which is very time-consuming [
+11
+,
+28
+]. Other authors even mention the lack of access to process the data, which makes them impossible to measure, control, and improve [
+11
+,
+26
+,
+29
+]. This indicates the lack of connection between physical production objects and virtual IS [
+11
+,
+28
+]. This limitation also spans the follow-up and standardization activities [
+11
+]. Multiple authors also address the lack of an IS as a cause for an inefficient communication system that constrains the dissemination of improvements [
+11
+,
+30
+], which is relevant to the follow-up and standardization. According to Vo et al. [
+30
+], the cellular way in which traditional businesses operate, together with the absence of an IS system linked to CI, contributes to minimizing collaboration and knowledge sharing, with the best practices being contained only in their corresponding departments. As a consequence, best practices are not used for subsequent improvements [
+11
+].
+Using basic data analysis tools, instead of data analytics software integrated in the IS to process Big Data, corresponds to another limitation for CI practices [
+11
+,
+26
+]. Relevant to the diagnosis, Meister et al. [
+26
+] state that advanced analytics techniques are necessary due to the increasing number of production parameters, mentioning that conventional tools, such as Excel, present limitations and are not sufficient to solve new complex problems. In fact, the problem-solving process is positively benefited by the advanced manufacturing analytics (MA) techniques, as they boost execution speed [
+26
+]. The same authors also point out the inability of basic MA practices to correlate variables and determine the root causes of a given problem. This results in the waste of time and resources by the “firefighting” approach, or simply because it takes longer to solve the problems [
+26
+]. Moreover, the existence of a limitation arising from the lack of the use of simulation and optimization techniques in order to provide assistance for improving decision-making is evident in the literature, with multiple authors addressing the combination of these methods with LM [
+12
+,
+31
+,
+32
+,
+33
+]. This implies a possible difficulty in the virtual testing of countermeasures before their physical implementation. Associated with the lack of these technologies in order to predict process anomalies, Rittberger et al. [
+11
+] refer to the challenge of problem prediction and prevention in advance, which is something that is not conventionally possible. Thus, the KPI analysis and mapping activities are also affected by this limitation.
+Table 2
+ synthesizes these literature findings, where the CI activities defined in 
+Table 1
+ are matched with their respective challenges and limitations. Clearly, the conventional CI practices face several obstacles, which the article in hand addresses with the development of a holistic PDCA 4.0 approach towards CI using I4.0 principles and technologies.
+Several authors propose the use of I4.0 principles and associated technologies as a way to overcome some of the challenges and limitations of CI. In this chapter, a brief overview of the I4.0 design principles and technological concepts is given in 
+Section 3.1
+. (For a more detailed analysis, refer to 
+Appendix A
+) and, after that, in 
+Section 3.2
+, a discussion about the existing publications on CI in the context of I4.0 is presented.
+I4.0 denotes an unprecedented transformation in both industry flexibility and agility. Nowadays, the business world recognizes the huge opportunities for growth offered by this innovation stream [
+34
+]. Several authors point out the advantages of integrating I4.0 technologies with LM [
+1
+,
+4
+,
+7
+,
+12
+] and, more specifically, with CI [
+10
+,
+11
+,
+35
+]. In order to understand why the I4.0 trend is so important to CI projects, knowledge about I4.0 design principles and I4.0 technological concepts must first be acquired. In order to systematize the Industry 4.0 knowledge and describe its elementary constituents, Hermann et al. [
+36
+] conducted an extensive study resulting in four design principles of Industry 4.0, summarized in 
+Figure 2
+.
+Along with I4.0 transition comes the availability of new or improved technological concepts to foster the business models transition [
+37
+,
+38
+]. There is a proliferation of publications about these technologies addressing their identification, association, and relationships between [
+39
+,
+40
+,
+41
+,
+42
+,
+43
+]. Bibby et al. [
+44
+] summarized I4.0′s technologies into eight different technological concepts: additive manufacturing, Cloud, manufacturing executing systems, Internet of Things and cyber-physical systems, Big Data, sensors, e-value chains, and autonomous robots. This clustering is simple, objective, and well-grounded by previous work. Nevertheless, other authors propose an organization of technologies driven by the type of use [
+41
+,
+43
+,
+45
+,
+46
+], which is very useful for process-based analysis, such as the one made in this study. Based on these two approaches, an organization of the technological concepts just for the practical depiction of the proposed approach PDCA 4.0 is used (
+Figure 3
+). In total, 10 technological concepts are considered in this study: Internet of Things (IoT), cyber-physical systems (CPS), Big Data (BigData), Cloud (Cloud), sensors and actuators (Sens&Act), autonomous robotics (AutRob), simulation and virtualization (Sim&Virt), additive manufacturing (3DP), manufacturing execution systems (MES), and e-value chains (eVC). The description and justification of each technological concept is presented in 
+Appendix A
+.
+There are several published documents fostering the use of LM/CI in the context of I4.0 that were considered in the design of the proposed PDCA 4.0 approach. It should be noted that there is no clear distinction between CI and LM tools, as both are a part of the same management philosophy [
+13
+,
+14
+]. In fact, LM is supported by CI practices, implying the use of lean tools. The documents were selected by using the following list of keywords in the Google Scholar search engine: “Continuous Improvement 4.0”, “Kaizen 4.0”, “Lean Manufacturing 4.0”, “Industry 4.0 Continuous Improvement”, “Industry 4.0 Kaizen”, and “Industry 4.0 Lean”. In total, 47 documents were found; those that contribute to this area of knowledge are discussed in this section. Three main types of approaches were identified: (i) conceptual approaches that study the applicability and impact of I4.0 towards LM/CI; (ii) empirical approaches that are based on perceptions extracted from the industry regarding the same subject; (iii) and practical approaches in which the application of I4.0′s technologies to LM/CI is demonstrated through use cases.
+Among the 23 publications on the conceptual application of I4.0 technologies to LM/CI found in the literature, 19 of them do not mention their applicability towards CI in a direct and structured way. After analyzing the content of these 23 papers, the findings were assigned according to their relevance to each of the CI activities. As an example, Sim&Virt, through augmented/assisted reality (AR/AsR), enables real-time remote support in manual operations [
+8
+,
+12
+], relevant to the documentation management, implementation, and follow-up and standardization activities. The result is exposed in 
+Table A1
+ and 
+Table A2
+ (
+Appendix B
+).
+From this study, it can be stated that IoT and Cloud have the potential to cover all CI activities, with IoT having the main role of enabling data transmission and access [
+9
+,
+47
+], and Cloud the sharing of information [
+9
+,
+12
+] and cloud-based data storage [
+12
+,
+48
+], as well as cloud computing capabilities [
+35
+,
+48
+,
+49
+]. Sim&Virt is also quite overarching, allowing the use of AR/AsR to aid in manual operations [
+8
+,
+12
+] and observe the current state of a process [
+11
+], and the use of virtual reality (VR) to facilitate training [
+8
+]. Additionally, simulation technologies can be used to test countermeasures before their real life implementation [
+12
+,
+31
+,
+50
+]. For this, a factory digital twin coupled with simulations can also be used for CI [
+51
+]. Big Data also possess a high degree of applicability, associated with data analytics [
+9
+,
+12
+], predictive analysis [
+11
+,
+12
+,
+52
+,
+53
+], data mining [
+53
+], correlation analysis [
+47
+], root cause analysis [
+11
+,
+53
+], and machine learning [
+11
+,
+43
+,
+53
+], as well as advanced analytics for planning [
+8
+]. CPS, on the other hand, has relevancies to the collection and access to real-time data [
+9
+,
+54
+], and can predict machine failures [
+52
+,
+55
+]. AutRob, besides improving manufacturing flexibility and productivity [
+9
+] through the automation of routine tasks [
+11
+], also makes the automatic detection of machine failures possible [
+1
+,
+9
+], as well as automated logistics systems [
+8
+,
+9
+,
+12
+]. It can also be used in collaboration with operators [
+9
+]. Sens&Act is a fundamental technological concept, as it is used to collect production data, including machine performance and object location [
+12
+]. MES is mainly used to collect data, as well as to display KPIs and data charts [
+56
+,
+57
+]. On the other hand, eVC allows for the connectivity between stakeholders of the value chain and the information exchange along the supply chain, with on-demand access to value chain information through digital platforms [
+43
+]. 3DP is essentially connected with mass customization [
+12
+] and smart product development [
+9
+], permitting the test of product designs.
+The empirical approaches to the application of I4.0 technologies to LM/CI are carried out mainly through surveys for data collection regarding perceptions extracted from the industry. Some of these insights are listed in 
+Table A3
+ (
+Appendix C
+). It can be stated that there are difficulties associated with I4.0′s concepts; namely the lack of knowledge about their impacts, as well as high cost factors [
+58
+,
+59
+,
+60
+]. A simultaneous approach for the adoption of I4.0′s technologies and LM (and CI) is needed [
+58
+,
+59
+,
+61
+]. Furthermore, several benefits of I4.0′s integration with LM are indicated [
+61
+].
+Regarding the greater synergies between LM and I4.0 technologies, cloud computing/machine learning are related with waste prevention/increased productivity, Big Data are interconnected with the concept of zero defects, and AR/VR with visual management [
+59
+,
+60
+]. Tortorella et al. [
+62
+] studied the correlations between LM principles and I4.0 technologies. As examples, for the principle of “digitally controlled processes”, digital sensors/interfaces and the remote control of production are considered as facilitators for the identification of abnormal product/process conditions [
+62
+]. The authors also mention technologies such as AR/VR with low correlation values, presenting a low adoption level. However, they state that these applications cannot be disregarded, as the topic of I4.0 is recent, and new relationships may arise as the manufacturer’s awareness escalates [
+62
+]. Dombrowski et al. [
+59
+] cover CI-related interdependencies, concluding that CI has the biggest correlation with Big Data, followed by cloud computing, RFID/identification, and sensors/actuators. Some additional references are made towards AR/VR, automated guided vehicles, and smart glasses [
+59
+]. Regarding technologies with greater consideration for implementation, IoT, big data analytics, and cloud computing received greater consideration for implementation, followed by additive manufacturing, AsR/AR, and robotics [
+61
+].
+In the literature, multiple practical approaches were also found, in which the application of I4.0′s technologies toward LM/CI are demonstrated through use cases. The corollary of this study is presented through 
+Table A4
+ and 
+Table A5
+ (
+Appendix D
+). This table summarizes various use cases of I4.0′s technologies, connecting them to the different CI activities in which they are relevant. As an example, the use case referring to a data collection system for an actual machine using sensors and a CPS, allowing for the real-time visualization of KPIs [
+63
+], can be considered as more relevant to KPI analysis and the diagnostic activities.
+Only one publication [
+30
+] references a more complete description of a CI process, including most of CI’s activities. The authors mention the use of web-based monitoring tools to collect data, MES to monitor manufacturing processes in real-time, and root cause analysis with the aid of digital boards and 3D printing to test product designs [
+30
+]. Other use cases cover fewer CI stages, such as a data collection system for an actual machine through the use of sensors and a CPS, allowing for the real-time visualization of KPIs [
+63
+], a Big Data tool stack that processes a high volume of data, feeding predictive models based on machine learning, and a descriptive analysis module that, through graphs, aids in accessing recent problems and their root causes [
+64
+]. An approach that is more closely related to problem identification through mapping refers to an RFID (Sens&Act)-based system that can collect data, such as the quantity of items in a given place and cycle times [
+65
+], having the potential to be adapted for a real-time VSM [
+66
+]. Additionally, a value stream analysis based on a Big Data model [
+67
+] and the combination of VSM with a simulation [
+68
+] are described in the literature. More associated with the development and testing of countermeasures, a publication mentions scheduling solutions based on real-time simulations [
+69
+]. Regarding implementation activities, multiple publications report developments in task organization through Kanban boards; namely a web-based board [
+70
+], a board operated with a smartphone [
+71
+], and a computer-aided task board that tracks a physical panel in real-time [
+72
+]. Other use cases, such as a highly flexible measurement-aided welding [
+73
+] and a safe human–robot collaborative assembly cell based on a CPS [
+74
+], were also found. Lastly, some use cases of AR/AsR (Sim&Virt) were deemed relevant for follow-up and standardization regarding the production [
+1
+,
+75
+], maintenance [
+76
+], and quality control [
+77
+] activities, while also facilitating the management of documents regarding work instructions.
+Many of the practical approaches that were found are specifically related to one LM tool, covering different CI activities. Use cases related to TPM, namely an online root cause analysis [
+78
+] and condition monitoring for machines [
+8
+,
+79
+], essentially cover the KPI analysis, diagnosis, and root cause stages. Other studies describing the incorporation of CPS in 
+Jidoka
+ [
+80
+,
+81
+] are also associated with these activities in a similar fashion.
+In summary, a body of knowledge exists regarding the application of I4.0′s technologies to CI, although many of the studied approaches relate to CI in an indirect way. In fact, most of the conceptual approaches found in the literature directly reference LM tools, which means that their functionalities were posteriorly analyzed in terms of their applicability to CI, which is a more specific practice of the same management philosophy. Regarding practical approaches, SMED is only briefly mentioned within this subject, and only a few use cases relating to mapping were found, although the only suitable use case towards VSM is not purposefully applied for that method. Few approaches refer to documentation management and improvement implementation activities, although the technologies to do so are readily available. In terms of general CI practices, the existing knowledge regarding conceptual, empirical, and practical approaches is very limited, as only a few publications that directly study this subject were found. Nonetheless, they do not offer comprehensive and extensive maps of the applicability of I4.0 towards typical CI processes. These findings further confirm the need for a more holistic and direct approach towards CI.
+Based on the compilation of several conceptual, empirical, and practical approaches regarding the application of I4.0 technologies to LM/CI (
+Table A1
+, 
+Table A2
+, 
+Table A3
+, 
+Table A4
+ and 
+Table A5
+) and the challenges and limitations of conventional CI practices (
+Table 1
+ of 
+Section 2
+), the functional requirements of a new conceptual PDCA 4.0 approach are defined. In total, 11 requirements are stated. Each one of them is briefly presented and substantiated with examples taken from the three types of approaches mentioned above. 
+Table 3
+ presents the match of the technological concepts with each of the 11 requirements for PDCA 4.0.
+As conventional practices depend heavily on the manual collection of data, which implies serious limitations in the process, an automatic data collection system is proposed for the CI team in order to have readily available data. This requirement is patent in conceptual approaches that mention that such systems are enabled by the application of Sens&Act to collect data [
+82
+], as well as IoT for the intelligent monitoring of the production and supply chain management functions [
+47
+]. Real-time data collection from the production system is also enabled by using MES [
+56
+,
+57
+], this being the primary reason for its deployment [
+57
+]. Regarding data generated outside of the factory, eVC can increase connectivity and allow information exchange along the supply chain [
+43
+,
+45
+]. After further refinement, the collected data can be stored in Cloud databases that constitute the heart of a factory digital twin [
+51
+]. Lastly, the concept of Big Data, as it is associated with the gathering of data from sensor readings [
+43
+], and because it is needed in order to establish a digital twin [
+43
+], is also associated with this requirement. Based on an empirical study, the use of digital sensors/interfaces facilitates the identification of abnormal product/operating conditions [
+62
+]. Additionally, IoT can be used as a supporting mechanism to interconnect products and processes [
+62
+]. Finally, this requirement is also present in practical use cases, such as a sensor-based data collection system that measures different machine parameters [
+63
+] and data collection by MES to support root cause problem solving [
+30
+].
+When data are collected automatically from sensors, an advanced analysis tool capable of handling a high volume of data is required. This way, it is possible to use advanced data analytics tools in an automatic fashion, avoiding Excel sheets and the limitations of simpler analysis tools. This requirement is evident in conceptual approaches that point out that the concept of Big Data, and therefore big data analytics, can process a high volume of data into information that can be used to improve the system’s performance [
+8
+,
+12
+]. This technology can be used to perform simple data analysis [
+9
+,
+12
+] as well as advanced data analytics, such as machine learning [
+11
+,
+43
+,
+53
+], data mining [
+43
+,
+53
+], root cause analysis [
+11
+,
+53
+], correlation analysis [
+47
+], and predictive analysis [
+11
+,
+12
+,
+52
+,
+53
+]. As an example, Rittberger et al. [
+11
+] suggest that a machine learning algorithm can be used in conjunction with a problem-solving database in order to infer cause–problem relationships. On a support point of view, other authors mention that IoT enables data transmission from machines to end user software [
+9
+], which is pertinent to this requirement. The Cloud concept is also relevant, as it can provide cloud computing capacity for data analytics [
+35
+,
+42
+,
+83
+] as well as enable data transfer from cloud storage to analysis tools [
+12
+]. Empirically, a study mentions that Big Data, namely big data analytics, and IoT, were given higher consideration for implementation [
+61
+]. Other authors present Big Data as the most interdependent technological concept towards CI [
+59
+]. Regarding practical approaches, as described earlier, a Big Data tool stack that allows data to feed predictive and descriptive analysis modules already exists [
+64
+], as well as a value stream analysis based on a Big Data model [
+67
+].
+A system that predicts problematic situations before they happen is required to anticipate problems, which is something that is not possible in conventional practices. This requirement is present in conceptual approaches that mention the potential of Big Data, namely big data analytics, for helping employees to determine cause-and-effect correlations, as well as trends to predict problems that are occurring in a process [
+11
+]. In a more specific approach towards machines, CPS architectures with embedded analytics (machine learning) can be applied to monitor, predict, and diagnose machine failures [
+52
+,
+55
+]. IoT is a relevant support technology for this requirement, as it enables real-time operation/machine monitoring [
+47
+,
+55
+]. Multiple practical use cases that demonstrate this requirement also exist, such as CPS-based systems with the ability to predict equipment failure [
+8
+,
+80
+,
+81
+,
+84
+], aided by machine learning algorithms and cloud computing [
+8
+,
+84
+].
+A real-time visualization system is needed so that relevant information is displayed in real-time, enabling the user to have knowledge about the current state of the production system, and avoiding decision making based on obsolete data. This requirement is present in conceptual studies that indicate the role of MES to determine KPIs, create reports, and provide user interfaces to visualize and manage shop floor operations [
+56
+,
+57
+]. Data from the value chain can also be visualized through digital platforms, enabled by eVC [
+43
+]. A digital twin, integrating different types of data from the manufacturing site and recreating a production line in a digital space, can also be used as the basis for the display of production and product information [
+51
+]. Other authors refer to CPS as useful for real-time data collection, which allows for effective KPI monitoring [
+9
+]. Lastly, AR/AsR devices (Sim&Virt) can also be used to display relevant process information, aiding users in problem-solving actions [
+12
+]. From a support perspective, IoT may be applied in order to provide real-time visualizations of information [
+47
+], and Cloud may be applied in order to access the collected data [
+9
+,
+12
+]. This requirement is further present in practical use cases; namely a data collection system that uses a CPS in order to monitor and visualize KPIs in real-time [
+63
+], and a RFID (Sens&Act)-based system used to collect data from the shop floor and present process data, with the potential to be integrated with VSM [
+65
+].
+The analysis of the countermeasures’ impact before their real-life implementation is also defined as a requirement for PDCA 4.0, as it can aid in developing viable and feasible countermeasures towards existing problems. Conceptually, this requirement is evidenced as the future of modelling, and the simulation will allow for the creation of near to real-time models with low building cycles, providing a tool for decision making and semi-autonomous problem solving [
+31
+]. Therefore, when connected to Big Data sources (stored in the Cloud), this technology can be used to test improvements to the production system, evaluating their impact in a virtual environment [
+12
+,
+31
+]. In this context, a digital twin of the manufacturing site that uses a simulation can be used towards CI [
+51
+]. This requirement can be further supported by on-demand cloud computing resources that allow high-speed simulation analytics [
+85
+], as well as IoT to transmit data between machines and sensors to software tools [
+9
+]. Regarding practical use cases, this requirement is present in scheduling solutions based on both real-time simulations [
+69
+] and the combination of VSM with simulation models in order to validate current and future states, aiding in decision-making processes [
+68
+].
+The prioritization of CI projects, constituting a hierarchy of problems to be solved, is also important because it guarantees the awareness of the impact vs. the effort of a CI project, allowing for the implementation of the most effective improvements. This requirement is justified by the difficulty in establishing consensus regarding the starting points towards process improvement [
+86
+]. Furthermore, the lack of resource availability for CI [
+87
+] reinforces the need to focus efforts correctly. I4.0 can play a role in the scope of this requirement, as simulations can be used to analyze the possible impact of countermeasures [
+12
+,
+31
+,
+51
+]. Big Data (big data analytics) has the potential to improve upon conceptual methodologies for the prioritization of projects and the allocation of resources, such as the one proposed by Allan et al. [
+86
+]. Similarly to the previous requirement, cloud computing and IoT can be used to support this need.
+In order to assist the implementation process of CI projects, a dynamic planning tool that displays the activities to be carried out, those that are being carried out, and those already carried out is needed. Regarding conceptual approaches, Krishnaiyer et al. [
+49
+] propose a cloud Kanban framework in order to monitor and control the resource consumption and production of an enterprise. In the scope of planning, Mayr et al. [
+8
+] mention advanced data analytics towards planning. For this, MES also plays an important role, as it supports advanced production planning (Gantt charts, for example) and resource allocation [
+56
+,
+57
+]. This requirement is also present in practical case studies that mention the advantages of digital Kanban boards in terms of its flexibility for visualizing assigned tasks [
+70
+,
+71
+,
+72
+]. As examples, Nakazawa et al. [
+71
+] developed a digital Kanban board that is controlled by a smartphone, and Bacea et al. [
+72
+] developed a virtual Kanban board that tracks physical task cards through a camera. These use cases demonstrate the importance of device interconnectivity, relating to the IoT technological concept.
+As it enables easy access to information regardless of the users’ location, the digital support for CI documentation is also a requirement for PDCA 4.0, along with a database for its storage and future access. This requirement is patent in the conceptual approach by Hambach et al. [
+10
+], in which the authors mention the advantages of a digital CI system in terms of data storage and access through document management systems, digital communication that is independent of space and time, and data visualization. For this, cloud-based data storage is essential in order to allow for more effective data sharing within departments [
+48
+], a concept that is aligned with the life cycle of technical documentation in the context of I4.0 [
+88
+]. Data exchange through IoT is therefore also fundamental for this requirement, being supported by authors who argue that technical documentation should be connected to IoT in order to facilitate communication between machines and humans [
+89
+]. Related to this requirement, a database for CI documentation storage is necessary. This way, through a library search, knowledge from past situations (state of the project, diagnostic, root causes, countermeasures, and their degree of success) can be accessed and used for present CI projects. This is present in conceptual approaches that mention the need for problem-solving databases to aid future CI projects [
+10
+,
+26
+]. In fact, Rittberger et al. [
+11
+] propose that successful improvement initiatives should be filed as standards in a database that contains problem information; namely its root causes and countermeasures. Once again, this is supported through the use of Cloud data storage [
+12
+,
+48
+], as well as IoT, to ensure data exchange between different devices [
+9
+], making documentation accessible everywhere.
+A transversal system for consulting best practices is defined as a requirement for PDCA 4.0, as it will enable knowledge sharing across the company regardless of the user’s location, avoiding information retention in organizational silos, and facilitating the standardization of new countermeasures. This requirement is present in conceptual approaches that mention that although AR/AsR (Sim&Virt) enables users to access real-time information about process data [
+11
+], it can also be used to remotely support employees in performing manual operations, such as maintenance or production tasks [
+8
+,
+12
+]. This way, work instructions can be shared with the operator [
+8
+], guaranteeing that best practices are shared across the organization, facilitating their standardization. In a similar context, VR can also facilitate the employees’ training [
+8
+]. According to the literature, the use of these technologies is supported by Cloud and IoT [
+90
+,
+91
+]. Empirically, AR and VR are considered as interdependent with CI, although to a lesser extent when compared with visual management [
+59
+]. This requirement is further demonstrated in practical use cases. Several publications cover the application of these technologies through use cases in the context of production, maintenance, and quality control activities [
+1
+,
+75
+,
+76
+,
+77
+]. As an example, Kolberg et al. [
+1
+] mention the use of AR on manual workstations for the identification of both tasks and relevant information.
+An automatic and intelligent work system is also defined as a requirement for PDCA 4.0, as it can ensure a more efficient process of implementing countermeasures regarding new machine parameters and work sequences, guaranteeing their immediate standardization. This requirement is justified in conceptual publications, as one study mentions that employees may lack the capacity to implement countermeasures during the implementation (“Do”) phase, suggesting the automation of routine tasks [
+11
+]. In this scope, authors argue that autonomous robots both increase manufacturing flexibility [
+9
+], easily adapting to changes and thus allowing for automated logistics systems [
+9
+,
+12
+], and communicate failures automatically, calling other systems for fault-repair actions [
+1
+]. In fact, the connectivity achieved through IoT enables a new level of automation [
+92
+]. From a practical point of view, this requirement is demonstrated through a use case by Tuominen [
+73
+], who describes a measurement-aided welding cell that is able to adjust itself in order to produce different products, and also has the ability to inspect weld beads. Nikolakis et al. [
+74
+] describe a CPS system for enabling human–robot collaboration based on a safety distance evaluation.
+A rapid prototyping system is specified as a requirement, as this will enable a faster process of testing countermeasures. This requirement is justified, as conceptual studies mention the additive manufacturing’s ability to produce customized products, being a highly flexible manufacturing process [
+12
+], potentiating smart product development processes [
+9
+]. In this context, IoT is useful to directly connect printers to the Cloud, enabling their remote control and monitoring [
+73
+]. Regarding practical use cases, one publication in the context of root cause problem solving describes the utilization of 3D printing to test improved product solutions [
+30
+].
+In a final analysis, observing 
+Table 3
+ it can be stated that IoT, Cloud, and Big Data are the most wide-ranging technological concepts regarding the 11 requirements for PDCA 4.0. This result is aligned with the base technologies for I4.0 identified by Frank et al. [
+43
+]. In fact, IoT is relevant to all the requirements, being the medium by which connectivity is achieved between various objects and software. Cloud, with cloud-based services such as data storage and computing power, is also applicable to the majority of the requirements. Big Data, referring to advanced data analytics, is pertinent to the PDCA 4.0′s functionalities that make use of such technologies. Sim&Virt is also a very ample concept, supporting decision making through simulation and optimization techniques, and also virtualizing the physical documentation and the physical processes that take place in the shopfloor. Sens&Act, despite directly covering only one requirement, is a base technological concept to PDCA 4.0, as it is the means through which data are collected, feeding the other technological concepts as well as most of the CI activities. The least overarching technology corresponds to 3DP and AutRob, each matching to a specific requirement.
+In the following section, the PDCA 4.0 approach is proposed based on satisfying these 11 requirements, where the match between the requirements and the CI activities is carried out as the approach design is specified.
+As previously stated in 
+Section 3.2.4
+, a more holistic and direct approach towards the application of I4.0 to CI is needed. Supported by both the previous analyses of the applicability of I4.0′s technological concepts and the definition of the requirements for a new CI approach (matching visible in 
+Figure 4
+), the vision for PDCA 4.0 is defined. 
+Figure 5
+ visually represents its framework.
+In the beginning of the CI process, namely the activities of KPI analysis, mapping, and diagnosis, Big Data collected automatically from the production system (R1) by Sens&Act and MES systems are stored in Cloud databases (Cloud), which also contain data regarding the whole value chain via eVC. The various types of data can then be integrated, forming the heart of a factory digital twin (Sim&Virt) that represents a virtual model of the physical world. The role of IoT is the same throughout this framework, ensuring connectivity and data transmission between machines and software. With these technologies, data coming from the shop floor, as well as from the value chain, can be used by CI teams for data-driven PDCA, avoiding situations where data are insufficient, obsolete, or inexistent.
+The stored data can then be processed by advanced big data analytics (Big Data) (R2), generating information regarding KPI analysis and mapping activities, through which the current state of the production system is known. A prediction of the future state may also be possible via predictive analytics (Big Data) (R3). For analytics (Big Data) and simulation services (Sim&Virt), cloud computing (Cloud) can be a supporting technology for providing the necessary computing ability. The information can be displayed in real-time to employees (to assist those responsible for the improvement to make decisions) through CPS, MES interfaces, eVC digital platforms, and AR/AsR devices (Sim&Virt) (R4), with its goal being the identification of negative critical aspects existing (or that may exist) in the organization. More specifically towards equipment, machine fault detection and prediction is possible through AutRob and CPS with embedded machine learning algorithms (R10). The PDCA database (R8) allows access to digitalized information regarding already identified problems, supporting the process of finding critical parameters and factors. This can also correspond to the employee’s suggestions that are stored in the database (Cloud). All of these advanced data processing systems must have a user-friendly and simple-to-use interface, where the user (who is not an expert in data analytics) simply has to ask for a correlation analysis to the interface, and receives the output of several data analytics algorithms in the form of degree of influence and/or level of correlation (allowing an informed root cause analysis).
+When the critical aspect is identified, an automatic diagnosis can be achieved via an advanced data analysis tool (Big Data) (R2) that retrieves historical and current data from the factory digital twin (Sim&Virt) in order to construct a diagnosis regarding the critical aspect. Predictions for the future state (Sim&Virt) (R3) can also be used in order to give emphasis to the hindered performance of the production system. This type of information could also be accessed and visualized through the same technologies stated in the previous paragraph (R4). Additionally, for the next stage of the CI process, advanced big data analytics, such as correlation analysis and root cause analysis, or a machine learning algorithm that infers cause–effect relationships based on a historical problem-solving database (R8), can be used to help the CI team determine the root causes of a problem. These functionalities ensure that manual, simple, and inefficient analysis tools are avoided, allowing the CI team to save time in carrying out these tasks. In addition, they make sure that the real source of the identified problems is addressed, avoiding superficial quick fixes.
+For the next activity, the development of countermeasures, simulation models with low building cycles (Sim&Virt), can be used to predict the effect of improvement solutions in a virtual factory environment through software (R5), as well as 3DP, in order to test solutions regarding product designs (R11). These technologies aid the decision-making process, allowing the CI team to find the most effective and feasible solutions to problems, all while offering a low-risk and faster way to test changes to the system/product.
+The results of the simulations (Sim&Virt) can also be used to further better the decision-making process by allowing to prioritize CI projects according to their impact and perceived effort (R6), ensuring a more effective implementation of countermeasures. Big Data analysis techniques can also be used in conjunction with the results of simulations, enabling the automatic hierarchization of projects (R6).
+Regarding the planning of activities, MES can be used to support the planning process through Gantt charts and resource allocation information. Additionally, cloud Kanban boards (Cloud) can be used to enable remote access to assigned tasks (R7). A system to consult best practices (Sim&Virt) (R9) further enhances the implementation of countermeasures by giving employees access to important information regarding work procedures, aiding them in performing new tasks. VR (Sim&Virt), namely AsR, can also help in this regard, as it facilitates employee training in a virtual environment. The automation of tasks (AutRob) (R10) is also pertinent to the implementation stage, aiding people in implementing the developed countermeasures, which accelerates the process. This implies an automatic and intelligent work system that easily adapts to changes in manufacturing (R10).
+For the follow-up and standardization activities, data collected from the production system (R1), regarding the new system performance, can once again be used to identify critical aspects, allowing to evaluate whether or not the improvement initiatives were successful and if new problems arose. This constitutes a CI cycle over which successive problem-solving needs are identified and undertaken. More related to standardization, best practice sharing through AR/AsR devices (Sim&Virt) (R9) facilitates the normalization of improvement solutions through the remote access to documentation such as work instructions by the employees in the shopfloor. Furthermore, autonomous and collaborative robotics (AutRob) allow for a more flexible and intelligent work system (R10), easily adapting to changes. This potentiates the immediate standardization of new work procedures and work parameters, project impact and effort, and thus its hierarchization, as well as implementation planning information.
+Lastly, information management is essential to the success of the improvement. Contrary to the usual pen-and-paper practices, having all the information digitized is crucial to store it in a database (Cloud) (R9) that enables everyone involved in the project to easily access important data.
+Regarding the connection of the technological concepts with the CI activities, 
+Figure 4
+ highlights the embracing way that they are interconnected. It is possible to see that most technologies relate to all CI activities by analyzing the large amount of complete circular crowns around the center. Only some technological concepts are less overarching. AutRob is present only in the check and act phases, being important for the implementation, follow-up, and standardization stages. CPS is more embracing but does not contribute to root cause identification and the development of countermeasures. Finally, 3DP has a more specific use, only relating to the activity of countermeasure development. In this figure, it can be seen that IoT, Cloud, and Sim&Virt are also important for documentation management.
+Regarding I4.0’s design principles, this framework allows to achieve the principle of interconnection through IoT-enabled data sharing. This way, information availability and exchange are ensured, which is crucial for a data-based CI approach. Information transparency is also guaranteed through systematic Big Data collection, forming the heart of a factory digital twin. This data are then used in conjunction with real-time display systems and several advanced analysis tools, such as data analytics and simulations for the relevant stages of a CI project. Decentralized decisions are also promoted in this framework, as it implies the use of technologies that support the decision-making process, helping to establish both root causes of critical aspects and the estimation of the countermeasure’s impact on the production system/product. Thus, this solution allows for the access to information in order to support the different actors of a CI project in decision making. Finally, technical assistance is also assured through technologies that enable the remote guidance of operators during maintenance, production, or quality control activities, displaying relevant information and best practices for those tasks. This is also apparent in the machine’s ability to automatically detect failures.
+Several publications regarding conceptual, empirical, and practical studies on the application of I4.0′s technologies towards LM and CI were analyzed, with their findings being organized according to the stages that constitute a typical CI project. It was found that the I4.0′s technologies mentioned in the literature have the potential to enhance a data-driven and more intelligent approach towards CI. It was also found that a holistic and structured framework towards an approach that combines I4.0 and CI was needed, as the vast majority of the authors focus solely on single aspects that are relevant to the subject. Thus, 11 requirements for the proposed approach were established based on functionalities or needs that are identified in the literature, as well as the relevant technologies for their materialization. These requirements were then worked in order to constitute a framework for PDCA 4.0. This framework uses I4.0′s technological concepts to collect production data and constitute a factory digital twin, enabling the identification of critical aspects related to the system’s performance through KPI analysis and mapping. These critical aspects are then diagnosed through intelligent data analysis and visualization tools, also enabling the determination of their root causes. Countermeasures can then be tested through simulations and/or through prototypes of the product design. This framework also aids the implementation of the improvements through the prioritization of projects, as well as their actual planning, and their follow-up and standardization activities. Another key component of this framework is related to information management, in which documentation needs to exist in a digital format in order to be stored in a PDCA database, making it accessible to everyone, everywhere. In summary, the application of I4.0 to CI contributes to a faster, more transparent, and efficient data-driven process, allowing to surpass traditional barriers related to such projects.
+As future work, the authors are already implementing the PDCA 4.0 approach in industrial companies, allowing to publish and discuss the impact, pros, and cons of the proposed approach. Another direction of research is to understand how aligned PDCA is with the concept of Industry 5.0. A deep and robust understanding of what Industry 5.0 is must be carried out prior to this analysis, but one can say that PDCA 4.0 is highly centered in humans (supporting human-based decisions and enriching humans’ activities) and also fosters the sustainability performance (the application of CI has a high impact on resources efficiency, people’s motivation, and the improvement of working conditions).
+Conceptualization, P.P. and D.J.; methodology, P.P., D.J., J.E. and M.G.; validation, J.E. and M.G.; formal analysis, M.S., J.E and M.G.; investigation, P.P. and M.S.; resources, P.P.; data curation, J.E. and M.G.; writing—original draft preparation, M.S., J.E. and M.G.; writing—review and editing, P.P.; visualization, J.E. and M.G.; supervision, P.P.; project administration, P.P.; funding acquisition, P.P. All authors have read and agreed to the published version of the manuscript.
+This work was supported by: FCT, through IDMEC, under LAETA, project UIDB/50022/2020; the European Regional Development Fund (FEDER) through a grant of the Operational Programme for Competitivity and Internationalization of Portugal 2020 Partnership Agreement (PRODUTECH4S&C, POCI-01-0247-FEDER-046102) and (PRODUTECHSIF, POCI-01-0247-FEDER-024541).
+Not applicable.
+Not applicable.
+Not applicable.
+The authors declare no conflict of interest.
+Internet of Things [IoT]—The technological concept “IoT” refers to a network characterized by physical devices capable of connecting to the wireless internet. The base components are made up of built-in electronics, such as sensors and transmission hardware. It allows for the rapid generation of data, leveraging the information flow within an organization through physical devices capable of interacting with each other and with control systems, through a network infrastructure [
+42
+,
+43
+,
+93
+].
+Cyber-physical Systems [CPS]—According to several authors [
+36
+,
+94
+,
+95
+] “IoT and CPS” should be divided into two different concepts, differing from the categorisation presented by Bibby et al. [
+44
+]. The technological concept “CPS” refers to systems capable of combining computational modelling, statistical data and physical data in real-time. The physical devices (machines or production lines) and the physical processes are digitized, creating a digital system identical to the physical system [
+43
+].
+Big Data [BigData]—Some authors, such as Frank et al. [
+43
+], separate Big Data from data analytics. However, both concepts are interdependent, and that is why many authors [
+40
+,
+41
+,
+44
+] choose not to separate them. The technological concept “Big Data” refers to this large data volume [
+41
+] and to the technologies of its collection, processing, provisioning, and analysis [
+44
+]. This concept is necessary in order to generate factory digital twins [
+43
+]. Data analysis refers to data mining, machine learning [
+43
+], statistical analysis, and predictive analysis, among others [
+40
+]. Regarding cybersecurity, some authors consider it as a separate category [
+12
+]. However, there are approaches who do not find it reasonable to approach this concept in an elementary way [
+40
+,
+44
+]. Following this last choice, and since cybersecurity technologies are associated with data and information, they are now included in the technological concept of Big Data.
+Cloud [Cloud]—The technological concept “Cloud” is unanimously adopted by other authors, such as [
+40
+], with similar descriptions and associated technologies. This concept refers to any IT services provisioned and accessible from a cloud computing provider [
+41
+]. It consists of three IT combinations: internet services, web-based applications, and information management [
+44
+].
+Sensors and Actuators [Sens&Act]—The logic behind this clustering follows the work by Bai et al. [
+41
+], which is entitled “Sensors and Actuators” instead of simply “Sensors”. Additionally, Bibby et al. [
+44
+] do not address actuators in their article, while other authors [
+41
+,
+43
+] argue that it is an important topic to be included. This technological concept “Sens&Act” includes basic technologies for the digitalization of objects and physical parameters [
+43
+]. It includes all devices that respond to a physical stimulus and transmit a resulting impulse [
+41
+]. This concept is also associated with RFID (radio frequency identification) [
+41
+].
+Autonomous Robotics [AutRob]—This technological concept includes autonomous, collaborative, and intelligent robots and equipment, with embedded sensors, dexterity, artificial intelligence, and machine learning [
+44
+]. As there is no common line in the literature about the place of artificial intelligence and machine learning, the present classification follows the same choice of Bibby et al. [
+44
+] of having just one technological concept (AutRob) where all of these associated technologies are included.
+Simulation and Virtualization [Sim&Virt]—This technological concept includes virtual tools that provide support to the decision-making process. In this scope, assisted reality (AsR), augmented reality (AR), and virtual reality (VR) are emerging technologies that create partial and complete virtual environments, capable of enhancing tasks and speeding up training [
+43
+]. Bibby et al. [
+44
+] do not individually address the virtualization technologies, namely VR and AR, which is something that happens in several later works [
+43
+,
+45
+,
+46
+]. This indicates the relevance of including a category for these technologies. The literature also suggests that both the simulation and digital twin have an impact on LM practices [
+8
+,
+9
+]. Ito and Ishida [
+51
+] defined the concept of a digital twin as a replica of the real world created in a digital space, bringing together different types of data on site. The replica can be used with artificial intelligence or simulations in order to help to make improvements in the context [
+51
+]. Therefore, their inclusion in this technological concept is adequate.
+Additive Manufacturing [3DP]—This technological concept is unanimously adopted by other authors, such as [
+40
+,
+41
+,
+43
+], with similar descriptions and associated technologies. Additive manufacturing (AM) or 3D printing (3DP) is a process by which products are produced autonomously, layer by layer [
+44
+]. It consists of versatile machines and flexible production systems that transform 3D digital models into physical products [
+40
+]. This technology is used especially for rapid prototyping and the creation of custom-made tools [
+44
+].
+Manufacturing Execution Systems [MES]—MES is a useful tool for organizations that require the accurate traceability of parts, components, and assembly activities to monitor quality, cost, and lead times. The purpose of MES is to initiate, guide, respond, and report shop floor activities as they occur [
+96
+]. MES also plays a key role in the central distribution of information [
+44
+]. Regarding ERP systems, Bibby et al. [
+44
+] include an exclusive classification group: MES is an I4.0 technological concept, and the rest (ERP, SCADA) already existed before I4.0 began. However, other authors define more complete technological categories, integrating MES/SCADA [
+40
+] or MES/SCADA/ERP [
+43
+]. All things considered, in the present classification approach, SCADA and ERP are directly associated to MES.
+e-Value Chains [eVC]—Supported by the digitalization of value chain activities [
+44
+], this technological concept consists of collaborative digital platforms [
+43
+] together with suppliers, customers, and other parts of the organization. This allows for continuous connectivity, collaboration, and cooperation [
+44
+], fostering the synchronization of the production with stakeholders [
+43
+]. Slightly different classifications exist in the literature, such as smart supply chain [
+43
+]. Furthermore, several other authors mention this technological concept indirectly [
+4
+,
+45
+]. Despite not being a technological concept, as mentioned in the literature as the base concepts (IoT, Cloud, etc.), eVC includes essential technologies for horizontal integration, and for this reason, this category must be included.
+✓ Enabling data transmission and access [
+9
+,
+47
+]
+✓ Data interchange between machines, systems, and sensors in order to end user software tools [
+9
+]
+✓ Collect and access real-time data [
+9
+,
+54
+]
+✓ Predict machine failures [
+52
+,
+55
+]
+✓ Data analysis [
+9
+,
+12
+]
+✓ Predictive analysis [
+11
+,
+12
+,
+52
+,
+53
+]
+✓ Machine learning [
+11
+,
+43
+,
+53
+]
+✓ Cloud-based data storage [
+12
+,
+42
+,
+83
+]
+✓ Information sharing across organization [
+9
+,
+12
+]
+✓ Cloud computing [
+35
+,
+42
+,
+83
+,
+85
+]
+✓ Collection of production data [
+12
+,
+82
+]
+✓ Enabling data transmission and access [
+9
+,
+47
+]
+✓ Data interchange between machines, systems, and sensors in order to end user software tools [
+9
+]
+✓ Collect and access real-time data [
+9
+,
+54
+]
+✓ Advanced analytics for planning [
+8
+]
+✓ Data analysis [
+9
+,
+12
+]
+✓ Cloud-based data storage [
+12
+,
+42
+,
+83
+]
+✓ Information sharing across organization [
+9
+,
+12
+]
+✓ Cloud computing [
+35
+,
+42
+,
+83
+,
+85
+]
+✓ Cloud Kanban [
+49
+]
+✓ Enabling data transmission and access [
+9
+,
+47
+]
+✓ Data interchange between machines, systems, and sensors in order to end user software tools [
+9
+]
+✓ Cloud-based data storage [
+12
+,
+42
+,
+83
+]
+✓ Information sharing across organization [
+9
+,
+12
+]
+✓ Cloud computing [
+35
+,
+42
+,
+83
+,
+85
+]
+✓ Collection of production data [
+12
+,
+82
+]
+✓ Enabling data transmission and access [
+9
+,
+47
+]
+✓ Data interchange between machines, systems, and sensors in order to end user software tools [
+9
+]
+✓ Root cause analysis [
+11
+,
+53
+]
+✓ Correlation analysis [
+47
+]
+✓ Machine learning [
+11
+,
+43
+,
+53
+]
+✓ Cloud-based data storage [
+12
+,
+42
+,
+83
+]
+✓ Information sharing across organization [
+9
+,
+12
+]
+✓ Cloud computing [
+35
+,
+42
+,
+83
+,
+85
+]
+✓ Collection of production data [
+12
+,
+82
+]
+✓ Enabling data transmission and access [
+9
+,
+47
+]
+✓ Data interchange between machines, systems, and sensors in order to end user software tools [
+9
+]
+✓ Collect and access real-time data [
+9
+,
+54
+]
+✓ Predict machine failures [
+52
+,
+55
+]
+✓ Data analysis [
+9
+,
+12
+]
+✓ Predictive analysis [
+11
+,
+12
+,
+52
+,
+53
+]
+✓ Data mining [
+53
+]
+✓ Correlation analysis [
+47
+]
+✓ Machine learning [
+11
+,
+43
+,
+53
+]
+✓ Cloud-based data storage [
+12
+,
+42
+,
+83
+]
+✓ Information sharing across organization [
+9
+,
+12
+]
+✓ Cloud computing [
+35
+,
+42
+,
+83
+,
+85
+]
+✓ Collection of production data [
+12
+,
+82
+]
+✓ Enabling data transmission and access [
+9
+,
+47
+]
+✓ Data interchange between machines, systems, and sensors in order to end user software tools [
+9
+]
+✓ Collect and access real-time data [
+9
+,
+54
+]
+✓ Predict machine failures [
+52
+,
+55
+]
+✓ Data analysis [
+9
+,
+12
+]
+✓ Predictive analysis [
+11
+,
+12
+,
+52
+,
+53
+]
+✓ Machine learning [
+11
+,
+43
+,
+53
+]
+✓ Cloud-based data storage [
+12
+,
+42
+,
+83
+]
+✓ Information sharing across organization [
+9
+,
+12
+]
+✓ Cloud computing [
+35
+,
+42
+,
+83
+,
+85
+]
+✓ Collection of production data [
+12
+,
+82
+]
+✓ Enabling data transmission and access [
+9
+,
+47
+]
+✓ Data interchange between machines, systems, and sensors in order to end user software tools [
+9
+]
+✓ Collect and access real-time data [
+9
+,
+54
+]
+✓ Predict machine failures [
+52
+,
+55
+]
+✓ Data analysis [
+9
+,
+12
+]
+✓ Predictive analysis [
+11
+,
+12
+,
+52
+,
+53
+]
+✓ Data mining [
+53
+]
+✓ Correlation analysis [
+47
+]
+✓ Machine learning [
+11
+,
+43
+,
+53
+]
+✓ Cloud-based data storage [
+12
+,
+42
+,
+83
+]
+✓ Information sharing across organization [
+9
+,
+12
+]
+✓ Cloud computing [
+35
+,
+42
+,
+83
+,
+85
+]
+✓ Collection of production data [
+12
+,
+82
+]
+✓ Enabling data transmission and access [
+9
+,
+47
+]
+✓ Data interchange between machines, systems, and sensors in order to end user software tools [
+9
+]
+✓ Cloud-based data storage [
+12
+,
+42
+,
+83
+]
+✓ Information sharing across organization [
+9
+,
+12
+]
+✓ Flexible adaptation to changes [
+9
+]
+✓ Minimization of human errors [
+8
+]
+✓ AR/ER allow for real-time remote support in manual operations [
+8
+,
+12
+]
+✓ Display of data through digital twin [
+51
+]
+✓ VR facilitates training [
+8
+]
+✓ AR/ER to analyze current process condition [
+11
+]
+✓ Data collection [
+56
+,
+57
+]
+✓ KPIs and charts in real-time [
+56
+,
+57
+]
+✓ Information exchange along supply chain [
+43
+,
+45
+]
+✓ On-demand access to information through digital platforms [
+43
+]
+✓ Flexible adaptation to changes [
+9
+]
+✓ Automation of routine tasks [
+11
+]
+✓ Collaboration with operators [
+9
+]
+✓ Minimization of human errors [
+8
+]
+✓ Automated logistics [
+8
+,
+9
+,
+12
+]
+✓ Simulation of countermeasures and their impacts [
+12
+,
+31
+,
+50
+]
+✓ AR/ER allow for real-time remote support in manual operations [
+8
+,
+12
+]
+✓ VR facilitates training [
+8
+]
+✓ Support planning and resource allocation [
+56
+,
+57
+]
+✓ Simulation of countermeasures and their impacts [
+12
+,
+31
+,
+50
+]
+✓ Simulation through digital twin [
+51
+]
+✓ Supporting the creation and planning of standard work procedures [
+9
+]
+✓ Small batch production (mass customization) [
+12
+]
+✓ Smart product development processes [
+9
+]
+✓ Automatic detection of machine failures [
+1
+,
+9
+]
+✓ AR/ER to analyze current process condition [
+11
+]
+✓ Display of data through digital twin [
+51
+]
+✓ Data collection [
+56
+,
+57
+]
+✓ KPIs and charts in real-time [
+56
+,
+57
+]
+✓ Information exchange along supply chain [
+43
+]
+✓ On-demand access to information through digital platforms [
+43
+]
+✓ Automatic detection of machine failures [
+1
+,
+9
+]
+✓ AR/ER to analyze current process condition [
+11
+]
+✓ Data collection [
+56
+,
+57
+]
+✓ KPIs and charts in real-time [
+56
+,
+57
+]
+✓ Information exchange along supply chain [
+43
+]
+✓ On-demand access to information through digital platforms [
+43
+]
+✓ Automatic detection of machine failures [
+1
+,
+9
+]
+✓ AR/ER to analyze current process condition [
+11
+]
+✓ Display of data through digital twin [
+51
+]
+✓ Data collection [
+56
+,
+57
+]
+✓ KPIs and charts in real-time [
+56
+,
+57
+]
+✓ Information exchange along supply chain [
+43
+]
+✓ On-demand access to information through digital platforms [
+43
+]
+✓ AR/ER allow real-time remote support in manual operations [
+8
+,
+12
+]
+✓ Companies feel that the adoption of I4.0 technologies must be simultaneous with the adoption of LM practices; therefore, a common approach based on LM and I4.0 systems is necessary.
+✓ Companies find it difficult to deal with some I4.0 technologies and concepts and to foresee the potential of Industry 4.0; thus, they face problems when selecting the relevant and most promising I4.0 technologies for their processes.
+✓ High-cost factors and other associated risks, such as cybersecurity, prevent smooth integration.
+✓ The effects of Industry 4.0 are still incipient even in manufacturers from developed economies; therefore, research should be carried out in this regard.
+✓ Most companies perceive a greater positive impact through LM than I4.0 technologies; this is because they claim high levels of LM implementation, regardless of technologies.
+✓ This integration contributes positively to reducing manufacturing waste and operating costs in addition to improving productivity efficiency; the effectiveness of factors including supplier feedback, JIT, and supply development systems can be improved by increasing the use of big data analytics, sensors, cloud computing and other IoT devices; this improved integration will increase the organization’s sustainable results, guaranteeing the timely delivery of the product, optimization of the supply network, and logistical reliability; based on the analysis of the data generated by the customer, it is possible to improve the level of customization offered.
+✓ The greatest synergies achieved by companies are between cloud computing/machine learning and waste prevention/increased productivity, Big Data and the principle of zero defects, AR/VR and visual management.
+✓ Some of the greatest correlations with LP principles and I4.0 were identified. Some examples are digital sensors/interfaces and the remote control of production to facilitate the identification of abnormal product/process conditions; IoT as a supporting mechanism to assure interconnectivity among products/processes.
+✓ Big Data, RFID/identification, cloud computing, and sensor/actuators have been indicated by many companies as technologies that are interdependent with CI processes.
+✓ Only a few companies indicated AR/VR, automated guided vehicles, and smart glasses as technologies that are interdependent with CI processes.
+✓ Companies struggled with the integration of AR/VR, having the lowest mean adoption level
+✓ IoT, big data analytics, and cloud computing received greater consideration for implementation, followed by AM, AR, and robotics.
+Publisher’s Note:
+ MDPI stays neutral with regard to jurisdictional claims in published maps and institutional affiliations.

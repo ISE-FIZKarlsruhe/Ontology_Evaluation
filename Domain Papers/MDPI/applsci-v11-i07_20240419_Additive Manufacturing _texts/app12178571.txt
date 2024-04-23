@@ -1,0 +1,491 @@
+Industry 4.0 is fast becoming a mainstream goal, and many companies are lining up to join the Fourth Industrial Revolution. Small and medium-sized enterprises, especially in the manufacturing industry, are the most heavily challenged in adopting new technology. One of the reasons why these enterprises are lagging behind is the motivation of the key personnel, the decision-makers. The factories in question often do not have a pressing need for advancing to Industry 4.0 and are wary of the risk in doing so. The authors present a rapid, low-cost prototyping solution for the manufacturing companies with legacy machinery intending to adopt the Industry 4.0 paradigm with a low-risk initial step. The legacy machines are retrofitted through the Industrial Internet of Things, making these machines both connectable and capable of providing data, thus enabling process monitoring. The machine chosen as the digitization target was not connectable, and the retrofit was extensive. The choice was made to present the benefits of digitization to the stakeholders quickly and effectively. Indeed, the solution provides immediate results within manufacturing industrial settings, with the ultimate goal being the digital transformation of the entire factory. This work presents an implementation cycle for digitizing an industrial broaching machine, supported by state-of-the-art literature analysis. The methodology utilized in this work is based on the well-known DMAIC strategy customized for the specifics of this case study.
+Many industries are embracing Industry 4.0 advancements since the term was first introduced in 2011. The term Industry 4.0 resulted from a German government initiative to increase the global competitiveness of the country’s manufacturing industry [
+1
+]. In the following years, many countries adopted and started researching and refining the principles set in the initial report. A set of guidelines and principles was shaped and presented as the nine pillars of Industry 4.0 [
+2
+]. Major industrial stakeholders took notice and started investing in the research, advancement followed, and the growth has been steady ever since. Leading adopter industries in 2020 were automotive, computer, electronic and electric, and metals and mining, as well as process industries, with adoption rates ranging up to 36% [
+3
+]. It is also worth noting that major advancements have been observed in North America, Europe, and Asia. While this is expected, due to the level of financial investment in those regions, there are still a lot of industries in other parts of the world that have not started the process of adoption. One of the main culprits for this is that the starting position of those industries is further back than the industries in the aforementioned regions. Other reasons include a low level of education, and the unawareness of the potential for improvement through Industry 4.0 adoption, as well as the implementation cost. Therefore, there is still room for improvement and more research that has the goal of stimulating the adoption process.
+According to Eurostat [
+4
+], in 2018, small and medium enterprises (SME) made up the vast majority of enterprises in the EU, ranging from 97% in Germany and Luxembourg, to 98% and above in the remaining EU Member States. Therefore, developing solutions to help SMEs in the process of digital transformation is a topic worth investigating and investing in. Digital transformation is the integration of new digital technologies into all business areas, leading to a fundamental change in the way the organization works [
+5
+]. Marushchak et al. [
+6
+] deem that the digital transformed business is approximately 25% more successful than other business forms. Nevertheless, leaping from the current level of industrialization to Industry 4.0 is sometimes deemed too risky, especially for SMEs. These companies do not have big development teams and are not able to dedicate a substantial amount of investment to something that is not certain to bring immediate results and profit. Survey results conducted in [
+7
+,
+8
+] show the responsibility for the decision-making in SMEs is mostly in the hands of a small group, if not only one person, the entrepreneur. These decision-makers are interested in advancing the company and its operations, but it is difficult to motivate them into big changes or investments, especially if their current operation is successful. Considering Industry 4.0 as a luxury rather than a necessity diminishes their motivation for change. Kumar et al. [
+9
+] have observed that motivation and the support of top management, among other factors, are essential for the adoption of smart technologies. Therefore, the focus lies on overcoming the lack of motivation in adopting Industry 4.0 paradigms [
+10
+]. The lack of motivation among decision-makers has been singled out as one of the biggest problems for the Industry 4.0 adoption rate, and the authors desire to further investigate it in this article.
+The decision-makers need to have a clear benefit from Industry 4.0 to be truly convinced that it is a smart business move. Thorough knowledge of the factory state, including insights into ongoing operations, is the underlying basis for the entrepreneurial improvement of a manufacturing company’s business. In [
+11
+], the author investigated the aspects that can enable a company to identify areas of improvement, as well as unessential or replaceable tasks. Knowledge is gained by understanding information. Information, in turn, can be created from data that first of all have to be acquired. The acquisition of all the necessary data play a fundamental role, and it is especially challenging when dealing with originally disconnected machines.
+Most machines of the latest generation possess new sensor technology and can easily be connected in order to provide production data. In contrast, SMEs, especially in the manufacturing industry, mostly have machines that belong to Industry 3.0. Industry 3.0 is defined by the rise of Information and Communication Technology, and the use of robots, actuators, and servomotors became a major part of the manufacturing industry [
+12
+]. These machines are considered disconnected, and thus, cannot seamlessly integrate into Industry 4.0. According to Vuković et al. [
+13
+] machines can be classified as talking or mute with regard to their level of connectivity. It is thus necessary to teach machines to “talk”, to enable them to provide the data. As mentioned before, the data provide insight into the entire factory operation. This will, in turn, provide tools to make informed and smarter data-driven decisions. The process of getting the data from analog machines is the process of machine digitization. Digitization is one of the first steps in transforming Industry 3.0 to Industry 4.0. The authors would like here to differentiate between the terms digitization and digitalization. According to Gartner, digitalization is “the use of digital technologies to change a business model and provide new revenue and value-producing opportunities” [
+14
+].
+Machine digitization enables the creation of the digital twin, a virtual representation of a physical system. It is a closed-loop system with the information being exchanged in both directions between the virtual and physical counterparts. Once the digital twin is created, it presents a way to simulate the system operations and to orchestrate the production system in an optimal way [
+15
+]. Digital twins of manufacturing systems show great promise in diverse applications, according to Mourtzis et al. [
+16
+]. However, Brauner et al. [
+17
+] does not consider a complete digital twin to be feasible, due to the massive amount of data that the virtual replica would require. They propose the use of a digital shadow, which, in their view, represents reality in a more compact fashion and with better performance than a fully integrated digital twin. The authors, therefore, have chosen the digital shadow as a preferable option to the digital twin, especially considering the requirements for the solution. The “downgrade” from the digital twin additionally makes sense from a business perspective, especially in cases where even a limited number of information can create enough value for the different internal or external stakeholders.
+The authors extrapolated a set of requirements the digitization solution for SME shop floors machine should fulfill. The solution should enable the creation of the digital shadow and therefore provide the necessary data, and in extension, the insight that will benefit the decision-makers. These requirements are:
+Cost effectiveness
+ —A low initial cost of investment for the digitization of a single machine or manufacturing unit decreases the entrepreneurial risk, and hence the hesitation of a company [
+18
+,
+19
+,
+20
+]. After seeing immediate improvements, the company can gradually upgrade the entire machinery. Furthermore, the benefits grow progressively with the degree of digitization.
+Implementation simplicity
+—A lower complexity increases the speed of development and implementation. The increase in speed provides the results quickly, thus increasing the confidence of the decision-makers that the entire process can be finished quickly. Many authors have identified a high complexity and a lack of qualified workforce as big barrier towards the Industry 4.0 adoption process [
+21
+,
+22
+].
+Security
+—Security is the focus of any IoT development, the industrial setting only emphsizes this. It is one of the main challenges faced by companies in the context of the Industrial Internet of Things (IIoT) [
+23
+].
+Scalability
+—There are two aspects of scaling to consider; the first is scaling the solution from one machine to the entire factory. Digitizing the entire factory floor at once is exposing the business to the high initial cost before they are sufficiently convinced of the digital transformation benefits. The second aspect is the “maturation” of the solution, developing it from the prototype phase to the fully operational product.
+Unobtrusiveness
+—There is less motivation to change a process that already works. It is beneficial if the processes and operations already present in the factory are not overly modified. Wee et al. [
+24
+] state that due to the high cost of downtime in production, the manufacturing companies will carefully consider introducing new technologies due to possible risks to process reliability.
+Cost effectiveness
+ —A low initial cost of investment for the digitization of a single machine or manufacturing unit decreases the entrepreneurial risk, and hence the hesitation of a company [
+18
+,
+19
+,
+20
+]. After seeing immediate improvements, the company can gradually upgrade the entire machinery. Furthermore, the benefits grow progressively with the degree of digitization.
+Implementation simplicity
+—A lower complexity increases the speed of development and implementation. The increase in speed provides the results quickly, thus increasing the confidence of the decision-makers that the entire process can be finished quickly. Many authors have identified a high complexity and a lack of qualified workforce as big barrier towards the Industry 4.0 adoption process [
+21
+,
+22
+].
+Security
+—Security is the focus of any IoT development, the industrial setting only emphsizes this. It is one of the main challenges faced by companies in the context of the Industrial Internet of Things (IIoT) [
+23
+].
+Scalability
+—There are two aspects of scaling to consider; the first is scaling the solution from one machine to the entire factory. Digitizing the entire factory floor at once is exposing the business to the high initial cost before they are sufficiently convinced of the digital transformation benefits. The second aspect is the “maturation” of the solution, developing it from the prototype phase to the fully operational product.
+Unobtrusiveness
+—There is less motivation to change a process that already works. It is beneficial if the processes and operations already present in the factory are not overly modified. Wee et al. [
+24
+] state that due to the high cost of downtime in production, the manufacturing companies will carefully consider introducing new technologies due to possible risks to process reliability.
+IIoT solutions fit the aforementioned requirements and can make machines connectable, e.g., “teaching them how to talk”. The current IIoT landscape provides several such solutions. However, as observed by Martikkala et al. [
+18
+], SMEs do not possess financial capabilities, or they lack a skilled workforce to operate and maintain IIoT systems. One more drawback is that those commercial solutions often lack the required level of adaptability. SMEs normally have very specific use case tailored solutions that need to be developed and tested. This means developing a prototype that can quickly demonstrate the capabilities and benefits of digitization. This is also in line with the “test before invest” principle that has been touted as a strategic means for driving the digital transformation of European SMEs [
+25
+] by European Commission Digital Innovation Hubs. Moreover, the culture of digital processes is not sufficiently introduced, and prototyping is the key to raising awareness of the benefits.
+This work focuses on the Industry 4.0 adoption problem in the manufacturing industry, especially considering the motivation factor of the decision-makers. The authors selected an actual case study, and the chosen company had not adopted the Industry 4.0 paradigm yet. It is the same situation that many companies in the manufacturing industry find themselves in. Pirola et al. [
+26
+] have conducted an assessment of Italian SMEs to determine Digital Readiness Level, and they have found that 40% of manufacturing SMEs have only partially digitized their operations. The machines were made before the introduction of Industry 4.0 technologies and are thus not equipped for digitization. It is important to note that adopting the Industry 4.0 paradigm is not perceived as a necessity from the stakeholder point of view; nevertheless, the study aims to demonstrate its benefits to them and ultimately motivate them to upgrade.
+In the scope of this paper, this principle was applied as a means to introduce and test the solution to one machine in one factory. The final goal involves scaling up to a complete solution ready for Industry 4.0 adoption in the entire production line, in one or more factories. In particular, the approach wants to digitize the machine and then turn it into the final industrial-grade system in a seamless manner and at almost zero additional cost. This will cheaply and quickly show the benefits of digitalization, and it will lead to further adoption of Industry 4.0 paradigms.
+Section 2
+ further investigates the motivation effect in SMEs, the current state of the digital transformation, and finally, the state of the art in retrofitting and automation solutions. In 
+Section 3
+, the authors present the methodology that was used in the development of the IIoT solution, while 
+Section 4
+ will focus on the specific case study that demonstrates the solution development, implementation, and installation. 
+Section 5
+ deals with the explanation of the prototyping process, as well as the solution selection process. Finally, the conclusion and a look toward future development are given in 
+Section 6
+.
+The authors wanted to find support in the literature for their assumption that one of the main culprits of the low adoption rate is the lack of motivation. Müller and Voigt [
+19
+] have been investigating low levels of Industry 4.0 adoption in SMEs, especially with regards to IIoT in the scope of “Industrie 4.0” and “Made in China 2025” [
+27
+] programs. They interviewed a large number of Chinese and German SME stakeholders (predominately CEOs) and they observed their confidence levels in their respective programs. The stakeholders felt that these programs are more suited to large enterprises rather than SMEs. Furthermore, Veile et al. [
+28
+] noted that companies remain unconvinced about the benefits of the new technologies, having in mind they are untested, and that old technology still has better cost–benefit ratios. Masood and Sonntag [
+8
+] also identified through a survey that most SMEs struggle with the implementation of Industry 4.0 technologies, both from the financial point of view as well as from the lack of expertise and knowledge of those technologies. Müller et al. [
+29
+] also noted that for SMEs to not only exploit but to explore new business opportunities through Industry 4.0, they require implementation support and financial security to experiment, as they have limited resources and have to avert risks because of their limited size. The authors, therefore, presume that there is a motivation issue and that there is a need to develop a solution that takes this into account.
+In the search for the appropriate digitization techniques, the authors focused on the various approaches toward digitization in the literature. In their work, Sorger et al. [
+30
+] state that to utilize the full potential of Industry 4.0, all entities in the supply chain must be able to communicate with each other. They suggest that different layers must have standardized technical communication that is also supported by the Reference Architectural Model for Industry 4.0 (RAMI 4.0) [
+31
+]. There are different approaches to the digital transformation of the manufacturing SME. In most cases, old machines do not provide a level of connectivity and digitization necessary for the ensuing process. There are two choices, either the acquisition of new machines or the retrofitting of the old ones. The analysis [
+32
+] showed that the retrofitting solutions were more cost-effective than the purchasing solutions, and that strong retrofitting in particular was the best in terms of sustainability. Contreras Pérez et al. [
+33
+] demonstrated that the adoption of the Industry 4.0 in SMEs can be achieved through retrofitting existing equipment using mostly open hardware and software, and that it does not imply a high investment in new equipment and technologies.
+Retrofitting old industrial machines to adhere to Industry 4.0 paradigms has been subject to intensive scientific research in recent years [
+34
+,
+35
+,
+36
+,
+37
+,
+38
+]. Industrial IoT is seen as an ideal tool for machine digitization. Liu et al. [
+39
+] conducted a literature review that focused on the digitalization of the machine tools in the Industry 4.0. They observed that the IIoT topics have seen a rise in the research articles. Actually, the only Industry 4.0 technology in manufacturing that had more published articles is Artificial Intelligence/Machine Learning. Lins et al. [
+34
+] focus on retrofitting in their work, where they noted that for automated industrial equipment to reach Industry 4.0 level of modernization, they need integration with the IoT sensors.
+The leading companies in the automation field have recognized the benefits of retrofitting old machines, and several studies have utilized those solutions. Lima et al. [
+40
+] on the other hand, have proposed a retrofit solution using the Siemens IoT-2040 gateway and the data transmission to the Mindsphere Cloud from Siemens and GRV Software to monitor the energy data in real-time. Hesser and Markert [
+41
+] have performed a retrofit of a CNC machine with an accelerometer using the Bosch XDK sensor prototyping platform.
+On the other end of the spectrum, many more works have explored small microcontroller-based boards as a means for digitizing machines with IoT. In contrast with the solutions provided by the leading automation companies, these boards provide a low-cost way to digitize, although they sacrifice many features that mature solutions deliver. However, they are very interesting from the point of view of this research, as they mitigate one of the biggest obstacles and fears the decision makers have when facing Industry 4.0 adoption. Various works use Arduino boards, and the applications are covering diverse topics and areas. This type of approach is researched at length for home automation, such as [
+42
+,
+43
+,
+44
+,
+45
+]. There are also several works coping with the use of Arduino in an industrial setting. The applications are numerous, monitoring the humidity and the temperature in industrial storage rooms [
+46
+], a remote bio-gas monitoring system [
+47
+], a monitoring system for renewable energy generation facilities [
+48
+], and real-time monitoring of photovoltaic systems [
+49
+]. All these works have been proposing the utilization of Arduino boards as a low-cost solution for sensor control in data gathering. In the work of Arjoni et al. [
+50
+], three different retrofitting applications have been presented in the manufacturing sector. Two of the machines were retrofitted with Arduino boards while in the third one, a Raspberry Pi was used. Additionally, pairing Arduino as a data-gathering system with Raspberry Pi was considered by several authors. Their presented architectures use the Raspberry Pi as a communication link and the data transmission hub [
+51
+,
+52
+,
+53
+,
+54
+]. The reason behind the inclusion of the Raspberry Pi board is that the microcontrollers often lack the power necessary for applications that require higher processing power.
+The development approach used in this work is based on the Six Sigma set of techniques for process improvement in industrial environments [
+55
+]. This five-step methodology is called DMAIC, the acronym of Define-Measure-Analyze-Improve-Control [
+56
+]. In the following subsections, we will explain how these steps correspond to the development of the IIoT solution covered in this article. It is important to note that there are other proceedings available for SMEs to conduct Industry 4.0 projects. Schmitt et al. [
+57
+] performed a literary review and presented an evaluation of those proceedings in their work.
+In the previous section, we have established the issues that SMEs have in the Industry 4.0 adoption. There is a need for solutions that address these issues and that provide SMEs with a way to embrace these paradigms The ultimate goal of this process is to raise the level of digitalization of the factory. The reluctance of factories can be reduced by creating a digitization solution where they can clearly see the improvement it brings. It is preferable if this solution is, according to the requirements set in 
+Section 1
+, low-cost, secure, non-intrusive to the processes of the factory and, integrally, provides clear value-adding quickly. The authors have determined that this goal would be reached by the digitalization of the machines and their transformation.
+In the scope of this work, the Measure phase of DMAIC determines the current state of the factory from an Industry 4.0 readiness point of view. This phase ascertains the necessary steps needed to reach the desired digitization of the company. A specific target is chosen, and the criteria show the benefits of digitization in the most effective way. To assess the current state, it is helpful to start from the five-layer automation pyramid. The automation pyramid was used before as the reference architecture by Martinez et al. [
+58
+] in their work on deploying a digital twin in the manufacturing system. The automation pyramid is an effective means of visualizing the current state, and therefore, the improvement that each layer needs to achieve the goal of digitalization.
+After determining the state that should be reached, the next phase focuses on the means to reach it. There are various means to improve a process and to enable machine digitization. Many of the solutions available in the market provide the elements needed to perform the digitization process. The general requirements for an IIOT solution from 
+Section 1
+ are taken into account. However, specific needs of the factory should also be considered and the solution must adhere to these as well. The situation in SMEs is more specific because of the narrow circle of decision-makers, and more often than not, the decision-making process is limited to entrepreneurs alone. Therefore, the solution evaluation process is affected by the desires of the entrepreneur.
+The improvement process is performed by implementing the solution that was selected in the previous phase as the most suitable for the purpose. The solution needs to be developed and adjusted for the actual state of the machine in the factory. Having in mind that the solutions consist of hardware and software parts, both of them need to be developed and tested before installation. Installation is performed with the least disturbance to the regular factory operation. It is preferable to keep the possibility of quick updates or algorithm modification, even after the installation completes. This would allow for quicker installation with only the essential features implemented and with minimal disturbance of the factory. The speed of implementation is paramount, as it allows for quick control and improvement. Quick implementation cycles allow for a high customization and higher factory decision-makers engagement. This is very important as they should be the primary drivers in the advancement process, and will improve their motivation.
+After prototype implementation, the installation, and the verification in the factory, the data are processed and analyzed. The analysis provides information about the machine operation as well as the operation of the installed solution. The solution is improved to provide more information, either by improving its software algorithm or by adding new sensors. By having many analyze-improve-control cycles, the solution becomes more and more beneficial for the factory process, and useful data are kept and analyzed. The machine operation is quantified by the data, and the data analysis gives the decision-makers a clear correlation with the actual factory operation. It is important to visualize data properly to allow for the extraction of valuable information. This process leads to solution improvement, but the goal is the improvement of the machine and, ultimately the entire manufacturing process.
+The entire flow of both process improvement and the specific machine digitization is presented in 
+Figure 1
+.
+Numerous solutions can fulfill the requirements and provide a means of performing the machine digitization. The solutions vary in their complexity, scale, robustness, and readiness for implementation in the industrial setting etc. The chosen hardware must enable speeding up the measurement phase of the development. The requirements these solutions must fulfill are given in 
+Section 1
+:
+Cost effectiveness—Depending on an application, some solutions do not provide enough benefits to convince decision-makers of their usefulness.
+Implementation simplicity—The solutions should aim to provide quick results because long development and complex implementation demand a level of expertise not present in the SMEs.
+Unobtrusiveness—The normal operation of the factory must not be negatively affected by the solution, so a wireless connection and an installation that does not require extensive changes to the machine are necessary.
+Scalability—The goal of the solution is to provide the digitalization of the entire factory process; therefore, the solution must provide easy vertical and horizontal scalability.
+Security—The security of data is always very important, especially in an industrial context. This requirement is not as important in the prototyping phase of the development, but is paramount in the final version of the solution.
+Cost effectiveness—Depending on an application, some solutions do not provide enough benefits to convince decision-makers of their usefulness.
+Implementation simplicity—The solutions should aim to provide quick results because long development and complex implementation demand a level of expertise not present in the SMEs.
+Unobtrusiveness—The normal operation of the factory must not be negatively affected by the solution, so a wireless connection and an installation that does not require extensive changes to the machine are necessary.
+Scalability—The goal of the solution is to provide the digitalization of the entire factory process; therefore, the solution must provide easy vertical and horizontal scalability.
+Security—The security of data is always very important, especially in an industrial context. This requirement is not as important in the prototyping phase of the development, but is paramount in the final version of the solution.
+The second part of the solution is the software. Software solutions can be divided into firmware and cloud application software. Various possibilities exist on the market for both elements of the software part of the solution. The selected software must enable a quick improve-control cycle so that the actions aimed at the process improvement can be tested quickly, and the corresponding data collected and visualized. A similar set of requirements to the ones used for the hardware part also apply to the software part of the solution.
+Cost effectiveness—While most of the firmware solutions are open-source or available with the purchase of the hardware part, some are acquired separately. The cloud application software and device management is the element that needs to be purchased separately, and the possibilities are numerous.
+Implementation simplicity—Having in mind various elements of the solution and differing levels of developer’s expertise, the solution benefits greatly if the technologies used are the ones that are popular in the developer community.
+Scalability—The firmware should provide a modular structure so that it is easy to expand and to add new functionalities. Both the firmware and cloud application software should provide this, and the technology used for development can provide greater flexibility.
+Development speed—Technologies that are already tested and integrated with the hardware part of the solution would provide an easier and quicker setup phase. The popularity and simplicity of the chosen technology are considered when the solution is selected.
+Security—The development of both software elements should provide the necessary security elements. The cloud application is more vulnerable than the firmware element. Also worth noting is that most cloud IoT platforms take particular measures in ensuring the safety and security of customers’ data.
+Several solutions are considered with regard to the requirements set in 
+Section 1
+ and the two previous subsections, as well as the state of the art (
+Section 2
+):
+The first solution concept considered is the industry automation standard; a ready-made industrial-grade IIoT solution with a high level of robustness, safety, and reliability. It offers wireless connections and proprietary software that easily connect and interface the machine with an already existing connection. These solutions are not as easily obtained, and often require specific training with regard to software. These solutions are provided by Siemens, ABB, Bosch, etc. The drawback of this solution is that they are expensive and the implementation is not as quick as the other solutions. With the involvement of the big automation companies, the fear of a vendor “lock-in” is a well-known phenomenon [
+59
+,
+60
+] that is perceived to be even more critical in the case of SMEs. This is an even bigger issue when the high cost of implementation is considered.
+The second solution concept is a low-end prototyping solution. These solutions are very cheap and the devices are readily available in the market. A typical example is Arduino boards, microcontroller-based boards that offer very high customization possibilities. Having in mind the lack of processing power and the limited connectivity abilities of these boards, they would need to be paired with a more powerful board such as Raspberry Pi. However, the solutions need to be heavily adapted for them to scale up to the fully matured solution. The industrial setting demands a certain level of safety features that these boards do not provide as-is.
+The authors have chosen the conceptual solution that provides industrial-grade equipment and can be used for a relatively inexpensive development of the prototype. The real value of these solutions lies in the possibility to use the same equipment in the final implementation after digitalization to the scope of the entire factory. The chosen solution is easy to install and maintain, and is low cost when comparing it to the industry standard. For prototyping purposes that are very dependent on time, it is preferable to use a more “user-friendly” [
+61
+,
+62
+] language, such as Python. Actually, Python is a high-level interpretative programming language that is gaining popularity in embedded development [
+63
+]. It has extensive support libraries and clean object-oriented designs that can increase the productivity of the programmer up to 10-fold [
+64
+]. The drawback is the lower execution speed. The most optimal solution is to have a combination of both. It is preferable if the solution can support data storage and visualization natively, because the implementation can be lengthy and the goal is to provide quick results. Having in mind that this solution must provide the platform for both the prototyping and production phase, the safety and security concerns are very important.
+Having in mind all of the above, the solution chosen in this work is the Zerynth platform [
+65
+]. The hardware element is the 4ZeroBox, while the Zerynth Cloud provides device management and data visualization, as well as storage. It enables wireless connectivity and support for the most common industrial communication protocols. Zerynth OS is the base for firmware development, and it can be programmed in Python and C. It is easily connected to the cloud and provides a remote firmware update feature. The security requirement is fulfilled by the secure crypto element [
+66
+], and on the software side, the “hardened” TLS v1.2 and v1.3 protocol [
+67
+]. The storage is large enough so that data can be buffered and uploaded to the cloud in an appropriate format. The data are collected and sent to the cloud where they are available for export or visualization on the dashboards. The cloud solution has an option to visualize the data through an integrated dashboarding system. This system is based on Grafana [
+68
+], an open-source analytics and monitoring solution. The visualization support is native, and the time for setting it up is almost zero.
+Another very important benefit of a prototyping solution is its ability to be updated remotely. This capability is present in a chosen solution through the Firmware over the Air (FOTA) feature. FOTA allows for a new version of firmware to be installed remotely through the wireless connection. The operators need to be notified and FOTA can be scheduled during the downtime of the broaching machine operation, thus diminishing the intrusiveness of the update. Of course, for changes and improvements concerning the hardware and the broaching machine itself, these disturbances are necessary. Remote firmware update capability is important, because going to the site means disturbing the factory operation, as well as another cycle of installation and testing. Finally, the solution can be upgraded from a prototyping one to a full production level solution with almost zero effort. Both vertical and horizontal solutions are greatly improved, compared to the Arduino-based solutions.
+The case study presented in this paper is the digitization of a broaching machine in Toscana Spazzole Industriali S.r.l (TSI). TSI is an SME with 40 employees and an annual turnover of €5 million. It is based in Tuscany, Italy, and manufactures industrial brushes, which are mainly used in the textile industry. The installation and implementation of an IIoT system to collect and analyze relevant machine data have been performed on a hydraulic broaching machine on the company’s shop floor. Before the retrofitting of the broaching machine, performance indicating data, if at all, has solely been displayed analogically and not registered.
+The goal of the case study was to demonstrate the feasibility of the digital transformation of the plant and its resulting benefits to the entrepreneurs, on the basis of the digitalization of a key machining step in their manufacturing process. The broaching operation of the polypropylene tubes was chosen as it is an essential step of the entire production process. The company’s products cannot be manufactured without it, and the occurrence of problems affect all consecutive steps, and interrupts or delays the entire production. The digitalization of the broaching machine enables predictive maintenance, and thereby avoids tool breakage and machine failure. Furthermore, a comprehensive knowledge of the machining process allows for design and process improvements, which eventually decrease energy consumption and increase production efficiency, as well as product quality. The improvement of Industry 4.0 readiness level and the rise of decision-makers’ motivation towards the adoption is the most desired outcome of the entire process.
+Broaching belongs to the subtractive manufacturing processes and is especially used when high accuracy is needed. A special tool, called a broaching tool, is employed to progressively remove material from a workpiece. The broaching tool moves linearly and the cutting mechanism is mostly orthogonal. The tool possesses a longitudinal series of teeth, which are arranged on a shaft. Consecutive teeth rise in height so that each tooth cuts material in the form of chips from the surface of the workpiece.
+In the investigated relevant industrial environment, internal broaching is used to machine the inner surface of long polypropylene tubes to create a precise inner diameter and a high accuracy in roundness. 
+Figure 2
+a shows the broaching machine. A 2.5 m polypropylene tube is clamped with four double-V brackets on the workbench of the machine where it touches the axial stop with its right end.
+To start the broaching process the piston of the hydraulic cylinder is extracted and the broaching tool is mounted on its tip, as shown in 
+Figure 2
+b. The pressure difference 
+
+
+
+
+Δ
+
+
+p
+
+
+=
+
+
+p
+
+
+−
+
+
+
+
+p
+
+
+0
+
+
+
+
+
+
+ between the cylinder chambers creates a force that retracts the piston and hence pulls the broaching tool through the tube. The teeth on the outer surface of the broaching tool cut material from the inner surface of the tube during this process. The most relevant performance indicator is the cutting force of the broaching tool. There are four main motives for the measurement of this force:
+Recording of the cutting force progression during single cuts;
+Distinction between tools of different sizes used for tubes of different diameters;
+Comparison of a new and an old tool design used for tubes of the same diameter;
+Detection of cutting force increase for specific tools over time, due to edge wear.
+The measurement has been performed indirectly via the measurement of the cylinder pressure using a digital pressure transmitter.
+The factory was not equipped with any Industry 4.0 technology on the shop floor, and extensive retrofitting was needed. As mentioned in 
+Section 3
+, the automation pyramid was used to evaluate the current state of the factory to provide the functionality of lower layers. Implementation of the full stack would require extensive changes in factory operation and structure, and this was not the goal of this research. The solution that was implemented provided the possibility to include the upper layers at a later date when the decision-makers decide to make the step up. Therefore, the first three layers of the automation pyramid were implemented to digitize and visualize the broaching machine data. 
+Figure 3
+a shows the broaching machine automation pyramid before and after IIoT enabling. The blue sections of the automation pyramid represent the IIoT-enabled layers.
+The broaching machine is represented by the following automation pyramid layers:
+Field layer—This layer contains devices, actuators, and sensors in the field or production floor. The broaching machine was equipped with an analog pressure indicator (manometer), and the process was actuated locally via remote control with a couple of relays. It was impossible to use the manometer data because the manometer did not have the capability to transmit said data. Therefore, the analog manometer was replaced with a digital pressure transmitter to gather the data and describe the behavior of the broaching machine, and thus, also the broaching tools.
+Control layer—This layer includes all programmable controllers in the field layer assets, such as Programmable Logic Controller (PLC) or Distributed Control System (DCS). The broaching machine did not benefit from any programmable elements; therefore, an IIoT edge device was embedded in the electrical cabinet to collect the data from the sensors in the Field layer and transmit the data to the upper layer.
+Supervision layer—This layer focuses on visualizing data collected from the control layer in various ways, such as control room screens, Human Machine Interface (HMI), and online dashboards. The ability of data visualization was provided thanks to the Zerynth cloud and the local internet network of the shop floor.
+Planning layer—or Manufacturing Execution System (MES) layer, has not yet been implemented in the factory.
+Management layer—or Enterprise Resource Planning (ERP) layer, has not yet been implemented in the company, aside from basic business software.
+Field layer—This layer contains devices, actuators, and sensors in the field or production floor. The broaching machine was equipped with an analog pressure indicator (manometer), and the process was actuated locally via remote control with a couple of relays. It was impossible to use the manometer data because the manometer did not have the capability to transmit said data. Therefore, the analog manometer was replaced with a digital pressure transmitter to gather the data and describe the behavior of the broaching machine, and thus, also the broaching tools.
+Control layer—This layer includes all programmable controllers in the field layer assets, such as Programmable Logic Controller (PLC) or Distributed Control System (DCS). The broaching machine did not benefit from any programmable elements; therefore, an IIoT edge device was embedded in the electrical cabinet to collect the data from the sensors in the Field layer and transmit the data to the upper layer.
+Supervision layer—This layer focuses on visualizing data collected from the control layer in various ways, such as control room screens, Human Machine Interface (HMI), and online dashboards. The ability of data visualization was provided thanks to the Zerynth cloud and the local internet network of the shop floor.
+Planning layer—or Manufacturing Execution System (MES) layer, has not yet been implemented in the factory.
+Management layer—or Enterprise Resource Planning (ERP) layer, has not yet been implemented in the company, aside from basic business software.
+The solution presented in this work did not entail direct changes to the Planning or Management layers, although the development of the layers was enabled by providing the data from the lower pyramid layers. The broaching machine control became possible because of the device management system that is part of the Cloud contained within the solution.
+Having in mind that the automation pyramid architecture is not suitable for the IIoT development, the solution in this work was based on a presented set of Technical Specifications (TS) presented by Mazzei et al. [
+69
+], as shown in 
+Figure 3
+b.
+The displayed tool in 
+Figure 2
+ is a special hollow broaching tool with 36 teeth arranged in a circular helical pattern around its outer cylindrical surface. It has been designed in previous research work by Jorg and Fantoni [
+70
+]. Its unique chip evacuation concept eliminates the timely cleaning step required in traditional broaching, and thus reduces the lead time significantly. Furthermore, it decreases the cutting forces due to minimized friction. The cutting force is the sum of the axial forces of all teeth of the broach that are intruding in and removing material from the tube. It is equivalent to the longitudinal piston force required to pull the broaching tool through the tube. The following two different measurement principles according to the instruments appear generally suitable for achieving the required task:
+Direct measurement of the force through a dynamometer mounted between the broaching tool and the piston;
+Indirect measurement of the force through the measurement of the cylinder pressure 
+p
+ using a digital pressure transmitter.
+Direct measurement of the force through a dynamometer mounted between the broaching tool and the piston;
+Indirect measurement of the force through the measurement of the cylinder pressure 
+p
+ using a digital pressure transmitter.
+The relationship between the hydraulic force and the pressure 
+p
+ is described by Jorg and Fantoni [
+70
+]. A safety valve at 170 bar protects the hydraulic system against overload. Cylinder pressures up to 150 bar are common during broaching operations. These result in cutting forces of up to approximately 65 kN. Both measurement methods have their pros and cons. Therefore, several aspects had to be weighed for the specific application case. The direct measurement of the force via a load cell delivers the absolute force value accurately. A digital pressure transmitter does not measure the force, but the pressure. The force can be calculated [
+70
+]. There remains uncertainty regarding the correct absolute force value due to the potential losses of the hydraulic system. However, the prior formulated four main goals of monitoring the progression, and thus, the relative changes of the performance indicator, can still be satisfied. Additionally, to investigate the behavior adequately, especially during the entering and exiting phase of the broaching tool, a resolution of 
+
+
+
+
+d
+
+
+=
+
+
+1
+
+
+
+
+ mm is required. At an average forward rate of the broach of 
+
+
+
+
+v
+
+
+=
+
+
+3
+
+
+
+
+ m/min, this results in a minimum measurement frequency of 
+
+
+
+
+
+
+f
+
+
+min
+
+
+
+
+=
+
+
+v
+
+
+/
+
+
+d
+
+
+=
+
+
+50
+
+
+
+
+ Hz or a sample time of 
+
+
+
+
+
+
+t
+
+
+max
+
+
+
+
+=
+
+
+20
+
+
+
+
+ ms, respectively. This requirement can easily be achieved by both systems. A standard 100 kN dynamometer for tension and compression costs about 2000 EUR. However, these standard instruments are too big and do not fit inside the tube. Using option one would hence require specially manufactured measurement equipment, which is even more expensive and has long delivery times. Furthermore, the installation and implementation of a dynamometer inside the tube (regarding also the cabling) are complex. A digital pressure transmitter, on the other hand, can easily be swapped with or added to the existing analog manometer, and it can immediately be bought off-the-shelf for under 100 EUR. Lastly, a solution with the least possible intrusiveness to the existing system is desirable. The most critical factors that finally led the authors to choose the second option of the indirect force measurement via a digital pressure transmitter, were its instant availability and its immense cost advantage. These factors play a central role in IIoT prototyping.
+The broaching machine was controlled using a simple electrical circuit, including non-intelligent components such as relays and contactors. The electrical cabinet was updated by adding and embedding the Zerynth 4ZeroBox [
+65
+] as an IIoT edge device. The 4ZeroBox was mounted on the DIN-35 rail and powered by a 24 VDC power supply unit that had already been present in the electrical cabinet. The IIoT-enabled electrical cabinet of the broaching machine is shown in 
+Figure 4
+. Then, in order to evaluate the performance and the efficiency of the broaching tool, the existing analog manometer was replaced with a digital pressure transmitter, WIKA S-20 (measuring range 0–250 bar). The piston movement signals are transmitted to the digital input–output pins of the 4ZeroBox using the reserve contacts of the R1 and R2 relays. The 4ZeroBox was wirelessly connected to the internet through an internal Wi-Fi network in the factory.
+A software algorithm was developed, and the 4ZeroBox was programmed, using Python programming language. The software utilized for programming is Visual Studio Code; more precisely, the Zerynth expansion. The Zerynth Visual Studio Code expansion uses the Zerynth Software Development Kit (SDK) to program and manage the 4ZeroBox. The connection to the hardware was established, and the 4ZeroBox was connected to the Zerynth Cloud through Zerynth Device Manager (ZDM) [
+71
+]. The communication between the 4ZeroBox and the Zerynth Cloud is implemented through an MQTT protocol.
+The firmware was programmed in Python programming language with the libraries from Zerynth SDK. The multi-threaded structure was utilized with one main thread and one thread used for data gathering, the acquisition thread. The acquisition thread has only one task, sampling the digital pressure transmitter every 20 ms and storing the data in the queue. A data frame is created by storing every sample with the UNIX timestamp. An accurate timestamp was obtained by the process of synchronization of the 4ZeroBox to the ZDM. The acquisition thread starts asynchronously after detecting the press of any of the buttons on the remote control. A button press is detected as the change of the logical level on the digital input pins of the 4ZeroBox. Furthermore, any press of the button is registered as an event and stored in the queue, along with the UNIX timestamp.
+The main thread is tasked with initialization, establishing the connection and synchronization to the ZDM, and data storage and publishing to the ZDM, as well as the control of the acquisition thread. After detecting data in the queue, the main thread takes the data frame and stores it on the local SD card. All the data collected during one active period of the acquisition thread is stored on the SD card and treated as one cut of the tube. The cut signifies one piston extension and one retraction, as explained in 
+Section 4.2
+. The main thread detects the block of the acquisition thread and starts sending the data from the SD card storage to the Zerynth Cloud storage.
+The data are sent to the Zerynth Cloud, where it is stored and handled by the ZDM. The communication between the device and the cloud is protected by the TLS v1.2 and v1.3 protocols based on private and public keys [
+67
+]. Every data frame is assigned the timestamp the data were received. The data are in the form of a JSON file. After the data are stored, it is possible to download it in a couple of ways: scheduling the periodic download or using REST API to retrieve the data from the Zerynth Cloud. After the data are downloaded, they can be analyzed. The entire system can be seen in 
+Figure 5
+, while 
+Figure 6
+ shows the overview of the entire process.
+The analysis of the broaching process was performed on the pressure. 
+Figure 7
+ shows the characteristic pressure progression during one single cut in the Zerynth Dashboard.
+The pressure in bar is plotted in light green over time in the format HH:MM:SS. The user can zoom and/or slide along the time axis to see the data of the entire day or to search for a cut conducted at a known time. However, any operation of the broach is detected, and cuts are identified automatically by the system. Any day can be selected through a calendar. The dashboards also display the timestamps for every time a control button has been pressed. The pressing of the extension button is indicated with a blue dotted vertical line, and the retraction button with an orange dotted vertical line. The system provides a basic statistical analysis of the data shown on the screen by displaying the minimum, the average, and the maximum pressure values. The initial plateau after the blue dotted vertical line resembles the extraction phase of the piston. This comparably high value without an external load can be explained through the design of the control valve. During the forward movement of the piston, the valve connects both cylinder chambers equally to the oil pump. In both chambers, the same pressure prevails. Nevertheless, the piston moves to the left due to the different effective surface areas of its piston head. When the piston is fully extracted, the valve is closed and the pressure drops. This characteristic plateau can be observed before every cut. Hence, it can be used to identify cuts from a large number of data points automatically. The entering phase of the broaching tool can be well observed in the plot too. The pressure increases step-wise whenever one circular array of teeth enters the tube and starts cutting the material. The opposite, less pronounced behavior occurs at the end of the pipe.
+During the cut, the digital pressure transmitter detected fluctuations in the pressure. The plateau is not as flat as during the extraction, but shows several peaks instead. The delivered polypropylene tubes have deviations in circularity, concentricity, and diameter, so that the broaching tool has to cut more material in some areas and less material in others. Additionally, a misalignment of the four bracket pairs and too-tight clamping of the tubes could deform them. The implementation of the measurement system eventually allows the authors to investigate these effects.
+Figure 8
+ shows the pressure progressions while broaching tubes of three different diameters with three different tools (tool diameters of 80, 102, and 110 mm). Every tool has its characteristic cutting pressure and can therefore be identified easily. The cutting force, and hence, the hydraulic pressure, are proportional to the removed cross-sectional area inside the tube. The cut area increases with the tube, and respectively, the tool diameter, which explains the difference between the 80 and 110 mm tool diameters (yellow and orange graphs). The graph with the highest pressure belongs to the new tool presented in 
+Figure 2
+, with a diameter of 102 mm. This tool cuts in two stages instead of one stage, as in previous tools. Therefore, the material removal is about twice that of a previous tool with the same diameter [
+70
+]. This explains the higher pressure. The step-wise increase and decrease do not occur in the previous tools, due to their different design. Additionally, in the chosen representation in 
+Figure 8
+, the distance traveled by the piston is plotted on the x-axis instead of the time. This, for instance, allows a pressure peak to be related to a position, and also to understand the length of the different tubes.
+The observation of pressure fluctuations in the plateau corresponding to the distance between clamps led the authors to rethink the clamping mechanism of the tubes. They modified the standard clamping system and were able to reduce the pressure deviation significantly. 
+Figure 9
+ shows the deviation of the plateau pressure from its average value in percent for two cuts with the 102 mm tool before and after the modification of the clamping system.
+While the pressure deviated by more than 20% with the standard system, the value can be kept under 5% through the undertaken modifications. A more regular cut results in a better surface finish and increases the lifetime of the tool. Modifications like these, which were only made possible through the IIoT system, enable the factory to produce products of higher quality at lower manufacturing costs. In addition to the purchase of a broaching machine itself, the biggest investment is the manufacturing of new broaching tools. As these wear out, it is inevitable. Enabling predictive maintenance through data collection and analysis allows for the determination of the ideal point in time for the resharpening of a tool, and thereby avoids overstressing and increases the tool’s lifetime. The tool presented in 
+Figure 2
+ already outperforms previous tools in terms of efficiency by far. However, it is still manufactured from one solid piece of steel which requires many machining hours on a very expensive five-axis CNC mill. Therefore, the design had been further upgraded by using a modular architecture with a hollow body carrying ring-shaped blades. The body only has to be manufactured once, and the blades can easily be resharpened and cost-effectively reproduced when completely worn out. The tool has already been successfully tested.
+The installed system enabled the collection of the data and quick data presentation to the operators. The benefits to the factory were that they can collect the data during the broaching process. In this way, they can track the number of tubes being cut, and which tubes had an issue with cutting. The detection of a blockage was present before, but it was not recorded in the data. The factory wants to continue digitizing by including environmental sensors that can measure air temperature, pressure, and humidity. One of the reasons for this is that in the last few months, it was noticed that the pressure drops in consecutive cuts during the extension process. The extension process is performed without load, so the expected behavior is that this pressure does not change significantly. However, as seen in 
+Figure 10
+, the pressure gradually drops from cca 90 bar to the 70 bar. The research team suggested installing an analog temperature sensor on the broaching machine to ascertain whether the temperature of the machine is correlated with this variation in pressure.
+The operators in the factory wanted to include environmental measurements in the next iteration of the solution. This can be achieved easily by installing an appropriate Click board from MikroElektronika, and creating another thread in the firmware that periodically reads the environmental data.
+The factory production manager could observe other anomalies in pressure data. Those anomalies were heightened pressure during several broaching operations. Finally, it was determined that operators were not adequately lubricating the broaching tool before the broaching operation. This resulted in the production manager creating an operating procedure that removed this problem in the future. An increased level of cooperation between factory workers and a research team was also observed with the additional features requested in the future. Better collaboration also provided the research team with the possibility for conducting further experiments remotely, with the operator’s assistance. The ability to remotely update the firmware and control the installed system has provided this option to the research team.
+The digitalization process of small or medium enterprises, especially those with a traditional approach to their work, is complex since it involves not only the technical, but organizational and cultural aspects as well.
+The described application tries to engage the entrepreneur primarily, giving him/her a solid base to calculate the return value of the investment. Then, the target is the production manager deploying the digitalization as a means to supervise the machines and to provide better communication with the operators. The operators, in turn, promote and execute numerous improvements to the manufacturing process in collaboration with the production manager. A new culture of experiments and data analysis seems to be emerging in the company. Digital data recording is replacing manual monitoring for the first time, on the shop floor of the company. The engagement of key stakeholders in the industrial process improvement was the primary goal of this research, and there is evidence of a long-term commitment to the digital transformation of the factory floor.
+It is important to note that various experiments were performed by the factory production managers and operators, without an explicit request from the research team. The company changed the design of the broach, as previously mentioned, and has asked the research team to digitize another machine on the shop floor. The machine in question is the next in the manufacturing process chain, a hydraulic press that inserts a steel roll into the broached polypropylene tube. As the reader can understand, the new machine can be digitalized using the same hardware, sensors, and firmware as the previous one, thus reducing the cost of the twinning. This indicates that the Industry 4.0 principles are being integrated into the factory processes, as well as demonstrating the development of a data-driven approach, which was one of the goals of the solution.
+The low cost of the solution is best reflected through the reduced installation and development cost, and especially in the easy transition between the prototype and the production-ready solution. This is the main benefit of this solution concept, as was shown in 
+Section 3
+. The approximate cost of the entire hardware solution is cca USD 600, which is higher than that of the Arduino-based solution, but with the added benefit of using the same hardware for the production version of the solution.
+From a technical perspective, the broaching machine digitalization was executed in a fast and smooth way, thanks to the Zerynth environment. The researchers were able to quickly install the hardware and acquire the data. The entire development, testing, and installation process was completed in 6 days with the installation, and therefore, the break of operation lasted only one day. It is important to note here that the open libraries and standards used in the digitization process greatly reduced its complexity, and therefore improved the development speed. The entrepreneur especially appreciated the rapid setup and the fact that the prototype immediately started providing machine data. Data visualization was paramount in helping the entrepreneur, as well as the production manager, to gain valuable insights from the acquired data. It also enabled an immediate analysis and an improvement of the broaching tool, as well as the broaching process in general. These results lead to new requests for the digitalization of other machines in the production line, thus demonstrating the positive impact of the entire process. Of course, the retrofitting of the machine was made easy by the simple architecture of the broaching machine, and a more complex system could require additional efforts.
+Furthermore, since the requirements in 
+Section 1
+ have been elaborated to address the needs collected in manufacturing SMEs, the described solution could fulfill other SMEs with the same goal of digitalization and similar electromechanical machines. As shown, the solution is not dependent on the type of the collected data; therefore, almost any SME with similar problems with old and non-connected machines can benefit from it.
+The main drawback of the study was not having access to the costs before and after our implementation. Due to this lack of information, we were unable to calculate the return on investment nor its payback period. Another aspect that is difficult to quantify is related to the additional quality documentation that TSI can provide to its customers. These detailed records would properly document each broaching process, thus providing a better guarantee of the final performance of the brushes.
+The paper presents a rapid, low-cost prototyping solution for retrofitting legacy machinery in manufacturing SMEs intending to adopt the Industry 4.0 paradigm, reducing the perceived risk of the unknown digitalization process. The digital transformation has been implemented through a well-known improvement process (Six Sigma) that runs in parallel with machine retrofitting. This allowed the company to have immediate benefits and positively influence the motivation of decision-makers to continue the scale-up of the solution. A set of requirements for the solution was elaborated, and the solution was developed with an eventual scale-up in mind. The factory decision makers started the process of digitizing another machine, and they want to incorporate the data from both machines to further improve the entire process. The authors have observed the factory appreciating the benefits of the digitalization, and are confident that more Industry 4.0 technologies will be adopted with time.
+In fact, additional improvements of the broaching process are planned, and will be investigated in further work. Having in mind that the broaching tool is expensive and time-consuming to manufacture, its breakage or performance deterioration would require a change, and therefore, a lengthy cease of operation. Because the broaching machine is just one of several steps in the manufacturing chain of the factory, this cease can affect the entire factory. The Zerynth solution enabled the collection, processing, and analysis of the data, which provided insight into machine operation. Currently, the data are used for the monitoring of the process as it happens. Further insight can be obtained as the database grows. Future work regarding the broaching machine involves developing artificial intelligence with the ultimate goal of enabling predictive maintenance.
+The good results let us foresee a possible digitalization of the entire shop floor, adopting the same approach and technologies.
+Conceptualization, G.F. and M.V.; methodology, G.F.; software, M.V.; validation, M.V., O.J. and M.H.; formal analysis, G.F. and O.J.; writing—original draft preparation, M.V.; writing—review and editing, O.J.; visualization, M.H., O.J. and M.V.; supervision, G.F.; project administration, M.V.; funding acquisition, G.F. All authors have read and agreed to the published version of the manuscript.
+This research work was undertaken in the context of DIGIMAN4.0 project (“DIGItal MANufacturing Technologies for Zero-defect Industry 4.0 Production”, 
+http://www.digiman4-0.mek.dtu.dk/
+, accessed on 1 January 2020). DIGIMAN4.0 is a European Training Network supported by Horizon 2020, the EU Framework Program for Research and Innovation (Project ID: 814225).
+Not applicable.
+Not applicable.
+Restrictions apply to the availability of these data. Data was obtained from TSI and are available from the authors with the permission of TSI.
+The authors would like to give special thanks to Salam Qaddoori Dawood Al-Zubaidi from the University of Pisa; Lorenzo Biagini, Alessio Costanzi, and Dario Vanzi from Toscana Spazzole Industriali; and Ugo Scarpellini, Davide Neri, and Elia Guglielmin from Zerynth.
+The authors declare no conflict of interest.
+Publisher’s Note:
+ MDPI stays neutral with regard to jurisdictional claims in published maps and institutional affiliations.

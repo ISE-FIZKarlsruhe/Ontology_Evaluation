@@ -1,0 +1,430 @@
+Additive manufacturing (AM) technology has rapidly evolved with research advances related to AM processes, materials, and designs. The advantages of AM over conventional techniques include an augmented capability to produce parts with complex geometries, operational flexibility, and reduced production time. However, AM processes also face critical issues, such as poor surface quality and inadequate mechanical properties. Therefore, several post-processing technologies are applied to improve the surface quality of the additively manufactured parts. This work aims to document post-processing technologies and their applications concerning different AM processes. Various types of post-process treatments are reviewed and their integrations with AM process are discussed.
+Additive manufacturing (AM) technology, also known as 3D printing technology, freeform fabrication, or rapid prototyping, constructs 3D parts by joining materials layer-by-layer based on digital models [
+1
+,
+2
+,
+3
+,
+4
+,
+5
+,
+6
+,
+7
+,
+8
+,
+9
+]. AM technology has undergone a fundamental change in the manufacturing principle, raw material form, and component performance in comparison with the traditional manufacturing processes [
+10
+,
+11
+,
+12
+,
+13
+]. Based on the process characteristics of point-by-point melting and layer-by-layer manufacturing, the AM technology can quickly produce three-dimensional complex structural parts [
+14
+,
+15
+,
+16
+]. The non-equilibrium solidification process can potentially be adjusted to tailor materials with desired properties to suit specific applications.
+The AM technology has many advantages such as fast free molding, short manufacturing cycle, and low production costs of small-batch parts [
+17
+,
+18
+,
+19
+,
+20
+]. The AM technology only needs raw materials and equipment to produce parts without the need for complex tooling or molds, effectively saving the processing and assembly time. Moreover, the AM technology possesses the benefits of near-net-shape forming, small machining allowance, and high material utilization [
+21
+,
+22
+,
+23
+,
+24
+,
+25
+,
+26
+]. The laser beam energy density is high enough to process many kinds of materials [
+27
+,
+28
+]. Lasers have characteristics of good dryness, monochrome, direction, and high brightness. Its high energy density can effectively raise the local temperature to thousands of degrees, at which the vast majority of metals can be melted. The structural strength of the manufactured parts is higher, and the process-induced stress concentration is smaller [
+29
+,
+30
+,
+31
+,
+32
+]. The layer-by-layer forming technology used in the manufacture of the material releases the forming stress when each layer condenses into its final form. Certainly, there are many other advantages of AM technology, such as the ability to achieve a variety of multi-material composite manufacturing [
+33
+,
+34
+,
+35
+], high processing efficiency, and fabrication of various complex structures [
+36
+,
+37
+,
+38
+,
+39
+,
+40
+,
+41
+,
+42
+,
+43
+,
+44
+].
+However, when compared with other traditional manufacturing technologies, the surface quality of AM parts is commonly lower because of the layer-by-layer processing and the staircase effect. The surface finish of the part is not satisfactory, a critical issue to be resolved in AM processes [
+45
+,
+46
+]. Different AM processes will result in different surface roughness. Therefore, AM technology alone cannot manufacture parts meeting the requirements of mechanical properties and surface roughness at the same time [
+47
+,
+48
+]. Usually, an insufficient understanding of process dynamics is the most influential factor in various challenges. For example, in the selective laser melting (SLM) processes, the interaction mechanisms between the powder bed and the molten pool and between the powder and the laser beam, as well as the melting processes are difficult to understand due to the complicated metallurgical and thermophysical phenomena. In the SLM process, it is necessary to evaluate the strong bonding force in processing areas and the rapid solidification phenomenon under an ultra-high temperature gradient. The evolution of the internal structure of the parts and the change of thermal stress under cyclic conditions also require further exploration. During the manufacturing processes, internal defects such as balling, porosity, cracks, powder agglomeration, and thermal stress would appear between different printing layers. These defects have serious influences on the internal microstructure and mechanics of the final parts [
+49
+,
+50
+,
+51
+,
+52
+,
+53
+,
+54
+,
+55
+]. Therefore, after the parts being manufactured, post-processing operations are usually required to improve the mechanical properties and the surface quality, achieving their intended utilization [
+56
+,
+57
+,
+58
+,
+59
+,
+60
+,
+61
+,
+62
+]. There have many post-processing technologies, such as the thermal post-processing method to release thermally-induced residual stress and laser peening to reduce micro-defects and improve surface quality. This article reviews widely used post-processing technologies, including thermal post-processing, laser peening, laser polishing, machining, and abrasive finishing.
+This paper describes post-processing technologies by introducing the procedures of different post-processing methods and their effects on additively manufactured parts. 
+Section 2
+ summarizes the thermal post-processing method and its applications. 
+Section 3
+ discusses the laser peening method and its applications. 
+Section 4
+ illustrates the laser polishing method and its applications. 
+Section 5
+ summarizes the machining and abrasive finishing method and its applications. Finally, 
+Section 6
+ presents the future prospects and conclusions of post-processing technologies.
+The thermal post-processing method for the AM parts can significantly alleviate residual stresses, reduce cracking and homogenize the microstructure [
+63
+,
+64
+,
+65
+,
+66
+]. For example, thermal post-processing such as solution heat treatment (SHT), hot isostatic pressing (HIP), and T6 heat treatment (T6 HT) for AlSi10Mg parts can significantly improve part quality. Recently, researchers have conducted extensive research on the thermal post-processing method, including its influences on the microstructure and mechanical properties of the AM parts [
+67
+,
+68
+,
+69
+,
+70
+,
+71
+,
+72
+]. HIP is a frequently used thermomechanical treatment method, which combines high-temperature and high-pressure production technology. Its heating temperature usually reaches 1000–2000 °C. High-pressure inert gas is employed as the pressure medium in a closed container, where the working pressure can reach 200 MPa. The manufactured parts are pressed evenly in all directions with high temperature and pressure. Therefore, the manufactured parts have high density, good uniformity, and excellent performance. HIP has the characteristics of short production cycle, low energy consumption, maximizing material utilization by improving material properties and allowing for smaller, lighter-weight, high strength parts. The HIP can heal or eliminate the inherent defects and pores in the parts produced by powder bed fusion (PBF) [
+73
+,
+74
+].
+Several investigations have shown that HIP can significantly strengthen the fatigue strength of Ti-6Al-4V prepared by electron beam melting (EBM) [
+70
+,
+73
+,
+74
+]. This improvement is due to the reduction of crack initiation points in the material. The mechanical properties of the EBM products have been optimized by HIP processes. The excellent mechanical properties can be achieved with the HIP treatment because of the reduction in porosity and un-melted material, as well as the coarsening of microstructure during the high operating temperature of the HIP process. The reduction of un-melted material after the HIP process can be achieved with a low proportion of subsequent material transfer and plastic flow under a low-pressure environment.
+Goel et al. [
+75
+] investigated the effects of two different post-processing treatments: one involving the HIP and the other involving the combined HIP + HT treatments on 718 Alloy prepared by EBM. HIP was mainly used for post-processing the AM parts to eliminate defects. The defects in EBM 718 Alloy include shrinkage porosity and incomplete fusion, which can be observed in 
+Figure 1
+a. Gas porosity is caused by the gas infiltrated inside powders during the production process, which is represented by a two-dimensional circular shape [
+76
+]. Shrinkage porosity is observed between dendrite structures after solidification and appears aligned along the build direction. Additionally, it is worth noting that shrinkage porosity and liquefaction cracking are different. Liquefaction cracking is usually observed during welding because it is related to the existence of the secondary phases [
+77
+]. Shrinkage is the most critical factor affecting the total defect content of finished materials [
+77
+]. The lack of fusion defect is caused by incomplete fusion between the melted layers, typically in a 2D elliptical form, with the principal axis perpendicular to the manufacturing direction [
+76
+]. Only a few lack-of-fusion defects can be observed in the materials processed by EBM. The two post-processing methods, HIP and HIP + HT, both lead to a significant reduction in defects by an order of magnitude, which in turn makes the part almost completely densified, as shown in 
+Figure 1
+b. Obviously, different mechanisms are responsible for closing defects during HIP, such as creep and diffusion [
+77
+]. According to previous research, these defects may be mainly filling pores [
+73
+], except for any surface defects that cannot be compacted by the HIP treatment.
+Figure 2
+ presents the scanning electron microscopy (SEM) micrographs with different post-processing treatments. As shown in 
+Figure 2
+c,e, the columnar grain structure remains unchanged after the two post-treatments. As the grain length in the finished material may be in millimeters and cannot be fully captured in SEM micrographs as shown in 
+Figure 2
+a, the grain width is regarded as a grain growth indicator after post-processing as presented in 
+Figure 2
+b [
+78
+]. The transverse micrograph illustrates that the grains grow significantly after HIP treatment at 1200 °C (
+Figure 2
+d). The micrograph is like the common “necklace” microstructure of the 718 Alloy during dynamic or even static recrystallization [
+79
+]. The EBM-built Alloy 718 material was not strained and a driving force for either static or dynamic recrystallization was absent. Therefore, the abnormal grain growth observed is because of the uneven distribution of pinned particles at low and medium density grain boundaries. The enlarged grains are columnar. The evaluation of the mechanical properties of this microstructure deserves a separate detailed study.
+Leon et al. [
+80
+] utilized a slow strain-rate testing (SSRT) analysis and electrochemical measurements to study the influence of HIP on the corrosion performance of EBM Ti-6Al-4V. 
+Figure 3
+ presents the macrostructure and microstructure of the as-built and HIP treated EBM samples in longitudinal and cross-sections. The two samples showed a typical columnar microstructure of AM Ti-6Al-4V by the epitaxial growth characteristics of parent β grains [
+81
+]. As represented in 
+Figure 3
+a,b, the macrostructure of the as-built part is relatively finer and more heterogeneous than the macrostructure of the HIP sample. Additionally, after electron beam thermal post-processing, the columnar structure remained unchanged. The microstructure of the finished sample in 
+Figure 3
+c shows the existence of three phases as follows: discontinuous α-grain boundary, fine Widmanstätten α and primary α, which are likely nucleated at the previous β-grain boundary because of the rapid cooling conditions [
+82
+]. The relative expansion of Widmanstätten structure and the wider α-lath obtained in HIP samples are associated with the increase in diffusion-controlled transition shown by the thermally induced coarsening of α-lath [
+83
+]. Bagherifard et al. [
+84
+] investigated the influences on microstructural, physical, and mechanical properties of AlSi10Mg specimens by utilizing mechanical and thermal post-processing. The results showed that an appropriate post-processing method can significantly enhance the fatigue strength of manufactured parts. Butler et al. [
+85
+] studied the thermal conductivity of AM AlSi10Mg alloy by comparing the as-manufactured and thermal post-processed parts. The results demonstrated that the thermal conductivity can be significantly increased after thermal post-processing.
+Generally, the laser-based directed energy deposition (DED) can process parts with tiny amounts of porosity when compared with the laser-based PBF method [
+86
+]. Moreover, there is also a remarkable difference between their parts after thermal post-processing, including elastic modulus, elongation, and yield strength [
+87
+]. Yu et al. [
+88
+] investigated the effects of thermal post-processing on the room-temperature fracture toughness and microstructure of parts manufactured by laser-based DED technology. The detailed microstructure characterization was executed on as-manufactured and thermally post-processed parts utilizing direct aging, solution treatment plus aging, and homogenization plus solution treatment plus aging. As presented in 
+Figure 4
+, the as-processed parts mainly consist of γ columnar dendrites with a small amount of (γ + Laves) eutectic in the inter-dendritic region. There are heterogeneous γ″/γ′ precipitates around Laves phase with the direct aging thermal post-processing. The short needle-like δ-phase precipitates around/inside Laves phase, the micro-segregation decreases, and the distribution of γ″/γ′ phase in the dendrite arm is basically uniform with the solution treatment plus aging thermal post-processing. After homogenization plus solution treatment plus aging thermal post-processing, the Laves phase almost disappeared, micro-segregation completely eliminated, and γ″/γ′ precipitates distributed in bimodal recrystallized grains. All these phenomena illustrate that thermal post-processing has positive effects on the laser-based DED parts. Careri et al. [
+89
+] studied the influences on the residual stresses, microstructure, microhardness, and surface finish of the DED manufactured parts by using two post-processing methods, including thermal post-processing and machining. The results showed that the strategy of DED manufacturing process followed by machining process presents the best machinability conditions because of the higher ductility of the material in relation to the absence of the strengthening phase. The high surface hardness and low surface roughness can also been observed. The strategy of manufacturing process followed by the machining process followed by double-aging heat treatment was demonstrated to be better as the parts was machined before the double-aged treatment providing improved machinability and taking advantages of the higher ductility of the material.
+Laser peening is a process of plastic compression of material perpendicular to the surface, resulting in lateral expansions. When laser peening is performed on thick or constrained parts, the ability to resist transverse strain leads to the accumulation of local compressive stresses [
+90
+,
+91
+]. For thinner parts, laser peening causes changes in strain and shape. Similar effects are also caused by other compressive surface treatments, which include deep cold rolling and ultrasonic peening. 
+Figure 5
+ shows the principle of laser shot peening. It is worth noting that the concepts of lateral expansion and plastic compression are common in all deformation-based post-processing treatments.
+Laser peening is widely utilized to improve the fatigue life of compressor blades and jet engine fans, most recently in nuclear-spent fuel storage tanks and aircraft structures [
+90
+]. Laser peening technology has also been applied to improve the surface properties of processed maraging steels [
+92
+,
+93
+,
+94
+], as well as bend and stretch the thick sections of aircraft fenders to provide accurate aerodynamic models. In the laser peening processes, the short intense laser pulse generates plasma in the confined geometry and thereby produces pressure pulses, causing local plastic deformations. The generated pressure can be increased by using a water compactor, thus making the process more effective [
+90
+]. The existing residual compressive stress, the expected strain, and microstructure, as well as the modification of stress state and/or shape in the component can be modeled point by point accurately according to the material and geometry.
+The first research on laser peening was conducted by Fairand et al. [
+95
+] in 1972. They investigated the influence of laser shock waves on the microstructure of 7075 aluminum alloy and reported the material depth dislocations caused by low-pressure shock waves. Since then, low pressure-induced residual stresses and their influences on fatigue life and the stress corrosion behavior of all kinds of metals such as titanium alloy [
+96
+], aluminum alloy [
+97
+], steel [
+98
+], and nickel base superalloy [
+99
+] have been investigated. Many researchers also have studied the process parameters and the laser peening technology that affect the mechanical properties, fatigue life, and residual stresses of Al 6061-T6 [
+100
+,
+101
+,
+102
+].
+Salimianrizi et al. [
+103
+] analyzed the effect of laser peening on Al 6061-T6. The microstructure depicted shows the oriented grains and precipitates produced by the rolling operation in the aluminum plate production process. As shown in 
+Figure 6
+a, the upper surface of the sample is a smooth straight line, indicating the significant effect of polishing before laser peening operations. 
+Figure 6
+b represents a sample image of a single laser peening with 50% overlap. Obviously, the micrograph presents an uneven surface, which may be associated with plastic deformations during laser peening, despite the application of sacrificial confinement layers. The formation of new grain boundaries after laser peening and the decrease in grain sizes were reported in Refs [
+104
+,
+105
+]. However, the results obtained from optical microscopy could not prove this phenomenon. Therefore, the SEM images are presented in 
+Figure 7
+. In 
+Figure 7
+a, precipitates and grain boundaries can be identified effectively. The images imply the formation of newly developed regions and their boundaries, though they are not easy to identify. 
+Figure 7
+b adds dashed lines to clearly display new boundaries. The sub-grains can be observed more accurately by electron backscatter diffraction (EBSD) or transmission electron microscopy (TEM) analysis. Similar grain refinement observations are also documented in [
+51
+]. As the laser peening process is completed, it is expected that the grain refinement degree of the lower surface of the sample can reach tens of microns on the upper surface [
+106
+]. This grain refinement can be interpreted as a consequence of continuous dynamic recrystallization at a high strain rate in the laser peening process [
+104
+]. The results showed that the laser peening method can effectively induce the compressive residual stress of Al 6061-T6.
+Jinoop et al. [
+107
+] reported the laser peening of an Inconel 718 Alloy processed by a PBF process, and the parameters were studied with different laser peening number and peak laser power at three different instances. A schematic diagram of the laser peening device used in this study is presented in 
+Figure 8
+. A pulsed Nd: YAG laser beam is emitted and deflected downwards at 90° through a prism lens. An XY table is used to control the movement of the sample in two directions, while a 500 mm focusing lens is equipped behind the prism lens to converge the beam to the surface of the sample.
+Figure 9
+ and 
+Figure 10
+ show the comparison chart of laser peening. SEM images present that the particles are separated from the sample surface because of delamination. The working principle of some equipment made of titanium alloys is to prevent corrosion, but sometimes, these alloys must be used on certain parts of the equipment, which involves the sliding of titanium on other opposite surfaces—the titanium tribosystems. Although titanium is an extremely reactive metal, it is often necessary to use titanium fasteners for assembling titanium parts. Regular disassembly and reassembly of the fasteners can cause the threaded holes in extremely expensive equipment to wear. Titanium may suffer from different forms of wear modes in chemical process systems, such as metal to metal wear, abrasion, and fretting wear [
+108
+]. The plate-like debris particles shown in 
+Figure 9
+ testify delamination, and they are generated because of adhesion and metal to metal contact [
+55
+]. Debris particles rising from the surface decrease with the increase in hardness and residual compressive stress, owing to the reduction of pores in the post-processed sample. 
+Figure 10
+c shows a change in the wear rate under different low-pressure process parameters. The settings of laser shock peening experiments are presented in 
+Table 1
+. Results showed that the laser peening post-processing method can improve the mechanical properties and surface morphology of the AM parts. The optimum number of shots and laser power are found to be 7 and 170 mW respectively by gray relational analysis. The effect of the number of shots is more significant compared with that of laser power, and the variation in specific wear rate is in line with the micro-hardness results.
+AlSi10Mg is an age-hardenable cast alloy that has superior mechanical properties and good cast-and-weldability when compared with other Al alloys [
+109
+]. The significant effects of laser shock peening on stress corrosion and fatigue properties have been well investigated and understood. Damon et al. [
+109
+] studied the morphology and porosity distribution of SLM AlSi10Mg parts by using micro-tomography analysis, comparing properties before and after laser peening. The results showed an impressive reduction of porosity between 15–30% by means of the laser peening method. Sagbas [
+110
+] investigated the influences of laser peening, abrasive blasting, and laser polishing on texture properties of direct metal laser sintered AlSi10Mg parts, utilizing density measurement, roughness characterization, and hardness measurement. The laser peening can increase the hardness and strength of the surface and decrease the surface roughness in comparison with shot blasting. The kurtosis 
+Rku
+ of shot peening surface is less than three, which indicates that the height distribution of shot peening surface is flattened. Additionally, the skewness 
+Rsk
+ of the same surface is negative, so the surface deviation height (peak and pit) is above the average, where 
+Rku
+ and 
+Rsk
+ profile parameters have an effective role in the characterization of the surface texture properties according to the ISO 4287 [
+111
+]. The shot-peened surface shows the best wear resistance. The SEM and optical microscope images of the laser peening surface can be seen in 
+Figure 11
+. Maamoun et al. [
+112
+] reported using different laser peening intensities to improve the surface characteristics of the as-processed AlSi10Mg parts. The results showed that the good surface topography can be processed with Gp165 glass beads and 22.9 A intensity. Uzan et al. [
+113
+] investigated the effect on the fatigue resistance of AM AlSi10Mg parts fabricated with laser peening post-processing. Whether the surface is polished before shot peening or removed about 25–30 μm (electrolytic polishing or mechanical polishing) after shot peening, the fatigue resistance and fatigue limit are improved.
+Laser polishing is considered a potential method for improving the surface roughness of AM parts. During laser polishing, morphology apexes can reach the melting temperature rapidly when the energy source irradiates the material surface. The liquid material redistributes to the same level after molten-pool formation because of the effect of gravity and surface tension. Once the laser beam stops scanning the surface, the temperature of the heat-affected zone (HAZ) drops rapidly, resulting in the solidification of the molten pool, and the surface roughness reduces accordingly [
+114
+,
+115
+,
+116
+]. Laser polishing is an automated process that changes surface morphology by re-melting without changing or affecting the bulk properties [
+117
+]. During the past 20 years, laser polishing technology has been extensively utilized to process different materials. For example, Mai and Lim [
+118
+] applied laser polishing to reduce the roughness of 304 stainless steel from 195 nm to 75 nm, consequently increasing surface reflectivity to 14% and reducing diffusion reflectivity to 70%. Guo et al. [
+119
+] investigated polishing results in AM processes, showing that the roughness value decreased from 0.4 μm to 0.12 μm. Lamikiz et al. [
+120
+] claimed that the hardness of a laser polishing processed surface was slightly higher and more uniform than other surfaces, with almost no cracks or HAZ. Laser polishing can also improve the surface performance of SLM parts.
+Ma et al. [
+117
+] studied the laser polishing of a titanium alloy manufactured by laser-based AM technology. Macrographs of the surface after laser polishing are taken and presented in 
+Figure 12
+a. The typical microstructure of TC4 alloy substrate is shown in 
+Figure 13
+a. As presented in 
+Figure 12
+b, the rough surface was polished, the laser melting traces are apparent on the titanium alloy surface. The results showed that the morphological apexes of titanium alloy absorb energy and reach the melting temperature in a short time in the process of laser polishing. After the surface material is melted, a small part of the peak melting mass flows into the valley driven by surface tension and gravity. Once the laser beam leaves, the solidification of liquid material is accelerated, leading to the decrease in peak valley height. The surface morphology and surface roughness of the titanium alloy after laser polishing were measured by laser scanning confocal microscopy. 
+Figure 12
+c,d show that the peak-valley height of the TC4 surface decreased from 90 μm to 4 μm after laser polishing. 
+Figure 13
+a–c presents the microstructure graphs of the TC4 alloy matrix after AM processing, including acicular α phase (lower V content) and β phase (higher V content) [
+121
+,
+122
+]. The martensitic α′ phase formed after laser rapid melting and cooling is the reason for the uniform distribution of elements at the top of the polishing zone [
+123
+,
+124
+]. Being consistent with the microstructure analysis, the X-ray diffraction (XRD) curve in 
+Figure 13
+d shows that the received TC4 includes α phase and β phase, but the laser polishing surface is mainly composed of α′ martensite without β phase.
+In the study of [
+125
+] by Lee et al., the α-β titanium alloy (Ti-6Al-4V) sample was prepared by the laser beam-powder layer fusion (LB-PBF) method, and the surface was processed with a continuous wave fiber laser. Laser polishing properly re-melted the powder particles and reconstructed the surface morphology. As shown in 
+Figure 14
+a,b, the fabricated surface conditions presented an extremely rough surface with random peaks and valleys. On the contrary, the smooth surface presented in 
+Figure 14
+c,d is obtained after laser polishing. Even if no material was wasted in the process of laser polishing, the measured cross-sectional area would change significantly after laser polishing. The average cross-sectional area of the test piece with the as-built surface is 10.28 mm
+2
+, and the area after the laser polishing is reduced to 9.75 mm
+2
+. The result indicated that the cross-sectional area difference between the manufactured surface and the laser polishing surface is reduced from 5.4% to 1.7%. Zhou et al. [
+126
+] studied laser polishing of the AlSi10Mg parts at different laser directions, passes, and hatching spaces, as well as analyzing the roughness, microhardness, and surface morphologies. 
+Figure 15
+ and 
+Figure 16
+ present the SEM images and optical morphologies of unpolished surface and polished surface, respectively. The experimental results showed that the surface roughness Sa and Ra of manufactured surface can be optimized from 29.3 μm to 8.4 μm and from 12.5 μm to 3.7 μm. Zhou et al. [
+127
+] experimentally investigated the laser polishing titanium alloys. The results showed that the surface roughness can be decreased from 7.3 µm to approximately 0.6 µm. Avilés et al. [
+128
+] studied the effect of laser polishing in the absence of inert gas on the high cycle fatigue (HCF) performance of AISI 1045 steel. The results showed that laser polishing can improve the HCF behavior of AISI 1045 steel parts. Chen et al. [
+129
+] characterized the surface microstructure and morphology of the LP-PBF stainless-steel 316L before and after laser polishing. The results indicated that the surface roughness can be effectively reduced from 4.84 μm to 0.65 μm (Sa) by laser polishing, as well as the proportion of low angle grain boundaries (2°–5°) is increased and the average grain diameter is reduced. Rosa et al. [
+130
+] studied the influences on stainless-steel 316 L by using multiple laser polishing parameter sets. The surface roughness (Sa) was reduced to 0.79 μm with a reduction of 96% after five passes.
+Machining and abrasive finishing are conventional manufacturing techniques to improve the form accuracy and surface finish of functional parts in various industries. They are used as common post-processing methods for AM parts for their high maturity and good accessibility. Bai et al. [
+131
+] employed computer numerical controlled (CNC) milling to post-process ASTM A131 steel parts generated by DED. Though the tool wear is obvious, the milling can reduce the surface roughness of the workpiece from 22.78 μm to 0.6 μm and the high cutting speed contributes to a more favorable surface finish. Besides, it is found that the milling procedure hardly changes the microhardness of the DED samples. To generate a superior surface finish and study the machinability of AM parts, Ni et al. [
+132
+,
+133
+] utilized ultra-precision machining (UPM) to cut SLM-ed Ti-6Al-4V alloy. They found that the material anisotropy is notable in UPM regarding the achieved surface roughness and cutting forces. For example, the surface roughness of the top surface after machining is lower than that of the front surface and the cutting force shows the same trend. The anisotropic machinability of the workpiece is due to the anisotropic microstructure during the printing process, as suggested by the authors. Researchers also explored the potential of non-conventional machining to produce an optical surface on additively manufactured parts. For example, a reflective surface with roughness as low as 5.1 nm is achieved by the combination of the optimized printing parameters and ultrasonic elliptical vibration-assisted machining in Ref [
+61
+]. By contrast, it is interesting to find that the conventional diamond turning can only obtain a surface roughness of 10.2 nm, as seen in 
+Figure 17
+.
+Regarding the abrasive finishing method, Zhang et al. [
+45
+] used magnetic abrasive finishing (MAF) to polish the SLM-ed 316L stainless steel surface generated by various building angles. The surface finish improvement can reach as high as 75.7% and all the surface defects, i.e., the un-melted particles and balling effects, are removed. They also found the final surface roughness has a high dependence on the as-built surface roughness for the pressure-copying finishing process. In [
+134
+], Zhang developed an automatic micro-blasting setup to finish the SLM-ed 316 L stainless workpiece with a tubular lattice structure. As presented in 
+Figure 18
+, the micro-blasting of SLM-ed tubular lattice structure. The effect of the air pressure and the standing distance on the achieved surface finish of the workpiece is investigated. The author found micro-blasting is a suitable post-processing method to remove the partially bonded particles on the fragile lattice structure. However, the process parameters should be well-selected to prevent strut damage. Wang et al. [
+135
+] investigated the effects of ultrasonic abrasive polishing on the surface quality of AM parts. The impact action of abrasive particles was simulated with the Smoothed Particle Hydrodynamics (SPH) methodology. The results presented that the ultrasonic laser polishing can effectively remove the partially melted structures, the surface roughness decreased from 5.02 μm to 2.93 μm. Teng et al. [
+136
+] studied the grinding process (GP) and MAF for finish machining of SLM parts. The results showed that the combination of MAF and GP can reduce the surface roughness and improve the surface quality of AlSi10Mg parts. The surface roughness was decreased from 7 μm to 0.155 μm with the MAF method. Guo et al. [
+137
+] presented an experimental and analytical study on the internal surface quality improvement of Inconel 718 by abrasive flow machining (AFM). The results showed that good surface quality can be achieved with low extrusion pressure, high viscosity, low temperature, and large particle size. Han et al. [
+138
+] investigated the influence of the AFM technique on residual stress and surface roughness. The results showed that the AFM can improve the fatigue resistance of channels by 26%.
+This paper has reviewed various methods to improve the surface finish of the AM parts by summarizing different post-processing technologies and their applications in AM processes, including thermal post-processing, laser peening, laser polishing, machining and abrasive finishing method. For metal AM technology, the post-processing covers a variety of stages that 3D printed parts have to undergo before being used for the final purpose, such as powder removal, stress relief annealing, wire cutting, other finishing, hot isostatic pressing and so on. Some of these procedures still require manual operation, where skilled operators are necessary for key tasks. It may be cost-effective to complete the prototype or even dozens of parts manually, but if hundreds or even thousands of parts are produced, the demand for post-processing automation in AM becomes extremely urgent.
+Automated solutions can improve production efficiency, but there are only a few centralized specific solutions to help achieve automated post-processing, and these systems are mainly designed for polymer AM parts. In terms of metal AM, the post-processing technology of traditional manufacturing is still used. In order to further automate these technologies, some companies have also begun to implement robotic solutions that can install printing substrates, clean powder, unload parts and post-processing. The goal is to replace all manual work to promote continuous and large-scale production. Although this development is encouraging, the pace of innovation in this field is still relatively slow. The number of advanced automatic post-processing solutions would certainly increase in the future, so as to adapt to the growing development of the AM industry.
+Conceptualization, L.K. and X.P.; methodology, L.K., X.P., J.Y.H.F. and H.W.; writing—original draft preparation, L.K. and X.P.; writing—review and editing, L.K., J.Y.H.F. and H.W.; supervision, L.K. and H.W. Funding acquisition, L.K. and H.W. All authors have read and agreed to the published version of the manuscript.
+This work was supported by National Key R&D Program of China (No.2017YFA0701200), National Natural Science Foundation of China (Grant No. 52075100), Shanghai Science and Technology Committee Innovation Grant (Grant No. 19ZR1404600), and Agency for Science, Technology and Research (A*STAR) of Singapore through the Industry Alignment Fund—Pre-positioning Program (IAF-PP) (Grant Nos. A1893a0031 and A19E1a0097).
+The authors declare no conflict of interest.
+Publisher’s Note:
+ MDPI stays neutral with regard to jurisdictional claims in published maps and institutional affiliations.

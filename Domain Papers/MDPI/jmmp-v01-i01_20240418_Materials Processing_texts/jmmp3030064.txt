@@ -1,0 +1,695 @@
+Fused deposition modeling (FDM) is an additive manufacturing (AM) process that is often used to fabricate geometrically complex shaped prototypes and parts. It is gaining popularity as it reduces cycle time for product development without the need for expensive tools. However, the commercialization of FDM technology in various industrial applications is currently limited due to several shortcomings, such as insufficient mechanical properties, poor surface quality, and low dimensional accuracy. The qualities of FDM-produced products are affected by various process parameters, for example, layer thickness, build orientation, raster width, or print speed. The setting of process parameters and their range depends on the section of FDM machines. Filament materials, nozzle dimensions, and the type of machine determine the range of various parameters. The optimum setting of parameters is deemed to improve the qualities of three-dimensional (3D) printed parts and may reduce post-production work. This paper intensively reviews state-of-the-art literature on the influence of parameters on part qualities and the existing work on process parameter optimization. Additionally, the shortcomings of existing works are identified, challenges and opportunities to work in this field are evaluated, and directions for future research in this field are suggested.
+Currently, fused deposition modeling (FDM) is not only used to produce visual aids, conceptual models, and prototypes, but it is also used to produce functional parts such as drilling grids in the aerospace industry [
+1
+] and edentulous mandible trays [
+2
+]. It reduces assembly cost as it is capable of manufacturing complex geometry and flexible function parts from a stereolithography (STL) file by depositing two-dimensional (2D) layers on a build platform. As of the time of writing, researchers are still working on developing new materials, as well as improving existing materials used in FDM parts in different fields such as aerospace, biomedical, and many other fields. However, the application of the FDM process in manufacturing functional parts is limited due to different drawbacks such as irregular surface, poor mechanical properties, and low accuracy. Although low accuracy is a relative term, as some applications do not require high accuracy (prototypes or display parts), in order for FDM to be more acceptable in the industry and for it to be a good candidate to mass-produce printed parts, accuracy is a basic requirement that is sought for. To produce good functional parts and increase the market share of FDM parts, it is necessary to produce parts with stable qualities to meet specific requirements. The FDM process has several parameters that have a significant impact on built parts. All these parameters affect the bonding between and within the deposited layers. A part with desired qualities can be produced by selecting an optimum combination of process parameters. An important role is also played by the use of the best thermoplastic polymer for the proposed use of the part.
+A huge number of researchers analyzed various controllable parameters to achieve desirable properties of parts [
+3
+,
+4
+,
+5
+,
+6
+,
+7
+], and many also worked on optimizing process parameters [
+8
+,
+9
+]. Many of the researches optimized process parameters in order to improve a single part’s quality. Rayegani and Onwubolu worked on optimizing tensile strength with a differential evolution (DE) approach [
+10
+]. Some researchers also considered more than one part’s quality, but they were analyzed separately [
+11
+,
+12
+,
+13
+]. Additionally, a more advanced approach is to consider two or more parts’ qualities and optimize them simultaneously to obtain a set of optimum combination(s) of parameters. Akande [
+14
+], Gurrala et al. [
+15
+] and Rao et al. [
+16
+] worked on multi-objective optimization. In addition to this review paper, interested readers are encouraged to review two published review papers on FDM process parameter optimization. The first manuscript is by Mohamed et al. [
+17
+], where research works until the year 2014 were analyzed. The second manuscript is by Popescu et al. [
+18
+]; they reviewed research that considered only mechanical properties as the part characteristics. To complement the two reviewed papers, this paper aims to fill the gaps by systematically representing current and future research trends carried out by researchers on FDM process parameter optimization and their influence. Based on the authors’ knowledge, at the time of writing, the optimization information for FDM process parameters was not concisely reviewed. This paper also serves as an aid for current and future researchers, practitioners, and the general public to set up experiments for the FDM process and to do research on improving or optimizing the characteristics of FDM parts.
+The rest of this paper is organized as follows: 
+Section 2
+ describes process parameters, equipment, and materials. 
+Section 3
+ reviews the existing papers on FDM part characteristics. In 
+Section 4
+, the current works on numerical process parameter optimization for the FDM process are discussed. 
+Section 5
+ defines challenges, opportunities, and future research areas in the improvement of FDM part characteristics. 
+Section 6
+ provides conclusions. 
+In this section, before summarizing the contributions of existing research and the future directions of research in the field, lists of the process parameters considered for analysis, as well as lists of thermoplastics and FDM machines used for the analysis, are discussed first.
+The FDM process has several process parameters, and they have a significant impact on production efficiency and part characteristics. Some of the most common process parameters are air gap, build orientation, extrusion temperature, infill density, infill pattern, layer thickness, number of shells, print speed, raster orientation, raster width, and heat treatment temperature (post-processing parameter). The main process parameters are described below.
+
+Air gap: The gap between two adjacent rasters on a deposited layer. The air gap is called negative when two adjacent layers are overlapped.
+Build orientation: Build orientation is defined as the way to orient the part in a build platform with respect to 
+X-
+, 
+Y-
+, and 
+Z
+-axes. In some papers, build orientation represented a quantitative parameter [
+13
+,
+19
+], but in others, it was considered a categorical parameter [
+11
+,
+20
+]. Different build orientations are given in 
+Figure 1
+.
+Extrusion temperature: The temperature at which the filament of a material is heated during the FDM process. Extrusion temperature depends on various aspects, for example, the type of material or print speed.
+Infill density: The outer layers of a three-dimensional (3D) printer object are solid. However, the internal structure, commonly known as the infill, is an invisible inner part covered by the outer layer(s), and it has different shapes, sizes, and patterns. Infill density is the percentage of infill volume with filament material. The strength and mass of FDM build parts depend on the infill density.
+Infill pattern: Different infill patterns are used in parts to produce a strong and durable internal structure. Hexagonal, diamond, and linear are commonly used infill patterns (
+Figure 2
+).
+Layer thickness: This is the height of the deposited layers along the 
+Z
+-axis, which is generally the vertical axis of an FDM machine. Generally, it is less than the diameter of the extruder nozzle and depends on the diameter of the nozzle.
+Print speed: This is the distance traveled by the extruder along the 
+XY
+ plane per unit time while extruding. Printing time depends on print speed, and the print speed is measured in mm/s.
+Raster width: Raster width is defined as the width of the deposition beads (
+Figure 3
+). It depends on the extrusion nozzle diameter.
+Raster orientation: This is the direction of the deposition bead with respect to the 
+X
+-axis of the build platform of the FDM machine (
+Figure 4
+).
+Air gap: The gap between two adjacent rasters on a deposited layer. The air gap is called negative when two adjacent layers are overlapped.
+Build orientation: Build orientation is defined as the way to orient the part in a build platform with respect to 
+X-
+, 
+Y-
+, and 
+Z
+-axes. In some papers, build orientation represented a quantitative parameter [
+13
+,
+19
+], but in others, it was considered a categorical parameter [
+11
+,
+20
+]. Different build orientations are given in 
+Figure 1
+.
+Extrusion temperature: The temperature at which the filament of a material is heated during the FDM process. Extrusion temperature depends on various aspects, for example, the type of material or print speed.
+Infill density: The outer layers of a three-dimensional (3D) printer object are solid. However, the internal structure, commonly known as the infill, is an invisible inner part covered by the outer layer(s), and it has different shapes, sizes, and patterns. Infill density is the percentage of infill volume with filament material. The strength and mass of FDM build parts depend on the infill density.
+Infill pattern: Different infill patterns are used in parts to produce a strong and durable internal structure. Hexagonal, diamond, and linear are commonly used infill patterns (
+Figure 2
+).
+Layer thickness: This is the height of the deposited layers along the 
+Z
+-axis, which is generally the vertical axis of an FDM machine. Generally, it is less than the diameter of the extruder nozzle and depends on the diameter of the nozzle.
+Print speed: This is the distance traveled by the extruder along the 
+XY
+ plane per unit time while extruding. Printing time depends on print speed, and the print speed is measured in mm/s.
+Raster width: Raster width is defined as the width of the deposition beads (
+Figure 3
+). It depends on the extrusion nozzle diameter.
+Raster orientation: This is the direction of the deposition bead with respect to the 
+X
+-axis of the build platform of the FDM machine (
+Figure 4
+).
+For research purposes, different research teams use different FDM machines. Stratasys was one of the first companies to develop the FDM process and FDM machine. The following is a list of commonly used FDM machines: Fortus FDM 400 mc machine (Stratasys, Eden Prairie, MN, USA) [
+10
+,
+21
+,
+22
+], Fortus 360 mc machine (Stratasys, Eden Prairie, MN, USA) [
+23
+], FDM 200 mc machine (Stratasys, Eden Prairie, MN, USA) [
+24
+], FDM 1650 machine (Stratasys, Eden Prairie, MN, USA) [
+25
+,
+26
+,
+27
+,
+28
+], FDM Vantage machine (Stratasys, Eden Prairie, MN, USA) [
+29
+,
+30
+], Ultimaker 2 (Ultimaker, Amsterdam, Netherlands) [
+23
+,
+31
+,
+32
+], MakerBot Replicator 2 (MakerBot, New York, NY, USA) [
+33
+,
+34
+], MEM-300 machine (Beijing Yinhua Laser Rapid Prototypes Making and Mould Technology Co., Ltd, Beijing, China) [
+35
+], Uprint SE 3D printer (Stratasys, Eden Prairie, MN, USA) [
+5
+], The FDM 3000 3D printer (Stratasys, Eden Prairie, MN, USA) [
+36
+,
+37
+], Raise3D N2plus machine (Raise3D, Irvine, CA, USA) [
+38
+], Makerbot Replicator 2X (MakerBot, New York, NY, USA) [
+1
+,
+3
+,
+20
+], Julia 3D printer (Fracktal Works, Bangalore, India) [
+7
+], FDM Maxum Machine (Stratasys, Eden Prairie, MN, USA) [
+39
+], Prodigy Plus (Stratasys, Eden Prairie, MN, USA) [
+6
+,
+40
+], WitBox desktop 3D printer (BQ, Madrid, Spain) [
+11
+], and HP Designjet 3D CQ656A (HP, Palo Alto, CA, USA) [
+41
+]. 
+For research purposes, different research teams use different FDM machines. Stratasys was one of the first companies to develop the FDM process and FDM machine. The following is a list of commonly used FDM machines: Fortus FDM 400 mc machine (Stratasys, Eden Prairie, MN, USA) [
+10
+,
+21
+,
+22
+], Fortus 360 mc machine (Stratasys, Eden Prairie, MN, USA) [
+23
+], FDM 200 mc machine (Stratasys, Eden Prairie, MN, USA) [
+24
+], FDM 1650 machine (Stratasys, Eden Prairie, MN, USA) [
+25
+,
+26
+,
+27
+,
+28
+], FDM Vantage machine (Stratasys, Eden Prairie, MN, USA) [
+29
+,
+30
+], Ultimaker 2 (Ultimaker, Amsterdam, Netherlands) [
+23
+,
+31
+,
+32
+], MakerBot Replicator 2 (MakerBot, New York, NY, USA) [
+33
+,
+34
+], MEM-300 machine (Beijing Yinhua Laser Rapid Prototypes Making and Mould Technology Co., Ltd, Beijing, China) [
+35
+], Uprint SE 3D printer (Stratasys, Eden Prairie, MN, USA) [
+5
+], The FDM 3000 3D printer (Stratasys, Eden Prairie, MN, USA) [
+36
+,
+37
+], Raise3D N2plus machine (Raise3D, Irvine, CA, USA) [
+38
+], Makerbot Replicator 2X (MakerBot, New York, NY, USA) [
+1
+,
+3
+,
+20
+], Julia 3D printer (Fracktal Works, Bangalore, India) [
+7
+], FDM Maxum Machine (Stratasys, Eden Prairie, MN, USA) [
+39
+], Prodigy Plus (Stratasys, Eden Prairie, MN, USA) [
+6
+,
+40
+], WitBox desktop 3D printer (BQ, Madrid, Spain) [
+11
+], and HP Designjet 3D CQ656A (HP, Palo Alto, CA, USA) [
+41
+]. 
+Please note that the list above is in no way exhaustive. There are also other do-it-yourself (DIY) FDM printers that are highly customizable. Each FDM machine has its advantages and disadvantages. Depending on the controllable process parameters that are offered by an FDM machine, and some other parameters that are difficult to control using a specific machine, each user may have a different view of the equipment. Thus, the advantages and disadvantages of each FDM machine are not the focus of this paper and are not discussed further in this paper.
+In the FDM process, a part is produced by a filament that passes through a nozzle. Different thermoplastics are used as filaments. The commonly used filament materials are described below [
+42
+,
+43
+,
+44
+].
+
+Acrylonitrile butadiene styrene (ABS): ABS, a thermoplastic and amorphous polymer, is one of the commonly used materials to make 3D printed parts via the FDM process. ABS is a copolymer made of acrylonitrile, butadiene, and styrene; impact resistance and toughness are two important mechanical properties of ABS. ABS has a melting point of 230° (standard for printing, although amorphous), which is higher than polylactic acid (PLA)’s melting point [
+45
+]. While PLA is biodegradable, ABS is not, but it offers a lower risk of jamming a nozzle.
+Polylactic acid (PLA): PLA is one of the widely used thermoplastics in FDM. The use of PLA is increasing as it is a biodegradable thermoplastic [
+46
+]. Also, it needs less energy and temperature to process prototypes and functional parts with good quality. Now, many desktop 3D printers use PLA as a filament as it does not require a heated bed, although it is prone to jamming a printer nozzle during printing. PLA has higher tensile strength, low warp, and low ductility when compared to ABS. For post-processing, PLA built parts required extra care compared to ABS. In 
+Table 1
+, some important properties of PLA and ABS are summarized. The presented properties will help choose the right filament for the part to be printed.
+Polycarbonates (PCs): PCs are a group of thermoplastics known for their good strength, durability, and toughness, and some are transparent. They are high-temperature thermoplastics with good heat resistance, good layer for layer bonding, and they provide a good-quality surface.
+Polyether ether ketone (PEEK): PEEK is a thermoplastic with excellent heat resistance, mechanical properties, and chemical stability. It has higher mechanical properties when compared to PLA and ABS. PEEK, a biomaterial, is considered as a promising bone repair material to make prostheses for the human body.
+Polyetherimide (PEI): PEI is widely used in the transportation industry for its high strength-to-weight ratio with low smoke evolution and low smoke toxicity. It requires a high extrusion temperature and bed temperature during printing. Its trade name is ULTEM™ 9085. Due to its low density and toxicity properties, it can be used for aircraft cabins.
+Nylon: Nylon can be chosen as the filament if the requirement is to print more flexible and more durable parts. It has high toughness and impact resistance, but it is highly sensitive to moisture. Nylon can warp about as much as ABS. Like many other FDM filaments, nylon absorbs moisture from the air as it is hygroscopic. Moisture absorption deteriorates filament properties and results in part characteristic degradation.
+Other materials: In addition to the commonly used materials discussed above, there are some other materials that are not commonly used or analyzed as filament materials, for instance, high-impact polystyrene (HIPS), polyphenylsulfone (PPSF), polyethylene terephthalate glycol modified (PETG), thermoplastic polyurethane (TPU), bio-composite filaments, ceramic filaments, and other composite material filaments. Most of these materials are either still in the development process or are not easily obtained on the market. 
+Acrylonitrile butadiene styrene (ABS): ABS, a thermoplastic and amorphous polymer, is one of the commonly used materials to make 3D printed parts via the FDM process. ABS is a copolymer made of acrylonitrile, butadiene, and styrene; impact resistance and toughness are two important mechanical properties of ABS. ABS has a melting point of 230° (standard for printing, although amorphous), which is higher than polylactic acid (PLA)’s melting point [
+45
+]. While PLA is biodegradable, ABS is not, but it offers a lower risk of jamming a nozzle.
+Polylactic acid (PLA): PLA is one of the widely used thermoplastics in FDM. The use of PLA is increasing as it is a biodegradable thermoplastic [
+46
+]. Also, it needs less energy and temperature to process prototypes and functional parts with good quality. Now, many desktop 3D printers use PLA as a filament as it does not require a heated bed, although it is prone to jamming a printer nozzle during printing. PLA has higher tensile strength, low warp, and low ductility when compared to ABS. For post-processing, PLA built parts required extra care compared to ABS. In 
+Table 1
+, some important properties of PLA and ABS are summarized. The presented properties will help choose the right filament for the part to be printed.
+Polycarbonates (PCs): PCs are a group of thermoplastics known for their good strength, durability, and toughness, and some are transparent. They are high-temperature thermoplastics with good heat resistance, good layer for layer bonding, and they provide a good-quality surface.
+Polyether ether ketone (PEEK): PEEK is a thermoplastic with excellent heat resistance, mechanical properties, and chemical stability. It has higher mechanical properties when compared to PLA and ABS. PEEK, a biomaterial, is considered as a promising bone repair material to make prostheses for the human body.
+Polyetherimide (PEI): PEI is widely used in the transportation industry for its high strength-to-weight ratio with low smoke evolution and low smoke toxicity. It requires a high extrusion temperature and bed temperature during printing. Its trade name is ULTEM™ 9085. Due to its low density and toxicity properties, it can be used for aircraft cabins.
+Nylon: Nylon can be chosen as the filament if the requirement is to print more flexible and more durable parts. It has high toughness and impact resistance, but it is highly sensitive to moisture. Nylon can warp about as much as ABS. Like many other FDM filaments, nylon absorbs moisture from the air as it is hygroscopic. Moisture absorption deteriorates filament properties and results in part characteristic degradation.
+Other materials: In addition to the commonly used materials discussed above, there are some other materials that are not commonly used or analyzed as filament materials, for instance, high-impact polystyrene (HIPS), polyphenylsulfone (PPSF), polyethylene terephthalate glycol modified (PETG), thermoplastic polyurethane (TPU), bio-composite filaments, ceramic filaments, and other composite material filaments. Most of these materials are either still in the development process or are not easily obtained on the market. 
+Some research efforts were carried out to compare the properties and functionality of multiple materials for the FDM process. Messimer et al. studied 10 materials to determine whether a heated aluminum–polycarbonate composite print bed was suitable for the FDM process or not [
+48
+]. In their updated work, they collected 11 materials to be used in modeling dimensional errors in the FDM process for full-density parts based on seven raster angles and three build orientations [
+49
+]. The 11 materials were ABS, PLA, high-temperature PLA, wood PLA, carbon-fiber PLA, aluminum PLA, copper PLA HIPS, PETG, polycarbonate, and nylon.
+A considerable number of researches were conducted to analyze the impacts of process parameters on dimensional accuracy, surface roughness, build time, and mechanical properties. For this survey paper, different keywords were used to search for articles on scientific online databases (e.g., Google Scholar, Elsevier, Springer, etc.). These keywords were FDM, fused deposition modeling, process parameters, FDM optimization, and part characteristics of FDM build parts. Relevant published articles (journals and conference proceedings) from the year 2005 to 2019 are included in this paper, but some important papers from the year 2000 are also included. All the articles reviewed were published in English language only. During the initial search, more than 250 related articles were collected. After an initial screening by reading titles and abstracts, close to 100 papers were used as the main material for this survey paper. In addition to the published articles, manufacturers’ recommendations in the form of manuals or webpages were also used as references for filament properties or suggested printing conditions. For an initial summary of the conducted survey, a fishbone diagram is provided in 
+Figure 5
+ as a visual representation to illustrate the impacts of different process parameters on various part characteristics. The fishbone diagram was developed based on the outcome of different existing studies. Please note that some process parameters overlap with part characteristics, as one process parameter can affect multiple part characteristics.
+In many papers, different statistical tools such as full factorial design [
+10
+,
+24
+], fractional factorial design [
+22
+,
+25
+], and face-centered central composite design (FCCCD) [
+13
+,
+50
+] were used to gain maximum information from a smaller number of experiments. As another approach, optimum levels of parameters for analyzing part characteristics were determined based on experimental results. In some papers, such as Mohamed et al. [
+51
+] and Chacón et al. [
+11
+], various mathematical models were developed to show a relationship between process parameters and part quality. Peng et al. [
+35
+] and Rayegani et al. [
+10
+] worked on optimizing mathematical models of part characteristics to determine optimal levels of process parameters. There were also approaches that looked into characteristics of more than one part that were optimized simultaneously. For this, various heuristic optimization algorithms, for example, quantum-behaved particle swarm optimization (QPSO) [
+8
+], non-dominated sorting genetic algorithm II (NSGA-II) [
+15
+], differential evolution (DE) [
+10
+], and genetic algorithm (GA) [
+52
+], were used. In the following subsections, a systematic summary of research analyzing each FDM printed part’s quality characteristic is given. 
+Dimensional accuracy is an important property for functional parts. Adjusting FDM process parameters has a significant impact on dimensional accuracy. Many researchers worked extensively to determine how process parameters can influence the dimensional accuracy of the printed parts.
+Wang et al. [
+53
+] studied the influence of six process parameters on dimensional accuracy. The examined factors were layer thickness, deposition style, support style, deposition orientation in the 
+Z
+-direction, deposition orientation in the 
+X
+-direction, and build location. The authors used the Taguchi orthogonal array (L18) for experimental design, and ABS parts were produced by the Dimension BST rapid prototyping machine according to the experimental design. Their results were reviewed using analysis of variance (ANOVA), which indicated that deposition orientation in the 
+Z
+-direction was the most significant parameter for dimensional accuracy. Sood et al. [
+54
+] analyzed the impacts of five process parameters (layer thickness, build orientation, raster orientation, raster width, and air gap) and their interactions on dimensional deviations along the length, width, and thickness. Their results showed that layer thickness was the most important factor for width and thickness deviations. However, build orientation was most influential for change in length. The authors also observed some shrinkages which occurred in the length and width directions. However, the thickness of the printed part was found to be higher than the computer-aided design (CAD)-defined thickness along the 
+Z
+-direction. They found that the optimum setting of parameters was different for dimensional deviations and for different dimensions of a part. For this, they used the gray relational grade to convert three target part characteristics into one. We discuss this method in the optimization section of this paper. 
+Similar to the abovementioned two papers, Nancharaiah et al. [
+6
+] used Taguchi’s design of experiments to examine the impact of layer thickness, raster width, raster orientation, and air gap on dimensional accuracy. ANOVA was used to determine significant parameters and their interactions for dimensional accuracy. The ABS parts were produced using a Prodigy plus FDM machine for different combinations of the analyzed parameters. According to their experimental design, it was shown by ANOVA that raster width and interaction between raster width and raster orientation were two significant terms for dimensional accuracy. Other than that, their results indicated that there was a positive correlation between dimensional accuracy and layer thickness. According to their suggestion based on signal-to-noise (S/N) ratio, a smaller layer thickness is preferred for a higher dimensional accuracy.
+By using the same machine, Bakar et al. [
+40
+] produced a complex shaped part (with slots, cubes, cylinders, and rings) by varying layer thickness, shell width, and internal raster width. The conclusion of their results was that the dimensional accuracy of an FDM part also depends on its shape, and a cylindrical shape has high dimensional deviation. Peng et al. [
+35
+] used the MEM-300 machine to produce ABS parts based on uniform experimental design. From their case study, the controllable parameters were line width compensation, extrusion velocity, filling velocity, and layer thickness. They also concluded from the experimental results that low layer thickness was preferable for improving dimensional accuracy. In addition, they also determined the optimum combinations of these four process parameters using response surface method (RSM), fuzzy inference system (FIS), artificial neural network (ANN), and genetic algorithm (GA) for three response variables including dimensional accuracy. All of these techniques are discussed in the upcoming sections.
+Akande [
+14
+] analyzed the effect of three process parameters (layer thickness, print speed, and infill density) on dimensional accuracy. The results showed that high dimensional errors took place along the thickness (
+Z
+-direction) of a PLA part. The author recommended high layer thickness (0.5 mm), low print speed (16 mm/s), and low infill density (20%) for printing parts with high dimensional accuracy. The influence of layer thickness, raster orientation, and build orientation on dimensional accuracy was investigated by Nidagundi et al. [
+7
+], and the ABS parts were manufactured by a Julia 3D printer [
+7
+]. A Taguchi orthogonal array (L9) and S/N ratio were applied for experimental design and the determination of optimum levels of parameters, respectively. Low layer thickness, 0° raster orientation, and build orientation were found to be optimum for dimensional deviation reduction, and the most significant parameter was indicated as layer thickness.
+Mohamed et al. [
+55
+] considered six process parameters, and all parameters excluding layer thickness had six levels. In their paper, 
+I
+-optimal design was used for experimental set-up because the number of levels for each parameter was more than three. They also determined a quadratic equation that represented the relationship between process parameters and dimensional accuracy. Their observational results showed that low layer thickness and number of shells were optimal to decrease the dimensional deviation along the length, width, and thickness. Additionally, the other four parameters (raster orientation, raster width, air gap, and build orientation) had a different optimum combination for dimensional accuracy in different directions. Thus, the desirability function approach was used to determine the optimum combination of all parameters for three-dimensional deviations.
+In 2017, Qattawi et al. [
+20
+] experimentally examined the impact of two categorical parameters (build orientation and infill pattern) and four numerical parameters (layer thickness, infill density, print speed, and extrusion temperature) on dimensional accuracy. They used PLA as the filament and Makerbot Replicator 2X as the FDM machine. They concluded that layer thickness, extrusion temperature, and build orientation were the three significant parameters among the six parameters for dimensional accuracy. In addition, a low level for both layer thickness and extrusion temperature was preferable to a high level for dimensional accuracy. Tontowi et al. [
+56
+] observed the dimensional change of PLA printed parts by a Wanhao Duplicator 5S Mini FDM machine (WANHAO, Jinhua, China) with three process parameters, namely, layer thickness, raster orientation, and extrusion temperature. Unlike other research, their experimental results concluded that raster orientation was more significant than layer thickness for dimensional accuracy. In their paper, the outcomes of the Taguchi orthogonal array and response surface method were compared, and they concluded that the response surface method gave a better prediction. On the other hand, Wu [
+38
+] showed that low layer thickness was important for high dimensional accuracy. This conclusion is more aligned with the majority of research in this area. Beniak et al. [
+57
+] analyzed the importance of layer thickness and extrusion temperature for dimensional accuracy. Among layer thickness and extrusion temperature, extrusion temperature was significant for dimensional accuracy and, again, a low level for extrusion temperature was preferable.
+Short discussion and summary:
+ According to the presented reviewed literature, the layer thickness is one of the most analyzed and influential factors for dimension accuracy. Most of the researchers concluded that high dimensional accuracy is obtained by setting a low layer thickness extrusion temperature and number of shells. In our perspective, further analysis is needed for extrusion temperature and the number of shells for validation of the conclusion. It is observed that shrinkage occurs along 
+X-
+ and 
+Y
+-directions of build platforms and expansion is experienced along the 
+Z
+-direction of the build platform. From this, we can conclude that build orientation is also an important parameter of dimensional accuracy. The effects of many process parameters including extrusion temperature, number of shells, infill pattern, and raster width on dimensional accuracy are still unknown. It is important to know the influence of those parameters to produce a part with high dimensional accuracy. Most of the existing research considered only two or three levels of parameters. There is a need to analyze more than three levels of parameters to make a more accurate decision, and to study the impact of the least known parameters on dimensional accuracy (such as extrusion temperature, infill pattern, or nozzle diameter).
+Surface roughness is a widely used index of product quality. In most cases, surface roughness is often used as a technical requirement for mechanical products. Surface roughness increases the aesthetic view and is important to ensure proper function of very precise parts, for instance, sealing shafts and friction plates in the automobile sector. One of the limitations of the FDM process is poor surface quality due to the staircase effect, STL file resolution, and process parameters. The impacts of the staircase effect and STL file resolution depend on the shape complexity of a part (e.g., a curved surface is harder to obtain than a flat surface). The influence of process parameters on surface roughness not only depends on the shape of a part, but also on the setting of process parameters. The surface quality of an FDM built part can be improved by selecting an optimum combination of process parameters. Higher surface quality typically reduces post-processing cost. 
+Vasudevarao et al. [
+28
+] investigated the influence of build orientation, layer thickness, raster width, air gap, and model temperature on the surface roughness. For this, parts produced by the Stratasys FDM 1650 machine for different combinations of process parameters were analyzed by half factorial design. The results of the experiment showed that low layer thickness and high build orientation reduced surface roughness, but other parameters were not significant for surface quality. According to Anitha et al. [
+58
+], among layer thickness, raster width, and print speed, the layer thickness was found to be the most important parameter for surface quality. Raster width and print speed were almost equally significant for surface quality. Thrimurthulu et al. [
+59
+] also recommended a low layer thickness for high surface finishing. The impacts of three process parameters, namely, layer thickness, extrusion temperature, and visible surface, were investigated by Horvath et al. [
+60
+] to know the importance of those parameters for surface roughness, and a full factorial experimental design was used for the experiments. The results of the experimental study were aligned with the results found by Vasudevarao et al. [
+28
+], where layer thickness was the most significant parameter, and the extrusion temperature was insignificant. They also recommended a fine raster width for reducing surface roughness. 
+Wang et al. [
+53
+] studied the impact of six process parameters on surface roughness along with dimensional accuracy. Among the analyzed six parameters, the layer thickness was the most significant parameter for surface roughness, but build orientation in the 
+Z
+-direction was the most significant parameter for dimensional accuracy. Galantucci et al. [
+61
+] experimentally investigated the impact of layer thickness, raster width, and tip size (nozzle diameter) on the roughness of the top and side surfaces. Their results indicated that layer thickness and raster width were significant for the side and top surface roughness of ABS printed parts. Other than dimensional accuracy, Nancharaiah et al. [
+6
+] also investigated the impact of four parameters (layer thickness, raster width, raster orientation, and air gap) on surface roughness. Their results showed that layer thickness and raster width had an influence on surface roughness and also recommended that the negative air gap degraded surface quality.
+Bakar et al. [
+40
+] analyzed layer thickness, shell width, and internal raster to determine the significance of those parameters for improving surface finishing. The surface quality of a top surface is better than the side surface. The shape of a part is important for reducing surface roughness, and a complex curvy surface reduces surface finishing. According to their paper, a wider raster width increases surface finishing as heat and high temperature easily affect the smaller raster. Like other researchers, they also recommended that low layer thickness is preferable for good surface quality. Akande [
+14
+] used a 3D Touch FDM machine and PLA as the filament material to produce cuboid-shaped specimens based on full factorial design, and investigated the importance of layer thickness, infill density and print speed for surface roughness. The lower level of each parameter was optimum for maximizing surface finishing.
+Along with many other part characteristics, Nidagundi et al. [
+7
+] analyzed surface roughness as well. In their research, the analyzed process parameters were build orientation, layer thickness, and raster orientation, and a Taguchi orthogonal array (L9) was applied to reduce the number of experiments. Based on the reduced experimental design, ABS printed parts were produced by a Julia 3D printer and the average 
+R
+a
+ value (surface roughness) was used as a measurement for optimum surface roughness. Their results indicated that 0.1 mm (minimum) layer thickness on the top and side surfaces, 0° build orientation, and 0° raster orientation were the settings for achieving optimum surface roughness. Raju et al. [
+19
+] also showed that layer thickness and build orientation were two significant parameters for surface quality. Valerga et al. [
+62
+] analyzed various PLA filament conditions to know their impact on surface quality, along with the dimensional accuracy and tensile strength of the FDM printed part. They considered extrusion temperature, humidity, and pigmentation color as variables. They drew a conclusion that a lack of pigmentation and a low extrusion temperature were preferable for better surface quality. Unlike most of the previously mentioned research, Pérez et al. [
+63
+] used a cylindrical-shaped specimen instead of a cuboid-shaped specimen. In their study, layer thickness, print speed, extrusion temperature, and shell thickness were the analyzed parameters. Their findings showed that low layer thickness was favored for good surface finishing, but extrusion temperature and print speed were insignificant.
+Short discussion and summary:
+ High surface finishing can be achieved by selecting a low layer thickness because it helps reduce the staircase effect on the printed parts. Other than layer thickness, low extrusion temperature and print speed are preferable to achieve a higher print precision. A high extrusion temperature increases the fluidity of filament materials and further results in high dimensional deviation and surface roughness. Most results indicated that the surface finish of a top printed surface is better than the side surface for any setting of process parameters. Therefore, printing the shortest side of a part in the 
+Z
+-direction is recommended for the FDM process to reduce the overall surface roughness. For an inclined part’s orientation, neither horizontal nor vertical orientations increase surface roughness. Thus, if possible, it is best to avoid printing on an inclined orientation.
+The mechanical properties of a part are important. Depending on the application areas, mechanical properties can be used as one of the guidelines to explore new applications or to determine the expected service life of a part. Due to different process parameters (e.g., extrusion temperature and layer thickness), mechanical properties of an FDM built part are not the same as the mechanical properties of the filament. There were a lot of research efforts that investigated the impact of process parameters on mechanical properties [
+18
+]. Tensile strength, compressive strength, and flexural strength were the three most widely analyzed mechanical properties of FDM parts. In this section, the current research related to tensile strength, compressive strength, and flexural strength is summarized systematically.
+Tensile strength is one of the most analyzed mechanical properties. In most of the papers, the parts for the tensile test were produced according to the American Standard for Testing and Materials (ASTM) D638 standard. This standard is used for testing the tensile properties of thermoplastics. The test specimens were dumbbell-shaped. Some of the recent work is summarized below.
+Montero et al. [
+25
+] investigated five process parameters (air gap, raster width, extrusion temperature, filament color, and raster orientation) and designed their experiment according to fractional factorial design. Their printed specimens were produced from ABS using a Stratasys FDM 1650 machine. The experimental results showed that the air gap and raster orientation were two significant parameters for tensile strength, and a negative air gap and 0° raster orientation were preferable for maximum tensile strength. Es-Said et al. [
+26
+] analyzed the tensile properties of ABS parts manufactured by the FDM process by considering raster orientation as the variable. For this, ABS parts were produced for five different raster orientations. Like other research, it was shown that a raster orientation of 0° was best to maximize the tensile strength. Along with surface roughness and dimensional accuracy, Wang et al. [
+53
+] also analyzed the impact of the six parameters on tensile strength, and showed that build orientation in the 
+Z
+-direction was the most significant parameter for the tensile strength property. Layer thickness, build orientation, raster width, raster orientation, and air gap were considered as variables to examine their impact on tensile strength by Panda et al [
+13
+]. Their experiment was designed according to FCCCD, and a quadratic equation was formulated for the tensile property. They showed that all parameters (other than raster width), and the combinations of parameters were influential for tensile strength.
+Bagsik et al. [
+64
+], Domingo-Espin et al. [
+65
+], and Letcher et al. [
+3
+] tested the tensile strength of Ultem 9085, PC, and ABS parts, respectively, in different build orientations. The first two groups of researchers showed that tensile strength was maximum when build orientation was 0° in the 
+X
+-direction, but the outcome of the third group’s experimental study was different. In separate research, Hernandez et al. [
+66
+] showed that the influence of build orientation was not significant for the tensile strength of ABS P430 built parts. The influence of five process parameters (layer thickness, build orientation, raster orientation, raster width, and air gap) on tensile strength was studied by Sood et al. [
+12
+]. Their parts were built by an FDM machine according to FCCCD; a quadric equation for tensile strength was formulated using the response surface method, and ANOVA was used to determine the significance of different terms in the equation. It was shown that all parameters, excluding raster width, and the interactions of different parameters were significant. They also plotted response surface graphs to visualize the change of tensile strength with the interaction between two parameters. Fatimatuzahraa et al. [
+67
+] investigated the impact of raster orientation on the mechanical properties, including tensile strength, of ABS parts. Three parts, each having four different raster orientations, were produced, and parts were tested by a destructive tensile testing machine. The results concluded that tensile strength was maximum and almost the same at the cross (0°/90°) and crisscross (45°/−45°) raster orientations.
+Croccolo et al. [
+68
+] analyzed the impact of the number of shells on the tensile strength, and showed that the property increases with the increase in the number of shells. Rayegani et al. [
+10
+] investigated five process parameters (layer thickness, build orientation, raster orientation, raster width, and air gap) to get an optimum combination of the process parameters that maximize the tensile strength of ABS printed parts. For this purpose, the group method of data handling (GMDH) approach was used to develop a mathematical model that related process parameters with tensile strength. In order to maximize tensile strength, a differential evolution (DE) optimization approach was applied to get levels of each parameter. The optimization results showed that tensile strength approached a maximum at the minimum setting of layer thickness, build orientation, raster width, and negative air gap. Raster orientation was found to be comparatively less significant. On the other hand, Panda et al. [
+69
+] also used DE to get an optimum combination of process parameters for tensile strength. However, the combination of process parameters (high layer thickness, raster width, and positive air gap) was different from the combination obtained by Rayegani et al. [
+10
+].
+Durgun et al. [
+4
+] analyzed the impact of build orientation and raster orientation on tensile properties. Their experimental investigation results suggested that 0° raster orientation and 0° build orientation were suitable to optimize tensile strength. Build orientation was found to be more significant than raster orientation. Gorski [
+70
+] analyzed the importance of build orientation on tensile strength and the brittleness property of FDM built ABS parts. The author showed that tensile strength was maximum at 0° build orientation. However, the FDM built part became brittle when the build orientations exceeded 20° in the 
+X
+-axis and 25° in the 
+Y
+-axis. Wu et al. [
+71
+] showed that layer thickness and raster orientation were both significant for the tensile properties of PEEK parts. Additionally, the authors also compared PEEK with ABS, and the comparison outcome was that PEEK parts performed better under tensile loading when compared to ABS parts. However, for both materials, the mechanical properties of the FDM parts were worse than injection molded parts.
+Other than dimensional accuracy and surface roughness, Nidagundi et al. [
+7
+] analyzed the impact of layer thickness, build orientation, and raster orientation on the ultimate tensile strength property. The number of experimental runs was selected by a Taguchi orthogonal array, and a low level of S/N ratio for all three parameters was recommended for tensile strength. Ziemian et al. [
+72
+] researched raster orientation as the only variable to determine the significance and the optimum level of the parameter for tensile properties. For this purpose, ABS parts were produced for different raster orientations, and tensile properties (yield strength and ultimate strength) were found to be maximum at 0° raster orientation and minimum at 90° raster orientation. Wittbrodt et al. [
+73
+] showed that the filament color of PLA was found to be significant for tensile properties. Torres et al. [
+74
+] investigated the influence of extrusion temperature, print speed, raster orientation, infill density, layer thickness, and perimeter (number of shells) on the tensile properties of PLA parts for different build orientations. Their outcome indicated that build orientation was one of the most significant parameters for tensile strength, and other tensile properties were also affected by build orientation.
+Torrado et al. [
+75
+] investigated the tensile strength of FDM parts for a set of unique variables, part geometry, and raster orientation. In their research, ABS parts were built for different geometries (Type I, IV, and V) of ASTM D638 standard, as well as different raster orientations. Rankouhi et al. [
+76
+] analyzed the importance of two process parameters (layer thickness and raster orientation) for the tensile properties of FDM built ABS parts. For experimental analysis, they considered two and three levels of layer thickness and raster orientation, respectively. According to their experimental results and statistical analysis, layer thickness and raster orientation, as well as their interaction, were significant. Additionally, the ultimate tensile strength and elastic modulus were maximum at lower levels of both parameters. The microscopic inspection of the fracture area showed that a smaller air-gap-to-material ratio contributed to tensile properties.
+Chacon et al. [
+11
+] investigated the importance of layer thickness, print speed, and build orientation for tensile properties. They showed that tensile strength was minimum at an upright build orientation (90°) and was almost the same at two other build orientations (on-edge and flat). Another finding was that the levels of layer thickness and print speed depended on build orientation. Uddin et al. [
+77
+] determined the impact of three process parameters on tensile properties. They showed that the mechanical properties of FDM parts, regardless of material, were lower than injection molded parts. The experimental outcomes revealed that the combination of process parameters was the same as the combination obtained by Chacon et al. [
+11
+]. Cantrell et al. [
+23
+] showed that tensile properties (yield strength and ultimate strength) were minimum at upright built orientation, and maximum at flat and on-edge build orientations for ABS and PC parts, respectively. Also, the authors showed that tensile properties were maximum at (0°/90°) and (−45°/45°) raster orientations for ABS and PC parts, respectively. Raney et al. [
+5
+] produced ABS parts using a Uprint SE 3D printer and analyzed the influence of build orientation on tensile strength. Aligned with most researchers, tensile strength was found to be maximum at on-edge build orientation.
+Qattawi et al. [
+20
+] determined significant parameters for tensile properties from build orientation, infill density, infill patterns, print speed, extrusion temperatures, and layer thickness. Among the six parameters, build orientation, layer thickness, infill density, and extrusion temperature were significant for tensile properties (Young’s modulus, tensile strength, yield strength). Liu et al. [
+33
+] analyzed layer thickness, build orientation, raster orientation, raster width, and air gap and determined an optimum combination of process parameters for the tensile properties. The authors designed parts for the tensile test and the experiment according to GB/T 1040.2-2006 (Chinese Standard) and a Taguchi orthogonal array, respectively. From the five parameters, layer thickness (high), build orientation (60°), and raster orientation (−45°/45°) were significant for tensile strength. The optimum levels of significant parameters were different from most of the existing research. Tontowi et al. [
+56
+] investigated layer thickness, build orientation, and raster orientation for tensile strength, as well as dimensional accuracy, and showed that build orientation was the most significant parameter. The authors also recommended that RSM was a better approach than a Taguchi orthogonal array.
+According to Mahmood et al. [
+78
+], the ultimate tensile strength of ABS parts depended on the cross-section area (width × thickness), infill density, and number of shells. The property was proportional to infill density and number of shells; however, it was inversely proportional to the cross-section area. A metamodel for tensile force was developed by Raju et al. [
+19
+], and they showed that layer thickness and build orientation were also the two most significant parameters among the four parameters for tensile properties. Aw et al. [
+79
+] determined the impacts of infill density and infill pattern (rectilinear and line) on the tensile properties of ABS/ZnO and conductive ABS/ZnO (CABS/ZnO) built parts. Their study revealed that 100% infill density and a line infill pattern maximized tensile strength. Similar to Mahmood et al. [
+78
+], Kung et al. [
+80
+] showed that the cross-section area and the number of shells were significant for tensile strength. Additionally, Kung et al. [
+80
+] showed that tensile strength was maximum at a −45°/45° raster orientation.
+Vosynek et al. [
+81
+] compared PETG filaments produced by two different suppliers. They considered filament color, infill pattern, build orientation, infill density, and raster orientation as variables, showing that build orientation was the most significant parameter, and the tensile strength was maximum at a flat build orientation. Infill density and raster orientation were also significant for tensile strength. For FDM produced PEEK parts, Deng et al. [
+82
+] designed experiments according to a Taguchi orthogonal array, and showed that high print speed, low layer thickness, and high extrusion temperature were preferable for tensile strength. However, one of their contradictory outcomes was that the tensile strength was maximum at 40% infill density instead of at maximum infill density (60%). Rinanto et al. [
+83
+] applied the Taguchi orthogonal array for experimental design, and the controllable parameters were infill density, raster orientation, and extrusion temperature for PLA parts. The study revealed that a high extrusion temperature and infill density and a 45° raster orientation were optimum for tensile strength. Fernandes et al. [
+31
+] analyzed infill density, extrusion temperature, raster orientation, and layer thickness, and the optimum combination for tensile properties was high infill density and extrusion temperature, low layer thickness, and 0°/90° raster orientation. On tensile strength, the influence of layer thickness, print speed, and infill density was separately analyzed by Taiyong et al. [
+84
+]. Tensile strength was maximum at low layer thickness and high infill density; however, unlike other research, it was shown that tensile strength was maximum at low print speed. Rodríguez-Panes et al. [
+85
+] compared the tensile properties of FDM built ABS parts and PLA parts by varying layer thickness, infill density, and build orientation. The tensile properties (modulus of elasticity, nominal strain at break, yield stress, and tensile strength) of PLA were better than the case of ABS.
+Short discussion and summary:
+ Compared to any other part characteristics, tensile properties, especially tensile strength, are the most analyzed part characteristics in FDM printed parts. From existing research, the build orientation was found to be the most significant parameter, and tensile strength was maximum at 0° (or flat/on-edge) build orientation. At this build orientation, the direction of filament fiber extrusion is parallel to the direction of the applied load. Layer thickness depends on other parameters, for instance, build orientation, and is optimum at 0° build orientation. Low layer thickness is recommended for tensile properties. It is safe to conclude from the current research, as well as general knowledge, that tensile strength is maximum at high infill density and a high number of shells. At high density, interlayer bonds become strong. High extrusion temperature is preferable for tensile strength. This is because, at a high temperature, the fluidity of the filament increases, and interlayer bonds become stronger. The optimum raster orientation for tensile strength is still contradictory, but it may be concluded that a 0°/90° or −45°/45° raster orientation is optimum. Additionally, the color is also a significant factor for tensile strength, and tensile properties are maximum for natural color filaments.
+For the functional use of FDM printed parts, mechanical properties are also important, along with dimensional accuracy and surface roughness. Compressive strength is one of the most important mechanical properties and, like other part characteristics, it is also affected by process parameters. For the compressive test, almost all papers followed the ASTM 695 standard for compression test of rigid thermoplastics, as there is no standard for testing the mechanical properties of additive manufacturing build parts. In the FDM process, the generally used test specimens for this standard are shaped as follows: (1) right cylinder with 12.7 mm diameter and 25.4 mm height, or (2) rectangular prism with 25.4 mm × 12.7 mm × 12.7 mm dimensions. The speed of the load shell for the testing of compressive properties is in the range of 1.3 ± 0.3 mm/min. In this section, the surveyed literature related to compressive strength is systematically reviewed.
+Ang et al. [
+27
+] used the FDM process to produce an ABS scaffold structure for tissue engineering and analyzed the impact of different process parameters (air gap, raster width, build orientation, build layer, and build profile). Among those parameters, air gap and raster width were the two significant parameters for compressive strength, and the preferable levels for both parameters were lower and upper levels, respectively. Bagsik et al. [
+64
+] analyzed the impact of build orientation on the compressive properties of ULTEM™ 9085 built parts, and only two build directions were considered, 0° and 90°. Their experimental results showed that the compressive property was higher along 90°. Sood et al. [
+8
+] investigated the influence of five process parameters on compressive stress, but also developed a quadratic equation that showed the relationship between process parameters and compressive stress. Their outcomes indicated that a complex nonlinear relation existed, and the interaction of process parameters was also important for compressive stress. Unlike the previous research, their results also showed that low build direction, along with high layer thickness, increased compressive stress, but raster width was insignificant.
+For a full factorial experiment, extrusion temperature, raster width, filament color, raster orientation, and air gap were considered as variables, and the impact of the variables on compressive strength was analyzed by Ahn et al. [
+86
+]. They recommended five build rules for producing a part by FDM based on an experimental study. Unlike most research findings, the experimental results of cylindrical-shaped ABS parts showed raster orientation was significant, but build orientation was insignificant for compressive strength. Lee et al. [
+36
+] analyzed only the influence of build orientation on compressive strength and showed that build orientation was significant, and the strength was maximum at 0°. They concluded that parts produced by additive manufacturing had a low compressive strength compared to other processes, but FDM process produced parts had a relatively good compressive strength. Wu et al. [
+71
+] showed that layer thickness was significant for compressive strength, but their outcomes indicated that the center level maximized the properties. In order to compare ABS and PEEK materials, they produced parts by both materials and tested the compressive strength and modulus. The outcome was that PEEK had higher mechanical properties, although it demonstrated an inconsistent stress–strain curve when compared to ABS. Compressive properties of ABS parts were analyzed by Baich et al. [
+87
+], and the infill pattern was their chosen variable. The summary of their work was that the compressive properties of a part increase as shape complexity increases.
+Hernandez et al. [
+66
+] analyzed the importance of build orientation for maximizing compressive properties, along with other mechanical properties. For this, three levels of the process parameters were considered, and parts were produced by a uPrint SE Plus 3D printer from ABS P430 filaments. The experimental outcome was that 0° build orientation increased compressive strength, compressive yield strength, and compressive modulus. On the other hand, compressive strength was found to be minimum at 45° build orientation. Unlike other researchers, Zaman et al. [
+1
+] produced function parts for the aerospace industry to study how layer thickness, infill pattern, infill density, and number of shells were important for compressive properties. In the paper, the experimental study was designed according to a Taguchi orthogonal array (L8), and specimens were produced from PLA and PETG by a Makerbot Replicator 2X and Open Edge HDE machine, respectively. The outcome of the experiment and statistical analysis (ANOVA and S/N ratio) showed that the compressive strength of PETG built parts was slightly better than PLA built parts. Note that, in their study, different machines were used for different materials.
+Short discussion and summary:
+ Research conducted to analyze the impacts of compressive stress is still limited, and different researches used a different combination of process parameters. In most of the reported research, it was necessary to use the same values for constant parameters for valid comparisons. In our view, further investigation is needed to draw a valid conclusion about the influence of a parameter (or combination of different parameters) on compressive strength. However, from the existing research, it can be initially concluded that a high level of layer thickness increases compressive properties. In addition, part orientation is important for comprehensive strength as it changes the anisotropic properties of FDM parts. From experimental results, as well as general knowledge, it is also safe to conclude that high infill density, complex infill shape, and a high number of shells are preferable for improving the compressive properties of the printed parts. To know more about the influence of process parameters, it is important to investigate extrusion temperature, infill pattern raster width, and raster orientation. According to the state-of-art research, there is still limited research that compares the mechanical properties of parts produced from different materials. This is a research gap that needs to be filled in this field. 
+Flexural strength is an important mechanical property like tensile and compressive strength for functional parts. ASTM D790 is an international standard for testing the flexural properties of thermoplastics. A three-point loading system is typically used for flexural strength. The load is applied to the specimen, and the specimen simply acts as a supported beam. In this section, the existing research on determining the impacts of FDM process parameters on flexural properties is summarized extensively.
+The impact of layer thickness, build orientation, raster width, raster orientation, and air gap on flexural strength was investigated by Panda et al. [
+13
+], along with tensile strength. The outcome of their experimental study and statistical analysis was that all parameters, as well as their combination, were significant for flexural strength. Sood et al. [
+12
+] considered the same parameters, and a response surface equation for flexural strength was developed that showed the relationship between process parameters and the obtained strength. Other than that, response surface plots were also used to describe the significance of the interactions of two parameters for flexural strength. A high level of layer thickness and raster width, and a low level of the other parameters were deemed to increased flexural strength. The optimum raster orientation for flexural strength was determined by Fatimatuzahraa et al. [
+67
+] with ABS parts produced by a Dimension SST 768 FDM machine with four different of raster orientations. They concluded that flexural strength was maximum at a 45°/−45° raster orientation.
+Durgun et al. [
+4
+] investigated build orientation and raster orientation to determine the levels of both parameters that maximized the flexural strength of ABS parts. Their finding was that 0° raster orientation and 0
+○
+ build orientation maximized flexural strength, as well as surface roughness. Lužanin et al. [
+88
+] produced PLA parts by a MakerBot Replicator 2 for investigating flexural strength. The analyzed process parameters were layer thickness, build orientation, and infill density. Based on the experimental results and statistical analysis (ANOVA), layer thickness and the interaction between build orientation and infill density were significant for flexural strength. Raut et al. [
+89
+] analyzed the impact of built orientation on flexural strength of ABS parts produced by a Stratasys FDM machine. For the build orientation, the outcome of the analysis was the same as the outcome by Durgun et al. [
+4
+]. Hernandez et al. [
+66
+] considered only one process parameter, which was build orientation, to analyze the impact on the flexural strength. Parts were produced according to ASTM D790 from ABS P430 filament, and the results indicated that flexural properties, like compressive properties, were maximum at 0° build orientation. Liu et al. [
+33
+] designed their experiments based on a Taguchi orthogonal array, and PLA parts were designed according to GB/T 9341 (a Chinese testing standard). According to ANOVA analysis at a 5% significance level, they concluded that build orientation, layer thickness, and raster orientation were significant for flexural strength.
+Wu et al. [
+71
+] compared flexural properties along with tensile and compressive properties for PEEK and ABS. Unlike tensile and compressive properties, the experimental outcome showed that flexural properties were almost similar for both materials. Christiyan et al. [
+90
+] analyzed the impact of layer thickness and print speed on flexural strength. Unlike most research findings, the composite parts were built from ABS and hydrous magnesium silicate according to ASTM D790. The experimental investigation showed that flexural strength was maximum at a low layer thickness and print speed. The influence of two quantitative parameters (layer thickness and print speed) and one categorical variable (build orientation; flat, on-edge, and upright) on flexural strength was analyzed by Chacon et al. [
+11
+]. For flexural strength, like tensile strength, they developed a quadratic model for each build orientation. The flexural strength was found to be maximum at on-edge build orientation, and optimum layer thickness and print speed depended on build orientation. Raju et al. [
+19
+] considered layer thickness, build orientation, the support material, and the model interior as variables, and ABS parts were produced according to a Taguchi orthogonal array (L18). To demonstrate the relationship between the four process parameters and flexural strength, a linear regression model was developed, and, based on the equation, their research summary was that a high layer thickness and a low build orientation increased the flexural strength.
+Short discussion and summary:
+ Flexural strength is one of the least analyzed mechanical properties in comparison to compressive and tensile strength. Based on the analysis of the existing research, it can be concluded that the relationship between flexural strength and process parameters is more complex compared to tensile or compressive strength. This is because, during flexural strength testing, a component experiences both tensile and compressive force. Flexural strength is maximum at 0° build orientation. In this build orientation, the orientation of the filament is perpendicular to the direction of the load applied. Further research is required to know the impact of various process parameters, including layer thickness, raster orientation, print speed, and air gap on flexural strength. Based on the current literature review, the impact of some parameters such as infill pattern, extrusion temperature, and infill density on flexural properties was not widely analyzed. As one of the future research directions, it will be valuable for public information if more parameters are analyzed simultaneously to know the cumulative impact of printed parts on flexural strength.
+To be able to compete with traditional manufacturing processes, the reduction of lead time, as well as production time, is one of the main concerns for additive manufacturing processes to be employed in industrial settings. Therefore, along with part characteristics such as surface roughness, dimensional accuracy, and mechanical properties, build time reduction is an important requirement for functional part production. In addition, the control of “failures” for build time is very important, for example, blocked nozzles can significantly increase build time. Like other part characteristics of FDM parts, build time is also affected by process parameters, and it can be minimized by selecting an optimum combination of process parameters.
+To know the impact of three process parameters (layer thickness, air gap, and raster orientation) on build time, Nancharaiah [
+9
+] designed an experiment according to a Taguchi orthogonal array (L9) and produced parts by an FDM machine. Along with a positive air gap, a negative air gap was also considered in their work. Their results indicated that a high layer thickness and a positive air gap reduced build time; the layer thickness was the most significant process parameter, and the raster orientation was insignificant for build time. Kumar et al. [
+24
+] investigated the impact of layer thickness, raster orientation, raster width, build orientation, and shell width on build time. They applied a full factorial experimental design to determine the required number of experimental runs for two levels of parameters and produced parts using a Stratasys FDM 200 machine. Their conclusion was similar to the conclusion by Nancharaiah [
+9
+]; the raster orientation was insignificant for build time. The impact of layer thickness, raster width, raster orientation, number of shells, air gap, STL deviation, and STL orientation on build time was studied by Ali et al. [
+91
+]. In their paper, the first-time impact of STL deviation and STL orientation was analyzed. A multilinear regression model for build time was developed at a 95% confidence level, and results showed that STL deviation and STL orientation were insignificant for build time. To determine an optimum combination of three process parameters (layer thickness, build orientation, and raster orientation) for build time, Nidagundi et al. [
+7
+] designed an experiment using a Taguchi orthogonal array. Unlike the previously mentioned papers, they showed that raster orientation, layer thickness, and build orientation were all significant for build time.
+Rhee et al. [
+92
+] investigated layer thickness, shell width, air gap, raster width, raster orientation, and build orientation to know the importance of those parameters for build time. They developed a quadratic response surface equation using a central composite design (CCD) approach for different spatial orientations (rotation around different axes). The outcome of the study showed the layer thickness was the most significant parameter, and other significant parameters were raster orientation and air gap. One contradiction with other reviewed papers was that they claimed raster width was insignificant, but raster orientation was a significant parameter for build time. Other conclusions were the spatial rotation was significant, and the build time was minimum when the shortest side of an object was placed in the 
+Z
+-direction. Srivastava et al. [
+93
+] designed an experiment according to CCD, and considered six controllable parameters with three levels each. Among the studied parameters, the layer thickness, shell width, air gap, and raster width were significant parameters, and the insignificant parameters were raster orientation and build orientation. Wu [
+38
+] studied the impact of layer thickness on some part qualities, and one of them was build time; for this, cylindrical PLA parts were manufactured by a Raise3D N2plus FDM machine. Their outcome was the same as other research, whereby build time decreased with an increase in layer thickness.
+Short discussion and summary:
+ From the outcomes of the reviewed papers on build time, build time was found to be minimum at a high layer thickness, 0° build orientation, and low infill density. Minimum build time means that it is faster to print a part. The impact of raster orientation and raster angle on build time is still unknown. Thus, further analyses are still needed to draw a more valid conclusion. On a separate note, build time may also be significantly affected by the FDM machine itself. A good FDM machine typically can produce a relatively good-quality part faster than a poor FDM machine. One further research direction is to study the influence of the infill pattern and extrusion temperature on build time.
+The part characteristics of an FDM part deteriorate as the complexity of the part’s geometry increases. For instance, the surface quality and dimensional accuracy of a flat-surfaced part are typically better than for a cylindrical or pyramid-shaped part. The staircase effect is a common problem in the FDM process. The support structures of an FDM printed part are typically required for overhanging parts, and the removal of these support structures may reduce part characteristics. The quality of an FDM part depends on process parameters, mechanical properties, and geometrical properties [
+94
+]. Bakar et al. [
+40
+] produced a test model with different shapes (slot, cube, ring cylinder). The authors showed that the impact of process parameters depended on part geometry. They concluded that the cylindrical shape had the maximum surface roughness and dimensional deviation when compared to the other shapes. It was also shown that the diameter size was important for part characteristics. The part with a smaller diameter had a higher surface roughness due to high thermal stress. 
+Sun et al. [
+95
+] mentioned that print speed and the tool path selection also depended on part geometry. In addition, the bonding strength of layers and part characteristics were affected by extrusion temperature, build platform temperature, and cooling rate. Gajdos et al. [
+96
+] performed an experimental study to analyze the impact of printing conditions on the part structure. They showed that structural homogeneity was affected by the shape of a part. For their study, rectangular and circular cross-section parts were produced. Their results showed that extrusion temperature and build platform temperature were more significant for the structural homogeneity of a rectangular cross-section part. Masood et al. [
+97
+] analyzed the impact of build orientation on the volumetric error of a build part. Further, a mathematical model was developed to determine the optimum build orientation that minimized the volumetric error for different part geometries. It was shown that the optimum build orientation depended on part geometry. For uniformly shaped parts (cube or cylindrical parts), a horizontal or vertical build orientation is able to minimize volumetric errors. For non-uniformly shaped parts (pyramid parts), the selection of a build orientation that can minimize volumetric error depends on the overall part geometry’s complexity.
+To analyze the impact of part geometry, Kuznetsov et al. [
+98
+] produced a part that consisted of two coaxial cylinders; one was larger, and the other was smaller in diameter size. Mechanical properties of the part were tested by applying a radial load to the small-diameter cylinder. The experimental study showed that the mechanical performance of a part can be improved in different ways such as by increasing part volume, introducing cavities, and converting an interrupted shell into a continuous shell. Carneiro et al. [
+99
+] produced five wing ribs with different configurations for an aircraft structure from PLA using an FDM process. The authors compared different wing ribs by determining strength, stiffness, and mass. According to their results, printing accuracy and surface finish affect the strength and part cross-section dimension. Mercado-Colmenero et al. [
+100
+] produced a real-world complex functional part (a machine for the olive harvesting process) using the FDM process with PLA as the filament material. It was shown that the FDM process is a promising technology for low-volume industrial complex component manufacturing.
+Short discussion and summary:
+ To explore more on the capabilities of the FDM process and to expand the applications of the FDM process, it is necessary to produce functional parts for research purposes, in addition to testing samples according to international standards (e.g., ASTM). The part characteristics of a complex part can be improved by selecting proper geometrical configurations. The optimal process parameters related to geometrical configurations can be further determined to reduce printing errors and defects. Considering the complex part geometry and process parameters together for improving part characteristics is a research gap in the field of FDM part characteristic optimization. 
+Other than the above-presented works, there are other research efforts that were done in analyzing at least one different part characteristic other than dimensional accuracy, surface roughness, build time, tensile strength, compressive strength, and flexural strength. In 
+Table 2
+, a list of papers is organized based on these categories. Machine/equipment, methods/tools, materials, considered process parameters, and part characteristics are presented. Since there is a lot of scattered information, interested readers are encouraged to further review the work based on their interest. 
+In most of the presented research, the optimum combination of process parameters was determined from an experimental study, and the experimental outcome that generated a better solution was considered as the optimum solution. However, the combination of process parameters for the best solution may be different from the experimental combinations, and they must be within the allowable range of process parameters. To overcome this shortcoming, different optimization methods were employed by different researchers. In most optimization problems, the objective function is a mathematical model that represents the relationship between process parameters and one single part’s characteristic. In multi-objective optimization, a combination of mathematical models is used to represent the relationship between process parameters and multiple parts’ characteristics. The constraints are the allowable range of process parameters; generally, this represents the highest and lowest levels of process parameters from the FDM machine or a range of process parameters that are known to produce good part characteristics. In this section, the papers that employed optimization techniques to get the desired combination of process parameters are summarized.
+Sood et al. [
+8
+] applied quantum-behaved particle swarm optimization (QPSO) to get the optimum combination of five process parameters for compressive strength. In the paper, a quadratic response surface model for compressive strength was generated by MINITAB R14, and the validity of the model was checked by the normal probability plot of residuals. Other than optimization, the compressive strength obtained by the quadratic model was compared to an ANN prediction. Rayegani et al. [
+10
+] developed a mathematical model for tensile strength using a group method for data handling (GMDH), and differential evolution (DE) was implemented to generate the optimum combination of build orientation, raster orientation, raster width, and air gap.
+In some works, characteristics of more than two parts were optimized simultaneously to determine the optimum combination(s) for multiple conflicting characteristics. Sood et al. [
+54
+] determined the optimum combination of five process parameters (layer thickness, build orientation, raster orientation, raster width, and air gap) for three-directional (length, width, and height) dimensional accuracy. The authors used the Taguchi method for optimization of all dimensional accuracies, and an optimal solution that minimized three-directional dimensional accuracy was determined. In addition, the author also employed an ANN approach for prediction. Liu et al. [
+33
+] also applied the Taguchi method for evaluating the levels of process parameters (build orientation, layer thickness, raster orientation, raster width, and raster gap) for tensile strength, flexural strength, and impact strength.
+Sood et al. [
+12
+] published another paper where the desirability function was applied for multi-objective optimization, instead of the gray Taguchi method. In their research, three mechanical properties (tensile, flexural, and impact strength) were optimized simultaneously. Akande [
+14
+] also applied the desirability function to transform two objectives (surface finishing and dimensional accuracy) into one objective and get an optimum combination of layer thickness, print speed, and infill density. Peng et al. [
+35
+] used RSM, fuzzy logic, and the genetic algorithm (GA) to optimize dimensional accuracy, warp deformation, and build time. In their work, the fuzzy logic method was applied to convert three objectives (dimensional accuracy, warp deformation, and build time) into a single objective. Furthermore, this single objective optimization problem was later solved using GA. Srivastava et al. [
+93
+] used RSM combined with Fuzzy logic for optimizing the build time and support material volume simultaneously. Rinanto et al. [
+83
+] used a method called process capability ratio-technique for order performance by similarity to ideal solution (PCR-TOPSIS) to get an optimum combination of extrusion temperature, infill density, and raster orientation for tensile strength, energy consumption, and build time. The above-discussed multi-objective optimization algorithms are able to generate a single optimum solution, and this is a disadvantage of single-solution multi-objective optimization. One of the reasons is that a unique solution may not be valid for multiple responses due to the different users’ requirements. Therefore, multi-objective optimization techniques which generate a set of non-dominated solutions, often known as the Pareto frontier, are more suitable for FDM process parameter optimization.
+There are only limited articles that used multi-objective optimization algorithms that generated a set of optimal solutions. Pandey et al. [
+106
+] minimized surface roughness and build time simultaneously by considering build orientation as a variable. To solve the optimization problem, the non-dominated sorting genetic algorithm-II (NSGA-II), a heuristic algorithm, was used, and a set of optimum solutions was generated. Gurrala et al. [
+15
+] also applied NSGA-II for optimizing tensile strength and volumetric shrinkage simultaneously, and quadratic equations of both part characteristics were determined using Design Expert® software. Finally, a set of non-dominated optimum solutions was generated by NSGA-II. Rao et al. [
+16
+] introduced a teaching–learning-based optimization (TLBO) algorithm and non-dominated sorting TLBO (NSTLBO) algorithm in the field of FDM for single-objective optimization and multiple-objective optimization, respectively, and they showed that the algorithms worked better than many heuristic algorithms including QPSO, GA, and NSGA-II. The recent work on FDM process parameter optimization is summarized in 
+Table 3
+ based on the optimization method employed, process parameters considered, and part characteristics of interest. Please note that, due to the page limitations of this paper, the optimization methods are not discussed in detail. Interested readers are encouraged to review the provided references for more information about the step-by-step optimization procedure for each optimization method.
+Based on the presented research of process parameters, this section describes the major findings and shortcomings of the existing research and the future direction of research in the FDM process parameters optimization. The future direction of research may contribute to increasing FDM usage in industrial mass production, reducing the shortcomings of the FDM process to ensure process efficiency, and improving or optimizing printer part characteristics.
+Limited Materials:
+ One of the disadvantages of the FDM process to be employed in industries is that only limited materials can be used as filaments. ABS and PLA are the two most widely analyzed filament materials, and some other materials such as PC and Ultem 9085 are also considered as other good part materials. Comparing ABS and PLA, PLA is rigid and biodegradable; however, ABS is ductile and heat resistant. ABS has a high tendency to warp when compared to PLA, and the warping occurs mainly due to an uneven cooling rate. The comparison of ABS and PLA is given in 
+Table 1
+. The impact of process parameters on other materials including nylon, PPSF, and TPU is still unknown. Thus, to increase the use of the FDM process and produce parts with different part characteristics, it may be helpful to consider different materials (other than ABS and PLA) as part materials for research purposes, as well as for functional parts. Research efforts aimed at studying the influence of process parameters on two or more materials are still limited. Rodríguez-Panes et al. [
+85
+] concluded that process parameters are more significant for PLA when compared to ABS. The comparison of different materials will be helpful to predict the impact of parameters on new materials, as well as the part characteristics of parts built from new materials. 
+From the existing research, it can be concluded that the part characteristics of FDM parts are worse than the part characteristics of traditional manufacturing processes, for instance, injection molding. To compete with traditional manufacturing processes, it is necessary to improve part quality along with the advantages of the additive manufacturing process. There is a need to explore new materials in addition to developing composite or hybrid filament materials, including bio-composite and bioplastic materials. Two or more thermoplastic blends and reinforced thermoplastics may be two good options for developing new filament materials. 
+Process Parameters:
+ The FDM process consists of several parameters, but layer thickness, build orientation, raster orientation, raster width, air gap, and infill density are the most analyzed process parameters. To explore more about the FDM process, there is a need to know about the least analyzed parameters such as infill pattern, number of shells, shell width, raft thickness, nozzle diameters, build platform temperature, cooling rate, etc. Due to the wide range of different equipment used for the FDM process, some of these parameters may not be always controllable, which eventually makes the analysis rather difficult to be performed. From the existing research, the impact of some process parameters is clear. For example, 0° build orientation maximizes the mechanical properties, dimensional accuracy, and surface finishing and minimizes the build time, as the longest side of a part placed in the 
+XY
+-plane reduces the number of layers, and the downward speed of the build platform (after each layer deposition) is lower than the print speed. Another parameter, infill density, maximizes the mechanical properties (tensile, compressive, flexural, and impact strength) and build time when high. The infill density is not significant for dimensional accuracy and surface roughness.
+Although the FDM process has several parameters, and many of them are interdependent, in most of the existing research, only three to six parameters were considered as variables, and other parameters were considered as constants. A process parameter that is considered as a variable may be affected by the constant values of other parameters. Ideally, a more valuable piece of information can be gained by considering as many parameters as variables as possible. However, in reality, this is not something that is easily achievable. A major disadvantage of considering more variables is the number of experimental runs and the cost (time and resources), which increase exponentially. 
+In the existing research, dimensional accuracy, surface roughness, and several mechanical properties could be improved by optimizing the process parameters. There are many other part characteristics, such as thermal properties, environmental properties, other mechanical properties, support materials, and part shape complexity, which are equally important for functional parts. Optimizing those part characteristics is also important for producing higher-quality FDM parts. This could be a potential future research direction in this field.
+Optimum Combination:
+ In most of the existing research, the optimum combination of process parameters was determined from experimental studies instead of applying numerical optimizations. Thus, an optimum solution is one of the combinations from the experimental data. However, the actual optimal solutions might be different. In addition, there may be some combinations that are not analyzed due to the limited amount of resources, effort, time, and cost. This shortcoming can be overcome by using numerical optimization algorithms. Only a few researchers worked on the numerical optimization of process parameters, and most of them optimized only a single part’s characteristics. However, one of the drawbacks is that optimizing a single part’s characteristics may not always be a practical solution for real-world applications, as a functional part typically requires fulfilling more than one part’s requirements. For this kind of functional part, to get an optimum combination of parameters for multiple parts’ characteristics, multi-objective optimization is a useful approach. There is a need for more research efforts on multi-objective process parameter optimizations for the FDM process.
+In addition to mathematically optimizing process parameters, there are some additional concerns from the practitioners’ perspective. Although optimizing process parameters can give decision-makers a full spectrum of process parameter ranges to obtain the desired part characteristics, the combinations of the best process parameters may not always be achievable in certain FDM machines. This is due to either the FDM printers not offering a certain range of parameters, or some process parameters unable to be controlled. In order to verify that the optimum process parameter combination is applicable, a validation experimental process should be carried out with the results obtained from the mathematical parameter optimization. 
+Process Uncertainty:
+ Another consideration that may improve part characteristics is controlling the uncertainties in the FDM process. FDM is a complex process; a CAD design passes through several stages to an STL file before it can be used to build a physical object. Each stage has different sources of uncertainties, for example, during the printing process, extrusion temperature variability, properties of filaments, feed rate variability, the environment, or ambient conditions. Other sources of uncertainties can be found prior to printing or outside of the printing process, for example, FDM software algorithms, its assumptions, or numerical model approximations. By considering the uncertainties of the FDM process during process parameter optimization, a part with consistent quality and less variation can be produced. There are limited research efforts that considered the uncertainties in the FDM process. Hu et al. [
+107
+] worked on predicting the uncertainty quantification of material properties but not the FDM process. The uncertainty quantification of the FDM process is another good direction of research.
+Multi-Disciplinary Research:
+ Now more than ever, machine learning algorithms are widely applied to data analysis for prediction or learning purposes. These algorithms are also applicable in the field of FDM for the prediction of part qualities, especially in mass-producing FDM parts. In the FDM process, filaments are heated at a high temperature, and the deposited layers are cooled in the build platform. These heating and cooling processes have a significant impact on part characteristics. A closed-loop feedback system through image processing and machine learning algorithms is applicable to control and monitor FDM process performance. Any process parameter deviation may be adjusted based on an advanced control system with some predictive algorithms. By integrating advancements in other disciplines into the FDM process, the realization of the FDM process being employed in an Industry 4.0 setting will be more viable in the near future.
+In this paper, comprehensive information on FDM process parameters and their impact on part characteristics was concisely summarized. The authors of this review article hope to provide readers with a better understanding of the FDM process and its state-of-the-art research. This article also gives general insight into the existing research carried out on process parameter optimization of the FDM process by using different tools such as the design of experiment (DoE), statistical tools, and optimization methods. Overall, FDM process parameters are deemed to be interdependent and significant for part characteristics. The quality of printed parts and the efficiency of the FDM process can be improved by optimizing a certain set of process parameters. Along with summarizing existing works, challenges and opportunities for future research directions are introduced. The key findings of this survey and future research directions are summarized below.
+PLA and ABS are the two most widely used materials. Along with PLA and ABS, other materials such as nylon, PETG, and composite materials can be used as filament materials for research purposes, as well for producing functional parts, to get a wider range of material selections and printed part characteristics.
+Some process parameters such as infill pattern, print speed, shell width, or extrusion temperature are less analyzed compared to layer thickness, build orientation, raster width, or raster orientation. The least known process parameters may be considered as variables for future research directions.
+There is limited research that optimized multiple parts’ characteristics simultaneously. Further research on multi-objective process parameter optimizations can be another direction for future research.
+The FDM process is complex. It consists of several steps, and each step has different levels of uncertainty. Consistency of printed FDM parts can be improved by considering uncertainties during design and manufacturing. Additionally, it is also essential to incorporate the uncertainty of mathematical models and algorithms during analysis.
+Toward a multi-disciplinary research direction, various machine learning algorithms and image processing may be applied for predicting part characteristics in the FDM process.
+Based on the findings of the existing works, some future directions and research gaps were identified for the FDM process. The authors of this review paper hope to encourage the general public to work together to reduce the research gaps in the FDM process, as well as simultaneously increasing FDM’s employment in a wide range of industries, and FDM parts in the market.
+Conceptualization, A.D. and N.Y.; methodology, A.D.; validation, A.D..; formal analysis, A.D.; investigation, A.D.; resources, N.Y.; data curation, A.D.; writing—original draft preparation, A.D.; writing—review and editing, N.Y.; visualization, A.D.; supervision, N.Y.; project administration, N.Y.; funding acquisition, N.Y.
+This research was partially funded by ND-EPSCOR, grant number FAR0030453. 
+The authors declare no conflicts of interest.

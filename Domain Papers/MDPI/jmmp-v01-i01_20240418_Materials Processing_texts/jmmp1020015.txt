@@ -1,0 +1,1655 @@
+Cloud Manufacturing (CM) is the concept of using manufacturing resources in a service-oriented way over the Internet. Recent developments in Additive Manufacturing (AM) are making it possible to utilise resources ad-hoc as replacements for traditional manufacturing resources in case of spontaneous problems in the established manufacturing processes. In order to be of use in these scenarios, the AM resources must adhere to a strict principle of transparency and service composition in adherence to the Cloud Computing (CC) paradigm. With this review, we provide an overview of CM, AM and relevant domains as well as presenting the historical development of scientific research in these fields, from 2002 to 2016. Part of this work is also a meta-review on the domain to further detail its development and structure.
+Cloud Manufacturing (here CM, in other works also CMfg) as a concept is not new and has been executed in enterprises for many years [
+1
+], under different terms, e.g., Grid Manufacturing [
+2
+] or Agile Manufacturing [
+3
+].
+The decision to have a globally distributed production process with many contractors or partners interconnected and related supply chains is a luxurious one. Large global corporations and competition makes “expensive” local production nearly impossible.
+CM is based on the strict service orientation of its constituent production resources and capabilities.
+Manufacturing resources become compartmentalised and connected; they are worked with as service entities, that can be rented, swapped, expanded, dismantled or scaled up or down just by the use of software. This almost instantaneous and flexible model of resource usage is what made the Cloud Computing (CC) paradigm very successful for a number of companies. Here, computing resources and data storage are all virtual, living in large data-centres around the globe, with the user only interfacing these resources through well-defined APIs (application programming interfaces) and paying for only the resources utilised—apart from the costs incurred by the cloud service providers due to their business model and the surcharged or otherwise calculated requirement for profit.
+With this work, we contribute to the dissemination of knowledge in the domain of Additive Manufacturing (AM) and the concept of CM. Cloud Manufacturing can be seen as having two aspects and applications, where the first application is within an industrial environment for which CM provides a concept to embed, connect and utilise existing manufacturing resources, e.g., 3D printers, drilling-, milling- and other machines, i.e., cloud manufacturing is not limited to AM but AM can be utilised within a CM concept. The second application is for end-users that use AM/3D printing resources over the Internet instead of acquiring their own 3D printer. The usage in this second application is highly service-oriented and has mainly end-users or consumers as target clients. The consumers can profit from online-based services without the requirement of having to own either hard- or software resources for 3D printing.
+This work aims to provide an overview of the historical development of scientific research in these domains starting from 2002. With this, we show that the scientific output within these fields has increased by an average of 41.3 percent annually to about 20,000 publications per year (see 
+Section 1.2
+). The latest considered research is from 2016. See 
+Figure 1
+ for a historical trend analysis of the relevant keywords as presented in Google trends. This Figure shows the public interest of this domain.
+To develop a better understanding of the topic at hand, we discuss various terminological definitions found in literature and standards. We give a critique on the common definitions of AM and propose a simpler, yet more accurate definition.
+Cloud Manufacturing relies on a service-oriented concept of production services or capabilities. We extend an existing study on cloud printing services as we see such services as integral components for future CM systems.
+Cloud manufacturing has two aspects which are detailed in this work. First, CM is a methodology that is used within industrial settings for the connection of existing resources to form either a virtual assembly line or to acquire access to a manufacturing resources in a service oriented manner. Due to the globalisation of the industry, manufacturers face increased challenges with shorter time-to-markets, requirements for mass customisation (MC) and increased involvement of customers within the product development process. In order to stay or become competitive, companies must utilise their resources more efficiently and where not available, they must acquire those resources in an efficient and transparent way. These resources must then be integrated into the existing process environment and released when no longer required. The concepts of Cloud Computing, where resources are available as services from providers that can be leased, rented, acquired or utilised in other ways, are proposed to be applied to the domain of manufacturing.
+Resources like machines and software, as well as capabilities/abilities, become transparently available as services that customers or end-users can use through the respective providers and pay for only the services they require momentarily. Most often, no contractual obligations exist between the provider and the consumer (but they can exist, especially for high-value or high-volume usage) which gives the consumer great flexibility at the expense of possible unavailability of resources by the provider.
+In the end-user segment, or the consumer aspect of CM, the user is interested in using AM resources like 3D printers through a Web-based interface in order to be able to have objects produced, that are designed to be 3D printed, without the necessity to purchase and own a 3D printer themselves. The user commonly uses such services in a similar fashion that they would use a (online) photography lab/printing service. The users’ experience and knowledge of AM and 3D printing can vary significantly.
+Although these two aspects seem to be far apart, the commonality between them is that the service operator must provide AM resources in a transparent and usable manner, in both cases. Resources must be provided with clear definitions of the interface to the service, i.e., the data consumed by the service and data rendered by the service. The description and provisioning of the service must be hardware agnostic as the consumer must be able to select the resources required, e.g., have an object manufactured either on a FDM (Fused Deposition Modeling, also Fused Filament Fabrication FFF) machine or an SLA (Stereolithography) machine without the necessity to alter the underlying data and models, but by selection.
+This work is structured as follows: 
+Section 1.1
+ provides information on the objective we accomplish with this review. 
+Section 1.1.1
+ presents the research methodology applied for this work. In 
+Section 1.1.2
+, we disseminate the sources that were used to gather information for this work. 
+Section 1.2
+ provides a dissemination of the scientific research in these fields with a discussion on its historical development. 
+Section 2
+ contains sections on key terminology and their definition throughout literature and standards. We present these terms as well as synonyms and provide an alternative definition as a proposal. 
+Section 3
+ provides a meta-review on the subject for the reader to enhance his/her understanding of the subject and its relevant components.
+In 
+Section 4
+, we discuss the audience or target group for CM- and 3D printing-related cloud services. 
+Section 5
+ extends the study by Rayna and Striukova [
+4
+] due to the importance of 3D printing-related cloud services for the topic at hand. 
+Section 6
+ provides information on the concepts, terminology, and methods relevant to the subject as they are disseminated in literature. We conclude this work with a summary in 
+Section 7
+.
+This review is performed to establish an overview on the concept and implementation of CM and the utilisation of Additive Manufacturing (AM) therein. For better understanding, it is required to become familiar with the various definitions available and the problems arising from inconsistent usage of terminology. For this, we compile differing definitions on key terminology.
+With this work, we aim to present an overview of the topic of CM, and its current research findings. We, furthermore, present a summary overview of existing online and cloud-based 3D printing services that can either be regarded as implementations of CM or be utilised in CM scenarios. This part is to extend the knowledge on relevant online services and their orientation towards numerous services. The review work of this article has the objective to identify relevant literature and summarise the key and essential findings thereof. The review is also intended to provide a high-level overview on identified research needs that are considered essential for the evolution of AM and CM.
+The first part of this review is the analysis of other reviews in order to establish a foundation of the existing works and to have a baseline for the analysis of the literature in this area.
+This review identified its sources by a web search for each of the identified topics depicted in the concept map (see 
+Section 6.1
+), where the first 30 results from the search engines (see 
+Section 1.1.2
+) are each scanned first by title, then by their abstract. For the creation of the topological map, an iterative process is applied. The process starts with the analysis of the following works [
+1
+,
+5
+,
+6
+,
+7
+,
+8
+], which we had prior knowledge of, due to previous engagements in this research area. After the analysis, a backward and forward search is performed.
+The searches for the content of the review are sorted by relevance, according to the search engine operator. The articles are then analysed and their core concepts are presented in this work. For the review, first the titles were checked for applicability to the area of interest. Research that could clearly be identified as out of scope by the title was discarded. The remaining works were divided amongst the authors for analysis of their abstracts. A classification into the topics was performed and discussed amongst the authors. Works that were identified as out of scope based on the analysis of the abstract were also discarded. The remaining literature was consecutively analysed by the authors. Consensus on the abstraction was achieved via discussion.
+The reviews for the meta-review are identified by a web search and data gathered during our review.
+To compile the definitions, an extraction process is employed where the identified literature for the review is the basis for information extraction and dissemination. The compilation is expanded by literature and Internet research for the appropriate keywords and concepts.
+The study by Rayna and Striukova [
+4
+] is extended following the research methodology applied in the original work.
+This review is based on scientific literature acquired through the respective publishers and searched for using the following search engines:
+Google Scholar (
+https://scholar.google.com
+).
+SemanticScholar (
+https://semanticscholar.org
+).
+dblp (
+https://dblp.uni-trier.de
+).
+Web of Science (
+https://webofknowledge.com
+).
+ProQuest (
+https://proquest.com
+).
+Google Scholar (
+https://scholar.google.com
+).
+SemanticScholar (
+https://semanticscholar.org
+).
+dblp (
+https://dblp.uni-trier.de
+).
+Web of Science (
+https://webofknowledge.com
+).
+ProQuest (
+https://proquest.com
+).
+Microsoft Academic Search (
+http://academic.research.microsoft.com
+) is not used for the search as the quality and number of results is unsatisfactory. Scopus (
+https://www.scopus.com
+) is not used for the research, as we have no subscription for it.
+The search engines differ in the handling of grouping and selection operators (e.g., OR, +). For each search engine, the appropriate operators were selected when not explicitly stated otherwise. As a search engine for scientific literature, Google Scholar yields the most results, but with a high degree of unrelated or otherwise unusable sources, similar to the Google search engine (
+https://google.com
+) itself. Furthermore, the search engine enforces strict usage rules, thus hindering automated querying and usage. Results from patents and citations are excluded from the result set for Google Scholar.
+SemanticScholar offers a responsive interface, that allows for automated querying through JSON (JavaScript Object Notation), to “millions” of articles (
+https://www.semanticscholar.org/faq#index-size
+) from computer science—a statement that we cannot verify, as we have seen articles from other domains too. The dblp project indexes over 3,333,333 (news from 3 May 2016: “Today, dblp reached the wonderful “Schnapszahl” of 3,333,333 publications”) from computer science in a very high quality. Its interface allows for automated and scripted usage. Web of Science provides an index of a large number (over 56 (a search for publications with its publication date between 1700 and 2100 yields 56,998,216 results) million) of scientific works. The entries in the index are of high quality but the interface is rather restrictive. ProQuest also has a very restrictive and non-scriptable interface and contains over 54 million (a search for publications with its publication date after 1700 yields 54,266,680 results) entries in its corpus, among which are historical news articles and dissertations. The quality of the results is high. ProQuest and Web of Science are subscription-based services.
+Most of the reviewed literature pertains to FDM technology, to limit the scope of this work. This limitation is arbitrary but warranted as this technology is widespread. Other technologies are considered where appropriate and common concepts are discussed as such.
+The significance and maturity of a research area is reflected in the number of publications available. We perform a keyword-based analysis utilising the sources described in 
+Section 1.1.2
+. The searches are performed with a number of relevant keywords (including various technologies and methods for AM) and a restricted time period of between 2002 and 2016. The queries are also restricted by the type of results, with an exclusion of citations and patents, where applicable. For a study on the patents and the development of patent registrations for this domain, we refer readers to Park et al. [
+9
+].
+Caveat: Searching using search engines for specific keywords such as 
+clip
+ and 
+lens
+ in their abbreviated form will lead to a number of skewed results from works that are not significant for this body of work. For example, the search for “Additive Manufacturing” and LENS yields articles in the results that are either about fabricating (optical) lenses using AM or are about lenses in lasers that are used in AM. In the case of result sets that are as large as ours, it is not feasible to remove those erroneous results and adjust the result set accordingly. We encourage the reader to only take the given numbers as an indication.
+In 
+Figure 2
+, 
+Figure 3
+, 
+Figure 4
+, 
+Figure 5
+, 
+Figure 6
+ and 
+Figure 7
+, the classification of scientific articles according to Web of Science is shown. The classifications do not add up to 100 percent, as the respective articles can be classified in more than one field. In the figures, the number of results per search term is also listed. Domains with less than five percent aggregated classification are grouped together as “OTHER”. Other categories include, for example, food processing, computer science or legal sciences.
+In 
+Figure 8
+, the accumulated prevalence of the terms 3D printing versus Additive Manufacturing (AM) is displayed. For these numbers, queries are made for a combination of search terms and restrictions on the time period. The scale of the Y-Axis is logarithmic due to the large differences in the number of results per search engine. The dblp database returned the lowest number of results, with results consistently less than 10. Google Scholar yielded the largest number of results, with the accumulated number of results for the term AM gaining on the term 3D printing since 2009.
+In 
+Figure 9
+, the prevalence of certain AM or 3D Printing technologies is studied by the number of articles from four different search engines for the respective combination of search terms. The largest number of results are from Google Scholar for search term combinations with “3D Printing”. Furthermore, a generalised search is performed for the terminology “Laser, Lithography and Powder”, e.g., summarising technologies such as SLM (Selective Laser Melting), SLS (Selective Laser Sintering), SLA, LOM (Laminated Object Manufacturing), LENS (Laser Engineered Net Shaping) with the term “Laser”. The search for technologies such as CLIP and LENS is problematic due to the non-specificity of the terminology as described before (see 
+Section 1.2
+).
+In general, the usage of the terminology within this field is very inconsistent. Commonly and colloquially, the terms 3D printing and AM are used as synonyms. Analysing the prevalence of either of these terms, we find that 3D printing is slightly more prevalent for results of scientific literature with 68,164 results for the sources described in 
+Section 1.1.2
+ during the period of 2002–2016. In the same period, there are over 59,506 results for the term Additive Manufacturing. SemanticScholar provided significantly more results (7072 over 1211) for 3D printing and Web of Science yielded almost four times the number of results for Additive Manufacturing over 3D Printing (1956 results to 578). There is also no clear trend in the usage of either term. With this section, we exemplify this situation and present common definitions throughout literature and standards. We, furthermore, add our point of view in the form of a critique at the end of the section.
+In this section, we present established definitions for AM and related terminology as presented in literature and standards.
+AM is most often regarded as an umbrella term for technology and methods for the creation of objects from digital models from scratch. It is usually in contrast to subtractive and formative methods of manufacturing, as defined in the standard [
+10
+]. It is also commonly a synonym for 3D printing.
+Gibson et al. [
+11
+] define AM as: “Additive manufacturing is the formalised term for what used to be called rapid prototyping and what is popularly called 3D Printing. [...] Referred to, in short, as AM, the basic principle of this technology is that a model, initially generated using a three-dimensional Computer-Aided Design (3D CAD) system, can be fabricated directly without the need for process planning. [...]”.
+Gebhardt [
+12
+] defines AM as: “Als Generative Fertigungsverfahren werden alle Fertigungsverfahren bezeichnet, die Bauteile durch Auf- oder Aneinanderfügen von Volumenelementen (Voxel’n), vorzugsweise schichtweise, automatisiert herstellen”, which we translate to “As generative/additive manufacturing processes, all production processes are referred that produce components automatically by depositioning of volume elements (Voxels), preferably layer-wise”.
+The VDI directives VDI 3404 (Version 2009 [
+13
+] and 2014 [
+14
+]) define additive fabrication as: “Additive fabrication refers to manufacturing processes which employ an additive technique whereby successive layers or units are built up to form a model”.
+The 2009 directive “VDI-Richtlinie: VDI 3404 Generative Fertigungsverfahren—Rapid-Technologien (Rapid Prototyping)—Grundlagen, Begriffe, Qualitätskenngrößen, Liefervereinbarungen” and the 2014 directive “VDI-Richtlinie: VDI 3404 Additive Fertigung—Grundlagen, Begriffe, Verfahrensbeschreibungen” are both currently in retracted states.
+The also retracted ASTM standard F2792-12a “Standard terminology for additive manufacturing technologies” defines AM as “A process of joining materials to make objects from 3D model data, usually layer upon layer, as opposed to subtractive manufacturing methodologies”, with the following synonyms listed “additive fabrication, additive processes, additive techniques, additive layer manufacturing, layer manufacturing, and freeform fabrication”. This standard is replaced by ISO/ASTM Standard 52900:2015(E) [
+15
+] through a joint agreement of both organisations.
+Bechthold et al. [
+16
+] define AM as: “The terms additive manufacturing (AM) and 3D printing describe production processes in which a solid 3D structure is produced layer by layer by the deposition of suitable materials via an additive manufacturing machine”.
+Thomas and Gilbert [
+17
+] define AM as: “Additive manufacturing is the process of joining materials to make objects from three-dimensional (3D) models layer by layer as opposed to subtractive methods that remove material. The terms additive manufacturing and 3D printing tend to be used interchangeably to describe the same approach to fabricating parts. This technology is used to produce models, prototypes, patterns, components, and parts using a variety of materials including plastic, metal, ceramics, glass, and composites”.
+Klocke [
+18
+] defines AM as: “Generative Verfahren: Diese Verfahrensgruppe umfasst alle Technologien, mit denen eine aufbauende, schichtweise Fertigung von Bauteilen realisiert wird. Sie werden auch als Additive Manufacturing Technologies oder als Layer-based Manufacturing Technologies bezeichnet. Zum Herstellen der Schichten wird häufig Laserstrahlung verwendet. [...]”.
+Translation “Generative Processes: This process group contains all technologies, with which an additive, layer-wise generation of parts is realised. They are also referred to as additive manufacturing technologies or layer-based manufacturing technologies. For the creation of the layers, often laser emission is used. [...]”.
+Gao et al. [
+19
+] use the term AM and 3D printing synonymously: “Additive manufacturing (AM), also referred to as 3D printing, [...]”.
+Sames et al. [
+20
+] also use the term AM and 3D printing synonymously: “Additive manufacturing (AM), also known as three-dimensional (3D) printing, [...]”.
+Lachmayer and Lippert [
+21
+] define AM as: “Das Additive Manufacturing (AM), als Überbegriff für das Rapid Prototyping (RP), das Rapid Tooling (RT), das Direct Manufacturing (DM) und das Rapid Repair (RR) basiert auf dem Prinzip des additiven Schichtaufbaus in x-, y- und z-Richtung zur maschinellen Herstellung einer (Near-) Net-Shape Geometrie”, which translates to: “Additive manufacturing as an umbrella term for Rapid Prototyping (RP), Rapid Tooling (RT), Direct Manufacturing (DM) and Rapid Repair (RR) is based on the principle of the additive layer fabrication in x-, y- and z-direction for the fabrication of a (near-) net-shape geometry by machines”.
+The ISO/ASTM Standard 52900:2015(E) [
+15
+] defines AM as: “process of joining materials to make parts (2.6.1) from 3D model data, usually layer (2.3.10) upon layer, as opposed to subtractive manufacturing and formative manufacturing methodologies”.
+According to Gebhardt [
+12
+], 3D Printing is a generic term that is synonymous to AM and will replace the term AM in the future due to its simplicity. Bechtholdt et al. [
+16
+] use the terms 3D Printing and AM synonymously, as umbrella terms for technologies and applications. In the VDI directive [
+22
+], the term 3D printing is used for a certain additive process, but it is acknowledged that it is generally used as a synonym for AM.
+The ASTM standard F2792-12a (retracted) defines 3D printing as “The fabrication of objects through the deposition of a material using a print head, nozzle, or another printer technology”, but also acknowledges the common synonymous use of this term for AM, mostly of low-end quality and price machines.
+Gibson [
+11
+] uses the term 3D Printing for the technology invented by researches at MIT [
+23
+], but also acknowledges that it is used synonymously for AM and will eventually replace the term AM due to media coverage.
+The ISO/ASTM Standard 52900:2015(E) [
+15
+] defines 3D Printing as: “fabrication of objects through the deposition of a material using a print head, nozzle, or another printer technology”.
+It is also noted in this standard that the term 3D printing is often used as a synonym for AM, mostly in a non-technical context. Furthermore, it is noted that 3D printing is associated with low-price and -capability machines.
+In Hopkinson and Dickens [
+24
+], Rapid Prototyping (RP) is defined as: “RP refers to a group of commercially available processes which are used to create solid 3D parts from CAD, from this point onwards these processes will be referred to as layer manufacturing techniques (LMTs)”.
+The VDI directive 3405 defines RP as: “Additive fabrication of parts with limited functionality, but with sufficiently well-defined specific characteristics”.
+Weber et al. [
+25
+] define RP as: “Early AM parts were created for the rapid prototyping market and were first employed as visual aids and presentation models. Many lower cost AM systems are still used in this way”.
+Hopkinson et al. [
+26
+] define Rapid Manufacturing (RM) as: “the use of a computer aided design (CAD)-based automated additive manufacturing process to construct that are used directly as finished products or components”. Previously, Hopkinson and Dickens [
+24
+] defined RM as: “Rapid manufacturing uses LMTs for the direct manufacture of solid 3D products to be used by the end user either as parts of assemblies or as stand-alone products”.
+The VDI directive 3404 Version 2009 [
+13
+] defines RM as: “Additive fabrication of end products (often also described as production parts). Characteristics: Has all the characteristics of the end product or is accepted by the customer for “series production readiness”. Material is identical to that of the end product. Construction corresponds to that of the end product”.
+The VDI directive 3405 [
+22
+] defines RM as a synonym for direct manufacturing, which is defined as: “Additive fabrication of end products”.
+King and Tansey [
+27
+] define Rapid Tooling (RT) as an extension of RP as such: “Rapid tooling is a progression from rapid prototyping. It is the ability to build prototype tools directly as opposed to prototype products directly from the CAD model resulting in compressed time to market solutions”.
+The VDI directive 3405 [
+22
+] defines RT as: “The use of additive technologies and processes to fabricate end products which are used as tools, moulds and mould inserts”.
+Weber et al. [
+25
+] define RT as: “Another class of applications for AM parts is patterns for tooling or tooling directly made by AM. AM processes can be used to significantly shorten tooling time and are especially useful for low-run production of products”.
+The work by Li et al. [
+28
+] appears to be the first to introduce the concept and definition of Cloud Manufacturing (CM), but unfortunately this article is only available in Chinese and could therefore not be verified. The article is cited by more than 450 publications according to Google Scholar.
+Wu and Yang [
+29
+] define CM as such: “Cloud manufacturing is an integrated supporting environment both for the share and integration of resources in enterprise. It provides virtual manufacturing resources pools, which shields the heterogeneousness and the regional distribution of resources by the way of virtualisation. cloud manufacturing provides a cooperative work environment for manufacturing enterprises and individuals and enables the cooperation of enterprise”.
+Tao et al. [
+30
+] define CM indirectly by the following description: “Cloud manufacturing is a computing and service-oriented manufacturing model developed from existing advanced manufacturing models (e.g., ASP, AM, NM, MGrid) and enterprise information technologies under the support of cloud computing, IoT, virtualisation and service-oriented technologies, and advanced computing technologies”.
+Xu [
+31
+] defines CM similar to the NIST definition of CC as: “a model for enabling ubiquitous, convenient, on-demand network access to a shared pool of configurable manufacturing resources (e.g., manufacturing software tools, manufacturing equipment, and manufacturing capabilities) that can be rapidly provisioned and released with minimal management effort or service provider interaction”. This definition is also used in the work by Wang and Xu [
+6
+].
+Zhang et al. [
+32
+] describe CM as: “Cloud manufacturing (CMfg) is a new manufacturing paradigm based on networks. It uses the network, cloud computing, service computing and manufacturing enabling technologies to transform manufacturing resources and manufacturing capabilities into manufacturing services, which can be managed and operated in an intelligent and unified way to enable the full sharing and circulating of manufacturing resources and manufacturing capabilities. CMfg can provide safe, reliable, high-quality, cheap and on-demand manufacturing services for the whole life cycle of manufacturing.”
+As with the previous definitions for AM, RP, RT, RM, and 3D printing, there is no consensus in the terminology for synonyms of AM in general. The following synonyms can be found in literature and are used in existing works.
+direct layer manufacturing or layer manufacturing or additive layer manufacturing
+direct digital manufacturing is a synonym for rapid manufacturing [
+11
+]
+solid freeform fabrication (SFF), three dimensional printing [
+25
+]
+3D printing, Additive Techniques, Layer Manufacturing, and Freeform fabrication [
+33
+]
+additive fabrication, additive processes, additive techniques, additive layer manufacturing, layer manufacturing, and freeform fabrication [
+34
+] (also 
+https://wohlersassociates.com/additive-manufacturing.html
+)
+“The technical name for 3D printing is additive manufacturing [...]” [
+35
+]
+Through a systematic decomposition of the existing definitions of AM, we conclude that the basic commonality of AM is described as the creation of a physical object from a digital model by a machine.
+Furthermore, we propose the term AM as an umbrella term that signifies industrial, commercial or professional application and usage whereas 3D printing can be colloquially used for technologies and methods for the creation of physical objects from 3D (CAD) models in other situations.
+For the actual building machines of additively manufactured parts, we recommend the synonymous use of an AM fabricator or 3D printer. The first as it describes the functionality in a precise way and the second as it is commonly used and understood by a broad audience.
+The existing definitions fall short on their focus on the layer-wise creation of objects. As a counter-example, technologies such as LENS and multi-axis (n > 3) are not bound and defined by a layer structure, but can be regarded as a form of AM as they create objects based on 3D (CAD) models from scratch, without any of the characteristics of traditional subtractive or formative fabrication methods.
+The topic of AM in general and its special applications, technologies and directions is extensively researched and results are published in literature. The growth of the number of publications as found by Google Scholar and Proquest is illustrated in the following figures (see 
+Figure 10
+ and 
+Figure 11
+).
+An analysis of literature within this domain from sources (see 
+Section 1.1.2
+) of scientific literature shows an increase in the number of published works from 2002 to 2016 of 41.3% on average (see 
+Figure 10
+)—26.1% for the search engine Proquest. This number is from the average growth of results found for keywords related to specific AM topics and AM related literature in general from 
+http://scholar.google.com
+.
+In this section, we will present the findings of the analysis of available data on the scientific publications.
+Specific aspects of AM, 3D printing and associated areas are the topic of a number of reviews listed below. The list of reviews is compiled by searching using the previously mentioned search engines (see 
+Section 1.1.2
+) using a keyword search. The keywords are “3D Printing” +Review/Survey/“State of the Art”, “Additive Manufacturing” +Review/Survey“State of the Art”, “Rapid Manufacturing” +Review/Survey“State of the Art”.
+The time range for the search for reviews is restricted to the period 2005–2016. Following this literature search, a backward search on the results is performed. From the 70 reviews identified, we calculate the average number of authors per review to be 3.3 with an average length of 15.2 pages. The list is sorted chronologically with the general theme or domain of the review provided.
+Dimitar Dimitrov, Kristiaan Schreve and N. de Beer [
+36
+]; General Introduction, Applications, Research Issues
+Vladimir Mironov, Nuno Reis and Brian Derby [
+37
+]; Bioprinting, Technology
+Ben Utela et al. [
+38
+]; New Material Development (Mainly Powders)
+Abbas Azari and Sakineh Nikzad [
+39
+]; Dentistry, Applications in Dentistry
+Hongbo Lan [
+40
+]; Rapid Prototyping, Manufacturing Systems
+Daniel Eyers and Krassimir Dotchev [
+41
+]; Rapid Manufacturing, Mass Customisation
+Ferry P. W. Melchels, Jan Feijen and Dirk W. Grijpma [
+42
+]; Stereolithography, Biomedical Engineering
+Fabian Rengier et al. [
+43
+]; Medicine, Data Acquisition (Reverse-Engineering) using Image Data
+R. Sreenivasan, A. Goel and D. L. Bourell [
+44
+]; Energy Consumption, Sustainability
+Rupinder Singh [
+45
+]; Rapid Prototyping, Casting
+R. Ian Campbell, Deon J. de Beer and Eujin Pei [
+46
+]; Application and Development of AM in South Africa
+Benjamin Vayre, Frédéric Vignat and François Villeneuve [
+47
+]; Metal Components, Technology
+Dongdong Gu et al. [
+48
+]; Metal Components, Technology, Terminology
+Ferry P. W. Melchels et al. [
+49
+]; Medicine, Tissue and Organ Engineering
+Kaufui V. Wong and Aldo Hernandez [
+50
+]; General, Technology
+Lawrence E. Murr et al. [
+51
+]; Metal Components, EBM, Laser Melting
+Shawn Moylan et al. [
+52
+]; Quality, Test Artifacts
+Timothy J. Horn and Ola L. A. Harrysson [
+53
+]; General, Applications, Technology
+Xibing Gong, Ted Anderson and Kevin Chou [
+54
+]; EBM, Powder Based AM
+Flavio S. Fogliatto, Giovani J.C. da Silveira and Denis Borenstein [
+55
+]; Mass-Customization
+K. P. Karunakaran et al. [
+56
+]; Rapid Manufacturing, Metal Object Manufacturing
+Carl Schubert, Mark C. van Langeveld and Larry A. Donoso [
+57
+]; General
+Irene J. Petrick and Timothy W. Simpson [
+58
+]; Economics, Business
+Iulia D. Ursan, Ligia Chiu and Andrea Pierce [
+59
+]; Pharmaceutical Drug Printing
+Jasper Cerneels et al. [
+60
+]; Thermoplastics
+Mohammad Vaezi, Hermann Seitz and Shoufeng Yang [
+61
+]; Micro-Structure AM
+Nannan Guo and Ming C. Leu [
+62
+]; General, Technology, Materials, Applications
+Olga Ivanova, Christopher Williams and Thomas Campbell [
+63
+]; Nano-Structure AM
+Robert Bogue [
+64
+]; General
+Samuel H. Huang et al. [
+65
+]; Socio-Ecological and Economy
+Zicheng Zhu et al. [
+66
+]; Hybrid Manufacturing
+Dazhong Wu et al. [
+67
+]; Cloud Manufacturing
+Bethany C. Gross et al. [
+68
+]; Biotech, Chemistry
+Brett P. Conner et al. [
+69
+]; Classification, Object Complexity
+Brian N. Turner, Robert Strong and Scott A. Gold [
+70
+]; Thermoplastics, Physical Properties
+David W. Rosen [
+71
+]; Design for Additive Manufacturing
+Dimitris Mourtzis, Michael Doukas and Dimitra Bernidaki [
+72
+]; Simulation
+Douglas S. Thomas and Stanley W. Gilbert [
+17
+]; Economy, Cost
+Gustavo Tapia and Alaa Elwany [
+73
+]; Process Monitoring, Quality
+Hae-Sung Yoon et al. [
+74
+]; Energy Consumption
+Jan Deckers, Jef Vleugels and Jean-Pierre Kruth [
+75
+]; Ceramics AM
+Rouhollah Dermanaki Farahani, Kambiz Chizari and Daniel Therriault [
+76
+]; Micro-Structure AM
+Siavash H. Khajavi, Jouni Partanen and Jan Holmström [
+77
+]; Supply Chain, Application
+William E. Frazier [
+78
+]; Metal Components
+Wu He and Lida Xu [
+8
+]; Cloud Manufacturing
+Syed Hasan Massod [
+79
+]; Fused Deposition Modeling (FDM)
+Brian N. Turner and Scott A Gold [
+80
+]; Thermoplastic AM, Material Properties
+Carlos Mota et al. [
+81
+]; Medicine, Tissue Engineering
+C. Y. Yap et al. [
+82
+]; SLM
+Donghong Ding et al. [
+83
+]; Metal Components, Wire Fed Processes
+Adamson et al. [
+84
+]; Cloud Manufacturing, Terminology
+Jie Sun et al. [
+85
+]; Food Printing, Technology
+Jin Choi et al. [
+86
+]; 4D Printing
+K. A. Lorenz et al. [
+87
+]; Hybrid Manufacturing
+Merissa Piazza and Serena Alexander [
+88
+]; General, Terminology, Academic
+Omar A. Mohamed, Syed H. Masood and Jahar L. Bhowmik [
+89
+]; Process Parameter Optimization (FDM)
+Seyed Farid Seyed Shirazi et al. [
+90
+]; Tissue Engineering, Powder Based AM
+Sheng Yang and Yaoyao Fiona Zhao [
+91
+]; Design for AM, Complexity
+Sofiane Guessasma et al. [
+92
+]; Design for AM, Process Parameter Optimization
+Wei Gao et al. [
+19
+]; General, Technology, Engineering
+Yong Huang et al. [
+93
+]; General, Technology, Research Needs
+Zhong Xun Khoo et al. [
+94
+]; Smart Materials, 4D Printing
+Hammad H. Malik et al. [
+95
+]; Medicine, Surgery
+Jie Sun et al. [
+96
+]; Food Printing
+Behzad Esmaeilian, Sara Behdad and Ben Wang [
+97
+]; Manufacturing
+H. Bikas, P. Stavropoulos and G. Chryssolouris [
+98
+]; General, Technology
+Julien Gardan [
+99
+]; Technology, Engineering, Manufacturing
+Swee Leong Sing et al. [
+100
+]; Metal Components, Medicine, Implants, Materials
+William J. Sames et al. [
+20
+]; Metal Components, Materials
+Andrew J. Pinkerton [
+101
+]; Laser-technology
+Different 3D printing technologies, machines and manufacturers, as well as services, target different clients, for which we propose the following classification. Generally, the discerning factors are
+
+cost per machine
+quality of print (e.g., surface quality, physical properties of object)
+reliability of machine and
+materials available.
+cost per machine
+quality of print (e.g., surface quality, physical properties of object)
+reliability of machine and
+materials available.
+From literature, three classes of audience are apparent:
+consumer/end user
+professional user
+industrial application.
+consumer/end user
+professional user
+industrial application.
+For the consumer, a very important factor is the cost of the printer itself, with 45% of consumers not willing to pay more than 
+$
+US299 for a 3D printer [
+102
+].
+In recent years, the price of entry level consumer 3D printers, especially for build-kits, decreased to about 
+$
+US300 (XYZPrinting da Vinci Jr. 1.0, 
+$
+US297.97, 
+https://www.amazon.com/XYZprinting-Vinci-Jr-1-0-Printer
+). Open-source projects, such as RepRap have contributed to the decline of costs for these machines [
+103
+].
+In 
+Figure 12
+, we differentiate between the user groups of end-users/consumer, professional users and industrial users. Industrial users rely on high quality available with a large selection of processable materials. Machines for these users are expensive and out of reach for most end-users and professional users. The quality these machines produce is very high and the objects can be used for integration in a product or be a product themselves. Due to these restrictions, the availability of such machines is not very widespread but limited to highly specialised enterprises.
+At the other end of the spectrum, the end-user/consumer has a large choice of 3D printers to select from: they are relatively inexpensive, produce objects of acceptable quality, work on a much lower number of materials (typically thermoplastics) and have a reliability that is lower than the reliability of professional equipment. In the middle of the spectrum, we see professional users, e.g., from design bureaus or architects, that use such machines in a professional manner and draw benefits from the usage of such technology; however, in general, it is not their main area of business. As an example, an architect makes use of a 3D printer for the creation of a high-quality model of a building he designed, which is faster and easier than making such a model by hand.
+There are numerous dedicated 3D printing services available to end-users, professionals and industrial users. They differ with regards to the clients they address, the services they offer, the quality they can provide and their cost. In this section, we give an overview of a selection of available 3D printing services. The list is not conclusive as a number of enterprises do offer 3D printing services in their portfolio but they are not necessarily to be considered 3D printing services due to either their local mode of operation or the number of 3D printers the user can chose from. This overview is closely based on the work of [
+4
+] and extends its findings.
+We use the following list of properties to distinguish the services:
+The target group (end-users, industrial users or professional users).
+The geographic reach (local or global).
+Availability of an API.
+Services rendered (design, 3D printing, marketplace, other).
+The target group (end-users, industrial users or professional users).
+The geographic reach (local or global).
+Availability of an API.
+Services rendered (design, 3D printing, marketplace, other).
+Rayna and Striukova [
+4
+] based their exploratory study on the following list of services they have identified. For the original list of services, we add the following information.
+3D Burrito (
+http://3dburrito.com
+)—Pre-Launch Phase
+3D Creation Lab (
+http://www.3dcreationlab.co.uk
+)
+3DLT (
+http://3dlt.com
+)—Shut down on 31 December 2015
+3DPrintUK (
+https://www.3dprint-uk.co.uk
+)
+Additer.com (
+http://additer.com
+)—Unreachable
+Cubify Cloud (
+http://cubify.com
+)—Acquired by 3D Systems, Service no longer available
+i.Materialise (
+https://i.materialise.com/
+)
+iMakr (
+http://imakr.co.uk
+)
+Kraftwürx.com (
+http://www.kraftwurx.com
+)
+MakerBot/Thingiverse (
+http://thingiverse.com
+)
+MakeXYZ (
+https://www.makexyz.com
+)
+Ponoko (
+https://www.ponoko.com/
+)
+Sculpteo (
+https://www.sculpteo.com
+)
+Shapeways (
+http://www.shapeways.com/
+)
+For this study, we extend the selection with the additional services listed in 
+Table 1
+ and 
+Table 2
+. Services omitted in these two tables are described in the original study.
+In contrast to the authors of the original work, we think that an exhaustive list of such services is impossible to compile as a large number of local businesses do offer 3D printing services over the Internet and would therefore qualify to be included in such a list. These (local) businesses are hard to identify due to their limited size and reach. Also, an exhaustive list would need to contain 3D printing services and repositories of which many similar and derivative services exist.
+Further, we extend the classification and study to the provisioning of an API (Application Programming Interface) by the respective service. An API should provide methods to use the service programmatically. With an API, such printing services can be used as a flexible production means in CM settings. The range of functionality of such APIs can vary significantly and range from the possibility of having a widget displayed on a website with a 3D model viewer, to uploading and storing digital models in a repository, requesting quotes for manufacturing or digital fabrication. A commonality for these APIs is the requirement for the third-party user to have an account with the service, which is indicated in 
+Table 3
+ and 
+Table 4
+ by 
+Implementer
+ in the column 
+Required for registration
+. The indication 
+User
+ in this column indicates that the user must be registered with this service too.
+The implementer registration is intended for scenarios where the API is embedded in a service or website that a third party user then uses. The findings of this study are presented in 
+Table 3
+ and 
+Table 4
+, where we state whether the service provides an API and if it is publicly available or only accessible for business partners; who needs to be registered for the usage of the API; and what capabilities the API provides (See 
+Table 5
+).
+This explorative extension study is performed as described by the original authors.
+As analysed in 
+Table 5
+, the services surveyed offer a different range of services each. No provider could be identified that offers a complete set of services for 3D printing and related tasks. In the table, the indication of 
+p
+ marks companies that do not themselves offer printers through this service but their parental companies do. The 
+o
+ character in the column for printing service for Tinkercad and YouMagine, indicates that the service itself does not provide printing services, but cooperates with a third party for the provision of this service. In this table, the plus sign 
++
+ indicates that a service is regarded in the specific category. With the exception of La Poste, UPS and iMakr, all the services carry out their business completely on the Internet without the requirement for physical interaction. La Poste and UPS offer an Internet interface with the physical delivery of the objects in some of their shops. Services that offer a design market place can offer designs and other files free-of-charge or for a fee—no distinction is made for this study. Yeggi and stlfinder are search engines for 3D model data that work on the data from other sources. Although it is a search engine, Yeggi provides the integration of printing services and cloud printing services for models available from third party services, thus Yeggi can be classified as a service of services. The service rendered by Trinpy is subscription-based with various membership options. Grabcab provides 3D printing planning and control services, and integration with an online editor.
+Cloud Manufacturing is mainly an overlapping manufacturing or engineering concept, with application and grounding in the development of parts or objects in “traditional” manufacturing. With traditional manufacturing, we denote all technologies and methods to create or fabricate objects or parts, other than AM. For a distinction between manufacturing methods, see Klocke [
+18
+], Nee [
+104
+], and the DIN Standard 8580 [
+10
+]. In this sense, all subtractive or formative manufacturing methods are summarised as “traditional manufacturing” methods. As AM offers a large degree of flexibility due to short lead times, as well as other beneficial properties, we see that AM is the ideal technology to be considered within CM scenarios. Taking the properties of AM into account, we do not predict that AM will replace other manufacturing methods, not even within CM scenarios. Rather, AM will fill niches for special applications such as mass-customisation, rapid replacement production capabilities or RT, especially within CM scenarios. With this work, we aim to contribute to the development of AM methodology and technology in the CM paradigm.
+In 
+Figure 13
+, the relationship and connection of various concepts relevant to CM is depicted. This map forms the basis of the following review; the nodes from the map represent sections for the review in which we present the current state of research and elaborate on open research questions. The topics are extracted from literature.
+This topological map displays the relationship of CM with a variety of connected and enabling technologies, and concepts. Additive Manufacturing/3D printing (see 
+Section 6.4
+) enables CM to be more modular, flexible and offers new capabilities, and business opportunities. The Rapid Technology (see 
+Section 6.5
+) and its composition Rapid Prototyping (RP, see 
+Section 6.5.3
+), Rapid Manufacturing (RM, see 
+Section 6.5.2
+) and Rapid Tooling (RT, see 
+Section 6.5.1
+) are areas in which CM can be applied. The topic of Service Orientation (see 
+Section 6.9
+) and its composition “as-a-Service”, of which Design-as-a-Service (DaaS, see 
+Section 6.9.2
+), Testing-as-a-Service (TaaS, see 
+Section 6.9.3
+) and Manufacturing-as-a-Service (MaaS, see 
+Section 6.9.1
+) are explored as examples; these are concepts that enable the efficient application of CM. For a broader understanding, it is required to research the stakeholders involved in this technology; this is done in 
+Section 6.8
+. The topics of Scheduling, (see 
+Section 6.12
+) and Resource Description (see 
+Section 6.13
+) are to be discussed for the universal and efficient application of CM. The domain of Simulation (see 
+Section 6.7
+), with its composition of Optimisation (see 
+Section 6.7.2
+) and Topological Optimisation (see 
+Section 6.7.1
+), enable a more rapid, more flexible and more robust usage of the technology. For AM technology, the application of Topology Optimisation enables the benefits of this technology. The topic of 3D printing or AM is described in 
+Section 6.4
+, with its subtopic of Accuracy and Precision (see 
+Section 6.4.1
+). The topic of Hybrid Manufacturing (see 
+Section 6.6
+) is gaining importance in flexible and agile manufacturing systems which warrants and requires its research. On the topic of Technology (see 
+Section 6.2
+), the general principles and technologies of CM and AM are discussed, as these are basic principles for the efficient implementation of these systems. The topic of Cloud Computing (CC, see 
+Section 6.11
+) with its sub-components Internet of Things (IoT, see 
+Section 6.11.1
+) and Cyber-physical Systems (CPS, see 
+Section 6.11.2
+) is the conceptual progenitor of CM and, therefore, requires careful studying. IoT and CPS are key enabling technologies for CM. The topic of Security (see 
+Section 6.3
+) is of increasing importance, with the spreading application of AM and CM, as cyber attacks become more frequent and potential damage increases.
+A large number of technologies and technological advances have made it possible for AM to evolve from its origin as a RP method to its current state, where it is used for end-part manufacturing (RM) and is available to consumers [
+12
+,
+105
+]. All 3D printed objects are based on a digital model. This model can either be created using CAD software, 3D sculpting software, or acquired using reverse-engineering methods (e.g., object scanning or photo reconstruction) [
+11
+].
+Although direct slicing from a CAD model was proposed by Jamieson [
+106
+] in 1995, it is still rarely performed. Direct slicing requires implementation in the CAD software for each printer type and printer manufacturer, which is not feasible. Further shortcomings of the de-facto standard file format for AM, i.e., STL, namely the possibility of containing mis-aligned facets, holes or being non-watertight, as well as being too large in file size, are reported by [
+107
+].
+Besides a Steiner-patch-based [
+108
+] file format to replace the STL file format, the ASTM Committee F42 has published an ISO Standard [
+109
+] for the AMF (Additive Manufacturing File Format), with the same intention. Both file formats are created to increase the accuracy for the models described and, therefore, increase the quality of the resulting printed objects. STL seems to be the prevalent file format for AM with 25,700 results on Google Scholar compared to 8230 results for AMF. Further investigation into the file support for different hard- and software vendors is warranted but out of the scope of this work.
+The review by Dimitrov et al. [
+36
+] presents further information on the technology that AM is based on with an overview of applications for it.
+In the review by Esmaeilian et al. [
+97
+], the authors present the relationship of AM and Manufacturing in general, as well its benefits. With the emergence of Internet- or cloud-based CAD Modelling software, the creation of models for AM becomes easier, as direct integration of 3D printing providers is possible.
+Furthermore, the collaborative aspect of 3D modelling is enhanced as studied by Jou and Wang [
+110
+]. This study used a group of college students as a test group and investigated the adoption of an online CAD modelling (Autodesk AutoCAD (
+http://autodesk.com/products/autocad
+)) software in the curriculum.
+The authors, Andreadis et al. [
+111
+], present a case study on the adoption of an unnamed cloud-based CAD system in comparison to traditional software, as well as an exhaustive list of benefits of cloud-based software.
+Wu et al. [
+112
+] present an economic analysis of cloud-based services for design and manufacturing. This work also explores a number of cloud-based services along with their pricing.
+Communities are of great importance to enterprises, as shown in West and Kuk [
+105
+]. One form of community is a repository for 3D printable digital models that collects and curates models supplied by users for collaboration, exchange, co-creation, and sale. In this work, the authors conduct a study to research the profit of catering for such a community/repository (Thingiverse) by a former open-source company (Makerbot).
+Wittbrodt et al. [
+113
+] performed experiments to determine the ROI (Return on Investment) of 3D printers for common households and their feasibility in application in end-user scenarios. With their experiment, they concluded that an average household can achieve between 40 and 200 percent ROI, based on average usage of such machines.
+Security for 3D Printing, AM or CM can be discussed from at least three perspectives. The first perspective would be the legal security of data and models processed within such a scenario. Discussions can range from whether it is legal to manufacture an existing object (replication) which might be protected by intellectual copyright laws to questions regarding product liability in the case of company-supplied model data. The second perspective is closely related to intellectual property (IP) as it is the technological discussion about the safeguarding of digital model files and data. The third perspective is about the data and process security itself, in scenarios with malicious third-parties (e.g., Hackers, Cyber-criminals). This third perspective is not limited to AM but shares many problems with CC and computing in general.
+Dolinksy [
+114
+] analysed the concept of copyright and its application to 3D Printing for the jurisdiction of the USA. Because legal systems are different to each other, such an analysis cannot be exhaustive.
+Grimmelmann [
+115
+] further exemplified the legal status of 3D printing and model creation in the USA with fictitious characters from literature and cinema. He stated that the creation of an object, regardless of the source of the model for such a creation, is infringing on copyright if the object that is replicated is protected by copyright.
+In [
+116
+], the author discussed the current situation of 3D printing in regard to gun laws. This discussion was started by the media in 2013, as models for a functional plastic gun were distributed and the gun consequently manufactured. The author stated that current gun control laws are adequate to control 3D printed weapons and that this is currently not a big issue.
+On a broader scope, the authors McNulty et al. [
+117
+] researched the implications of AM for the national security of the USA, where the authors presented the benefits of bio or tissue 3D printing for the treatment of battlefield wounds as well as the implications of AM technologies for criminal misconduct.
+For the analysis of data security, the authors Wu et al. [
+118
+] presented the importance of such technologies within a CM environment. They proposed the development of trust models for cyber-physical systems, as well as discussing the actors within such systems.
+The authors Yampolskiy et al. [
+119
+] provided a full risk analysis of a scenario for outsourcing AM under consideration of IP. The risk assessment did not include malicious behaviour other than IP infringement.
+To secure printed objects against counterfeiting, the authors of [
+120
+] studied and recommended the use of chemical components for authentication. Possible attacks on the 3D printing process by third parties is researched in [
+121
+], where one scenario is about wilfully integrating material differences in an object in order to weaken the object under load. If the printing process itself is secured, the question remains if a printed object is the original, a genuine replicate or a faked replicate. For the identification of genuine objects, the authors of [
+122
+] researched the applicability of physical signatures to 3D printed objects.
+In [
+123
+], the authors presented a watermarking technique for 3D printed objects that is resilient against repeated digital scanning of the manufactured object.
+For a generalised discussion on security of cloud services and Cloud Computing, we refer readers to [
+124
+], where the authors presented issues ranging from data integrity to confidentiality. The concepts and terminology of CC security are also discussed in [
+125
+], of which the concepts of confidentiality, trust and privacy are most relevant to scenarios of cloud-based AM where users have physical objects created from digital models by third parties.
+Sturm et al. [
+126
+] presented attack scenarios and mitigation strategies for attacks on AM system. The authors saw rising CPS implementations in AM as potential intrusion vectors for attacks. The authors discussed various attacks for each of the manufacturing process phases. Furthermore, the authors identified the STL file format as a potential risk for tampering and attacking. Among the recommendations for mitigation is file hashing and improved process monitoring.
+Bridges et al. [
+127
+] briefly explored possible attacks on the CPS, that are used for AM. Among the attack scenarios, the authors identified theft and tampering.
+Baumann and Roller [
+128
+] provided a surface altering watermarking schema to be utilised in FDM 3D printing. This watermarking method was based on selective seam placement, i.e., entry points for each layer. This work is to be utilised in conjunction with the model distribution architecture, described in Baumann et al. [
+129
+]. In their proposed architecture, model files are not distributed to the end user but pre-processed GCode files are distributed to printer-attached adaptors. With this approach, the authors also claim the benefit of optimal process parameter selection to the clients’ 3D printer, thus avoiding misconfiguration and misprinting.
+Following the distinction between AM and 3D printing, given in the definition of 3D printing (see 
+Section 2.1.2
+) by some authors, into high-quality professional or industrial usage and lower-quality end-user or semi-professional usage, 3D printing could not be part of CM. As we relax the definition of AM and 3D printing and use the terms as synonyms, we survey technological developments within this chapter. Technological progress and development are essential to the widespread use and application of 3D Printing or AM in the CM paradigm.
+We see AM as an integral component in CM and Industry 4.0 settings, due to the benefits it provides. Among those benefits are flexibility, resource efficiency and design freedom. In this section, we survey scientific literature regarding AM, especially works that provide an overview (e.g., reviews, surveys), present important aspects or exhibit common characteristics of this domain.
+In the short article by Hansen et al. [
+130
+], the authors proposed a measurement method for the correction or calibration of FDM printers. For this purpose, the authors developed a measurement plate, that is printed with specified parameters. In their experiment, the authors recorded roundness errors of up to 100 μm. The calibration could not be applied due to the printer control software being closed-source.
+Anitha et al. [
+131
+] analysed the process variables’ layer thickness, bead width and deposition speed for their influence on the quality of objects manufactured using FDM. The authors found that the layer thickness is contributing approximately 50% to the surface roughness of the manufactured objects.
+Balogun et al. [
+132
+] described and experimented on the energy consumption and carbon footprint of models printed using FDM technology. They defined three specimens of 9000 mm
+
+
+
+
+
+
+
+
+3
+
+
+
+
+
+
+ and 18,000 mm
+
+
+
+
+
+
+
+
+3
+
+
+
+
+
+
+ in volume, which were printed on a Stratasys dimension SST FDM. Their experiment also captured the energy consumption of the post processing with an ultrawave precision cleaning machine. The energy consumed for the print was approximately 1 kWh. Over 60% of the energy was consumed in non-productive states, e.g., pre-heating. This energy consumption profile warrants high utilisation of 3D printers when aiming for a low ecological impact and penalises frequent and long idle times of the 3D printer.
+Brajlih et al. [
+133
+] proposed a comparison method for the speed and accuracy of 3D printers. As a basis, the authors introduced properties and capabilities of 3D printers. A test-object designed by the authors is used to evaluate the average manufacturing speed of an Objet EDEN330 Polyjet and 3D Systems SLA3500 SLA manufacturing machine in an experiment. Furthermore, the experiment included an EOS EOSINT P385 SLS and Stratasys Prodigy Plus FDM machine. The experiment concluded that the SLS machine is capable of achieving the highest manufacturing speed (approximately 140 cm
+
+
+
+
+
+
+
+
+3
+
+
+
+
+
+
+/h). In the experiment, the angular and dimensional deviations are significant (up to 2.5° for a 90° nominal, and 0.8 mm for a 10 mm nominal).
+Roberson et al. [
+134
+] developed a ranking model for the selection of 3D printers, based on the accuracy, surface roughness, and printing time. This decision making model was intended to enable consumers and buyers of such hardware to select the most appropriate device.
+Utela et al. [
+38
+] provided a review on the literature related to the development of new materials for powder bed-based 3D printing systems. They decomposed the development into five steps, for which they provided information on the relevant literature.
+Brooks et al. [
+135
+] performed a review on the history and business implications of 3D printing. They argued that the most promising approach for companies to benefit from 3D printing technology is to invest in and adapt current business models to support supplementary printing for the users. They also presented the importance of the DMCA (Digital Millennium Copyright Act) in the USA from the perspective of 3D printing, for current and upcoming businesses and services in the USA.
+Bogue [
+64
+] aimed to provide an introduction to 3D printing with this review. The historical development of the various printing technologies is presented and furthermore, applications with examples were explored.
+Petrick and Simpson [
+58
+] compared traditional manufacturing, which they classify as “economy of scale”, with AM. AM is classified by the authors as “economy of one”. They based their future hypotheses on the traditional design–build–deliver model and current patterns in supply chains, from which they drew the logical conclusion for future developments. These hypotheses are sparsely supported by literature. They predicted that, in the future, the boundaries between the design–build–deliver paradigm will be less clear and that design and production will be closely coupled with experiments. One obvious prediction is that the supply chains will get shorter and the production will be more localised both geographically and in regard to time planning.
+Matias and Rao [
+102
+] conducted an exploratory study on the business and consumer markets of 3D printing. This study consisted of a survey-based part for consumers, within the area of 3D printing, with a sample size of 66 participants conducted in 2014. One of their findings for the consumers is the willingness of 45% of the participants to spend only 
+$
+US299 on this technology. They also found out that a large number of consumers is not proficient with the technology and the required software. This finding was backed by five interviews conducted with business persons from five different companies. Their interviewees also expressed concerns that there will not be a mass market for 3D printing within the next five to ten years.
+Le Bourhis et al. [
+136
+] developed the design concept of sustainable AM (DFSAM) to minimise the yet unknown environmental impact of AM. According to the authors, about 41% of the total energy consumption globally is attributed to industry. Furthermore, the authors provided a division for the French industry in 2010, showing that about 12% of the total energy consumption is attributed to manufacturing.The authors claimed that AM can reduce the energy required as it limits waste material. The authors experimented on the energy and resource consumption of the Additive Laser Manufacturing (ALM) process and presented a method to calculate electricity, powder and gas consumption for an object based on the respective GCode.
+In their work, Kim et al. [
+137
+] presented a federated information systems architecture for AM. This architecture was intended to facilitate an end-to-end digital implementation of AM, i.e., “digital thread”, design-to-product process. The authors analysed, for each phase (part geometry/design, raw/tessellated data, tessellated 3D model, build file, machine data, fabricated part, finished part, validated art), the available and used data formats and supporting software. The focus of their conceptual architecture was interoperability by an open architecture.
+Balogun et al. [
+138
+] performed an experiment on the electricity consumption of the FDM process. The authors divided the manufacturing process into its components (start-up, warm-up, ready-state, build-state). In an experiment, they analysed three different FDM machines (Stratasys Dimension SST FDM, Dentford Inspire D290 and PP3DP) for their power consumption profile during manufacturing. The machines differ significantly in the energy demand, with the Dentford machine requiring 1418 Wh and the PP3DP only requiring 66 Wh. Furthermore, the authors compared the energy consumption and manufacturing duration of a FDM machine to a milling machine. In the experiment, the AM process consumed 685 Wh and the Mikron HSM 400 milling machine only 114 Wh. The AM cycle time was 3012 s (without 3600 s for support structure removal in an ultrasonic cleaning tank) and the milling machine cycle time was 137 s.
+Weller et al. [
+139
+] discussed the implications of AM on the company and industry level. Economic characteristics, i.e., opportunities such as acceleration and possible price premiums, lower market entry barriers and limitations such as missing economy of scale, missing quality standards are discussed in this analysis. The authors performed a modelling of various scenarios and propositions for the market under the influence of AM. Their prediction for first adoption is within markets with an overall lower economy of scale.
+Efthymiou et al. [
+140
+] presented a systematic survey on the complexity in manufacturing systems. Albeit not directly referencing AM, this study is relevant to understanding the implications of AM on manufacturing systems.
+Turner et al. [
+70
+] surveyed melt extrusion AM processes. This work is part of a two piece series (see also [
+80
+]), with this part focusing on the design and process modelling. The authors provided a short market analysis in their introduction. The authors discussed literature relating to various processing steps and problems, e.g., die swelling, with melt extrusion processes. The authors provided a thorough overview on the literature for this topic.
+Mitev [
+141
+] approached the topic of AM in a very uncommon manner, namely with a philosophical approach. This is the sole publication with this approach found by us. The author discussed AM for the question on what matter is and how 3D printing affects our concept of matter and material.
+In contrast to the previous author, Bayley et al. [
+142
+] presented a model for the understanding of error generation in FDM. This work consisted of two parts with experiments. The first part analysed actual errors in FDM manufactured parts (e.g., roundness error, geometrical deviation). In the second part, the authors constructed a framework for error characterisation and quantification.
+In the review by Kai et al. [
+143
+], the authors evaluated the relationship of manufacturing systems and AM briefly. The authors also provided an overview of one possible decomposition of AM and its academic relevance through a number of published works from 1975 to 2015.
+The accuracy, precision and geometrical fidelity of 3D printed objects has been researched in many works for over 20 years [
+144
+,
+145
+], due to the necessity to produce objects that match their digital models closely. This topic is of general relevance to AM, as only precise objects are usable for the various applications. Increased precision and accuracy enables AM and CM to be a valid manufacturing technology.
+Dimitrov et al. [
+36
+] conducted a study on the accuracy of the 3DP (3D-Printing) process with a benchmark model. Among the three factors influencing the accuracy is the selected axis and the material involved.
+Turner and Gold [
+80
+] provided a review on FDM with a discussion on the available process parameters and the resulting accuracy and resolution.
+Boschetto and Bottini [
+146
+] developed a geometrical model for the prediction of the accuracy in the FDM process. They predicted the accuracy based on process parameters for a case study for 92% of their specimens within 0.1 mm.
+Armillotta [
+147
+] discussed the surface quality of FDM-printed objects. The author utilised a non-contacting scanner with a resolution of 0.03 mm for the assessment of the surface quality. Furthermore, the work provided a set of guidelines for the FDM process in respect to the achievable surface quality.
+Equbal et al. [
+148
+] presented a Fuzzy classifier and neural-net implementations for the prediction of the accuracy within the FDM process under varying process parameters. They achieved a mean absolute relative error of 5.5% for the predictor based on Fuzzy logic.
+Sahu et al. [
+149
+] also predicted the precision of FDM manufactured parts using a Fuzzy prediction, but with different input parameters (signal to noise ratio of the width, length and height).
+Katatny et al. [
+150
+] presented a study on the dimensional accuracy of FDM manufactured objects for use as medical models. The authors captured the geometrical data with a 3D Laser scanner at a resolution of 0.2 mm in the vertical direction. In this work, a standard deviation of 0.177 mm is calculated for a model of a mandible acquired from Computer Tomography (CT) data.
+To counter expected deviations of the object to the model, Tong et al. [
+151
+] proposed the adaption of slice files. For this adaption, the authors presented a mathematical error model for the FDM process and compared the adaption of slice files to the adaption of STL (STereoLitography) files. Due to machine restrictions, the corrections in either the slice file or the STL file are comparable, i.e., control accuracy of the AM fabricator is not sufficient to distinguish between the two correction methods.
+Boschetto and Bottini [
+152
+] discussed the implications of AM methods on the process of design. For this discussion, they utilised digitally acquired images to make a comparison with model files.
+Baumann et al. [
+153
+] developed a method to assess the quality of FDM printed parts by the utilisation of a normal 2D scanner. The implemented approach aids quality examiners by providing a computer aided measurement system. The authors also published the underlying image data as a dataset that was associated with this research.
+Garg et al. [
+154
+] presented a study on the comparison of surface roughness of chemically treated and untreated specimens manufactured using FDM. They concluded that for minimal dimensional deviation from the original model, the objects should be manufactured either parallel or perpendicular to the main axis of the part and the AM fabricator axis.
+As an umbrella term in accordance with the definition “General term to describe all process chains that manufacture parts using additive fabrication processes”, by [
+13
+], we examine the relevance of this technology for CM with this chapter. This technology is integral to the product development, especially with its sub-technology that is RP (see 
+Section 6.5.3
+). This and the following sections elaborate upon the definitions provided in 
+Section 2
+ by examples and research findings.
+For a brief introduction, we refer readers to the following articles. Li et al. [
+155
+] proposed a method for rapid new product ramp-up within large multi-national companies relying on disperse supply chain networks and out-sourcing partners. In this work, the authors considered large-volume product development. For the conceptual framework, the authors identified critical members and defined a ramp-up process as a flowchart.
+Mavri [
+156
+] described 3D printing itself as a rapid technology and analysed the impact of this technology on the production chain. The author performed an analysis of the influences on the phases of product design, production planning, product manufacturing, as well as the topic’s material utilisation, inventory and retail market. The findings of the author included that AM enables companies to act with more agility, cater for smaller markets, limit potential inventory issues and sustain smaller and slimmer supply chain networks.
+Muita et al. [
+157
+] discussed the evolution of rapid production technologies and its implications for businesses. The authors investigated business models and processes, transitions as well as materials and logistics. A decomposition of rapid technology into phases or layers (Rapid Prototyping, 3D Printing, Rapid Tooling, Rapid Product Development and Rapid Manufacturing) is provided and discussed. The authors recommended the adoption of AM by all companies.
+In the book by Bertsche and Bullinger [
+158
+], the authors presented the work of a research project on RP and the various problems addressed within the topic of Rapid Product Development (RPD). One aspect of this research is the development and integration of systems to efficiently store and retrieve information required throughout the process. Information required in the process is knowledge on construction, quality, manufacturing, cost and time.
+In Lachmayer et al. [
+21
+], the authors presented current topics of AM and its application in the industry. In the chapter by Zghair [
+159
+], the concept of rapid repair is discussed. This concept was intended to prolong the life-time of high-investment parts, as well as modification of parts in academic settings. The authors performed an experiment for this approach with three objects and concluded that there is no visible difference between additional object geometry in the case of previously SLM manufactured objects. Differences are visually detectable for cast objects that are repaired.
+The use case of RT for AM is that the required tools or moulds for the (mass-) production of other parts or objects is supported by provisioning of said tools or moulds. See the definitions of RT in 
+Section 2.1.5
+. RT as a concept has been researched and applied for at least 26 years [
+23
+]. Conceptually, little has changed since the early publications, but the number of available AM technologies, materials and support by other concepts such as CC has increased. Since its inception, the idea of RT has been to create tools or tooling directly from CAD models, thus, saving time and material. In this section, we present articles from this research to give an overview to the reader and present its relevance and relationship to the concept of CM.
+In the review by Boparai et al. [
+160
+], the authors thoroughly analysed the development of RT using FDM technology. FDM manufactured objects commonly require post-processing for higher-quality surfaces, which was discussed by the authors in a separate section of their work. The authors presented a variety of applications of RT with FDM, which include casting and injection moulds and scaffolds for tissue engineering. Furthermore, the authors discussed material selection and manufacturing, as well as testing and inspection.
+The review by Levy et al. [
+161
+] on RT and RM for layer-oriented AM from 2003, already states that AM is no longer just for RP. According to the definition of RT by the authors, tools are supposed to last a few thousand to millions of applications. The authors focused mainly on plastic injection moulds for tooling and surveyed a large number of different technologies and materials.
+Similarly, the definition of RT by King and Tansey [
+27
+], was focused on injection moulds, a definition that has since been expanded to other tooling areas. In this work, the authors presented research on material selection for SLS manufactured moulds. Furthermore, in this work, the authors analysed RapidSteel and copper polyamide for use in time-critical RT scenarios.
+Lušić et al. [
+162
+] presented a study on the applicability of FDM manufactured moulds for carbon fibre reinforced plastic (CFRP) objects. The authors achieved up to 84% material saving or 47% time saving for optimised structures, compared to a solid mould at a comparable stiffness. The authors experimented with varying shell thicknesses and infill patterns.
+Nagel et al. [
+163
+] presented the industrial application of RT in a company. The authors presented, at a high level, the benefits and thoughts leading to the creation of flexible grippers for industrial robots utilising 3D printing. The authors also presented a browser-based design tool for the creation of the individual grippers, with which the company is able to reduce the time required for product design by 97%.
+Chua et al. [
+164
+] presented a thorough introduction to RT as well as a classification into soft- and hard tooling, with a further divide into direct soft tooling, indirect soft tooling, direct hard tooling and indirect hard tooling. Among the benefits of RT, the authors saw time and cost savings as well as increased profits. The authors discussed each of the classifications with examples and the relevant literature. Examples from industry support the benefits proposed by the authors.
+Rajaguru et al. [
+165
+] proposed a method for the creation of RT moulds for the production of low-volume plastic parts. With this indirect tooling method, the authors were able to produce low-cost moulds in less than 48 h. The authors presented an experiment, where the mould is used for up to 600 repetitions. The method used electroless plating of nickel and phosphorous alloy for the micro-pattern moulds.
+In the introduction to RT, Equbal et al. [
+166
+] started with the basics of various AM technologies. The authors provided a classification schema for RT and discussed each class with the appropriate examples. According to the authors, RT is a key technology for globally active companies in respect to flexibility and competitiveness.
+In the review by Malik et al. [
+95
+], the authors investigated the use of 3D printing in the field of surgery. The authors discussed the fabrication of medical models for education and operation planning, as well as drill-guides and templates as RT technology. In contrast, the direct fabrication of implants or prosthetics as described by the authors is regarded as RM.
+In contrast to RP, the goal of RM is the creation of parts and objects directly usable as end-products or part of end-products (see 
+Section 2.1.4
+). To achieve this usability, the requirements on the quality of the parts are higher, therefore the quality control and quality assurance are stricter.
+Hopkinson and Dickens [
+167
+] provided findings from a cost analysis for the manufacturing of parts for traditional manufacturing and AM. The authors identified the current and potential future benefits for RM as the ability to manufacture with less lead time, increased geometric freedom, manufacture in distributed environments and potentially the use of graded material for production. The authors compared the costs incurred for the creation of two objects with injection moulding (IM), SLA, FDM and SLS. For IM, the tool costs are high (27360 and 32100 Euro) whereas the unit costs are low (0.23 and 0.21 Euro). In their calculation, the equilibrium for the cost of IM and SLS for one of the objects is at about 14,000 units and for the other part is around 600 units. This finding validates RM for certain low-volume production scenarios.
+Ruffo et al. [
+168
+] also presented a cost estimation analysis which is an extension and update to the previous work. The authors calculated with a much lower utilisation of the machines (57% compared to 90%), higher labour cost as well as production and administrative overhead costs. Furthermore, the authors took other indirect costs, such as floor/building costs and software costs into consideration. The authors calculated a higher unit cost for the object (3.25 Euro compared to 2.20 Euro), and a non-linear costing function, due to partial low-utilisation of the printing resources, which is due to incomplete rows for unit counts not equal or multiple of maximum unit packing. The comparison of these two works illustrates the necessity to use the most up-to date and complete models for costing estimation.
+Ituarte et al. [
+169
+] proposed a methodology to characterise and asses AM technologies, here SLS, SLA and Polyjet. The proposed methodology is an experimental design for process parameter selection for object fabrication. The authors found that surface quality is the hardest quality to achieve with AM and might not suffice for RM usage with strict requirements. Such an analysis is of value in order to asses the feasibility of certain manufacturing methods in RM scenarios.
+In the review by Karunakaran et al. [
+56
+], the authors surveyed and classified technologies capable of manufacturing metallic objects for RM. The technologies surveyed are CNC-machining, laminated manufacturing, powder bed processes, deposition processes, hybrid processes and rapid casting. The authors developed different classification schemes for RM processes, based on various criteria, e.g., material or application. Furthermore, the authors compiled a list of RM process capabilities to be used for the selection of appropriate RM processes.
+Simhambhatla and Karunakaran [
+170
+] surveyed build strategies for metallic objects for RM. The authors focused on the issues of overhangs and undercut structures in metallic AM. The work concluded with a comparative study on the fabrication of a part using CNC-machining and a hybrid layered manufacturing (HLM) method. With the hybrid approach, the authors built the part in 177 min compared to 331 min at a cost of 13.83 Euro compared to 24.32 Euro.
+Hasan et al. [
+171
+] presented an analysis of the implications of RM on the supply chain from a business perspective. For this study, the authors interviewed 10 business representatives and six RP or RM service providers. The authors proposed both reverse-auctioning as well as e-cataloguing as modes for business transactions.
+With rapid changing production, the need arises for rapid fixture design and fabrication for the RM provider itself. This issue was discussed by Nelaturi et al. [
+172
+], as they proposed a mechanism to synthesise fixture designs. The method analysed the models to be manufactured and supported by fixtures as STL files for possible fixture application areas. The algorithm, furthermore, calculated possible fixture positions and inflicting forces. The authors selected existing fixtures from in-house or online catalogues of fixtures for application.
+Gupta et al. [
+173
+] proposed an adaptive method to slice model files of heterogeneous objects for use with RM. For this, the authors decomposed the slicing process into three phases (slicing set up, slices generation and retrieving data). The work also surveyed other existing slicing techniques for various optimisation goals, e.g., quality, computing resources or part manufacturing time. For the extraction of geometric and material information, the authors utilised a relational database for efficient storage. The authors found that utilising the appropriate slicing technique, the fabrication time can be reduced by up to 37%.
+Hernández et al. [
+174
+] present the KTRM (Knowledge Transfer of Rapid Manufacturing) initiative which was created to improve training and knowledge transfer regarding RM in the European Union. For the requirement analysis of such a project, the authors conducted a study with 136 participants of which the majority (70%) are SMEs. Such training initiatives are beneficial to the growth in application and increased process majority, as the authors found that the knowledge of RM is low but the perceived benefits of this technology include higher quality parts, lower time to markets and increased competitiveness.
+With the chapter by Paul et al. [
+175
+], the authors provided a thorough overview of laser-based RM. The authors discussed classifications of such systems as well as the composition of these systems in general. Process parameters were presented and located in literature. Furthermore, the authors discussed materials available for this class of RM and applications. This work is a comprehensive overview, covering all relevant aspects of the technology, including monitoring and process control.
+Following the definitions in 
+Section 2.1.3
+, Rapid Prototyping (RP) is the concept to speed-up the creation of prototypes in product development. These prototypes can be functional, visual, geared towards user-experience or of any other sort. RP was one of the first uses for AM and oftentimes the terms AM and RP are used synonymously. The quick or rapid creation of prototypes does not necessarily mean fast in absolute terms, but rather a more rapid way to create prototypes than traditionally created using skilled or expert labour (e.g., wooden models created by carpenters) or subtractive or formative manufacturing methods oftentimes requiring specialised tooling or moulds.
+Pham and Gault [
+176
+] provided an overview of commonly used methods to rapidly create prototypes with information on the achievable accuracy, speed and incurred costs of each technology from a very early perspective. A number of technologies, e.g., Beam Interference Solidification (BIS), have since been disused. The accuracy for Fused Deposition Modeling (FDM), stated with 127 μm has not been improved significantly since then.
+Masood [
+79
+] reviewed the technology of FDM and examined the usability of it for RP. Among the advantages of this technology is “Simplicity, Safety, and Ease of Use”, as well as “Variety of Engineering Polymers”, which makes it suitable for the creation of functional prototypes. A number of limitations, such as “Surface Finish and Accuracy”, can diminish the suitability of this technology for certain aspects of prototyping.
+In their keynote paper, Kruth et al. [
+177
+] surveyed the technologies used for RP and produced examples for the technologies. Furthermore, they briefly explained the developmental bridge from RP to RT and RM.
+The authors Yan et al. [
+178
+] presented the historical development of RP from its roots in the analogue and manual creation of prototypes to digital fabrication methods. They also presented a list of current limitations for digital RP. Among the five limitations was high-manufacturing cost, for the manufacturing resources, and the insufficient forming precision. The first argument of cost is often put forward in its reversed statement, as RP is proposed as a low-cost production method, when compared to traditional prototyping.
+Azari and Nikzad [
+39
+] presented a review on RP in dentistry, with a distinction between models in dentistry and its general meaning. They discussed the problems in data-capture for RP due to the nature of living patients. They further discussed the use of AM for drill-guides which is an application for RT.
+Liu et al. [
+179
+] presented a study on profit mechanisms associated with cloud 3D printing platforms, predominantly in China. They argued that such services can enable SME to produce prototypes more rapidly and cheaper, thus increasing their competitiveness.
+Roller et al. [
+180
+] introduced the concept of Active Semantic Networks (ASN) as shared database systems for the storage of information for the product development process.
+Hybrid Manufacturing is a term used for the combination of AM and traditional manufacturing methods. The combination of these methods promises to provide benefits from both, e.g., speed and accuracy of a milling machine with the low material input from AM.
+Lu et al. [
+181
+] proposed an architecture for a hybrid manufacturing cloud. Their definition of hybrid refers to cloud operation modes (private, community and public cloud). Besides the architecture, they presented a cloud management engine (CME), which is implemented for evaluation purposes on Amazon Web Service (AWS).
+In the work by Kenne et al. [
+182
+], a model for a hybrid manufacturing–remanufacturing system was proposed. The authors gave the term hybrid to manufacturing and remanufacturing in combination. Remanufacturing denotes an alternative use of products at the end of their product lifecycle for value generation. In an experiment, the authors calculated the cost for a mixture of parameters, e.g., return rates, and came to the conclusion that the system is applicable with customisation to various industries.
+In the review by Chu et al. [
+183
+], the authors discussed 57 hybrid manufacturing processes. These micro- and nanoscale processes were categorised in three different schemes (concurrent, main/assistive separate and main/main separate). The authors surveyed a combination of 118 processes in this work.
+The review by Zhu et al. [
+66
+], provided a classification of hybrid manufacturing processes. The authors presented an extensive list of mainly two-process combination manufacturing processes. For this work, the authors explored the existing definitions of manufacturing and hybrid manufacturing processes in literature.
+In another work by Zhu et al. [
+184
+], the authors proposed a build time estimation for the iAtractive [
+185
+] process that combines additive, subtractive and inspection processes. This process is based on FDM and the build time prediction is based on the same parameters as normal FDM build time prediction. The authors provided a discussion on an experiment for which their estimation ranged from approximately −12 to 12% to the real build time. The authors only provided a build estimation method for the additively manufactured part of the process.
+Lauwers et al. [
+186
+] proposed a definition and classification of hybrid manufacturing processes with their work. They defined these processes as acting simultaneously on the same work area or processing zone. This definition excluded processes that combine processing steps sequentially.
+Elmoselhy [
+187
+] proposed a hybrid lean–agile manufacturing system (HLAMS). The author developed the system for the requirements in the automotive industry. The definition of hybridity in this work refers to the school of thinking for manufacturing.
+The work by Kendrick et al. [
+188
+] proposed a solution to the problems associated with distributed manufacturing through the utilisation of hybrid manufacturing processes. The authors proposed four options for the usage of distributed hybrid manufacturing systems (local factories, manufacturing shops, community areas, personal fabrication). The described usage of hybrid MS can be further utilised in CM systems.
+Yang et al. [
+189
+] proposed a hybrid system for the integration of multiple manufacturing clouds. The definition of hybridity used in this work refers to the mixture of diverse manufacturing clouds and not to the manufacturing process itself. The proposed architecture links the various clouds together for a single point of interaction integration. The authors defined adaptors and a broker system and implement these for evaluation purposes.
+In the overview by Zhang et al. [
+190
+], the authors used the term hybrid to describe the cloud management. Their definition for the three cloud types used in CM is private/enterprise cloud, public/industry cloud and a mixture of both as hybrid cloud.
+Simulation in the area of AM is of great importance even though the process of object manufacturing itself is relatively cheap and fast when compared to other means of production. However, even 3D printed objects can take many hours to be manufactured, in which the AM resource is occupied. Furthermore, with specialised and high value printing materials, the costs can be prohibitively expensive for misprinted parts.
+In Hiller et al. [
+191
+], the authors described a voxel-based simulation for 3D printing for the estimation of the precision of AM objects.
+Pal et al. [
+192
+] proposed a finite-element-based simulation for the heat-transfer of powder-based AM methods. With this simulation, the authors claim that the general quality of the printed objects can be enhanced and post-processing/quality-control can be reduced.
+The work of Zhou et al. [
+193
+] proposed a numerical simulation method for the packing of powder in AM. This research was conducted to provide a better understanding of the powder behaviour in methods such as SLS or SLM.
+Alimardani [
+194
+] proposed another numerical simulation method for the prediction of heat distribution and stress in printed objects for Laser Solid Freeform Fabrication (LSFF), a powder-based process similar to LENS. The author compared their numerically computed predictions with experimental specimens; in one finding, the maximum time-dependent stress could be reduced by eight percent by improvements made by the simulation.
+Ding et al. [
+195
+] discussed a FEM-based simulation model for wire and arc-based AM. Their simulation of the thermo-mechanical properties during this process was performed with the ABAQUS (
+http://www.3ds.com/products-services/simulia/products/abaqus
+) software.
+Chan [
+196
+] presented graphical simulation models for use in manufacturing scenarios not limited to AM. Such models must be adopted to contain virtual production entities such as the ones provided by CM.
+Mourtzis et al. [
+72
+] presented a review on the aspects of simulation within the domain of product development (PD). For this work, they gave an introduction to concepts and technologies supporting and enabling PD. The concepts are explained in sections of two paragraphs each and supported by existing literature. They linked the concepts to simulation research within these areas, where applicable. The concepts and technology introduced include Computer Aided Design (CAD), Computer Aided Manufacturing (CAM), Computer Aided Process Planning (CAPP), Augmented and Virtual Reality (AR and VR), Life Cycle Assessment (LCA), Product Data Management (PDM) and Knowledge Management (KM), Enterprise Resource Planning (ERP), Layout Planning, Process-, Supply Chain- and Material Flow Simulation, Supervisory Control and Data Acquisition (SCADA) and Manufacturing Systems and Networks Planning and Control. Their review is based on over 100 years of research in the area of simulation and 15,954 scientific articles from 1960 to 2014. The articles were aligned with the product and production lifecycle. Furthermore, this review included a comparison of commercially available simulation software. The authors concluded their work with a detailed analysis of research opportunities aligned to the concepts introduced within this work.
+One of the key benefits of AM is the ability to create almost any arbitrarily complex object, which makes topological optimisation ideal for AM. In CM scenarios, such optimisations can be embedded in the digital process chain and be offered and applied as services. In this section, we present a number of research works on topological optimisation for AM.
+In Chaine et al. [
+197
+], the authors discussed the application of topology optimisation for AM in a general manner, giving an overview of the current state.
+Galantucci et al. [
+198
+] presented experimental results of topology-optimised and FDM-printed objects from compression tests. In their experiment, the reduction of filling material reduced the material consumption but also the maximum stress of the object.
+Almeida and Bártolo [
+199
+] proposed a topology optimisation algorithm for use in scaffold construction for bio-printing. This optimisation strategy is aimed at creating scaffolds that are more bio-compatible due to their porosity but yield high structural strength. The authors conducted an experiment for the comparison of the topological optimised structures and un-optimised structures with reduced infill. Their approach yielded structurally stable scaffolds with up to 60% porosity.
+The work by Leary et al. [
+200
+] focused on the topological optimisation to create objects without the requirement for additional support structures. For this approach, the authors performed a general topological optimisation first, then oriented the part optimally to reduce the required support material and applied a strategy to add part structures to remove the required support material. In an experiment conducted, the authors created an object that required significantly less material (89.7 cm
+
+
+
+
+
+
+
+
+3
+
+
+
+
+
+
+ compared to 54.9 cm
+
+
+
+
+
+
+
+
+3
+
+
+
+
+
+
+) and was manufactured in 2.6 h compared to 5.7 h, for the optimised part with support structures.
+Tang et al. [
+201
+] proposed a design method for AM with the integration of topological optimisation. For this work, the authors analysed existing design methods for AM.
+Bracket et al. [
+202
+] provided an overview and introduction of topology optimisation for AM. The authors identified constraints and restrictions for the usage of topology optimisation, e.g., insufficient mesh-resolution or insufficient manufacturing capabilities. Among the identified opportunities of topology optimisation in AM is the ability to create lattice structures and design multi-material objects.
+Gardan [
+203
+] proposed a topology optimisation method for use in RP and AM. The work was focused on the inner-part of the object. In non-optimised objects, this is filled with a pre-defined infill pattern of a user-selectable density. The author implemented the method in a plugin for Rhinoceros 3D (
+https://rhino3d.com
+) and conducted an experiment with SLA and SLS. The article does not provide detailed information on the implementation of the software and the algorithm.
+Gardan and Schneider [
+204
+] expanded on the prior work by Gardan, by slightly expanding the previous article. In this work, the authors applied the optimisation method to prosthetic hip implants and additionally experimented on an FDM 3D printer.
+Hiller and Lipson [
+205
+] proposed a genetic algorithm (GA) for the multi-material topological optimisation. With this approach, the authors demonstrated the optimisation of varying degrees of stiffness within a part. They utilised a high-level description of the part’s properties to design the desired object automatically in its optimised composition.
+For AM and CM as processes, a number of optimisations is possible and necessary. The optimisations can relate to the optimisation of process parameters for quicker manufacturing, higher quality manufacturing or increased utilisation of hard- and software resources. The optimisation can, furthermore, regard the embeddability and integration of AM and CM within existing production processes.
+Optimisation for AM is a topic that has been researched for a long time, as illustrated by the following two articles. Cheng et al. [
+206
+] proposed an optimisation method for the criteria of manufacturing time, accuracy and stability. This optimisation is based on the calculation of the optimal part orientation. As a basis for the optimisation, the authors analysed the sources for errors in AM processes, e.g., tessellation errors, distortion and shrinkage, overcuring or stair-stepping effects. For their model, they weighted input parameters according to the inflicting errors and perform a multi-objective optimisation.
+Lin et al. [
+207
+] proposed a mathematical model to reduce the process error in AM. In the first part, the authors analysed the different process errors for various types of AM, e.g., under- and overfill, stair-stepping effects. Their model optimises the part’s orientation for minimal errors. Albeit this work is more than 15 years old, optimal orientation and placement of objects is not widely available in 3D printing control software.
+More recently, Rayegani and Onwubolu [
+208
+] presented two methods for process parameter prediction and optimisation for the FDM process. The authors conducted an experiment to evaluate the tensile strength of specimens for the optimised process parameters. For the optimised parameters, the authors provided the solution of 0° part orientation, 50° raster angle, 0.2034 mm raster width and −0.0025 mm air-gap. These parameters yielded a mean tensile strength of 36.8603808 MPa.
+Paul and Anand [
+209
+] developed a system for the calculation of the energy consumption in SLS processes and process parameter optimisation to minimise the laser energy. For the model, the authors neglected the energy consumption of all elements (e.g., heating bed) but the laser system.
+Paul and Anand [
+210
+], furthermore, proposed an optimisation of AM for the reduction of support material. Their approach was to optimise the part orientation for the minimum amount of support material. Furthermore, they provided optimisation for minimum cylindricity and flatness errors.
+Jin et al. [
+211
+] proposed a method to optimise the path generation of extrusion-based AM, e.g., FDM. The optimisation goals for this approach are machine utilisation and object precision. The authors performed a study with their approach, but comparison data on the quality and time consumption of other algorithms is missing.
+Khajavi et al. [
+77
+] presented an optimisation for the spare-parts industry of fighter jets by the utilisation of AM. This work was on a systemic optimisation, with AM being one strategy to achieve the optimum solution. The authors analysed the current situation in this specific application and proposed an optimised solution based on distributed manufacturing or AM.
+Ponche et al. [
+212
+] presented an optimisation for the design of AM based on a decomposition of functional shapes and volumes. The authors argued that objects designed for traditional manufacturing are not necessarily suitable for AM but require partial or complete re-design to adjust for the specifics of a certain AM process, e.g., in the inability to produce sharp corners and edges. In their work, one optimisation goal was the reduction of material and, therefore, cost.
+Hsu and Lai [
+213
+] presented the results of an experiment and the resulting process parameter optimisation for the 3DP manufacturing method. The authors improved the dimensional accuracy of each axis to under 0.1 mm. Furthermore, the authors improved on the building time by approximately 10% and on the flexural stress by approximately 30%. The authors experimented on the four process parameters: layer height, object location, binder saturation and shrinkage.
+In CM systems or cloud-based printing systems, naturally a number of stakeholders are involved. In this section, we present the current state of research on the identification of stakeholders in this domain as well as research regarding their agendas.
+In Rayna and Striukova [
+4
+], the authors identified the requirements of end-users for online 3D printing services. They based their study on concepts relevant to these stakeholders, such as user-participation and co-creation.
+Park et al. [
+9
+] provided a statistical analysis of patents and patent filings in the domain of 3D printing and bioprinting, that can serve as a basis for decision making in the investment and R&D in these fields. The stakeholders in this case are the investors and managers.
+Hämäläinen and Ojala [
+214
+] applied the Stakeholder Theory by Freeman to the domain of AM and performed a study on eight companies with semi-structured interviews. They identified five companies that use AM for prototyping. They further analysed the benefits of AM for the interviewed companies.
+Buehler et al. [
+215
+] created a software called GripFab for use in special needs education. For this software and the use of 3D printing in special needs education, they performed a stakeholder analysis. The analysis is based on observations and found beneficial uses for this technology, e.g., in the form of assistive devices.
+Munguía et al. [
+216
+] analysed what influence missing standards have on the stakeholders of RM and developed a set of best practises for RM scenarios. They identified the four main contributors to RM cost as operation times, machine costs, labour costs and material costs.
+Lehmhus et al. [
+217
+] analysed the usage of data acquisition technologies and sensors within AM from the perspectives of the identified stakeholders designer, producer, user and regulatory or public bodies. They argued that the producers in such scenarios might become obsolete if AM is utilised in a complete CM sense.
+Fox [
+218
+] introduced the concept of virtual–social–physical (VSP) convergence for the application to product development. Within this concept, he argued that AM can play an integral role in enhancing product development. He identified requirements from stakeholders in the product development process and addressed them in this work.
+Flatscher and Riel [
+219
+] proposed a method to integrate stakeholders in an integrated design-process for the scenarios of next-generation manufacturing (Industry 4.0). In their study, a key challenge was the integration of all stakeholders in a team structure, which they solved by integrating influential persons from different departments in the joint operation.
+Maynard [
+220
+] discussed the risks and challenges that come with the paradigm of Industry 4.0. Industry 4.0 as a concept incorporates other concepts such as AM and CM. The author briefly identified the possible stakeholders of this technology as consumers, CEOs and educators.
+Baumann and Roller [
+221
+] compiled a list of German AM companies, to be used for further research and industrial use. The stakeholders, in this case, were companies that manufacture additively as well as producers of materials and hardware. The companies in this list are classified according to their mode of operation and the services rendered.
+In the report by Thomas [
+222
+], the author performed a very detailed and thorough analysis of stakeholders for AM technology in the USA. The list of identified stakeholders is 40 entries long and contains very specific entries (e.g., Air Transport Providers or Natural Gas Suppliers), as well as generalised stakeholder groups (e.g., Professional Societies or Consumers).
+Service orientation denotes a paradigm from the domain of programming (Service Oriented Architecture, SOA). Within this paradigm, the functionality or capability of a software is regarded and handled as a consumable service. The services offer encapsulated capabilities that can be consumed by users or other services, in an easy to use, well-defined and transparent manner. The services are inter- and exchangeable within business processes as their inner-working is abstracted and the services act like black boxes, with well-defined interfaces. With CM or AM in general, this service orientation can be expanded to the physical resources of manufacturing. Similar to service orientation from the programming domain, it must be bound by the same stringency as well-defined interfaces and show transparent or abstract execution of functionality or capability.
+In the review on service-oriented system engineering (SOSE) by Gu and Lago [
+223
+], the authors proposed the hypotheses that the challenges in this domain can be classified by topic and by type. SOSE is the engineering discipline to develop service-oriented systems. The authors identified 413 SOSE challenges from the reviewed set of 51 sources. The authors, furthermore, identified quality, service and data to be the three top challenges in this domain.
+Wang et al. [
+224
+] provided a review on the CC paradigm. For this work, the authors classified CC into the three layers (Hardware-as-a-Service—HaaS, Software-as-a-Service—SaaS and Data-as-a-Service—Daas). In this early work on CC, the authors established the importance of SoA for the CC paradigm.
+Tsai et al. [
+225
+] presented an initial survey on CC architectures and proposed a service architecture for CC (Service-Oriented Cloud Computing Architecture—SOCCA), for the interoperability between various cloud systems. Among the identified problems with CC architectures are tight coupling, lack of SLA (Service Level Agreement) support, lack of multi-tenancy support and lack of flexibility in user interfaces. The authors utilised SOA for the implementation of their prototype that is deployed on Google App Engine (
+https://appengine.google.com
+).
+Alam et al. [
+226
+] presented a review on the impact analysis in the domains of Business Process Management (BPM) and SOA. In their work, the authors discussed the relationship and convergence of the two methods. From a set of 60 reviewed studies, the authors conclude that BPM and SOA are becoming dominant technologies.
+Zhang et al. [
+227
+] proposed a management architecture for resource service composition (RSC) in the domain of CM. For this work, the authors analysed and defined the flexibility of resources and their composition. The implementation by the authors supports resource selection based on Quality of Service (QoS) and flexibility.
+Shang et al. [
+228
+] proposed a social manufacturing system for use in the apparel industry. Their implementation connected existing logistics and manufacturing systems, with a strong focus on the consumer. For this architecture, the authors relied heavily on SOA technology and described the implementation of various layers required.
+Tao et al. [
+229
+] analysed the development of Advanced Manufacturing Systems (AMS) and its trend towards socialisation. In this work, the authors established the relationship between service orientation and manufacturing. The authors identified three phases for the implementation of service-oriented manufacturing (SOM), namely “Perception and Internet connection of Manufacturing resource and capability and gathering, Aggregation, management, and optimal allocation of Manufacturing resource and capability in the form of Manufacturing service and Use of Manufacturing service”.
+Thiesse et al. [
+230
+] analysed the economic implications of AM on MIS (Management Information Systems) and the service orientation of these systems. In this work, the authors analysed the economic, ecological and technological potential of AM and its services. The authors concluded that the services for product development will be relocated upstream.
+For the service composition of cloud applications, standards and definitions are essential. In the work by Binz et al. [
+231
+], the authors introduced the TOSCA (Topology and Orchestration Specification for Cloud Applications) standard. Albeit this standard is focused on the deployment and management of computing and other non-physical resources, its architectural decisions and structures are of relevance to CM systems. Support for encapsulation and modelling, as described in this work, is sparse for other CM systems.
+As an extension to the previous work, the authors Soldani et al. [
+232
+] proposed and implemented a marketplace (TOSCAMART) for TOSCA for the distribution of cloud applications. Such a marketplace would be highly beneficial to CM systems, as it can foster innovation, collaboration, re-use and competition.
+Described in 
+Section 6.9
+, the service orientation regards capabilities as services that can be consumed. Such a class of services is the manufacturing of products. As a consumer of such a service, one is not necessarily interested in the process of manufacturing (e.g., what type of machine is used) or the location of manufacturing, as long as a pre-agreed upon list of qualities of the end-product is complied with. As an example, it can be stated that a user wants two parts made from a certain metal, within a certain tolerance, certain properties regarding stress-resistance and within a defined time frame. The input of this service would then be the CAD model and the properties that must be fulfilled. The parts could then either be milled or 3D printed in any part of the world, and then shipped to the user. The user must pay for the service rendered, i.e., the manufacturing of objects, but is not involved with the manufacturing itself as this is performed by a service provider. In the seventh EU Framework Programme, the project ManuCloud (
+http://www.manucloud-project.eu
+) was funded that consolidated research on this topic. In this section, we present current research articles on the subject in order to illustrate the concept of MaaS, its role for CM and applications.
+Tao et al. [
+233
+] proposed an algorithm for a more efficient service composition optimal-selection (SCOS) in cloud manufacturing systems. Their proposed method is named FC-PACO-RM (full connection-based parallel adaptive chaos optimisation with reflex migration) and it optimises the selection of manufacturing resources for the quality properties of time, cost, energy, reliability, maintainability, trust and function similarity. In an experiment, they have shown that their implementation performs faster than a genetic algorithm (GA), an adaptive chaos optimisation (ACO) algorithm for the objectives of time, energy and cost, but not for the objective of reliability.
+Veiga et al. [
+234
+] proposed a design and implementation for the flexible reconfiguration of industrial robot cells with SMEs (small and medium sized enterprises) in mind. These robot cells are mostly reconfigurable by design, but with high barriers for SMEs due to the requirement of expert knowledge. The proposed system enables an intuitive interface for reconfiguration of the cells in order to enhance the flexibility of manufacturing. The implementation drew heavily on SOA concepts. The implementation supports the flexible orchestration of robotic cells as services.
+Zhang et al. [
+32
+] provided an introduction to the paradigm of CM. Within this work, the authors discussed issues arising from the implementation and the architecture itself. The authors presented the decomposition of this paradigm into its service components: “design as a service (DaaS), manufacturing as a service (MFGaaS), experimentation as a service (EaaS), simulation as a service (SIMaaS), management as a service (MANaaS), maintenance as a service (MAaaS), integration as a service (INTaaS)”. The authors implemented such a CM system as a prototype for evaluation and discussion.
+Moghaddam et al. [
+235
+] presented the development of MaaS and its relationship to the concepts of CM, Cloud Based Design and Manufacture (CBDM) and others. The authors proposed SoftDiss [
+236
+] as an implementation platform for CM systems.
+Van Moergestel et al. [
+237
+] analysed the requirements and proposed an architecture for a manufacturing system that enables low-volume and low-cost manufacturing. The authors identified customer requirements for low-volume and flexible production of products as a driver for the development of the CM concept or other MaaS implementations. The architecture relies on cheap reconfigurable production machines (equiplet). For the implementation of the system, the authors utilised open source software such as Tomcat and had a strong focus on the end-user integration via Web technology.
+Sanderson et al. [
+238
+] presented a case study on distributed manufacturing systems, which the authors called collective adaptive systems (CAS). The example in their case study was a manufacturing plant by Siemens in the UK, which is part of the “Digital Factory” division. The authors presented the division, structure and features of the company, which is compared to CAS features. Physical layout, resource flow through supply chains and hierarchical distributed decision making are among the challenges identified by the authors.
+For the integration of MaaS (which is called fabrication-as-a-Service, FaaS, in this work) into CM, Ren et al. [
+239
+] analysed the service provider cooperative relationship (CSPR). Such a cooperation of MaaS/FaaS providers within a CM system is essential for the task completion rate and the service utilisation as demonstrated by the authors in an experiment.
+Guo [
+240
+] proposed a system design method for the implementation of CM systems. Within this work, the MaaS layer of the CM system was further divided into “product design, process design, purchasing, material preparing, part processing and assembly and marketing process”. In the generalised five-layer architecture for the implementation of CM systems, the MaaS is located in the fifth layer.
+Yu and Xu [
+241
+] proposed a cloud-based product configuration system (PCS) for the implementation within CM systems. Such systems interface with the customer, enabling the customer to configure or create products for ordering. Within a CM, such a system can be employed to prepare objects that can then be manufactured directly, utilising MaaS capabilities. In the implementation within an enterprise, the authors utilised the STEP file format for information exchange.
+Besides physical and computational resources that are exposed and utilized as services, the concept of CM allows for and requires traditional services to be integrated. Such a service is, for example, the design of an object, which is traditionally either acquired as a service from a third-party company or rendered in-house.
+As with the physical Manufacturing-as-a-Service, the service rendered here must be well-defined and abstract. The service in this section is that of the design for AM or traditional manufacturing.
+This paradigm can lead to increased involvement of the user, as described by Wu et al. [
+7
+]. The authors provided an introduction to social product development—a new product development paradigm rooted in Web 2.0 and social media technology. They conducted a study on their students in a graduate-level course on product development. They structured the process in four phases, beginning with acquisition of user requirement through social media. With the social product development process (PDP), the product development involves the users or customers more directly and more frequently than with traditional PDP. This increased degree of integration requires support through technology, which is provided by social media and Web 2.0 technology for communication and management.
+Unfortunately, the scientific literature on DaaS is sparse and mostly only mentioned as part of architectural or systematic descriptions or implementations of CM systems. In Tao et al. [
+30
+], the authors placed DaaS among other capabilities services that are part of the CM layer. Other capabilities services are Manufacturing, Experimentation, Simulation, Management, Maintenance and Integration-as-a-Service.
+In Adamson et al. [
+242
+], the same classification is used (but without the Integration and Maintenance, and a combination of the Simulation and Experimentation service). The authors also briefly reviewed literature in the domain of collaborative design for CM systems.
+In Yu et al. [
+243
+], DaaS is also identified as a capability of CM systems and part of its layered structure.
+Johanson et al. [
+244
+] discussed the requirements and implications of distributed collaborative engineering or design services. According to the authors, the service orientation of design and its collaborative aspects will render enterprise more competitive due to reduced costs for software, decreased design times and innovative design. Furthermore, such services promote tighter integration and cooperation with customers.
+Laili et al. [
+245
+] proposed an algorithm for a more efficient scheduling of collaborative design tasks within CM systems. As collaborative design task scheduling is NP-hard, the authors proposed a heuristic energy adaptive immune genetic algorithm (EAIGA). In an experiment, the authors have shown that their implementation is more stable with higher quality results compared to a genetic algorithm (GA) and an immune GA (IGA).
+Duan et al. [
+246
+] explored the servitization of capabilities and technologies in CC scenarios. The authors explored and discussed a variety of service offerings, as described in literature. Among the identified as-a-Service offerings is DaaS, which is referenced to Tsai et al. [
+225
+]. Duan et al. provided a large collection of “aaS” literature. Contrary to the indication by Duan et al., the work of Tsai et al. does not cover DaaS. It however covers the architectural design of CC systems and service provisioning, as well as an analysis of potential drawbacks and limitations of CC systems.
+Similar to the Design as a-Service (see 
+Section 6.9.2
+), this exposition of a capability as a service can play an important role within CM systems. In general, the QA for AM is not sufficiently researched and conducted, as the traceability of information from the original CAD model to the manufactured part is insufficient due to the number of conversion steps, file formats and systems involved.
+Albeit mentioned in a number of publications on the design and implementation of CM architectures, designs or systems, e.g., Ren et al. [
+247
+] or Gao et al. [
+248
+], the research on Testing-as-a-Service (TaaS) in CM systems is sparse and the authors are not aware of any dedicated works on this topic.
+In contrast, TaaS as a concept for software testing in the cloud is researched by a number of authors, see e.g., Gao et al. [
+249
+] or Mishra and Tripathi [
+250
+] for an introductory overview, Yan et al. [
+251
+] for the special application of load testing, Tsai et al. [
+252
+] for service design or Llamas et al. [
+253
+] for a software implementation.
+Extrapolating from the benefits that TaaS brings to software quality, e.g., transparency, scalability, concurrency, cost-reduction and certification by third parties, research on this area in CM scenarios is warranted. In contrast to software QA, physical testing has an extended set of requirements and limitations, e.g., object under test must be physically available, higher likelihood that standardised test protocols exist, inability to scale without hardware investment or inability to scale beyond the minimum time required for testing. In this section, we want to motivate further discussion and research into this area.
+In traditional (subtractive or formative) manufacturing, the design is driven by the capabilities provided by the manufacturing equipment. This is described as Design for Manufacturing or Design for Manufacturability (DFM), which means that the parts designed must be easy and cheap to manufacture. Especially in large volume production, the parts must be machinable in a simple way, as tooling, tool changes and complex operations are expensive. Furthermore, with traditional manufacturing, certain operations such as hollowed or meshed structures, are not possible to produce or incur large costs. With AM, the design of objects or parts is not strictly limited by these considerations, as flexibility comes for free and a number of additional operations (e.g., intersecting parts, hollowed structures) become possible. The designer can chose more freely from available designs and is less restricted. The design itself can concentrate on the functionality of the part, rather than its manufacturability.
+In the review by Rosen [
+71
+], the author proposed principles that are relevant for design for AM (DFAM) as they exist in literature. The suitability of AM is declared for parts of high complexity and low production volume, high production volume and high degree of customisation, parts with complex or custom geometries or parts with specialised properties or characteristics. Within this review, the author proposed a prototypical design process for AM, that is derived from a European Union standardisation project by the name of SASAM (
+http://www.sasam.eu
+).
+Kerbrat et al. [
+254
+] proposed a multi-material hybrid design method for the combination of traditional manufacturing and AM. For this method, the object is decomposed based on the machining difficulty. The authors implemented their method in a CAD System (Dassault Systems SolidWorks (
+http://www.solidworks.com
+)) for evaluation. This hybrid design method is not limited to a specific AM or manufacturing technology. The authors omitted information on how the decomposed part or parts are fused together and how to compensate for inaccuracies within the manufacturing process.
+Throughout the design process and later for manufacturing, it is necessary to convey and transport information on design decisions and other specifications. Brecher et al. [
+255
+] provided an analysis of the STEP [
+256
+] and STEP-NC [
+257
+] file formats. This analysis was used to propose extensions necessary for the use in an interconnected CAD-CAM-NC (CAx) platform.
+Buckner and Love [
+258
+] provided a brief presentation of their work on automatic object creation using Multi-Objective Constrained Evolutionary Optimisation (MOCEO) on a high-performance computing (HPC) system. With their software, utilising Matlab (
+http://mathworks.com/products/matlab
+) and driving SolidWorks, the objects were created automatically, following a given set of restrictions and rules.
+Cai et al. [
+259
+] proposed a design method for the personalisation of products in AM. Their work defined basic concepts, ranging from Design Intent to Consistency Models. The design method is intended to convey design intentions from users or designers in a collaborative design or CAD environment.
+Vayre et al. [
+260
+] proposed a design method for AM with a focus on the constraints and capabilities. This design method consists of four steps (Initial Shape Design, Parameter Definition, Parametric Optimisation, Shape Validation). For the initial shape design, the authors proposed the use of topological optimisation. The authors illustrated this process with an example of the re-design of an aluminium alloy square bracket.
+Diegel et al. [
+261
+] discussed the value of AM for a sustainable product design. The authors explored the benefits (e.g., mass customisation, freedom of design) and design considerations or restrictions for AM (e.g., surface finish, strength and flexibility). The authors argued that AM has potential for the creation of long-lasting, high-quality objects and parts that can save resources throughout their lifetime by optimised design.
+Ding et al. [
+262
+] analysed existing slicing strategies for the creation of objects with AM. Besides the analysis, the authors proposed a strategy to create multi-directional slicing paths to be used with AM machines that support multi-axis deposition or fabrication. By the authors’ analysis, the existing software for slice creation is insufficient and leaves uncovered areas (hole or gap). This work was not on the design of AM, but rather on the design of the resulting machine-paths for the manufacture with AM fabricators.
+In Wu et al. [
+263
+], the authors discussed the concept of Cloud-Based Design and Manufacturing (CBDM, see also [
+264
+]) in which the whole design and manufacturing process chain is executed in a cloud environment. CBDM is an extension to the CM concept, as it expands the process chain horizontally into the collaborative and cooperative domain of the cloud. CBDM utilises Web 2.0 technology, service-oriented architecture (SOA) concepts, semantic web technologies and has an inherent connection to social networking applications. In this article, concepts such as collaboration, cooperation and crowdsourcing for design of AM were discussed and exemplified.
+Cloud Computing (CC) is the concept of virtualized computing resources available to consumers and professionals as consumable services without physical restraints. Computing, storage and other related tasks are performed in an ubiquitous cloud, which delivers all these capabilities through easy to use interface front-ends or APIs. These concepts enable enterprises to acquire computing capacities as required, while often paying only for the resources consumed (pay-as-you-go) in contrast to payment for equipment and resources in stock (e.g., leasing, renting or acquisition). Concepts developed for this computing paradigm are of importance for the CM domain, as many problems stated or solved are interchangeable within domains. What CC is to computing resources (e.g., storage, computing, analysis, databases), CM is to physical manufacturing resources (e.g., tools, 3D printer, drills).
+In the definition of Cloud Computing, Mell and Grance [
+265
+] from NIST developed and presented the characteristics and services models for CC.
+Truong and Dustdar [
+266
+] presented a service for estimating and monitoring costs for cloud resources from the domain of scientific computing. This model is also suitable for the monitoring of costs in other cloud-based computing scenarios such as CM with adaptions. The authors presented an experiment where they analysed the cost of scientific workflows with on-premise execution and deployment to the Amazon Web Service (AWS) cloud system.
+Stanik et al. [
+267
+] proposed the cloud layer that is Hardware-as-a-Service for the remote integration of a distinct hardware resource into the cloud. The authors argued from the point of embedded systems development and testing, but the concepts described are universally applicable for any hardware that is intended to be exposed as a service.
+Mehrsai et al. [
+268
+] proposed a cloud-based framework for the integration of supply networks (SN) for manufacturing. The authors discussed the basics of supply networks and CC in order to develop a concept to integrate CC for the improvement of SNs. This modular approach was demonstrated in an experimental simulation.
+Oliveira et al. [
+269
+] researched the factors influencing the adoption of CC in general and for the manufacturing sector. The authors tested their hypothesis on a survey of 369 companies from Portugal, with 37.94% of the companies from the domain of manufacturing. The authors found that security concerns do not inhibit the adoption of CC in the manufacturing domain sub-sample of their survey group.
+Ramisetty et al. [
+270
+] proposed an ontology-based architecture for the integration of CC or cloud platforms in advanced manufacturing. The authors claimed that adoption of CC in manufacturing is less than in comparable industries due to the lack of social or collaborative engagement. The authors implemented three services (Ontology, Resource Brokering and Accounting) for an evaluation in the WheelSim App. The authors proposed an “App Marketplace” for manufacturing services to further the adoption of CC in the manufacturing industry.
+Um et al. [
+271
+] analysed the benefit of CC on the supply chain interactions in the aerospace industry. The authors proposed a manufacturing network for contracting and subcontracting based on CC. In this architecture, the basis for information exchange was the STEP-NC file format.
+Valilai and Houshmand [
+272
+] proposed a service-oriented distributed manufacturing system on the basis of CC. For their work, the authors analysed the requirements and basics of globally distributed manufacturing systems. The proposed system (XMLAYMOD) utilised the STEP file format for the information exchange and enabled a collaborative and distributed product development process as well as process planning and execution.
+Internet of Things (IoT) is a term used to describe a network consisting of physical objects connected to the Internet. These physical objects can be tools, parts, machines, actuators or sensors. The concept of IoT is integral to the CM paradigm as it is necessary to control the AM resources transparently and monitor the resources for efficient utilisation planning and scheduling. In IoT scenarios, the use of open-standards helps to avoid vendor lock-in.
+Tao et al. [
+273
+] presented a very high-level description of the possible integration of IoT in CM scenarios. In four proposed layers (IoT, Service, Application, Bottom Support) of CM systems, they declared IoT and the corresponding layer as core enabling technology.
+Furthermore, Tao et al. [
+274
+] proposed a five-layer (resource layer, perception layer, network layer, service layer and application layer) architecture for a CM system. The authors proposed the utilisation of IoT technology as a method to interface the manufacturing resources into the architecture. This work is very similar to [
+273
+].
+Qu et al. [
+275
+] presented a case study on the integration of CM and IoT technology into an enterprise to synchronise the production logistics (PL) processes. For the implementation, they proposed a five-tier (physical resource layer, smart object layer, cloud manufacturing resource management layer, cloud manufacturing core service layer, cloud manufacturing application layer) decomposition. The system used AUTOM [
+276
+] as a backbone for the IoT integration.
+Baumann et al. [
+277
+] proposed the development of flexible sensor boards for use in the monitoring of AM processes. The authors analysed available existing sensors and provided an architectural overview of a system for the incorporation of these sensor boards into a manufacturing control and monitoring system. With these sensors, AM resources can be bridged to control systems or services, thus enabling IoT functionality for the resources.
+Caputo et al. [
+278
+] performed a review on IoT from a managerial perspective with the application of AM. The authors developed a four-staged (Radical, Modular, Architectural and Incremental) conceptual framework to classify innovation and research on the topic. Within this framework’s description, AM resources will become digitally represented by sensors and IoT technology.
+In the review by Kang et al. [
+279
+], the authors focussed on global research on smart manufacturing and its enabling technologies and underlying concepts. In the section on IoT, the authors linked this concept to other technologies such as SoA, CM and smart sensors.
+Vukovic [
+280
+] discussed the importance of APIs for the IoT deployment and usage. The author discussed the common architectural patterns in IoT scenarios and the arising requirement for APIs to further this technology.
+In the work by Kubler et al. [
+281
+], the authors discussed the evolution of manufacturing paradigms and the origins of CM along with its relationship with IoT technology. The authors concluded that CM is not widely adopted because of security concerns, but research on AM and IoT will drive CM forward.
+Cyber-physical Systems (CPS) are one of the key enabling technologies for the Internet of Things. CPS is a term coined by the NSF (National Science Foundation) to describe systems, e.g., machines, parts or tools that have capabilities to sense and interact with their physical environment while being connected to the Internet in order to relay state and environment information to an Internet-based control system. The first occurrence in scientific literature can be found in Lee [
+282
+]. In the domain of 3D Printing, AM and CM, such systems are required to enable seamless integration of systems. With CPS, it is possible for an AM hardware resource to signal its current status or utilisation to a centralised or cloud-based control infrastructure in order to participate in scheduling endeavours and become part of a controllable system.
+In the work by Chen and Tsai [
+283
+], the authors proposed the concept of ubiquitous manufacturing. This concept is similar to CM but with a stronger focus on mobility of users and manufacturing resources. For this concept, ubiquitous sensor and IoT technology are key enabling technologies.
+Lee et al. [
+284
+] proposed a five-layer architecture for CM based on IoT technology. The layers in this architecture are from bottom to top: Smart Connection Layer, Data-to-Information Conversion Layer, Cyber Layer, Cognition Layer and Configuration Layer. The goal of this work was to provide a guideline for implementation of such a CPS-backed manufacturing systems and to improve the product quality as well as the system’s reliability.
+Sha et al. [
+285
+] provided a general introduction into CPS and the related research challenges. The authors identified QoS composition, knowledge engineering, robustness and real-time system abstraction as the four main research questions for this technology.
+In the survey by Khaitan and McCalley [
+286
+], the authors studied the design, development and application of CPS. In the list of identified application scenarios (Surveillance, Networking Systems, Electric Power Grid and Energy Systems, Data Centres, Social Networks and Gaming, Power and Thermal Management, Smart Homes, Medical and Health Care, Vehicular and Transportation Systems) manufacturing systems were missing. Despite this lack of mention, application in e.g., transportation and power management is relevant for CM systems.
+Kuehnle [
+287
+] proposed a theory of decomposition for manufacturing resources in distributed manufacturing (DM) systems. DM is similar in concept to CM in relation to the decomposition of manufacturing resources in vitalised services. According to the author, IoT technology and CPS are among the enabling technologies for this smart manufacturing concept.
+Yao and Lin [
+288
+] expanded the concept of CPS into socio-cyber-physical-systems (SCPS) with this study on smart manufacturing. This extension to social aspects of manufacturing (e.g., collaboration and cooperation) is expected to be an integral part of the next industrial revolution (Industry 4.0).
+Turner et al. [
+289
+] discussed the risk of attacks and their implications on CPS in the domain of manufacturing. The authors presented a number of attack vectors, e.g., attack on the QA process and counter or mitigation strategies. According to the authors, CPS provide an additional attack surface for malicious third parties.
+In CM as in CC, a number of resources must be provisioned on demand. In contrast to CC, the requirements for the execution resource can be more complex than just a computing resource. With CM manufacturing, resources must first be described in an abstract way (see 
+Section 6.13
+) to be schedulable. In this section, we present current research on the challenges presented by scheduling.
+Cheng et al. [
+290
+] introduced the concept of CM in their work and performed a brief review of possible criteria for scheduling in such scenarios. The authors provided four scheduling modes based on the three identified stakeholders (Operator, Consumer and Provider) and the system as a whole. The proposed modes consider energy consumption, cost and risk. The proposed system-centred cooperative scheduling mode yields the highest utilisation in their experiment.
+Liu et al. [
+291
+] proposed a scheduling method for CM systems for multiple enterprise and services scenarios. The authors used the criteria time, cost and pass-rate for the task selection. Based on these criteria, constraints were constructed for the decomposition of tasks into subtasks and their distribution onto resources. The authors took geographical distance and delivery times between CM locations into consideration. Their simulation concluded that for a 50 task scenario, with 10 enterprises offering 10 services in total, the utilisation is 49.88%, compared to 10 tasks (17.07%). The authors provided no specific scheduling solution with their work.
+Laili et al. [
+292
+] defined the problem of optimal allocation of resources based on a 3-tier model (Manufacturing Task Level, Virtual Resource Layer and Computing Resource Layer). The authors proved that the optimum resource allocation is NP-complete. For the reason of NP-completeness of the scheduling problem, these and other authors proposed heuristics-based algorithms to provide near-optimal scheduling. Heuristics-based scheduling algorithms provide near-optimum solutions for most of the scheduling instances without the guarantee to achieve an optimum solution but at greater speed than exact computation. In this work, the authors proposed a heuristic algorithm inspired by the immune system (Immune Algorithm, IA). In an experiment, they compared their algorithm against three other heuristic algorithms and it performed comparably.
+Wang [
+293
+] proposed a Web-based distributed process planning (Web-DPP) system that performs process planning, machining job dispatching and job execution monitoring. The system was implemented as a prototype and connected to legacy machine controllers. The proposed system acted directly on the manufacturing resource and interfaced with the Wise-ShopFloor framework [
+294
+]. The author did not provide information on scheduling algorithms or methods used.
+Huang et al. [
+295
+] proposed a scheduling algorithm based on Ant Colony Optimisation (ACO). In an experiment, they compared the algorithm with and without a serial schedule generation scheme (SSGS) against another heuristic Genetic Algorithm (GA). Their algorithm for conflict resolution performed faster and with better quality results than the GA when used with the SSGS.
+Lartigau et al. [
+296
+] presented an 11-step framework for scheduling and order decomposition within a CM system. This scheduling was deadline-oriented and implemented in a company environment for evaluation. The paper lacks validation and conclusive results for the proposed algorithm.
+In the work by Zhang et al. [
+297
+], the authors proposed a queue optimisation algorithm for the criteria lowest cost, fastest finished time, cleanest environment and highest quality. The proposed CM system relied on active and real-time environment and machine-status sensing through heterogeneous sensors. Furthermore, they utilised semantic Web (Ontology) technology for the system.
+Cao et al. [
+298
+] refined an ACO algorithm for efficient scheduling within a CM. This algorithm optimises for time, quality, service or cost (TQSC). With the addition of a selection mechanism to ACO, their ACOS algorithm performed with better quality results and faster convergence in comparison to Particle Swarm Optimisation (PSO), GA and Chaos Optimisation (CO).
+Jian and Wang [
+299
+] proposed an adapted PSO algorithm (Improved Cooperative Particle Swarm Optimisation, ICPSO) for the use in batch processing within a CM system. Batch tasks are indivisible units of work to be executed with manufacturing resources. The authors presented an experiment for the comparison of the proposed algorithm with an PSO and a cooperative PSO scheduling algorithm in respect to the cost and time criteria. The algorithm performed better than the other two algorithms.
+For the usage of manufacturing resources within CM, there must be an abstract definition or description of the resources. Open-standards are preferable where available in order to avoid vendor lock in.
+Luo et al. [
+300
+] proposed a six-step framework for the description of Manufacturing Capabilities (MC). The representation of this information utilised ontology and Fuzzy technology. Within the framework, the authors represented information on the manufacturing equipment, computing resources, intellectual resources, software and other resources.
+Wang et al. [
+301
+] also propose an ontology-based representation for manufacturing resources. The information and ontology was derived from manufacturing task descriptions. The authors implemented their algorithm in an enterprise setting in a medium-sized Chinese company for evaluation.
+As a more general approach to CC scheduling, Li et al. [
+302
+] proposed an ontology-based scheduling algorithm with PSO. The authors motivated their work by an example in a logistics centre which is relevant to the domain of CM. For this algorithm, the selection was restricted based on the Quality of Service (QoS) with time, cost, availability and reliability as criteria.
+Zhu et al. [
+303
+] developed an XML-based description for manufacturing resources oriented at the Web Service Description Language (WSDL) for web-services. The authors separate the resource description into two parts (Cloud End, CE and Cloud Manufacturing Platform, CMP). In their approach, they reflected static data, e.g., physical structure or input data types, in the CE layer whereas the CMP layer reflects the dynamic data, e.g., function parameters.
+Wu et al. [
+304
+] proposed an ontology-based capability description for industrial robot (IR) systems. IR are regarded as manufacturing resources and described as such. Besides manufacturing machines, such IR systems enable CM to perform as a flexible and agile manufacturing system.
+From the provided literature, we have identified the following open research questions. The listing compiled is non-exhaustive due to the nature of scientific research.
+Bourell et al. [
+305
+] provided a report on the “Roadmap for Additive Manufacturing” workshop that took place in 2009 and resulted in a proposal for research of the coming 10 to 12 years. The recommendations are grouped into:
+Design
+Process Modelling and Control
+Materials, Processes and Machines
+Biomedical Applications
+Energy and Sustainability Applications
+Education
+Development and Community and
+National Testbed Center.
+Design
+Process Modelling and Control
+Materials, Processes and Machines
+Biomedical Applications
+Energy and Sustainability Applications
+Education
+Development and Community and
+National Testbed Center.
+The recommendations included the proposal to create design methods for aiding designers with AM, creation of closed-loop printing systems and the design and implementation of open-architecture controllers for AM fabricators.
+The authors reflected on their proposed roadmap in an article [
+306
+] five years later. In this analysis, the authors stated that the direct influence of the Roadmap is hard to quantify. The authors remarked that the report is referenced about 50 times in scientific literature but only one project can be clearly attributed to the Roadmap.
+Lan [
+40
+] identified the following four tasks for future research in his review:
+Combination of Web services and software agents
+Collaborative network environment with the focus on integration and interoperability
+Focus on Web technology integration in RM systems and
+Collaborative product commerce and collaborative planning and control.
+Combination of Web services and software agents
+Collaborative network environment with the focus on integration and interoperability
+Focus on Web technology integration in RM systems and
+Collaborative product commerce and collaborative planning and control.
+In the review by Fogliatto et al. [
+55
+] on Mass Customisation (MC), the authors identified the following research needs:
+Research on Rapid Manufacturing (RM) to support MC
+Research on the value of MC for consumers as well as environmental, economic and ethic value
+Research on Quality Control
+Research on Warranty for MC objects and
+Case Studies and empirical validation.
+Research on Rapid Manufacturing (RM) to support MC
+Research on the value of MC for consumers as well as environmental, economic and ethic value
+Research on Quality Control
+Research on Warranty for MC objects and
+Case Studies and empirical validation.
+Khan and Turowski [
+307
+] performed a survey on challenges in manufacturing for the evolution to Industry 4.0. The authors identified six current and future challenges, as follows:
+Data integration (IoT, Big-Data, real-time data, data management)
+Process flexibility (Adaption, Change management)
+Security (Connectivity, monitoring, compliance)
+Process integration within and across enterprise boundaries (Integrated processes, logistics, optimisation)
+Real-time information access on hand-held devices (Web technology, ERP integration) and
+Predictive Maintenance (Machine data, sensors).
+Data integration (IoT, Big-Data, real-time data, data management)
+Process flexibility (Adaption, Change management)
+Security (Connectivity, monitoring, compliance)
+Process integration within and across enterprise boundaries (Integrated processes, logistics, optimisation)
+Real-time information access on hand-held devices (Web technology, ERP integration) and
+Predictive Maintenance (Machine data, sensors).
+Among the research needs identified by Adamson et al. [
+84
+] in their review are the following:
+Capabilities, information and knowledge integration and sharing as well as cloud architectures
+Definitions and standards for CM
+Intelligent, flexible and agile, distributed monitoring and control systems
+Business models
+Intellectual properties and
+Cost, security and adoption of CM systems.
+Capabilities, information and knowledge integration and sharing as well as cloud architectures
+Definitions and standards for CM
+Intelligent, flexible and agile, distributed monitoring and control systems
+Business models
+Intellectual properties and
+Cost, security and adoption of CM systems.
+Furthermore, the authors identify and predict
+
+The emergence of cloud service providers
+Real world connectivity (IoT)
+New collaboration and cooperation scenarios (Customer-manufacturer and manufacturing collaboration)
+Increased competitiveness
+Cloud closed-loop manufacturing
+Manufacturing of feature function blocks
+Increased awareness and research on sustainable operations.
+The emergence of cloud service providers
+Real world connectivity (IoT)
+New collaboration and cooperation scenarios (Customer-manufacturer and manufacturing collaboration)
+Increased competitiveness
+Cloud closed-loop manufacturing
+Manufacturing of feature function blocks
+Increased awareness and research on sustainable operations.
+In the work by Oropallo and Piegl [
+308
+], the authors specifically researched and compiled ten challenges in current AM systems that require research. The challenges are the following:
+Shape optimisation (Cellular structures and topology optimisation)
+Design for 3D printing (Software support, design methodology)
+Pre- and Postprocessing (File formats, model preprocessing, part postprocessing)
+Printing methodologies (Layered manufacturing, voxel and digital material, non-layer-oriented methods)
+Error control (Before and during printing)
+Multi material printing (Modelling and manufacturing support)
+Hardware and Maintenance issues (Process and material-based issues)
+Part orientation
+Slicing (Adaptive and direct slicing)
+Speed.
+Shape optimisation (Cellular structures and topology optimisation)
+Design for 3D printing (Software support, design methodology)
+Pre- and Postprocessing (File formats, model preprocessing, part postprocessing)
+Printing methodologies (Layered manufacturing, voxel and digital material, non-layer-oriented methods)
+Error control (Before and during printing)
+Multi material printing (Modelling and manufacturing support)
+Hardware and Maintenance issues (Process and material-based issues)
+Part orientation
+Slicing (Adaptive and direct slicing)
+Speed.
+Wu et al. [
+263
+] explicitly identified the following research needs for the evolution of CM:
+Cloud-Based Manufacturing (Modeling and simulation of material flow, concurrency and synchronisation for scalability)
+Cloud-Based Design (Social media integration and leveraging, CAx convergence and cloud enablement)
+Information, Communication, and Cyber Security (IoT, Security-as-a-Service) and
+Business Model.
+Cloud-Based Manufacturing (Modeling and simulation of material flow, concurrency and synchronisation for scalability)
+Cloud-Based Design (Social media integration and leveraging, CAx convergence and cloud enablement)
+Information, Communication, and Cyber Security (IoT, Security-as-a-Service) and
+Business Model.
+The work by Huang et al. [
+93
+] examined the state of the art of AM and named the following research areas for future investigation:
+Materials
+Design (Methods and tools, complex geometries, lifecycle cost analysis)
+Modeling, Sensing, Control, and Process Innovation (Multi-scale modelling simulation, error and failure detection, optical geometry reconstruction, faster hardware, bioprinting)
+Characterization and Certification and
+System Integration and Cyber Implementation (Knowledge management integration, cloud-based systems).
+Materials
+Design (Methods and tools, complex geometries, lifecycle cost analysis)
+Modeling, Sensing, Control, and Process Innovation (Multi-scale modelling simulation, error and failure detection, optical geometry reconstruction, faster hardware, bioprinting)
+Characterization and Certification and
+System Integration and Cyber Implementation (Knowledge management integration, cloud-based systems).
+From these research goals and the reviewed literature, two major issues become apparent. First, the issues of quality, error detection and monitoring of the processes require further work to enable stable and reproducible production for application in industrial settings. Associated with this issue is the lack of standardisation that is required to provide a consensus in understanding the potential issues of this technology as well as education and training. Second, the issue of business processes associated with the change of this manufacturing technology is apparent. In the current environment, business processes from traditional manufacturing are converted to this new technology, sometimes without the realisation of the extended possibilities and without addressing the special requirements. Besides these two major areas, the arising importance of digital security and IP protection is apparent. The research on this must include a variety of subtopics such as trust-models or chains of trust for the complete manufacturing chain, secure data distribution mechanisms, certification of 3D printers and 3D printed objects, and data protection against illicit data alteration and data acquisition.
+This article provides an overview of the topic of CM and 3D Printing services.
+With the overview of the existing definitions (see 
+Section 2
+) and the extension of the definition proposed, we have laid the foundations for future work.
+The review is based on the topological map presented in 
+Section 6.1
+. Concepts, techniques, methods and terminology are presented by exploring different authors’ work. We performed an explorative extension study to [
+4
+] due to the relevance of this domain (see 
+Section 5
+). In this study, we covered and analysed 48 publicly available services. This extension considers APIs of such services as a further distinction.
+The domain of AM, CM, 3D Printing, RM and related domains is thoroughly presented in this work by means of literature analysis in a scientometrical sense (see 
+Section 1.1.2
+ and 
+Section 1.2
+).
+The results presented in this work illustrate the scientific development of various techniques and methods from these domains in a time period ranging from 2002 to 2016 (see 
+Section 6
+).
+Felix Baumann and Dieter Roller conceived and designed the basis for this review; Felix Baumann performed the literature research, the data aggregation and writing; Dieter Roller provided insight and feedback on the structure and content of the work;
+The authors declare no conflict of interest.
+This work is not funded by any third party. The authors do not have any conflicting interests in the topic and provide an unbiased and neutral article on the topic contained within this article.

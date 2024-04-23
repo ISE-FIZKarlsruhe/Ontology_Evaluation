@@ -1,0 +1,1166 @@
+This study examines the effects of size on the strength of materials, especially on high strength pearlitic steel wires. These wires play a central role in many long span suspension bridges and their design, construction, and maintenance are important for global public safety. In particular, two relationships have been considered to represent strength variation with respect to length parameters: (i) the strength versus inverse square-root and (ii) inverse length equations. In this study, existing data for the strength of high strength pearlitic steel wires is evaluated for the coefficient of determination (R
+2
+ values). It is concluded that the data fits into two equations equally well. Thus, the choice between two groups of theories that predict respective relationships must rely on the merit of theoretical developments and assumptions made.
+Long span suspension bridges such as the Brooklyn Bridge (486 m main span, 1883) and Akashi Kaikyo Bridge (1991 m main span, 1998) owe their existence to high strength steel wires. The 4.7-mm diameter wires for the Brooklyn Bridge’s main cables attained the tensile strength of 1.1 GPa in 1883 [
+1
+]. Over a century later, 5-mm diameter Akashi wires reached 1.8 GPa in 1998. The strength level increased to 1.9 GPa for 7-mm diameter steel wires used for the Hong Kong-Zhuhai-Macau Bridge of cable-stayed type, which was completed in 2018, while 2 GPa cable wires of 5- or 7-mm diameter have been available since 2015 [
+2
+]. Composition-wise, these wires are eutectoid carbon steels (with 0.8 to 1 wt % C) and are heat-treated to produce fine pearlitic microstructures during the isothermal phase transformation, known as patenting. The wires are next deformed during a series of cold drawing operations, resulting in wires of high strength with moderate ductility. Wires for various applications can be drawn down to smaller diameters, producing even higher strength. For example, ASTM A228 specifies music spring wires up to 3.3 GPa level, as the wire diameter decreases to 0.100-mm. In laboratory, the maximum strength reached 6.9 GPa for 1% C steel [
+3
+].
+A recent article tracked the history of iron and steel usage for bridge construction [
+4
+]. Before the era of these huge suspension bridges with high strength steel wires as main cables, engineers had to use lower strength wrought iron wires for early suspension bridges. Examples from the US include the Wheeling Bridge (finished in 1849 and rebuilt in the 1860s) and the Niagara Falls Railroad Bridge (1855). Another choice for suspension members is the use of wrought iron chains. Truss and arch bridges also used wrought iron and steel (e.g., Eads Bridge, 1874). The use of cast iron was limited due to its structural deficiencies, but Iron Bridge at Coalbrookdale, UK (1781) remains a symbol of the Industrial Revolution. Still, most of these bridges were built in the 19th century or later. In order to locate the traces of pre-Industrial Revolution iron bridge building, researchers were required to go to China and South/Central Asia, where 2000 years ago ferrous metallurgy was more developed compared to the rest of the ancient world. Historical records exist in the form of travelogues written by Chinese Buddhist monks, including Faxian and Xuanzang. They trekked from China to India in the 4th to 7th century, respectively, and had to travel through the Pamir and Hindu Kush mountains, where they recorded their travel going over iron bridges or iron chain bridges. Western bridge engineers [
+1
+,
+5
+] often cited a Chinese iron bridge built in 56 or 65 AD (based on a 17th century history book by Kircher), but this has no support from Chinese bridge historians and no historical record exists [
+6
+]. Another attribution was an iron bridge built in the year 206 BC as a part of war efforts for the succession of the Qin Dynasty. However, the source, Sima’s historical volumes, only mentions that bridges were built. Besides, no archaeological evidence has been uncovered. An iron bridge called Ji-Hong, built in 1475, was the most credible early example, but was destroyed in a 1986 landslide [
+7
+]. See details on the history of iron bridges in [
+4
+].
+Modern suspension bridges built in the US and Europe were possibly inspired by Pope’s 1811 book [
+8
+], which described a suspension bridge in Bhutan with a detailed illustration [
+4
+]. Several 15th century iron bridges existed in Bhutan until the 1960s, though only a reconstructed bridge is left today. Pope was also remarkable for his technical foresight; he warned of the lack of redundancy and of instability against vibration of suspension bridges, long before these became serious issues. In 1816, a simple pedestrian bridge was built in Philadelphia, using two three-strand twisted cables with wooden planks; it did not hold during its first winter storm due to inadequate design [
+5
+]. More durable suspension bridges were built in the early 1820s in Francophone Europe, one of which still exists today [
+9
+]. These had parallel wire design for the main cables, which ensured a high loading capacity. This technology spread in surrounding regions for the next 30 years and many similar bridges were built. However, its weakness against wind-driven oscillations manifested as a major disaster at Angers Bridge in 1850, which killed 226. A similar fate fell on the Wheeling Bridge in 1854 as it was built by Ellet using the French technology [
+5
+]. In the US, stiffening of bridge structures allowed continual development of suspension bridges, which were particularly valued in the rapidly developing western states.
+These bridge constructions and other industrial activities spawned breakthroughs in wire-making in mid-19th century England [
+4
+]. Strong iron wires for musical instruments were first made in Augsburg, Germany in 1351 and German firms dominated the industry until 1834 [
+10
+]. Webster of Birmingham, UK used Mn-containing steel and doubled the wire strength in 1825. In the late 1840s, Horsfall, also from Birmingham, introduced isothermal phase transformation process, now known as patenting, and raised the wire strength further. The name “patenting” originated from the fact that the new process received British patents (at least three are on record) in the 1850s and Webster and Horsfall (merged in 1855) marketed their wires as “patent steel wires”. They found many industrial applications for the high strength steel wires at 1 GPa level, including 1860 trans-Atlantic telegraph cables that required 1600 t per installation. This period also was the time of innovation in steelmaking with Bessemer and open-hearth processes. By the 1880s, steel strength attained 1.4 GPa for 4.7-mm diameter wires suitable for bridge cable uses [
+11
+].
+One overlooked breakthrough in Horsfall’s invention is his choice of starting stocks for his wire drawing. Conventional wisdom is to use more ductile annealed wire rods, but he chose to use patented stocks of higher strength. Because of thinner cementite (iron carbide) layers in patented wires, higher drawing strain can be imposed, producing stronger final wire products. It was remarkable that Horsfall developed his process without the microstructural knowledge developed many years later; he deserves our appreciation for this contribution as well. 
+The aforementioned historical background leads to the main subject of discussion, namely, what makes the drawn wires strong. For more than 50 years, it has been clear that smaller pearlite spacings results in higher strength [
+12
+]. Yet, discussion continues as to the origin either from theories underlying the Hall-Petch equation for the tensile strength, σ
+ts
+(
+e
+),
+
+
+
+
+σ
+ts
+ (
+e
+) = σ
+o
+ + k/√
+d
+,
+
+
+
+
+
+(1)
+
+
+
+
+or from those supporting the Griffith equation:
+
+
+
+σ
+ts
+ (
+e
+) = A + B/
+d
+.
+
+
+
+
+
+(2)
+
+
+
+
+Here, σ
+o
+, k, A, and B are constants and 
+d
+ is a length parameter. For the Hall-Petch equation, 
+d
+ is the grain size, while for the Griffith equation 
+d
+ is diameter of wire or fiber. Many studies and reviews examined experimental observations and favor one or the other. However, most past data evaluation lacked statistical aspects. The aim of this work is to provide data comparisons with statistical parameters. Results indicate that currently available experimental data is inadequate to decide one or the other equation to be the only valid relationship. Thus, a final decision rests on the robustness of the theories that support a correlation.
+Strength increases with diametrical reduction of drawn wires were controlled by intermediate (or interpass) annealing, even though the beginning of this procedure is obscure. Wright [
+13
+] suggested that, by 5th century BC, Persians used iron draw plates and interpass annealing to make 0.55-mm bronze wires. The size effects of iron wire strength were first recorded in 1824 by early suspension bridge builders in France and Switzerland [
+8
+]. The Seguin brothers conducted 80 tests in France, whereas Dufour conducted 22 in Switzerland using wires obtained locally. Wire diameter ranged from 0.59 to 5.94 mm. Dufour fitted his results of 22 tests to an inverse diameter relation in terms of the tensile strength σ
+ts
+ and diameter 
+d
+ (in mm) using Equation (2) with A = 411 MPa and B = 276 MPa-mm (R
+2
+ = 0.887). The strength results for diameters less than 2.8 mm were plotted in 
+Figure 1
+a by red points. (Larger diameter data was inconsistent and omitted.)
+In his monumental paper on fracture criterion, Griffith [
+14
+] cited Karmarsh [
+17
+], who in 1858, obtained the same inverse diameter relation for metal strength. Griffith used the inverse diameter relation or the Griffith equation for describing his results on the strength of freshly drawn glass fibers, which are also plotted in 
+Figure 1
+b by blue points. The strength levels reached much higher levels and 
+d
+ values much smaller; the data fits to Equation (2) with A = 329 MPa and B = 11.56 MPa-mm (R
+2
+ = 0.967). Iron wire and glass fiber data sets also fit a power law relation of
+
+
+
+
+σ
+ts
+(e) = C 
+d
+−
+n
+,
+
+
+
+
+
+(3)
+
+
+
+
+with a constant, C, and an exponent, 
+n
+. The 1824 iron wire data yields 
+n
+ = 0.372 (R
+2
+ = 0.892) and Griffith glass fiber data gives 
+n
+ = 0.73 (R
+2
+ = 0.982). These are in red and blue points in 
+Figure 1
+c. Closeness of respective R
+2
+ values indicates each data set fits to either the Griffith equation or power law. The strength values of ASTM A228 specification are plotted in 
+Figure 1
+c as green points, giving a power-law fit with 
+n
+ = 0.15 (R
+2
+ = 0.994). However, these points fail to follow the Griffith equation. This plot represents five other data sets specified in ASTM A313 for 304, 316, 17-7PH (as-drawn or with aging), and XM28 steels. These have slightly lower exponents of 0.09 to 0.12. The spring wires are to be fabricated with additional deformation and the specified values are lower than their respective upper limits. While not analyzed for power-law fit, several other ASTM standards cover alloy steels and bronze wires in A229, A232, A877, and B159. Similar fits as in A228 and A313 are anticipated. 
+Another data set [
+15
+] for pearlitic steel wires (purple points in 
+Figure 1
+c) fits to Equations (2) and (3) with R
+2
+ levels of 0.99 for the Griffith equation and 0.987 for power law with 
+n
+ = 0.485. This Ochiai data set (for steel F) is prototypical for all other pearlitic steel wires, as will be shown below [
+15
+]. In this case, each point represents an as-drawn condition from a single starting diameter and a smaller diameter resulted from a higher drawing strain. Another data set was given in Ochiai (steel G) [
+15
+] and has 
+n
+ = 0.195, comparable to the A228 data. The wires in this group were drawn with interpass patenting to attain high drawing strain of up to 6.4.
+Beyond the above cases (and those in 
+Table 1
+), only a few studies dealt with the size effect on metal wires. Rubenstein [
+18
+] examined size effects on Ni wires with different microstructures. However, data scatters are large and it is difficult to draw definitive conclusions. Riesch et al. [
+19
+] studied size effects on W wires and collected previous results from the literature. While the authors contend the results fit the Hall-Petch relation, the data set also fits with the Griffith equation with comparable R
+2
+ values of 0.829 and 0.793, which may be called moderate fits at best. Metal conditions varied and the data came from eight different articles. Thus, the low R
+2
+ values are expected and the tungsten results hardly contribute to our discussion. Actually, two more sources of 19th century music wires exist, but are omitted here as the ranges of diameters were limited [
+10
+,
+20
+].
+Griffith’s glass fiber data has been explained in terms of existing flaws with Weibull statistics. In this approach, the probability of failure 
+P
+ is given by
+
+
+
+
+1 − 
+P
+ = exp{−(σ/σ
+o
+)
+m
+·
+d
+h
+·L
+},
+
+
+
+
+
+(4)
+
+
+
+
+where 
+m
+ is the shape parameter (also called Weibull modulus), σ
+o
+ scale parameter, 
+h
+ diameter dependency parameter, 
+d
+ diameter, and 
+L
+ sample length, respectively [
+21
+]. In the original Weibull theory [
+22
+], 
+h
+ = 1 for surface flaw-controlled failure and 
+h
+ = 2 for volume-controlled failure. From Equation (4), the average fiber strength <σ> is given by
+
+
+
+
+<σ> = K·L
+−
+m
+·d
+−
+h
+/
+m
+,
+
+
+
+
+
+(5)
+
+
+
+
+where K = σ
+o
+·Γ(1 + 1/
+m
+) and Γ(
+x
+) is the gamma function. While <σ> value is easily deduced in experiment, the importance of this equation comes from the correlation between the power-law exponent 
+n
+ and the Weibull shape parameter. When both 
+n
+ and 
+m
+ are measured, 
+h
+ value is determined. In order to clarify the physical meaning of 
+h
+, it is desirable to collect more experimental data beyond Zhu’s study [
+21
+] though this task is challenging. As of now, the meaning of 
+h
+ is unclear when it is not 1 or 2.
+For today’s common glass fibers for composite reinforcement, 
+m
+ is either 3 or 4. For the Griffith fibers, surface flaws are assumed to be the fracture origins (
+h
+ = 1) and the expected value of 
+m
+ = 1/
+n
+ = 1/0.76 = 1.3. This 
+m
+ value appears reasonable for hand-drawn fibers in the 1920s. When careful process control is practiced, the size effects of glass fiber are absent, as demonstrated by Otto [
+23
+]. Current optical glass fibers that are well protected by polymer coating also exhibit no size effect of their strength [
+16
+]; 18 samples of 0.125- to 0.4-mm diameter (
+L
+ = 1 to 2.5 m) showed the average strength of 4.58 ± 0.29 GPa. These points are plotted in 
+Figure 1
+c with dark blue points. 
+Zhu et al. [
+21
+] tested seven types of ceramic fibers, measuring 
+m
+ and 
+h
+ parameters. Their fibers included alumina, sapphire, Si
+3
+N
+4
+, SiC, Nicalon, and Nextel fibers. The values of m ranged from 2.5 to 14 and those of 
+h
+ ranged from 1.4 to 19. Obviously, 
+h
+ values are not limited to 1 or 2 of the original Weibull theory. However, in the two cases where 
+h
+ was 13 and 19 also showed a large 
+m
+, giving an 
+h
+/
+m
+ value of ~1. All the 
+h
+/
+m
+ values were between 0.5 and 1.3. Further work is needed if this is significant. A recent study [
+24
+] on the synthesis of SiCN fibers with electron irradiation included Weibull parameter determination as well as size effects. Fiber diameters ranged from 28 to 95 µm and over 50 samples were used with each starting material. The value of 
+m
+ was 4.46, while a power-law fit yielded 
+n
+ = 0.57 (they fitted the data with an exponential function, but large scatter in the data allows fitting with either). From the 
+m
+ and 
+n
+ values, 
+h
+ = 2.54 resulted. This is close to volume-controlled flaw effect of the Weibull theory. Since their fiber fabrication processes are always inside a vacuum chamber, surface flaws may be minimized. This is consistent with 
+h
+ = 2. Other findings on the 
+h
+ parameter will be discussed in 
+Section 4.2
+.
+Weibull analysis is infrequently conducted for metallic materials since 
+m
+ values have been expected to be around 100, although definitive studies seem to be absent. An approximate method for Weibull modulus estimation discussed in 
+Appendix A
+ found two sets of bridge cable wires, before service, having 
+m
+ values of 110 and 124. A recent study obtained an 
+m
+ value of 56 to 72 for stainless steels [
+25
+]. Bridge engineering guidelines [
+26
+] noted 
+m
+ of 70 for slightly corroded steel cable wires. Cable wires, new and lightly damaged, have 
+m
+ values above 50, but more severely corroded wires had reduced 
+m
+, going down to 
+m
+ of 10 to 30. For the nearly 100-years old Williamsburg Bridge cable wires, 
+m
+ was found to be 16.0 [
+4
+], while a still older data set from 1886 showed an 
+m
+ of 13.7 [
+11
+]. Thus, old or corroded wires have low 
+m
+ values, while undamaged high strength steel wires possess high 
+m
+ values and size effects predicted by the Weibull theory are minimal. In the metal wire cases, 
+m
+ is large and the power-law exponent corresponds to 
+h
+/
+m
+. Although 
+h
+ values have not been determined for metals, it is prudent to use Weibull’s unity value for surface flaw critical cases [
+22
+]. Then, the observed power-law exponents in 
+Figure 1
+c are primarily contributed by plastic deformation, not by the Weibull size effects. 
+The extremely high strength levels of patented and cold drawn eutectoid and hypereutectoid steel wires have been studied for many years and resulted in numerous patent filings. The quest for the clarification of their origins accelerated with the availability of transmission electron microscopy (TEM) in the 1960s, atom probe microscopy (APM) in the 1980s, and 3D-APM since the 2000s [
+27
+,
+28
+,
+29
+]. Embury and Fisher [
+30
+] were the first to use TEM for correlating pearlite lamellar spacings to the strength and drawing strain. They established the basic understanding of microstructural effects, as well as the correlation between the lamellar spacings and wire diameter. For the correlation, they chose to use the Hall-Petch relationship or Equation (1), but without excluding other possibilities. Langford [
+31
+,
+32
+] provided more detailed examination of pearlite strengthening. Langford and Cohen [
+33
+] examined deformed iron and they chose Equation (2) or the Griffith equation. They related the strength and the inverse of dislocation cell size on the basis of the Frank-Read source operation. Note that 
+d
+ in Equation (2) can be directly replaced with pearlite spacing (in the diametral directions only), as their equivalence was established earlier [
+30
+]. Marder and Bramfitt [
+34
+] used the Griffith equation approach in describing the strengthening effects of thermally varied pearlite spacings. Some subsequent studies followed Embury-Fisher’s choice of the Hall-Petch equation, most recently by Borchers and Kirchheim [
+35
+], while others favored the Griffith equation [
+36
+,
+37
+]. One persistent finding is that the Hall-Petch equation produces negative or low strength values when 1/√
+d
+ term decreases [
+34
+]. The differences between the two interpretive approaches are the underlying theories of strength determination in microscopic lamellar structures. Unlike the grain sizes in the tens of µm, however, TEM cannot provide clear-cut evidence in support of one theory from another in heavily deformed pearlite. Besides, high dislocation densities always make it difficult to resolve critical events. These uncertainties may be clarified if experimental size effects of strength can show one approach giving a better fit. Surprisingly, all studies examined here did not conduct a direct comparison of data fitting to the two equations. This is the main goal of the present evaluation of published strength dependences on drawing strains, which correlate to the pearlite spacings.
+In this part, 19 publications and one unpublished doctoral dissertation were examined [
+3
+,
+15
+,
+30
+,
+31
+,
+32
+,
+36
+,
+37
+,
+38
+,
+39
+,
+40
+,
+41
+,
+42
+,
+43
+,
+44
+,
+45
+,
+46
+,
+47
+,
+48
+,
+49
+,
+50
+]. From their graphical data, values of tensile strength σ
+ts
+ and of drawing strain 
+e
+ (or diameter 
+d
+) were obtained. As such, 18 data sets of σ
+ts
+ versus 
+e
+ are plotted in 
+Figure 2
+. Several of them were already given in tabular form, but most were estimated from figures. In some works, multiple results were presented and two or three representative results were used. When the number of data points were less than eight, these data sets were analyzed, but not plotted in 
+Figure 2
+ or used in calculating averages. These plots demonstrate consistency of observed hardening behavior, though deviations become large when 
+e
+ values exceed 4. Most had the starting strength of 1.3–1.5 GPa, but two curves had low starting strength (1–1.2 GPa) and one had a higher value (1.7 GPa). These plots show that all the data sets behave as expected for high C steels. 
+Table 1
+ presents the articles evaluated in chronological order, represented by the first author and year of publication. Next column lists the sample counts. The fourth column gives the exponent 
+n
+, obtained by plotting the strength against diameter. When the starting diameter is unknown, 5 mm was used. The next three columns provide R
+2
+ values obtained for n and by plotting the strength against exp(
+e
+/2) = 
+d
+o
+/
+d
+ or exp(
+e
+/4) = (
+d
+o
+/
+d
+)
+0.5
+, where 
+e
+ represents the true strain. The last two gives notes and reference number. The data for studies with small sample counts are separated to the bottom as the data significance is lower and 
+n
+ values are omitted. In statistical terms, even twenty samples are inadequate sample counts, but technically this is the typical upper limit in wire drawing facilities.
+Figure 3
+ plotted the data for Makii et al. [
+48
+] for the tensile strength of a pearlitic eutectoid steel (0.8% C) against diameter 
+d
+ (in green), normalized inverse diameter 
+d
+o
+/
+d
+ (in blue) and √(
+d
+o
+/
+d
+) (in red). The √(
+d
+o
+/
+d
+) scale is doubled for a better comparison. This data set is shown first since its sample count is 22, the largest. These plots are accompanied by a power-law (green) curve for σ
+ts
+ versus 
+d
+ with exponent 
+n
+ = 0.507 and linear fits for the other two (in blue and red). That is, red points are represented by Equation (1) and blue points by Equation (2). While some deviations are observed, all three length parameters provide excellent fits with R
+2
+ values (or coefficients of determination) of 0.992 (
+d
+), 0.994 (
+d
+o
+/
+d
+) and 0.992 (√(
+d
+o
+/
+d
+)), respectively. Thus, either Equations (1) or (2) can represent the observed size dependence equally well. The power law fit represents the strength increase due to cold drawing, their exponents and 
+n
+ values are also tabulated in 
+Table 1
+ for all other data sets. The 
+n
+ values ranged from 0.4 to 0.55, and their average was 0.488 with R
+2
+ value of 0.987. Therefore, the d dependence (with R
+2
+ = 0.985) is essentially the same as the Hall-Petch equation.
+The remaining data sets also exhibited a similarly good match of R
+2
+ values, as shown in 
+Table 1
+. Plots with the same format as 
+Figure 3
+ are given in 
+Figure 4
+ for eight more data sets. These show similar features observed in 
+Figure 3
+. The average R
+2
+ values were 0.979 and 0.985 and the difference of 0.006 was much less than the standard deviation. Collectively and individually, no differentiation can be made between Equations (1) and (2). In some cases, fits improved further when high strain data (
+e
+ > 4) were omitted. The strains above 4 produced less work hardening and this has been attributed to cementite dissolution and other causes. Li et al. [
+3
+] observed a transition from lamellar structure to nanosized subgrain structure at 
+e
+ = 3.8. This high strain effect was most pronounced in Li data, as it included strains up to 6.5. When the highest three points are removed, R
+2
+ values become comparable to other data sets (0.990 and 0.996), as the bottom line on 
+Table 1
+ shows. The fits are shown on 
+Figure 5
+. Note that the √(
+d
+o
+/
+d
+) scale is expanded five-fold.
+From the comparison of available size effect data on pearlitic steel strength, it appears difficult to distinguish fits to Equation (1) or (2). At the same time, the power-law fit is just as good as the Hall-Petch or Griffith equations. While we have used a power-law expression for modeling stress-strain relations for a long time, this has not been applied in connection to length parameters. This will be examined next if a new way to evaluate the observed data can be found.
+When Equation (3) is rewritten with 
+n
+ = 0.5 as
+
+
+
+
+σ
+ts
+(
+e
+) = 
+Cd
+−0.5
+ = 
+C
+′
+d
+o
+0.5
+d
+−0.5
+ = 
+C
+′(
+d
+o
+/
+d
+)
+0.5
+,
+
+
+
+
+
+
+
+we get
+
+
+
+
+σ
+ts
+(
+e
+) = 
+C
+′[exp(
+e
+/2)]
+0.5
+ = 
+C
+′·exp(
+e
+/4).
+
+
+
+
+
+(6)
+
+
+
+
+That is, we arrive at Equation (1) since 
+d
+ ≤ 
+d
+o
+ or exp(
+e
+/2) ≥ 1 and σ
+ts
+(1) = 
+C
+′. Similarly, for 
+n
+ = 1, we can rewrite the power law using 
+C
+ = 
+C
+″/
+d
+o
+ as
+
+
+
+
+σ
+ts
+(
+e
+) = 
+C
+″·exp(
+e
+/2).
+
+
+
+
+
+(7)
+
+
+
+
+This is a form of Equation (2). Note that both equations are not defined for 
+d
+o
+/
+d
+ less than 1 and 
+C
+ is the starting strength for the wire of diameter 
+d
+o
+. Equations (6) and (7) are plotted in 
+Figure 6
+ with blue and red curves. Considering these two expressions, when observed data fits to a power law with the exponent of 0.5 as seen in the previous section, the Hall-Petch relation appears to be the proper equation. This is because the strength-diameter plots in 
+Figure 3
+ and 
+Figure 4
+ cannot be fitted to the inverse diameter function or Equation (7). However, both Hall-Petch and Griffith equations have a constant term, σ
+o
+ and A. An example of such a Griffith equation, or
+
+
+
+
+σ
+ts
+ = 0.75 + 0.3/
+d
+,
+
+
+
+
+
+(8)
+
+
+
+
+is also plotted (in green points) in 
+Figure 6
+. Here, the units are in GPa and mm. Equations (6) and (8) are close and R
+2
+ value was 0.978. Even though this equation has not been optimized for a better fit, this R
+2
+ is almost identical to the average R
+2
+ value for 1/
+d
+ plots in 
+Table 1
+. Therefore, it is necessary to conclude that experimental size effects on strength can be represented by two different functional forms. In fact, other functional forms have not been excluded. 
+The average strength of a data set that follows Weibull Equation (4) can be calculated by Equation (5). This depends on the sample length as 
+L
+−1/
+m
+ and the diameter as 
+d
+−
+h
+/
+m
+. For optical fibers, tests of up to 20-m length were used to predict fiber strength for 
+L
+ = 100 km, relying on the 
+L
+−1/
+m
+-dependence [
+51
+]. For glass fibers used in cables, 
+m
+ < 10, while laboratory 
+m
+ values are 50–70, reaching as high as 120. For carbon fibers made from polyacrylonitrile showing 
+m
+ = 4, 
+L
+−1/
+m
+-dependence was shown by Tagawa and Miyata [
+52
+]. In this case, diametral dependence was found to follow 
+d
+−1.18
+, giving 
+h
+ = 4.7 [
+52
+]. Separately, Tagawa found anisotropic size effects that can best be interpreted by giving a different m value in the radial direction, or 
+m
+r
+ = 0.45. If this is assumed to be valid, 
+h
+ becomes 2.63, which is comparable to the case of SiCN fibers [
+24
+]. Another SiCN (Tyranno) fiber study [
+53
+] showed 
+L
+−1/4.7
+, while the Weibull modulus was 4.3, giving a good match. It is possible that a wide range of 
+h
+ values found in ceramic fibers [
+21
+] may come from different fabrication methods, compared to the melt processing for glass fibers or the precursor pyrolyzing processes of carbon (also Nicalon and Tyranno) fibers. 
+For organic fibers, such as polyethylene and Kevlar, more size effect studies were made, accompanied by Weibull analysis of strength [
+54
+,
+55
+,
+56
+,
+57
+]. Wagner [
+54
+] examined nine types of fibers for their diametral dependence, considering five functional behaviors (including Equations (1) and (2)). No preferred dependence emerged, however. For ultra-high strength polyethylene fibers, Schwartz et al. [
+55
+] found no length effect, while Smook et al. [
+56
+] fitted their data to 1/σ
+ts
+ = A’ + B’√
+d
+ relationship. Their data can be described by Equation (2) with A = 1.55 GPa and B = 53.7 GPa-µm (R
+2
+ = 0.985). In another study [
+57
+], four similar ultra-high strength polyethylene fibers (including Spectra 900 and 1000) showed power-law fit (Equation (3)), but the exponents varied from 0.46 to 2.13. Most polymer fibers appear to suffer from geometrical nonuniformity, which affects statistical comparison. No consensus view has emerged on their size effect. It appears these fibers need to be treated separately from metallic wires.
+Fracture problems related to corrosion and fatigue are as important as strength, but not covered in this study. Four recent works are listed as references [
+58
+,
+59
+,
+60
+,
+61
+,
+62
+]. For example, most fracture started from corrosion pits [
+60
+]. Unfortunately, a misconception introduced in the Silver Bridge disaster investigation [
+63
+], i.e., steel corrosion induced by hydrogen sulfide, is still invoked as a source of possible hydrogen embrittlement by bridge experts [
+62
+]. The hydrogen-sulfide hypothesis for bridge steel fracture was shown to be untenable [
+4
+]. Zinc (or iron) and acidic aqueous environment are adequate as hydrogen sources. Moreover, hydrogen embrittlement has been convincingly discounted for cable wires by detailed studies and the level of hydrogen in corroded steel wires were shown to be less than 0.2 ppm, which is insufficient for causing delayed fracture [
+64
+,
+65
+,
+66
+]. An interdisciplinary approach is essential.
+Since pearlite consists of ferrite and cementite lamella, its strength depends on both phases and how the two phases are distributed. Embury and Fisher [
+30
+] examined and discarded the rule of mixture approach as it was developed on the iso-strain assumption of fibrous mixtures. This was based on the ferrite and cementite strength as the base strength. Since then, more possible strengthening mechanisms have been proposed and reviewed [
+3
+,
+35
+,
+50
+]. Some critical issues, like the deformation and fracture of cementite, have been studied further. Fang et al. [
+67
+] showed with high resolution TEM dislocation induced shearing of cementite lamella at 
+e
+ below 1.5, while nano-size particulate rotation within the cementite lamella contributes to their thinning at higher strain. These observations give rational explanation of microstructural developments within deformed pearlite. Segregation of freed C atoms to dislocations is another source of potential strengthening. As ferrite is of bcc structure, Peierls barrier dictates dislocation mobility. The enhancement of the Peierls barrier by C interstitials and by carbide precipitation [
+68
+] was theoretically shown in 1970 [
+69
+], by unifying the Peierls and dispersed barrier strengthening mechanisms. Because of the complexity of multiple and interacting strengthening effects, the development of a unified theory for deformed pearlitic wires will take more time to develop. For analysis of what is known, an artificial intelligence approach may be of use. However, a recent study using neural networks [
+70
+] is a variation of pattern recognition analysis [
+71
+]. The black-box nature of neural networks is unsuited for developing new theoretical understanding of complex strengthening behavior. 
+Since the introduction of TEM in the materials research, earlier microscopic studies have often been overlooked. Of interest for the present discussion are two papers by Gensamer et al. [
+72
+,
+73
+]. They used optical microscopy (presumably with photographic enlargements) and determined pearlite spacings varied by using different isothermal phase transformation temperatures. The magnification reached 2000 to 6000 times and the smallest pearlite spacing was slightly below 0.1 µm. This spacing data set was corrected by a factor of 0.5 because of their use of the random intercept method [
+74
+]. Correlations with the mechanical parameters were obtained in terms of the logarithm of pearlite spacing [
+73
+]. Their tensile strength data (in red points) is plotted against the pearlite spacing, the inverse pearlite spacing, and the inverse square-root of pearlite spacing in 
+Figure 7
+a–c. In addition, most of the available data in the literature was plotted, leaving out low resolution studies. Among these works, two studies varied transformation temperatures [
+34
+,
+75
+]. Others used cold drawing to reduce the pearlite spacings, starting from Embury and Fisher [
+30
+] (in dark blue squares). Their pearlite spacing data was read from the smallest spacings in TEM photographs since they only reported cell sizes. The cell size data was about twice the pearlite spacings and not used here. Further given are data from Langford [
+32
+] (in blue +), Tarui [
+49
+] (in green point), Zhang et al. [
+40
+,
+50
+] (in red and green X), Li et al. [
+3
+] (in green triangles), and Takahashi et al. [
+29
+] (in red triangle). Most studies [
+3
+,
+30
+,
+32
+,
+40
+,
+49
+,
+50
+,
+75
+], used TEM, while SEM [
+49
+], two-surface replica method [
+34
+], and atom probe microscope [
+3
+,
+29
+] were also used. 
+Figure 7
+a shows the tensile strength versus pearlite spacing from various studies using only the data from direct determination. Data scatter is larger than those from strength and drawing strain, reflecting experimental difficulties dealing with sub-micron dimensions. At 1 to 2 GPa strength levels, a spread of a factor of four is found in terms of spacings (as the strength data is expected to behave more consistently). Elsewhere, a factor of two to three is typical. Because of the proportionality between wire diameter and pearlite spacing and the observed power-law relation between the diameter and tensile strength, as observed in 
+Section 3
+, a power law with an exponent of −0.5 (a straight line with slope of −0.5 in the log-log plot) is expected. This is drawn as the fitting line (in green), resulting in R
+2
+ = 0.833. The data fitting by regression yielded the slope of 0.529, with identical R
+2
+ = 0.833. Atom probe data [
+29
+], shown with a red triangle (plus several more points from [
+3
+] not shown) indicates consistency with TEM studies, but two points from Embury [
+30
+] were off by 2x or more. (These three points are shown, but were not included in R
+2
+ calculations.) 
+Figure 7
+b gives plots of the tensile strength versus inverse pearlite spacing. Identical symbols are used, as they are in 
+Figure 7
+a, where most data points are for the pearlite spacings larger than 50 nm. The least-square fit with Equation (2) (shown by a blue line) resulted in R
+2
+ = 0.853, indicating a slightly better fit than the power-law fit. 
+Figure 7
+c illustrates the case using the variable of inverse square-root of pearlite spacing, again with identical symbols. The least-square fitting line is drawn (in red), producing the best fit among three plots with R
+2
+ = 0.868. This is the fit to Equation (1) or Hall-Petch relation. This 1/√(pearlite spacing)-fit is statistically close to the inverse pearlite spacing fit (equation (2)) in 
+Figure 7
+b with a difference in R
+2
+ of 0.015. As shown in 
+Table 1
+, it was 0.01 in previous comparison. Because of data scatter, data fittings again allow one to support two groups of theories as found earlier. 
+This spacing data compilation relied on the published values. In most works, average pearlite spacings were reported, while some used the average of finest ferrite spacings [
+40
+,
+49
+]. In the case of Embury’s data [
+30
+] used in 
+Figure 7
+, the two finest ferrite spacing values were read from their TEM results. Ferrite spacings are around 90% of the corresponding pearlite spacing and this should be used for strength calculations [
+49
+,
+50
+]. Among the published studies, Langford [
+32
+] conducted most comprehensive TEM examination using 15 drawn wire samples. Recently, Zhang et al. [
+50
+] reported advanced TEM studies on ten drawn wire samples. Results of these two studies overlap well in 
+Figure 7
+, especially below 60 nm. These data also agree well with the results of Marder and Bramfitt [
+34
+] above 60 nm, who used 25 samples from heat treatment. These three studies provided 2/3 of the data examined here. Note that the strength data for Zhang data used for 
+Figure 7
+ was interpolated from four tensile strength values given in [
+50
+]. When only these three data sets are used, R
+2
+ values increase to 0.874, 0.908 and 0.901, corresponding to the three plots in 
+Figure 7
+. Thus, the difference in R
+2
+ values between Equations (1) and (2) becomes 0.007 and supports the conclusion of data equivalency. 
+Vander Voort and Roosz [
+76
+] examined several measurement methods for pearlite spacings and concluded that the average values are consistent among four methods studied. They also noted that the finest spacing values were 40–50% of the average. This explains the factor-of-two difference observed in 
+Figure 7
+ between high and low spacing groups. For the phase transformation studies, the global averages are appropriate, but for the strength-pearlite spacing correlation, the finest spacings control the maximum resistance to deformation. It is hoped that future pearlite studies consider this aspect in addition to increasing sample counts for statistically robust measurements. Because of ease in sample preparation, SEM methods are best for achieving adequate sampling. Tarui (private communication) noted that when 20–30 SEM fields of view are analyzed for finest spacings using Tashiro-Sato method [
+77
+], a convergence is obtained for a single finest ferrite spacing from about five fields. He used this value as the ferrite spacing, which satisfies statistical requirements. The smallest value reported using this method was 58 nm [
+49
+]. Since 100 nm range is routinely achievable, 5–10 nm measurements should be feasible. For instance, an old SEM image of as-patented 0.8C steel was kindly supplied by Toshimi Tarui of Nippon Steel Sumitomo Metals (NSSM). It was taken at 2000× with 400 DPI and was enlarged four times on screen. Even from this low magnification image, it is possible to estimate apparent pearlite spacings of 70–80 nm with a ±20 nm resolution. A higher magnification and better digital recordings are possible today, leading to the above cited 5–10 nm target value. Comparable measurements using TEM or atom probe are practically impossible considering time and cost.
+This study was initiated to identify the suitability of using either the Hall-Petch or Griffith equation for describing the size effects of high strength pearlitic steels, which have been examined by many researchers. It is found that published size dependence data can be represented by both equations equally well. The strength versus pearlite spacing correlation also indicated statistical equivalence of the two relations, although improvements in data consistency are needed. A power-law equation was shown to be a form of the Hall-Petch equation, but even this can be approximated well using the Griffith equation with properly chosen constants. Consequently, the choice between two groups of theories that predict respective relationships must rely, for now, on the merit of theoretical developments and assumptions made [
+12
+,
+33
+,
+35
+,
+49
+,
+50
+].
+This research received no external funding.
+The author is grateful to Toshimi Tarui for extensive discussion and for finding valuable steel test data from sources commonly inaccessible and to Stephen Walley and Ron Armstrong for providing a copy of Percy article containing rare technical data from the late 19
+th
+ century and for valuable comments.
+The author declares no conflict of interest.
+It has been shown that the degradation of high strength cable wires of high C pearlitic steels can be characterized by Weibull shape parameter or Weibull modulus [
+26
+]. New wires are expected to have m values of more than 70 since 
+m
+ = 70.4 was found for wires of stage 2 corrosion damage. Actual Weibull analysis of high strength cable wires is apparently unavailable in the literature. Perry [
+78
+] reported old cable wires from the Williamsburg Bridge in New York (built in 1903) using wires removed during its rehabilitation project. A set of 160 tensile tests was analyzed and 
+m
+ was found to be 16.0 [
+4
+] (in the original report, a computational error was made and 
+m
+ was reported as 2.303 times higher than the correct value.) Another data set was given by Percy [
+11
+] and 
+m
+ was found to be 13.7, using the same method found in [
+4
+]. Weibull plots of these two cases are given in 
+Figure A1
+ with the slope of 
+m
+, which are the only two available in the literature. Usually, values of the tensile strength of high strength cable wires are reported collectively with an average value plus standard deviation. Assuming the fracture behavior follows the Weibull statistics, it is possible to estimate an approximate value of 
+m
+. This is done by getting stress values in Equation (4) by supplying a set of 
+P
+ and 
+m
+ values. By comparing the average and standard deviation of the stress values with the corresponding observed values, 
+m
+ value can be estimated by iteration.
+Suppose the average tensile strength (TS) and its standard deviation (SD) are given. When SD is a few % of TS, 
+m
+ is expected to be higher than 50, while 5–10% level indicates 
+m
+ to be between 10 and 30. Pick a trial value of m and use TS as the scale parameter, σ
+o
+. In addition, pick a large number, N (e.g., 10,000). Using Excel, Col A should have 0.0001 (= 1/N) to 1. Col B is set to = LN(−LN(1 − A
+nn
+)), 
+nn
+ being 1 to 10,000. This is to calculate values of 
+m
+·ln(σ/σ
+o
+). Col C is set to = σ
+o
+·EXP(B
+nn
+/
+m
+). This gives values of σ that corresponds to 
+P
+ values in Col A. Compute <σ> = AVERAGE(C1:C10,000) and <
+sd
+> = STDEV(C1:C10,000). Compare <σ> and <
+sd
+> to TS and SD. After several trials, these two calculated values should approach TS and SD. At this stage, also change the input σ
+o
+ value, by increasing TS with a factor 
+F
+ given by
+
+
+
+
+
+F
+ = 1 + 0.276 
+m
+−0.776
+,
+
+
+
+
+
+(9)
+
+
+
+
+This empirical factor that depends on 
+m
+ is needed because σ
+o
+ and the average value or <σ>, given by Equation (5), differ. The calculated average of the σ value, <σ>, quickly converges to TS, and when the STDEV value, or <
+sd
+>, becomes close to SD, this 
+m
+ value is taken as an estimate. This procedure was confirmed to provide valid 
+m
+ values for the data with known 
+m
+, TS, and SD values. Five known cases from [
+4
+,
+26
+] matched. The Percy’s 1886 data mentioned above showed a slightly higher 
+m
+ value of 15.3, which is likely due to large scatter in the original data. Results are given in 
+Table A1
+. Three additional cases without 
+m
+ data are also examined. One data set was from the Mid-Hudson Bridge main cable [
+79
+]. The wires had SD of 4.7% of TS and showed stage 2 and 3 level corrosion and gave 
+m
+ = 30, comparable to the data in [
+26
+]. Two other cable wire data for TS and SD came from Japan, through the search conducted by Toshimi Tarui of NSSM. One set was the actual test data for the main cables of the Bisan Seto Bridge (1100 m main span, completed 1988) [
+80
+]. The sample count was 38,470 and the present method yielded an estimated 
+m
+ = 110. The second set was a supplemental data of a Japanese Standard for bridge cable wires (5-mm galvanized steel wires) [
+81
+]. This wire test data with sample count of 45 resulted in 
+m
+ = 124. These two estimated 
+m
+ values confirm the high quality being achieved for the fabrication of suspension bridge cable wires.
+Known values are in green, while those in red are estimated by the present method. N/A: Not available, est: estimated; Ref.: reference number.
+Known values are in green, while those in red are estimated by the present method. N/A: Not available, est: estimated; Ref.: reference number.
+Omitted above in the steps for Weibull parameter calculation is another variable or ln(σ/σ
+o
+). For this, add Col D and set = B
+nn
+/
+m
+. The Weibull plot can then be obtained by plotting Col D and Col B. In the present case, it produces a straight line with the slope of m. Another useful plot for examining the data characteristics is to plot stress (Col C) versus 
+P
+(Col A), yielding the cumulative probability distribution curve. This shows a skewed S-shaped curve. The present method can estimate the Weibull modulus for common mechanical property data when it was obtained with statistically valid sample counts. Usually, this may suggest counts of more than 30–50. However, only 15 to 20 samples were used in [
+26
+] and still worthy 
+m
+ values were determined. Thus, the sample counts needed are within normal engineering practice.
+Author: The first author only is shown; w/o 
+e
+ > 4: without data for 
+e
+ larger than 4; 0.5 (1) mm: Data for 0.5 (1) mm diameter wires; PS: pearlite spacing; Ref.: reference number.
+Author: The first author only is shown; w/o 
+e
+ > 4: without data for 
+e
+ larger than 4; 0.5 (1) mm: Data for 0.5 (1) mm diameter wires; PS: pearlite spacing; Ref.: reference number.

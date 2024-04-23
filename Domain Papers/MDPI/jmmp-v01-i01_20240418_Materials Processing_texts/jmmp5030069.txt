@@ -1,0 +1,713 @@
+Fused filament fabrication (FFF) is one of the most popular additive manufacturing (AM) processes that utilize thermoplastic polymers to produce three-dimensional (3D) geometry products. The FFF filament materials have a significant role in determining the properties of the final part produced, such as mechanical properties, thermal conductivity, and electrical conductivity. This article intensively reviews the state-of-the-art materials for FFF filaments. To date, there are many different types of FFF filament materials that have been developed. The filament materials range from pure thermoplastics to composites, bioplastics, and composites of bioplastics. Different types of reinforcements such as particles, fibers, and nanoparticles are incorporated into the composite filaments to improve the FFF build part properties. The performance, limitations, and opportunities of a specific type of FFF filament will be discussed. Additionally, the challenges and requirements for filament production from different materials will be evaluated. In addition, to provide a concise review of fundamental knowledge about the FFF filament, this article will also highlight potential research directions to stimulate future filament development. Finally, the importance and scopes of using bioplastics and their composites for developing eco-friendly filaments will be introduced.
+Additive manufacturing (AM) processes can produce parts from different materials such as metals, ceramics, composites, and thermoplastics for applications in diverse fields, including aerospace, automobile, and health care [
+1
+,
+2
+,
+3
+]. Some known unique features of AM processes over conventional manufacturing processes are that the lighter weight parts can be achieved by adjusting infill density, and part production with complex geometries can be produced without costly tooling [
+4
+]. A complex-shaped part can be fabricated from a computer-aided design (CAD) model by any AM machine. This reduces machining requirements and space utilization since AM processes do not require jig, fixtures, tools, and molds like milling, injection molding, drilling, or broaching process [
+5
+]. Additionally, nonvalue-added activities such as workpiece loading and tool changing during the manufacturing operations are also reduced in AM. Manufacturing wastes such as material chips are minimized in AM processes. On the other hand, AM processes may generate other material waste such as support materials and lose powders. Although the AM processes have several advantages over the conventional manufacturing processes, the applications of AM build parts as functional products or components are limited [
+6
+].
+The potential for AM processes is astounding, but their capacity is limited. There are several AM processes, and the AM processes are divided into seven major families according to the ASTM F2792-12A [
+7
+]. Commonly used technologies under each family are: (1) binder jetting: powder bed and inkjet head, (2) directed energy deposition: laser metal deposition (LMD), (3) material extrusion: fused filament fabrication (FFF), (4) material jetting: multi-jet modeling (MJM), (5) powder bed fusion: selective laser sintering (SLS), direct metal laser sintering (DMLS) and electron beam melting (EBM), (6) sheet lamination: laminated object manufacturing (LOM) and ultrasonic consolidation, and (7) vat photopolymerization: digital light processing (DLP) and stereolithography apparatus (SLA) [
+8
+]. Most commonly, the AM processes produce objects from CAD models by depositing layers upon layers. Compared to the consistency that can be achieved from commercial manufacturing processes, the parts produced by AM processes often fail to meet different functional requirements (mechanical, thermal, and electrical properties, thermal stability, dimensional accuracy, surface quality, or multiaxial load-bearing capacity).
+Parts produced by AM processes are often rigid and not able to respond to environmental stimuli. Four-dimensional (4D) printing is a revolutionary advancement of AM process for producing parts from smart materials [
+9
+]. In general, 4D printing employed the same 3D printing techniques. The main difference is that in 4D printing, the 3D printed parts can transform over time due to the influence of external environmental stimuli, such as humidity or temperature [
+10
+]. Extrusion-based and vat photopolymerization AM families are used for 4D printing [
+11
+]. Research on 4D printing technology and the development of smart materials is in its very beginning stage as 4D printing may require specific materials that respond well to the stimuli, such as shape-memory polymers. Foresti et al. investigated biocomposite material for 4D bioengineered shape-memory scaffold with light-based stimulus [
+3
+].
+The availability of raw materials for AM processes is another crucial factor that hinders AM processes from being employed on a large scale. In most AM processes, only certain types and forms of materials can be employed. Metals, polymers, ceramics, and composites are often used as raw materials in AM processes. The raw materials for AM also exist in various forms, such as powder, sheet, liquid, and filaments form. Among the AM raw materials, polymers are the most widely used material [
+12
+]. The scope of this paper will focus only on the materials for the FFF process.
+As one of the most known AM processes, the FFF process utilizes thermoplastics in the shape of filaments to produce prototypes and functional parts [
+13
+]. Although the FFF is considered a low-cost process among other AM processes, the applications of AM in the world’s manufacturing efforts to produce functional parts are limited. This limitation is due to several reasons: poor part properties, limited raw materials, restricted part size, and low production rate. The properties of FFF build parts depend on process parameter selection, filament materials, filament properties, among other factors.
+Process parameters optimization is one of the most popular research areas in the advancement of the FFF [
+14
+,
+15
+]. However, the part properties of an FFF build part can only be improved to a certain extent by determining an optimum combination of process parameters through process parameter analysis [
+16
+]. This is because the pure thermoplastic materials used for the FFF process also have inherent material properties boundaries that cannot be exceeded. Another limitation of process parameter analysis is that the optimum combination of process parameters is not generalized across all filament materials, built shapes, or equipment. An optimum combination of process parameters for a part property from one filament may not be optimum for another part properties or other filament materials [
+17
+]. For this, process parameter analysis by itself is not sufficient for meeting all functional requirements of many applications.
+Along with the advancements in the process parameter analysis, it is crucial to continuously search for new filament materials that can be used to produce high-quality parts to expand application areas. In addition to pure thermoplastics as filament materials, composite materials, specifically polymer matrix composites, can be a viable option for filament preparations. Researchers and industrial experts have been researching to develop new composite materials for filaments by blending different reinforcements such as particles, nanoparticles, and fibers with thermoplastics. Composite materials are getting attention from researchers for FFF filaments due to their unique properties and low cost [
+18
+,
+19
+].
+Several additional factors should be considered when developing composite filaments. Materials for FFF filaments need to meet several specific requirements: glass transition temperature, ductility, melting points, viscosity, crystallinity, or tensile properties to print parts with the FFF process. Moreover, the adhesion between polymer and reinforcement is another crucial factor for composite properties. The selection of matrix and reinforcement combinations is essential in developing composite filaments. The properties of composites parts depend on bonding between matrix and reinforcement and void content in composites. As the utilization of the FFF process will increase in the future, the new composite filament materials development should also focus on the environmental impacts of composite build parts. For composites filaments, either polymer matrix and reinforcements or both of them can be synthetic or natural. Environmentally friendly composite filaments can be prepared using natural reinforcements with biodegradable polymer matrix materials.
+This paper focuses on systematically reviewing the available materials for the FFF filaments, including pure thermoplastic, composite, and bioplastic filaments. Although there are a few review papers on composites materials for the FFF process [
+20
+,
+21
+,
+22
+], to our best knowledge, very few of the published articles concentrated on the filament preparation process and bioplastic filament preparation challenges and opportunities. All the existing review papers are mainly focused on composites filament development and the properties of composite build FFF parts. Along with analyzing the available filament materials, this paper will cover the filament fabrication requirements and the difficulties, the material selection for FFF filament, and the future research direction for the development of composite filaments. Additionally, the scope, challenges, requirements for bioplastic and their composite filament development for the FFF process will be discussed.
+The rest of the paper is organized as follows: A brief introduction about the fundamental of the FFF process with applications of FFF build parts is given in 
+Section 2
+. Different pure thermoplastic filament materials with their properties are introduced in 
+Section 3
+. 
+Section 4
+ reviews the existing papers on composite filament materials for the FFF process. 
+Section 5
+ is dedicated to bioplastic filament materials. 
+Section 6
+ details the challenges, opportunities, and future research areas on filament materials. Finally, the concluding remarks are given in 
+Section 7
+.
+In the fused filament fabrication (FFF) process, a three-dimensional (3D) geometric part is produced from a digital model without any (or with minimal) intervention of humans. As shown in 
+Figure 1
+, the FFF process typically involves the filaments being pressurized and melted in a liquefier prior to being deposited in the build platform through a nozzle. A basic introduction about the FFF process and some applications of the FFF build parts are given in this section.
+A digital (CAD) model is converted into a machine-readable format such as stereolithographic (STL) and additive manufacturing format (AMF) for producing parts by the AM process. The next step is slicing. In this step, the 3D model is sliced into multiple layers. During printing, the 3D model is built by depositing layer upon layer. The G-code for each layer is needed to generate and is a programming language to control the movement of the FFF extruder in the XY plane of a machine. Most of the commercial FFF machines have software for slicing and generating G-code. In such a case, the STL file is directly uploaded to the FFF machine software. Then, the values of different FFF process parameters, such as print speed, build orientation, and infill density, are defined, and this step is known as machine setup.
+In most FFF machines or printers, the extruder moves in a horizontal plane during printing according to the pre-generated tool path for deposing a layer. Once a layer is deposited, the build platform moves downward z-direction. The next layer is deposited over the last layers, and it repeats until the fabrication of the part is completed. The strength of the built part depends on the bonding between two consecutive layers. Sufficient heat energy is required to activate the surface of the former deposited layer and cause adhesion between the activated surface and the newly deposited layer.
+The FFF process parameters also significantly impact part properties such as surface roughness, dimensional accuracy, and mechanical properties. FFF process has several process parameters, and Popescu et al. [
+15
+] divided the process parameters into three categories. A list of process parameters in each category is given with a brief description in 
+Table 1
+. This paper does not include a detailed description of FFF process parameters, as this paper aims to analyze FFF filament materials [
+15
+]. Before discussing filament materials, some applications of FFF build parts are introduced in the following subsection.
+FFF is one of the most used AM processes. Generally, thermoplastics and their composites are used as filament materials for part production. Researchers are still working to develop new filament materials for improving part properties. Although there are many opportunities to improve the properties of FFF build parts, FFF build parts are still used for various applications, and some research works on producing functional parts are summarized in this subsection:
+Chen et al. [
+24
+] used the FFF process to print custom trays for edentulous jaws from PLA filament. A 3D scanned data from a cast model is used to design the trays using reverse engineering software. The accuracy of the printed trays is high compared to hand-made trays. The traditional clinical method to produce trays can be replaced with the FFF process, reducing time and improving part accuracy [
+24
+].
+García-Dominguez et al. [
+25
+] applied the FFF process to produce complex-shaped shoe heels. Ergonomical aspects, mechanical behaviors, and aesthetical views are considered to design shoe heels. Furthermore, topology optimization and infill structure design applied to optimize weights, strength, and use of ABS filament material.
+Halbig and Singh [
+26
+] had fabricated inlet guide vanes (IGVs) and acoustic liners for a gas turbine engine from polymer matrix composites. It was shown that the weight, gas emission, and fuel consumption are significantly reduced when metallic components are replaced with polymer matrix composite components.
+Multiaxial force sensors have been produced from the FFF process by Kim et al. [
+27
+]. A sensor has structural and sensing parts. The FFF process is capable of producing both parts simultaneously that reduce assembly work, production time, and cost. In this work, thermoplastic polyurethane (TPU) filaments are used for the structural part, and the sensing part is produced from carbon nanotube (CNT)/TPU nanocomposite filament.
+In automotive applications, the FFF process is used to produce functional parts as it can print complex parts with controlled weights. For instance, For instance, Prada et al. [
+28
+] printed an accelerator pedal for a Formula Student racing vehicle by the FFF process. The weight of the pedal reduced around 38% without compromising performance.
+Foresti et al. [
+29
+] used the FFF process to fabricate respirator masks for supporting COVID-19 pandemic controlling activities by providing safety protection devices. Different health-related factors, such as healthiness, customer safety, virus protection, government regulations, reusability, disinfect ability, and protection against viruses, are crucial for printing masks by the FFF process. In the research work, polylactic acid (PLA), advanced polyolefin, and styrene ethylbutylene styrene are used to produce flexible and adaptable masks.
+Chen et al. [
+24
+] used the FFF process to print custom trays for edentulous jaws from PLA filament. A 3D scanned data from a cast model is used to design the trays using reverse engineering software. The accuracy of the printed trays is high compared to hand-made trays. The traditional clinical method to produce trays can be replaced with the FFF process, reducing time and improving part accuracy [
+24
+].
+García-Dominguez et al. [
+25
+] applied the FFF process to produce complex-shaped shoe heels. Ergonomical aspects, mechanical behaviors, and aesthetical views are considered to design shoe heels. Furthermore, topology optimization and infill structure design applied to optimize weights, strength, and use of ABS filament material.
+Halbig and Singh [
+26
+] had fabricated inlet guide vanes (IGVs) and acoustic liners for a gas turbine engine from polymer matrix composites. It was shown that the weight, gas emission, and fuel consumption are significantly reduced when metallic components are replaced with polymer matrix composite components.
+Multiaxial force sensors have been produced from the FFF process by Kim et al. [
+27
+]. A sensor has structural and sensing parts. The FFF process is capable of producing both parts simultaneously that reduce assembly work, production time, and cost. In this work, thermoplastic polyurethane (TPU) filaments are used for the structural part, and the sensing part is produced from carbon nanotube (CNT)/TPU nanocomposite filament.
+In automotive applications, the FFF process is used to produce functional parts as it can print complex parts with controlled weights. For instance, For instance, Prada et al. [
+28
+] printed an accelerator pedal for a Formula Student racing vehicle by the FFF process. The weight of the pedal reduced around 38% without compromising performance.
+Foresti et al. [
+29
+] used the FFF process to fabricate respirator masks for supporting COVID-19 pandemic controlling activities by providing safety protection devices. Different health-related factors, such as healthiness, customer safety, virus protection, government regulations, reusability, disinfect ability, and protection against viruses, are crucial for printing masks by the FFF process. In the research work, polylactic acid (PLA), advanced polyolefin, and styrene ethylbutylene styrene are used to produce flexible and adaptable masks.
+In recent years, there are many opportunities for applying AM processes in the medical field. In the medical field, the demand for developing customized products is high as each patient required unique implants, tools (e.g., drilling guides), supportive guides, and prostheses [
+30
+]. The AM processes are suitable for producing customized products with high efficiency and accuracy at a low cost. Medical models, implants, tools and instruments for medical devices, medical aids, supportive guides, splints, prostheses, and tissue engineering are application areas of the AM processes in the medical field [
+31
+]. Generally, computed tomography (CT) or other 3D image scanning techniques are used to capture patient anatomy for scaffolds and implants. CT datasets can be used to develop a 3D model that AM processes use for printing.
+For medical fields, high accuracy and desire quality are required for a product. Besides patient safety, biological combability and porous structure requirements are vital factors for selecting AM processes and materials. Foresti et al. [
+32
+] recommended automated predictive innovation that uses big data analysis, advanced diagnostics, intelligent manufacturing, and zero failure activity to support using AM in the medical field. The FFF process is widely used in medical and dental applications. For instance, Wang et al. [
+33
+], Holländer et al. [
+30
+], Naghieh et al. [
+34
+] applied the FFF process for producing dental implant, intrauterine system prototype, and bone tissue scaffold, respectively. Along with medical fields, the applications of the FFF process in automobiles and aerospace are increasing due to low cost, complex part production, and customized design.
+In addition to the above-mentioned applications, the FFF process is applied in diverse real-world applications. The readers are encouraged to read [
+1
+] to know more real-world applications in various fields. The unique characteristics of the FFF process are printing complex parts, controlling weights by adjusting infill density, reducing assembly costs, increasing strength by choosing infill structures, and increasing dimensional accuracy [
+16
+,
+20
+].
+The FFF process is getting attraction from researchers and industrial people for these characteristics. The applications of the FFF process in diverse fields can be accelerated by increasing the availability of filament materials with a wide range of properties. In the following sections, the existing materials used as filaments are analyzed and summarized. This paper will also extensively discuss the potential filament materials sources and identify future research directions for filament development. The category breakdown of various existing filament materials and their properties discussed is shown in 
+Figure 2
+.
+Many thermoplastics materials are available in the form of filament for the FFF process. Filament extruders, such as Filabot extruders, are used to fabricate filaments from thermoplastics and composites. A general filament extruder is shown in 
+Figure 3
+. For the filament fabrication process, the raw materials (thermoplastics and composites) in granulates or pellets form are feed into the barrel through a hopper. The barrel acts as a housing for the rotating screw(s). The raw materials are also heated in the barrel. The barrel has three zones: feed zone, transition zone, and metering zone [
+35
+]. The raw materials soften into the feed zone, plasticized in the transition zone, and completely melted in the metering zone. The temperatures at different zones are selected based on the input materials. The input materials pass from the feed zone to the transition zone and then the metering zone through the surface of the rotating screw. The number of the screw in the barrel can be one or two. One screw extruder is known as the single screw extruder, and the two screws extruder is called the twin-screw extruder. The melted raw materials are extruded through a die from the metering zone. The diameter of the die is selected based on the required filament diameters. Usually, a 2.5–3.5 mm diameter die made of brass is used for 1.75 mm filaments [
+36
+]. After passing through the die, the extruded materials pass through a cooling zone. The quality of filament is significantly affected by the rate of colling. Different colling techniques such as water bath and cold air gun are used for filaments. A drawing process can further reduce the cross-section of filament after colling. Generally, a direct current (DC) motor is used for the drawing process [
+36
+].
+Different thermoplastics have different properties, and the selection of filament material for the FFF process is generally based on the application or other built part requirements. The most widely known and used filament materials are acrylonitrile butadiene styrene (ABS) and polylactic acid (PLA) for the FFF process [
+2
+]. Both materials have their advantages and limitations. ABS is known to emit harmful gases during melting at high temperatures, shrinks significantly during cooling, and is not environment friendly. On the other hand, PLA is considered biodegradable but has low heat resistance, high brittleness, and low mechanical properties.
+Many thermoplastics filaments are used to produce functional 3D-printed parts. Thus, these thermoplastic filaments are required to achieve different properties, such as chemical resistance, biocompatibility, heat resistance, flexibility, and strength, depending on the application of interest. Some pure thermoplastic filaments also have a definite quality that may be worth knowing before adopting them in a specific FFF process. Most pure thermoplastics materials used as FFF filaments are commercially available, and their brief descriptions are summarized below:
+Acrylonitrile butadiene styrene (ABS): ABS is one of the most commonly used filament materials [
+37
+]. ABS, an amorphous polymer, is not considered biodegradable, but it is known for its advantageous properties such as high impact resistance, abrasion resistance, and chemical resistance [
+38
+]. Another advantage of ABS is its toughness. However, some disadvantages are present with ABS, such as shrinkage and warps before and after part production [
+37
+,
+39
+]. The melting point of ABS is usually between 200–250 °C. ABS may produce chemical fumes that affect those with chemical sensitivities or breathing difficulties [
+40
+]. The automotive, healthcare, and aerospace industries have employed ABS to fabricate a few functional components [
+41
+].
+Polylactic acid (PLA): PLA is another common thermoplastic known for its biodegradability but also known for its sensitivity to humidity over 60 °C. PLA build parts are often reported to experience low distortions during printing than ABS, but it has low thermal conductivity and toughness [
+38
+,
+39
+]. PLA build parts are typically used for practical applications that require a certain degree of aesthetic characteristics [
+37
+,
+42
+].
+Polycarbonate (PC): PC material is known for its strong mechanical properties, high glass transition temperature, and transparency. They are also amorphous like ABS. On the other hand, polycarbonates are susceptible to humidity and have high print temperatures [
+43
+]. PC can print functional prototypes and has been employed in the automotive and aerospace industries [
+41
+].
+Polyether ether ketone (PEEK): PEEK has an approximate glass transition temperature of 143 °C. It is known for having high mechanical strength, lightweight, chemical and heat resistance, and biodegradability [
+44
+]. The printing temperature of PEEK is comparatively high, around 340 °C [
+45
+].
+Polyetherimide (PEI): PEI is a lightweight thermoplastic and has good mechanical properties, heat, and smoke resistance. It is a biocompatible polymer with a high glass transition temperature. FFF parts build from PEI have poor surface finish and poor dimensional accuracy [
+46
+]. When looking at the weight to strength ratio, it would be a good option for rapid prototyping applications in several industries such as aerospace and automotive [
+41
+].
+Nylon: Nylon is known for its flexibility, heat resistance, and impact resistance. It is durable and has good toughness values as well. However, as hygroscopic material, it absorbs moisture extensively, reducing overall quality [
+47
+]. Nylon is prone to warping like ABS. The warping effect can be reduced by maintaining bed temperature at about 75 °C.
+High impact polystyrene (HIPS): HIPS is a biodegradable polymer that is a low strength thermoplastic with good machining characteristics [
+38
+]. The advantages of using this FFF filament are its good flow characteristics, impact resistance, and low cost [
+38
+]. However, it is prone to wear and it requires a high printing temperature and a heated build platform. The properties of HIPS are similar to ABS, but it is lighter than ABS. HIPS is preferable for support structures as it dissolves with chemicals such as limonene [
+48
+].
+Acrylonitrile butadiene styrene (ABS): ABS is one of the most commonly used filament materials [
+37
+]. ABS, an amorphous polymer, is not considered biodegradable, but it is known for its advantageous properties such as high impact resistance, abrasion resistance, and chemical resistance [
+38
+]. Another advantage of ABS is its toughness. However, some disadvantages are present with ABS, such as shrinkage and warps before and after part production [
+37
+,
+39
+]. The melting point of ABS is usually between 200–250 °C. ABS may produce chemical fumes that affect those with chemical sensitivities or breathing difficulties [
+40
+]. The automotive, healthcare, and aerospace industries have employed ABS to fabricate a few functional components [
+41
+].
+Polylactic acid (PLA): PLA is another common thermoplastic known for its biodegradability but also known for its sensitivity to humidity over 60 °C. PLA build parts are often reported to experience low distortions during printing than ABS, but it has low thermal conductivity and toughness [
+38
+,
+39
+]. PLA build parts are typically used for practical applications that require a certain degree of aesthetic characteristics [
+37
+,
+42
+].
+Polycarbonate (PC): PC material is known for its strong mechanical properties, high glass transition temperature, and transparency. They are also amorphous like ABS. On the other hand, polycarbonates are susceptible to humidity and have high print temperatures [
+43
+]. PC can print functional prototypes and has been employed in the automotive and aerospace industries [
+41
+].
+Polyether ether ketone (PEEK): PEEK has an approximate glass transition temperature of 143 °C. It is known for having high mechanical strength, lightweight, chemical and heat resistance, and biodegradability [
+44
+]. The printing temperature of PEEK is comparatively high, around 340 °C [
+45
+].
+Polyetherimide (PEI): PEI is a lightweight thermoplastic and has good mechanical properties, heat, and smoke resistance. It is a biocompatible polymer with a high glass transition temperature. FFF parts build from PEI have poor surface finish and poor dimensional accuracy [
+46
+]. When looking at the weight to strength ratio, it would be a good option for rapid prototyping applications in several industries such as aerospace and automotive [
+41
+].
+Nylon: Nylon is known for its flexibility, heat resistance, and impact resistance. It is durable and has good toughness values as well. However, as hygroscopic material, it absorbs moisture extensively, reducing overall quality [
+47
+]. Nylon is prone to warping like ABS. The warping effect can be reduced by maintaining bed temperature at about 75 °C.
+High impact polystyrene (HIPS): HIPS is a biodegradable polymer that is a low strength thermoplastic with good machining characteristics [
+38
+]. The advantages of using this FFF filament are its good flow characteristics, impact resistance, and low cost [
+38
+]. However, it is prone to wear and it requires a high printing temperature and a heated build platform. The properties of HIPS are similar to ABS, but it is lighter than ABS. HIPS is preferable for support structures as it dissolves with chemicals such as limonene [
+48
+].
+Along with the properties of filament materials, the cost is a vital factor for filament material selection due to budget limitations. The price of filament depends on filament preparation steps, the location of plants, labor cost, the grade of materials, and other expenses related to raw materials, productions, and logistics. A price list of different pure filament materials is added in 
+Table 2
+, and the price range may vary due to many reasons, including taxes, demand, and raw material availability. Therefore, the list is not exhaustive, and the data is collected on June 2021 from filament manufacturers, sellers, and e-commerce companies in the United States.
+Since most pure thermoplastic information is widely available, this paper does not include a detailed discussion of the development process. The sources, advantages, disadvantages, printing temperature of the above-discussed filaments are summarized in 
+Table 3
+. The filament material for different applications should be selected based on the properties of materials while considering the purpose or the functionality of the printed parts. PLA-based filaments can be used for food packaging and medical implants. On the other hand, ABS and HIPS are useful for high-impact resistance applications. Nylon is a flexible, ductile, and durable filament material with good wear resistance. For aesthetics purposes, typically, low-quality filaments are not an issue. The property analysis of filament materials is vital to select a material for a functional part. It should also be noted that the mechanical and thermal characterizations, electrical resistance, and fatigue behaviors of the filaments may vary from manufacturers and user. Many external factors contributing to this variation, such as the raw material quality, fabrication processes, the pre- and post-material treatments, or the testings conditions, are examples from the filament manufacturers’ perspective. The state of the FFF equipment, the process parameters settings, the material handlings prior- and post-printing process, or the filament storage conditions are examples from the filament users’ perspective.
+This review paper does not include several not widely-used pure thermoplastic filament materials, such as polyethylene terephthalate (PET) and polyvinyl alcohol (PVA). Along with pure thermoplastics, different composite filament materials are also used for the FFF process. The researchers are intensively focusing on developing various composite materials for FFF filament. In the following subsection, existing research on composite filament materials is summarized. The systematic summary of the current study will be helpful for the researchers who are currently working in this field and for new researchers to get a concise idea about the existing composite filaments.
+Currently used pure thermoplastic filaments have limitations such as low strength and stiffness in meeting the improved performance of FFF build parts. Thermoplastics become soft and fail to retain their original shape at high temperatures. In many cases, a product produced from thermoplastic filaments cannot meet a set of specific functional requirements. The properties of FFF build parts are often inadequate when compared to the properties of injection molded parts [
+49
+]. Based on the application fields, there is a continuous search for FFF filament materials that are lightweight, have high strength, and have good surface quality [
+50
+]. The composite materials are viewed as the viable option to meet these requirements.
+Different reinforcements can be added to the pure thermoplastics to obtain the desired properties of an FFF build part. The need for new materials and environment-friendly materials are also reasons for using composite materials. Composite materials have been reported to exhibit superior properties compared to pure polymers [
+19
+,
+21
+,
+22
+]. General terms associated with composite filaments for the FFF process are as follows:
+Composite filaments: A composite filament or composite material, in general, is a combination of two or more constituents or phases, resulting in unique properties that cannot be achieved from either component alone. In most composites, one constituent is known as the matrix, and the other one is reinforcement. The goal of developing composites is often to improve the properties of the matrix.
+Matrix: Traditionally, muds, polymers, metals, and ceramics are used as a matrix to bind the fiber reinforcement in composites. Nowadays, polymers are widely used as matrix materials in composites. Polymer matrix composites have unique characteristics compare to pure polymers [
+51
+]. The polymer matrix composites are suitable for the FFF process as the FFF process has been developed to use thermoplastics for producing parts in an additive manner.
+Reinforcements: Different types of reinforcement, such as particles, fiber, and non-particles, are incorporated into the polymer matrix as support materials to achieve specific mechanical, thermal, and electrical properties in polymer matrix composites. The properties of composite materials depend on reinforcement material types, particle size, fiber orientation, and the composition of reinforced materials [
+22
+]. In many cases, reinforcement materials are added to reduce the cost, but the reinforcements can also improve the functional characteristics of the FFF build parts.
+Composite filaments: A composite filament or composite material, in general, is a combination of two or more constituents or phases, resulting in unique properties that cannot be achieved from either component alone. In most composites, one constituent is known as the matrix, and the other one is reinforcement. The goal of developing composites is often to improve the properties of the matrix.
+Matrix: Traditionally, muds, polymers, metals, and ceramics are used as a matrix to bind the fiber reinforcement in composites. Nowadays, polymers are widely used as matrix materials in composites. Polymer matrix composites have unique characteristics compare to pure polymers [
+51
+]. The polymer matrix composites are suitable for the FFF process as the FFF process has been developed to use thermoplastics for producing parts in an additive manner.
+Reinforcements: Different types of reinforcement, such as particles, fiber, and non-particles, are incorporated into the polymer matrix as support materials to achieve specific mechanical, thermal, and electrical properties in polymer matrix composites. The properties of composite materials depend on reinforcement material types, particle size, fiber orientation, and the composition of reinforced materials [
+22
+]. In many cases, reinforcement materials are added to reduce the cost, but the reinforcements can also improve the functional characteristics of the FFF build parts.
+The filaments used in the FFF machine require a specific shape, ductility, and other properties. Material selection for FFF composite filament is challenging, as filament breakage and nozzle clogging may occur during part fabrication by the FFF process [
+22
+,
+51
+]. Additionally, the heterogeneous nature of composite materials makes it challenging to recycle at the end of their useful life. Recyclability, carbon footprints, and other environmental impacts should be considered in selecting reinforcement and/or matrix composition for composite filaments. Bio-based and biodegradable reinforcements and matrices generally have lower carbon footprints at the end of their life cycle. Guarino et al. classified composite scaffolds in 3D printing biomedical application by distinguishing between those with biodegradable and bioresorbable matrices [
+52
+]. A systematic summary of the research on composite filament development for the FFF process is given in this subsection. Different types and forms of reinforcement materials are used as composites filament materials, as shown in 
+Figure 4
+. In this section, the composite materials for FFF filaments are divided based on reinforcement types.
+To fabricate particulate composite filaments, the reinforcement materials in the form of particles are incorporated in a polymer matrix and further extruded into FFF filaments (
+Figure 4
+a). The properties of particulate composites depend on the particles’ size, shape, orientation, and volume fraction and the interfaces between particles and polymers matrix. Filament breakage and nozzle clogging due to the brittleness of filaments and large particle size are two common technical issues often faced in the FFF process. It is necessary to consider these technical problems when developing or utilizing particulate composite filaments.
+Along with the technical issues, the impacts of particle size, volume fraction of particles, and process parameters on part properties can be significant. Manufacturing ability and part properties are both critical for composite material selection. To ensure widespread particulate composites filament usage in the FFF process, the composite filaments should be able to be incorporated into traditional FFF machines without additional hardware and software modification [
+53
+].
+In addition to the production ability and concern, recent research findings in developing particulate composite filaments, analyzing impacts of composites properties on part properties, and identifying difficult-to-use composites in the FFF process, are summarized in this section. The matrix, the particulate composite reinforcement with its proportion, and the FFF machine employed by various researchers are listed in 
+Table 4
+. Note that this review is not exhaustive due to the page constraint.
+Hwang et al. [
+54
+] analyzed the impacts of copper and iron particles on the tensile and thermal properties of ABS matrix composites. In the research, the size of the used copper and iron particles are less than 24 and 43 μm, respectively. The percentage of particle weight (wt) varies from 10% to 40%. It was shown that tensile strength and tensile strain are decreased with an increase in reinforcement metal percentage due to more voids formation at higher metal particle percentage. Thermal conductivity is also increased with the addition of reinforcement metal percentage in composites. As a result, the dimensional inaccuracy and shape deformation decrease due to the reduction in thermal distortion.
+Masood and Song [
+53
+] used nylon and iron as the matrix and reinforcement, respectively, to produce inserts for injection molding dies with polymer matrix composites. For this, 30% and 40% iron composition by volume were used for filament preparation, and it was shown that the tensile modulus and tensile stress are reduced with the increase in the iron percentage. The tensile properties are decreased under tensile load due to void formation between nylon and iron particles. The particle size is also significant for tensile properties as the bond between matrix and reinforcement depends on the size of reinforcement particles. The same authors published another article [
+73
+], in which the thermal properties of iron-nylon composites were used for analysis. According to analysis results, the thermal conductivity increases with the increase in the volume fraction of iron particles in the nylon matrix and the size of metal particles.
+Kalsoom et al. [
+55
+] used the FFF process to print heat sinks and heating/cooling coils from a particle reinforcement composite that consists of ABS polymer and diamond particles. High heat conductivity and low thermal expansion are required for these types of applications, and both properties are achieved by adding diamond particles as reinforcement. This study measured different thermal properties such as thermal expansion, contact angle, and thermogravimetric compared to pure ABS and ABS matrix composites for different fractions (10–30%) of diamond particles. The experimental results showed that the thermal properties are improved significantly by adding diamond as the reinforcement.
+Shemelya et al. [
+56
+] used tungsten particles to reinforce the PC matrix for radiation shielding applications. The effects of tungsten particle composition on X-ray shielding capacities and mechanical and electromagnetic properties are analyzed. The experimental investigation results showed that X-ray shielding capacities increased around 10% with a small fraction of tungsten, up to 3% by volume without significant change in electromagnetic and mechanical properties. Also, a microscopic study had shown that crack propagation chance is high around the tungsten particles due to void around the particles.
+Polymer matrix composite filament with ABS matrix and iron reinforcement particles for the FFF process was developed by Mostafa et al. [
+57
+]. In developing the composite filament by a single screw extruder, 10% by volume iron powder (45 μm) and a small fraction of surfactant are used. In filament production, an optimum combination of screw speed, temperature, and pressure is selected by trial and errors to produce a filament with a uniform diameter.
+Nikzad et al. [
+58
+] analyzed the thermal and mechanical properties of parts produced by the FFF process from two polymer matrix composites. ABS was the matrix for both composites, and iron and copper are used as reinforcements as both have good thermal and mechanical properties. According to the reported experimental investigation by the authors, the proportion of reinforcements is significant for thermal properties, and the particle size has a considerable impact on the mechanical properties. To improve thermal conductivity from unfilled ABS, at least 20% copper particles and 30% iron particles are required with ABS matrix. Generally, the small particle size is preferable to enhance bonding between polymer and metal particles as the surface area to volume ratio is increased.
+Ryder et al. [
+59
+] used stainless steel (SS) as the reinforcement with ABS to analyze the mechanical properties of ABS-SS composite build parts. Like other research findings, the analysis results indicated that the adhesion of metal/alloy improves thermal conductivity but decreases mechanical properties (e.g., ultimate tensile strength). For up to 15% of SS, the thermal conductivity and magnetic properties of ABS-SS composite build FFF parts increase without significant deterioration of mechanical properties.
+For many electronics applications, thermal conductivity and electrical insulation are two essential properties. In research by Quill et al. [
+60
+], boron nitride (BN) was used as the reinforcement with ABS for producing FFF filaments to achieve both thermal conductivity and electrical insulation. The experimental analysis showed that thermal conductivity and flexural modulus increase with a higher BN portion. On the other hand, the flexural strength and impact strength are decreased with the addition of BN. The same composite was used to compare the FFF process with injection molding. Injection-molded parts showed a similar trend in the change of properties and, the properties are slightly better than the FFF build parts.
+Khatri et al. [
+61
+] compared thermal and mechanical properties of FFF builds parts from pure ABS and ABS-BT (barium titanate) filaments. Up to 50% BT was used to produce ABS-BT filaments. It is challenging to extrude ABS-BT filaments when the proportion of BT more than 35% due to rheology. For this, the samples are produced by the FFF process with different ratios of BT between 10% and 35%. The experimental investigations showed that the ultimate tensile strength (UTS), flexural strength, and ductility were observed to increase with a higher proportion of BT in the ABS-BT composite. The relative permittivity of the composites decreases with an increase in the percentage of BT in the composite filaments.
+Zhang et al. [
+62
+] fabricated bone scaffolds by FFF process from PLA and hydroxyapatite (HA) composites. The fabricated scaffolds are compared with β-tricalcium phosphate (β-TCP) and partially demineralized bone matrix (DBM) in terms of degradation time, biocompatibility, osteoconductivity, and inflammation. The results of the analysis indicated that PLA-HA composite is a promising material for biomedical applications as both have been approved by Food and Drug Administration (FDA) for biomedical applications [
+74
+].
+Antoniac et al. [
+63
+] used magnesium (Mg) metal particles as the reinforcement with PLA to produce biocompatible composites. In their research, two compositions of PLA-Mg composite were used for filament preparation. The first composition consisted of 150 g PLA and 6 g Mg (100 μm), and in the other composition, the proportions of PLA and Mg (125 μm) were 150 and 4 g, respectively. In both compositions, vitamin E was mixed with the PLA and Mg formulation to increase the bonding between PLA and Mg. Moreover, vitamin E reduces the chance of the reaction of Mg with oxygen. This research concluded that the diameter of the composite filament produced was not uniform, and filament tuning is required.
+Garg and Singh [
+75
+] analyzed the impacts of three filament fabrication parameters such as extrusion temperature, extrusion load, and proportion of reinforcement of composite filament on melt flow index. A design of experiment technique was employed, and it was shown that extrusion load is the most significant parameter for melt flow index.
+In general, single-particle size (SPS) reinforcement particles are incorporated to produce FFF filaments from particulate composites. Singh et al. [
+64
+] analyzed the impact of different-sized reinforcement particle combinations, SPS, double particle size (DPS), and triple particle size (TPS), on the mechanical properties of FFF build parts. In their experiment, nylon and aluminum oxide are used as matrix and reinforcement materials, respectively. The results showed that SPS increases the percentage elongation, and DPS increases tensile strength, yield strength, and Young’s modulus.
+For biomedical applications, specifically for craniofacial reconstruction applications, of the FFF process, Abdullah et al. [
+65
+] considered zirconium dioxide (ZrO
+2
+) and β-TCP filled polyamide 12 (PA 12) as possible composite materials, and different properties of parts from the composite filaments are analyzed. ZrO
+2
+ was used for radiopacity purposes and β-TCP for enhancing cell adhesion and proliferation as β-TCP has chemical similarity with human bones. For the composite preparation, 15% ZrO
+2
+ and 15–25% β-TCP reinforcement material are used. The analysis showed that tensile strength, tensile modulus, and flexural strength decrease with an increase in reinforcement material. On the other hand, tensile modulus and surface roughness are increased with a higher composition of reinforced materials. It was concluded that the composites are not suitable for craniofacial reconstruction applications as the mechanical properties are lower than the required for this specific application.
+Chen et al. [
+66
+] used the FFF process for tissue engineering applications. A polymer matrix composite consisting of PVA and β-TCP is used as the filament material. Along with non-toxicity, tunable hydrophilicity, readiness to modification, and good biocompatibility of PVA, bone-bonding ability and mechanical performance of PVA are enhanced by adding β-TCP as reinforcement. Micrometer-sized HA was used as reinforcement particles with PLA matrix in the development of composite filament for the production of porous structures by the FFF process [
+67
+]. In the PLA-HA composite, different proportions of HA were used, and the maximum ratio of HA was 50%. The PLA-HA composite build parts have high porosity, high surface roughness, high cell adhesion, and low stiffness compared to pure PLA parts.
+Wei et al. [
+68
+] used graphene oxide as particles with ABS and PLA to analyze the impacts of reinforcement in FFF build parts and manufacturability properties. The experimental analysis showed that thermal conductivity increased with the increase in the proportion of graphene oxide in composites, but extruder nozzle clogging occurs when the ratio of graphene oxide more than 5.6%. It had also been shown that homogenizer, heated build platform, and heated build chamber are significant for smooth production of parts from composites. It is required to maintain a stable build chamber temperature that softens filaments rather than decomposes them.
+Rahim et al. [
+69
+] used 5% ZrO
+2
+ and 15% HA as reinforcement materials with PA matrix for developing a composite filament. The viscosity, rate of crystallization, elastic modulus, and thermal stability of the composite filament build FFF parts are better than pure PA without significantly compromising the tensile strength. The incorporation of reinforcements increases the porosity that is an essential property for biomedical applications. But the composite FFF parts’ mechanical properties are worse than injection molded parts from the same composites.
+Spoerk et al. [
+70
+] analyzed the impacts of particle size and FFF machine build temperature on different properties of parts produced from glass reinforced polypropylene matrix composites where the proportion of glass particles was 30%. Composite parts have a high crystalline temperature and low distortion compared to pure polypropylene build parts. The performance for particle size 12 μm or less is higher compared to particle sizes 25–35 or 50–63 μm. At high build temperature, part deformation is decreased due to homogeneous temperature distribution and low thermal stress. On the other hand, the elongation at break and impact energies are reduced with the increase in build chamber temperature.
+Nabipour et al. [
+71
+] used polyethylene and copper composite for FFF filament preparation. They found that the flexural strength, modulus, and electrical conductivity of the composite build parts increased with a higher copper ratio. On the other hand, the flexural strain and tensile properties deteriorate due to void content in composites. ABS and copper composites’ thermal conductivity and dimensional accuracy are improved compared to pure ABS parts [
+72
+]. It was also shown that, along with composite materials and their proportion, FFF process parameters also significant for part properties.
+Mohammadizadeh et al. [
+76
+] proposed metal material extrusion that combines FFF and the sintering process. In the first step, the FFF process is used to produced parts from metal-reinforced polymer composites. The FFF process is used to produce complex parts at a low cost, and the sintering process improves the properties of parts. For an experimental investigation, copper, bronze, stainless steel, high carbon iron, and aluminum are blended with PLA by the weighted percentage of 90%, 88%, 65%, 75%, and 85%, respectively, in the filament preparation. The performance of copper composite build parts outperforms other metal composites. The sintering step significantly reduces void content and results in improved mechanical properties. It was also shown that layer thickness and build orientation are significant for part properties. It has been recommended that the proposed method is comparable with other metal-based AM processes.
+The properties of FFF build parts and printability depends on several factors for particulate composites, as shown in 
+Figure 5
+. The limitations of available materials for FFF filaments can be overcome by using different types of particles such as metals and ceramics as reinforcements. The incorporation of particles with pure thermoplastics such as PLA, ABS, PA, polycaprolactone (PCL), and nylon to develop new composite filament materials adds new dimensions for the applications of the FFF process in diverse fields such as electronics and biomedicals. According to the published works, many unique properties such as thermal conductivity and electrical conductivity can be achieved by particulate composite filaments. At the same time, many properties deteriorate with the addition of particulate reinforcements, such as tensile strength. This negative impact can be due to several reasons, such as void formation and weak interlayer bonding. Some particles increase thermal conductivity that is required for many applications such as sensors’ production by the FFF processes.
+Controlled internal or external structures, porosity, biocompatibility, and cell adhesion are some properties that FFF composite build parts can fulfill. One of the requirements for many biomedical applications such as tissue engineering and bone scaffolds can be achieved by compromising other properties such as strength. The compromise is due to poor adhesion between matrix and reinforced particles that causing voids in structures. Different coupling agents can be blended with matrix and particle reinforcements during composite material production to improve mechanical properties as coupling agents enhance bonding between particles and matrix. Additionally, the matrix and reinforcement adhesion can be improved by using surface treatment pre-processings. It is crucial to ensure the uniform dispersion of particles in polymer matrix during blending of matrix and reinforcement. The blending step should be done before the filament fabrication process.
+The filaments for the FFF process are passed through the extruder to print parts. Thus, the composites materials used to produce the FFF filaments should fulfill viscosity, tensile properties, or crystallization requirements. In the FFF process, the filament passes through a small nozzle, generally 0.4 mm. The particle size, uniform dispersion of particles, and proportion of particles in composites are significant to avoid nozzle clogging, filament buckling, and filament breakage. SPS is commonly used in particulate composite filament development. Particles in different sizes, such as DSP and TSP, can also be considered for FFF filaments.
+The thermal and electrical properties are prerequisites for many applications in different areas such as aerospace and automobile. Thermal conductive material particles can be added as reinforcement in composites to improve the thermal conductivity property. The melt flow index (MFI) is a measure of the flow of material per unit time. It depends on the viscosity of filament material at the printing temperature. The MFI of a composite filament should be close to the MFI of pure thermoplastic filaments to use the existing machines.
+In FFF build parts, the properties of filaments such as MFI, ductility, and tensile strength are significant. The quality of filaments depends on the material mixing and filament fabrication. These two steps are the least analyzed area compared to material selection for composites, part fabrication difficulty, and FFF process parameters analysis. Potential research areas to accelerate new FFF filament material development include: (1) improvement in material blending process, (2) enhancement and standardization of filament fabrication process, and (3) environmental factors such as recyclability, disposal difficulty, explosion, and fumes generation during printing.
+Environmental factors are also essential to be considered during filament composite selection to ensure the sustainability of raw materials. In addition to the composite filament properties, the application requirements should be incorporated in the composite material selection. Some areas, such as food and healthcare applications, may have specific requirements related to human safety. For instance, ABS is not a food-grade thermoplastic. Therefore, ABS is not recommended to produce parts that are used to store or serve food items.
+Natural or synthetic fibers are used as reinforcement materials instead of particles with polymer matrices in fiber composites. Different fibers such as glass, rice husk, and carbon with different lengths are mixed with polymers for composite filament preparation. The properties of a fiber composite depend on the properties of fibers and matrix, fiber volume fraction, alignment of fibers, the interfacial bond between fibers and matrix, and void content. The goal of developing fiber composites is to improve mechanical, thermal, and electrical properties and biocompatibility for diversifying the applications of the FFF process in different fields [
+21
+,
+22
+]. The advantages of fiber composites and the flexibility of FFF can be obtained by using fiber-reinforced composites as filaments [
+77
+]. Fidan et al. [
+77
+] summarized the scope and difficulties of fiber-reinforced composite for AM processes. It was suggested that fiber-reinforced composites are potential materials for using AM build parts in diverse industries, including aerospace, automobile, and healthcare.
+The fiber composites are generally categorized as short fiber composites and continuous fiber composites based on the length of fibers. Typically, the length of fibers is less than 1mm for short fiber composites. In short fiber composite, the fibers are blended with polymer matrix before the preparation of composite filaments. On the other hand, separate spools of fibers and polymer filaments are used for printing parts from continuous fiber composites [
+22
+]. Different types of short and continuous fiber composites used for part production by the FFF process are discussed in this subsection.
+Short fibers are blended with matrix prior to developing the short fiber composite filaments. In short fiber composites, the fibers are homogeneously dispersed on a matrix, as demonstrated in 
+Figure 4
+b. The blended material (e.g., pellets) is used for filament fabrication using a single screw or double screw extruder. Some recently published papers listed in 
+Table 5
+ related to short fiber composite filaments in the FFF process application are summarized as follows.
+Ferreira et al. [
+78
+] used short carbon fibers with an average length of 60 μm as the reinforcement material with PLA for analyzing the properties of PLA composites with pure PLA. It was shown by an experimental investigation that tensile modulus, stiffness, Poisson ratio, and share modulus increased significantly for composite build parts. On the other hand, there was no noticeable change in tensile strength and shear strength. It indicates that matrix material carried stress when the load was applied, and there was an inadequate adhesion between PLA and carbon fibers.
+Build orientation and fiber length are also considered as significant parameters for the mechanical properties of composite build FFF parts. Kamaal et al. [
+79
+] investigated the PLA-CF composites’ mechanical properties, and they showed that layer thickness and infill density are significant to process parameters and build orientation.
+The impact of carbon fiber proportions and fiber length on tensile and flexural properties of FFF build ABS-carbon composite parts are analyzed in [
+80
+]. It was shown that the flexural stress, tensile stress, flexural modulus, and flexural toughness are maximum at 5% carbon fiber composition. However, Young’s modulus is at its highest with 7.5% weight of carbon fibers in the composite. Most of the tensile and flexural properties are lowest at a 10% carbon fiber ratio because the porosity level is high. The ductility decreases with an increase in carbon compositions and fiber length. An experimental analysis by Love et al. [
+86
+] found that tensile strength and stiffness of FFF build parts increases twice and four times more, respectively, when 13% carbon fibers ratio are used as the reinforcement with ABS compared to pure ABS. The blending of carbon fibers with ABS increases printing accuracy as it reduces thermal expansion coefficient and increases thermal conductivity.
+Zhang et al. [
+81
+] compared the interfacial bonding strength of carbon fiber ABS composite with the pure ABS and carbon nanotube ABS composite. The tensile modulus is high for carbon fiber build parts compared to pure ABS and carbon nanotube parts. The tensile strength is good at 0° and −45/+45° raster orientations and poor at 90° raster orientation for carbon fiber build parts. The tensile strength decreases at 90° orientation as the fibers reduce interfacial bonding due to void.
+Carbon-ABS composite filaments can be used for producing load-bearing components by the FFF process [
+82
+]. Tensile strength increases significantly up to 20% carbon composition, and tensile modulus increases considerably up to 30% carbon composition. Carbon fibers increase bonding between two layers. On the other hand, void in a layer increased with the increase in fiber composition due to weak adhesion between polymer and fibers. The bonding between polymer and fibers can be improved by increasing fiber length along with adding adhesive materials. The length of fibers may be shortened due to breaking during mixing polymer and fibers or when the molten filaments pass through the nozzle. The mechanical properties of fiber composite build parts increase when the fibers’ orientation becomes parallel to filament deposition direction.
+Sodeifian et al. [
+83
+] added short glass fibers as reinforcement with polypropylene to prepare FFF filaments. The composite build parts have higher strength and modulus and lower distortion and shrinkage than pure polypropylene parts. But, the addition of glass fibers reduces flexibility and elongation at the breaking point. The flexibility can be increased by mixing some additives such as POE-g-MA.
+Gupta et al. [
+84
+] blended short carbon fiber with a 7.2 mm diameter and 150 mm length with PC for composite filament preparation. The mechanical properties of the composite were compared with the properties of pure PC filament. It had been shown experimentally that toughness and ductility decrease with the fiber content increase because the fiber increases the brittleness of PC. The hardness of the composite build parts depends on the uniform dispersion of fiber, and it can be improved with the addition of carbon content from 3% to 7.5%. The tensile properties did not deviate significantly with the change of fiber proportion. The print speed is deemed a significant parameter for tensile properties. However, selecting an optimal print speed and printing temperature is a challenging task for composite filament printing.
+Mohammadizadeh et al. [
+85
+] compared mechanical properties of pure nylon, carbon fiber reinforced nylon composites. In fiber composites, the proportion of carbon fiber was 8% by weight. Their experimental investigation showed that tensile properties and flexural properties of short carbon fibered nylon composite parts are superior to pure nylon build parts. The compressive strength and compressive modulus are decreased compare to pure nylon. Fiber length, fiber orientation, fiber distribution, and fiber–matrix interaction are significant for the mechanical performance of the composites. In their experimental study, the performance of short fiber composites is also compared with continuous fiber composites. The findings related to continuous fiber composite will be further discussed in 
+Section 4.2.2
+.
+A list of short fiber composites with fiber materials, proportion, and used machine are given in 
+Table 5
+. Glass and carbon are two common types of fibers used for FFF filaments as they have high brittleness compared to pure thermoplastics. Other fiber materials (e.g., metal and silicon carbide fibers) should be explored to get other properties such as thermal conductivity and electrical insulation from composite parts. Low cost and environment-friendly natural fibers such as jute, oil palm, sisal, and kenaf can be feasible alternatives as fibers for FFF filament properties. Incorporating various natural fibers for composite filaments is a potential research area for expanding the real-world applications of the FFF process.
+A typical representation of fiber alignment for continuous fiber composites is given in 
+Figure 4
+c. In particulate and short fiber composites, reinforcements are blended with polymer matrix during the filament production process. Further, the filaments are produced from the mixture using different equipment such as a single screw extruder in the FFF process. However, matrix polymer and fibers are deposited from two separate spools for continuous fiber composite filaments in the FFF process.
+As shown in 
+Figure 6
+, there are two commonly used techniques for producing parts from continuous fiber reinforcement composites. In one scenario, polymer filaments and continuous fibers are deposited in the build platform from two separate nozzles, as demonstrated in 
+Figure 6
+a [
+87
+]. In this way, the volume fraction of fibers can be controlled because only one material, either polymer or fibers, is deposited at a time from one of the nozzles. In another technique, polymer filament and continuous fibers are supplied from two different spools mixed in a liquefier before depositing it on the build platform, as represented in 
+Figure 6
+b [
+88
+]. Some recently published papers related to continuous fiber composite filaments in the FFF process application area are listed in 
+Table 6
+ and summarized below.
+Li et al. [
+89
+] analyzed the impacts of continuous carbon fibers on tensile strength, and flexural strength of FFF build PLA parts. According to experimental analysis, composite build parts’ tensile strength and flexural strength are increased by 185% and 11%, respectively, compared to pure PLA build parts. The adhesion between PLA and carbon fibers is inadequate, resulting in the conclusion that there is no significant change in flexural strength. The surface of carbon fibers was modified using methylene dichloride solution, PLA particles, and deionized water to improve adhesion between PLA and carbon fibers, and that improved flexural strength significantly.
+Tian et al. [
+90
+] analyzed the impacts of different FFF process parameters on flexural strength, flexural modulus, fiber content, and the interface between fibers and matrix. Although a weak adhesion is observed between PLA and fibers, the flexural strength and flexural modulus increase with higher extrusion temperature from 180 to 240 °C. At the same time, the dimensional accuracy deteriorates at high temperatures. Flexural strength and flexural modulus decreased with the increase of layer thickness and raster gap as the proportion of fibers in composites decreased.
+The feed rate and print speed are significant for matrix and fibers adhesion, inner pressure, contact pressure, and a fraction of fibers. The impacts of volume fraction on the elastic modulus and ultimate tensile strength of Kevlar fiber reinforced nylon composites are noticeable [
+91
+]. The experiment was conducted with fiber ratio by volume of 4.04%, 8.08%, and 10.1%. The results showed that the composite proportion increases elastic modulus, tensile strain, and ultimate tensile strength. Additionally, it had been demonstrated through their experimental investigation that the dimension of printed parts differs from the CAD models. It is necessary to incorporate dimensional tolerance during CAD model generation to obtain a required measurement.
+Hu et al. [
+100
+] used continuous carbon fiber prepreg PLA filament to produce printed parts with the FFF process. The FFF machine nozzle was modified to deposit preprocessed continuous carbon fiber prepreg filament through the nozzle. As a result, composite parts’ flexural strength and flexural modus increased significantly compared to the pure PLA build parts. It was also shown by three axial flexural tests and response surface analysis that layer thickness is the most significant process parameter among printing temperature, printing speed, and layer thickness.
+Hart et al. [
+92
+] analyzed the impacts of fiber orientation in the tensile properties of continuous fiber composite parts. The tensile properties such as yield strength, tensile strength, and elastic modulus are high when fiber orientation is parallel and reduce around 60% when the fiber orientation is perpendicular to the direction of applied tensile load. The fibers carry the load when the applied load direction is the same as the direction of fiber orientation. In the case when load direction is not the same as the fiber orientation, voids are formed during the load applications, and, as a result, the tensile properties decrease significantly.
+Van Der Klift et al. [
+93
+] modified the proportion of fibers by depositing different fiber layers between polymer layers. A rectangular specimen was printed w the FFF process for tensile properties testing, and the properties of parts can be improved by changing the proportion of fibers in composite parts.
+Estrada et al. [
+94
+] compared carbon reinforced and glass-reinforced continuous fiber composites FFF build parts. The experimental analysis showed that the elastic modulus and ultimate tensile strength of carbon composite parts are superior to glass composite parts. The same research work concluded that the infill pattern is more significant to infill density for tensile properties.
+Akhoundi et al. [
+95
+] used continuous glass fibers to reinforce with the PLA matrix to produce parts by the FFF process. They analyzed the impacts of fiber content on yield strength and tensile modulus. In their research work, the volume fraction is controlled by changing raster width and fiber diameter. The volume fraction of fibers can be increased by reducing raster width. The reduction of raster width may result in weak bonding between raster beds in each layer as the proportion of PLA deposited is decreased.
+Mechanical properties such as tensile strength, tensile modulus, compressive strength, ultimate tensile strain, and shear modulus of aramid-PLA composites are increased 20% to 500% from pure PLA parts when the direction of load is parallel to fiber orientation [
+96
+]. The properties showed a decline when the load is applied in the transverse direction of fiber orientation. A rectangular specimen is produced from the composite instead of a standard dogbone specimen in this experimental analysis.
+Mori et al. [
+97
+] used two approaches to produce carbon fiber reinforced ABS composite. In the first approach, one layer of ABS is deposited, and then fibers are deposited on the top of the ABS deposited layer. In the next step, another layer of ABS is deposited on fibers. In the second approach, the molten ABS and fibers are blended in an FFF machine extruder. The static and fatigue properties improved significantly in the latter approach due to a solid thermal bonding.
+Araya-Calvo et al. [
+98
+] analyzed the impacts of reinforcement pattern, reinforcement orientation, build orientation, and fiber volume on compressive and flexural properties of carbon fiber reinforced PA composite FFF build parts. Reinforcement type, reinforcement distribution, and their interactions are significant for compressive modulus, and only reinforcement distribution is important for the composite proportion limit. On the other hand, reinforcement type, print orientation, and their interactions are significant for flexural properties. Mechanical properties can be improved, and premature failure can be minimized by reducing layer delamination and improving layer adhesion.
+Mohammadizadeh et al. [
+85
+] used continuous carbon fiber reinforced nylon composites for part production by the FFF process. The properties of the printed parts are compared with the pure nylon and short carbon fiber nylon composites parts. The tensile properties are superior, but compression and bending properties are worse compare to nylon and short fiber composites. The tensile properties increased due to the proper alignment of fibers. It was suggested to use continuous fiber composites for high-performance applications.
+In the research conducted by Brooks and Molony [
+99
+], it is found that PLA and ABS fiber composites’ performance are superior to pure PLA and ABS under tensile, bending, and torsion loads. For this, a pulley housing, hook, and universal joint can be produced by the FFF process. Their research also finds that aerospace-grade aluminum alloy can be replaced with fiber-reinforced composite.
+Carbon and glass fibers are the most widely used fibers for FFF process composite filaments. The deposition process with fiber composite filaments can be explained as fiber composites, polymer matrix, and short fibers are blended using a single screw or double screw extruder to produce composite filaments. The quality of composites depends on several factors such as the blending temperature, blending time, the distribution of fibers in matrix, surface energy, the coefficient of thermal expansion, fiber orientation, the proportion of fibers, adhesion between fibers and matrix, the thermal stability of fiber, presence of voids, moisture absorption of fibers, fibers diameter, and fiber length [
+101
+]. The essential factors for part properties and printability depend on several factors summarized from the recent publication and are graphically represented in 
+Figure 7
+.
+The uniform distribution of fibers in the polymer matrix is required for high-quality printing parts for real-world applications. Overall, strong bonding between fibers and polymers is a prerequisite for achieving desired properties of composites through load transferring. Different chemical and physical treatment processes can be applied to increase interface bonding between polymers and fibers [
+102
+].
+The length of fibers decreases during the mixing of matrix and fibers due to the breakage of fibers. The optimization in the filament preparation process is required for producing high-quality filaments. More significant changes in void formation and immature failures in composite build parts when the length of fibers is low. The filaments can also break during filament extruded through the nozzle. The long fibers are not always preferable for the FFF process as the filament passes through a nozzle during printing, and the nozzle clogging may also occur for long fibers. Different types of additives such as plasticizers, anti-aging stabilizers, rheology modifiers, and coupling agents can be mixed with the raw composite filament materials to improve flexibility, durability, surface energy, and mechanical properties.
+Part production from continuous composites is different from part production from particulate and short fiber composites. The continuous fibers are blended with polymer either in the liquefier of an extruder or in the build platform. Two extruder heads can be used, one for polymer filaments and the other for continuous fiber deposition, for the FFF process. In another approach, an extruder with two entrances is required, one for filaments and the other for fibers. The volumetric fraction of fibers can be controlled by adjusting layer thickness, fiber diameter, and raster gap for both methods. The former approach can be customized better where the number of fiber layers can be controlled between two filament layers.
+Before depositing with continuous fibers in the FFF process, different surface treatment processes can be utilized to improve the adhesion between polymer matrix and fibers through surface energy modification [
+103
+]. Hybrid composite parts can be prepared by using continuous fiber as reinforcement in short fiber and particulate composites. Generally, the continuous fiber composites are used for producing simple geometry parts as continuous deposition of fibers imposes extra manufacturing constraints.
+Nanocomposites are the least analyzed composite filament category compared to particulate and fiber-reinforced composites. Similar to other composite materials, nanocomposites consist of more than one constituent or phase, forming a unique property. The difference is that at least one material dimension is below 100 nm [
+104
+]. In polymer matrix nanocomposites, there are molecular-level effects in composites associated with the adhesion of matrix with nano-reinforced materials [
+105
+].
+The research employing nanocomposites for FFF filaments with reinforcement ratio and the FFF machines is concisely introduced in 
+Table 7
+. Nanocomposites for filament materials are in the development stage. Nanocomposites have a high surface-to-volume percentage, but understanding the matrix and reinforcements interaction is still limited [
+105
+]. Recently published articles related to nanocomposites as FFF filament materials are summarized as follows.
+Unlike particulate and fiber composites, the voids in layers are fewer in nanofiber composite parts. Weng et al. [
+106
+] carried out an experimental investigation for analyzing the different properties of organically modified montmorillonite reinforced ABS nanocomposites build FFF and injection molded parts. Compare to pure ABS, the nanocomposite build FFF parts’ tensile strength, elastic modulus, flexural strength, and flexural modulus improved, whereas elongation at break deteriorated. For all proportions of montmorillonite, injection molded parts properties are better than FFF build parts because of void contents in FFF parts.
+Dul et al. [
+107
+] used graphene nanoplatelets as reinforcement with ABS polymer for FFF filament preparation. A preliminary study estimated an optimum proportion of nanoplatelets from 2, 4, and 8 wt.%. It was found that 4 wt.% proportion is optimum based on elastic modulus, ultimate tensile strength, and melt flow index. In the final step, 4% nanoplatelet was mixed with ABS to produce part by the FFF process. Elastic modulus, dynamic storage moduli, thermal stability increased, and stress and strain at break decreased for composite build FFF parts compared to pure ABS parts. According to the investigation, the build orientation is significant for achieving high mechanical properties with a note when the load direction is parallel to raster deposition.
+The properties of FFF build parts from PLA-graphene filaments are compared with pure PLA parts by Bustillos et al. [
+108
+]. Rectangular strips and scaffold structures are produced from both filaments by using MakerBot Replicator 2. For composite parts, the experimental investigation exhibited that nano hardness, elastic modulus, displacement resistance, wear-resistance, and creep resistance improved approximately 18%, 11%, 25%, 14%, and 21%, respectively. Porosity in PLA-graphene structures is relatively high compared to pure PLA parts because of the weak intralayer and interlayer bonding. Therefore, high mechanical properties and porous structures are required for the biochemical application of FFF parts. The necessary properties for biochemical applications can be achieved from PLA-graphene parts with high layer thickness.
+Gonçalves et al. [
+109
+] used the FFF process to print parts from nanocomposite filament to improve mechanical and thermal properties. Carbon nanotubes (3–4 wt.%) and graphite nanoplates (1–3 wt.%) were blended with PEEK during the composite filament preparation. It was shown that elastic modulus, ultimate tensile strength, electrical conductivity, and thermal conductivity were enhanced. On the other hand, ductility and elongation at break decreased.
+Carbon nanotubes are shown to have higher negative impacts on filament properties such as MFI and tensile properties than graphite nanoplates. Zhu et al. [
+110
+] used graphite nanoplates (GNP) as reinforcement at different proportions varying from 2% to 10% with PA12 for FFF filament preparation. In the first step, the printability of composites was analyzed based on MFI, thermal conductivity, and tensile tests. It was found that 6% GNP is the optimum proportion in composites. The raster orientation is significant for the tensile properties of composite FFF build parts. The elastic modulus, elongation at break, and ultimate tensile strength are increased when the raster orientation is parallel to the direction of tensile load and decreased in other raster orientations. The temperature-dependent mechanical properties are crucial for many application areas. It was also shown that these properties, such as storage modulus and loss modulus, of PA12/GNP composite parts are improved compared to pure PA 12 parts.
+Christ et al. [
+111
+] applied the FFF process to print multidirectional embedded strain sensors from two materials, pure thermoplastic polyurethane (TPU) and TPU/multiwall carbon nanotubes (MWCNT) nanocomposites. The required piezoresistive behavior and flexibility can be achieved using the multilateral FFF process for sensor production at a low cost.
+Prashantha and Roger [
+112
+] analyzed mechanical, electrical, and electromagnetic induction shielding properties of FFF build parts from a nanocomposite that consists of a PLA matrix with 10% graphene. The elastic modulus, tensile strength, and brittleness are higher for nanocomposite parts than pure PLA parts. Moreover, the dielectric constant and electromagnetic induction shielding efficiency were used to measure graphene dispersion and conductivity, respectively. The authors recommended that PLA/graphene composite can be used as lightweight electromagnetic induction shielding materials. Dynamic mechanical analysis (DMA) indicated that the composite parts are also applicable for high-temperature applications.
+Haq et al. [
+113
+] used nano montmorillonite (MMT) and hydroxyapatite (HA) as reinforcements with PCL to develop nanocomposite filaments for the FFF process. The produced nanocomposite is helpful for biomedical applications. The experimental analysis results indicated that Young’s modulus, flexural strength, and flexural modulus of PCL/MMT/HA composites build parts are better than PCL/MMT parts and pure PCL parts.
+Rymansaib et al. [
+115
+] used carbon nanotube and graphite flakes as reinforcements at different proportions with different thermoplastics such as PLA, graphene-PLA, ABS, PCL, and HIPS to identify the best material for FFF electrode production. Various composite compositions show that HIPS with 10% carbon nanotube and 10% graphite flakes is the most suitable combination for electrode manufacturing due to its good surface properties and electrical conductivity.
+Gardner et al. [
+114
+] used an open-source FFF machine to print parts from continuous fiber composites. The matrix and fibers of the composites are, Ultem and continuous carbon nanotube, respectively. The surface quality of continuous carbon fibers was enhanced by passing through a solution that consists of Ultem. In their paper, a cutting technique was proposed for the termination of continuous fiber at any time. As carbon nanotube is electrically conductive, different electronic components (e.g., sensors) can be printed from the developed composites by the FFF process.
+Nanocomposites have many superior properties compared to microcomposites. At least one dimension of reinforcement in nanocomposites is less than 100 μm, which means that the surface-to-volume ratio is high for nanocomposites, and more surface atoms of reinforcements can contact the matrix. Thus, the interfacial adhesion becomes strong in the resulting composites. Mechanical properties, thermal stability, electrical conductivity, damping capacity, and flexibility can be improved by adding nanoparticles in pure thermoplastics.
+Like most composite materials, the proper selection of reinforcement materials and their dimensions are significant factors affecting the adhesion quality between fibers and matrices. The strength of bonding depends on the surface energy. Different surface treatment processes and surfactants can be utilized to enhance the bonding strength.
+According to the previously summarized research work, the part properties and printability of the FFF build parts with nanocomposite filaments depend on several factors shown in 
+Figure 8
+. The research on developing nanocomposites is not well-established yet. Therefore, the expert knowledge of nanocomposites needs to be utilized for developing nanocomposites filaments. Additionally, different types of nanofibers from natural resources such as plants and animals can be explored for developing biodegradable, environment-friendly, and low expensive filaments.
+The commonly used thermoplastics and their polymers for FFF filaments can be biodegradable or nonbiodegradable. Environmental and waste management issues increase our earth’s safety and livability [
+116
+]. Environmental impact is also essential for sustainable economic development. The FFF build parts go through several steps in the life cycle, from material procurement to the end of the printed part useful life, as shown in the flow diagram in 
+Figure 9
+. It is required to analyze the environmental impacts in each step of the life cycle for sustainable advancement of the FFF process and its filament materials.
+The end of life treatments for bioplastics products is vital to reduce environmental impacts and waste. Recycle, reuse, energy recovery, and disposal are well-known end-of-life treatments. Recycling is one of the most widely used strategies for bioplastics [
+117
+]. In recycling, the bioplastics are processed to reuse for other applications. Among different recycling processes, the mechanical recycling method is commonly applied to recycle bioplastics [
+118
+]. This method utilizes mechanical processes to recover plastics waste and permits multiple reuses of bioplastics. Although recycling methods and options should be considered in the development stage, recycling bioplastic filaments after useful life is not getting much attention in biocomposite filament preparation. For the FFF process, different types of bioplastics and their composites can be used for filament preparation. In this section, the opportunities and challenges for developing and using bioplastic filament materials are discussed.
+Different types of bioplastics and their composites can be used for part production by the FFF process. However, it should be noted that not all bio-based plastics are biodegradable. Generally, three types of bioplastics: (a) biobased bioplastics, (b) biodegradable bioplastics, and (c) biobased and biodegradable bioplastics (
+Figure 10
+). Among the three types of bioplastics, this paper will discuss only biobased and biodegradable bioplastics. Biobased and biodegradable bioplastics emit fewer greenhouse gases and less harmful for aquatic and wildlife.
+Biodegradable polymers decompose naturally in a bioactive environment by microorganisms such as bacteria and fungus [
+119
+]. The long chains of polymers can break down into oligomers or monomers due to the enzymatic actions of microorganisms [
+120
+]. Some nonenzymatic reactions can also decompose the long chains of polymers. Bio-based plastics are derived from renewable biomass such as vegetable fats and oils, corn starch, straw, and woodchips. There are different sources of biobased plastic development, and the sources can be classified into several major categories, as shown in 
+Figure 11
+ [
+121
+]. PLA is the most analyzed aliphatic polyester for FFF filaments. Therefore, it is necessary to explore different biobased plastics for FFF filaments to increase the range of environment-friendly filament materials. In the following subsections, the scope, challenges, and advantages of using biobased and biodegradable bioplastics and their composites for the FFF filament preparation are discussed.
+Fossil-based plastics release carbon dioxide and toxic substances into the atmosphere that is the main reason for global warming. Nonbiodegradable plastics are harmful to wild and aquatic life. Biobased and biodegradable bioplastics are viable options to protect the Earth from global warming as they emit less carbon dioxide during degradation. These bioplastics can degrade in both anaerobic and aerobic environments depending on the properties of the respective bioplastics.
+Environmental friendly and sustainable material developments are getting great tractions as waste management issues are considered global concerns. Energy consumption and greenhouse gas emission are two vital factors for AM material selection. The FFF process is used to produce parts from plastics and their composites. Researchers are working on developing new materials to get various properties for the functional applications of FFF parts.
+Along with focusing on mechanical properties, it is also required to consider the usage of resources, the consumption of non-renewable energy, emission of harmful gases, and generation of waste during the production process of the FFF filaments [
+48
+]. Most of the materials used for the FFF process are not environmentally friendly. Bioplastics and their composites filaments are less expensive than fossil-based plastic filaments [
+122
+]. However, the importance of developing filaments from biobased and biodegradable bioplastics and their composites is yet to get significant attention from researchers.
+PLA is the most widely used bioplastics for FFF filaments. PLA is a biodegradable and biocompatible plastics derived from the fermented starch of plants such as corn, sugar beet, and sugar cane [
+123
+]. Besides, it does not emit toxic gas during printing. Polyhydroxyalkanoate (PHA) is a bioplastic produced by the bacterial fermentation of sugar or lipids. Like PLA, PHA is also thermoplastic aliphatic polyester. Poly(3-hydroxybutyrate) (PHB) and poly(3-hydroxybutyrate-co-3-hydroxy valerate) (PHBV) are the two most widely used and commercially available PHA [
+124
+]. PHB has high brittleness, strength, and stiffness compared to PHBV, which is ductile.
+Many other bioplastics are currently available, such as PBS. However, the utilization of these bioplastics for filament fabrication has not yet been explored much. Therefore, researchers are encouraged to study these potential filament materials as part of new environment-friendly filament materials. In addition, the FFF filament development from the composites of bioplastics should also be taken into consideration. There are several biobased and biodegradable composites filaments used for part production by the FFF process. In the following subsection, the current research works on composites filament development and composites build part properties analysis are discussed.
+The composites of the bioplastics can also be used for filament preparation to expand the application areas of the FFF process. In bioplastics composites, the bio-based polymers are incorporated with synthetic reinforcements materials to obtain different unique properties [
+21
+,
+22
+]. This subsection summarizes the composites that matrix and reinforcements derived from renewable biomass sources used for the FFF filaments. Some of the previous composite filaments discussed in 
+Section 4
+ may also be categorized as bioplastic composite filaments.
+The properties of FFF build parts from environmentally friendly filaments can be improved by preparing filament from composites that involve the blending of biobased matrix and reinforcement. Cellulose, protein, and mineral are three broad categories of biobased reinforcements. The commonly used materials for biobased reinforcements are given in 
+Figure 12
+. In addition, several biobased reinforcements are blended with biobased and biodegradable plastics for filament preparation in a few research works.
+Tao et al. used 5 wt.% wood flour (WF) as reinforcement with PLA for FFF filament [
+125
+]. It has been shown that wood reinforcement increases elastic modulus and decreases thermal degradation temperature. WF-PLA composites build parts have better compressive resistance than tensile resistance. The interfacial bonding between WF and PLA is weak as WF is hydrophilic and PLA is hydrophobic.
+Petinakis et al. [
+126
+] also used 5–40 wt.% of WF with PLA for the FFF filament preparation and analyzed the mechanical properties of parts. The tensile strength and tensile modulus of WF-PLA parts can be improved using additives such as methylene diphenyl-diisocyanate, making the adhesion between PLA and WF stronger. Mixing polyethylene–acrylic acid (PEAA) with composites improves impact strength slightly but decreases tensile properties.
+Kariz et al. [
+127
+] showed that tensile strength increased up to 10 wt.% wood content and decreased if the proportion of wood is further increased. The surface roughness and void content of WF-PLA parts produced by the FFF process are higher compared to pure PLA build parts [
+127
+]. The impact on tensile strength and flexural strength of WF-PLA composite parts can be noticeably increased by adding different toughening agents and graft copolymers (GC) [
+128
+]. The performance of TPU as the toughening agent is better than PCL and polyethylene-co-octene (POE). Like other filament materials, the surface roughness of WF-PLA increased with a thicker layer thickness [
+129
+]. Ayrilmis [
+129
+] also showed that layer thickness is significant for contact angle. The wettability is high on a thicker layer thickness.
+Daver et al. [
+130
+] blended the PLA, cork, and tributyl citrate (TBC) as FFF filaments in their research. In the composites, the proportion of TBC was fixed at 5 wt.%, and the ratio of cork varied from 5% to 50%. The tensile strength and density decreased, but specific modulus, impact strength, and specific tensile strength properties increased with a higher content of cork. TBC is often used as a plasticizer to prepare ductile composite filament.
+Murphy and Collins [
+131
+] used microcrystalline cellulose (MCC) as reinforcement with PLA for FFF filament preparation. Besides, titanate, a coupling agent, is used as a surface modifier to increase the uniform dispersion and adhesion of MCC. An experimental investigation showed that the crystallinity decreases when the proportion of PLA is more than 3 wt.%. The reason is the coupling agent decreases the water absorption by reducing the hydrophilicity of MCC.
+The storage modulus and degradation temperature are high for composites parts compared to pure PLA parts. Dong et al. [
+132
+] used grafted cellulose nanofibers as reinforcement in the PLA matrix. Like Murphy and Collins [
+131
+], they also show that 3 wt.% reinforcement is good towards storage modulus, tensile strength, and elastic modulus.
+Some researchers, such as Mimini et al. [
+133
+], Gkartzou et al. [
+134
+], and Domínguez-Robles et al. [
+135
+], used lignin as reinforcement with PLA to prepare composite FFF filaments. It was concluded that mixing lignin with PLA increases thermal stability and flammability in several research efforts. However, other research findings indicate that thermal stability decreases with tensile strength and elongation at break [
+122
+,
+134
+]. More research is needed to increase the knowledge on the properties of lignin blended PLA composites.
+Kaygusuz and Özerinç [
+136
+] mixed 12 wt.% PHA with PLA for FFF filaments to analyze the mechanical properties of the composite parts. The ductility was observed to improve about 160%, but the tensile strength decreased by around 25% compared to pure PLA parts. It was recommended that the printing temperature should be maintained between 210–240 °C. The bonding between PHA and PLA can be enhanced by adding plasticizers such as acetyl tributyl citrate and tributyl citrate [
+137
+].
+Ausejo et al. [
+138
+] also produced parts by the FFF process from PLA/PHA composites at horizontal and vertical build orientations. It was concluded that the build orientation is a significant process parameter for tensile properties, morphology, structure, and surface properties of the composite build parts. The PLA/PHA composite is a potential filament material for bone scaffolds as it is nontoxic and biocompatible.
+Poly 3-hydroxybutyrate-co-3-hydroxyhexanoate matrix blended with fibrillated nanocellulose reinforcement for composite preparation [
+139
+]. The homogeneous dispersion of reinforcement is achieved for all proportions for FFF filament preparation. Among 0.5, 1, and 3 wt.% of reinforcement, the improvement of mechanical properties is best for 0.5 wt.% of reinforcement. However, the printing speed is slow for the composite due to low flowability.
+Ou-Yang et al. [
+140
+] blended PLA and polybutylene succinate (PBS) to obtain FFF filament. For PLA proportion more than 40%, the impact strength, elongation at break, dimension accuracy, and interlayer bonding increased. The recommended printing temperature for the composite is 200–230 °C. In addition, ductility, stiffness, viscosity, modulus, and crystallization properties are improved compared to pure PLA filament [
+140
+].
+PLA/LF(lemongrass fiber) composite and PLA/LF with a compatibilizer composite were used to print parts by the FFF process in a research work by Jing et al. [
+141
+]. The LF consists of cellulose, hemicellulose, and lignin. The used compatibilizer is PLA grafted with maleic anhydride, and this approach strengthens the bonding between PLA and LF.
+In research by Wang et al. [
+142
+], a composite of cellulose nanofiber and PLA with polyethylene glycol 600 (PEG600) plasticizer is used to compare the composite with pure PLA. The thermal stability, tensile strength, and elongation at break improved significantly with 2.5 wt.% of fiber.
+Biorefinery lignin at a 20 wt.% ratio was mixed with PHB for FFF filament preparation. The properties of the composite filament are mostly the same as the properties of pure PHB filament. However, some properties such as thermal distortion and interlayer bonding are improved for composite parts [
+143
+]. Some other researchers, such as Wu et al. [
+144
+] and Wu and Liao [
+145
+] used PHA composites for FFF process filament preparation. PHA matrix composite build parts can be used for complex-shaped parts and food-grade packaging [
+146
+]. Different types of additives such as plasticizers can be added to composites to improve some properties such as interlayer bonding or tensile strength.
+Non-degradable plastics are harmful to wildlife, aquatic life, air, agricultural lands, and human health. Plastics are also a reason for ecological imbalance. Around 3% of total energy is used to produce and process plastic products in the United States [
+147
+]. Bioplastics over synthetic plastics can significantly reduce cost, greenhouse gas emission, and environmental tolls [
+147
+]. The usage of other plastics that are not environmentally friendly should be minimized to protect the Earth from global warming. Like other sectors, it is essential to consider environmental-related factors in developing FFF filament materials. However, the research on developing environmentally-friendly filament is still limited. PLA and its composites are the most widely used environmentally safe materials in the FFF filament development effort. Other bioplastics such as PHA, PBS, and bio-PVC have not been explored much in this regard.
+Aside from PLA, other potential biobased and biodegradable bioplastics as FFF filament materials have to be investigated further to increase the material selection and availability for the FFF process. It is also necessary to examine how well the biobased reinforcements blend with bioplastics to improve the properties of the bioplastics filaments and potentially obtain unique properties from composite filaments. Different types of biobased materials such as rice hulls, soy hulls, wood flour, plant fibers (e.g., sisal and flax), animal fibers (e.g., wool and camel hair) can be the potential reinforcements. They may be suitable to be mixed with bioplastics. Biobased plastics, when blended with other materials, may lose their biodegradable properties. Therefore, biodegradability is one factor that should also be taken into account during FFF materials development and FFF filament material selection.
+There are many applications for the FFF process, and its utilization and adaptation are continuously increasing. The FFF process has been used to produce non-functional aesthetic products such as toys, showpieces, and various functional parts for aerospace, automobile, and healthcare applications. The FFF process has many advantages over traditional manufacturing processes. But, the material selection for FMD filaments is still very limited. Additionally, commonly used filament materials such as PLA, ABS, PCL, and PP have limitations and may not always be suitable for producing functional parts. Material selection and development for FFF filaments are getting attention among researchers in manufacturing and material science. A significant number of research efforts are directed towards developing filaments from various polymer composites. Based on the concise review of current research works, several potential research areas are demonstrated in 
+Figure 13
+ and briefly discussed in this section.
+Pure thermoplastic filament has many limitations, such as poor mechanical, thermal, and electrical properties. For these limitations, the applications of FFF build parts are limited. However, different reinforcements can be blended with pure thermoplastics in developing future filaments to obtain unique properties. The properties of matrix and reinforcement materials should be considered with the properties of the developed composites to meet functional requirements. For instance, conductive reinforcements such as copper can be mixed with thermoplastics to achieve better thermal and electrical conductivity filaments. Tensile, compressive, flexural, and thermal properties are the most analyzed thermoplastics and composite filament properties. But there are many other properties such as electrical properties, properties under cycling loading, and environmental properties needed to be investigated further for composites filament development to expand the application of the FFF process in diverse fields.
+PLA, ABS, and nylon are the three most well-known polymer materials for pure thermoplastic FFF filaments and composite FFF filaments. Other polymers such as PEI, PC, PP, HIPS, and PEEK have been used as FFF filament, although the research on developing composites filament from these polymers is still limited. The challenges, scopes, and other barriers for filament preparation are not yet well analyzed. Exploring composites of these polymers for FFF filaments is a potential research area. Another research focus can focus on the opportunity of two or more blended thermoplastics as FFF composite filaments.
+Carbon, glass, copper, and iron are the most widely used reinforcements in the FFF composite filament. These reinforcements are mixed with polymers for improving various properties such as thermal conductivity and electrical conductivity. Other reinforcements such as calcium carbonate, kaolin, silica, zinc oxide, magnetite, or wollastonite can be explored further as potential reinforcements that can be mixed with thermoplastic material for developing new FFF filament materials.
+Reinforcement materials are available in different forms, such as particles, fibers, nanofibers, and nanoparticles. Generally, reinforcements are blended with a matrix for filament preparation. But reinforcements and matrix are mixed either the liquefier of extruder or the build platform for continuous fiber composite filaments. Two extruders or an extruder with two entrances are required for this process. Most industrial and desktop FFF machines have only one extruder for filament deposition on the build platform. Some FFF printers have two extruders, one for a part and the other for support structures. Instead of having a newly designed printer to print with continuous fiber filaments, parts from continuous fiber composites can be produced by modifying the design of an extruder. Another issue is that printing complex-shaped parts using continuous fiber composites requires the continuous fibers to be cut at a specific time during the printing process. It is challenging to cut fibers during printing as timing imbalance and vibration during fibers cutting can result in defective parts. This is an open research topic to develop or redesign FFF machines for producing complex geometry parts from continuous fiber composites.
+Most of the thermoplastics used for filaments are petroleum-based, non-biodegradable, and non-environmentally friendly [
+122
+]. Along with improving the properties of parts, it is essential to consider the environmental impacts during filament materials selections. Biobased and biodegradable bioplastics and their composites are viable options to reduce greenhouse emissions and protect the environment. Agriculture by-products or wastes, such as rice hulls, wood flours, and pecan shells, can potentially be integrated into the matrix as reinforcements to obtain diverse and valuable properties at low costs. All biobased polymers and their composites may not always be biodegradable, and the biodegradability factor should be considered for FFF filament material development and selection. PLA is the most known bioplastic for FFF filament. Other bioplastics and their properties are necessary to be investigated to get new environment-friendly FFF filament raw materials.
+The sustainability of biomaterials is not getting a lot of attention from AM community during filament materials development as it is inherently challenging to analyze [
+148
+]. Although it is always believed that bio-based and biodegradable reinforcements and matrices generally have lower carbon footprints, further carbon footprint analyses are still required to conclude that bioplastics are more sustainable than conventional plastics. The sources of bioplastics and their composites can be used as food for human beings or animals. In such cases, bioplastic production competes with food production in terms of land use [
+149
+]. The use of fertilizers and pesticides for bioplastic raw material production has significant impacts on the environment. Therefore, the selection of raw materials for bioplastics is challenging, and it is needed to analyze the opportunity cost. It is also recommended to use agricultural wastes and biorefinery byproducts to reduce environmental impacts and production costs. For bioplastics and reinforcement selection, a complete life cycle analysis (LCA) is vital to know the environmental impacts throughout the life cycle.
+In addition to the sustainability of biomaterials, as there will be more lean and green regulations in place as the adoption of AM increases, there is a need to plan for proper recycling and reutilizing processes of the AM printed parts. Recycle process becomes more challenging for composite materials due to its heterogeneous nature. Although plastics, in general, are deemed to be easy to recycle, not all plastics have equal degradability grade. Some types or grades of plastics are harder to recycle. Additionally, if the plastics are in contact with other metal materials, the recycling process may be more complex or not get recycled at all. Therefore, there is a lot of room for improvements in terms of developing an efficient and sophisticated recycling process and policies for AM printed parts.
+Not all thermoplastics and their composites can be used for FFF filaments as they need to meet FFF-specific or other application requirements. For FFF filaments, amorphous thermoplastics are better than crystalline polymers [
+22
+]. Dimensional inaccuracy and warpage of FFF parts decrease at relatively less viscous filaments. On the other hand, with high viscosity filament, nozzle coggling may still occur. Brittle filaments have a higher chance of breakage. The high flexibility of filament is another reason for filament buckling. Thus, a large filament diameter and low distance between liquefier and feed roller are preferable to reduce filament buckling. In composite filaments, homogeneous dispersion of reinforcement is necessary to ensure the production of high-quality parts. Various dispersing additives can be added during composites preparation to achieve a homogeneous reinforcement distribution and minimize the flocculation.
+The adhesion between matrix and reinforcement is vital for improving strength and reducing the void content. The strength of bonding depends on the surface-to-volume ratio, size of particles, length of fibers, and the properties of matrix and reinforcement. It is known that the bonding strength is low between hydrophobic and hydrophilic materials. Various types of coupling agents can be blended with matrix and reinforcement to improve the adhesion. Additionally, chemical and physical surface treatment processes and other surfactants can be used to activate the surface for stronger bonding properties prior to the blending stage with the matrix. It is well-known that additives have significant impacts on composite properties. Yet, the research on selecting additives and the impacts of additives on the filament and part properties are rarely analyzed in detail. Moreover, different types of other additives such as plasticizers, nucleating agents, and antioxidants are needed to be explored. Any research related to this area from the chemistry or materials science perspective can be incorporated into the FFF filament production preprocessing stage.
+In particulate composites, the size of particles and the proportion of particles are essential for part properties. The size and ratio of particles should be selected carefully to avoid nozzle clogging. In addition to single-size particles, the impact filament quality and part properties from different size particles (e.g., DPS and TPS) should be analyzed extensively. Hybrid composites that consist of three or more phases are rarely approached to develop FFF filament. Short and continuous fibers can be applied together as reinforcements with a polymer matrix to create FFF hybrid composite filaments. The combinations of materials are endless, which also translates to an open-ended research field. A more applied research direction looks at developing FFF filament and parts from hybrid composites for different functional applications.
+The filament preparation process has significant impacts on the dispersion of reinforcements, maintaining the size of particles and the quality of filaments. Particles and short fibers may break during the blending of matrix and reinforcement, and the properties of parts can deteriorate due to these reasons. The selection of the blending process and filament preparation process should be getting more attention from the researchers. Lastly, the relationships of FFF filament preparation and the FFF process parameters should be analyzed to achieve high-quality and uniform filament and printed parts, respectively. Any of these research areas can be explored further as building blocks and continuous effort towards the utilization of the FFF process in the commercial industries.
+Exploration of the FFF process and new materials for medical application is a popular research topic. Direct-write assembly (DWA) techniques can be used for producing materials for bone and osteochondral scaffolds. In this technique, colloidal ink is deposited for producing structures with suitable rheological properties [
+150
+]. Besides, the DWA technique is promising for structure preparation from multiple materials. Fused deposition bioprinting is one of the most widely used AM processes in tissue engineering for producing cells, tissues, tissue constructs, organ modules, and microfluidic devices [
+151
+]. High printing speed, low cost, good biocompatibility, low process-induced tissue damage, ability to generate porous structures are advantages of the bioprinting process. Cell damage due to share stress and limited biomaterials are barriers to the advancement of the bioprinting process. Search for organ donors, and chronic rejection of transplant problems can be overcome using the FFF process in tissue engineering. Still, a long way to go for this application. Thus, fundamental research on this field is required. Multidisciplinary expert knowledge in biological science, material science, additive manufacturing, artificial intelligence, and computational modeling is required to advance AM processes in medical applications.
+Cost analysis is one of the first steps for manufacturing industries as the cost and profitability govern the design, material, and manufacturing process selection. The trade-off between cost and performance is expected in a competitive market. The raw material (e.g., matrix and reinforcement), capital, and fabrication costs are vital components for composite filament preparation. Besides, the environmental impacts after useful life and recycling costs must also be considered during life-cycle cost analysis. Other costs such as fiber extraction from plants also need to be accounted for in cost analysis for composite materials. However, the costs of filament preparation are rarely studied. Thus, the cost analysis of filament preparation and cost modeling is also a research scope for advancing the FFF process.
+The current age is the age of data, and different machine learning algorithms are available for classification and prediction. Machine learning algorithms are now used in diverse fields, including manufacturing. Machine learning algorithms can be applied in various aspects of AM process for improving quality, reducing cost, and increasing performance. To a limited extent, machine learning algorithms are used in AM for process monitoring, quality control, part design, environmental impact analysis, and process parameter analysis. Machine learning algorithms can also be applied in material selection, finding future composites topology representation, material design, cybersecurity of AM, or cloud platform integration with AM [
+152
+,
+153
+,
+154
+,
+155
+]. The performance of machine learning algorithms depends on data quality, data size, feature selection, model architecture, input dimension, model parameters, and other factors related to the algorithm itself or the application of interest. Those factors should be considered before applying machine learning algorithms for AM processes. Multidisciplinary expert knowledge in AM and machine learning are required to advance in this area.
+One of the biggest challenges for adopting additive manufacturing as a commercial production method is the availability of suitable materials. The requirements such as mechanical properties, thermal conductivity, electrical conductivity for real-world applications may not be fulfilled by parts produced from the FFF process alone. It is essential to search for new filament materials to increase FFF application in different fields. Polymer matrix composites as FFF filament can be a viable option for FFF printed functional parts. Many types of reinforcements such as particles, fibers, and nanoparticles can be used with thermoplastics to improve FFF build part properties such as dimensional accuracy and strength properties in polymer matrix composites. Along with pure thermoplastics and composites, bioplastics and their composites can be used as eco-friendly filament options. Polymer matrix and its reinforcements, both or one of them, can be organic, natural, and bio-based. Bio-based matrices and reinforcements are getting attention from researchers and industrialists in recent years due to their low cost and environmentally friendly properties. In this paper, the existing research on FFF filament materials is summarized extensively. The research gaps on the advancement of the FFF process and FFF filament material are identified and discussed. This review paper aims to help researchers and practitioners whose area is related to the FFF filament material selection and development. By broadening the FFF materials availability and choice, the barriers to adopting the FFF process or other additive manufacturing processes in commercial industries can be minimized.
+Conceptualization, A.D. and N.Y.; gathering—review materials, A.D. and I.N.R.E.; data summary, A.D. and I.N.R.E.; writing—original draft preparation, A.D. and I.N.R.E.; writing—review and editing, A.D. and N.Y.; visualization, A.D. and N.Y.; supervision, N.Y.; project administration, N.Y.; funding acquisition, N.Y. All authors have read and agreed to the published version of the manuscript.
+This research was partially funded by NDSU EPSCoR 2020 STEM, grant number FAR0033282, and the NDSU IME Department.
+The authors declare no conflict of interest.
+Publisher’s Note:
+ MDPI stays neutral with regard to jurisdictional claims in published maps and institutional affiliations.

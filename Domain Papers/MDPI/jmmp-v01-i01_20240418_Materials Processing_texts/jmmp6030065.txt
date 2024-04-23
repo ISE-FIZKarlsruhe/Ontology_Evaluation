@@ -1,0 +1,524 @@
+Nickel–titanium (NiTi) is a shape-memory alloy, a type of material whose name is derived from its ability to recover its original shape upon heating to a certain temperature. NiTi falls under the umbrella of metallic materials, offering high superelasticity, acceptable corrosion resistance, a relatively low elastic modulus, and desirable biocompatibility. There are several challenges regarding the processing and machinability of NiTi, originating from its high ductility and reactivity. Additive manufacturing (AM), commonly known as 3D printing, is a promising candidate for solving problems in the fabrication of near-net-shape NiTi biomaterials with controlled porosity. Powder-bed fusion and directed energy deposition are AM approaches employed to produce synthetic NiTi implants. A short summary of the principles and the pros and cons of these approaches is provided. The influence of the operating parameters, which can change the microstructural features, including the porosity content and orientation of the crystals, on the mechanical properties is addressed. Surface-modification techniques are recommended for suppressing the Ni ion leaching from the surface of AM-fabricated NiTi, which is a technical challenge faced by the long-term in vivo application of NiTi.
+Additive manufacturing (AM) technology, also known as rapid prototyping or three-dimensional (3D) printing, is a digital manufacturing technique that fabricates engineering parts through the layer-by-layer addition of materials [
+1
+,
+2
+,
+3
+]. AM was described and patented for the first time by Chuck Hull in the early 1980s [
+4
+]. AM technology has demonstrated a great ability to manufacture pieces from ceramic [
+5
+,
+6
+,
+7
+], metallic [
+8
+,
+9
+,
+10
+], and polymeric powders [
+11
+,
+12
+,
+13
+], as well as their mixtures [
+14
+,
+15
+], for diverse applications by directly extracting the geometric data from computer-aided design (CAD) models [
+16
+,
+17
+]. In comparison to traditional manufacturing methods, AM can produce complex-shaped objects with a simple production process, high flexibility, shorter production time, minimal waste of material, low cost, and near-net-shape results [
+18
+,
+19
+,
+20
+]. Nowadays, various AM techniques are available for different applications, depending on the specific requirements of each object [
+21
+,
+22
+]. The terminology for AM technology types has been standardized by ISO/ASTM. The foremost standard is “ISO/ASTM 52900: 2021, Additive manufacturing—General principles—Fundamentals and vocabulary”, which was published in November 2021 under ISO/TC 261 technical committee consideration [
+23
+]. However, some researchers have used trademarked terms in their published works. The generalized standard and commercialized terms for AM technologies are listed in the first and second columns of 
+Table 1
+, respectively. The table also provides a brief description of the technologies along with any recently published related works in the biomedical field.
+Orthopedic implants have been routinely used for decades to restore skeletal structure and joint movement for patients following bone fractures or defects, severe arthritis, arthrosis or osteoporosis, and other abnormalities [
+51
+,
+52
+]. Historically, the gold-standard materials for bone replacements have been metallic biomaterials, representing around 70–80% of implants produced [
+53
+]. In the biomedical engineering field, researchers have developed porous orthopedic implants that mimic the architecture of human bone [
+54
+,
+55
+]. The porous structure increases the body-fluid circulation inside the implant, promoting the ingrowth of the new bone tissue [
+56
+,
+57
+,
+58
+]. Moreover, architected porous implants minimize the stress-shielding effects as compared to a fully solid stem of identical geometry [
+59
+]. As a concise summary, a synthetic NiTi implant should possess controlled porosity content to minimize stress shielding, consisting of both large and small pores to transfer nutrients and allow cell seeding, respectively [
+60
+]. AM technology is capable of fabricating porous metallic biomaterials with topological pore architectures and accurate mechanical properties, and patient-specific design has revolutionized the development of customized implants to meet the anatomical needs of the individual patient [
+61
+,
+62
+]. Among all the established AM methods, PBF, DED, and BJ are used for the production of metallic materials (
+Figure 1
+) [
+63
+,
+64
+]. However, the most relevant AM techniques in NiTi biomaterial manufacturing are based upon the PBF and DED methods. PBF technology is classified under two processes: laser PBF (LPBF) [
+65
+,
+66
+,
+67
+] and electron-beam PBF (EPBF) [
+68
+].
+Nickel–titanium (NiTi) alloys, which are binary Ni-Ti intermetallic alloys with around 54.5–57 wt.% (≈49.4–51.9 at.%) Ni, are considered to be alternative candidates to the conventional metallic implants used in biomedical engineering [
+69
+,
+70
+]. NiTi is a shape-memory alloy that was discovered in a serendipitous manner by William J. Buehler in 1959 while he was working on the mechanical properties of nickel alloys in the Naval Ordinance Laboratory. NiTi is also named ‘nitinol’, which refers to the laboratory where it was discovered (Nickel Titanium Naval Ordinance Laboratory) [
+71
+]. The shape-memory and superelastic effects of NiTi are related to a reversible and thermo-elastic martensitic phase transformation near ambient temperature, martensite twinning, martensite detwinning, and the inhibition of slip by the formation of fine Ni
+4
+Ti
+3
+ precipitates in Ni-rich NiTi alloys. [
+72
+,
+73
+]. Moreover, unique features of NiTi alloys, such as their elastic modulus close to that of bone, high corrosion resistance, and good biocompatibility, have led to a broad range of biomedical applications in bone implants, cardiovascular stents, orthodontic wires, and dental braces [
+74
+,
+75
+,
+76
+,
+77
+]. The main drawback of NiTi alloys is that Ni ions are released from the implant’s surface into the physiological environment through long-term exposure [
+78
+,
+79
+]. It has been reported that Ni ions cause allergic and inflammatory reactions near the implantation site [
+80
+]. The surface engineering of NiTi alloys is a powerful strategy to suppress ion release, improve surface bioactivity, and increase corrosion resistance [
+81
+].
+Typically, NiTi alloys have been manufactured by casting and powder metallurgy methods [
+82
+,
+83
+]. The vacuum arc remelting [
+84
+] and vacuum induction melting processes [
+85
+] are categorized as casting methods, and sintering [
+86
+], self-propagating high-temperature synthesis [
+87
+], hot isostatic pressing [
+88
+], metal injection molding [
+89
+], and spark plasma sintering [
+90
+] are used as powder metallurgy techniques to produce NiTi alloys. Generally, powder metallurgy routes can be used to fabricate porous NiTi implants [
+83
+]. However, the lack of control over the (i) porosity (e.g., pore size, porosity, the location of pores, and the interconnectivity of pores); (ii) chemistry (intermetallic, impurity content, homogeneity); and (iii) geometric flexibility is the main disadvantage of these methods [
+83
+,
+91
+]. Moreover, the geometry of the produced parts is relatively simple, mainly comprising wire, rod, and thin-plate shapes, due to the high reactivity of the Ti element and the poor machinability of NiTi alloys [
+92
+,
+93
+]. For example, when the alloys are highly oxidized at high temperatures, they become brittle and prone to cracking [
+94
+]. On the other hand, in cold working conditions, work hardening and material deformation can lead to serious tool wear [
+95
+,
+96
+]. Therefore, the past decade has seen increasing interest in using AM techniques coupled with surface modification strategies to develop novel NiTi implants with complex porous geometries and biofunctional properties to tackle these practical clinical challenges (
+Figure 2
+). The current work aims to provide a short review of recent studies on AM-fabricated NiTi alloys for biomedical implant applications. The PBF and DED techniques are attractive AM technologies with multiple advantages that have been employed in recent years for the fabrication of NiTi biomaterials; however, since BJ has rarely been used for this purpose, it was excluded from the main body of the present review.
+The various types of AM process were discussed in the previous section. The common AM approaches for fabricating NiTi products from metallic Ni and Ti powders are LPBF, EPBF, and DED. To fabricate a product with specific properties and performance parameters, it is necessary to employ a favorable approach that achieves mechanical properties similar to those of human bone. Furthermore, the homogeneity and purity of the AM-fabricated component are important factors for preserving its biocompatibility. The surface finish and accuracy of the produced biomaterial, as well as the final costs of the product, should also be taken into account [
+99
+,
+100
+,
+101
+]. Considering the superelasticity of shape-memory alloys, particularly NiTi with an approximately equal content of Ni and Ti, the focus of their practical development has been on establishing and selecting the optimum AM approach from the viewpoint of controlling the porosity and mechanical behavior. Although the majority of AM routes are well-suited to manufacturing NiTi implants, the selection of the most appropriate method greatly depends on technical and economic considerations [
+102
+,
+103
+]. In summary, the ability of an approach to fabricate NiTi with a desired chemical composition and acceptable physicomechanical characteristics, e.g., density, superelasticity, and shape-memory behavior, is of prime significance [
+104
+].
+It is well-established that a difference between the elastic modulus of the bone and the synthetic biomaterial can lead to the “stress-shielding” phenomenon after implantation due to the fact that the stiffer biomaterial diminishes the physiologic load applied to the bone, decreasing the density of the bone over time [
+105
+]. Therefore, a high level of control over the material selection and fabrication technique employed is required to minimize the mismatch between the stiffness of the biomaterial and the bone [
+41
+]. Among the potential metallic implants, NiTi has the closest elastic modulus to that of cortical bone. While the elastic modulus of the former in the martensitic state is 48 GPa, the modulus of the latter is in the range of 15–35 GPa [
+106
+,
+107
+]. It is true that this difference is not excessive; however, it should be minimized as much as possible through adjusting the operational factors. A feasible way to achieve this goal is to increase the porosity content of the fabricated NiTi biomaterials. Unlike traditional fabrication processes, such as casting, AM offers the possibility to produce porous parts with complex geometries and controlled porosity. Moreover, the powder metallurgy (PM) method lags behind AM in the fabrication of porous NiTi biomaterials, since PM-fabricated parts have a high concentration of impurities that can affect their mechanical and biological behavior [
+108
+,
+109
+].
+The porosity content and pore size should be determined on the basis of the targeted mechanical behavior. Furthermore, the effect of the porosity and pore size of the synthetic implant on bone growth should not be neglected [
+110
+]. Direct bone formation is reported when the biomaterial contains large pores. On the other hand, osteochondrosis occurs if the porous biomaterial presents a smaller pore size [
+111
+]. Additionally, the pore shape and interconnectivity may considerably affect the mechanical and biological properties of the AM-fabricated NiTi biomaterial. To avoid stress concentration, it is recommended to design the operating parameters in such a way that they facilitate the formation of round pores, since edges can serve as stress-concentration sites where cracks are generated [
+112
+]. Interconnectivity can also change the movement and diffusion of oxygen and nutrients throughout the pores. Thus, a porous material without interconnected pores is not able to stimulate bone growth [
+113
+]. The following text is focused on overviewing the common AM techniques for the fabrication of NiTi biomaterials.
+LPBF, a layer-by-layer route, takes advantage of the production of complex samples without the need for surface-finishing post-treatments. This method is by far the most frequently employed technique for the production of NiTi components. During LPBF, the powders are completely melted and fused by means of a laser to form specimens with a density of about 99.9%. Considering the poor machinability of NiTi, this approach opens up new opportunities to develop synthetic NiTi implants [
+114
+]. Overall, LPBF-fabricated NiTi offers acceptable mechanical performance under compression. Although the tensile mechanical properties of this material have not been addressed in detail, the production of a defect-free component may contribute to achieving superior properties, since the tensile behavior is highly sensitive to cracks and porosity [
+115
+,
+116
+]. By controlling the porosity content, the technique allows the production of NiTi components with an elastic modulus favorable for biomedical applications [
+117
+]. All in all, the microstructure of LPBF-fabricated parts is heterogenous, since each layer undergoes various thermal histories. The ‘heterogeneity’ of the microstructure refers to the variations in grain size, Ni dispersion, etc., which can drastically change the mechanical performance of components [
+116
+,
+118
+]. Furthermore, the grain size distribution of LPBF-fabricated specimens is not uniform. Such heterogeneity can noticeably affect the mechanical properties of a specimen [
+119
+,
+120
+].
+In general, several operation factors, including the powder characteristics and preparation protocol, the laser power (energy density), the radius of the irradiated beam, the scanning speed, the distance between the scan lines (hatch distance), the thickness of the layer, the direction of laser scanning, and the atmosphere, can noticeably affect the overall properties and performance of LPBF-fabricated NiTi biomaterials [
+121
+].
+The factor “powder characteristics and preparation protocol” refers to the use of high-purity powders as well as the proper combination of Ni and Ti powders, since there would be no shape-memory effect if the Ni/Ti ratio was not adjusted correctly [
+122
+]. The shape-memory effect refers to the occurrence of the martensite↔austenite transformation within a certain temperature range. This is the most important property of NiTi that makes it a potential biomaterial for use in dentistry, orthopedics, and cardiovascular stents. The beginning and end of the transformation phase are determined by certain temperatures. Any change in the composition of AM-fabricated NiTi can alter the temperature of transformation. For instance, a 0.1% change in the Ni content leads to a 10–15 °C change in the transformation temperature [
+123
+]. Furthermore, a change in the transformation temperature may alter the mechanical behavior of an AM-fabricated part, since the mechanical properties of austenite and martensite are different [
+124
+].
+A high level of control over the energy density is required to produce LPBF-fabricated NiTi implants with desired performance characteristics [
+125
+]. For instance, a higher porosity content is obtained when the energy density is decreased [
+99
+,
+102
+]. The higher the porosity content, the lower the density. Therefore, it is essential to calculate the input energy density to achieve the desired physicomechanical properties. A critical challenge facing the successful application of LPBF in the fabrication of synthetic NiTi implants is the depletion of Ni, which may markedly affect the transformation temperatures [
+126
+]. Ni depletion occurs when a higher energy density is applied. For example, Safdel et al. [
+127
+] assessed the effect of volumetric energy densities in the range of 56–125 J/mm
+3
+ on the Ni content of LPBF-fabricated NiTi. They reported a decrease in Ni content with an increase in the energy density due to the higher equilibrium vapor pressure of Ni, which makes it more susceptible to evaporation at higher energy densities. Furthermore, a change in the Ni content, even for 1 at.%, may affect the martensite transformation temperatures; phase composition; and, in particular, the mechanical properties of an NiTi component [
+128
+,
+129
+]. It is reported that a higher Ni content leads to a decreased transition temperature. Although there is no obvious change in the grain size and texture of LPBF-fabricated NiTi, its mechanical properties, such as its hardness and compressive strength, change with the Ni content [
+129
+]. Xue et al. [
+130
+] have illustrated the possibility of tailoring the chemical composition of LPBF-fabricated NiTi, i.e., the Ni content, by controlling the processing parameters, wherein there is a meaningful correlation between the volumetric energy density and Ni evaporation. Additionally, the input energy amount can determine the grain size of the NiTi produced by LPBF [
+131
+]. When employing LPBF for the production of NiTi biomaterials, it is recommended to use a lower energy density in order to diminish the risk of taking up a higher concentration of impurities in the structure of the final component [
+124
+]. A lower volumetric energy input not only leads to the generation of large, irregularly shaped pores as a result of insufficient diffusion and bonding between the layers, but also increases the porosity content [
+132
+,
+133
+]. The laser energy density determines the phase structure of LPBF-fabricated NiTi, and it has been reported that the phase structure of NiTi parts fabricated using LPBF under energy densities of 22.78 and 55.56 J/mm
+3
+ were composed of B2 and B2 + B19′, respectively. Although a double-layer passive film was formed over both parts, the part containing the B19′ phase showed superior charge-transfer resistance. On the other hand, the pitting propagated much more rapidly over this part due to the galvanic effect that originated from the difference between the potential of the B2 and B19′ phases [
+134
+]. In recent years, NiTi implants of various shapes have been developed by the LPBF method, such as flat, mesh-like, and cage-like, which are shown in 
+Figure 3
+A–C, respectively [
+135
+].
+The orientation of austenitic crystals depends on the direction of the LPBF process. The orientation of the crystals can alter the elastic recovery amount, with a higher elastic recovery reported when the crystals are oriented vertically to the fabrication [
+136
+].
+It is necessary to conduct the LPBF NiTi fabrication process under an atmosphere of inert gas, such as argon, not only to avoid possible contamination but also to enhance the quality and physical properties of the produced material. For biomedical applications, more emphasis should be placed on controlling the concentration of contaminants, since they can lead to toxicity in human cells. In addition to the atmosphere, the porosity content of AM-fabricated NiTi can affect its biocompatibility. A variety of oxide phases, e.g., Ti
+4
+Ni
+2
+O, can be formed if the process runs under an oxygen-containing atmosphere. The oxides not only alter the transformation temperatures but also affect the mechanical behavior of the fabricated NiTi. The influence of oxides on the mechanical behavior greatly depends on their grain size and dispersion [
+137
+]. It has been illustrated that employing a mixture of 50% argon + 50% helium gas, instead of Ar gas alone, causes a 40% increment in the build rate. Helium possesses a high heat capacity and thermal conductivity; therefore, employing such a mixture can also improve the density and stability of the AM-fabricated part [
+138
+]. The flow rate of the carrier gas plays a critical role in determining the spheroidizing efficiency, which alters the fluidity of the synthesized NiTi powders and, subsequently, the final performance of the AM-fabricated part. For instance, Shi et al. [
+139
+] evaluated the influence of the carrier gas flow, in the range of 1.5–5 L/min, on the morphology of NiTi powders and observed that powders with a smooth surface were obtained when using a 3 L/min gas flow. Studies on LPBF-fabricated porous NiTi scaffolds for autologous adipose-derived stem cells (ASCs) have confirmed the effective mechanical properties and successful activity of osteogenic stem cells in a salty biological medium [
+135
+]. 
+Figure 3
+D shows cells adhered to flat NiTi implants with the healthy spindle-shaped appearance that is typical of ASCs. Moreover, the optical microscopy image in 
+Figure 3
+E proves that the ASCs tend to expand and grow between the gaps and pores of LPBF-fabricated mesh-like NiTi, as indicated by the arrow. The complete settling of cells was further confirmed by the SEM image that offered a closer look into the cage pores (
+Figure 3
+F). Although both dense and porous NiTi implants prepared by LPBF demonstrate favorable biocompatibility, the Ni ion release from the surface of the former is slightly lower than that of the latter. It should be noted that the concentration of the leached ions is too low to cause cytotoxicity in both cases [
+123
+,
+140
+].
+The scanning speed is a factor that can vary the martensite↔austenite transformation, with a higher scanning speed producing austenitic NiTi at room temperature [
+141
+]. Furthermore, the higher the scanning speed, the lower the porosity content [
+99
+]. A higher scanning speed not only changes the grain structure of the AM-fabricated NiTi, but also reduces the size of the grains. Larger pores may be formed when applying higher scanning speeds. Moreover, an increased scanning speed can improve the surface quality and decrease the content of micropores. The surface roughness of LPBF-fabricated NiTi may be slightly enhanced with an increase in the scanning speed [
+142
+]. A lower scanning speed for LPBF can lead to an enhanced transformation temperature, i.e., stabilized martensite [
+141
+]. The finer grains formed as a result of a higher scanning speed enhance the fracture stress while slightly decreasing the fracture strain [
+143
+]. Moreover, Xue et al. [
+130
+] reported that an increase in the scanning speed from 0.83 to 1.08 m/s seriously enhanced the ultimate tensile strength and percentage of elongation to failure. The scanning speed affects the corrosion resistance of LPBF-fabricated NiTi in simulated body fluid (SBF)—it has been reported that an increase in the scanning speed from 413 to 1357 mm/s results in a decrease in the charge transfer resistance by 46%. Although the corrosion mechanism is attributed to the pitting corrosion of the oxide layer due to the corrosive action of Cl
+−
+ and PO
+4
+2−
+ ions, the reason why a change in the scanning speed leads to a change in the corrosion resistance has not been addressed [
+144
+].
+The hatch distance, which is the distance between the two consecutive laser scans, is usually kept constant to avoid the generation of structural defects [
+145
+,
+146
+]. However, it has been proven that a change in the hatch distance can vary the morphological and microstructural features, including grain size and morphology. For instance, an increase in the hatch distance from 100 to 120 µm leads to an enlargement in the grain size of AM-fabricated NiTi from 190 to 478 nm [
+145
+]. On the other hand, Obeidi et al. [
+147
+] demonstrated that the hatch distance has less influence on the physical properties of LPBF-fabricated NiTi compared to the laser power and scanning speed. 
+Figure 4
+ schematically represents the relationship between the important parameters involved in the LPBF process and the physical properties of AM-fabricated NiTi. The schematic clearly shows the need for future in-depth R&D work to correlate the processing parameters with the properties.
+It is well-established that a change in the porosity content, surface roughness, and grain size can profoundly affect the final mechano-corrosion and biological performance of the produced material. For instance, the higher the porosity content, the lower the elastic modulus and corrosion resistance. On the other hand, a smaller grain size can improve the hardness and strength of the material in accordance with the Hall–Petch strengthening mechanism [
+148
+,
+149
+,
+150
+,
+151
+]. The surface roughness of the material determines its biological response; it is reported that a substrate with a higher surface roughness facilitates protein absorption, promoting osteoblast cell adhesion [
+152
+]. In SBF medium, LPBF-fabricated bulk NiTi shows similar corrosion resistance to that manufactured by conventional routes. However, an increase in the porosity content of LPBF-fabricated NiTi degrades its corrosion performance, due to the higher surface area exposed to the corrosive medium and the presence of edges in the microstructure. The degraded corrosion resistance can lead to the generation of corrosion by-products, particularly Ni ions. Thus, precise control over the porosity content is required to avoid the release of Ni ions beyond the threshold value [
+153
+].
+Apart from the abovementioned operating factors, the shape and geometry of LPBF-fabricated NiTi produced under the same processing parameters are of prime significance for realizing the microstructure-related and mechanical properties of a component. The results of a comparative study confirmed that rectangular parts have a higher critical stress than oval-shaped parts of the same thickness. Moreover, regardless of the geometry, the thinner the LPBF-fabricated NiTi, the higher the strength. This is ascribed to the formation of smaller grains in thinner materials as a result of the higher cooling rate [
+154
+].
+One feasible strategy to enhance the mechanical and biological behavior of LPBF-fabricated NiTi is to fill the open pores with bioactive ceramic and/or polymeric materials, including the calcium phosphate family and poly-ether-ether ketone [
+155
+]. Such an attractive approach can be considered as a potential future direction in this field.
+In another process classified as LPBF, laser energy is utilized to sinter the powders by supplying the power to melt and fuse them. These powders are stacked layer by layer in the desired 3D model. The powders used in this approach can be metallic, ceramic, or polymeric. This type of LPBF system has a much lower main-process energy level and assistive areal heating. Due to the need for high-powered lasers, this type of LPBF system is considered an expensive method. Moreover, to achieve a higher accuracy, post-machining may be required [
+156
+,
+157
+]. NiTi biomaterials produced by this type of LPBF system bear multiple advantages over those fabricated by conventional casting methods, including a higher homogeneity and controlled pore size and composition. LPBF-fabricated NiTi products made using the sintering method are biocompatible and show no toxicity against fibroblast cells [
+67
+,
+100
+]. Shishkovsky et al. [
+67
+] fabricated homogenous synthetic NiTi implants using this type of LPBF system, applying a laser energy of 100–300 J/cm
+2
+ and requiring no surface-finishing machining. The results of the in vivo experiments confirmed that the LPBF-fabricated NiTi caused no cytotoxicity to surrounding tissue. The authors reported that while the highly porous LPBF-fabricated NiTi enabled cell adhesion, it displayed insufficient microhardness.
+EPBF utilizes a focused electron beam to scan along a layer composed of powders. The beam causes localized melting, followed by solidification. This process achieves the fabrication of NiTi biomaterials with low residual stress and impurities, since it is carried out under a vacuum. Moreover, the higher energy of the electron beam compared to the laser can result in a shorter fabrication time and lower production cost. The process is able to manufacture dense specimens. While LPBF-fabricated NiTi shows higher strength and hardness, NiTi produced by EPBF offers superior elongation [
+100
+,
+158
+]. Zhou et al. [
+159
+] used the EPBF method under a beam current of 12 mA to manufacture NiTi parts. The microstructure of the EPBF-fabricated parts comprised an austenitic B2 phase with a small amount of Ni
+4
+Ti
+3
+ and NiTi
+2
+ precipitates, as well as an R phase. The NiTi parts produced by EPBF exhibited high superelasticity along with excellent reversible strain. On the other hand, the results of the practical experiment carried out by Hayat et al. [
+160
+] proved the lack of superelasticity in EPBF-fabricated NiTi, owing to the generation of the NiTi
+2
+ and Ni
+3
+Ti phases. Therefore, controlling the phase composition of EPBF-fabricated NiTi is a challenge that remains to be addressed in the production of implants for clinical purposes, since the shape-memory effect is of prime importance in such applications.
+The operating factors involved in the EPBF technique, such as the contour scanning strategies, can alter the surface roughness and, subsequently, the mechanical properties of the produced parts [
+161
+,
+162
+]. Thus, there is a drastic need for future in-depth research to correlate the processing parameters with the final characteristics of EPBF-fabricated materials.
+The DED approach provides NiTi implants with a high degree of homogeneity and excellent mechanical properties, particularly microhardness. During DED, a laser beam is utilized to generate a melt pool, and software is used to construct the desired geometry. When the desired geometry is achieved, the fabrication of the material proceeds layer by layer. The limitations of this approach include its expensiveness, slow operating rate, and inappropriate surface finish [
+157
+,
+163
+,
+164
+]. The application of a laser allows AM-fabricated NiTi to retain a significant fraction of high-temperature austenite at room temperature because of the high cooling rate [
+165
+]. Krishna et al. [
+166
+] fabricated porous NiTi for biomedical applications via the DED route, achieving 12–36% porosity. They studied the influence of the operating factors on the physical features, transformation temperatures, and mechanical characteristics of the DED-fabricated NiTi. The reported results confirmed that there is an inverse relationship between the laser power and the porosity content. A decrease in the laser power leads to lower temperatures, which can only partially melt the powders. The liquid metal present at the interface between the partially melted powders leads to the formation of pores. The DED-fabricated NiTi with 12–36% porosity exhibited reversible strain in the range of 2–4% and an elastic modulus of 18 GPa, making it appropriate for use as a load-bearing biomaterial.
+It is possible to tailor the phase composition, surface energy, and corrosion resistance of DED-fabricated NiTi through controlling the laser power—the application of a higher laser power leads to decreased surface energy and superior corrosion resistance. The decreased surface energy is attributed to the enlarged grain size, i.e., the decreased area of the grain boundary. Since grain boundaries are high-energy sites, a decrease in the grain boundary area not only reduces the surface energy but also enhances the corrosion protection performance [
+165
+].
+Zheng et al. [
+167
+] provided a comparative insight into the phase composition, microstructure, mechanical properties, and deformation mechanisms of AM-fabricated Ti-50.8 at.% Ni produced through LPBF and DED. The results indicated that the ductility and yield strength achieved by DED were 2% and 700 MPa, respectively, which are remarkably different from those of LPBF, i.e., 8% and 100 MPa. They also reported that the grain size of the DED-fabricated sample was much larger than that of the LPBF-fabricated sample. Indeed, the fine grains and holes in the LPBF samples displayed uniform deformation during the tensile test, resulting in better elongation.
+In another study, Buciumeanu et al. [
+168
+] assessed the tribo-corrosion properties of NiTi and Ti-6Al-4V alloys fabricated by the DED process. The tribo-corrosion tests were carried out in phosphate-buffered saline (PBS) solution at 37 °C under open-circuit potential (OCP) to simulate the body environment and temperature. They reported that the DED-fabricated NiTi alloy exhibited superior tribo-corrosion performance than the DED-fabricated Ti-6Al-4V alloy. The wear tracks after the tribo-corrosion studies are shown in 
+Figure 5
+. The widths of the wear tracks were about 210 and 420 μm in the DED-fabricated NiTi and Ti-6Al-4V alloys, respectively. Moreover, as seen in 
+Figure 5
+A, the wear track in the DED-fabricated NiTi was smoother. The narrower and smoother wear track indicates the lower level of surface degradation in the DED-fabricated NiTi samples.
+A critical challenge facing the successful long-term in vivo application of NiTi biomaterials is the release of Ni ions from their surfaces upon exposure to corrosive physiological media containing Cl
+−
+ ions and oxygen species, as well as wear between the joints. The leached ions can lead to lung cancer, allergies, chronic bronchitis, and cardiovascular diseases. Although it is possible to decrease the concentration of the leached Ni ions with a change in the porosity content of the AM-fabricated NiTi, it is essential to put forward a feasible strategy to tackle this problem. The application of an appropriate surface-modification technique as a potential solution not only suppresses the release of the ions but also provides new functions to the NiTi [
+169
+,
+170
+,
+171
+,
+172
+,
+173
+,
+174
+,
+175
+,
+176
+]. Surface treatment methods that allow the control of the chemistry and morphology, e.g., passivation/controlled oxidation or mechanical/electrolytic polishing, are more resistant to Ni ion leaching, with some surfaces showing Ni ion release below the detection limit of the method used [
+177
+,
+178
+].
+A nanometer-thick oxide layer mainly comprising titanium dioxide (TiO
+2
+) is formed on the surface of NiTi and can contribute to its corrosion resistance; however, to achieve superior performance, it is better to deposit a biocompatible and corrosion-resistant layer, such as calcium phosphate or bioactive polymers. There is a broad spectrum of coating methods that could be used to apply protective layers on NiTi, including electrochemical deposition, sol-gel processes, anodization, plasma electrolyte oxidation, sputtering, and plasma spraying. The pros and cons of these methods are reported elsewhere [
+179
+,
+180
+,
+181
+,
+182
+]. Es-Souni et al. [
+183
+] fabricated 1000 nm thick TiO
+2
+ nanotubes with tube diameters of around 40 nm on NiTi by anodization (
+Figure 6
+A,B). In the next step, nanotubes were functionalized by the photografting of biopolymer brushes. The authors reported that the biopolymer layer covered the surface of the nanotubes and their walls, inhibiting protein and bacteria adhesion to the anodized NiTi surfaces (
+Figure 6
+C,D). They concluded that any Ni ion release would be prevented by not only the electrochemically controlled surface chemistry but also the presence of the polymeric layer, which was expected to further hinder ionic diffusion because of its insulating properties (ionic and electronic conductivity is required for the diffusion of charged species, e.g., the diffusion of a Ni
+2+
+ ion is accompanied by the diffusion of two electrons, which necessitates the aforementioned conductivity). Deng et al. [
+184
+] employed the DED system to manufacture NiTi biomaterials with similar mechanical properties to bone. A nanoporous composite layer containing a mixture of Ni, Ti, and hydroxyapatite (HAp) nanoparticles was applied on the surface of the AM-fabricated NiTi via pulsed laser sintering under a laser power of 50 kHz. The aim of the addition of HAp nanoparticles was to enhance the biocompatibility. The deposited layer improved the adhesion of osteoblastic cells and collagen expression due to the synergistic effects of the porous surface and the presence of HAp biocompatible nanopowders on the surface.
+Recently, an innovative surface-finishing strategy was proposed by Ma et al. [
+78
+], whereby they employed ultrasonic nanocrystal surface modification to suppress the Ni ion release from the surface of AM-fabricated NiTi. The technique comprised the simultaneous application of ultrasonic striking and burnishing, resulting in a superior surface finish together with a lower porosity content. The finished parts showed lower surface roughness as well as higher hardness and resistance against both corrosion and wear.
+NiTi shape-memory alloys are multifunctional materials with a wide range of biomedical applications, including stents, dental braces, and bone fixation implants. Over the past two decades, AM processes have shown success in producing metallic implants with porous structures and a low elastic modulus. These two features facilitate osseointegration for improved implant fixation and reduced stress-shielding effects at the bone–implant interface. Compared with traditional manufacturing processes for NiTi, such as casting and PM routes, AM can produce near-net-shape parts with reduced costs, material waste, energy consumption, and production durations. This study provided a review of the current state-of-the-art AM techniques for producing NiTi alloys for biomedical implant applications. To date, various AM methods such as LPBF, EPBF, and DED have allowed the layer-by-layer fabrication of patient-specific NiTi implants. Various performance criteria are taken into account for optimizing AM process parameters, including productivity, material composition, density requirements, residual stresses, mechanical properties, surface quality, and geometric accuracy. The laser power, radius of the irradiated beam, scanning speed, distance between scan lines, thickness of the layer, direction of laser scanning, and atmosphere were found to be the most important processing parameters that determine the behavior of LPBF-fabricated NiTi implants. The processing parameters considerably influence the microstructure-related features of AM-fabricated NiTi biomaterials, including the porosity content, grain size, pore type, and orientation of austenitic crystals, which can profoundly affect their mechanical behavior, particularly the elastic modulus. Since the elastic modulus of a biomaterial is of prime importance for avoiding bone loss through stress shielding, it is crucial to optimize these parameters.
+Significant efforts must be made in the fabrication of NiTi shape-memory alloys for biomedical applications in order to reach important milestones. The role of the operating factors for each technique should be addressed, with emphasis placed on establishing mechanisms that govern changes in the final material properties. Therefore, in-depth R&D work is of prime significance in this field. Another important task for the future is to control the porosity content and characteristics in such a way as to achieve an elastic modulus close to that of human bone, together with favorable blood circulation and biocompatibility.
+Generally, the performance of AM-fabricated NiTi alloys is limited, owing to surface imperfections, low surface quality, and defects introduced through layer-by-layer deposition processes. Moreover, the high Ni content in NiTi alloys poses the risk of harmful Ni ions being released into body fluids, causing inflammatory and allergic reactions around the implantation site. Studies in recent years have shown that post-fabrication surface-modification techniques offer promise for enhancing the corrosion resistance and biocompatibility of AM-fabricated NiTi implants. However, many surface-engineering methods remain largely unexplored for AM-fabricated NiTi alloys. Therefore, we expect that future research directions include advanced and multifunctional surface coatings with promising in vitro and in vivo results in terms of cytocompatibility and osteogenic differentiation.
+M.S.S.—conceptualization, methodology, and writing (original draft preparation); A.B.-K.—software and writing (original draft preparation); J.K.-A., M.M. and L.V.—writing (review and editing) and supervision. All authors have read and agreed to the published version of the manuscript.
+This research received no external funding.
+Not applicable.
+The authors declare no conflict of interest.
+ProJet color-jet printing [
+24
+,
+25
+,
+26
+]
+Laser-engineered net shape [
+27
+,
+28
+,
+29
+]
+Electron-beam additive manufacture [
+30
+]
+Fused deposition modeling [
+31
+,
+32
+]
+Fused filament fabrication [
+33
+,
+34
+]
+Nanoparticle jetting [
+35
+]
+Drop-on-demand [
+36
+]
+PolyJet [
+37
+]
+ProJet MultiJet printing [
+38
+]
+Selective laser sintering [
+39
+,
+40
+]
+Selective laser melting [
+41
+,
+42
+]
+Direct metal printing [
+43
+]
+Direct metal laser sintering [
+44
+]
+Electron-beam melting [
+45
+]
+MultiJet fusion [
+46
+]
+Laminated object manufacturing [
+47
+]
+Stereolithography apparatus [
+48
+]
+Direct light processing [
+49
+]
+Continuous liquid interface production [
+50
+]
+Publisher’s Note:
+ MDPI stays neutral with regard to jurisdictional claims in published maps and institutional affiliations.

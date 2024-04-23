@@ -1,0 +1,1060 @@
+Supercritical carbon dioxide (S-CO
+2
+) Brayton cycles (BC) are soon to be a competitive and environment friendly power generation technology. Progressive technological developments in turbo-machineries and heat exchangers have boosted the idea of using S-CO
+2
+ in a closed-loop BC. This paper describes and discusses energy and exergy analysis of S-CO
+2
+ BC in cascade arrangement with a secondary cycle using CO
+2
+, R134a, ammonia, or argon as working fluids. Pressure drop in the cycle is considered, and its effect on the overall performance is investigated. No specific heat source is considered, thus any heat source capable of providing temperature in the range from 500 °C to 850 °C can be utilized, such as solar energy, gas turbine exhaust, nuclear waste heat, etc. The commercial software ‘Aspen HYSYS version 9’ (Aspen Technology, Inc., Bedford, MA, USA) is used for simulations. Comparisons with the literature and simulation results are discussed first for the standalone S-CO
+2
+ BC. Energy analysis is done for the combined cycle to inspect the parameters affecting the cycle performance. The second law efficiency is calculated, and exergy losses incurred in different components of the cycle are discussed.
+Gas turbines (GT) are inevitable in modern power generation. The simple GT cycle has poor efficiency due to the elevated temperature of flue gases. To improve the fuel efficiency, the simple GT cycle is generally coupled with a bottoming cycle in stationary variants of GT, like the conventional steam Rankine cycles (RC) and the organic Rankine cycles (ORC) [
+1
+,
+2
+]. The rapid development of industries around the world has resulted in an increasing demand of energy. The shortage of fossil energy prompts people to investigate more efficient gas turbine combined cycles to meet the energy requirements. Exploiting low-grade waste heat for energy production is an attractive option for its potential to reduce fossil fuel consumption. When exploiting medium-temperature heat sources, supercritical carbon dioxide (S-CO
+2
+) is advantageous because of its high efficiency, compactness, and cost [
+3
+,
+4
+]. Many pilot-scale facilities have been developed in the last few years to investigate the performance of S-CO
+2
+ BC (Brayton cycles) [
+5
+,
+6
+,
+7
+,
+8
+]. When utilizing low-grade waste heat, the traditional steam Rankine cycle does not give satisfying results because of poor thermal efficiency, thus the organic Rankine cycles and transcritical CO
+2
+ (t-CO
+2
+) cycles are proposed [
+9
+,
+10
+,
+11
+,
+12
+].
+The supercritical state of CO
+2
+ as working fluid in BC has various advantages. Its critical temperature is low (31.1 °C), which allows to use the natural resources of water as a cooling medium in the condenser. The density of CO
+2
+ close to the critical point is similar to that of a liquid and allows to decrease the compressor work significantly. CO
+2
+ in its supercritical state is almost twice as dense as steam. This results in very high power density, which allows to drastically reduce the compressor and turbine size. S-CO
+2
+ BC is compatible with a variety of renewable heat sources, thus it has little impact on the environment with low to no ozone depletion potential. Atif and Al-Sulaiman [
+13
+,
+14
+] presented the energy and exergy analysis of solar-driven S-CO
+2
+ and its applicability in desert climates, like in Saudi Arabia. Kun Wang [
+15
+] studied S-CO
+2
+ recompression Brayton cycle (RBC) with molten salt solar power. He developed a model to investigate the effects of salt temperature, compressor inlet conditions, and heliostat orientation on the overall cycle efficiency. Hou et al. recently examined S-CO
+2
+ recompression and regenerative cycle utilizing waste heat energy from a marine gas turbine [
+16
+]. They found a 13% overall thermal efficiency improvement with the combined cycle. Wang et al. [
+17
+] worked on the cascaded S-CO
+2
+ cycle integrating solar and biomass.
+S-CO
+2
+ working with a medium-temperature source may be coupled with a bottoming cycle, which utilizes low-grade waste heat of the primary cycle and rejects in a low-temperature sink [
+18
+]. Wang et al. investigated the t-CO
+2
+ cycle to exploit low-grade geothermal sources for electricity production [
+19
+]. They used liquefied natural gas (LNG) as a low-temperature heat sink to allow low back pressure of the CO
+2
+ turbine, thus greatly improving the overall performance of the cycle. Ahmadi et al. established a similar energy conversion system and showed a significant contribution of t-CO
+2
+ in geothermal energy utilization [
+20
+]. Amini et al. exploited the low-grade energy of exhaust gas (150 °C) from a combined cycle power plant to run the t-CO
+2
+ cycle. The results indicated a significant improvement of power output and efficiency [
+21
+]. Walnum et al. concluded that a dual-stage t-CO
+2
+ system performs better in offshore gas turbines [
+22
+]. Wu et al. reported that t-CO
+2
+ has the potential to recover medium-grade heat and suggested that more stages should be designed with the increase of waste heat temperature [
+23
+].
+Much research has been dedicated to the thermodynamic analysis of supercritical CO
+2
+ BC utilizing medium-temperature heat either from renewable sources or from gas turbine exhausts. Some studies have been carried out on the utilization of low-grade heat of S-CO
+2
+ BC using the t-CO
+2
+ cycle as a bottoming cycle. However, little attention has been paid to the effect of pressure drop in the system. S-CO
+2
+ RBC is efficient for medium to high-temperature sources, which offer low-grade heat energy (with a temperature of about 100 °C to 120 °C). In the present study, a simulation investigation is done to seek parameters that could possibly improve the overall cycle’s efficiency. We consider various working fluids, including CO
+2
+, in the bottoming cycle, utilizing low-grade heat energy from S-CO
+2
+ RBC as a primary cycle. Implementing the bottoming cycle with a low-temperature heat source requires to maintain the sink medium at a very low temperature. Liquefied natural gas (LNG) contains a large amount of cold energy, naturally making it a suitable candidate for providing a low-temperature sink medium [
+24
+,
+25
+,
+26
+,
+27
+].
+The selection of appropriate working fluids depends on many factors and properties, such as critical temperature and pressure, chemical stability at the operating temperature, environment friendliness, economic convenience, and allows a high utilization of the energy available from the heat source. Considering the maximum temperature available for the bottoming cycle, i.e., about 120 °C, CO
+2
+, R134a, ammonia, and argon were chosen as potential candidates for the present study. R134a has zero ozone depletion potential (ODP). It has already been used commercially, and the necessary equipment, such as heat exchangers and turbo-machines, is readily available. It has a critical temperature of 101.1 °C, allowing it to be used in the temperature range of interest. Ammonia, despite being toxic and flammable, is one of the most environment friendly working fluid with zero ODP and zero global warming potential (GWP). It is being used in industries and is considered a highly efficient refrigerant. It has a critical temperature of 132.4 °C, which allows to adopt it as a working fluid for the available heat source. The bottoming cycle utilizing CO
+2
+, R134a, and ammonia is similar to the Rankine cycle, thus it requires a pump to maintain the cycle pressure ratio. Moreover, the performance of argon was also studied in the bottoming cycle, which is similar to the Brayton cycle. Argon was selected because of its high density, which allows to employ compact turbo-machines with fewer stages.
+The first part of the article discusses the configuration of the simulation environment, the adjustment of the operational parameters, and the mathematical model for energy and exergy analysis. The model is validated by comparing the results for the supercritical CO
+2
+ recompression Brayton cycle with previous findings. The second part of the paper presents the results of the energy analysis. The potential improvements in the overall efficiency with the bottoming cycle utilizing different working fluids (CO
+2
+, argon, ammonia, R134a) are outlined. The last part of the paper addresses the results of the exergy analysis. The exergy loss in various components of the cycle is calculated. This analysis could help in selecting the working fluids suitable for the bottoming cycle.
+The base model is a recompression Brayton cycle (RBC) with partial condensation. This layout was originally proposed by Feher [
+28
+] and Angelio [
+29
+], then refined by Dostal [
+30
+]. They observed that large internal irreversibility losses occurred in the case of a fully condensing cycle due to heat recuperation between the low heat capacity turbine exhaust and the high heat capacity flow from the pump. Thus, partial condensation was proposed to reduce these losses. This was done by splitting the stream from the turbine exhaust. The term flow ratio ‘x’ is generally used to indicate the magnitude of the divided mass flow rate. The layout of the cycle is shown in 
+Figure 1
+. The stream leaving the low-temperature recuperator (LTR) is divided into two streams. The first stream (State 3a) goes to Compressor 1 and the second stream (State 3b) goes to Compressor 2, which is a recompressor operating at the exit temperature and pressure of the LTR. The stream leaving Compressor 1 (State 5) passes through the LTR where it receives energy from the hotter stream (State 2) and is then mixed with the stream (State 7) leaving Compressor 2. The mixed stream (State 8) is further heated in the high-temperature recuperator (HTR) before it receives heat from the heat source. Finally, it expands in Turbine 1. Part of the work produced in Turbine 1 is used to drive Compressor 1 and Compressor 2.
+Figure 2
+ illustrates the schematic diagram of the combined cycle based on the cold energy utilization of LNG. The secondary cycle runs on the energy recovered from the primary cycle in the waste heat recovery unit (WHRU). The working fluid in the secondary cycle receives heat energy from the WHRU and then expands in Turbine 2. After expansion, it rejects heat to the low-temperature sink, which is a liquefied natural gas heat exchanger (LNG HEX). The stream then goes to a pump or a compressor, depending on the state of the working fluid. Part of the work produced by Turbine 2 is consumed to drive the pump or compressor of the secondary cycle.
+The primary cycle efficiency (η
+pc
+) and combined cycle efficiency (η
+cc
+) are calculated by:
+
+
+
+η
+pc
+ = (W
+T1
+ − W
+C1
+ − W
+C2
+)/Q
+IN
+
+
+
+
+
+
+(1)
+
+
+
+
+
+
+
+η
+cc
+ = (W
+T1
+ + W
+T2
+ − W
+C1
+ − W
+C2
+ − W
+P
+)/Q
+IN
+
+
+
+
+
+
+(2)
+
+
+
+
+
+
+
+W
+T1
+ = m
+PC
+ (h
+10
+ − h
+1
+)
+
+
+
+
+
+(3)
+
+
+
+
+
+
+
+W
+T2
+ = m
+SC
+ (h
+12
+ − h
+13
+)
+
+
+
+
+
+(4)
+
+
+
+
+
+
+
+W
+C1
+ = m
+C1
+ (h
+4
+ − h
+5
+)
+
+
+
+
+
+(5)
+
+
+
+
+
+
+
+W
+C2
+ = m
+C2
+ (h
+8
+ − h
+3
+)
+
+
+
+
+
+(6)
+
+
+
+
+
+
+
+W
+Pump
+ = m
+SC
+ (h
+11
+ − h
+14
+)
+
+
+
+
+
+(7)
+
+
+
+
+
+
+
+Q
+IN
+ = m
+PC
+ (h
+10
+ − h
+9
+)
+
+
+
+
+
+(8)
+
+
+
+
+
+where m
+PC
+, m
+SC
+, m
+C1
+, m
+C2
+ are the mass flow rates through the primary cycle, secondary cycle, Compressor 1, and Compressor 2, respectively. ‘Q
+IN
+’ represents the total heat input per unit time given to the cycle; ‘h’ represents enthalpy, and the subscript numbers are associated with the state points shown in 
+Figure 2
+. The ratio of total mass flow rate in the primary cycle returning to Compressor 1 is defined by the variable ‘x’ and is equal to:
+
+
+
+x = m
+C1
+/m
+PC
+
+
+
+
+
+
+(9)
+
+
+
+
+The heat exchange between primary and secondary cycle via WHRU is governed by the following energy balance:
+
+
+
+m
+C1
+ (h
+4
+ − h
+3
+) = m
+SC
+ (h
+12
+ − h
+11
+)
+
+
+
+
+
+(10)
+
+
+
+
+A minimum temperature approach is enforced and set to 10 °C. Heat transfer in the HTR and LTR obeys the following governing equations, which are also set to exchange heat using a minimum temperature approach of 10 °C
+
+
+
+
+(h
+1
+ − h
+2
+) = (h
+9
+ − h
+8
+)
+
+
+
+
+
+(11)
+
+
+
+
+
+
+
+(h
+2
+ − h
+3
+) = x (h
+8
+ − h
+5
+)
+
+
+
+
+
+(12)
+
+
+
+
+The exergy destroyed (Χ
+destroyed
+) in each of the components of the cycle is calculated according to the following equations. The kinetic and potential energy change is neglected.
+
+
+
+
+Χ
+destroyed, C1
+ = m
+C1
+ T
+surr
+ (s
+5
+ − s
+4
+)
+
+
+
+
+
+(13)
+
+
+
+
+
+
+
+Χ
+destroyed, C2
+ = m
+C2
+ T
+surr
+ (s
+7
+ − s
+3b
+)
+
+
+
+
+
+(14)
+
+
+
+
+
+
+
+Χ
+destroyed, T1
+ = m
+PC
+ T
+surr
+ (s
+1
+ − s
+10
+)
+
+
+
+
+
+(15)
+
+
+
+
+
+
+
+Χ
+destroyed, T2
+ = m
+SC
+ T
+surr
+ (s
+13
+ − s
+12
+)
+
+
+
+
+
+(16)
+
+
+
+
+
+
+
+Χ
+destroyed, HTR
+ = m
+PC
+ T
+surr
+ [(s
+2
+ − s
+1
+) + (s
+9
+ − s
+8
+)]
+
+
+
+
+
+(17)
+
+
+
+
+
+
+
+Χ
+destroyed, LTR
+ = m
+PC
+ T
+surr
+ [x(s
+6
+ − s
+5
+) + (s
+3
+ − s
+2
+)]
+
+
+
+
+
+(18)
+
+
+
+
+
+
+
+Χ
+destroyed, WHRU
+ = T
+surr
+ [m
+SC
+ (s
+12
+ − s
+11
+) + m
+PC
+ x(s
+4
+ − s
+3a
+)]
+
+
+
+
+
+(19)
+
+
+
+
+
+
+
+Χ
+destroyed, LNG HEX
+ = T
+surr
+ [m
+SC
+ (s
+14
+ − s
+13
+) + m
+LNG
+ (Δs
+LNG
+)]
+
+
+
+
+
+(20)
+
+
+
+
+
+
+
+Χ
+destroyed, Pump
+ = m
+SC
+ T
+surr
+ (s
+11
+ − s
+14
+)
+
+
+
+
+
+(21)
+
+
+
+
+
+where T
+surr
+ is the surrounding temperature, and ‘s’ represents entropy.
+The second law efficiency of the cycle is calculated as
+
+
+
+
+η
+II
+ = (W
+T1
+ + W
+T2
+ − W
+C1
+ − W
+C2
+ − W
+P
+)/(ψ
+T1
+ + ψ
+T2
+ − ψ
+C1
+ − ψ
+C2
+ − ψ
+Pump
+)
+
+
+
+
+
+(22)
+
+
+
+
+
+where ψ represents reversible work and is defined as
+
+
+
+
+ψ
+T1
+ = m
+PC
+ [(h
+10
+ − h
+1
+) − T
+surr
+ (s
+10
+ − s
+1
+)]
+
+
+
+
+
+(23)
+
+
+
+
+
+
+
+ψ
+T2
+ = m
+SC
+ [(h
+12
+ − h
+13
+) − T
+surr
+ (s
+12
+ − s
+13
+)]
+
+
+
+
+
+(24)
+
+
+
+
+
+
+
+ψ
+C1
+ = m
+PC
+ (x) [(h
+5
+ − h
+4
+) − T
+surr
+ (s
+5
+ − s
+4
+)]
+
+
+
+
+
+(25)
+
+
+
+
+
+
+
+ψ
+C2
+ = m
+PC
+ (1 − x) [(h
+7
+ − h
+3b
+) − T
+surr
+ (s
+7
+ − s
+3b
+)]
+
+
+
+
+
+(26)
+
+
+
+
+
+
+
+ψ
+Pump
+ = m
+SC
+ [(h
+11
+ − h
+14
+) − T
+surr
+ (s
+11
+ − s
+14
+)]
+
+
+
+
+
+(27)
+
+
+
+
+The commercial software Aspen HYSYS V9 (Aspen Technology, Inc., Bedford, MA, USA)was used to simulate the cycle. The Peng-Robinson model was considered for state properties calculation. The analysis was done with the following restrictions imposed:
+The cycle operates under steady-state conditions.
+Surrounding temperature is 25 °C.
+Primary cycle mass flow rate is 100 kg/s.
+LNG in the storage tank is maintained at −162 °C.
+Energy losses in the pipelines are neglected.
+Compression and expansion processes are adiabatic.
+Compressor and turbine adiabatic efficiencies are 85% and 90%, respectively.
+Adiabatic efficiency of a centrifugal pump in the secondary cycle is 80%.
+Minimum temperature approach is set to 10 degrees in HTR, LTR, WHRU, and LNG HEX.
+The state of CO
+2
+ is kept close to the critical point at the inlet of Compressor 1, (P = 7.2 MPa and T = 30 °C).
+The cycle operates under steady-state conditions.
+Surrounding temperature is 25 °C.
+Primary cycle mass flow rate is 100 kg/s.
+LNG in the storage tank is maintained at −162 °C.
+Energy losses in the pipelines are neglected.
+Compression and expansion processes are adiabatic.
+Compressor and turbine adiabatic efficiencies are 85% and 90%, respectively.
+Adiabatic efficiency of a centrifugal pump in the secondary cycle is 80%.
+Minimum temperature approach is set to 10 degrees in HTR, LTR, WHRU, and LNG HEX.
+The state of CO
+2
+ is kept close to the critical point at the inlet of Compressor 1, (P = 7.2 MPa and T = 30 °C).
+Thermodynamically, the cycle performance greatly depends on a number of parameters, such as operating pressure ratio, flow ratio, operating temperatures [
+28
+,
+31
+]. This section discusses the steps undertaken in the selection of the parameters for the cycle. Three cases were considered with different assumed pressure drop in the system. For each case, the pressure drop was considered uniform in the cycle: for example, a 2% pressure drop indicated the reduction of 2% of the inlet pressure across each heat exchanger in the cycle for both sides (hot and cold sides).
+The case study was set in Aspen HYSYS to calculate the cycle efficiency for a range of flow ratios ’x’ and cycle’s pressure ratios. The results are presented as contour plots in 
+Figure 3
+a–c. It is worth noting that the efficiency for each colored patch can be read with a degree of error of ±0.5. A parametric simulation study was set up to seek operational parameters (pressure ratio and flow ratio) that approximate a near-optimal operation of the cycle with respect to thermal efficiency. The best possible combination found for each case is listed in 
+Table 1
+.
+Figure 4
+ represents the temperature–entropy T–S diagram of the primary cycle with a turbine inlet temperature of 500 °C. It can be observed that the LTR and HTR units recovered and recycled more than 60% of the heat.
+The primary cycle (S-CO
+2
+ RBC) serves as a base model, thus it is imperative to validate the results with previously published data. 
+Figure 5
+ represents the thermal efficiency plotted against the turbine inlet temperature. The simulation results are plotted along with the results published by Kun Wang [
+32
+] and Turchi et al. [
+33
+] (this study did not consider the pressure drop in the system). It is evident from the plot that the base model, developed in Aspen HYSYS V9, produced results in agreement with the previously published data. It is worth mentioning that Kim et al. [
+34
+] investigated the amount of pressure loss that could occur in a printed circuit heat exchanger (PCHE) for S-CO
+2
+. Their study indicated a pressure loss of about 2%. Thus, if we assume a similar pressure drop, then the efficiency of 40% or above is achievable with a turbine inlet temperature of 550 °C or higher.
+Figure 6
+ represents the back work ratio (BWR) plotted as a function of the turbine inlet temperature. The BWR is the fraction of work produced in the turbine that is consumed by the compressors in the cycle. Considering the curve for no pressure drop in 
+Figure 6
+, the BWR is below 40%, which is uncommon for a standard Air Brayton cycle. The smaller BWR of the S-CO
+2
+ RBC is due to the fact that the CO
+2
+ is brought to the critical state before the inlet to Compressor 1, which results in reduced compressor work and improvement in the overall efficiency of the cycle.
+Figure 7
+ represents the magnitude of efficiency improvement with respect to turbine inlet temperature. It is worth noting that the S-CO
+2
+ recompression cycle is best suited for medium temperature range (approx. up to 850 °C). Further increase to turbine inlet temperature would increase the cost of high-temperature resistance material with no significant increase in the efficiency improvements.
+The secondary cycle in cascade with the primary S-CO
+2
+ cycle was investigated using carbon dioxide, ammonia, R134a, and argon as working fluids. A minimum temperature approach of 10 degrees was used for the heat exchangers (WHRU and LNG HEX). The secondary fluid inlet temperature to the WHRU was fixed at −25 °C for all cases. The combined cycle efficiency was maximized by searching the best possible combination of primary and secondary cycle pressure ratios for all temperatures and pressure drops considered in the study. 
+Figure 8
+ displays the contour plot of efficiency against a range of pressure ratios of primary and secondary cycles. It reveals that the optimum value of primary cycle pressure ratio remained at nearly the same value as when there was no bottoming cycle (see 
+Table 1
+). These plots are only shown for two temperatures at different pressure drops, with CO
+2
+ as a working fluid for the secondary or bottoming cycle; however, optimum values of primary and secondary cycle pressure ratios were obtained in the same manner for all cases discussed in this study. After expansion, the working fluid exchanged heat in the LNG HEX, where the LNG inlet temperature was fixed at −162 °C (refer to 
+Figure 2
+). Afterwards, the pump or compressor raised the pressure of the working fluid according to cycle’s operating pressure ratio.
+This section discusses the essential outcomes of the energy analysis for the combined cycle governed by the set of equations from 1 to 12. The maximum efficiency of the cascade S-CO
+2
+ combined cycle was plotted against the turbine inlet temperature (T
+10
+) and is shown in 
+Figure 9
+. A general monotonic behavior was observed for the efficiency of the combined cycle, which increased with the turbine inlet temperature. A similar behavior of the cycle’s efficiency was observed for the standalone primary cycle (see 
+Figure 5
+). The effect of pressure drop in the system was reflected in the reduction of the overall cycle’s efficiency. Ammonia and R134a were found to be the least efficient. Argon appeared to be more efficient than the other candidates. This is due to the fact that the argon cycle is similar to the Brayton cycle and incurs much smaller losses (due to no phase change). Thus, argon can expand to lower temperatures than the other candidates that run on cycles similar to the Rankine cycle.
+Figure 10
+ illustrates the overall efficiency improvement coming from the secondary cycle with argon, CO
+2
+, ammonia, and R134a. It is observed that the role of the secondary cycle in the improvement of the cycle’s overall efficiency rises with the increase of the pressure drop in the system and it is more pronounced for medium turbine inlet temperatures (approximately up to 850 °C). This is because the primary cycle’s efficiency drastically decreases with the increase of the pressure drop (refer to 
+Figure 5
+ and 
+Figure 7
+). The efficiency improvement due to the secondary cycle declined rapidly with the rise of the turbine inlet temperature (T
+10
+). This was due to a higher efficiency of the primary cycle at elevated temperatures (refer to 
+Figure 5
+ and 
+Figure 6
+).
+The process of heat recovery from the primary cycle to the secondary cycle is illustrated graphically using the T–S plots in 
+Figure 11
+. This plot was constructed for a turbine inlet temperature (T
+10
+) of 500 °C (note: a similar qualitative behavior was observed for higher values of T
+10
+). There was a turbine between the state points 10 and 1, and two compressors between the state points 4 and 5 and the state points 3 and 8. The compressor ratios for both compressors were the same, as there was no pressure drop considered in the system, (the values are listed in 
+Table 1
+). The bottoming cycle received waste heat from the primary cycle through the WHRU between the state points shown in 
+Figure 11
+. The inlet of hotter fluid from the primary cycle was at state 3, whereas state 12 represented the condition of the secondary working fluid after heat gain in the WHRU. The bottoming cycle with CO
+2
+, ammonia, and R134a was similar to the Rankine cycle, with the liquid state after the heat rejection process between state points 13 and 14, thus requiring a pump to increase the pressure. However, the argon cycle was similar to the standard Brayton cycle and required a compressor. Since no phase change was involved in the case of argon, the working fluid expanded at a temperature much lower than that required for the other candidates (see 
+Figure 11
+). Moreover, the bottoming cycle of CO
+2
+, R134a, and ammonia was similar to the Rankine cycle, which is inherently inefficient, as most of the heat addition and heat rejection are done isothermally. It is worth noting that the minimum temperature of the bottoming cycle (T
+14
+) was nearly −25 °C in all cases except for argon, for which the value dropped to −150 °C. This makes CO
+2
+ a better candidate in the bottoming cycle for cold regions of the world where the environment temperature favors heat rejection. Argon could be a better choice if LNG’s cold energy is readily available for heat exchange.
+Figure 12
+ represents the T–S plots related to different pressure drop conditions for a turbine inlet temperature (T
+10
+) of 500 °C. The effect of the pressure drop in the cycle resulted in the increase of the temperature T
+3
+. Thus, the temperature at the turbine inlet of the bottoming cycle increased. The increased availability of energy for the bottoming cycle led to an increased contribution of the secondary cycle to the performance with the increase of the pressure drop in the cycle. However, as mentioned earlier, this improvement was more pronounced if the turbine inlet temperature (T
+10
+) was less than 850 °C (refer to 
+Figure 10
+). Beyond that value, the efficiency improvement due to the secondary cycle became less prominent.
+This section encapsulates the results of exergy analysis done for a combined cycle. Exergy analysis is governed by the set of equations from 13 to 27. 
+Figure 13
+ shows the exergy destruction taking place in each of the components of the cycle. Maximum exergy was lost in the LNG HEX, which was expected, as it is the sink for the cycle where waste heat was rejected. Ammonia offered maximum exergy destruction due to its highest value of specific heat and latent heat of condensation. Argon, on the other hand, had minimum exergy loss due to no phase change. CO
+2
+ offered minimum exergy loss during heat exchange from primary to bottom cycle (in WHRU), which resulted in maximum exergy available for the secondary cycle. It is interesting to note that the mass flow rate required for energy balance between the primary and secondary cycle was the highest for argon and the lowest for ammonia; the ratio of the mass flow rate for secondary cycle to primary cycle is shown in 
+Table 2
+. The higher mass flow rate for argon is the result of its low specific heat value, because of which it experienced maximum exergy loss in the turbine and compressor of the secondary cycle. 
+Figure 14
+ represents the total exergy loss in the cycle plotted against increasing turbine inlet temperature. It comes as no surprise that the total exergy loss decreased with the turbine inlet temperature (T
+10
+), as the overall cycle efficiency increased with T
+10
+. The exergy loss with R134a and CO
+2
+ was almost the same when no pressure drop was considered in the cycle. However, with the increasing pressure drop in the system, R134a performed better in the energy conversion, while ammonia was the worst candidate.
+Figure 15
+ shows the cycle’s second law efficiency plotted against the turbine inlet temperature. Similar to the first law efficiency, the second law efficiency showed to increase monotonically with temperature. However, the rate of efficiency rise appeared to saturate near the turbine inlet temperature of 800 °C. Argon seemed to be the worst candidate in terms of second law efficiency, which is a result of a large exergy loss in the turbine and the compressor. R134a and ammonia behaved identically, offering the highest second law efficiency. CO
+2
+ performed marginally less well than R134a and ammonia.
+Energy and exergy analyses of a supercritical CO
+2
+ recompression Brayton cycle, with or without bottoming cycle, were performed. The following key results were obtained:
+The supercritical CO
+2
+ recompression Brayton cycle is efficient, with a potential to provide high-efficiency values for medium-range source temperatures.
+As expected, the S-CO
+2
+ RBC thermal efficiency declined with the pressure drop. The pressure drop in the heat exchangers resulted in increased compressor work required to maintain the optimum cycle pressure. The optimum cycle pressure was 16.60 MPa, which raised to 24.45 MPa for a 4% pressure drop.
+Implementing the bottoming cycle is an attractive option with a sink temperature as low as −50 °C.
+The pressure drop in the primary cycle reduced the efficiency but, in turn, offered higher temperature and exergy available to the WHRU, which appeared as an increased contribution from the secondary cycle.
+The combined cycle efficiency increased monotonically with the turbine inlet temperature (T
+10
+); the rise was more evident for temperatures up to 850 °C, beyond which the curve appeared to saturate.
+Regardless of the pressure drop in the system, the bottoming cycle with argon as a working fluid gave the highest thermal efficiency. On the other side, it required a mass flow rate approximately 5 times higher than R134a and CO
+2
+. A high mass flow rate would require a large equipment (turbine, compressor, heat exchangers, etc.), which ultimately increases the capital and operational costs. Significantly high exergy losses in compressor, turbine, and WHRU were also associated with argon, which was manifested by the smaller second law efficiency.
+Ammonia required a mass flow rate approximately 4 to 5 times lower than those of R134a and CO
+2
+. Exergy analysis revealed a higher second law efficiency associated with ammonia. However, a substantial amount of exergy was lost in the WHRU as a result of the high latent heat of vaporization for ammonia. Thus, a significantly smaller exergy was available for the secondary cycle, which resulted in a smaller contribution in the overall thermal efficiency in comparison to other working fluids.
+R134a can be a good candidate for the bottoming cycle. It offered an overall thermal efficiency improvement between 20% and 25%, as shown in 
+Figure 10
+. It showed minimum exergy loss and high second law efficiency.
+CO
+2
+ provided a significantly higher contribution than ammonia and R134a in the overall cycle efficiency improvement, with a sink temperature of about −25 °C. It provided a thermal efficiency improvement of 30% to 35%.
+The supercritical CO
+2
+ recompression Brayton cycle is efficient, with a potential to provide high-efficiency values for medium-range source temperatures.
+As expected, the S-CO
+2
+ RBC thermal efficiency declined with the pressure drop. The pressure drop in the heat exchangers resulted in increased compressor work required to maintain the optimum cycle pressure. The optimum cycle pressure was 16.60 MPa, which raised to 24.45 MPa for a 4% pressure drop.
+Implementing the bottoming cycle is an attractive option with a sink temperature as low as −50 °C.
+The pressure drop in the primary cycle reduced the efficiency but, in turn, offered higher temperature and exergy available to the WHRU, which appeared as an increased contribution from the secondary cycle.
+The combined cycle efficiency increased monotonically with the turbine inlet temperature (T
+10
+); the rise was more evident for temperatures up to 850 °C, beyond which the curve appeared to saturate.
+Regardless of the pressure drop in the system, the bottoming cycle with argon as a working fluid gave the highest thermal efficiency. On the other side, it required a mass flow rate approximately 5 times higher than R134a and CO
+2
+. A high mass flow rate would require a large equipment (turbine, compressor, heat exchangers, etc.), which ultimately increases the capital and operational costs. Significantly high exergy losses in compressor, turbine, and WHRU were also associated with argon, which was manifested by the smaller second law efficiency.
+Ammonia required a mass flow rate approximately 4 to 5 times lower than those of R134a and CO
+2
+. Exergy analysis revealed a higher second law efficiency associated with ammonia. However, a substantial amount of exergy was lost in the WHRU as a result of the high latent heat of vaporization for ammonia. Thus, a significantly smaller exergy was available for the secondary cycle, which resulted in a smaller contribution in the overall thermal efficiency in comparison to other working fluids.
+R134a can be a good candidate for the bottoming cycle. It offered an overall thermal efficiency improvement between 20% and 25%, as shown in 
+Figure 10
+. It showed minimum exergy loss and high second law efficiency.
+CO
+2
+ provided a significantly higher contribution than ammonia and R134a in the overall cycle efficiency improvement, with a sink temperature of about −25 °C. It provided a thermal efficiency improvement of 30% to 35%.
+Considering the above energy and exergy analyses, CO
+2
+ could be a good option for a combined cycle with S-CO
+2
+ being the primary cycle. R134a could be the second viable option as a working fluid for the bottoming cycle.
+M.E.S. and A.A.T. conceived and set up the simulation in Aspen HYSYS V9; M.E.S., A.A.T. and K.H.A. analyzed the simulation results; M.E.S. wrote the paper. K.H.A. managed research financials, wherever required. The final submission was proofread by all authors.
+This research received no external funding.
+The authors declare no conflict of interest.

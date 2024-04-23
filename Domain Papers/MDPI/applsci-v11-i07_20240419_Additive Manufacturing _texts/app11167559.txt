@@ -1,0 +1,193 @@
+High cost, unpredictable defects and out-of-tolerance rejections in final parts are preventing the complete deployment of Laser-based Powder Bed Fusion (LPBF) on an industrial scale. Repeatability, speed and right-first-time manufacturing require synergistic design approaches. In addition, post-build finishing operations of LPBF parts are the object of increasing attention to avoid the risk of bottlenecks in the machining step. An aluminum component for automotive application was redesigned through topology optimization and Design for Additive Manufacturing. Simulation of the build process allowed to choose the orientation and the support location for potential lowest deformation and residual stresses. Design for Finishing was adopted in order to facilitate the machining operations after additive construction. The optical dimensional check proved a good correspondence with the tolerances predicted by process simulation and confirmed part acceptability. A cost and time comparison versus CNC alone attested to the convenience of LPBF unless single parts had to be produced.
+Additive Manufacturing (AM) offers promising benefits for the production of lightweight automotive components of complex geometry, such as those derived from the process of topology optimization (TO) [
+1
+,
+2
+,
+3
+]. TO is a mathematical approach to redesign material distribution within a given design space (DS) in order to optimize a defined property or performance of the system under the effect of a given set of loads, boundary conditions and constraints. Unlike shape optimization and sizing optimization, the new shape attained through TO can fill the DS freely, without conforming to predefined configurations [
+4
+]. Therefore, results given by TO are usually complex geometries, which can hardly be realized through conventional manufacturing methods [
+5
+]. On the contrary, TO fits perfectly to additive manufacturing (AM) because this technology has very few design constraints, so that it is possible to follow the output geometry independently of its complexity [
+6
+].
+After TO, the industrialization of the redesigned geometry requires its orientation to be optimized within the building volume, which affects distortion and surface finishing [
+7
+,
+8
+]. For the former issue, orientation should be chosen in such a way that the cross-sectional area remains as uniform as possible along with the growth (z) direction, because a sudden change is expected to cause part distortion as a consequence of the high energy that is driven into the component without appropriate heat exchange. For the latter aspect, surface roughness is related to part orientation for two main reasons: the so-called staircase error, which derives from the layer-wise build-up strategy and is deeply influenced by the orientation of surfaces, and the poor surface quality left when supports are removed. If required, in the framework of industrialization, supports are preferentially located on the part surfaces to be machined after manufacturing because machining will remove the contact points. Orientation also impacts the overall cost since it governs the part height and, therefore, the building time [
+9
+].
+Design for Additive Manufacturing (DfAM) is the practice of designing and optimizing a product together with its additive production system to reduce development time and cost and increase performance, quality, and profitability [
+10
+,
+11
+]. The process involves, as an example, the concurrent design and reciprocal optimization of the part geometry and of its orientation within the machine-building volume so that self-supporting areas are maximized [
+12
+]. The same holistic approach also includes considerations for surface finish and distortion. Among the tools currently available for DfAM, software packages for part industrialization usually include specific tools to select the most convenient locations for supports and to optimize the part orientation [
+13
+,
+14
+]. Process simulation can be helpful in predicting the output of a given orientation and support strategy. However, it is worth noting that dedicated process simulation programs are still relatively rare and often under development as a consequence of the very recent establishment of laser-based powder bed fusion (LPBF) as a leading manufacturing technology [
+15
+].
+Even if LPBF is usually considered as a net shape production method, post-processing steps such as thermal treatment and surface finishing are often needed. As a matter of fact, LPBF implies out-of-equilibrium thermal conditions, extremely fast cooling rates and sharp thermal gradients, which are expected to engender strong thermal residual stresses in as-built parts. Hence, a thermal treatment is usually performed to relieve thermal stresses [
+16
+,
+17
+]. The roughness of LPBF parts is typically high, with Ra values that are in the 6 to 9 µm range for vertical surfaces and even higher for down-facing surfaces [
+18
+]. In order to allow for the correct functioning of finished parts, the surface roughness is reduced by means of surface finishing, being polishing, sand blasting and shot peening, some common techniques that can be used to the aim [
+19
+]. If required, post-processing treatments are completed by machining operations. On account of the extreme complexity of geometries that are typical of LPBF, conventional clamping systems and tool paths are often inadequate, so the concurrent product/process development within DfAM should also consider Design for Finishing requirements [
+20
+,
+21
+].
+The overall acceptability of components after the described sequence of operations is usually verified through dimensional controls, which are necessary to check the dimensional accuracy as a result of layer-wise build-up, thermal stress relief and finishing [
+22
+]. The last step of the validation process very often relies on non-destructive testing methods (NDT). One of the most versatile techniques for high-end applications is X-ray computed tomography (XCT), which is able to detect most of the defects such as pores, cracks and areas where the melting is lacking [
+23
+]. However, it is expensive if compared to other techniques capable of detecting only superficial defects [
+24
+], as for example, dye penetrant testing or the relatively new proposal of thermography.
+The minimization of lead-time, time-to-market (TTM) and production cost is a basic goal of industrial manufacturing technology. With LPBF, lead-time and, therefore, TTM are sensibly shorter if compared to conventional technologies such as casting or forging. However, it is important to stress that the aforementioned post-processing operations and controls unavoidably increase the actual production time [
+25
+]. The ongoing establishment of LPBF in new fields of application for small to medium production batches requires an evaluation of its time- and cost-effectiveness as compared to traditional manufacturing methods, as for example, computer numerical control (CNC) machining [
+1
+,
+26
+,
+27
+]. The present paper applies the DfAM approach to a bracket for an electric motor as a case study and proposes a comparison in terms of production cost and time using CNC as a benchmark. Although there are several case studies in the literature regarding the topological optimization of metal parts obtained by LPBF [
+28
+], this work aims at showcasing the holistic approach by which design and manufacturing considerations can be integrated into the development of products. Moreover, in the era of industrialization of additive processes, quantifying their time- and cost-competitiveness versus traditional manufacturing options can be of benefit for industrial applications.
+The present contribution was dedicated to the DfAM of an automotive bracket to hold an electric motor. The original part geometry is shown in 
+Figure 1
+a.
+The main purpose of redesigning the bracket was to enhance its stiffness without increasing its weight. The following design requirements and constraints were taken into consideration:
+Increasing the stiffness under two assigned static load cases as described in 
+Section 2.2
+;
+Leaving the weight unincreased;
+Fitting the design space (DS) limits;
+Allowing for a structural safety factor, Sf, not lower than 2, where Sf is the ratio between maximum applied stress, σ
+max
+, and tensile strength, R
+m
+;
+Meeting dimensional and geometrical tolerances.
+Increasing the stiffness under two assigned static load cases as described in 
+Section 2.2
+;
+Leaving the weight unincreased;
+Fitting the design space (DS) limits;
+Allowing for a structural safety factor, Sf, not lower than 2, where Sf is the ratio between maximum applied stress, σ
+max
+, and tensile strength, R
+m
+;
+Meeting dimensional and geometrical tolerances.
+The HyperMeshTM TO algorithm used is the solid isotropic material with penalization (SIMP) method, which sets density to void (0) and solid (1), assuming it to be linearly dependent on the stiffness [
+29
+].
+Altair HyperMeshTM (Altair, Troy, MI, USA) was used for the TO and for the finite element analysis (FEA) of the bracket.
+As a first step, the DS was defined based on the computer-aided design (CAD) model of the engine and of the surrounding components in such a way as to avoid any contact between the bracket and the close-by parts and mechanisms. Then the DS was discretized with a mesh composed of 638,000 tetrahedral elements, corresponding to 120,000 nodes.
+The TO of the bracket accounted for two superimposed static load cases, each of which combined flexural and torsional components, as shown in 
+Figure 1
+a.
+The material properties considered for the TO were measured via tensile tests on parts produced with ALSI10Mg in an SLM250 machine and heat-treated at 190 °C for 2 h: elastic modulus of 62 GPa, yield strength of 235 MPa, tensile strength of 290 MPa and elongation at break of 8%, hardness 95 HB and residual porosity of 0.6%.
+The basic objective of the TO was set as stiffness enhancement. All the surfaces close to bolts and joints were excluded from the TO in order to respect the prior requirement of keeping them perfectly planar and smooth. The final overall computational time was 1 h 25 min.
+The TO output from Altair HyperMeshTM was an STL file that was redesigned to a completely parametric CAD model with PTC CREO (Parametric Technologies Corp., Needham, MA, USA). This model was validated for potential structural problems by means of finite element analysis (FEA) in Altair HyperMeshTM. The outcomes of this verification were used to adjust the TO, and an iterative process was followed until all the topological and structural constraints were met. The part was then critically evaluated under a Design for Finishing perspective, and modifications were performed in order to ease its clamping in the final machining step.
+The industrialization process for the optimized and verified geometry was performed in Materialise Magics (Materialise, Leuven, Belgium), which was used to select within the build chamber two tentative options for the part orientation that were consistent with the requirements for surface finish and cost. Supports were generated for both orientations and the output. STL files were directed to process simulation in order to select the solution that minimized part deformation.
+MSC Simufact Additive (MSC Software Corp., Frimley, UK) was used to simulate the build-up process. The part and the supports were discretized with 8-node Voxel elements (iso-parametric bricks for the structural problem and heat transfer bricks for the thermal problem).
+This discretization results in the creation of Voxel layers whose thickness depends on the size of the Voxel element. In this case, each Voxel layer was 2.12 mm thick, with the layer thickness of the LPBF process being 50 µm. For the base plate, the Voxel size was increased to 8 mm. The total number of Voxel elements was 26,000, and the calculation time was 1 h.
+The software simulates the additive process at the mesoscale through a repetitive procedure based on three basic steps:
+(1)
+A layer of Voxel elements is introduced, and a uniform heat flow is applied on the exposed surface of the layer to simulate the melting phase;
+(2)
+Appropriate conditions of conductive, convective and radiative thermal exchange are applied to the areas of the model that require them, depending for example, on the contact with loose powder or with solid supports;
+(3)
+The recoating phase is simulated by adding a new Voxel layer while maintaining the boundary conditions of the previous step; during this step, no heat flow is applied to the new layer under construction.
+A layer of Voxel elements is introduced, and a uniform heat flow is applied on the exposed surface of the layer to simulate the melting phase;
+Appropriate conditions of conductive, convective and radiative thermal exchange are applied to the areas of the model that require them, depending for example, on the contact with loose powder or with solid supports;
+The recoating phase is simulated by adding a new Voxel layer while maintaining the boundary conditions of the previous step; during this step, no heat flow is applied to the new layer under construction.
+Calculations were conducted with the implicit solver MSC Marc (MSC Software Corp., Frimley, UK).
+In this specific study, the simulation was limited to the building phase (i.e., excluding the thermal treatment) in order to find the orientation of the part in the build chamber that corresponded to the better dimensional accuracy.
+Parts were built by LPBF in the SLM 280 HL machine (SLM Solutions GmbH, Germany) with the following process parameters: laser power 350 W, scan speed 1150 mm/s, hatch distance 0.17 mm, layer thickness 50 µm, build plate temperature 150 °C.
+As-built parts were thermally treated at 190 °C for 2 h in order to relieve thermal stresses, and then supports were manually removed.
+Subsequent post-processing included shot peening of the whole part by means of glass beads in order to reduce surface roughness, drilling of the holes and machining of the corresponding planar surfaces in order to meet the tolerance requirements in the 5 areas of connection with nearby components (
+Figure 1
+a). The machining step was carried out with a 5-axis CB Ferrari equipment (Mornago, Italy). A customized tool was designed on purpose to clamp the part so that all the aforementioned machining operations could be performed in only one step.
+Two different dimensional controls were performed to point out the effects of processing and post-processing. The first check was planned immediately after printing, before removing the as-built part from the baseplate and supports. The second check was conducted at the end of the manufacturing workflow in order to verify all the requirements on the finished parts. For the dimensional control, an optical scanner (Steinbichler Optical Technologies, Neubeuern, Germany) was applied.
+As an alternative to LPBF and subsequent finishing, in principle, CNC alone can be used to produce the bracket. In this research, specific topology optimization of a bracket to be produced entirely by CNC was performed. However, it is important to stress that CNC, if performed alone, results in a different geometry since it suffers from more technological constraints as compared to LPBF. To assess the relative convenience of LPBF and CNC, several batches (1, 6, 12, 60 and 240 produced parts) were considered, and a cost/time estimation was performed for all of them. Costs and times were evaluated based on the know-how of the industrial partner of this research.
+The geometry resulting from the TO is shown in 
+Figure 1
+b, which also includes the DS for the bracket and a preliminary prediction of the stress distribution. From 
+Figure 1
+b, it is also possible to note that, in spite of adjusting the element density [
+30
+], the output model from the TO was still very coarse in terms of surface finish and geometric accuracy.
+This output was completely redesigned to a parametric CAD model. In principle, this procedure is more time-consuming than smoothing the TO output. However, unlike STL files, parametric models can be easily modified as many times as required by simply changing the numerical parameters. Following a recursive process, the CAD model based on the geometry from TO was validated by FEA. In particular, a stress analysis was performed in order to verify that the minimum structural safety coefficient was not lower than 2. The process required three iterations to reach the final configuration, which fulfilled all the functional and structural constraints.
+The results of the FEA for Von Mises stress and displacement on the redesigned component are shown in 
+Table 1
+. As a term of comparison, the table includes the same results for the original bracket geometry. The comparison allows observing that the optimized bracket guarantees a decrease by 36% of the maximum displacement, together with a slight reduction in the maximum stress (−4%).
+By analyzing the stock part in Materialise Magics, two possible build orientations were identified, the support structures were designed for both, and the two models were then exported to Simufact Additive. The two selected orientations correspond to two conditions that minimize the volume of the supports and optimize the surface finish by avoiding surfaces that are nearly parallel to the build platform. The displacements and stresses predicted by process simulation are illustrated in 
+Figure 2
+. They result from the combined action of thermal and mechanical loads [
+31
+]. In both orientations, the part is expected to experience a maximum displacement of 0.6 mm. However, if the Bracket 1 orientation is considered, the areas exposed to the maximum displacement are more extended. Moreover, in this orientation, the areas subjected to Von Mises stress values between 216 and 243 MPa (which represent maximum values for both orientations, thus approaching the yield limit of 270 MPa) are more significant. As a consequence, the orientation according to Bracket 2 was preferred.
+Figure 1
+d shows the result of the final industrialization step in the chosen orientation, and 
+Figure 1
+e shows the part built by LPBF after support removal and shot peening. If an SLM 280 machine is considered, the build table can host up to 12 brackets in the chosen orientation, together with three tensile specimens. 
+Table 2
+ reports the job details under the former hypothesis.
+In order to facilitate the machining operations, a special clamping system was developed and machined out of an aluminum AA5083 block. The stock model was held by means of its three appendices that were subsequently milled out. This allowed to define a straightforward clamping method in the machine tool and hence significantly compress the cycle time.
+As far as time is concerned, programming the CNC machining process both for the clamping equipment and for the workpiece required about 3 h, while machining itself required 2.5 h for the clamping system and 20 min for each workpiece. 
+Figure 1
+f presents the final component after machining.
+Figure 3
+a shows the results of the dimensional control of the component still connected to the platform. It can be observed that dimensional errors range from −0.6 to 0.5 mm. Grey zones are due to support structures that hide such areas from the optical scan [
+32
+]. 
+Figure 3
+b shows the dimensional deviation of the finished part as compared to the CAD file. 
+Figure 3
+c presents a histogram of the distribution of geometrical deviation. All the tolerance constraints were fulfilled on the finished part since the highest deviation was 0.34 mm, whereas the average deviation was as low as 0.065 mm. Interestingly, the maximum deviation measured on relevant surfaces, where the part is assembled with the nearby components, was just 0.19 mm.
+The geometry of the bracket designed for CNC is illustrated in 
+Table 3
+, which also sums up the mass and the predicted mechanical response of the three bracket geometries: the original one, the one optimized for LPBF and that optimized for CNC alone.
+By adopting the same requirements listed in 
+Section 2.1
+, according to the FEA, the bracket to be produced by CNC resulted in being about 30% heavier than both the original bracket and the one redesigned for LPBF. In addition, the geometry for CNC alone was about 9% less stiff than the original part, whereas the bracket derived from TO for LPBF achieved a 3% gain in stiffness. Most of all, the part optimized for LPBF was below the elastic limit since, apart from local singularities, the Von Mises stresses were generally lower than the yield point. The stress values were instead much more critical on the original bracket, where they risked overcoming the tensile strength of the material.
+A time and cost analysis was carried out to define the convenience of CNC and LPBF for the production of the corresponding optimized parts. 
+Figure 4
+ compares the workflow of the two processes and their respective lead-time for different volume batches. A holistic methodology is proposed for the AM process, including all the main steps to obtain the final part, combined into a recursive cycle in case of unsatisfactory results of the thermo-mechanical analysis.
+Figure 5
+ groups the results of the cost and time analysis. In particular, the graphs in 
+Figure 5
+a compare the variation in the cost per part as a function of the production volume for the first order and for the following reorders. For both production methods, the cost per part quickly decreases for increasing production volumes. In particular, if LPBF is considered, nesting is fundamental in order to exploit as much as possible the volume of the build chamber [
+33
+]. However, due to space limits, the SLM 280 machine used here cannot contain more than 12 brackets at the same time. For this reason, the cost per part decreases very quickly from 1 to 12 nested parts, but for larger batches, the cost remains substantially unchanged. In general, LPBF is economically more convenient than CNC. In fact, unless a single part must be produced, the total cost by CNC is systematically higher than by LPBF and becomes 85% higher for batch volumes larger than 12, where all the curves become substantially constant. Interestingly, this means that, although the aluminum bracket was redesigned according to a function-driven design strategy that gives priority to the part performance rather than to cost benefits, LPBF remains economically advantageous over CNC provided that more than a single part is produced [
+34
+]. For reorders, all costs are markedly inferior as compared to the first order. In this case, CNC is particularly advantageous for small batches, with a cost curve that is almost constant and that shows the break-even point with LPBF at four units.
+Under the hypothesis of a batch of 12 parts, the graphs in 
+Figure 5
+c detail the single voices that contribute to the final cost of the finished part. Due to the current cost of additive machines and to the relatively slow building speed, the printing cost is markedly the prevailing one in the case of LPBF, being around 50% of the total cost [
+1
+]. Costs for machining and quality assessment are also relevant, as frequently observed for production types where standardization is extremely difficult. Costs for industrialization are instead comparatively negligible, which sustains the need for a more intense effort in the DfAM and simulation steps, thus adding very little costs but often avoiding the risk of a job failure and enhancing the occurrence of right-first-time parts. In the case of CNC alone, around 80% of the total cost is needed for machining, which accounts for the machine cost and for tools.
+To conclude, the diagrams in 
+Figure 5
+b directly compare the performance of the two production methods in terms of lead-time. Up to 12 workpieces, CNC matches LPBF. However, for larger batches, LPBF has a shorter lead-time than CNC. As an example, the time saved in the case of 60 workpieces is 30%.
+The paper proposes a holistic approach to the design of an automotive part to be produced by LPBF, by combining functional and structural requirements with the needs of the additive construction and of the final finishing step. For this purpose, concurrent exploitation of software tools for topology optimization, design, process simulation, dimensional control and computer-aided manufacturing was performed. Moreover, Design for Finishing principles were applied since accounting for the final machining step in the development of additively manufactured parts is necessary to avoid the risk of optimized complex geometries to cause bottlenecks during finishing. The proposed method was successful in achieving a right-first-time part and in avoiding unpredictable defects and out-of-tolerance rejections, which today hamper the full economic viability of LBPF. Although the approach was tested on a specific case study, its validity is more general since it can be extended in principle to any part geometry.
+In addition, the paper offers a time- and cost-assessment of LPBF versus CNC alone, thus contributing to understanding the conditions in which additive processes are an advantageous alternative to traditional subtractive ones. In the considered case study, LPBF proved to be economically more convenient than CNC, unless a single part had to be produced.
+This work was supported by the Regione Emilia Romagna (Italy), under POR-FESR 2014–2020 Actions 1.1.1 and 1.1.4 L.R. 14/2014 grant number E98I17000090009.
+Conceptualization and supervision, E.B.; Methodology, S.D.; Software, L.D.E.; Investigation, L.D.E. and S.D.; Writing–Original Draft Preparation, L.D.E. and S.D.; Writing–Review & Editing, E.T. and N.V. All authors have read and agreed to the published version of the manuscript.
+This research was funded by Regione Emilia Romagna (Italy), POR-FESR 2014-2020 Actions 1.1.1 and 1.1.4 L.R. 14/2014 grant number E98I17000090009.
+Not applicable.
+Not applicable.
+The authors declare no conflict of interest.
+Publisher’s Note:
+ MDPI stays neutral with regard to jurisdictional claims in published maps and institutional affiliations.

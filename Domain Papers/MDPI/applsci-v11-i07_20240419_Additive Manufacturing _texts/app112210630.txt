@@ -1,0 +1,974 @@
+In recent years, much progress has been made on the development of metal mirrors based on additive manufacturing (AM). The sandwich mirror is well known for its excellent mechanical properties and challenging machining. Now, AM can be used to fabricate this complex structure and reduce the processing time and cost. In addition, with the aid of some new design methods for additive manufacturing, such as lattice, topology optimization (TO), and Voronoi, the freedom of mirror structure design is enormously improved. The common materials of mirrors include ceramics (SiC), glasses (glass ceramics, fused silica), and metals (aluminum, beryllium). Among them, the AM technology of metals is the most mature and widely used. Researchers have recently extensively developed the new-generation metal mirror to improve performance and lightweight rate. This review focuses on the following topics: (1) AM technologies and powder materials for metal mirrors, (2) recent advances in optomechanical design methods for AM metal mirrors, (3) challenges faced by AM metal mirrors in fabricating, and (4) future trends in AM metal mirrors.
+With the rapid growth of space optics and aerospace technology, the applications of reflective optical systems are increasing year by year. A case in point is that off-axis three-mirror-anastigmat (TMA) systems have been widely used due to their unique advantages of large aperture and no central occlusion [
+1
+]. Meanwhile, the growing requirements for optical systems’ performance, such as resolution and imaging quality, drive the development of focal length and aperture to larger sizes. In turn, the weight, surface accuracy, manufacturing time, and mirror cost are progressively demanding. In recent years, the lightweight space camera used for remote sensing with high resolution has become a global research hotspot in advanced optics [
+2
+]. It should be noted that mirrors are critical elements that directly affect the resolution and other optical systems’ characteristics. Therefore, suitable mirror materials and optimal lightweight structures should be selected carefully according to different requirements and boundary conditions.
+The common materials of mirrors include ceramics (SiC), glasses (glass ceramics, fused silica), and metals (aluminum, beryllium). The parameters of several common materials are depicted in 
+Table 1
+ [
+3
+]. The metal mirrors stand out from the crowd with their distinctive advantages: easy to process and manufacture, extremely lightweight, short fabrication time, and low cost [
+4
+,
+5
+]. Moreover, with ultra-precision machining technology such as single-point diamond turning (SPDT), metal mirrors can be efficiently machined to the optical accuracy range [
+6
+,
+7
+,
+8
+,
+9
+,
+10
+,
+11
+,
+12
+]. Currently, beryllium and aluminum are two kinds of materials that are widely used in metal mirrors. The 6.6 m aperture primary mirror of the James Webb Space Telescope (JWST) consists of 18 beryllium sub mirrors [
+13
+], and the Widefield Infrared Survey Explorer (WISE) [
+14
+,
+15
+] adopts an all-aluminum design scheme, with aluminum mirrors mounted to an aluminum structure, as shown in 
+Figure 1
+. Furthermore, a lot of research has been done to develop metal mirrors with a lighter weight and better structural rigidity to meet the requirements of optical systems.
+The variants of lightweight mirror design include arched mirrors, open-back mirrors, and sandwich mirrors (
+Figure 2
+) [
+16
+,
+17
+,
+18
+,
+19
+]. Daniel Vukobratovich found that the sandwich mirror has the best mirror efficiency in 1989 (
+Figure 3
+). The mirror efficiency is defined as the total mirror height divided by the mechanical deflection; a high efficiency is desirable [
+20
+]. However, the high-precision welding techniques adopted in the fabricating process of metal sandwich mirrors greatly raises costs and risks. In recent years, AM technologies for metal fabrication have been developed rapidly. It provides an effective way to reduce the difficulty of manufacturing complex structures [
+16
+]. AM can offer a complete process chain (
+Figure 4
+) for the direct production of these complex lightweight mirrors such as sandwich mirrors [
+21
+,
+22
+].
+As shown in 
+Figure 4
+, the process chain of AM metal mirrors is different from that of conventional mirrors, mainly in the mirror blank prefabricating stage. After the preparing stage, there are two paths: the design for additive manufacturing (DfAM) and design for conventional machining (DfCM). DfAM is driven by design functionality. It can redesign parts, components, and even systems in AM to achieve the overall requirements with fewer materials and better optomechanical integration. Thus, DfAM has become a new paradigm of advanced design and intelligent manufacturing compared to conventional design. The core technology of DfAM is simulation-driven optimization design technology, including creation-based design technology, topology optimization (TO) design technology, lattice design technology, parameter optimization design technology, and simulation analysis technology [
+23
+]. The development of DfAM and AM is changing the pattern of metal mirror designing and manufacturing.
+The porosity and residual stress of the forming parts during the AM process should be carefully dealt with to avoid warpage, fracture, and other side effects. Hence, densification and heat treatment must be carried out after prefabricating. The subsequent optical processing and test stage are the same for metal mirrors based on conventional processing including optical processing, surface modification, and polishing. These steps are all critical to obtain the required surface accuracy and roughness.
+Table 2
+ shows the intercorrelations among material utilization, machining time, repair rate, and cost of several processes in fabricating complex structural parts [
+24
+]. In brief, AM has revolutionized the way of manufacturing optical and structural components compared to conventional subtractive manufacturing. Furthermore, it is easier to achieve the optimal structure to meet the requirements and optomechanical integration combining DfAM means. Though few AM metal mirrors are put into actual engineering, the prospect is still comprehensive, especially in optical remote sensing, which is of tremendous research significance and value.
+This paper aims to review the recent advances of AM metal mirrors and provide a picture of current challenges and future trends. First, the AM technologies applicable for metal mirrors are described, and a comparison of the characteristics among these technologies has been made in 
+Section 2
+. Some research results on lightweight mirror design based on DfAM are listed in 
+Section 3
+. Then, 
+Section 4
+ discusses the current problems for fabricating AM metal mirrors and the corresponding solution measures. Finally, AM metal mirrors’ future development trends and the directions of AM metal mirrors have been given in 
+Section 5
+, providing reference and thinking for further research.
+Additive manufacturing (AM), more commonly known as three-dimensional (3D) printing, is a rapid prototyping technology. It is a craft of manufacturing parts layer-upon-layer based on a digital model file. The specific process creates 3D models using computer-aided design (CAD) software and then slices and designs support through 3D-printing software. Finally, all the information is sent to a 3D printer, which stacks two-dimensional (2D) slices until the product is manufactured (
+Figure 5
+) [
+25
+].
+AM is a manufacturing method of “bottom-up” accumulation compared with the conventional machining mode. This makes it possible to manufacture novel geometries, complex structures, and customized parts limited by conventional processing methods [
+26
+]. AM offers some advantages, such as material savings, design freedom, parts almost in their final shape, design freedom, and reduction of time to market. It has been used wildly in aerospace, biomedicine, and automotive parts manufacturing.
+Metal AM technologies fall into two categories: (
+Figure 6
+) powder-bed fusion (PBF) and directed energy deposition (DED). DED covers 16% of the metal AM market and uses laser beams, electron beams, or electric arcs as energy sources to deposit the melting powder. It uses coaxial or lateral powder feeding methods, which are more practical than PBF’s laying powder. Still, the accuracy of DEDed products is not as high as the PBFed. DED is more suitable for manufacturing large and high-performance integral components. PBF is ideal for small, ultra-complex monolithic components such as metal mirrors, owing to its products’ good surface finish and high density [
+27
+,
+28
+].
+Figure 7
+ shows the schematic of SLS. The first step is to coat a layer of powder on the platform, then preheat the powder to near the melting point to reduce the residual stress. After that, the laser beams illuminate specific areas on the cross-section according to the data of the corresponding sliced model’s layer. Using the same technique, repeat the process of laying powder and sintering until a part forms. The principles of other PBF techniques are similar to this, repeating the coating and scanning processes. 
+Table 3
+ presents an overview of the materials and AM technologies for fabricating metal mirrors in recent years. It can be seen that all the mirrors are fabricated using PBF, namely EBM, SLS/DMLS, and SLM. The most common choice is printing AlSi
+10
+Mg via SLM. This section describes several PBF technologies and compares the pros and cons of each process for AM.
+EBM was invented in 1993 in Sweden at the University of Technology in Gothenburg. Arcam was founded in 1997 and sold its first commercial system in 2002. The most significant difference between EBM and the other two PBF technologies is that the heat source replaces laser beams with electron beams. The EBM system consists of an electron beam gun, vacuum chamber, forming a cylinder, and powder distribution mechanisms (
+Figure 8
+). In a vacuum environment, high-energy fast electron beams are controlled to melt the powder selectively and build up a forming part [
+38
+].
+The power of electron beams is about 3–6 kW, which is an order of magnitude higher than laser beams. At the same time, the EBM has the advantage of high energy utilization. EBM is suitable for printing high melting temperature powders such as Ti alloy. Moreover, EBM is not influenced by the optical reflectivity of the powder. However, the disadvantages of EBM are also evident. Intense X-rays can be produced during EBM, and therefore adequate protection measures must be taken. Besides, EBM has limited dimensions for building parts, with a maximum diameter of 350 mm and a height of 380 mm. Due to the unique energy conversion mechanism of the electron beam, serious liquid metal splash which results in porosity occurs in the process of printing aluminum alloy via EBM. Furthermore, the precision of printing is low. There are few reports on fabricating Al alloys by EBM to date because of its process characteristics [
+39
+]. In the research on metal mirrors, only the University of Arizona used EBM to print a Ti alloy mirror. Its surface was poor, so EBM is not an appropriate technology for mirrors.
+SLS was developed by C.R. Dechard at the University of Texas in 1989. Sintering uses a laser beam as the heat source to melt part of the powder with a low melting point so that transient wetting liquid promotes metallurgical bonding or inter-particulate melting across the layers of sintered components (
+Figure 9
+). The powder with high melting point bonds together after the liquid metal solidifies and then forms a rough component, achieving the liquid-phase sintering effect [
+40
+]. Due to only partial melting, the surface quality and density of the forming parts are poor. Hence, SLS cannot meet the requirements for high-precision metal mirrors.
+SLM based on SLS was proposed by the Institute of Fraunhofer in Germany in 1995 and successfully developed in 2002. It integrates the advantages of SLS, which melts powders layer-by-layer and forms under the protection of inert gas to prevent the reaction between powder and other gas. The main difference between the two is that SLM can achieve full melting, as shown in 
+Figure 10
+, in a single component, single material powder, and was initially applied only to pure metals [
+41
+]. In contrast, SLS processes cannot heat the powders above the melting temperature and form parts with somewhat less than ideal density. Meanwhile, its equipment price and process complexity are above SLS.
+SLM is a technology that has been commonly used to manufacture metal mirrors in recent years, as shown in 
+Table 3
+. In theory, forming parts via SLM have higher density and mechanical properties than via laser sintering. SLM’s products have high dimensional accuracy, a smooth surface, and high density [
+42
+]. The laser power of SLM solutions’ 3D printer can reach 700 W easily, which is high enough to pre-print mirror blanks. SLMed parts’ density is up to 99.0% and above. The above technical advantages have gradually promoted SLM to the mainstream technology for fabricating AM metal mirrors.
+With the continuous development of AM technologies, printing materials have become increasingly abundant. At present, there are more than 300 kinds of materials for AM, mainly polymers, metals, ceramics, and biomaterials [
+43
+]. Metal materials that are frequently used are aluminum alloys, titanium alloys, nickel-based superalloys, stainless steel, and iron alloys. However, the representative materials are still Al alloy and Ti alloy for metal mirrors, which dominate 3D-printed metal mirrors. In 2015, Herzog fabricated AlSi
+10
+Mg and Ti6Al4V mirror blanks using SLM and EBM [
+30
+], respectively. Nevertheless, after optical post-processing, the mirror surface of the final Ti mirror was far from the requirements. The details of this are further described in 
+Section 3
+. Therefore, aluminum alloy is the material which more widely used to fabricate AM metal mirrors.
+At present, the aluminum alloys used in manufacturing mirrors are mainly Al-Si alloy and Al-Mg-Si alloy, including AlSi
+7
+Mg
+0.6
+, AlSi
+10
+Mg, AlSi
+12
+, and AlSi
+40
+. The addition of silicon improves the fluidity of aluminum and reduces its melting temperature. Adding magnesium to aluminum can not only improve its strength but also improve its strain-hardening ability. AlSi
+10
+Mg is the Al alloy which most intensively investigated, and the technology of printing AlSi
+10
+Mg by PBF is very mature. 
+Table 4
+ provides the multiple parameters of PBFed AlSi
+10
+Mg and as-cast AlSi
+10
+Mg after the high pressure of die-cast (HPDC). The ultimate tensile strength and ductility values in additively manufactured AlSi
+10
+Mg are generally higher than or equal to as-cast and HPDC AlSi
+10
+Mg, which can be attributed to the fine microstructures seen in AM samples [
+28
+]. Therefore, the AlSi
+10
+Mg mirrors have excellent microstructure and mechanical properties. However, in engineering, the designers should consider the system requirements, prefabricating techniques, and post-treatment to make the best material choice.
+Noteworthily, the mismatch of CTE between AlSi
+10
+Mg and NiP is a problem for the use of AlSi
+10
+Mg for mirrors. The bimetallic bending effect is serious in the service environment with large temperature changes. The Institute of Fraunhofer (IOF) tested the AM mirror of AlSi
+40
+, which can better improve temperature adaptability.
+Support design is indispensable (
+Figure 11
+). Due to the sandwich mirror’s overhanging structures having no casting and molding support constraint, edge warping and collapse easily occur during the forming process. Even severe deformation interruption can happen [
+44
+]. Although some printing techniques have powder or liquid support constraints, they are not strong enough. Moreover, support can also reduce the residual stress of forming parts, and a high-quality support design is vital for the surface roughness and accuracy of parts. However, support design is one of the craft difficulties in AM metal mirrors depending on various factors such as forming processes, printing materials, and parts’ characteristics [
+45
+].
+The support structures can be added through 3D printing software automatically and removed after AM prefabrication using wire cutting and labor-intensive manual removal. However, some support structures are too complex. The optimization of the support is essential. We can optimize support with the help of TO, which reduces materials waste and the difficulty of removal [
+47
+]. The tilt angle prevents the need for added support in sandwich mirrors’ interior and mirror distortion during printing. Some unique structures can be designed to form self-support at a specific angle range to minimize the trouble of removing them later [
+48
+,
+49
+]. The materials of the support should be consistent with mirrors to ensure the mirrors’ accuracy. In addition, the numerical simulation should be used to achieve the intelligent design of the support, and its forming effect should be predicted by heat transfer and force analysis.
+The connectivity constraint requires no enclosed voids inside mirrors. For PBF, there should be no residual powder inside parts. Compared to open-back mirrors and arch mirrors, sandwich mirrors are closed-back, so connectivity constraints must be considered in the design stage. In the mirror design, the structure walls are perforated to present complete airflow channels inside the mirror, meeting the connectivity of the airflow and facilitating the removal of residual powder (
+Figure 12
+) [
+50
+,
+51
+,
+52
+]. Finally, ultrasonic cleaning and other methods are used to remove the powder from the interior of the parts altogether.
+Mirrors’ weight is an important factor when highly dynamic scanning applications are desired or for space optical system applications. Thus, a light weight is a key parameter to the optomechanical design of metal mirrors. How to match the relationship between weight and structural stiffness is the technical difficulty of mirror structural design. As 
+Section 1
+ mentioned, lightweight structures of mirrors include the arched mirror, open-back mirror, and sandwich mirror. It is necessary to consider various factors, such as fabricating difficulty, cost, and processing time. The introduction of AM provides mirrors’ structural design more freedom. DfAM methods can offer a good compromise between mechanical functionality and material usage. And a well-thought DfAM strategy is a major factor in the economy and the success of an AM part. In this section, AM metal mirrors with different internal lightweight structures are given, including conventional structure, TO structure, lattice structure, and Voronoi structure. All the structures are explained and compared in detail according to the corresponding research results. It is worth noting that these internal structures can be combined in practical applications, such as TO and lattice and TO and Voronoi.
+The so-called conventional design is a lightweight design that can be manufactured by conventional machining and modeled by standard CAD software programs. 
+Figure 13
+ and 
+Table 5
+ show quintessential lightweight holes for mirrors and the performance comparison of each hole, respectively. Generally, quadrilateral holes and regular triangle holes are preferred. However, the triangle holes are the best choice, given their highest stiffness with the same weight [
+53
+,
+54
+].
+Corning’s researchers designed and fabricated a four-inch circular flat mirror with a honeycombed lightweight structure in 2016. They prefabricated the mirror blank by printing AlSi
+7
+Mg
+0.3
+ powder via DMLS. After SPDT and polishing, the surface roughness could reach RMS 1.5 nm (see 
+Figure 14
+). Therefore, Woodard’s team proposed and preliminarily demonstrated the feasibility of manufacturing metal mirrors utilizing AM by comparing them with various other materials and methods. They thought the layer-by-layer SLS process and the resulting long cycle times, which are a function of the volume of material rather than complexity, are what drive the costs [
+17
+]. Finally, they concluded that the AM metal mirror has advantages in fabricating complex structures, reducing cost [
+29
+].
+The round and square mirrors shown in 
+Figure 15
+ were manufactured by Optimax Systems in 2017 [
+32
+]. The material used was FeNi
+36
+, whose CTE is near zero. Furthermore, it is suitable for the application of metal mirrors in cryogenic and space applications. However, the finished mirrors were not entirely dense when measuring them with a scanning white-light interferometer. The test result shows that the finished optical surface exhibited a 9 μm void. The mirrors were in the experimental stage and had not been put into practice. Further surface modification and polishing are needed for applications at wavelengths shorter than the infrared.
+In 2018, E. Hilpert’s team from IOF in Germany designed and compared the performance of five lightweight metal mirrors: solid mirror, drill mirror, open-back mirror with honeycomb, sandwich mirror with honeycomb, and empty mirror (
+Figure 16
+) [
+33
+]. For the sandwich mirror, the stiff and strong face sheets carry the bending loads, while the core resists shear loads. The results of the modal analysis show that the sandwich mirror with honeycomb has the best mechanical properties (
+Figure 17
+). It has the second lightest weight, only after the open-back structure, which precisely verifies the sandwich mirror’s advantages in many aspects given in 
+Section 1
+. Moreover, this experiment has laid a theoretical and practical foundation for the team’s next-generation AM metal mirrors.
+By summarizing the experience, Songnian Tan et al. from Changchun Institute of Optics, Fine Mechanics and Physics (CIOMP) fabricated an Al mirror based on SLM technology in 2020 [
+37
+]. The mirror is a flat metal mirror with the dimensions of 67 mm × 50 mm used as a fast-steering mirror (FSM) in the infrared optical system. They adopted a relatively conventional design method, as shown in 
+Figure 18
+. The final lightweight rate reached 43.7% while meeting the internal connectivity constraints. After AM prefabrication, 
+
+
+
+
+λ
+
+
+/
+
+
+10
+
+
+ 
+
+
+
+
+(
+
+
+
+
+λ
+
+
+=
+
+
+632.8
+
+
+
+
+ 
+
+
+nm
+
+
+
+
+
+
+)
+
+
+
+
+ 
+
+
+
+
+of the surface shape was achieved through CNC machining and optical processing, which meets the application requirements of the infrared level.
+TO is one of the structural optimization methods. It is derived from topology and used to calculate the optimal material spatial distribution for given problems. In general, the topologically optimized part can theoretically meet the load demand and achieve the optimal material distribution under a specific algorithm, which can obtain the optimal load-bearing structure under a particular volume fraction [
+55
+]. In generative design, multiple solutions are calculated simultaneously to create the most optimal solutions based upon functional and non-engineering requirements, such as manufacturability [
+56
+,
+57
+]. The results produced by TO are often very complex and challenging to manufacture directly. So, the combination of TO and AM technologies has the potential to bring significant synergy benefits. Now, AM metal mirrors based on TO are analyzed as follows.
+First, Herzog et al. from the University of Arizona, USA, proposed a process chain for manufacturing metal mirrors based on AM and hot isostatic pressing in 2015 [
+30
+]. They utilized DMLS and EBM technologies to print AlSi
+10
+Mg and Ti6Al4V, respectively. After that, the products’ quality and method feasibility obtained by the two routes were compared. The mirror model is a cylinder with a bottom diameter of 4 in and a height of 38.1 mm. And the mirror structure was topologically optimized by applying a binding force to the mirror surface to achieve a light weight (
+Figure 19
+). After further grinding and polishing, the aluminum mirror was found to have a surface roughness of 22 nm and a surface accuracy of PV 255 nm. However, the Ti mirror did not reach expectations because of the subsurface porosity in the mirror (
+Figure 20
+).
+Subsequently, Carolyn Atkins’ team used DMLS to print an astronomical X-ray mirror. Then the TO of the arches lightweight design was carried out, and the final lightweight rate reached 62% through iterative calculation. The mirror’s diameter was 40 mm, with a 4mm thickness in total and a 1mm thickness of the front and back surfaces which formed the sandwich structure. While satisfying the lightweight requirement, its support was a continuous ring structure to reduce the print-through effect and improve its structural stiffness (
+Figure 21
+). Finally, the optimized mirror’s mass was reduced from 9.2 g to 6.4 g, but the surface roughness increased from 2.47 nm to 5.22 nm [
+18
+,
+35
+,
+36
+].
+The word “lattice” derives from the old French “latte” which is defined as a structure consisting of strips of wood or metal crossed and fastened together with square- or diamond-shaped spaces left between [
+58
+]. However, in DfAM, it is a type of cellular material with truss-like frames optimized for specific loading conditions. Lattice structures are obtained by arraying abundant lattice cells. They perform similarly to atoms inside a crystal in space. Multiple extensive research studies have been performed to determine the mechanical behavior of lattices and to find the optimal structure. In [
+59
+,
+60
+,
+61
+], the properties, performance, applications, and challenges of SLM lattice structures were well reviewed. The current ultra-lightweight metal lattice structures can achieve a lightweight of 85% or more as well as high specific stiffness, specific strength, and high energy absorption [
+62
+]. Their applications in 3D printing have been relatively widespread, such as in medicine, acoustics, and electronics, but there are few examples of their usage in mirror manufacturing.
+There are about20 sorts of lattice cells, and 
+Figure 22
+ gives several quintessential structures. They are repeated over a part of the volume of the component to be manufactured. Furthermore, numerous lattice structures can be obtained by arranging lattice cells with different sizes, densities, and types. Proper lattice cells can be decided via the finite element analysis (FEA) method. 
+Figure 23
+b below shows a lightweight hammer handle made by adding lattice cells of different densities [
+63
+]. Hence, the structures obtained by arranging the same lattice periodically are known as the uniform lattice. Conversely, the non-uniform lattice structures consist of the lattice cells inclined to randomization. Furthermore, TO can be introduced to achieve a macro–micro integrated structure with lattice. PTC Creo, Siemens NX, Autodesk Netfabb, and Materialise Magics are commercial 3D-printing software that generate lattice structures conveniently.
+As mentioned above, the uniform lattice periodically arranges lattice cells with the same type and density into a uniform lattice structure. Carolyn Atkins’ team at the UK Centre for Astronomical Technology applied the lattice to the internal structure of a metal mirror for the first time, with the support of the CCAM CubeSat project. The product is a concave spherical mirror with a radius curvature of 350 mm. Its mechanical diameter and thickness are 84 mm and 17.3 mm, respectively. Researchers used Autodesk Netfabb software to design and optimize the lattice structure of the mirror. Then they tested and summarized the structure of numerous lattice cells. The final choice is BCCz lattice, whose performance and weight are optimal, and the resulting mirror’s lightweight rate reached 31% (
+Figure 24
+) [
+64
+].
+The team performed a set of comparative experiments with six technical routes, as shown in 
+Figure 25
+. The results in 
+Table 6
+ show that, except for the directly polishing AlSi
+10
+Mg mirror blank (Route 5), all other mirrors reached the visible or infrared levels. The reason for that may be that the polishing process touched a fractured layer through the analysis of X-ray tomography and microscope magnification. The pores are large, so the sample’s surface roughness did not meet the requirements. This experiment demonstrated the feasibility and practicality of the lattice structures in metal mirrors and laid the foundation for future iterative experiments [
+65
+,
+66
+].
+The non-uniform lattice, in contrast to the uniform lattice, tends to be arranged randomly. It is denser at locations where greater stiffness is required. Moreover, combining it with TO can achieve greater design freedom compared with the uniform lattice. The model in 
+Figure 26
+ is the iterative product of Carolyn Atkins’ team in 
+Section 3.3.1
+, and the lightweight rate is up to 50%. However, this is not the final product of the project. The team is carrying out the third and fourth iterations to seek the relatively optimal structure and explore a technical route for fabricating metal mirrors with lattice structures [
+65
+,
+66
+,
+67
+].
+Voronoi, named after George Voronoi, refers to contiguous polygons composed of vertical bisectors for segments connecting two adjacent points. The distance from any point in a Voronoi polygon to a point controlled by the polygon is less than that of others [
+68
+]. It was first applied to calculate the average rainfall based on the discretely distributed weather stations. After that, people found that a lot of examples of Voronoi exist in nature, such as in cell structure and leaf micro-texture (
+Figure 27
+). Due to its particular structure and good mechanical properties, Voronoi has been widely used in the architecture and biomedical fields. For metal mirrors, it is challenging to realize this complex structure with conventional processing. Hence, the combination of AM and Voronoi is a perfect choice.
+Voronoi can be divided into 2D and 3D manufacturing types according to the spatial distribution, whereas 3D Voronoi looks more like foams. Mici from Lockheed Martin proposed using 3D random foams to further optimize the TO mirror (
+Section 3.2
+) [
+31
+]. The ultra-lightweight mirror is designed with a macro–micro combination of TO and 3D Voronoi (
+Figure 28
+). Then, it was fabricated with the same material and printing method. The randomness of the seeds that generate Voronoi may cause unnecessary overlaps among them. So, they used Lloyd’s algorithm to drive the distribution of the random foams to homogeneity. Finally, the feasibility of this method was verified by FEA and mechanical property testing.
+The team of Hilpert from IOF finally chose a sandwich mirror with the honeycomb structure after an experimental comparison of the five structures introduced in 
+Section 3.1
+. By summarizing the previous designing and manufacturing experience, they optimized the mirrors’ internal structure. The honeycomb structure was replaced with the 2D Voronoi cell pattern to make the design of the mirror’s support more effective. AlSi
+40
+ was chosen as the substrate material, which CTE matches electroless nickel as plating. Thus, it was conducive to minimizing the influence of the bimetallic bending effect on the stability of mirrors [
+69
+,
+70
+,
+71
+,
+72
+,
+73
+,
+74
+].
+The internal structure was obtained as follows. Firstly, the Poisson disk sampling method is used to distribute seeds, avoiding undesired clustering. However, the uniform Voronoi cannot satisfy the whole mechanical requirements of the mirror body, so the Voronoi should be further optimized through FEA and modal analysis. In order to make the interface of mounting structures stiffer, the 2D Voronoi was denser in the three areas (
+Figure 29
+). The wall thickness was set at 0.5 mm, and then the 2D Voronoi was pulled up to mirrors’ 3D support by SLM. Finally, the lightweight rate of the secondary mirror was 60.5%, with a surface accuracy of RMS 7.3 nm and surface roughness of 1.1 nm [
+39
+].
+Then they machined the primary mirror and the third mirror on one substrate, drastically reducing the processing time and the number of alignment degrees of freedom to be fixed during the integration phase. The bounding box of the whole element was 205 mm × 339.5 mm × 60 mm. The mirrors had a surface accuracy of RMS 20 nm and surface roughness of RMS 1 nm, so all mirrors were at the visible level [
+75
+,
+76
+].
+This section reviewed the internal structures for AM metal mirrors. The unique fabrication capabilities of AM processes have offered more design freedoms for engineers. Specific design methods are needed to meet these opportunities and challenges. However, conventional designs cannot surpass the advantages of AM. Research on DfAM has gradually increased in recent years. It can be seen that TO plays a crucial role among DfAM methods. The idea and application of TO can be found in numerous DfAM methods, such as generative design, optimization for Voronoi, and optimization for non-uniform lattice. Hence, designers should master TO algorithms and the application of the related software. Furthermore, the FEA simulation is a necessary means to verify the design. In addition, the thermodynamic analysis for space mirrors is essential because of the special working environment.
+After reviewing the summary of the mirrors’ structural designs, it is clear that the stochastic lattice has better mechanical properties. Moreover, the multiscale design is the future development trend of DfAM, such as micro lattice infilling after macro TO. While realizing the ultra-lightweight condition, it meets the requirements of structural mechanics.
+It is worth noting that many structures are inspired by nature. Lattice mimics the microstructure of crystals, and Voronoi is enlightened by bionic ideas such as cells. Is it possible to draw on nature to find other, more suitable structures for metal mirrors in future scientific research? For example, the unique royal water lily can bear an adult without sinking into the water. Likewise, there are a thousand strange snowflake microstructures (
+Figure 30
+). Further exploration should be carried out [
+77
+,
+78
+,
+79
+].
+Figure 3
+ shows the process chain of AM metal mirrors, and the steps can be summarized into five parts: the preparing stage, designing stage, mirror blank prefabricating stage, optical processing stage, and testing stage. The mirror blank prefabricating stage and designing stage have been described in detail in 
+Section 2
+ and 
+Section 3
+. Post-processing includes the following steps: (1) densification is a necessary step in the AM process, which helps to reduce the porosity of parts and enhance the mechanical properties; (2) heat treatment helps to reduce the residual stress generated during the printing and improve the dimensional stability; (3) optical processing includes the SPDT, surface modification, and polishing, which is the final step to obtain mirrors with good surface roughness and surface accuracy. According to engineering experience, post-treatment accounts for a large part of the overall cost and time. Due to the broad scope of post-processing techniques available to mirror fabrication, this section addresses only several key issues encountered in post-processing and gives the corresponding solutions.
+Porosity is one of the most important criteria for evaluating AM products. Fusion errors, gas pores, and shrinkage pores are three types of pores in AM parts. PBF can be seen as a micro-welding, which causes sizeable residual stress inside the part during the unique process of rapid melting and solidification. Improper selection of laser power, scanning speed, or other parameters can result in cracking, holes, low density, and poor forming quality [
+80
+]. Other pores are attributed to an insufficient supply of liquid metal during the solidification process. As shown in 
+Figure 31
+, the mirror’s holes are obvious under the light, which affect surface accuracy. Therefore, selecting the best processing parameters and carrying out densification for the forming parts are essential. Surface modification is required if necessary. Moreover, the standard methods used to test porosity are scanning electron microscopy (SEM) and computed tomography (CT).
+The quality of the powder directly affects the finished products. The main parameters of powder are particle size, sphericity, fluidity, and density. PBF requires infinitesimal powder, a narrow size range, and a sphericity of 98% or more to manufacture high density and performance parts [
+27
+]. The more refined powder, the smaller the pores between particles, so the denser powder layer. The fine powder melts more with the same heat source than coarse powder because of the more prominent surface area.
+Consequently, it lends to the greater sintering drive, which is conducive to obtaining excellent metal parts. Generally, the suitable particle size range for SLM powder is 15–53 μm. If the range distribution is vast, the surface of powder laying will be delaminated. That will also result in the uneven melting of metal powder and a severe increase in the porosity or surface roughness of formed parts [
+23
+]. Powder with the normal distribution of particle size range has the best effect. Owning to the high energy conversion rate and the high energy density of electron beams, the suitable particle size range for EBM powder is 53–150 μm. Other parameters are similar to those of the SLM.
+The manufacturing of high-quality powder remains a critical challenge due to its high surface area and susceptibility to oxidation. In the process of SLM, the gas elements may form holes and other local defects, resulting in the reduction in densification and mechanical properties of parts. Therefore, the content of oxygen, nitrogen, and other elements shall be strictly controlled. Generally, the mass fraction of oxygen in metal is less than 0.15 wt%, and the mass fraction of nitrogen in metal is less than 0.05 wt% [
+81
+]. An assessment of the manufacturing routes of powders and their respective performances during the AM processes is important. The most commonly used is conventional gas atomization (GA), which has the advantages of high capacity, good efficiency, and a low cost [
+82
+,
+83
+]. The powder cannot satisfactorily print the high-quality and high precision parts due to deficiencies of varying powder size and high oxygen content. Other ways of mainly making alloy powders are plasma rotating electrode process (PREP) and plasma atomization (PA) [
+84
+].
+Figure 32
+ shows the SEM images of Ti-6Al-4V powder generated by different methods. PREPed powders are perfectly spherical in shape with smooth surfaces. However, high-quality powders are expensive because of the high cost of the fabrication process, such as PREP, and the low yield of the atomization process. In the PBF process, the solid powders can be reused to reduce cost, although such reuse of powder particles results in an irregular shape and poor surface finish of the final part [
+85
+]. Therefore, powders used as feedstock materials must be selected by considering both their quality and cost in association with the corresponding AM process. So, the powder with better sphericity and more uniformity is obtained, which meets the requirements of preparing metal mirrors.
+HIP is an effective method used for densifying metal parts which began in the 1950s. It is mainly used to prepare powder superalloy and improve casting properties as well as metallic structures. The principle is to place a part in a closed chamber and heat. At the same time, inert gas is used as the working medium to exert the same pressure on the part from all directions, which densifies it under high temperature and pressure (
+Figure 33
+) [
+86
+]. Hence, this process is termed isostatic pressure. The high pressure and temperature can eliminate the most pores and cracking in the parts. Because the part is extruded from all directions, HIP has relatively little effect on the part’s dimensions. Moreover, it positively impacts residual stress relief, anisotropy reduction, and fatigue behavior improvement [
+87
+,
+88
+].
+HIP is necessary post-processing for AM mirror blanks. 
+Figure 34
+ presents a comparison of Songnian Tan’s product before and after HIP. The porosity of the mirror blanks reduced from 0.092% to 0.005% [
+37
+]. The result of the study showed that in the following HIP treatment, the internal pores were reduced, and the tensile strength was reduced due to the microstructure changes. It further illustrated the feasibility of HIP in post-processing.
+Dimensional instability refers to the change in the dimensional accuracy of mirrors during the designing, manufacturing, using, and storing stages. It is the main factor that determines whether AM mirrors can be used in engineering. Therefore, the smaller the change, the more likely it is that mirrors can meet the requirements of the technical conditions. The dimensional stability that metal mirrors need to reach is the 10
+−6
+ level, so the size changes relative to the meter level should be controlled at the micron level [
+89
+,
+90
+].
+Dimensional changes can be divided into four types: (1) First, when the part is placed in a stable environment, the dimension of the mirror changes with time. This process is prolonged and irreversible. (2) The second type is the dimensional change caused by thermal or force cycles, which refers to when the mirror returns from a changing environment to a stable environment. This situation is also a permanent deformation. (3,4) The third and fourth types are dimensional deformations caused by temperature and hysteresis, respectively. There are subtle differences between the two. Both describe the deformation of a part that is moved from a stable environment to another stable environment. The temperature-induced deformation is independent of the change path and a reversible deformation; the hysteresis-induced deformation is related to the change path, resulting in deformation that may be reversible or permanent [
+89
+,
+90
+,
+91
+,
+92
+].
+Then, these types of dimensional change can be summarized into four factors through a detailed analysis: externally applied stress, non-uniformity, anisotropy of material properties, microstructural variations, and internal stress variations. In practical engineering, the dimensional stability of metal mirrors can be improved, starting from these factors.
+The material characteristics have a vital influence on the dimensional stability of mirrors. The characteristic parameters include the characteristic thermal parameters: CTE, specific heat, thermal conductivity, and thermal diffusion coefficient; force characteristics include the parameters: stiffness, Young’s modulus, specific stiffness, micro yield strength, and Poisson’s ratio. Among them, the micro yield strength and CTE are essential factors for dimensional stability. The materials can be selected from those introduced in 
+Section 2.2.1
+ to ensure dimensional stability. Moreover, the same material of optical and mechanical structure can realize the optimal athermalization of optical systems.
+PBF technologies use an energy source to scan the specific areas to melt the powder. There are over 20 process input parameters that need to be set automatically or manually, and possibly more that are not adequately identified, such as scanning speed, scanning path, layer thickness, and laser power. These parameters directly affect the printing speed and the parts’ quality [
+93
+]. Olakanmi et al. studied the densification mechanism and microstructure evolution law of SLMed Al alloy parts and considered whether the process parameters play a decisive role in the porosity and pore direction [
+94
+]. However, the influence of process parameters on formed parts is not a single effect. Only when different process parameters cooperate can high-performance parts be obtained. For example, when the laser power is relatively weak and the layer thickness is too large, the alloy powder cannot be completely melted. Therefore, before fabricating high-precision AM parts, stimulation for the whole printing process must be performed to find the best scanning strategy and other parameters [
+95
+].
+The first step is to preheat the forming platform and chamber before printing. Then reduce the areas of uneven thickness and avoid significant cross-section changes. The choice of laser power is also crucial. Generally, the central temperature of the laser beams can reach 3500 K, and its choice is related to the melting point of printing powder. The density increases accompany the laser power as the powder absorbs more energy to facilitate total melting. However, the energy densities begin to cause balling at some point, thereby reducing the density and surface roughness. In addition, different laser scanning strategies can be used to minimize the accumulation of residual stress (
+Figure 35
+) [
+96
+].
+Laser energy density can reflect the influence of scanning speed and laser power on laser energy input. The laser energy density increase can fully melt the power to reduce the pores of the parts. If the laser power density is too high, defects will occur, such as thermal cracks and liquid metal splashes, which can easily happen. A simplified energy density equation has been used by numerous investigators as a simple method for correlating input process parameters to the density and strength of the forming parts. In their simplified model, energy density 
+
+
+
+
+
+
+E
+
+
+A
+
+
+
+
+
+
+ can be found using Equation (1) [
+25
+].
+
+
+
+
+
+
+
+
+
+
+
+E
+
+
+A
+
+
+
+
+=
+
+
+
+
+P
+
+
+
+
+υ
+
+
+×
+
+
+H
+
+
+S
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(1)
+
+
+
+
+
+where 
+
+
+P
+
+
+ is laser power, 
+
+
+υ
+
+
+ is scan speed, and 
+HS
+ is the scan spacing/hatch spacing between parallel scan lines. In this model, energy density increases with increasing laser power and decreases with increasing scanning spacing and velocity. Due to the high thermal conductivity of Al alloy materials, their laser energy is easily consumed during SLM. Therefore, the molten pool temperature and the fluidity decrease results in defects such as pores and cracks. 
+Table 3
+ gives some of the performance data of AlSi
+10
+Mg printed with different parameters. Obtaining the appropriate liquid viscosity by adjusting the laser energy density reasonably can possibly restrain the spheroidization effect and the generation of microcracks [
+97
+].
+As mentioned above, residual stress is a critical factor affecting dimensional stability. Like welding, there is much residual stress in metal AM parts. In the process of PBF, each new layer of a part is formed by moving the laser beams through the powder layer, melting the top layer of powder and fusing to the layer below at the same time. The heat flows from the pool to the solid metal below, so the temperature gradient of the melting zone is considerable. It is constrained below the solid structure when a new layer is cooled and solidified on the previous layer [
+98
+]. Therefore, shear force is generated between layers because of shrinking. Then, holes, delamination, thermal deformation, and cracking may appear, which deteriorates the dimensional accuracy and mechanical properties of end-use parts. To sum up, residual stress is one of the main challenges in the high-quality manufacturing of metal AM products.
+Heat treatment is the most essential and practical measure for reducing residual stress. The main principle is to evenly heat a part and let it soak through the whole part, both the thick sections and thin sections, until it reaches a temperature equilibrium [
+23
+,
+99
+,
+100
+]. The heat treatment for SLMed aluminum alloy parts mainly includes annealing and aging. The main purpose of annealing is to reduce residual stress, eliminate defects, and improve ductility. Aging is a strengthening heat treatment, and its main purpose is to further improve the strength of the alloy. Aging can be also divided into artificial aging and natural aging. At present, T6 heat treatment is the most commonly used. The heat treatment temperature and time of different compositions and content of alloy elements vary greatly. If the heating temperature is too high or the holding time is too long, abnormal grain growth and burning easily to occur, which reduces the mechanical properties. Shielding gas needs to be added in order to relieve stress, even in the vacuum furnace in some exceptional cases. Moreover, the excellent design of parts is also the crux of eliminating residual stress, which minimizes the residual stress and maximum dimensional stability.
+The mechanical properties of AlSi
+10
+Mg after heat treatment can be found in 
+Table 3
+. 
+Table 3
+ shows that after T6 heat treatment, yield strength and ultimate tensile strength increase remarkably. However, for other heat treatment experiments, yield strength and ultimate tensile strength decrease. This can be attributed to the Si phase undergoing thermally activated growth during heat treatment at a high temperature. Therefore, the appropriate parameters should be selected before carrying out the heat treatment. In addition, the precipitated Si phase is spherical, which can reduce the local shear and restrain crack initiation and propagation when deformed. In addition, an increase in the Si particle size and a decrease in the number of Si particles reduce the local stress and strain during tensile loading [
+101
+]. Generally, proper heat treatment plays a positive role in the later processing procedure for printing mirror blanks.
+The quilting (print-through effect) stems from the influence of mechanical properties during SPDT and polishing [
+102
+]. Afterward, the support structures appear on the mirror surface under the FEA, thus deteriorating the surface accuracy (
+Figure 36
+). Quilting can reduce the maximum energy at the center of the diffraction disk for the diffraction-limited systems. In the design stage of mirrors, especially for sandwich mirrors, both the cell wall thickness and support structure are the factors that make the quilting of mirrors. Therefore, it must be reduced as much as possible. Daniel Vukobratovich summed up a formula for calculating the quilting amplitude [
+20
+]. It can be expressed by Equation (2):
+
+
+
+
+
+
+
+
+
+
+δ
+
+
+c
+
+
+
+
+=
+
+
+ψ
+
+
+
+
+
+
+
+
+[
+
+
+
+
+
+
+
+
+
+
+
+
+Et
+
+
+
+
+f
+
+
+3
+
+
+
+
+
+
+
+
+12
+
+
+
+
+(
+
+
+
+
+1
+
+
+−
+
+
+
+
+v
+
+
+2
+
+
+
+
+
+
+)
+
+
+
+
+
+
+
+
+
+
+]
+
+
+
+
+
+
+
+
+−
+
+
+1
+
+
+
+
+
+
+
+
+
+
+PB
+
+
+
+
+4
+
+
+
+
+,
+
+
+
+
+
+
+
+
+
+
+(2)
+
+
+
+
+
+where 
+
+
+
+
+
+
+δ
+
+
+c
+
+
+
+
+
+
+ denotes the quilting amplitude (peak to peak), 
+
+
+ψ
+
+
+ the geometric quilting constant, 
+
+
+E
+
+
+ Young’s modulus,
+
+
+
+
+ 
+
+
+
+
+t
+
+
+f
+
+
+
+
+
+
+ the front face sheet,
+
+
+
+
+ 
+
+
+ν
+
+
+
+
+ the Poisson’s ratio, 
+
+
+P
+
+
+ the polishing pressure, and 
+
+
+B
+
+
+ the diameter of the cell-inscribed circle.
+It can be seen that the quilting should be reduced in the design stage of mirrors. Firstly, it is important to choose the appropriate material because Young’s modulus and Poisson’s ratio affect the quilting.
+
+
+
+
+ 
+
+
+ψ
+
+
+
+
+ is the geometric quilting constant which is different for every lightweight hole (
+Figure 13
+), such as 
+
+
+
+
+
+
+ψ
+
+
+
+
+square
+
+
+
+
+
+
+=
+
+
+0.00126
+
+
+
+
+, 
+
+
+
+
+
+
+ψ
+
+
+
+
+triangle
+
+
+
+
+
+
+=
+
+
+0.00151
+
+
+
+
+, 
+
+
+
+
+
+
+ψ
+
+
+
+
+hexagonal
+
+
+
+
+
+
+=
+
+
+0.00111
+
+
+
+
+. In addition, the polishing pressure and the thickness of the front skin are all factors. 
+Figure 37
+ gives an illustration of the surface distortions created during the polishing process of a lightweight structure. Therefore, it is important to reserve an appropriate machining allowance and control the post-treatment process well to minimize quilting.
+DfAM provides more thoughts for mirror design. For example, TO or random foams can provide more uniform and denser support for the mirror surface, which minimizes the low-frequency surface error caused by the processing (
+Figure 38
+). The quilting of optimized and unoptimized mirrors from Carolyn Atkins’ team was compared in 
+Section 3.2
+. The results show that the optimized mirror’s quilting was significantly reduced. Therefore, it is verified that DfAM is effective in reducing the quilting of metal mirrors. In the future, the internal structures of the sandwich mirror could be designed via drawing on the bionic structures to achieve the desired results.
+The present review shows significant progress has been made in designing and manufacturing AM metal mirrors and lists the problems encountered in the process and solutions. The designing and manufacturing criteria for the metal mirrors are light weight and high stiffness. Furthermore, the sandwich mirror is the primary design in this field because of its well-known stability and light weight. However, compared with the conventional processing method, the difficulty and time of manufacturing sandwich mirrors can be significantly reduced by AM. In addition, there are several internal structure design methods based on DfAM, such as lattice, TO, and Voronoi, which greatly increase the freedom of mirrors design.
+SLM has become the most mature and effective metal 3D-printing technology for fabricating metal mirrors now. In the future, material limitations, excessive residual stress in parts, continuous improvement of requirements, a light weight, and change of machining processes are all main factors driving the development and selection of next-generation products. Therefore, further work on AM metal mirror should focus on the following three topics:
+(1) Explore and develop other materials suitable for AM metal mirrors, such as beryllium and beryllium-aluminum alloy, and adopt current metal AM techniques to a broader range of materials. Previously, General Dynamics prefabricated a beryllium-aluminum alloy mirror, but the result was not as expected [
+21
+]. We should focus on matching processing technologies and powder materials, such as printing beryllium-aluminum alloy powder with high melting points and high-power electron beams. Moreover, AM technologies can also fabricate other materials’ optical components, such as ceramic mirrors, polymer lenses, and liquid lenses [
+103
+,
+104
+,
+105
+]. Utilize them in the application of optical instruments and precision engineering as soon as possible;
+(2) High-entropy alloys, magnetic alloys, bulk metallic glasses (BMG), functionally graded materials (FGM), and nano-architected metals are all materials for which advanced research is developing now [
+106
+]. Amorphous metals have high elasticity and fracture resistance advantages and are lightweight and beneficial for obtaining high-quality AM products. Moreover, amorphous metal 3D printing technologies, which are ideal for fabricating metal mirrors, can help decrease the internal stress and porosity of the AM products as well as optimize the system’s dimensional stability and environmental adaptability. 
+Figure 39
+ shows a 3D-printed gear of amorphous metal. However, it is a challenging technology that is limited by multiple factors, such as material crystallization due to the high temperatures, residual stress relieving, and laborious post-processing. Therefore, related research is in the exploration stage [
+107
+];
+(3) The idea of the integration of macro and micro has been advanced to realize a lightweight design. In 
+Section 3.4
+, researchers from Lockheed Martin have created a metal mirror which is ultra-lightweight and stiff by combining TO with 3D Voronoi. Furthermore, we should give full play to the idea of multiscale optimization in the design of AM metal mirrors, for example, combing the lattice with TO or Voronoi (
+Figure 40
+). In the future, this idea will provide strong technical support for AM metal mirrors, as well as the development of related disciplines and industries.
+Though, few AM metal mirrors are put into practical engineering applications. With the continuous development of the AM parts’ densification and surface treatment processes, metal mirrors’ mechanical property and dimensional stability will greatly improve. In a few years, AM metal mirrors can be used at the visible level and even the laser level, so they have broad application prospects.
+Conceptualization, K.Z.; methodology, J.Z.; software, C.W.; formal analysis, H.Q.; investigation, X.X.; resources, L.Y.; writing—original draft preparation, K.Z.; writing—review and editing, H.Q.; visualization, J.Z.; supervision, X.Z.; project administration, H.G. All authors have read and agreed to the published version of the manuscript.
+This research received no external funding.
+Not applicable.
+Not applicable.
+Not applicable.
+The authors declare no conflict of interest.
+The examples of “/” are to research the feasibility of designing and fabricating AM metal mirror. The mirrors’ surface accuracy is relatively poor. Therefore, the authors did not give the surface accuracy of mirrors.
+The examples of “/” are to research the feasibility of designing and fabricating AM metal mirror. The mirrors’ surface accuracy is relatively poor. Therefore, the authors did not give the surface accuracy of mirrors.
+Publisher’s Note:
+ MDPI stays neutral with regard to jurisdictional claims in published maps and institutional affiliations.

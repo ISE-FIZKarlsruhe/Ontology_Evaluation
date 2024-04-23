@@ -1,0 +1,3423 @@
+The attempt to reduce the environmental impact of the petroleum sector has been the driver for researching energy efficient solutions to supply energy offshore. An attractive option is to develop innovative energy systems including renewable and conventional sources. The paper investigates the possibility to integrate a wind farm into an offshore combined cycle power plant. The design of such an energy system is a complex task as many, possibly conflicting, requirements have to be satisfied. The large variability of operating conditions due to the intermittent nature of wind and to the different stages of exploitation of an oil field makes it challenging to identify the optimal parameters of the combined cycle and the optimal size of the wind farm. To deal with the issue, an optimisation procedure was developed that was able to consider the performance of the system at a number of relevant off-design conditions in the definition of the optimal design. A surrogate modelling technique was applied in order to reduce the computational effort that would otherwise make the optimisation process unfeasible. The developed method was applied to a case study and the resulting optimal designs were assessed and compared to other concepts, with or without wind power integration. The proposed offshore power plant returned the best environmental performance, as it was able to significantly cut the total carbon dioxide (CO
+2
+) emissions in comparison to all the other concepts evaluated. The economic analysis showed the difficulty to repay the additional investment for a wind farm and the necessity of favourable conditions, in terms of gas and carbon dioxide (CO
+2
+) prices.
+Offshore wind energy is an attractive technology to reduce the local emissions of offshore oil and gas extraction. Environmental impact of offshore installations is an issue which is drawing an increased attention [
+1
+], especially for a country like Norway where a large share of the total greenhouse gas emissions is ascribable to the petroleum sector [
+2
+]. Several concepts have been assessed to ensure an efficient offshore energy supply, considering various options for the power plant [
+3
+] but also measures on the processing plant [
+4
+]. The utilisation of a combined cycle has been comprehensively investigated in the literature in terms of working fluids (steam, hydrocarbons and air evaluated in Reference [
+5
+], carbon dioxide in Reference [
+6
+]), design and off-design performance [
+7
+] and optimisation of the design (steam Rankine cycle in Reference [
+8
+], organic Rankine cycle in Reference [
+9
+]). The potential of combined cycles in a cogeneration mode has also been studied [
+10
+]. More recently, electrification of the offshore facilities raised interest. The analyses carried out so far showed that larger cuts in the lifetime CO
+2
+ emissions could potentially be achieved in comparison to local power generation solutions [
+11
+]. The extent of these cuts was strongly dependent on the method to account for the emissions associated with power from shore [
+3
+]. Further, it was shown that the economic competitiveness of electrification could be disputable and would need strong support in terms of energy policies [
+12
+]. The uncertainties with offshore electrification were the drivers for investigating alternatives. The utilisation of offshore wind power does not require the laying of long subsea cable to ensure the connection to the onshore grid and the wind power can be accounted for as emission free (or close to emissions free from a life cycle assessment standpoint).
+Norway displays large potentials related to offshore wind. Offshore applications can take advantage of excellent characteristics of the wind resource in comparison to onshore sites, for instance higher average wind speed, lower turbulence intensity and wind shear [
+13
+]. Offshore renewable resources guarantee an extremely low environmental impact during operation, with the main source of pollution being, in a life cycle assessment perspective, the manufacturing process [
+14
+]. The possibility of operating an offshore wind farm in parallel with gas turbines has been previously discussed [
+15
+], resulting in a 20 MW wind farm being integrated with a plant whose power consumption varied between 20 MW and 35 MW. A capacity utilisation factor of 43% for the wind farm was obtained, with an annual CO
+2
+ emissions reduction of 53.8 kt (approximately 40%) compared to the reference case based on the utilisation of two gas turbines. This included an operating strategy where one of the gas turbines was allowed to shut-down according to specified criteria. Further, no considerations were made with regard to the process heat to be supplied to the plant. The dynamic simulations were used to establish the maximum amount of wind power integration, which resulted to be between 20 MW and 25 MW [
+13
+]. An additional step towards efficient offshore energy supply involved the combination of combined cycles and wind farms. This concept has been investigated in Reference [
+16
+], where a wind farm of 10 MW was integrated to three combined cycle units constituted of a gas turbine (rated for 16.5 MW) and a 4.5 MW organic Rankine cycle (ORC) module. The performance of the combined cycle units was compared to that of simple cycle gas turbine units. Even though a couple of co-generative solutions were discussed, the necessity to supply heat in parallel to power was not simulated in detail. In a follow-up paper [
+17
+], an economic analysis was proposed, comparing the economic performance of the wind farm coupled with three combined cycles to that of the wind farm coupled with three gas turbines. The results showed that the first concept (wind power and combined cycle) becomes more convenient when fuel cost increases or when the CO
+2
+ tax increase. A comparison between the integration of wind power and an independent combined cycle was not provided. The papers referenced in the literature review investigated the coupling of arbitrary wind power capacities into local power generation units. No assessments have been performed to establish the optimal wind capacity to be installed. Small installed wind capacities could limit the environmental benefits associated with the exploitation of wind power. On the other hand, large installed wind capacities, apart endangering the grid stability and the economic feasibility, could result in dissipation of large fractions of wind power in periods of low power demand. To add up to the complexity, large wind farms could lead to operation of the combined cycle at very low part-loads with low efficiency. Moreover, the power plant needs to be able, at all operating conditions, to supply heat to the process, an issue which is often neglected in the literature.
+The novel contribution of this paper is twofold. First, it presents an advanced procedure to identify the optimal design of an offshore power plant integrating a wind farm, taking into account constraints specific to the offshore environment. Second, it provides a comprehensive evaluation of its techno-economic feasibility by considering the expected working conditions characterising its lifetime operation.
+The developed optimisation procedure identifies the optimal design of the offshore power plant, in terms of optimal integration of wind power and optimal characteristics of the combined cycle to work in parallel to the wind farm. A multi-objective approach is adopted to define the optima, where the three objective functions are: (i) the cumulative CO
+2
+ emissions; (ii) the total cost to supply energy to the plant; and (iii) the weight of the onsite power cycle. Another key characteristic of the optimisation procedure is that it measures the performance in all the significant operating conditions at which the power plant is expected to operate. The importance of considering several relevant operating conditions in the definition of a design was demonstrated in a previous paper [
+18
+], in which the novel design succeeded in decreasing the lifetime CO
+2
+ emissions by 17.4 kt with respect to a standard design. Because of the complexity of such an optimisation process, requiring a very large number of simulations of the system, the model needs to be simple enough for reasonable computational time. On the other hand, a good level of accuracy has to be guaranteed in order to obtain reliable results. The necessity of finding a balance between these contrasting requirements is typical for such optimisation problems [
+19
+]. Surrogate modelling techniques could serve the purpose to accomplish this [
+20
+] and were applied to the current analysis. The optimisation procedure described was applied to a case study and a Pareto front of optimal solutions was obtained. The results were analysed and a specific design pinpointed to be further investigated. A techno-economic assessment was performed with the objective to provide a comprehensive evaluation on the effectiveness of the wind power integration in comparison to more standard concepts. The assessment covered the long time span of expected lifetime of an offshore installation and thus future scenarios on the development of economic parameters and energy policies needed to be considered.
+The paper is structured as follows: the methods developed are first presented in 
+Section 2
+. The application of those methods to a case study is described in 
+Section 3
+ and the related results are presented in 
+Section 4
+. 
+Section 5
+ analyses and discusses the results. Conclusive remarks are given in 
+Section 6
+.
+In this section, the methods developed are described so to provide the basis for understanding the results obtained.
+The offshore power plant in the study consists of a combined cycle integrating a wind farm (see 
+Figure 1
+). The wind power contribution is modelled by considering relevant measurements of wind speed, which are converted into power outputs through an ideal wind turbine power curve based on existing technologies. A process model of the combined cycle is developed in Thermoflex (Thermoflow Inc., version 26.0, Fayville, MA, USA, 2016) [
+21
+]. Thermoflex is a program specifically designed for design and off-design simulation of thermal systems. It is also able to provide estimations of weights and costs of the major equipment through the utility PEACE (Plant Engineering And Construction Estimator). The combined cycle supplies heat and power to the processing block of an offshore installation. The topping unit is an aero-derivative gas turbines (GT) typically used in offshore platforms according to their reliability, flexibility and high power-to-weight ratio. The operation of the GTs is simulated through data-defined models, based on the tabulated data from actual installations and manufacturers. The models cover the entire operating range of a GT (10–100%). The thermal energy of the GT exhaust gas is first exploited in a waste heat recovery unit (WHRU) to meet the heat demand of the plant. The WHRU is modelled as a counter-flow vertical finned tube heat exchanger. The gas stream leaving the WHRU is directed to a once-through heat recovery steam generator (OTSG), where the residual thermal energy is used to produce superheated steam. The once-through technology is selected in accordance with the indications provided by Nord and Bolland [
+22
+]. The superheated steam leaving the OTSG is expanded in a steam turbine. The steam is condensed in a deaerating condenser, modelled as a shell-and-tube heat exchanger. The cooling medium is sea water at constant temperature. The combined cycle is set to integrate the power contribution from the wind farm. Given a specific plant power demand to supply and a variable wind power output (depending on the wind speed), a simple operating strategy was assumed where the combined cycle always provides back-up power to deal with the irregular contribution of wind and its load is regulated accordingly. The power contribution of the combined cycle is modified through changes in the GT load. The control strategy of the GT is a combination of variable guide vanes (VGV) control and turbine inlet temperature control (TIT). A sliding pressure control mode applies to the steam cycle. A steam turbine bypass control valve ensures not to overpass the maximum established live-steam pressure. The live-steam temperature is controlled by the feedwater flow to the OTSG, as suggested for heat recovery steam generators of the once-through type [
+23
+]. Limitations on the minimum load at which the combined cycle can be operated are considered. The limitations include minimum combined cycle loads to ensure the ability to supply heat to the processing plant and minimum GT loads to meet environmental obligations (NO
+x
+ and CO emissions).
+The surrogate model has to predict the behaviour of the power cycle (defined as a set of dependent variables—the output parameters) at different operating conditions (defined as a set of independent variables—the input parameters). The high-fidelity model (that developed in Thermoflex) is simulated at a set of input conditions and its results recorded. The combination of inputs and outputs from the rigorous simulations were the sampling data set used to train the surrogate model. The input variables are those having the largest influence on the power cycle performance and their bounds are selected to represent its expected operation. For an effective mapping of the entire space where the model needs to operate, a combination of deterministic (Box-Behnken and central composite—113 points) and randomized (Latin hypercube—1000 points) sampling was performed. The output variables, whose variation at different input conditions is monitored, are those able to fully describe the operation of the power cycle, thus those the surrogated model has to be able to accurately estimate. The building of the surrogate model is performed through the Kriging technique, implemented in the Matlab ooDACE toolbox (Matlab R2015a, The MathWorks Inc., Natick, MA, USA, 2016) [
+24
+]. A short introduction on Kriging as surrogate modelling technique is provided in 
+Appendix A
+. The defined Kriging model is then validated at a set of independent testing conditions.
+The validated Kriging model is used to characterize a design. Once the design is fixed, the operation at different off-design conditions has to be simulated. The performance of various components (e.g., heat exchangers, turbines, pumps) is affected by changes in operating conditions. The resulting deviation from the design performance is estimated through simplified off-design correlations. The complete set of equations used is reported in 
+Appendix B
+. The off-design simulation of the GTs is based on the data-defined models of the engine selected. The heat exchanging components included in the cycle (i.e., the WHRU and the OTSG) are modelled through the relation from Incropera et al. [
+25
+] that evaluates the heat transfer coefficient at off-design conditions. The dominant heat transfer resistance is assumed to be that of the hot gas side for the WHRU and for the economizer and evaporator sections of the OTSG [
+26
+]. This simplification allows neglecting the conductive term and the heat transfer resistance of the cold water side. Conversely, in the superheater section of the OTSG the water side is assumed to dominate the heat transfer process [
+5
+], while the conductive term and the heat transfer resistance of the hot gas side are neglected. The heat transfer coefficient is not estimated for the condenser as a simplified representation is used. The condenser is modelled as a fixed pressure component to provide the cooling duty to condense the expanded steam for all operating conditions. This simplification is supported by the large availability of sea water as cooling medium. The nonlinear dependence between the inlet conditions and extraction pressure in the steam turbine is modelled in accordance with the Stodola’s cone law. The performance changes of the steam turbine at off-design are evaluated through the relation proposed by Schobeiri [
+27
+]. A correction in the generator efficiency at off-design is considered, based on the formula proposed by Haglind and Elmegaard [
+28
+]. The pumps performance at off-design are computed according to the method described by Veres [
+29
+]. The pressure drops (
+Δp
+) are accounted for by correlations assuming a quadratic dependence of the mass flow rate.
+The reduced computational effort associated with the utilisation of a surrogate model allows to develop an advanced optimisation procedure. The flowchart in 
+Figure 2
+ shows its simplified representation.
+A multi-objective constrained optimisation problem has to be defined. An array of decision variables is first established:
+
+
+
+
+
+
+
+
+
+
+x
+
+
+¯
+
+
+
+
+=
+
+
+
+
+[
+
+
+
+
+G
+
+
+T
+
+
+ 
+
+
+l
+
+
+o
+
+
+a
+
+
+d
+
+
+,
+
+
+
+
+p
+
+
+
+
+steam
+
+
+
+
+
+
+,
+
+
+
+
+T
+
+
+
+
+steam
+
+
+
+
+
+
+,
+
+
+Δ
+
+
+
+
+T
+
+
+
+
+OTSG
+
+
+
+
+
+
+,
+
+
+
+
+p
+
+
+
+
+cond
+
+
+
+
+
+
+,
+
+
+Δ
+
+
+
+
+T
+
+
+
+
+CW
+
+
+
+
+
+
+,
+
+
+w
+
+
+i
+
+
+n
+
+
+
+
+d
+
+
+
+
+PW
+
+
+
+
+
+
+
+
+]
+
+
+
+
+
+
+
+
+
+
+
+
+(1)
+
+
+
+
+The decision variables are the same input variables used in the definition of the surrogate model. The same bounds also apply, ensuring that the optimisation algorithm only search for an optimal solution in the space where the surrogate model is able to provide reliable outputs. The 
+wind
+PW
+ is the wind power capacity installed. In this study, the wind integration is assumed as always possible, regardless the size of the wind farm. A design 
+i
+ is defined by the Kriging model after assigning a value to each of the decision variables. The performance of the specific design is then evaluated at 
+n
+ off-design operating conditions. The set of operating conditions is selected to represent the relevant modes of plant operation during its lifetime. The off-design performances are obtained starting from the information provided by the Kriging model and applying the off-design correlations. The values of selected objective functions are calculated, so to define the array 
+
+
+
+
+z
+
+
+¯
+
+
+
+
+ of objective functions to minimize:
+
+
+
+
+
+
+
+
+
+
+z
+
+
+¯
+
+
+
+
+
+
+(
+
+
+
+
+
+
+x
+
+
+¯
+
+
+
+
+
+
+)
+
+
+
+
+=
+
+
+
+
+[
+
+
+
+
+C
+
+
+
+
+O
+
+
+2
+
+
+∗
+
+
+
+
+,
+
+
+
+
+W
+
+
+∗
+
+
+
+
+,
+
+
+c
+
+
+o
+
+
+s
+
+
+
+
+t
+
+
+∗
+
+
+
+
+
+
+]
+
+
+
+
+
+
+
+
+
+
+
+
+(2)
+
+
+
+
+
+
+
+
+
+
+
+
+C
+
+
+
+
+O
+
+
+2
+
+
+∗
+
+
+
+
+
+
+(
+
+
+
+
+
+
+x
+
+
+¯
+
+
+
+
+
+
+)
+
+
+
+
+=
+
+
+
+
+
+
+∑
+
+
+
+
+
+
+y
+
+
+=
+
+
+1
+
+
+
+
+
+
+years
+
+
+
+
+
+
+
+
+m
+
+
+
+
+CO
+
+
+2
+
+
+,
+
+
+y
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(3)
+
+
+
+
+
+
+
+
+
+
+
+
+c
+
+
+o
+
+
+s
+
+
+
+
+t
+
+
+∗
+
+
+
+
+
+
+(
+
+
+
+
+
+
+x
+
+
+¯
+
+
+
+
+
+
+)
+
+
+
+
+=
+
+
+T
+
+
+C
+
+
+R
+
+
++
+
+
+
+
+
+
+∑
+
+
+
+
+
+
+y
+
+
+=
+
+
+1
+
+
+
+
+
+
+years
+
+
+
+
+
+
+D
+
+
+C
+
+
+
+
+F
+
+
+y
+
+
+
+
+
+
+
+
+
+
+
+
+(4)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+W
+
+
+∗
+
+
+
+
+
+
+(
+
+
+
+
+
+
+x
+
+
+¯
+
+
+
+
+
+
+)
+
+
+
+
+=
+
+
+
+
+
+
+∑
+
+
+
+
+
+
+components
+
+
+
+
+
+
+
+
+W
+
+
+
+
+component
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(5)
+
+
+
+
+Three domains are considered when defining the objective functions: (i) the cumulative CO
+2
+ emissions, (ii) the total cost to supply energy to the plant and (iii) the weight of the onsite power cycle. The first two objectives are typical indicators of the sustainability of a project. The third objective considered was believed of significance for offshore applications as the very limited deployment of offshore combined cycles is likely due to issues with their sizes and weights.
+The environmental performance is measured as the total amount of CO
+2
+ emissions (
+
+
+
+
+C
+
+
+
+
+O
+
+
+2
+
+
+∗
+
+
+
+
+
+
+). It is calculated as the summation of the annual CO
+2
+ emissions (
+m
+CO2,y
+) over the plant’s lifetime. Every year is described by a power demand that is to be covered by a combination of wind power and combined cycle power. Given the irregularity of the wind power contribution, the year will be further characterized by several off-design conditions at which the combined cycle has to be operated to meet the power demand. A specific design will perform differently at those various off-design conditions, resulting in a correspondent number of mass flow rates of emitted CO
+2
+ (
+ṁ
+CO2,i
+). The annual CO
+2
+ emission is then the summation of those emissions (
+ṁ
+CO2,i
+) weighed over the equivalent number of hours (
+h
+eq
+) at which an off-design condition is expected to apply to one year:
+
+
+
+
+
+
+
+
+
+
+m
+
+
+
+
+CO
+
+
+2
+
+
+,
+
+
+y
+
+
+
+
+
+
+=
+
+
+
+
+
+
+∑
+
+
+
+
+
+
+i
+
+
+=
+
+
+1
+
+
+
+
+
+
+NOC
+
+
+
+
+
+
+
+
+
+
+m
+
+
+˙
+
+
+
+
+
+
+CO
+
+
+2
+
+
+,
+
+
+i
+
+
+
+
+
+
+
+
+h
+
+
+
+
+eq
+
+
+,
+
+
+i
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(6)
+
+
+
+
+The economic performance is measured as the total cost to supply energy to the plant (
+cost
+*). The calculations are based on the principles of the net present value (NPV) method and the economic metric can be seen as the NPV of the offshore energy system at the end of the lifetime. This term is thereby composed by two parts: the total capital requirement (
+TCR
+) and the summation of the annual discounted cash flows (
+DCF
+y
+). The 
+TCR
+ is assumed to be made before the installation starts operation. The total investment for the power cycle (
+TCR
+cc
+) is calculated in accordance with [
+30
+], as the summation of direct and indirect costs, estimated by a factor method. 
+Table 1
+ shows a breakdown of the 
+TCR
+cc
+ together with the factors used. The purchased-equipment cost (
+PEC
+) is an output of the surrogate model. The factors are selected based on the indications provided by Bejan et al. [
+30
+], applying a rather high contingency factor (25% of the total cost) and are in line with another paper that performed an estimation of the 
+TCR
+ to install an offshore combined cycle [
+9
+]. With regard to the wind farm, the estimation of the 
+TCR
+wind
+ (4503 
+$
+/kW), including direct and indirect costs, is based on the information retrieved from the European Commission’s report ETRI 2014 [
+31
+].
+The annual 
+DCF
+y
+ is calculated as:
+
+
+
+
+
+
+
+
+D
+
+
+C
+
+
+
+
+F
+
+
+y
+
+
+
+
+=
+
+
+
+
+
+
+C
+
+
+
+
+F
+
+
+y
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(
+
+
+
+
+1
+
+
++
+
+
+r
+
+
+
+
+)
+
+
+
+
+
+
+y
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(7)
+
+
+
+
+where 
+CF
+ is the cash flow, y is the year when the cash flow occurs and 
+r
+ is the discount rate (set to 7%). In the analysis, only negative cash flows are considered, thus adding up to the 
+TCR
+. The annual cash flows associated with the onsite gas consumption (
+CF
+gas
+) and with the CO
+2
+ taxation (
+CF
+CO2
+) are calculated as weighed summation over the off-design conditions characterising a specific year:
+
+
+
+
+
+
+
+
+C
+
+
+
+
+F
+
+
+y
+
+
+
+
+gas
+
+
+
+
+
+
+=
+
+
+
+
+
+
+∑
+
+
+
+
+
+
+i
+
+
+=
+
+
+1
+
+
+
+
+
+
+NOC
+
+
+
+
+
+
+
+
+
+
+m
+
+
+˙
+
+
+
+
+
+
+gas
+
+
+,
+
+
+i
+
+
+
+
+
+
+L
+
+
+H
+
+
+
+
+V
+
+
+
+
+gas
+
+
+
+
+
+
+
+
+c
+
+
+
+
+gas
+
+
+
+
+
+
+
+
+h
+
+
+
+
+eq
+
+
+,
+
+
+i
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(8)
+
+
+
+
+
+
+
+
+
+
+
+
+C
+
+
+
+
+F
+
+
+y
+
+
+
+
+CO
+
+
+2
+
+
+
+
+
+
+=
+
+
+
+
+
+
+∑
+
+
+
+
+
+
+i
+
+
+=
+
+
+1
+
+
+
+
+
+
+NOC
+
+
+
+
+
+
+
+
+
+
+m
+
+
+˙
+
+
+
+
+
+
+CO
+
+
+2
+
+
+,
+
+
+i
+
+
+
+
+
+
+
+
+c
+
+
+
+
+CO
+
+
+2
+
+
+
+
+
+
+
+
+h
+
+
+
+
+eq
+
+
+,
+
+
+i
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(9)
+
+
+
+
+where 
+ṁ
+gas
+ is the mass flow rate of natural gas used as fuel, 
+LHV
+gas
+ is the lower heating value of the natural gas, 
+c
+gas
+ is the gas price, 
+ṁ
+CO2
+ is the mass flow rate of the emitted CO
+2
+, 
+c
+CO2
+ is the CO
+2
+ price and 
+h
+eq
+ are the equivalent operating hours per year. An estimation of the gas price and of the CO
+2
+ price is needed for each year of plant’s operation. Hence, a scenario for the future developments of those economic parameters has to be used. For the gas price, the new policies scenario developed by the International Energy Agency (IEA) is considered and the related annual gas price used [
+32
+]. The new policies scenario reflects the way the governments see their energy sectors developing in the coming decades. For the CO
+2
+ price, the Norwegian situation is evaluated. The petroleum sector in Norway is subjected to a rather high CO
+2
+ tax (0.12 
+$
+/Sm
+3
+ in 2016 [
+33
+]), while contemporary takes part to the European Union Emissions Trading System (EU ETS). In the recent years, the trend had been to adjust the CO
+2
+ taxation in order to make up for the increase in the costs associated with the ETS so to keep the overall CO
+2
+ price approximately constant. Assuming that the same strategy will apply in the years to come, the level of CO
+2
+ price is kept constant and equal to 46 
+$
+/t.
+The last objective function to be estimated is the total weight of the bottoming cycle (
+W
+*). It is calculated as the summation of the weights of the cycle components (
+W
+component
+), provided by the Kriging model.
+Once evaluated the three objective functions for a given design, a new iteration is commenced. A Pareto front of optimal solutions is ultimately obtained. A genetic algorithm (GA), from the MATLAB Global Optimisation Toolbox [
+34
+], is implemented to solve the optimisation problem.
+The characteristics of the case study are highlighted. The offshore installations and their related power demands are presented, followed by the offshore power plants, with a combined cycle and a wind farm.
+The joint development of two offshore installations in the North Sea was considered. The two offshore installations are named after the related oil fields, Edvard Grieg and Ivar Aasen. Both fields already began production and have an expected 20 year lifetime. The Edvard Grieg platform is currently equipped with two gas turbines in order to meet heat and power requirements of both fields. A dedicated alternating current (AC) cable from the Edvard Grieg platform will cover Ivar Aasen power demand, while oil and gas from Ivar Aasen will be channelled to the Edvard Grieg platform for processing and export. A more detailed description of the development scheme of the two installations and of the topside processes, responsible of the power and heat demand, was provided in a previous publication [
+3
+]. Annual power requirements were considered, based on the information retrieved from the relevant field development reports for Edvard Grieg [
+35
+] and Ivar Aasen [
+36
+]. These official documents provide an estimation of power and heat requirements to operate the facility based on the estimated production profiles. High quality forecasting techniques are applied as the development plan is the foundation for decision in all phases of the petroleum activity. However, a certain degree of uncertainty is to be expected as oil & gas fields are extremely complex systems. 
+Figure 3
+ gives an overview of the obtained power demand profile throughout the years. The variability of the power demand is common for this type of plants and is due to the changing oil production rates during the different stage of exploitation of an oil field. To simplify the implementation of the optimisation procedure, the power demand profile was divided into 4 groups with reference to different stages of the plant’s lifetime: 
+Early life—29.7 MW (year 2016)
+Middle life—35.5 MW (years 2017 to 2018 and years 2021 to 2023)
+Peak—39.9 MW (years 2019 and 2020)
+Tail years—33.0 MW (years 2024 to 2034)
+Early life—29.7 MW (year 2016)
+Middle life—35.5 MW (years 2017 to 2018 and years 2021 to 2023)
+Peak—39.9 MW (years 2019 and 2020)
+Tail years—33.0 MW (years 2024 to 2034)
+The dashed line in 
+Figure 3
+ shows how the power demand profile was approximated. The power demand values considered were the average of the power demands belonging to the group. Although the heat demand would be subjected to a similar trend during the plant’s lifetime, in this paper such variability was not considered. The heat demand was set to be 11 MW and it was retained constant at different operating conditions. Including the variability of the heat demand would add a degree of complexity in the design optimisation and will be considered for further developments of the work.
+The topping unit was set to be a General Electric (GE) LM2500+G4 or a GE LM6000 PF, two aero-derivative gas turbines (GT). The former is a smaller size machine (rated power 32.2 MW) in comparison to the latter (rated power 41.9 MW). In the remaining of the paper, the GE LM2500+G4 and the GE LM6000 PF will be referred as GT A and GT B, respectively. Thermoflow indicates that the maximum model errors for the two engines are lower than 0.5% for the exhaust mass flow rate, the power output and the heat rate and lower than 2.8 °C for the exhaust temperature (test range for ambient temperature: −18 to 49 °C). Such level of uncertainty could be also assumed to apply to this study. The performance of GT A was checked against real operational data, showing good agreement. The high-fidelity model of the combined cycle is based on that developed for a previous publication [
+3
+], to which reference should be made for a better insight. The model of the combined cycle was validated against the paper from Nord et al. [
+8
+], which in turn was validated against the 2012 Gas Turbine World Handbook. 
+Table 2
+ shows the input parameters to the surrogate model. The lower and upper bounds were selected to result in feasible operation of the combined cycle by considering technical and operational limitations. The higher bound of the superheated steam temperature (
+T
+steam
+) was constrained by the GT outlet temperature and, in fact, some differences can be noted when a different GT is used. The lower bound was set to ensure a reasonably high steam quality at the steam turbine outlet. The steam evaporation pressure (
+p
+steam
+) and the condenser pressure (
+p
+cond
+) were varied within a range which was sufficiently large to not exclude optimal solutions while guaranteeing feasible ones. The lower bound of 
+p
+cond
+ was also selected in accordance with typical limitations of the vacuum and sealing systems. The upper load of the GTs was set at 0.95 in order to maintain a safety margin in case of sudden increase of plant load. The lower bound was limited to ensure the capability of the cycle to meet the process heat demand in any instance. The bounds to the pinch point differences (
+ΔT
+OTSG
+ and 
+ΔT
+cw
+) were defined in accordance with the practical limitation discussed by Nord et al. [
+8
+].
+The list of output parameters that the surrogate model was trained to estimate can be found in 
+Table A1
+ in 
+Appendix C
+. In 
+Appendix C
+ and 
+Appendix D
+, the validation of the Kriging model and of the off-design correlations are discussed, respectively. The decision variables, related to the combined cycle, used for the optimisation were the same as the input parameters to the surrogate model and were let range within the same bounds indicated in 
+Table 2
+.
+The data set of wind speeds considered refers to a location in the North Sea where the Norwegian Meteorological Institute performed measurements with a 20 min resolution [
+15
+]. The data set was further integrated by generating intermediate wind speeds instances using a distribution function for 10 min variations based on similar wind speed series from Norway. The resolution was further increased to 1 min by linear interpolation. The same data set was used in another publication to assess the integration of wind power to a generic offshore oil platform [
+13
+]. The wind speed data were considered of sufficient high quality for the purpose of this study. There is a degree of uncertainty related to the measurements on oil platforms. The platforms could produce disturbances of the wind field, potentially leading to an overestimation of the offshore wind energy potential [
+37
+]. However, undisturbed measurements are not available in the Norwegian sector for direct comparison. According to the data set, an average wind speed of 9.8 m/s at turbine hub height was calculated, in line with the values expected for offshore wind farms [
+13
+]. The wind speeds were converted to wind power outputs by means of an ideal wind turbine power curve, shown in 
+Figure 4
+. The power curve was based on a three-bladed floating turbine concept [
+38
+]. The duration curve shown in 
+Figure 5
+ displays the wind power made available throughout one year.
+The annual normalized power contribution from the wind power was then discretized. The instances of normalized wind power outputs were grouped into five intervals (0%, 25%, 50%, 75% and 100% of the rated capacity), to which a value of equivalent hours in a year was associated depending on the number of annual wind speed instances falling into the specific power output group. The dashed line in 
+Figure 5
+ shows how the duration curve was approximated accordingly. The wind power capacity installed (
+wind
+PW
+)—the remaining decision variable of the optimisation problem—was let range between 0 and 30 MW, with 5 MW step intervals. The annual contribution of wind power was then fully defined, further influencing the working conditions at which the combined cycle has to be operated to provide back-up power. Given the discretization of the lifetime power demand (4 instances as shown in 
+Figure 3
+) and of the annual contribution of the wind power (5 instances as shown in 
+Figure 5
+), for a selected wind farm size, a set of 20 off-design conditions at which the combined cycle has to operate was automatically defined. An example is given in 
+Table 3
+, considering a wind power capacity installed of 10 MW.
+Before reporting the simulation results, a brief premise on the advantage in terms of computational time for the use of Kriging: the computer used in this work has an Intel Core processor of 2.60 GHz and 16.0 GB of random-access memory (RAM). The Kriging model performed a simulation in, on average, 0.07 s, fully characterising a design. The simulation of the same design with the commercial software Thermoflex took on average 20.35 s. A significant computational saving could be realized with the use of the Kriging model, reducing the run time of a factor 285. This reduction in computational time was fundamental in order to be able to assess a very large number of designs at a number of operating conditions, like in the optimisation procedure implemented in the study.
+A population size of 350 was established for the genetic algorithm (GA) and the maximum number of generations allowed was set to 25. The solver was stopped before if the spread of Pareto solutions, a measure of the movement of the Pareto frontier, was less than the function tolerance (10
+−3
+) over a number of stall generations (5). The Pareto fronts obtained can be observed in 
+Figure 6
+, where the decision map showing trade-offs between total cost and CO
+2
+ emissions is represented. The third objective functions (i.e., the weight of the bottoming cycle) is shown through shades of colours: the darker the colour, the heavier the design. The two Pareto fronts refer to the cycles based on the GT A (blue) and on the GT B (green).
+The stepwise trend of the Pareto fronts is because of how the wind power capacity (
+wind
+PW
+) was considered in the design optimisation. 
+wind
+PW
+ was allowed to take values multiple of 5 MW, within the bounds assigned (i.e., 0 and 30 MW). The steps in the Pareto fronts correspond to the various levels of 
+wind
+PW
+ and highlight the strong influence that the size of the wind farm had on the environmental and economic performance. Within each of these “Pareto steps” the heavier designs are generally those with the lower CO
+2
+ emissions but higher costs. This makes sense as the heavier combined cycles are likely the most efficient ones but the related increased complexity translates in higher investment costs. By looking at the general trend, it can be noted that increasing 
+wind
+PW
+ meant worse economics compared to a lower value of 
+wind
+PW
+. Accordingly, the designs returning the best economic performance were those not integrating any wind capacity. In other words, the reduced operating expenses coming along with the exploitation of wind power were not sufficient to balance out the increased initial investment. On the other hand, increasing 
+wind
+PW
+ always led to a reduction of CO
+2
+ emissions. Adding capacity to the wind farm increased the environmental performance of the plant more than what a refined—thus more expensive and bulkier—design of the combined cycle could possibly do. These considerations are confirmed by observing 
+Figure 7
+ where the Pareto solutions with no wind integration and with maximum wind integration are highlighted. Those solutions showed to be those returning optimal economic and environmental performance, respectively.
+The Pareto fronts reported refer to offshore power plants integrating a wind farm to a combined cycle. In a following section of the paper, the performance of these optimised systems are compared to more standard configurations, where the power generation unit installed on the platform is simply cycle gas turbines, either coupled with a wind farm or not. These solutions were not optimised as the performance of the gas turbines and the wind turbine are fixed by the commercial technologies considered (for which performance curves were available). The only parameter with an influence on the overall performance was the size of the wind farm, which defined the wind power contributions available for one year and, consequently, the operating conditions and, thus, the performance of the gas turbines. Such concepts were not the focus of the study, rather the basis for comparison for the more advanced power plants including the steam bottoming cycle.
+Before analysing the results obtained, a few words on the limitations of the study. A comprehensive evaluation on the feasibility of the proposed integrated offshore power system should include two additional elements. First, an analysis on the offshore electric grid should be performed to evaluate the possibility to integrate the wind farm while guaranteeing frequency stability through a proper frequency control scheme. Second, the dynamic coupling between the intermittent wind resource and the offshore power cycle should be investigated. These issues were beyond the scope of the current study but will be considered in further work on the topic. The development of a dynamic model of offshore combined cycles [
+39
+] and the analyses of control strategies for fast load changes [
+40
+] were the first steps in this direction.
+The multi-objective approach returned a number of Pareto optimal designs. A method to navigate through those various Pareto results was developed in order to be able to extract relevant information from them. The Pareto solutions were initially screened by setting constraints on the maximum CO
+2
+ emissions and the maximum weight of the bottoming cycle. A weight threshold was set at 120 t, while the maximum allowable amount of CO
+2
+ emissions was ranged between 2.0 Mt and 2.6 Mt. Among the designs fulfilling the criteria indicated, the optimal one was then selected as that returning the best economic performance. 
+Figure 8
+ gives a visual representation of the screening mechanism applied to the Pareto solutions with the GT A, for a maximum CO
+2
+ emissions level of 2.3 Mt (and maximum weight of 120 t). The optimal design identified was termed Design A (CC+W). The same screening mechanism was applied to the Pareto solutions of GT B and the optimal design Design B (CC+W) was pinpointed. 
+Table 4
+ and 
+Table 5
+ report the characteristics of these optimal designs that were further used for the following techno-economic analyses.
+The optimal designs obtained by ranging the CO
+2
+ emissions constraint between 2.0 Mt and 2.6 Mt are shown in 
+Figure 9
+. For each optimal design identified the lifetime economic performance and the wind farm size are reported. The set of results helped to make some considerations on the optimal wind power integration. A trade-off emerged between the extent of the environmental and economic aspects. The outcome confirmed what already hinted by the stepwise trend of the Pareto fronts. On one hand, the installation of offshore wind is economically challenging and, in fact, the total cost is consistently increasing with increasing wind power capacity installed. On the other hand, cutting the expected CO
+2
+ emissions is challenging as well and the most effective way (also under an economical point of view) to meet more severe emissions limitations is to increase the size of the wind farm. Summing up, it can be argued that the optimal size of the wind farm should be selected by carefully defining and weighing the performance requirements (environmental and economic) that are to be achieved by the plant.
+A qualitative comparison between the cycles based on the two different GTs demonstrated that better performance could be achieved by the GT A. The advantage of the cycle based on the GT A can be observed in 
+Figure 6
+, where the GT A optimal designs outperform the GT B optimal designs under every metrics. In order to quantitatively assess the benefits associated with the utilisation of the smaller GT, the two designs previously pinpointed were considered, namely Design A (CC+W) and Design B (CC+W) (see 
+Table 4
+ and 
+Table 5
+ for the related characteristics). The larger size of the GT B compared to the GT A was overall penalising. Most of the instances simulated required the larger GT B to operate at rather low part-load, either because of the availability of wind power or because of a reduced power demand, making the GT B particularly ineffective. Only at specific conditions the GT B entailed better performance, namely at peak power demand, when the wind gave a minor contribution due to low wind speeds. In those cases, the larger size of the GT allowed to meet the high power demand without starting a second backup GT, which was instead necessary with the GT A. The first effect described was predominant and the Design B (CC+W) was less efficient. That made necessary to have a larger wind farm to meet the same emission constraints, ultimately leading to a worse economic performance of Design B (CC+W) (about 19 M
+$
+ higher total cost to supply energy to the plant). The larger size of the GT B became more and more beneficial when increased shares of power had to be directly supplied by the GT. This can be noted by analysing the results of alternative concepts where the same two GTs are employed in different power plant configurations. The performance of the configuration involving a combined cycle without wind power (Design A (CC) vs. Design B (CC)) was practically identical with the two different GT sizes. The utilisation of simple GT cycles, both with (Design A (GT+W) vs. Design B (GT+W)) and without (
+Design A
+ (
+GT
+) vs. 
+Design B
+ (
+GT
+)) a wind power farm integrated, favoured the utilisation of the larger GT B.
+The performance of the Pareto optimal solution Design A (CC+W) was compared to alternative offshore power plant concepts. The following four power plants were defined and simulated throughout the entire expected installation’s lifetime:
+Combined cycles with wind power—Design A (CC+W)
+Combined cycles—Design A (CC)
+Simple GT cycles with wind power—Design B (GT+W)
+Simple GT cycles—Design B (GT)
+Combined cycles with wind power—Design A (CC+W)
+Combined cycles—Design A (CC)
+Simple GT cycles with wind power—Design B (GT+W)
+Simple GT cycles—Design B (GT)
+The related output results can be checked in 
+Table 4
+ and 
+Table 5
+. 
+Figure 10
+ shows the annual CO
+2
+ emissions for each option simulated that ultimately add up to give the overall CO
+2
+ footprint. 
+Figure 11
+ shows the evolution of the total cost to supply energy to the plant (
+cost
+*) during the years of plant operation that ultimately constitute the economic performance of the various concepts. The 
+cost
+* is always negative as only costs were considered in the analysis. The advanced offshore power plant proposed—Design A (CC+W)—reached the best environmental performance. The cuts of CO
+2
+ emissions ranged between 272 kt (a 11.9% reduction) in comparison to Design A (CC) and 557 kt (a 24.4% reduction) in comparison to Design B (GT). Whilst advantageous in terms of environmental impact, the integration of wind power implied worse economics. Design B (GT) returned the lowest cost for the offshore energy supply, followed by Design A (CC). In comparison to their counterparts without wind power, Design A (CC+W) and Design B (GT+W) entailed an additional cost of 19 M
+$
+ and 21 M
+$
+, respectively. The operational costs were minimized with Design A (CC+W) but the savings achieved were not sufficient to repay the additional investment for the wind farm. Conversely, Design B (GT) showed the highest operational costs but the smaller initial investment guaranteed an overall better economic performance.
+The previous analyses showed the importance of the economic aspect for the studied offshore power plant in order to reach feasibility. To gain a better insight, a sensitivity analysis was carried out by acting on some main input parameters.
+Wind farm total capital requirement (
+TCR
+wind
+)
+. The economic performances of Design A (CC+W) would have matched that of Design A (CC) if the specific value of the 
+TCR
+wind
+ had dropped to 2611 
+$
+/kW from the reference value of 4503 
+$
+/kW. Albeit that number is in line with the most optimistic future scenarios, it is much lower than the current situation [
+31
+]. When the comparison was made with respect to Design B (GT+W) and Design B (GT), the 
+TCR
+ of the wind farm had to decrease down to, respectively, 3416 
+$
+/kW and 1353 
+$
+/kW before returning a better economic performance.
+Combined cycle total capital requirement (
+TCR
+cc
+)
+. The calculation of 
+TCR
+cc
+ was believed to be subjected to a large degree of uncertainty. The costs to install the necessary components offshore are significantly higher compared to typical onshore applications and difficult to estimate as very site specific. The numbers proposed, even though calculated taking into account a large contingency, could be under-estimated. In the comparative analysis between the various concepts, the impact of the high uncertainty level was limited by the fact that the options integrating wind power included the same power generation unit of the equivalent options without wind power. Larger differences could potentially arise between the concepts based on a combined cycle and those based on a simple GT cycle. In order to assess that, the 
+TCR
+cc
+ was increased by a factor 2 and 5 (cases TCR2 and TCR5, respectively). 
+Figure 12
+ shows the resulting 
+cost
+* trends. The concepts based on a GT simple cycle became more and more attractive since the gap of capital investment with respect to concepts based on a combined cycle increased. If in the base case Design A (CC) and Design B (GT+W) had similar performances, already at TCR2 Design B (GT+W) returned a better economic performance by about 29 M
+$
+. Ultimately, the increase of the cost to install the power generation unit on the platform benefitted more conservative solutions (e.g., Design B (GT)) over more advanced ones (e.g., Design A (CC+W)).
+Discount rate (
+r
+).
+ The effect of a lower (5%) and higher (9%) discount rate was evaluated. 
+Figure 13
+ shows the related profile of the 
+cost
+* throughout the plant’s lifetime. At lower discount rates, it becomes more important to minimise the operational costs as they will weigh more on the final economic performance. Accordingly, the concepts entailing lower operational costs—for instance, Design A (CC+W)—are favoured by lower values of the discount rate. Conversely, the concepts with lower investment costs but higher operational costs—for instance, Design B (GT)—are favoured by higher values of the discount rate. Ultimately, even though the economic gap between the various concepts changed with the different discount rates applied, the relative economic performance remained the same.
+CO
+2
+ price (
+c
+CO2
+).
+Figure 14
+ shows the relative effect of different CO
+2
+ prices on the economic performance. Keeping Design A (CC+W) as the reference for comparison, the 
+Δcost
+* obtained at the end of the lifetime is reported in the figure for the other concepts. A positive value indicates a better economic performance with respect to Design A (CC+W). Conversely, a negative value indicates a worse economic performance. The analysis showed that the CO
+2
+ price had to exceed 174.1 
+$
+/t for Design A (CC+W) to entail an economic advantage over Design A (CC). Economic competitiveness could be achieved with relatively smaller levels of CO
+2
+ price (i.e., 121.0 
+$
+/t and 158.8 
+$
+/t) with respect to Design B (GT+W) and Design B (GT). Such high levels of CO
+2
+ price are foreseen in the future from some specific scenarios involving a strong international commitment on environmental issues (e.g., the 450 scenario by IEA displayed a CO
+2
+ price of 140 
+$
+/t in 2040 [
+32
+]). However, they appear unlikely in the short term.
+Gas price (
+c
+gas
+).
+Figure 15
+ shows the effect of both higher (+25%) and lower (−25%) gas prices, alongside a variable 
+c
+CO2
+. When the gas prices were increased, the situation became more favourable to the integration of wind power. Though, rather high levels of CO
+2
+ prices (between 124.7 and 141.3 
+$
+/t) would still be needed to even the economic performance. The low levels of gas price seemed to rule out the possibility to achieve economic competitiveness for offshore wind power integration, as CO
+2
+ prices around 200 
+$
+/t would be needed.
+A method is presented to define the optimal design of an offshore combined cycle power plant integrated with a wind farm. The defined design can be then used as a basis to evaluate the effectiveness of such concept to supply energy offshore. The optimisation procedure takes into account the performance at relevant off-design conditions in the definition of the optimal design. Given the complexity of the optimisation problem, a surrogate model is developed and validated. A multi-objective approach is applied including constraints specific to the offshore environment. The optimisation procedure presented was implemented on an actual installation in the North Sea for which a Pareto front of optimal solutions was obtained. An analysis of the results sparked some interesting considerations. A parameter to carefully select in the design phase was the size of the wind farm. As a trade-off between the environmental and economic performance emerged, the optimal level of wind integration should be based on the objectives to prioritise and on the constraints of that system. A comparison between the utilisation of two different size gas turbines (GT), either the smaller GT A or the larger GT B, showed that the GT A allowed to match better the power demand profile when additional power contributions were coming from the bottoming cycle and the wind farm. Conversely, the GT B appeared to be oversized for that application as it often operated at low part-load. Among the Pareto optimal designs obtained, one was selected for a techno-economic analysis. The selected design was compared to the same one without wind power integration and to offshore plants based on simple GT cycles, with and without wind power. The advanced offshore power plant proposed reduced the CO
+2
+ emissions of 272 kt (−11.9%) and of 557 kt (−24.4%) with respect to the same combined cycle and to a simple GT cycle not integrating a wind farm. The economic performance was questionable. A wind farm meant an increased initial investment. Even though lower operational costs were obtained, paying back such additional investment proved to be challenging. With the current levels of gas and CO
+2
+ prices, the final cost for the offshore energy supply was about 19 M
+$
+ and 32 M
+$
+ higher compared to the two concepts without wind power. The sensitivity analysis showed that very favourable price conditions would be needed to even out the difference. Conservative concepts, displaying a lower initial investment, demonstrated to be advantageous under an economic point of view. The results presented are case specific and cannot be generalized. For instance, in larger offshore projects with a longer lifetime, the reduced operational costs would result in a better economic outlook. In addition, it should be pointed out that the offshore power plant integrating a wind farm achieved a substantial cut in CO
+2
+ emissions that affected the economic analysis only through a reduced cost for the CO
+2
+ emitted. In an energy system including emission caps and penalties for the plants failing to fulfil such requirements, the better environmental performance could contribute to close the economic gap and, possibly, make offshore wind power integration economically feasible.
+L.R. developed the models, carried out the simulations and wrote the manuscript. L.O.N. contributed to the critical analysis of the results, reviewed the manuscript and supervised the work.
+This research received no external funding.
+The authors declare no conflicts of interest.
+Kriging works as a locally weighted regression method based on a Gaussian process [
+41
+]. In its basic formulation, the function 
+y
+(
+x
+) is approximated as following [
+42
+]:
+
+
+
+
+
+
+
+
+y
+
+
+
+
+(
+
+
+x
+
+
+)
+
+
+
+
+=
+
+
+f
+
+
+
+
+(
+
+
+x
+
+
+)
+
+
+
+
++
+
+
+Z
+
+
+
+
+(
+
+
+x
+
+
+)
+
+
+
+
+
+
+
+
+
+
+
+
+(A1)
+
+
+
+
+f
+(
+x
+) is a regression function that approximates globally the function. The regression function could be a known constant (simple Kriging), an unknown constant (ordinary Kriging) or a multivariate polynomial (universal Kriging). It is determined by the generalized least squares method. A constant term suffices in many applications [
+43
+] and ordinary Kriging was therefore used in the study. 
+Z
+(
+x
+) is a realization of a normally distributed Gaussian random process with zero mean, variance 
+σ
+2
+ and a correlation matrix 
+Ψ
+. 
+Z
+(
+x
+) takes into account localized variations and ensures the interpolation of the training data. The correlation function 
+ψ
+ is parametrized by a set of hyperparameters 
+ϑ
+k
+, determined using the maximum likelihood estimation. The correlation function used is the following:
+
+
+
+
+
+
+
+
+ψ
+
+
+
+
+(
+
+
+
+
+
+
+x
+
+
+i
+
+
+
+
+,
+
+
+
+
+x
+
+
+j
+
+
+
+
+
+
+)
+
+
+
+
+=
+
+
+exp
+
+
+
+
+(
+
+
+
+
+−
+
+
+
+
+
+
+∑
+
+
+
+
+
+
+k
+
+
+=
+
+
+1
+
+
+
+
+d
+
+
+
+
+
+
+ϑ
+
+
+k
+
+
+
+
+
+
+
+
+
+
+|
+
+
+
+
+
+
+x
+
+
+i
+
+
+
+
+−
+
+
+
+
+x
+
+
+j
+
+
+
+
+
+
+|
+
+
+
+
+
+
+2
+
+
+
+
+
+
+)
+
+
+
+
+
+
+
+
+
+
+
+
+(A2)
+
+
+
+
+The natural logarithm of the marginal likelihood used to identify the hyperparameters is expressed in the ooDACE tool as [
+24
+]:
+
+
+
+
+
+
+
+
+−
+
+
+ln
+
+
+
+
+(
+
+
+
+
+
+
+Γ
+
+
+
+
+marginal
+
+
+
+
+
+
+
+
+)
+
+
+
+
+=
+
+
+−
+
+
+
+
+n
+
+
+2
+
+
+
+
+ln
+
+
+
+
+(
+
+
+
+
+
+
+σ
+
+
+2
+
+
+
+
+
+
+)
+
+
+
+
+−
+
+
+
+
+1
+
+
+2
+
+
+
+
+ln
+
+
+
+
+(
+
+
+
+
+
+
+|
+
+
+Ψ
+
+
+|
+
+
+
+
+
+
+)
+
+
+
+
+
+
+
+
+
+
+
+
+(A3)
+
+
+
+
+where 
+Γ
+ is the marginal likelihood, 
+σ
+2
+ is the process variance and 
+Ψ
+ is the n X n correlation matrix. While the first term represents the quality of the fit, the second term can be interpreted as a complexity penalty. The combination of the two allows balancing between flexibility and accuracy.
+Kriging is a flexible surrogate modelling technique, well-suited for deterministic applications and has been successfully applied in several engineering design applications [
+44
+]. For these reasons, it was chosen for the study.
+The complete set of equations used to evaluate the off-design performance of the various components of the cycle is reported.
+The heat transfer coefficient for the heat exchangers is calculated as [
+25
+]:
+
+
+
+
+
+
+
+
+U
+
+
+A
+
+
+=
+
+
+
+
+k
+
+
+ε
+
+
+
+
+U
+
+
+
+
+A
+
+
+d
+
+
+
+
+
+
+
+
+
+
+(
+
+
+
+
+
+
+
+
+m
+
+
+˙
+
+
+
+
+
+
+
+
+
+
+m
+
+
+˙
+
+
+
+
+d
+
+
+
+
+
+
+
+
+
+
+)
+
+
+
+
+
+
+γ
+
+
+
+
+
+
+
+
+
+
+
+
+(A4)
+
+
+
+
+where 
+U
+ is the overall heat transfer coefficient, 
+A
+ is the heat transfer area, 
+ṁ
+ is a mass flow rate and 
+γ
+ is the exponent of the Reynolds number in the heat transfer correlation. 
+γ
+ was set equal to 0.6 in the WHRU and in the economizer and evaporator sections of the OTSG, equal to 0.8 in the superheater section of the OTSG. 
+k
+ε
+ is a correction factor. It was noted that the error in the estimation of the heat transfer coefficients increased with the decrease of the plant load and became relevant at very low loads (of importance in the scenarios including wind power integration). The off-design model of the heat transfer coefficient was tuned in order to address this effect. The correction factor 
+k
+ε
+ is defined as a function of the deviation of the flow rate from the design value. It is applied to all the heat exchange sections but the superheater of the OTSG, where it is not necessary.
+The Stodola’s cone law is applied for modelling the steam turbine behaviour [
+45
+]:
+
+
+
+
+
+
+
+
+
+
+C
+
+
+S
+
+
+
+
+=
+
+
+
+
+
+
+
+
+m
+
+
+˙
+
+
+
+
+
+
+
+
+
+
+T
+
+
+
+
+in
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+p
+
+
+
+
+in
+
+
+
+
+2
+
+
+
+
+−
+
+
+
+
+p
+
+
+
+
+out
+
+
+
+
+2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(A5)
+
+
+
+
+where 
+C
+S
+ is the constant flow coefficient, 
+ṁ
+ is the mass flow rate, 
+T
+in
+ is the turbine inlet temperature, 
+p
+in
+ is the turbine inlet pressure and 
+p
+out
+ is the turbine outlet pressure.
+The variation of the isentropic efficiency at part-load is evaluated as [
+27
+]:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+η
+
+
+T
+
+
+
+
+
+
+
+
+
+
+η
+
+
+
+
+T
+
+
+,
+
+
+d
+
+
+
+
+
+
+
+
+
+
+=
+
+
+2
+
+
+
+
+
+
+
+
+
+
+Δ
+
+
+
+
+h
+
+
+
+
+T
+
+
+,
+
+
+is
+
+
+,
+
+
+d
+
+
+
+
+
+
+
+
+
+
+Δ
+
+
+
+
+h
+
+
+
+
+T
+
+
+,
+
+
+is
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+−
+
+
+
+
+
+
+Δ
+
+
+
+
+h
+
+
+
+
+T
+
+
+,
+
+
+is
+
+
+,
+
+
+d
+
+
+
+
+
+
+
+
+
+
+Δ
+
+
+
+
+h
+
+
+
+
+T
+
+
+,
+
+
+is
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(A6)
+
+
+
+
+where 
+η
+T
+ is the isentropic efficiency of the turbine at off-design and 
+Δh
+T,is
+ is the isentropic enthalpy difference due to the expansion in the turbine.
+The efficiency of the generator is calculated as [
+28
+]:
+
+
+
+
+
+
+
+
+
+
+η
+
+
+
+
+gen
+
+
+
+
+
+
+=
+
+
+
+
+
+
+l
+
+
+o
+
+
+a
+
+
+d
+
+
+·
+
+
+
+
+η
+
+
+
+
+gen
+
+
+,
+
+
+d
+
+
+
+
+
+
+
+
+
+
+l
+
+
+o
+
+
+a
+
+
+d
+
+
+·
+
+
+
+
+η
+
+
+
+
+gen
+
+
+,
+
+
+d
+
+
+
+
+
+
++
+
+
+
+
+(
+
+
+
+
+1
+
+
+−
+
+
+
+
+η
+
+
+
+
+gen
+
+
+,
+
+
+d
+
+
+
+
+
+
+
+
+)
+
+
+
+
+
+
+[
+
+
+
+
+
+
+(
+
+
+
+
+1
+
+
+−
+
+
+
+
+F
+
+
+
+
+CU
+
+
+
+
+
+
+
+
+)
+
+
+
+
++
+
+
+
+
+F
+
+
+
+
+CU
+
+
+
+
+
+
+l
+
+
+o
+
+
+a
+
+
+
+
+d
+
+
+2
+
+
+
+
+
+
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(A7)
+
+
+
+
+where 
+η
+gen
+ is the generator efficiency, 
+load
+ is the mechanical load and 
+F
+CU
+ is a term representing the copper losses (produced in the winding of the stator). The term 
+F
+CU
+ is set equal to 0.43 [
+28
+].
+The off-design performance of the pumps is calculated as [
+29
+]:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+η
+
+
+
+
+pump
+
+
+
+
+
+
+
+
+
+
+
+
+η
+
+
+
+
+pump
+
+
+,
+
+
+d
+
+
+
+
+
+
+
+
+
+
+=
+
+
+−
+
+
+0.029265
+
+
+
+
+
+
+
+
+(
+
+
+
+
+
+
+
+
+V
+
+
+˙
+
+
+
+
+
+
+
+
+
+
+V
+
+
+˙
+
+
+
+
+d
+
+
+
+
+
+
+
+
+
+
+)
+
+
+
+
+
+
+3
+
+
+
+
+−
+
+
+0.14086
+
+
+
+
+
+
+
+
+(
+
+
+
+
+
+
+
+
+V
+
+
+˙
+
+
+
+
+
+
+
+
+
+
+V
+
+
+˙
+
+
+
+
+d
+
+
+
+
+
+
+
+
+
+
+)
+
+
+
+
+
+
+3
+
+
+
+
++
+
+
+0.3096
+
+
+
+
+
+
+
+
+(
+
+
+
+
+
+
+
+
+V
+
+
+˙
+
+
+
+
+
+
+
+
+
+
+V
+
+
+˙
+
+
+
+
+d
+
+
+
+
+
+
+
+
+
+
+)
+
+
+
+
+
+
+2
+
+
+
+
++
+
+
+0.86387
+
+
+
+
+
+
+
+
+
+
+(A8)
+
+
+
+
+where 
+η
+pump
+ is the isentropic efficiency of the pump and 
+
+
+
+
+V
+
+
+˙
+
+
+
+
+ is the volumetric flow rate.
+The pressure drops are modelled as [
+46
+]:
+
+
+
+
+
+
+
+
+Δ
+
+
+p
+
+
+=
+
+
+Δ
+
+
+
+
+p
+
+
+d
+
+
+
+
+
+
+
+
+
+
+(
+
+
+
+
+
+
+
+
+m
+
+
+˙
+
+
+
+
+
+
+
+
+
+
+m
+
+
+˙
+
+
+
+
+d
+
+
+
+
+
+
+
+
+
+
+)
+
+
+
+
+
+
+2
+
+
+
+
+
+
+
+
+
+
+
+
+(A9)
+
+
+
+
+where 
+Δp
+ is the pressure drop and 
+ṁ
+ is the mass flow rate.
+Once the Kriging model fitting was completed, the model had to be tested before being deemed reliable. A set of 30 testing conditions was randomly selected and a comparative analysis was performed between the outputs of the high-fidelity model and those of the Kriging model. The mean average error (MAE) obtained for each output variable is reported in 
+Table A1
+. 
+Figure A1
+, 
+Figure A2
+, 
+Figure A3
+ and 
+Figure A4
+ show the parity plots of selected parameters in order to visualize the extent of the approximation introduced. The diamonds refer to the cycle based on the GT A, the circles on the cycle based on the GT B.
+The Kriging model demonstrated to be able to capture the behaviour of the combined cycle with a reasonable accuracy. Most of the parameters were predicted with a MAE smaller than 1%. One parameter that demonstrated to be particularly difficult to predict was the weight of the condenser (
+W
+COND
+). The related MAE were 3.18% and 2.30% and substantial prediction errors were highlighted by the parity plot in 
+Figure A4
+. However, it was also noted that the 
+W
+COND
+ contributed marginally (between 4% and 10%) to the total weight of the bottoming cycle, whose estimation resulted to be rather good with MAE of 0.37% and 0.34%. Therefore, a slightly worse accuracy in the prediction of 
+W
+COND
+ was considered acceptable. Another term with MAE larger than 1% was the 
+UA
+ coefficient of the superheater (
+UA
+SH
+). However, it was noted that 
+UA
+SH
+ had a limited impact on the overall heat transfer process occurring in the OTSG, due to the limited degree of superheating implemented in the various designs. Overall, the accuracy demonstrated by the Kriging model was within reasonable levels and the model was, thus, considered validated.
+A validation testing was carried out in order to verify the capability of the off-design correlations to predict the off-design performance. Three random designs were selected both for the cycle based on the GT A and for the cycle based on the GT B. The related values of the parameters are reported in 
+Table A2
+ and were allowed to range within the bounds previously established.
+Each design proposed was simulated at 25 of off-design conditions, defined to cover the entire range of possible operating conditions the cycle could be subjected to. In particular, operation at GT loads as low as 40% and 30% were simulated, respectively for the GT A and the GT B. These values were of significance because they were evaluated as the minimum GT loads at which the exhaust gas were able to meet the heat duty (i.e., 11 MW) with a reasonable flexibility margin, given the specific design of the WHRU considered. Those low GT loads levels were expected to occur when the wind farm was integrated to the combined cycle. The same operating conditions was also simulated with the high-fidelity model. The outputs of the comparative analysis are shown in 
+Table A3
+ as well as in 
+Figure A5
+, 
+Figure A6
+ and 
+Figure A7
+ as parity plots of selected parameters.
+The off-design performance of the cycle was generally well captured by the surrogate model, relying on the Kriging model and on the off-design correlations. Important parameters for the optimisation processes, like the net cycle efficiency (
+η
+cycle
+) and the CO
+2
+ emissions (
+ṁ
+CO2
+), were predicted with good accuracy even at low part-loads (see 
+Figure A5
+ with the parity plot of 
+η
+cycle
+). The simulation of the steam cycle demonstrated to be somewhat challenging, especially the heat transfer process in the OTSG. At low part-loads the accuracy of the correlation for the heat transfer coefficients started to diminish, resulting in less precise values of the steam parameters (see for example 
+Figure A7
+) and consequently in a larger error in the steam power output (
+P
+ST
+) calculated. This was particularly evident by looking at the parity plot of 
+P
+ST
+ in 
+Figure A6
+, where the region of low part-loads (i.e., the bottom left corner of the parity plot) is characterised by a larger scattering of the results. However, a proper tuning of the correlations allowed to contain the maximum error within few percentage points and the MAE close to 1%. Considering that the contribution of the ST to the total power output is rather small, the performance predictions at off-designs were deemed as adequate to be used in an optimisation procedure.

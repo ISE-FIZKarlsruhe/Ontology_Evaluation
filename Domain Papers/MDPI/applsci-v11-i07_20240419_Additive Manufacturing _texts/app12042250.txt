@@ -1,0 +1,668 @@
+Background—Aircraft inspection is crucial for safe flight operations and is predominantly performed by human operators, who are unreliable, inconsistent, subjective, and prone to err. Thus, advanced technologies offer the potential to overcome those limitations and improve inspection quality. Method—This paper compares the performance of human operators with image processing, artificial intelligence software and 3D scanning for different types of inspection. The results were statistically analysed in terms of inspection accuracy, consistency and time. Additionally, other factors relevant to operations were assessed using a SWOT and weighted factor analysis. Results—The results show that operators’ performance in screen-based inspection tasks was superior to inspection software due to their strong cognitive abilities, decision-making capabilities, versatility and adaptability to changing conditions. In part-based inspection however, 3D scanning outperformed the operator while being significantly slower. Overall, the strength of technological systems lies in their consistency, availability and unbiasedness. Conclusions—The performance of inspection software should improve to be reliably used in blade inspection. While 3D scanning showed the best results, it is not always technically feasible (e.g., in a borescope inspection) nor economically viable. This work provides a list of evaluation criteria beyond solely inspection performance that could be considered when comparing different inspection systems.
+Regular inspection of aircraft engines is essential for safe flight operations. Yet maintenance is a major contributor to aircraft accidents and incidents [
+1
+,
+2
+,
+3
+,
+4
+]. According to the Federal Aviation Authority (FAA) and the International Air Transport Association (IATA), incorrect maintenance has started the event chain of every third accident and of every fourth fatality [
+2
+,
+3
+]. Human factors are the dominant contributor to maintenance errors and account for approximately 80% of them [
+2
+,
+3
+,
+5
+]. Within those, search and judgement errors are the primary issue [
+6
+,
+7
+]. Furthermore, it is known that structural failures are the main reason for maintenance-related incidents and that those are likely to occur on the engine, e.g., facture of a blade [
+2
+]. Thus, engine inspection is arguable one of the most important maintenance, repair and overhaul (MRO) activities and is responsible for ensuring that all engine parts conform to the standard and meet all safety critical requirements. Any defect must be detected at the earliest stage to avoid propagation and any negative outcome.
+The visual inspection of engine blades, which is the area under examination here, is a highly repetitive, tedious and time-consuming task [
+8
+], performed by human operators, who are unreliable, inconsistent, subjective, prone to error and have different personal judgements based on the individual’s risk appetite [
+9
+,
+10
+,
+11
+]. Furthermore, inspectors must balance two conflicting aspects of visual inspection, namely safety and performance [
+12
+]. On one hand, no critical defect can be missed to ensure safe flight operation, while keeping the false-positive rate as low as possible. On the other hand, inspectors do not have a great deal of time and must meet the takt time to avoid causing a bottle neck to the operation. Beside the human element, there are other factors influencing the visual inspection of engine blades, including operational, environmental, procedural and part and equipment related factors [
+13
+,
+14
+].
+Hence, there was an interest to assess whether there is a technical system equivalent to the human that might overcome those limitations of human error and improve visual inspection quality and reliability, thus contributing to flight safety. The purpose of this research was to compare the human operators’ inspection abilities and performance in engine blade inspection with those of advanced technologies including image processing (IP), artificial intelligence (AI) and 3D scanning.
+In engine maintenance, there are two main types of engine blade inspection, namely: (a) borescope and (b) piece-part. A borescope inspection is the first means of assessing the engine’s health and is performed in situ, where the engine is still assembled (
+Figure 1
+a). If during borescope inspection a critical defect is found, the engine is subsequently committed to a tear-down. The disassembled engine blades are then inspected one by one during piece-part inspection (
+Figure 1
+b). As 
+Figure 1
+ shows, the inspection environments differ significantly from each other. While piece-part inspection can be standardised and provides somewhat ideal inspection conditions, a borescope inspection, in contrast, has a much higher variability e.g., due to space and illumination constraints.
+In aviation maintenance, several attempts have been made to either aid the operator or fully automate the inspection and repair process by introducing new technologies such as artificial intelligence in combination with robots [
+15
+,
+16
+,
+17
+,
+18
+,
+19
+] or drones [
+20
+,
+21
+] for defect detection of aircraft wings and fuselage structures [
+22
+,
+23
+,
+24
+,
+25
+,
+26
+,
+27
+,
+28
+], wing fuel tanks [
+29
+], tires [
+30
+] and composite parts [
+22
+,
+31
+,
+32
+,
+33
+,
+34
+]. The inspection and serviceability of engine parts such as shafts [
+35
+,
+36
+], fan blades [
+26
+,
+37
+], compressor blades [
+38
+,
+39
+] and turbine blades [
+8
+,
+40
+,
+41
+,
+42
+,
+43
+,
+44
+,
+45
+] is of particular interest as they are safety-critical, and thus unsurprisingly the most rejected parts during engine maintenance [
+46
+]. From a hardware perspective, the automation of inspection and repair processes is commonly done using robots. For in situ operations, recent developments focused on continuum robots, i.e., snakelike robots that combine the functionality of a borescope and a repair tool, comparable to endoscopic surgery in the health sector. The use of these continuum robots has been successfully demonstrated on coating repairs in the combustion chamber using thermal spraying [
+18
+,
+19
+] and blending, i.e., smoothing of edge defects on engine blades such as nicks and dents [
+16
+,
+17
+]. The following literature review focuses on studies that compared the performance of humans and advanced technologies. Advanced technologies are often referred to as machines [
+47
+,
+48
+,
+49
+], software [
+50
+], computers [
+51
+], artificial intelligence [
+52
+,
+53
+,
+54
+], neural networks [
+55
+,
+56
+], deep learning [
+57
+,
+58
+,
+59
+,
+60
+], machine learning [
+61
+,
+62
+], image processing [
+63
+], technological support [
+64
+] or automation [
+65
+], depending on the nature of the approach and underlying principles. In this paper, we use the term ‘advanced technologies’ representatively for image processing and artificial intelligence software and 3D scanning, being the main methods under examination.
+The performance of humans and software (predominantly AI) has been compared in various industries and different applications including speech and face recognition [
+54
+,
+65
+,
+66
+,
+67
+], object recognition and classification [
+48
+,
+55
+,
+57
+], translation [
+54
+], gaming [
+54
+], music classification and prediction [
+49
+,
+68
+], teaching [
+69
+,
+70
+], learning ability [
+61
+], communication [
+52
+] and autonomous driving [
+71
+,
+72
+].
+The healthcare industry in particular has had an increasing interest in developing advanced technologies in recent years [
+58
+,
+73
+,
+74
+,
+75
+,
+76
+]. The motivation lies in the necessity to assist the clinician and avoid incorrect diagnosis that could have severe, or even fatal consequences for the patient. Medical diagnosis is quite similar to quality inspections in the sense that professionals (clinicians or inspectors) perform an assessment of the human body or aircraft parts and search for any indications or alarming conditions that might hint at a disease of defect, respectively [
+6
+,
+9
+,
+10
+]. The consequences of a missed adverse anomaly can be critical in both cases. Moreover, no defect or condition is identical to another, although the human body can be seen as being more complex than manufactured engine blades [
+9
+]. In both cases the assessor needs to be versatile to be able to detect these various anomalies.
+The diagnostics performance of clinicians and AI software for medical imaging has been analysed and compared for a variety of medical assessments, including detection and characterisation of acute ischemic stroke [
+50
+], age-related macular degeneration [
+60
+], breast cancer [
+76
+] and lesions [
+59
+]. Liu et al. provided a comprehensive literature review on deep learning and performed a meta-analysis using contingency tables to derive and compare the software performance with healthcare professionals [
+58
+]. Those authors showed that the results of deep learning models are comparable to the human performance. They also noted that the performance of AI is often poorly reported in the literature, which makes human–software comparisons difficult. Only a few studies were found that used the same sample to measure both the performance of AI and human [
+50
+,
+59
+,
+60
+,
+76
+]. This limits the reliable interpretation of the reported performances in [
+58
+] and the results should be viewed with caution.
+For quality inspections, Kopardekar et al. [
+77
+] reviewed the literature on manual, hybrid and automated inspection systems and provided a comprehensive summary of those studies, including factors influencing human inspection performance and an overview of advanced digital technologies used for automated visual inspection systems (AVIS). The authors concluded that some inspection tasks cannot be fully automated due to the nature and complexity of the inspection, thus a human is unlikely to be replaced by a machine. Likewise, there are inspections that cannot be performed by human operator due to the inspection environment, e.g., inspection of hot steel slabs [
+77
+].
+Different image processing approaches for defect detection in textiles were compared in the work of Conci and Proença [
+63
+]. This study suggests that the performance highly depends on the selected approach and defect type. Thus, in the present study we analysed the inspection performance of a variety of defects.
+Only one study by Drury and Sinclair [
+47
+] was found that compared human and machine performances. The study analysed an inspection task of small steel cylinders for any defects, including nicks and dents, scratches, pits and toolmarks. Neither the human nor the automated inspection system showed an outstanding performance, specifically for nicks and dents. The inspection machine was able to detect most faults but was inconsistent in the decision, i.e., whether the finding was acceptable or had to be rejected. Overall, the inspectors outperformed the inspection machine due to their more sophisticated decision-making capabilities. The field of automated inspection and artificial intelligence has since evolved significantly [
+78
+,
+79
+]. Thus, it must be evaluated if the findings and such statements are still valid.
+3D scanners are commonly used to measure the shape of an object. The literature review revealed that like AI, most research on this topic was conducted in the medical sector. Previous performance comparisons of 3D scanners with humans were done for measuring wounds [
+80
+], foot and ankle morphology [
+81
+], and other body parts [
+82
+]. An interesting study by Reyes et al. used an intraoral scanner for colour scans of teeth and compared the performance on dental shade matching with those of dentists [
+83
+]. In their study a colour scale was used as opposed to a metric scale to measure the characteristic of (body) parts. Kustrzycka et al. [
+84
+] compared the accuracy of different 3D scanners and scanning techniques for interoral examination. The only work in an industrial context was undertaken by Mital et al. [
+85
+], who analysed the measurement accuracy of a manual and hybrid inspection system. The measurement results of the manual examination being performed by human operators using a vinier calliper were compared to the outcomes of a hybrid inspection system aiding the human operators with a coordinate measuring machine (CMM). The findings show that the hybrid system led to shorter inspection times and fewer errors than the manual measurement. Khasawneh et al. [
+86
+] addressed trust issues in automated inspection and how the different inspection tasks can be allocated in hybrid systems that combine the human operator and an automated inspection system.
+No work was found that applied 3D scanning for inspections and compared the performance to a human operator in an industrial environment such as manufacturing or maintenance.
+The purpose of this research was to compare a human operators’ inspection abilities and performance with those of advanced technologies including image processing (IP), artificial intelligence (AI) and 3D scanning. The study comprised three human-technology comparisons for three different inspection types, namely: piece-part inspection, borescope inspection and visual-tactile inspection. We introduced the term ‘inspection agent’ when referring to both the human operator and technology. The performance of the inspection agent was measured in form of inspection accuracy, assessor agreement (consistency) and inspection time. The results were statistically analysed and compared against each other. The assessment of the inspection abilities was done using a weighted factor analysis and included additional criteria such as technology readiness level, agility, flexibility, interoperability, automation, standardisation, documentation and compliance.
+An overview of the research design, research sample, study population, demographics and technological comparison partner is provided in 
+Table 1
+ and will be further described below. For a fair human–technology comparison, we followed the guidelines of [
+48
+] and constrained the human with software-like limitations, and vice-versa. For example, in comparisons 1 and 2 both inspecting agents had to inspect photographs as opposed to physical parts. This was done to generate equal study conditions.
+This research project received ethics approval from the University of Canterbury Ethics Committee (HEC 2020/08/LR-PS, HEC 2020/08/LR-PS Amendment 1, and HEC 2020/08/LR-PS Amendment 2).
+The research motivation was to assess the performance of advanced technologies and whether they can assist a human operator with difficult detectable defects that are often missed. Thus, the research sample was intended to cover a variety of different defect types and severities, with specific focus on the challenging threshold defects. High-pressure compressor (HPC) blades of V2500 gas turbines with airfoil dents, bends, dents, nicks, tears, tip curls and tip rubs were tested in the study. Non-defective blades were also included. The sample size varied between the three comparisons and included 118 blade images, 20 borescope images and 26 physical parts for piece-part, borescope, and visual-tactile inspection, respectively. For each comparison, the exact same set of blades was presented to both the human operator and technological inspection agent. For more details about the image acquisition process please see [
+88
+].
+For this research, we recruited 50 industry practitioners from our industry partner. More specifically, there were 18 inspectors who performed visual inspections on a daily basis. Another 16 engineers occasionally inspected parts typically during failure analyses. The job of the remaining 16 assembly operators involved checking the parts for inhouse damage. Thus, all participants had some form of inspection experience. Overall, participants had between 1.5 and 35 years of practical work experience in the field of engine maintenance, repair and overhaul. More detailed information about the participants’ demographics can be found in [
+9
+,
+87
+].
+For the comparison, three different technologies were tested, namely image processing software, deep learning artificial intelligence (AI) software, and 3D scanning. Each of those is introduced in the following.
+Self-developed software using an image processing approach was used for the inspection of the piece-part images [
+88
+]. The software fundamentally applies a series of algorithms to pre-process the image, create a model and compare it to a reference model. After the image undergoes noise reduction and greyscale conversion, an edge detector is used to extract the features, specifically the contour of the blade. This is then compared to a reference model of an undamaged blade. Any deviation from the reference models is highlighted by a rectangular bounding box. A detailed description of the image processing approach is described in [
+88
+].
+Artificial intelligence (AI) approaches use deep learning algorithms that are trained on labelled images. It is well understood that training AI requires several thousands of images for each defect type (class) to create a reliable model [
+90
+,
+91
+,
+92
+,
+93
+], with a borescope inspection necessitating even larger datasets due to its nature and inherent variability [
+94
+]. The current project used a commercial prototype AI, the development and training of which was external to the present project. For all practical purposes it was a black box in the present study, and merely represents a point of comparison as to what AI is currently capable of achieving. The purpose of the present study was not to compare between different AI systems.
+There are several technologies available to scan an object, both with contact and contactless. The most common 3D scanning systems are coordinate measuring machines (CMM) that physically scan (‘touch’) the part via tactile probing; and contactless 3D scanners that typically use a source of light, laser, ultrasound or x-ray and measure the wave reflection or residual radiation when sensing the part [
+95
+]. The 3D scanner used in this project was an Atos Q (manufactured by GOM, Braunschweig, Germany). This device works with structured light, which means that different light patterns are projected onto the object and the distortion is measured when the patterns are reflected on the object. Stereoscopic cameras take images of those patterns which are triangulated to calculate millions of data points forming a point cloud that resembles the scanned part. Thus, 3D scanning allows the sensing of the blade’s contour and detects any irregularities, just like the operator with their hands.
+This technology has already been used in the quality assurance process of blade manufacturing to ensure that blade dimensions are correct and within limits, e.g., to confirm the minimum airfoil thickness of turbine blades is met [
+96
+]. However, it has not yet been applied to MRO whereby operational damages such as FOD must be detected, assessed and a serviceability decision made.
+Human operators assessed in previous studies [
+9
+,
+10
+,
+11
+,
+87
+] were asked to mark their findings on the computer screen by drawing a circle around the defect. The only exception was the visual–tactile study, whereby participants were asked to verbalise their findings as opposed to mark them on the physical blade. Further details regarding this can be found here [
+87
+].
+Both of the software, image processing for piece-part inspection and AI software for the borescope inspection, were presented with the same images as the human operator. The software output was in both cases the input images with marked defects in the form of a bounding box drawn around the identified area, if the software detected any anomaly. If no defect was found, the software returned the input image without a bounding box.
+In 3D scanning, any anomaly identified by the system was highlighted (colour coded in red) in the output file.
+All collected data were interpreted using the performance metrics of the confusion matrix, as highlighted in 
+Table 2
+. The same interpretation ‘rules’ apply to the output data of all inspection agents, no matter if the finding was manually marked by a human operator, highlighted by the software with the bounding box, or colour-coded in the 3D scanning files.
+This study used a mix of quantitative, qualitative and semi-quantitative assessment methods for the analysis and comparison of a human operator and advanced technologies. First, the inspection performance of the different inspection agents was quantitatively analysed by determining the inspection accuracy, inspection time and inspection consistency. Hypothesis testing was used to analyse whether the results of the operator statistically differed from the technological counter partner, or if the difference was purely due to chance (
+Table 3
+). As the data were not normally distributed, nonparametric testing was required. Mann–Whitney U Test and Wald–Wolfowitz Runs Test were chosen for comparing two independent non-normally distributed samples. The statistical analysis was done in Statistica, version 13.3.0 (developed by TIBCO, Palo Alto, CA, USA).
+Next, the strengths, weaknesses, opportunities and threats of each inspection agent were identified using a SWOT analysis.
+Finally, an attempt of proof of concept was made to semi-quantitatively assess the different agents and rank them using a weighted factor analysis. The importance (weighting) of each criterion was determined performing a pairwise comparison, also called paired comparison [
+97
+]. This was done in close collaboration with our industry partner to incorporate the industrial aspect.
+The inspection accuracy (reliability), inspection time, and inspection consistency (repeatability) of each inspection agent are reported along with some general observations made that will be important for the subsequent human–technology comparison. It should be noted that the inspection time refers solely to the processing time of the inspection agent.
+The performance of the human operator has been evaluated in depth in previous work [
+9
+,
+10
+,
+11
+,
+87
+] and the results are summarised as follows. The combined inspection accuracy for screen-based piece-part inspection of engine blades with a variety of defect types, severity levels and part conditions is 76.2% [
+9
+,
+10
+,
+11
+,
+87
+]. When operators were given the actual (physical) part and allowed to use their hands to feel the blade and apply their tactile sense, an accuracy of 84.0% was achieved [
+87
+]. In borescope operations the inspection is always made based on a digital presentation of the parts on a screen. The inspection accuracy in such situation was determined to be 63.8% [
+10
+].
+The inspection time differed between the different inspection types. Screen-based piece-part inspection was the fastest with 14.972 s, followed by the borescope inspection with 20.671 s on average. Allowing the operators to touch and feel the blade led to the longest inspection times of 22.140 s [
+87
+].
+The assessment of the inspection consistency and repeatability revealed that operators agreed with themselves 82.5% of the time, and 15.4% of the time with each other [
+11
+].
+For a detailed evaluation of the human inspection, please refer to [
+9
+,
+10
+]. The authors applied eye tracking technology to assess the search strategies applied by different operators and to determine the inspection errors.
+The software for piece-part inspection correctly detected 42.2% of defects, while incorrectly identified 27.8% of non-defective blades as defective. This equals an inspection accuracy of 48.8%. The processing time for each image ranged from 186 to 219 ms. An average inspection time of 203 ms was achieved. When processing the same set of images twice, the results remained unchanged. Thus, the repeatability of the inspection software was 100%.
+Several observations were made, when processing the images and analysing the results. Since the software was developed for defects on the leading and trailing edges (e.g., nicks, dents, bends and tears), defects on the airfoil surface such as airfoil dents as well as defects on the tip (e.g., tip rub) were often missed. An example of a missed airfoil dent is shown in 
+Figure 2
+d.
+Furthermore, it was found that defects with a pronounced or ‘sharp/rough’ deformation of the edge led to higher detection rates. This was evident from the high inspection accuracies of tip curls, tears and nicks (example in 
+Figure 2
+a), while smoother deformations like bends and dents showed lower performances (example in 
+Figure 2
+c). Dirty blades with built-up deposits on the edges were the main reasons for false positives (refer to 
+Figure 2
+b).
+Moreover, a white background led to the best detection rates, followed by a yellow background colour. It should be noted that the images are transformed into greyscale as part of the image processing. The difference in performance could be explained by lighter colours, such as white and yellow, leading to lighter grey tones, thus showing a higher contrast between the blade and background. This was also evident when processing images of shiny, silvery blades that showed a poor contrast to the background, when transformed into greyscale.
+The AI software achieved an inspection accuracy of 47.4%, with a processing speed of 30 to 60 images per second. This translates to 17–33 ms per image, which on average results in a processing time of 25 ms. Repeating the assessment of the dataset led to the same inspection results, thus the software was 100% consistent.
+AI was able to successfully detect anomalies on the blade edges (
+Figure 3
+a) and airfoil surfaces (
+Figure 3
+b). However, one of the challenges the software experienced was to differentiate defects and deposits. In several cases acceptable deposits were marked as defects (
+Figure 3
+c,d). Since the software was developed to assist the human operator, it was trained to pick up any anomalies and present the results to the operator, who then makes a serviceability decision. Thus, highlighting deposits is a safety cautious approach and is desirable to assure no critical defects are missed. However, it is concerning that other critical defects were missed (
+Figure 3
+f) although their appearance is somewhat similar to the previously mentioned deposits (
+Figure 3
+d), i.e., salient due to the high contrast between the defect and blade.
+Performance was highly dependent on the borescope camera perspective and lighting. Particularly difficult to detect were defects on blades that were poorly lit, as shown in 
+Figure 3
+e. Furthermore, the location of the defect in the image (centre vs. corner) might have influenced the detectability (
+Figure 3
+d). Without a detailed understanding of how the algorithm works, no further interpretations of the results can be made.
+It shall be noted that for the purpose of this study, borescope stills were presented to the AI. This was done to allow for an ‘equal’ comparison of the human operator and software performance. In practice however, the AI would be presented with a borescope video (i.e., a series of images), thus having multiple opportunities to detect a defect when the blade rotates past the borescope camera. This would further provide some slightly different angles and lighting conditions depending on the relative position of the blade, camera and light source. Therefore, the inspection performance is likely to improve when processing borescope videos and could be analysed in future work.
+The 3D scanner successfully detected any deviations from the gold standard, i.e., 100% defect detection. The full blade scan and processing of the scan data took just under a minute (approx. 55 s). Repeated scanning resulted in the same inspection outcome, i.e., blades rejected in the first round of inspection were also rejected in the second round. The same applied for accepted blades. Thus, the scan repeatability was 100%. While it is known that any measurement systems including 3D scanning have a measurement error, this did not affect the inspection results of this study.
+The results can be visualised in different ways using colour coding to highlight the deviation based on (a) metric measurements, (b) severity levels and (c) as accept/reject criteria. An example of each representation is given in 
+Figure 4
+. For the purpose of this study, the accept/reject representation was chosen, since it allows comparison of the results with the IP and AI software. In the scan output, any deviations between the scanned and nominal blade are coloured in red. This corresponds to the bounding boxes in the borescope and piece-part inspection software.
+The scanner was successful in detecting a variety of defects including tears (
+Figure 4
+a), nicks and dents (
+Figure 4
+b and 
+Figure 5
+c), bends (
+Figure 4
+c), tip curls (
+Figure 5
+a), as well as airfoil dents (
+Figure 5
+b). The effect of deposit build-up on the edges—a common cause for false positives in human inspection—was not tested in the present study. Accepting ‘offsets’ to the ground truth model might lead to better inspection results since deposits are being accepted (avoiding false positives), or contrarily, it could decrease the inspection performance as other defects (e.g., corrosion) might be incorrectly accepted (increasing false negatives). This would be an interesting assessment for future work.
+The inspection agents were compared quantitatively, qualitatively and with a combination of both. First, a comparison of the inspection performance was made and statistically analysed. Subsequently, the strengths, weaknesses, opportunities and threats were identified. A weighted factor analysis was applied to allow for the inclusion of other factors that were more difficult to quantify than the inspection performance.
+Performance was compared based on the achieved inspection accuracy, inspection time and consistency. Furthermore, the defect types that were difficult to detect by either or both inspection agents were identified.
+The achieved inspection accuracy of the human operator in the piece-part inspection was 76.2% and was significantly higher than the software with 48.8%, U = 179,252.0, 
+p
+ < 0.001. The operators agreed, on average, 82.5% of the time with themselves when inspecting the same blade twice. The technological systems in contrast made the same serviceability determination each time, thus showing higher repeatability than the human operator, Z = −2.347, 
+p
+ < 0.05. A similar observation was made for the inspection time that differed significantly between the two inspection agents, Z = −4.950, 
+p
+ < 0.001. The software took 203 ms which was only a fraction of the time of the human operator, who needed, on average, 14.972 s. In other words, the software was able to process 74 blade images in the same amount of time the operator needed for a single blade.
+Figure 6
+ shows the mean plot of the inspection accuracies achieved by each inspection agent for each type of defect. The operator consistently outperformed the software on all defects except tip curl and non-defective blades. The biggest difference in detection accuracy occurred for airfoil dents. This was because the software was programmed to detect edge damage, not airfoil defects. Furthermore, it was noticed that the software performance was proportional to the amount of deformation of the blade, i.e., smaller defects such as nicks, dents and minor tip rub were more difficult to detect than more advanced and salient detects including bends, tears and tip curls (airfoil dents < dents < tip rub < nicks < bends < tears < tip curl). The human operator had a similar but not identical order of successful defect detection (dents < airfoil dents < bends < tip rub < tip curl < nicks < tears). This order represents the criticality of the different defect types rather than solely their appearance, although the two were somewhat correlated. There is a chance that the operators consciously or unconsciously applied their underlying mental model [
+9
+], which might have influenced their decision making, i.e., they know what defect types are more critical than others. The software does not have that contextual knowledge and relies solely on the visual appearance of the defect.
+All tip curls were successfully detected by the software, while the operator missed 11% on average. The second category for which the inspection accuracy was higher for the software than the operator was non-defective blades. This indicates that the software is not as sensitive to anomalies as the human operator is. While it is generally desirable to reduce the false-positive rate, this should not be at the expenses of high false-negative rates, i.e., missing critical defects. A high detection rate (even if incorrect) might be acceptable if the software is used as an inspector-assisting tool that highlights any anomalies but leaves the judgement to the human operator.
+In the borescope inspection, the human operators detected 63.8% of defects and inspected more accurately than the software (47.4%), U = 6963.5, 
+p
+ < 0.001. However, the software was significantly faster at processing the image, Z = −4.950, 
+p
+ < 0.001. The average inspection time per blade was 25 ms for the AI and 20.671 s for the human operator.
+The false-positive rate of the software was twice as low as the human operators’ (
+Figure 7
+). As previously shown, a low false-positive rate is generally preferred as it means that less serviceable (i.e., good) parts are scrapped or committed to unnecessary repair work. However, this should not be at the expense of missing critical defects, as is the case here. The software was not able to detect any bends and also struggled to detect some nicks and dents on the edges, with both detection rates being 50% below the operators’ performance. Tears were the only defect type where the performance of AI was comparable to the human operator.
+Surprisingly, the location of the defect in terms of leading or trailing edge did not play a crucial role, but rather the absolute location in the image did (centre better than corners). Another interesting finding was that the operator seemed to be more cautious in the borescope inspection. This was evident in the higher false-positive rates, i.e., more conditions were identified as defects than in the piece-part inspection.
+In the last comparison, the operators’ performance was compared to a 3D scanner. While the human was able to detect 84.0% of defects, the scanner was able to perceive any deviations in shape (even very small ones), thus outperforming the human, U = 1703.0, 
+p
+ < 0.05. This outstanding performance was at the expense of inspection time. The 3D scanner took approximately 55 s for a full scan of the blade. In contrast, the human operators, with 22.140 s, were twice as fast and thus more efficient, Z = −1.581, 
+p
+ < 0.05.
+The mean plot of achieved detection rates in 
+Figure 8
+ shows that the greatest potential for 3D scanning lies in the inspection of bends, dents and nicks. Moreover, the incorrect removal of serviceable blades from service could be eliminated by 3D scanning the parts. The scanning and processing time of the data took approximately 55 s—twice as long as the operator—and did not include the setup time. Thus, while scanning each blade might lead to optimum inspection accuracy and quality, it is a time-consuming task that could create a bottle neck in the operation. Thus, both measures should be taken into account when considering 3D scanning for blade inspection.
+A SWOT analysis was performed to identify the strengths, weaknesses, opportunities and threats. The results are summarised in 
+Table 4
+. Following the definition of SWOT analysis for project management, strengths and weaknesses have internal origins (attributes of the organisation), while opportunities and threats are of an external nature (attributes of the environment). In the context of this study, we defined the internal factors as attributes related to the inspection agent and their performance, while external factors concerned the inspection environment including operational processes and procedures, policies and regulation compliance, interoperability, automation and connectivity.
+First, criteria had to be established based on which the inspection agents would be compared against each other. This was done in a brainstorming session with industry practitioners to capture the operational relevance of each factor. The chosen factors and a description thereof are listed in 
+Table 5
+.
+Next, the weightings of the criteria had to be determined. Therefore, a pairwise comparison was used (
+Figure 9
+). Each criterion was compared against the others. If criterion A (first column) was less important than criterion B (first row), it received a score of 0. In contrast, if criterion B was more relevant than criterion A, a score of 2 was given. If the criteria were of equal importance a score of 1 was given. Subsequently, the points were summed up for each criterion and the percentage calculated. The results showed that inspection accuracy, inspection time and inspection consistency were most important, followed by flexibility and compliance. The ranking can be explained by the necessity to of achieve a performance similar to or better than the human operator in order to consider an alternative inspection agent. Thus, the performance metrics can be seen as a ‘circuit breaker’.
+The weightings were used for the subsequent weighted factor analysis (
+Figure 10
+). Each inspection agent was rated based on the criteria on a scale from 1 to 5, with 5 representing the highest fulfilment of the criteria. The score was multiplied by the weighting into a weighted score. The weighted scores were then summed for each inspection agent to form the total score. The ranking of the different agents was based on the total score. In this study the inspection performance and capabilities of blade inspection were assessed. The weighted factor analysis revealed that 3D scanning was the most suitable option for this type of inspection (total score of 380.8). The AI software came second with a score of 327.6, closely followed by the human operator, who achieved a weighted score of 319.2. The image processing software received the lowest score of 241.0.
+It should be noted that the pair-wise comparison and weighted factor analyses were a proof-of-concept to demonstrate that these methods are useful for human–technology comparisons in general. However, the ratings depend on the specific application, industry needs and user case. Thus, the presented ranking of the criteria and the scoring of the different inspection agents is case specific and should not be seen as representative.
+This study compared a human operator to advanced technologies including image processing and AI software, and 3D scanning. The comparison comprised a quantitative assessment and statistical analysis of the inspection performance. Subsequently, the strengths, weaknesses, opportunities and threats of each inspection agent were identified, and a weighted factor analysis was introduced as a method to semi-quantitatively compare and rank the different options.
+A summary of the achieved inspection performance, measured in inspection accuracy, inspection time and inspection consistency of each inspection agent is presented in 
+Table 6
+ and further discussed below.
+Each technological system was limited to the type of inspection it was developed for, while the human operator was able to accomplish all the different inspections. The human operator was more tolerant of different inspection conditions such as dirty blades, different types of defects and different inspection environments (in situ vs. on bench) along with their viewing and lighting restrictions, e.g., in the borescope inspection. This is consistent with [
+86
+] who found that the human’s cognitive abilities of irregularity recognition, decision-making and adaptability to new inspection environments was superior to advanced technologies.
+There was only one study in the field of visual inspection that allowed for a direct comparison to the present work, which was Drury and Sinclair [
+47
+]. Those authors found that human operators outperformed the automated inspection system. This aligns with our findings, which compared a human to inspection software (image processing or AI based). In the visual–tactile inspection however, the opposite was the case. The 3D scanner did not miss a single defect, whereas the human operator was, on average, only 84% accurate with their inspection. Drury and Sinclair further stated that humans showed a lower false-positive rate than the automated system [
+47
+]. This finding was not supported by the present study, as the software seemed to be less sensitive to anomalies and accepted more non-defective blades than the human operator. While a low false-positive rate is generally desirable, this should not be at the expense of missing critical defects (false-negatives). Another interesting finding of the previous study [
+47
+] was that only 56.8% of inspectors detected low-contrast defects such as nicks and dents. Of those, another 24.8% of operators incorrectly classified the defect as acceptable, making it a total of 42.7% of the research population who missed or incorrectly accepted those two defect types. This was somewhat similar to the 38% reported in [
+10
+]. The present study confirmed this difficulty that human operators demonstrate when inspecting low-contrast defects in all three inspection types. Particularly in a challenging environment such as in borescope inspections, the detection rate for nicks and dents was poor [
+10
+]. Nonetheless, the detection rate was 83% and 87% for nicks and dents, respectively, which is still higher than in [
+47
+]. This might be explained by the negative impact a missed defect has in this industry. Those were the same types of defects the IP and AI software struggled with. Thus, there was a similar performance curve for the software across the different types of defects, but overall, it was lower than the human operator. As previously mentioned, this was different for the 3D scanner that detected all defects.
+Furthermore, [
+47
+] concluded that the inspection device had a worse false-alarm rate than the operator. Based on our findings, we would tentatively suggest that a higher false-positive rate would have been acceptable if the majority of defects had been found. However, since this was not the case, the sensitivity of both software must be improved to be comparable to the human operator.
+The strength of the inspection software lies in the computational power and fast processing speed [
+98
+,
+99
+]. Results showed that both algorithms (IP and AI) required a fraction of the time of the human, excluding the setup time. However, as mentioned above, the defect detection rates were not comparable. Conversely, the inspection time of the 3D scanner for a full scan and analysis of the scan data was twice as long as the human operator.
+Kopardekar et al. [
+77
+] stated that the image processing speed should not limit the throughput. However, there is also the time required for part preparation and image acquisition in software inspection. For 3D scanning, there is also a setup time, which can take up to four times the processing time. If not fully automated, the setup time can account for the greatest proportion of the overall time. This must be considered from an operational perspective when making the decision to implement advanced technologies and selecting the most appropriate one.
+All three technological systems showed perfect repeatability for the present research sample, i.e., the systems consistently made the same serviceability decision when presented with the same part twice. The human operator in contrast was, on average, consistent only 82.5% of the time. However, five operators (10%) showed a consistency of 100%. No previous study was found that applied repeated inspection to measure the repeatability of the inspection performance, possibly because it is expected that any technology would perform highly repeatably.
+The strengths, weaknesses, opportunities and threats of each technology were identified and compared with the human operator. In summary, both humans and advanced technology were not perfect and came with their own benefits and limitations. An overview of the generic pros and cons is provided in 
+Table 7
+. Generally, the strength of one system (human) is the weakness of the other (technology), and vice versa. Thus, some factors may be listed only once to avoid repetition.
+This work assessed the performance of different technologies for visual blade inspection. In this context, 3D scanning showed the highest inspection accuracy, while offering the ability to quantify the defect. However, it is not always technically feasible (e.g., in a borescope inspection) nor economically viable. In such instances, software might be a more suitable option. The choice of the type of software is dependent on the number of parts being inspected each year and the ratio of defective blades. If the sample size is sufficiently large for deep learning, then an AI approach could be used, which provides the most flexibility. Previous research [
+88
+] showed that similar performance can be achieved using conventional image processing approaches. This is particularly beneficial if only a few samples parts are available.
+One of the advantages of advanced technologies is the documentation of inspection findings. 3D scanning would enable the creation of a digital twin (model) of the blade. This might enable tracking the deterioration and wear of a part over time and could possibly be fed back into the design process of new engine blades (reverse engineering).
+The visual–tactile inspection of engine blades is a tedious and highly repetitive task. There is a risk of causing numbness, wrist joint pain or upper limb disorder [
+101
+,
+102
+]. Thus, considering 3D-scanning could not only improve the inspection quality, but might be also interesting from an ergonomics and health & safety perspective.
+To ascertain if advanced technologies can be superior to the human performance by overcoming human factors, more comparisons are required [
+85
+]. The most suitable inspection tasks for automation are typically ones with large volumes, high speeds and simultaneous checks. Less suitable are inspections of complex parts with rare defects under varying conditions that require contextual knowledge and complex reasoning.
+When the assessment of advanced technology does not provide satisfying performance results, an alternative improvement strategy should be chosen. Rather than investing into potentially expensive technologies, a company could, in such circumstances, aim to provide better training [
+103
+], optimised workplace design [
+104
+], revised standards [
+105
+] and improved processes [
+105
+]. This might be a more cost-efficient and effective way of improving an inspection system.
+Organisations might consider implementing advanced technologies when aiming for one or more of the following: (a) improving inspection quality, i.e., the accuracy and consistency, (b) increasing efficiency by reducing inspection time that is considered as waste, (c) streamlining inspection processes, (d) reducing labour cost, (e) avoiding manual handling either to protect the part (sensitive) or the operator (unsafe environment), (f) monitoring the inspection process in real time or (g) reducing human error by eliminating subjective evaluation.
+The findings of this study could be useful for organisations that are considering investing into advanced technologies. While the present work specifically addressed the visual inspection of engine blades, the applied approach and insights might be transferable to other part inspections, processes and industries. The SWOT analysis and weighted factor analysis have been proven to be useful when comparing factors that are difficult to quantify and for unequal inspection agents, such as humans and technologies. Since the three agents were applied to three different types of inspection, companies could repeat the assessment using those methods and their own list of criteria that are relevant to the specific organisation and operational situation.
+It is a matter of debate whether new technologies such as artificial intelligence will cause job losses or will create new and possibly more interesting jobs. The World Economic Forum predicts that significantly more jobs will be created than lost [
+106
+]. Advanced technologies such as automated inspection machines have the potential to take on the highly repetitive and tedious tasks and free up the human operator. For the operator this means less strain and being able to focus on their expertise, higher skills and more fulfilling tasks, which may provide more motivation and excitement, leading to higher job satisfaction. From an organisation perspective, employees can do more difficult and value-added activities that cannot be automated and require fundamental knowledge and more sophisticated decision-making abilities, e.g., development of new innovations to enhance productivity and processes. There is also potential for ‘hybrid intelligence’, as discussed later.
+There are several limitations, some of which have already been addressed in previous sections. The attempt was made to perform a ‘fair’ (equal) comparison [
+48
+] by presenting the same dataset in each comparison to both inspection agents. While the research sample was equal it was not necessarily equitable. The authors acknowledge that the research design was rather in favour of the technology and might have limited the human performance. This limitation was accepted to allow for the utilisation of eye tracking as part of this research project [
+9
+,
+10
+]. In concrete terms, this means that in comparisons 1 and 2 the inspection agents were presented with images as opposed to borescope videos or physical parts. Only in comparison 3 were the operators given the blades, which allowed them to view them from different angles and use their tactile sense (further discussed below).
+The image processing software in comparison 1 was developed for detecting edge defects, such as nicks, dents, tears, tip curls and tip rub, and was unable to detect defects on the airfoil surface, e.g., airfoil dents. This decision was made due to edge defects being the most critical and common types of defects. To represent the real situation in MRO, a similar defect distribution was assessed, and thus most blades had damage on the leading and trailing edges. Only a small proportion of airfoil defects were included due to their rare occurrence. Therefore, the performance of the software was only marginally affected by this limitation.
+The limitation in the borescope comparison was that both the human and AI were presented with images rather than borescope videos for the same reason as above. Seeing the blade rotating past the borescope camera from slightly different angles and under varying lighting conditions might provide additional information. With 30–60 frames per blade (depending on frame rate) the AI has a higher chance of detecting a defect than on a single image. Likewise, the operator has multiple frames per blade to detect any anomaly. However, the computational power of the software is much greater, and the AI can process every single frame, whereas the human operator might only perceive every fifth frame due to the rotational speed [
+107
+]. On the other hand, the operator has contextual knowledge and the cognitive ability to perceive motion, which might provide additional cues that hint at defects. In summary, both inspection agents were tested under somewhat non-ideal conditions; and performance might improve when presented with videos. This would be an interesting topic for future work.
+The 3D scanner created a model of the blade and compared it quantitatively with the nominal. The operator, in contrast, had to sense the blade using their eyes and fingertips to look for and feel for any irregularities in the shape. However, they were unable to quantify the deviation (in metric terms). Measuring tools (e.g., shadowgraphs) were not provided because in practice the operator would make a serviceability determination based on a (subjective) perception. Measuring every blade is time consuming and not economical.
+The weighted factor analysis in 
+Section 5
+ attempted to provide a proof-of-concept for rating different inspection agents based on a variety of criteria. Both, the scores of the pairwise comparison and of the weighted factor analysis were assigned to the authors’ best knowledge, but could be subjective, particularly for non-quantifiable factors. In future, the scoring process could apply the nominal group technique [
+108
+] to reduce the subjectivity of the scoring system.
+Several future work streams have been proposed previously and are not repeated here. It is well understood that manual inspection is not error free, while full automation of the inspection processes is not always technically feasible or economical [
+77
+]. Thus, hybrid systems, combining the strengths of both human operators and advanced technologies, offer potential for future research. Rather than comparing the individual performances and capabilities of each inspection agent independently, the combined performance of such technology integrated inspection systems could be assessed, i.e., do human operators perform better when aided by technology? Attribute agreement analysis and eye tracking could be used to extract any improvements in their performance and search approach. There are several conceivable scenarios concerning the integration of human operator and technology: (a) the technology could be used as a ‘pre-scan’ highlighting any anomalies and leaving the defect confirmation and serviceability decision to the operator, (b) both agents inspect the parts independently and only in cases of disagreement is the expert is consulted. Those and other options could be evaluated to ensure optimal utilisation of both agents.
+There is a potential that by implementing a hybrid inspection system, the operator undergoes some form of training, as they must evaluate not only their own findings but also the ones of the aide. This might improve the underlying mental model [
+9
+,
+10
+] of the operator to the extent that their sensing gets stimulated by the findings of the aide, i.e., other conditions and defect manifestations that would have otherwise not attracted the operators’ attention. Future work could investigate the possibility of using advanced technology for training purposes.
+Previous work [
+10
+,
+87
+] has indicated that human operators have been inaccurate in their defect classification. The classification performance was not tested in the present study due to the limitations of the technological systems. In principle, however, it is possible to program a classification algorithm and compare it to the accuracy of the human operator. The classification accuracy could then be added to the weighted factor analysis.
+SHERPA (developed by [
+109
+]) applies hierarchical task analysis to anticipate deeper causes of human error. The present study did not explore for such deeper causality, and to do so would require the prior development of a classification system or taxonomy of human errors. This might be an interesting and useful avenue of future research. The SHERPA taxonomy (action, check, retrieval, communication, selection) may or may not be the best way forward for the specific case of visual inspection, as it is weaker on the cognitive processes than the existing visual inspection framework [
+10
+]. Somewhat related work, from a SHERPA perspective, is evident in [
+110
+] for the construction industry. Possibly a Bowtie approach might be considered because this is well attested in the aerospace industry. Furthermore, a taxonomy of blade defects already exists [
+111
+], as does a Bowtie of human error for the inspection task [
+13
+,
+14
+].
+This research makes several novel contributions to the field. First, 3D scanning technology was applied to scan damaged blades. This was different to previous applications in manufacturing, where parts were inspected as part of the quality assurance process to ensure that they conformed to the standard and the critical sizes were within manufacturing limits. In a maintenance environment however, parts are in used condition and need to be inspected for operational damage, such as nicks, dents or tears. To the authors’ best knowledge, this is the first study that applied 3D scanning to attribute inspection.
+Second, this work presents the first human–technology comparison in the field of visual blade inspection with ‘state-of-the-art’ technology (at the time the research was conducted). The basis for the comparison was the inspection performance measured in accuracy, time and consistency. Furthermore, this work provides a list of additional evaluation criteria beyond the sole inspection performance that could be considered when weighing up different inspection systems. An attempt was made to semi-quantitatively compare the different agents based on those criteria using a SWOT and weighted factor analysis. The defect types that were difficult to detect by the different inspection agents were identified and compared.
+Several implications for practitioners and future work streams were suggested, specifically regarding hybrid inspection systems. The results of this work may contribute to a better understanding of the quality management system, the current performance of both humans and advanced technologies, and the strengths and weaknesses of each inspection agent.
+Conceptualization, J.A.; methodology, J.A.; validation, J.A.; formal analysis, J.A.; investigation, J.A.; resources, D.P.; data curation, J.A.; writing—original draft preparation, J.A.; writing—review and editing, J.A. and D.P.; visualization, J.A.; supervision, D.P.; project administration, D.P.; funding acquisition, D.P. All authors have read and agreed to the published version of the manuscript.
+This research project was funded by the Christchurch Engine Centre (CHCEC), a maintenance, repair and overhaul (MRO) facility based in Christchurch and a joint venture between the Pratt and Whitney (PW) division of Raytheon Technologies Corporation (RTC) and Air New Zealand (ANZ).
+The study was conducted according to the guidelines of the Declaration of Helsinki and approved by the Human Ethics Committee of the University of Canterbury (HEC 2020/08/LR-PS approved on the 2 March 2020; HEC 2020/08/LR-PS Amendment 1 approved on the 28 August 2020).
+Written informed consent was obtained from all subjects involved to commence the study and publish the research results.
+The data are not publicly available due to commercial sensitivity and data privacy.
+We sincerely thank staff at the Christchurch Engine Centre for participating in this study and contributing to this research. In particular, we want to thank Ross Riordan and Marcus Wade. We further thank Kevin Warwick and Benjamin Singer from Scan-Xpress for 3D-scanning the blades. Finally, we thank everyone who supported this research in any form.
+J.A. was funded by a PhD scholarship through this research project. The authors declare no other conflicts of interest.
+Strong cognitive ability and flexibility
+Sophisticated decision-making capability
+Ability to deal with high variation of parts and different defect types
+Qualified and certified to perform inspection
+Use of common sense
+Good performance on small datasets (rare defects)
+Ability to detect a big variety of defect manifestations (edge defects)
+Not prone to human factors
+High repeatability
+Fast processing times
+Ability to assist the human inspector in the most challenging and tedious types of inspection, i.e., borescope
+Continuous learning and improvement of algorithm with each new dataset
+Not affected by human factors
+High repeatability
+Fast processing times
+High detection rate of any type of irregularity from the ideal shape
+Defect quantifiable and thus categorisable (accept/reject)
+High reliability and repeatability
+Versatile—can scan any part (size constrained)
+Functional from part quantities of one (CAD model required)
+Prone to err
+Inspection around 68–83% accurate in borescope and piece-part inspection, respectively
+Performance variances across the system (low repeatability within and between operators)
+Performance affected by human factors, e.g., complacency, distraction, lack of awareness, lack of knowledge and fatigue
+Performance static, i.e., does not improve automatically (manual algorithm tuning required)
+Currently low accuracy (significantly lower than human operator)
+Does not currently detect surface defects and edge defect with no 3D deformation
+Slow and manual process (image acquisition not automated)
+Human error and bias can be programmed into algorithm
+Requires other assisting technologies (automated, standardised image acquisition), causing additional costs
+Problems with explainability
+Currently low accuracy (significantly lower than human operator)
+Requires large datasets to train algorithm
+Additional work for operator to label data
+Only possible for defects with high occurrence, difficult to detect rare defect types (lack of data)
+Long setup time to train algorithm—additional time for operator to ‘teach’ software and validate results
+Extensive development process until performance is comparable to human operator
+Learns from human and may learn errors too
+Problems with explainability
+High investment cost
+Slow scanning and labour intensive, unless fully automated, requiring even higher investment
+Only suitable for piece-part inspection
+Difficult to scan reflective parts, thus requires part preparation
+Sensitive to ambient light and cannot be used outdoors or in bright inspection environments
+Sensitive to motion of the part or scanner
+Might require 3D scanning specialist to setup and operate
+Large footprint not only for scanner but also for parts feed and storage
+Trusted by regulators and customers
+Ability to make decisions and sign off tasks
+Versatile—can perform different tasks in different processes
+Applicable to other similarly shaped parts (e.g., vanes) without training (only optimisation of the parameters)
+Enabling smart factories and Industry 4.0
+Productivity improvement and shorter turnaround times, thus competitive advantage
+Enabling smart factories and Industry 4.0
+High technology awareness (trend)
+Record of operational wear over part life; could be used for reverse engineering
+Enabling smart factories and Industry 4.0
+Easy to integrate into inspection operations
+Opportunity to develop 3D scanning for borescope inspection
+Intentional or unintentional disregarding of SW, regulations and procedures (norms)
+Organisational pressure
+Seen as untrustworthy, unreliable and unethical
+Requires regulatory approval (legislation)
+Risk and responsibility of incorrect decision
+Discordance between software and inspection expert
+Seen as untrustworthy, unreliable and unethical
+Risk and responsibility of incorrect decision
+Primarily supplied by one vendor
+Discordance between AI and inspection expert
+Might become bottleneck of operations
+Risk and responsibility of incorrect decision
+Applies common sense
+Sophisticated decision- making capabilities
+Strong cognitive ability
+Versatility
+General intelligence
+Ability to ask questions and overcome uncertainties
+Improves with experience
+24/7 availability
+Faster processing, thus higher efficiency
+Higher system repeatability
+Rational and unbiased decision making
+Excels at dealing with large amounts and high-dimensional data
+Affected by human factors
+Prone to err
+High inconsistency
+Lacks contextual knowledge
+Difficulties with decisions that require general understanding
+High implementation cost
+Often requires other assisting technologies (more cost)
+Technological dependency
+May cause laziness and complacency of human operator
+Lack of understanding the effect the decision has (look-ahead [
+100
+])
+Publisher’s Note:
+ MDPI stays neutral with regard to jurisdictional claims in published maps and institutional affiliations.

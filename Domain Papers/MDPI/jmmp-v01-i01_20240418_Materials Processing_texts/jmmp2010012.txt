@@ -1,0 +1,662 @@
+One of the most essential components of the fused deposition modeling (FDM) additive manufacturing (AM) process is the build plate, the surface upon which the part is constructed. These are typically made from aluminum or glass, but there are clear disadvantages to both and restrictions on which materials can be processed on them successfully. This study examined the suitability of heated aluminum-polycarbonate (AL-PC) composite print beds for FDM, looking particularly at the mechanical properties, thermal behavior, deformation behavior, bonding strength with deposited material, printing quality, and range of material usability. Theoretical examination and physical experiments were performed for each of these areas; the results were compared to similar experiments done using heated aluminum and aluminum-glass print beds. Ten distinct materials (ABS, PLA, PET, HIPS, PC, TPU, PVA, nylon, metal PLA, and carbon-fiber PLA) were tested for printing performance. The use of a heated AL-PC print bed was found to be a practical option for most of the materials, particularly ABS and TPU, which are often challenging to process using traditional print bed types. Generally, the results were found to be equivalent to or superior to tempered glass and superior to standard aluminum build plates in terms of printing capability.
+Extrusion-based additive manufacturing (AM) processes are quickly maturing into viable manufacturing technologies in their own right, providing a cost-effective and relatively simple mode for utilizing the benefits and design freedom of AM technologies. The most common and well-developed member of this production process family is commonly known as fused deposition modeling (FDM) [
+1
+]. In this process, a thermoplastic fiber or filament is extruded through a heated die and selectively deposited into a stable, flat surface in layers; the deposited material bonds with the previous layer via glass transition bonding due to the heat input of the new material [
+2
+,
+3
+,
+4
+]. The layers are designed and converted into G-code directly from computer data via pre-processing software packages such as Cura
+®
+, Repetier Host
+®
+, or ReplicatorG
+®
+. Before the process begins, it is necessary to set up the machine, which often includes pre-heating the extruder and print bed (if the machine utilizes a heated bed) to stabilize the machine and flow properties of the polymer material before printing begins. This ensures more consistent properties and prevents problems with clogs and extrusion gaps [
+3
+,
+4
+,
+5
+]. The basic process map and algorithm are demonstrated in 
+Figure 1
+.
+There are several different extruders and build plate configurations available for FDM, primarily based on the need to process specific materials. For example, high-warp materials require an enclosed frame with a controlled environment, while low-warp material materials can be processed in the open air [
+6
+,
+7
+,
+8
+,
+9
+]. Abrasive materials may require hardened extruder components [
+10
+,
+11
+], while very soft materials may require an extruder that is slow and supports the filament to prevent buckling [
+12
+,
+13
+,
+14
+]. There are scores of materials and material blends that can be processed using FDM, so understanding the correct processing parameters for the chosen materials is very important [
+3
+,
+4
+,
+5
+]. To this end, the present study analyzed 10 different polymer materials that can be used in a wide variety of engineering disciplines, summarized in 
+Table 1
+ below. Further analysis of these materials and their uses is presented in 
+Section 3
+.
+Of all the steps in the FDM process (
+Figure 1
+), the building of the first part layer on the print bed is the most vital to the successful production of the part. All other layers will use it as a base, so it must be very secure and steady, as well as flat and level [
+15
+,
+16
+]. Poor adhesion to the build plate could cause it to warp or detach from the bed during processing, destroying the part and often damaging the printer. 
+Figure 2
+a,b shows examples of this. Heating the bed can reduce the problem, but does not eliminate it, especially for large and complex parts and high-shrinkage materials [
+15
+,
+17
+,
+18
+].
+Many tips and techniques have been proposed to deal with the problem, including the use of various kinds of tape as a surface [
+19
+,
+20
+], epoxy [
+21
+], and ABS juice (ABS dissolved in acetone) [
+22
+,
+23
+], as well as the use of PVA glue sticks [
+24
+], hairspray [
+23
+], and even powdered Jell-O
+®
+ [
+25
+]. Which product works and how well also depends heavily on the material being processed and the nature of the build surface. In addition to additives, many users utilize rafts—raised platforms—for the first layer of the part (
+Figure 2
+c) or brims—tight fences—around the part (
+Figure 2
+d) in the process; however, these can waste a great deal of material, be difficult to remove without damage, and often suffer the same warpage/detachment problems suffered by the parts themselves.
+A very useful process improvement for FDM would be the design of a simple, cost-effective, open-source, and effective print bed that is useful for a wide range of materials. An intuitive removal process and durability are also desired characteristics. The present study attempted to produce and characterize such a print bed for FDM by building and characterizing a heated composite aluminum–polycarbonate (AL-PC) print bed design. The present study analyzed this problem in several steps:
+
+■
+Section 2
+: A detailed review will be presented on the common print bed designs currently in use.
+■
+Section 3
+: The materials under study (
+Table 1
+) will be analyzed in detail and predictions made about their ability to be successfully processed on a polycarbonate build surface.
+■
+Section 4
+: The thermal behavior of the print bed design will be characterized.
+Section 5
+: This section will test the printability of the 10 materials under consideration.
+■
+Section 6
+: A simplified version of the printability experiments in 
+Section 5
+ will be repeated for four common print bed designs in current use in order to draw comparisons between the old and new bed designs.
+■
+Section 7
+ and 
+Section 8
+:
+ Discussion of results and offering of conclusions related to this work.
+Section 2
+: A detailed review will be presented on the common print bed designs currently in use.
+Section 3
+: The materials under study (
+Table 1
+) will be analyzed in detail and predictions made about their ability to be successfully processed on a polycarbonate build surface.
+Section 4
+: The thermal behavior of the print bed design will be characterized.
+Section 5
+: This section will test the printability of the 10 materials under consideration.
+Section 6
+: A simplified version of the printability experiments in 
+Section 5
+ will be repeated for four common print bed designs in current use in order to draw comparisons between the old and new bed designs.
+Section 7
+ and 
+Section 8
+:
+ Discussion of results and offering of conclusions related to this work.
+Many of the early configurations for FDM used simple build surfaces that were not heated or optimized for specific FDM materials. Many of the early FDM machines had wood, perfboard, thin glass, or acrylic build plates, but all of these were susceptible to warping and poor material adhesion. Recent technology developments have settled into using primarily tempered glass or heated aluminum build plates (
+Figure 3
+a,b) [
+26
+,
+27
+,
+28
+,
+29
+,
+30
+,
+31
+].
+Some proprietary solutions are used as well, often appended to the glass or aluminum print beds; these typically consist of various coatings that can be added to the print bed [
+19
+,
+20
+,
+32
+,
+33
+,
+34
+], but also include various composites made from fiberglass or acrylics [
+34
+,
+35
+]. However, all of these solutions are in themselves limited in the materials or build size that they can accommodate, are often single-use, and can be costly. The authors have extensive experience with many of these technologies, including those not discussed in the AM literature, and have found that none of them work well outside a fairly narrow range of use. For the hobbyist interested in printing a small number of materials and limited print sizes, most or all these options are helpful.
+However, the development of FDM into a viable production process requires much more attention to the quality, composition, and consistency of the build plates. The authors have found that the best general solution for a wide variety of materials is a tempered glass and aluminum composite build plate (
+Figure 3
+c), where the aluminum is a standard heated bed which warms the glass. There are three distinct disadvantages of using this type of build plate: (1) the cost can be probative; (2) the glass beds are subjected to cracking; and (3) a variety of materials cannot be used, most notably ABS, due to warping and poor adhesion. The addition of surface additives such as CubeGlue
+®
+ (3D Systems, Inc., Rock Hill, SC, USA) [
+36
+,
+37
+] can mitigate this, but requires that the plate and material be soaked in warm water to remove the part from the plate. There are several common FDM materials, particularly PLA, PVA, and HIPS, that are broken down or damaged in warm water and the removal process would likely destroy the part.
+To address many of the issues previously discussed and to provide a useful improvement in FDM build plate design, a composite build plate was built where the tempered glass sheet was replaced with a standard sheet of Lexan
+®
+ polycarbonate (
+Figure 4
+a), which was cut to match the size of the print bed. Polycarbonate has excellent strength, durability, and stability, is very safe to use, is inexpensive compared to tempered glass and proprietary additives (one tenth of the cost in many cases) [
+38
+,
+39
+], is an open-source material available to all users, and the parts bound with it can be removed easily by simply bending the sheet after cooling.
+There are many ways to affix the polycarbonate and aluminum together during printing, so this is not a serious concern as long as the materials are in contact during the heating of the polycarbonate bed. The authors used eight small spring-loaded clamps throughout this study to allow the polycarbonate and aluminum to separate for part removal. The configuration of this clamping arrangement is shown in 
+Figure 4
+b,c for the benefit of the reader. Between each run, the surfaces of the aluminum and polycarbonate were cleaned with isopropyl alcohol to ensure clean contact between the surfaces. If the user wished, the layers could be permanently bonded using some kind of thermal epoxy, but this may reduce the usefulness of the bed and make it much more difficult to replace the polycarbonate surface if it becomes damaged or worn during use.
+One of the first attributes detected when comparing polycarbonate to tempered glass and aluminum print beds is that the polycarbonate has a noticeably rougher surface, as can be seen in the optical microscopic images in 
+Figure 5
+a; this will likely be very helpful in bonding with the deposited materials [
+40
+,
+41
+,
+42
+,
+43
+,
+44
+,
+45
+,
+46
+]. In order to objectively compare the surfaces, a PosiTector
+®
+ surface profile gauge was used to measure the mean surface roughness at 100 random points on the surface of the polycarbonate, as well as on the bare aluminum and tempered glass beds. The results are shown in 
+Figure 5
+a,b. To gain a more complete view of the surface behavior and to have an additional comparison benchmark, each of the surfaces was treated with common surface treatments for build plates; the aluminum bed was coated with blue painter’s tape and the other two were coated with a single thin layer of CubeGlue
+®
+. The results are shown in 
+Figure 5
+a,c. 
+Table 2
+ shows the final results of the surface profile study for 100 test points (both raw and treated plate results are shown).
+To aid in the understanding of how an AL-PC print bed may behave for printing the 10 materials under study, a detailed review was conducted to analyze the properties of these materials. The uses, mechanical properties, chemical mechanisms, and potential to chemically bond with polycarbonate were all examined from the existing literature. From this information, predictions were made about the printability of each material in the PC plates. This section contains the discussion, the predictions, and descriptions of the materials. The relevant material properties, both bulk and printed (when available in the literature), for each are shown in 
+Appendix A
+ for the benefit of the reader. The bonding predictions of each material were defined according to a weak–medium–high system, based upon the ease of removing the part from the bed after printing. The definitions are:
+Weak
+: Weak or no adhesion with the PC bed. On the lower end of the range, the materials will not adhere to the bed at all and will fail during the print. On the upper end, the parts will be securely attached to the PC bed but can be easily separated from the bed by hand.
+Medium
+: Secure adhesion to the bed, but no direct chemical bonding with the bed itself. Basic tools such as razor blades or paint scrapers will be needed to remove the part from the PC bed.
+High
+: Very strong adhesion to the PC bed. The bonding could range from very strong surface adhesion to polymerization reaction where the part and bed partially fuse. On the lower end, removal will likely require tools such as strong paint scrapers and pliers; on the high end, removal may be impossible and require cutting or breaking the PC plate from the part.
+While also an important and common FDM material, polycarbonate (PC) is also the material of interest in the present study as the print bed surface. For general use, PC one of the most widely used engineering polymers across all disciplines, particularly in optical, medical, electronic, and in aerospace applications [
+47
+,
+48
+,
+49
+]. The polymers used in aerospace applications are often subjected to harsh environments including high vacuum, solar electromagnetic rays, atomic oxygen, and charged particle radiation, and other severe stresses. The high strength and inertness of PC makes it particularly fit for harsh applications [
+47
+,
+50
+,
+51
+]. The most common type of PC is obtained by interacting diphenyl carbonate with bisphenol A (2,2-bis-(4-hydroxyphenyl)-propane) to give bisphenol-A groups linked by carbonate groups giving PC high tensile and impact strength over a wide range of temperatures. The polymers are highly transparent to visible light and have better light transmission characteristics than many types of glass and are soluble in organic solvents and alkalis [
+52
+] (p. 242) and [
+53
+].
+These qualities can determine the PC’s bonding strength when combined with other polymers, an important question to consider when using PC as a print bed material. Since the polycarbonate will be printed on a plate of the same material, it is reasonable to conclude that the printed part and the bed will have a very strong bond. However, this is likely dependent on interface temperature [
+54
+,
+55
+]. If the temperature reaches an appropriate point, it is predicted that the bond will be strong. 
+Figure 6
+ shows the chemical structure and examples of a non-transparent PC filament and an FDM-printed surface (to demonstrate the surface texture quality of the material).
+Acrylonitrile butadiene styrene (ABS), the most commonly-used FDM material, is a copolymer constructed by polymerizing styrene and acrylonitrile in the presence of polybutadiene [
+3
+,
+4
+,
+52
+,
+56
+]. The long chain of polybutadiene is crisscrossed with shorter chains of poly (styrene-co-acrylonitrile). The nitrile groups of adjacent chains apply an attraction to each other and connect the chains causing ABS to become strong and stable [
+57
+].
+ABS is also an engineering plastic that contains butadiene portions homogeneously allocated over the acrylonitrile–styrene matrix. It possesses toughness, dimensional stability, chemical resistance, and low cost [
+57
+]. There are drawbacks of ABS, nevertheless. ABS lacks raw mechanical strength, is vulnerable to environmental conditions, and can warp significantly under repeated heat loading. Also, it is non-conducting and easily worn away under heavy use [
+57
+]. It is heavily subject to warping as it cools, which makes it very difficult to print in many cases (as demonstrated in 
+Figure 2
+). A heated bed and strong plate bonding are needed to process this material [
+15
+,
+17
+,
+18
+,
+56
+].
+PC and ABS are similar in polarity, and might be compatible with each other in such a way that ABS will bind well with a PC print bed; the ABS-grafted rubber (butadiene) particle chains would remain insoluble, but bounded by their styrene acrylonitrile side-chains, producing effective physical properties with PC [
+54
+,
+58
+,
+59
+]. It is reasonable, therefore, to predict that a PC build plate will provide effective support for the printing of ABS at a low-to-medium level. 
+Figure 7
+ shows the chemical structure of ABS, as well as the raw and processed surfaces of the material.
+Polylactic acid (PLA) has excited significant observations for its numerous biomedical applications and non-toxic consistency. PLA polymers are synthesized and acquired from renewable agricultural resources, such as sugar cane and corn, by the polymerization of lactide, the cyclic di-ester of lactic acid. PLA is a polyester composed of lactic acid building blocks. It is also a biodegradable and compostable thermoplastic derived from renewable sources. Since PLA is compostable, one of the justifications for its use is to improve solid waste disposal problems and lessen the use of petroleum-based plastics for packaging. PLA belongs to the family of aliphatic polyesters derived from 
+
+
+
+
+α
+
+
+
+
+-hydroxyl acids and possesses advantageous optical, physical, mechanical, and barrier properties compared to existing petroleum-based polymers [
+60
+,
+61
+,
+62
+]. In the family of biodegradable polyesters, PLA is useful because it is renewable and compostable. To increase thermal resistance, PLA can be blended with PC. The adhesion between these two polymers is weak due to interfacial tension and weak entanglements [
+62
+,
+63
+,
+64
+].
+Reactions occurring in polyester/polycarbonate systems have been studied. It is known that thermal treatment induces exchange reactions that lead to the formation of copolymers with a final structure that is also affected by parallel decomposition reactions, mainly the loss of carbon dioxide and ethylene carbonate (EC) [
+64
+,
+65
+]. Therefore, it is predicted that PLA and its blends will have some kind of bonding reaction with PC, weak-to-medium in strength. The chemical structure of PLA, as well as its filament and FDM-processed forms, are shown in 
+Figure 8
+a,b.
+Two of the other materials under study are aluminum-powder-impregnated PLA and carbon fiber PLA, shown in 
+Figure 8
+d,e, respectively. The metal PLA selected was a blend of 40% aluminum powder suspended in a 60% PLA matrix, while the carbon fiber PLA is 15% chopped carbon fibers suspended in an 85% PLA matrix (see 
+Table 1
+). These are common special variations of the PLA filament that are easily available and have many obvious engineering uses. Since the polymer matrix for both is standard PLA, it is reasonable to predict that they will behave similarly to standard PLA when printed. However, damage to the print bed could potentially occur since the additives are extremely abrasive; this will be discussed in more depth in a later section and considered during the printing tests.
+Polyethylene terephthalate (PET) is one of the most extensively used materials in the production of containers and packaging. Nonetheless, its purpose is limited by its low barrier properties relative to oxygen and carbon dioxide. PET is a multifunctional thermoelastic polymer of structural and antifriction designation that possesses high mechanical strength, viscosity and hardness, excellent wear resistance, and effective electrical insulation properties and radiation resistance [
+66
+,
+67
+,
+68
+]. Polymer chain length (molecular weight) has a direct correlation with the mechanical properties of polymer materials. Increased molecular weight increases strength and cold flow resistance. Polyethylene has a simple carbon chain but has benzene rings in addition to hydrogen side groups [
+69
+] (pp. 219–220). Polyethylene is an arrangement of long polymer chains with excellent flexibility, and superior toughness. PET contains a complex chain of benzene rings, carbon, and oxygen; therefore, it may be anticipated to possess higher tensile strength [
+69
+] (pp. 219–220). Since polycarbonate has polar side groups (side groups that are able to participate in hydrogen bonding) and regularity in the chain, this means that it has a high value of glass transition temperature, so it also possesses outstanding thermal properties and superior dimensional stability.
+The existence of abundant phenylene groups and two CH
+3
+ groups as side groups in each recurring unit in the main chain of polycarbonate leads to an increase in the free volume. The polycarbonate chain is symmetric, which contributes to its dielectric properties. The high impact resistance of polycarbonate arises from the secondary glass transition [
+70
+] (pp. 251–252). Since polycarbonate and PET both contain benzene groups and can participate in hydrogen bonding, it is predicted that the binding strength with PET will be strong, as long as a high-enough temperature is reached locally to trigger the formation of hydrogen bonds. 
+Figure 9
+ shows the basic chemical structure and raw/processed PET examples.
+High impact polystyrene (HIPS) thermoplastic, commonly known as rubber-toughened polystyrene, was developed as a ductile alternative to the general-purpose polystyrene. HIPS is prepared by the thermal polymerization of styrene monomer with polybutadiene rubber. Its structure is composed of an amorphous polystyrene matrix containing a uniform dispersion of composite spheroid domains. HIPS polymer possesses some benefits over other inflexible plastics, particularly in the areas of flexibility, cracking resistance, and cost [
+71
+,
+72
+]. Polystyrene containing large rigid side groups of benzene rings is expected to be harder and more brittle, with higher tensile strength [
+69
+] (pp. 219–220). 
+Figure 10
+ demonstrates the chemical structure, the raw filament form of the material and the final processed surface.
+Polystyrene is an unchanging organic polymer and is a member of a family of lightweight structural materials important in the automotive, aerospace, and construction fields [
+73
+,
+74
+]. The phenyl groups (C
+6
+H
+5
+) contribute to the unique properties of these polymers. The large rings prevent the polymer chains from packing into crystalline structures [
+73
+]. Also, the rings constrain the rotation of the chains around the carbon–carbon bonds, impacting its rigidity. PC and HIPS appear to form local weak bonds easily without high heat or a long processing time [
+75
+]. For these reasons, it can be reasonably predicted that a HIPS and PC plate will adhere, but the bond will be fairly weak.
+Nylon is the general name for synthetic polyamide, which is a linear polymer chain. Nylons are labeled by a numbering system designating the number of carbon atoms in the repeating unit [
+76
+,
+77
+]. Nylon is commonly used in engineering applications because of its appealing blend of noble mechanical properties and processability [
+78
+]. It is established that anionically-polymerized polyamide possesses a wide range of properties such as high melting temperatures, heat stability, mechanical strength and lightness, suitable fatigue and abrasion resistance [
+79
+]. One of nylon’s major weaknesses is its poor impact strength below its glass-transition temperature and in the dry state, high moisture absorption, poor dimensional stability and unsatisfactory heat deflection temperatures [
+79
+,
+80
+]. 
+Figure 11
+ shows the chemical structure and examples of the raw and processed material.
+Some research has been conducted on the bonding of PC and nylon, however, it was focused on blends and not surface contacts. The main conclusions from the studies reviewed were that PC and nylon could bond together into a copolymer, but this would require a significant amount of time and heat input [
+81
+,
+82
+]. Since 3-D printing does not involve either very high temperatures or lengthy bonding times, it is unlikely that nylon will bond well with PC; therefore, it is predicted that the nylon will have a weak-to-no bond with the PC print bed.
+Recently, interest has been shown in the study of blended systems of TPU with plastomers. One of the most important factors affecting the properties of TPU is that it has block structures that consist of soft and hard blocks, and there is thought to be a clear microphase disjunction taking place inside of them. In providing a network of physical junctions in TPU, the decisive role is played by hydrogen bonds, which are simply broken down and reallocated depending on thermal effects or owing to modifications [
+83
+,
+84
+,
+85
+]. The hydrogen bonds’ distribution influences the extent of microsegregation in TPU and the set of properties that are typical for this type of material.
+TPU has been used to strengthen PC and enhance its resistance to environmental stress and corrosion cracking. Increased miscibility results from the hydrogen bonding between amine (NH) groups of TPU and carbonyl (C=O) groups of PC [
+86
+] (p. 461). It can be anticipated when TPU binds with PC, the thermal properties will be enhanced and the stability will increase. The bonding role between the TPU and PC is affected by hydrogen bonds, which are easily broken down and redistributed depending on thermal effects or owing to modifications [
+83
+,
+87
+]. It is reasonable, therefore, to predict that TPU will have a moderately strong bond with the PC print bed. 
+Figure 12
+ shows the chemical structure and examples of the raw and processed TPU.
+It has been discovered that polyvinyl alcohol (PVA) functions as a substitute for non-degradable, petroleum-based plastics for use in adhesives, packaging materials, and medical items. PVA derives from ethanol and is one of the uncommon thermoplastics that is water-soluble, verifying its capability to be biodegradable in compost and aqueous surroundings. PVA also possess gas blocking properties and has useful bonding interactions to the hydroxyl groups it possesses. However, PVA has relatively poor mechanical stability; the melting point of PVA surpasses its degradation start temperature for fully hydrolyzed grades, disturbing its use as a thermoplastic [
+88
+]. It is most commonly used as a throw-away support or casing material for other polymers and as an ingredient in various types of non-thermal adhesives.
+Some materials used to strengthen PVA include gold, silver, inorganic nanoparticles based on hydroxapatatite, and chitin whiskers. Also, cellulose fillers are commonly employed to strengthen PVA. Three hydroxyl groups supporting each D-glucose unit in cellulose chains contribute to the material’s high mechanical strength; each can form an inter-chain or intra-chain hydrogen bond. Because of the highly polar nature of PVA and its water solubility, it blends well with cellulose [
+88
+,
+89
+,
+90
+]. Polyvinyl alcohol has the lowest moisture permeability of any commercial polymer, but its water sensitivity has restricted its usage [
+91
+] (p. 18). It is not predicted to bond well with PC, as there is no obvious chemical reaction that could initialize bonding. 
+Figure 13
+ shows the basic chemical structure of PVA, as well as examples of raw and processed materials.
+In the previous sections, several different FDM materials were studied to gather the mechanical properties and understand the potential mechanics that each will have with a heated polycarbonate print bed. 
+Figure 14
+ shows a summary of the predicted printed bonding ranges for these materials. Note that PLA includes the standard PLA and the two special blends with aluminum powder and carbon fibers. “Bonding”, in this case, is defined as the ability to adhere successfully to the PC from the first printed layer and continue throughout the printing of the part.
+Two potential major objections to the use of AL-PC print beds in FDM are the possibilities of warping during use and heat loss (i.e., insultation) through the PC plate. In practice, the authors have found that neither concern has a significant effect on the use of the plates. However, the true thermal characteristics should be studied to ensure that no fatal flaws exist in the concept that would preclude the design and use of the AL-PC build plates for FDM. To further study this problem, two experiments were designed and run. The first studied the insulating effects of combining PC plates of different thicknesses with the heated aluminum build plate; the temperature profiles were measured at several locations as the beds were heated up. The second measured the warping and deformation behavior of these plates at several locations. The design, setup, and results of these experiments are presented in this section.
+The first experiment was designed to test the heat loss through the aluminum build plate and the heat loss through the composite of the two materials, as well as the same for a similar glass-aluminum composite. The heat loss measured is that between the aluminum plate and the top of the PC sheet where the part would be built. 
+Figure 15
+ demonstrates the setup of the experiment, which was carried out in four parts. In Part (1), a heated aluminum 3-D printer build plate was set up with a series of K-type thermocouples set at varying distances from the center, as shown in 
+Figure 15
+. The purpose of this was to detect any surface temperature inconsistencies in the plate while measuring the heating performance (no such gradients were noted in the analysis of the data). All the thermocouples measured the heat loss across the plate and the distribution of the thermocouples ensured that the measurements were consistent in different areas of the plate. Note that the surface was covered with painter’s tape in the locations of the thermocouples in order to prevent them from shorting out on the metal bed.
+The thermocouples were taped down to the surface using several layers of Kapton tape to ensure that the metal tip beads made good surface contact. A four-channel thermocouple logger was used to monitor the thermocouples every second during a heating cycle; the heating was stopped when the bed surface reached an obvious steady state temperature at the set point of the bed. A set point temperature of 70 °C was used; in actual use, the bed temperature will range from 40–100 °C depending on material. The choice of a 70 °C set point was based both on the desire to measure a “typical” average case and the need for a fast and steady warmup to avoid heat dissipation errors. As part of the preparations for the experiment, the authors measured the warmup time for every 10 °C from 40–100 °C and found that 70 °C was the best balance of thermal gradient and warmup time.
+To back up and verify the thermocouple readings, an infrared thermometer was used to measure the aluminum surface temperature every 30 s; a shiny area in the aluminum bed was used to ensure that the proper surface reflectivity was present for the thermometer to have the minimum amount of error; the radius of the laser detection spot on the bed was approximately 15 mm.
+Parts (2)–(4) were performed in an identical manner as Part (1), except that the AL-glass composite was tested in Part (2) and two different thicknesses of AL-PC composite (2.36 mm and 4.57 mm) were used in Part (3) and Part (4), respectively. The tape was removed, and the surfaces carefully cleaned before using the additional material on top of the aluminum plate. In all cases, the additional material later was securely clamped to the aluminum bed at the corners of the plate, as discussed in 
+Section 2.2
+. The experimental results for all parts are shown below in 
+Figure 16
+.
+The temperature losses across the AL–glass and AL-PC composites were very close to the infrared thermometer readings of the aluminum surface, indicating that the addition of the plates to the aluminum bed had a small effect. This effective loss was less than 1 °C for the tempered glass, a trivial amount that is within the temperature controller error; this run was the benchmark for comparison with the PC plates. The loss in the PC plates was greater, as expected, showing an error near 4 °C and 6 °C for the thin and thick plates, respectively. The 4.57 mm plate is too thick and heavy for practical use, but it was useful in showing the magnitude of the heat loss based on plate thickness. The thinner (2.36 mm) would most likely be used in practice as the print surface; with a heat loss of about 4%, it is within the typical uncertainty of the thermocouple/thermistor used to control the bed temperature. Therefore, it is reasonable to conclude that heat loss will not be a major impediment to the use of AL-PC build plates in practice.
+To test the deflection and warping behavior in the polycarbonate plates, an experiment was designed and run. Similar to the experiment in 
+Section 4.1
+, an AL-PC build plate was set up on the heated bed of a 3-D printer and the thermal cycle was run. The deflection was measured via a precise dial gauge in the same locations as the thermocouples were previously placed (
+Figure 15
+). 
+Figure 17
+a,b shows the experimental setup. Readings of the dial indicator were taken every 60 s for a total of 600 s. All cases reached steady state at the 70 °C set temperature by that time and stopped expanding noticeably. As in the heat loss experiment, two different thicknesses of polycarbonate sheet (2.36 mm and 4.56 mm) were used. The results are shown in 
+Figure 17
+c,d.
+The total warping and deformation observed for the average of the four positions was about 20 μm for the thin plate and 80 μm for the thick plate. While this deformation is significant enough to be measured in an experiment, it should be noted that the addition of surface coatings adds 45–90 μm of uncertainty to the surface profile of a build plate (
+Table 2
+) and the z-axis (height) offset settings for FDM typically assume an uncertainly of about 100 μm for the beginning of a print. Therefore, if the PC beds are pre-heated and the nozzle height adjustments are made with a warm bed, this warping behavior should have no detectable effect on the printing quality of the parts made on it.
+The fifth section of the present study was to print test parts using the AL-PC composite print bed and examine the results. Once the parts were printed on the bed, they were tested for adhesion, using both normal and bending forces to remove them, and the beds checked for wear or damage from the printing. New 0.40 mm tool steel extrusion nozzles were used in all of the printers used; the nozzles were cleaned using high-density polyethylene (HDPE) cleaning filament between each material. 
+Due to the abrasion and contamination risk, the carbon fiber PLA was printed last, after all the other materials. The AL-PC print beds were pre-heated for 20 min prior to each set of test parts and the print beds adjusted to a 100 μm gap using a strip-type feeler gauge between the warm bed and the extruder nozzle. Note that the extrusion nozzle was cool at this time so as not to belt the surface of the PC plate if it should accidentally come into contact with the nozzle during the leveling procedure.
+The ABS, HIPS, and nylon were printed using a machine with a full enclosure to stabilize the environmental temperature, while the other materials were printed using a pair of open-air Prusa-frame printers. This configuration most closely represents the actual use conditions of the materials in question, as it is usually necessary to print these materials inside of an enclosure for successful processing [
+6
+,
+7
+]. ABS and nylon [
+8
+,
+9
+] output noxious fumes during the process; ABS and HIPS are very sensitive to warping if the temperature environment is not correct [
+6
+,
+7
+,
+8
+]; and nylon is extremely sensitive to changes in humidity and air currents during processing [
+81
+,
+82
+]. The other materials do not need to have this kind of special environment, so they are usually printed on open-bed printers.
+The printing parameters for each of the materials are shown in 
+Table 3
+; these parameters were chosen based on the manufacturer recommendations and the best-practice experiences of the authors. The controlled parameters were extrusion temperature 
+
+
+
+
+
+
+
+
+T
+
+
+P
+
+
+
+
+
+
+
+
+, build plate temperature 
+
+
+
+
+
+
+
+
+T
+
+
+B
+
+
+
+
+
+
+
+
+, layer thickness 
+
+
+
+
+h
+
+
+
+
+, part shell thickness 
+
+
+
+
+t
+
+
+
+
+, infill density 
+
+
+
+
+I
+
+
+
+
+, and print speed 
+
+
+
+
+V
+
+
+
+
+.
+Adhesion tests were performed to determine the bonding strength of each material with the PC surface. Two tests were performed, one utilizing normal force and one utilizing shear force to separate the parts and the build plate. For each material, three parts were printed, as shown in 
+Figure 18
+a, the flat part to test the printing quality and surface finish and the two upright parts to be used during the adhesion tests. To perform the adhesion tests, the finished parts and the print bed were clamped to a flat table and a fixture containing a load cell was used to apply normal and bending forces, as shown in 
+Figure 18
+b,c; the recorded response was the separation force for each case. It should be noted that the load cell required at least 10 N to measure force accurately, so for the cases where the breaking force was below 10 N, this was recorded as <10 N.
+The experiment was repeated to test the effects of adding CubeGlue
+®
+ to the surface of the polycarbonate as well. This is a widely-used proprietary product from 3D Systems Inc. that is primarily used to aid in the adhesion of materials to glass print beds. It is a water-soluble, heat-activated, PVA-based epoxy with methanol and methyl acetate as the active ingredients [
+36
+,
+37
+].
+The results for the experiment described in 
+Section 5.1
+ are shown in 
+Table 4
+ and 
+Table 5
+ below. The adhesion quality was monitored, with “good” adhesion indicating that the entire set of test parts were securely fixed to the print bed after printing, “fair” indicating some warping or disconnection although the parts were able to complete the printing cycle in intact form, and “none” meaning that the parts completely disconnected during printing and failed to complete. 
+Figure 19
+ shows examples of the flat test parts (
+Figure 18
+) for each of the materials tested. No plate surface damage was observed for either experiment except in the cases of the metal and carbon fiber PLA samples on untreated PC; this was likely due to the fact that the materials were very abrasive and etched into the PC surface before adhering. This also likely explains their extremely high bonding strength with the PC plate. In these two cases where etching was observed, the mean roughness of the etching was recorded via the method described in 
+Section 2.3
+; 10 arbitrary points were taken in each case and the mean value reported in 
+Table 4
+. This etching would probably continue on subsequent builds, so the PC plates would quickly deteriorate with these materials.
+A comparison of observed normal adhesion with the predicted bonding ranges from 
+Section 3
+ can be seen in 
+Figure 20
+. The untreated PC print bed did well with seven of the 10 materials, with PC, PVA, and nylon refusing to adhere to it well enough to support a print. To ensure that the conditions of an individual plate was not the cause of this, the print tests on all three materials were repeated using a fresh PC plate; the results were identical to the original test. The addition of a thin layer of CubeGlue
+®
+ (
+Table 5
+) provided the needed printing ability for all the materials; however, the bond strength was very different from the original normal force tests, with the exception of ABS and HIPS.
+The effects of the CubeGlue
+®
+ on the various materials was significant, as the use of it changed the surface chemistry of the PC plate. It should be noted that all the PC plates coated with the epoxy were washed carefully and checked for surface damage after the printing, of which none was found. A side-by-side comparison of the bonding strength demonstrates the difference, which can be seen in 
+Figure 21
+a. It is obvious that the CubeGlue
+®
+ itself bonded very well with the PC plate and the bond between the glue and the printed material determined the bonding strength. The results for the shear breaking force (
+Figure 21
+b) were very similar to those of the normal force, except that PET and TPU was more consistent in bending strength than normal strength. This is most likely an effect of the CubeGlue
+®
+ bonding with the materials in a weaker, but more consistent, manner than with the bare plate itself. Details regarding the potential causes and effects of this glue–material bonding will be discussed further in 
+Section 7
+.
+Based on the results of the experiments described and discussed in 
+Section 5.1
+ and 
+Section 5.2
+, some questions arise about the potential bonding mechanism of the materials to the PC bed. Clearly, some of the materials did not perform as well as expected and this was likely due to the failure of the interface between the materials and the PC to reach a high enough temperature for chemical bonding to be initiated. To explore this further, a simple experiment was designed and performed to test the interface temperature between the PLA and the PC bed; this preliminary experiment clearly does not provide a complete and definitive answer for all the materials, but it does yield some insight into the bonding mechanism that should be discussed in the present study. This will be explored in more depth in future studies on this topic.
+To test the interface temperature between the extruded material and the PC print bed, a test article was built consisting of a 2.36 mm PC sheet clamped to the heated aluminum print bed; a K-type thermocouple was imbedded in the PC layer in such a way that the thermocouple tip would be in direct contact with both the bed and the part during printing. Care was taken to cut away the absolute minimum amount of material possible for the thermocouple body to be level with the surface, while also taking care that the bead did not directly contact the aluminum bed to avoid shorting it out; the configuration is shown in 
+Figure 22
+.
+Four tests were completed with two different part designs: Design A was a pair of small parts designed so that the heated material would be deposited only on one at a time, giving the other a chance to cool naturally; Design B used a single part, allowing some heat input to be constantly affecting the part. The measuring location was the same for both, a small area approximately 1 mm square. Each of the designs were tested with 10% infill and full density builds. All tests showed a gradual decrease in thermal cycling as the part was built up, except for the 10% density parts; these had a distinctive spike in temperature as the capping layers were placed on top of the 90% hollow parts, showing that the air and internal supports enclosed in the part transferred some detectable energy back to the build plate. This was an interesting effect that indicates that the thermal behavior of polymer FDM parts is more complex than indicated in the AM literature. The configuration of the printed parts and results are shown in 
+Figure 23
+. The test lasted for 20 cycles and was performed using the same settings for basic PLA described in 
+Table 3
+. The print direction for the first layer is indicated in the figure.
+It is clear from this experiment that none of the print tests reached an interface temperature even close to the glass transition temperature of PC (145 °C), even though the bed was heated to 70 °C and the PLA extrusion temperature was 205 °C. This is certainly the explanation for the relatively poor performance (compared with chemical bonding predictions) of the PLA with the PC print bed. While the bonding was secure and produced excellent final parts, it is clear that PLA will not make an actual chemical bond with the PC print bed under these processing conditions. It is reasonable to conclude that this would be the case for the other materials tested in the present study. For example, PC and PET have the highest printing temperature of the current set of materials, about 20% higher than the PLA; even if a 20% increase in interface temperature was achieved, it would still not be nearly enough to bring the PC plate to the glass transition point.
+To further explore and demonstrate the value of the AL-PC print beds, a final experiment was conducted, where four configurations of aluminum and glass–aluminum print beds were tested with the same materials and the same printing conditions as the AL-PC print bed (
+Section 5.1
+). This involved an additional 40 printing tests. For the additional tests, the printing of the flat square parts (
+Section 5.2
+) was replicated, but the breaking strength tests were not repeated; the point of this additional experiment was to explore the printability of the materials, not the bonding strength. The response of the experiment was the success or failure of the material to adequately print on the surface in question. 
+Table 6
+ shows the setup of the experiment, as well as the results.
+The excellent adhesion of ABS and TPU with the PC build plate was a welcome surprise, as these two materials are notoriously difficult to print on build plates with untreated surfaces; in both cases, the use or not of the surface epoxy did not seem to cause a significant difference in performance. This is probably the most valuable and significant finding of the present study, as now a simple and practical method exists to print large ABS and TPU parts with no surface treatment, no raft or brim, and with little work removing the parts (after cooling, the sheet was simply bent and the parts to release with no warping). The plates also provided an excellent option for printing PLA and PET as well, with similar performance to the ABS and TPU on untreated surfaces. The carbon fiber and metal powder PLA also worked very well with the PC print bed but were so abrasive that build plate damage was observed after printing these materials.
+Unfortunately, HIPS, PC, nylon, and PVA were not as successful when printing on the PC print surface. The HIPS and PC were predicted to bond very well, but the results showed this was not the case. The interface temperature experiment showed that this was most likely because the temperature of the interfaces was too low for these materials to interact chemically with the surface. The reasons why these materials bonded poorly, while other did well at the same temperature scale, were examined and discussed in the section on FDM polymers. None of the negative printing results were surprising after examining the likely behavior of the polymers in question. The solution, based on the printing experiments, was to use epoxy on the surface of the PC plate to initiate bonding during printing. While the use of epoxy provides a disadvantage for some of the materials, particularly PLA and PET, it provides the needed surface fixture to successfully print all ten of the materials tested.
+The use of the epoxy as a surface treatment of the PC plates had a very interesting effect, seeming to have a large impact on the bonding quality on all cases except ABS, HIPS, and the carbon fiber PLA. In the case of ABS, the epoxy bonding ([
+43
+]; and [
+92
+] (pp. 4–5)) seemed to have no effect on the ABS and HIPS, while the carbon fiber PLA was likely so abrasive that it simply scratched off the epoxy and bonded with the PC plate; however, the glue did provide enough of a barrier to prevent the carbon fiber PLA from damaging the surface of the PC plate. In the cases of PLA, PET, and metal PLA, the strength decreased drastically but the parts still built stably on the PC surface; the most likely explanation is that the epoxy reacted with the deposited materials to bond them, but at a much weaker level than the PC itself and preventing them from reaching the PC surface directly. In the cases of the other materials, the bond dramatically increased in strength, indicating that the PVA-based glue bonded strongly with the deposited materials and the PC plate, similarly to the weaker cases except that the isolation from direct contact provided an even stronger bond directly with the CubeGlue.
+A major question that arises from the results of this study is: given the choice of a very strong bond or weaker (but secure) bond, which is preferable? There is no general answer to this question and it depends very heavily on the application. For example, a series of small or delicate parts would likely benefit from easy removal from the build plate via a weaker bond; on the other hand, a large, heavy part would benefit from a very strong bond with the build plate to prevent warping and deformation. Another case could be a part that uses a different material for support than the base material—in that case, a weaker bond with the build plate may reduce the amount of work involved with separating the part and its support material. Another aspect to consider is that it seems, from the results of this experiment, that the use of rafts and brims are unnecessary when using a PC build surface; this opens up design and production opinions that can consider the roughness of the part bottom.
+The thermal behavior tests indicated that the heat loss and warping behaviors of PC plates for the FDM process was not a significant limiting factor in their use. The printing tests also indicated that the AL-PC beds were as good or better than the four other common options that were explored in terms of printability. 
+Figure 24
+ shows the stoplight chart generated from the print test data, referencing the findings of 
+Section 5
+ and 
+Section 6
+.
+The overall goal of this work was to propose, test, and present a simple, durable, reliable, safe, effective, inexpensive, open-source print bed for FDM materials; the suggested configuration was a heated aluminum–polycarbonate composite. Toward this end, a large study was carried out in five major parts: first, a detailed review was completed on the currently used print bed configurations and various methods for forcing them to work with various materials; next, a study was made of several common FDM materials to attempt to predict how well they would print on warm PC; next, a thermal behavior characterization study was carried out, which included several experiments; finally, two large printing studies were made to test the effectiveness of the AL-PC print bed with a variety of materials, including several that are normally difficult to process.
+The main conclusion from this study is that AL-PC composite built plates are a feasible alternative to traditional glass and aluminum ones. The heat loss and warping of the PC beds during use was found to be too small to have a noticeable effect on their use, eliminating potential objections to their use. Printing tests indicated that the AL-PC build plates compared favorably with tempered glass beds, while being much less expensive and much safer to use; they were far superior to standard heated aluminum beds with no surface treatments. The AL-PC beds work very well for most of the tested materials without surface treatment but the addition of CubeGlue epoxy improved the functionality even further. It was also noted that care should be taken when using AL-PC build plates with very abrasive materials such as carbon fiber PLA and metal PLA. Future work in this area should focus on the interface between the part and build plate, as well as the long-term usability and durability of the AL-PC plates.
+No external funding was used to complete this work nor fund its publication. The authors thank Dr. Sabiha Runa for her advice and assistance with producing the chemical structure drawings shown in 
+Figure 6
+a, 
+Figure 7
+a, 
+Figure 8
+a, 
+Figure 9
+a, 
+Figure 10
+a, 
+Figure 11
+a, 
+Figure 12
+a, and 
+Figure 13
+a; all these drawings were created using ChemDraw
+®
+. The authors also thank 3D System Inc. for their cooperation in providing datasheets, patent literature, and advice on the CubeGlue
+®
+ for the present study. Finally, the authors thank the reviewers for their extensive and insightful comments on this manuscript.
+S.L.M., A.E.P. and T.R.P. conceived the concept for the project. S.L.M. managed and led the research effort, provided the research supplies, and assisted with interpretation of results. N.M. performed the polymer chemistry review and bonding analysis. A.E.P. performed all of the experiments for this study and performed the literature reviews in 
+Section 1
+ and 
+Section 2
+. A.P.D. assisted with experimental design and with the literature review. T.R.P. assisted with designing and interpreting the plate-part interface heating experiment. All figures in the paper were created by A.E.P. and N.M. All authors contributed substantially to the writing or editing of the manuscript. Author order was negotiated by and freely agreed to by all authors prior to manuscript submission.
+The authors declare that no conflicts of interest exist.
+Table A1
+ below shows the collected material properties for the materials under study, both the bulk (
+B
+) and printed (
+P
+) properties. While the table is not complete due to lack of data found in the literature, as large a set as possible was collected; some information was found for all combination except for aluminum PLA. The references column shows the sources for the data.

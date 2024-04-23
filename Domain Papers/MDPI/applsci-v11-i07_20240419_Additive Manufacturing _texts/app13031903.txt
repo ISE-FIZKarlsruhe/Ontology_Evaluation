@@ -1,0 +1,1358 @@
+While attracting increasing research attention in science and technology, Machine Learning (ML) is playing a critical role in the digitalization of manufacturing operations towards Industry 4.0. Recently, ML has been applied in several fields of production engineering to solve a variety of tasks with different levels of complexity and performance. However, in spite of the enormous number of ML use cases, there is no guidance or standard for developing ML solutions from ideation to deployment. This paper aims to address this problem by proposing an ML application roadmap for the manufacturing industry based on the state-of-the-art published research on the topic. First, this paper presents two dimensions for formulating ML tasks, namely, ’Four-Know’ (Know-what, Know-why, Know-when, Know-how) and ’Four-Level’ (Product, Process, Machine, System). These are used to analyze ML development trends in manufacturing. Then, the paper provides an implementation pipeline starting from the very early stages of ML solution development and summarizes the available ML methods, including supervised learning methods, semi-supervised methods, unsupervised methods, and reinforcement methods, along with their typical applications. Finally, the paper discusses the current challenges during ML applications and provides an outline of possible directions for future developments.
+Within the fourth industrial revolution, coined as ‘Industry 4.0’, the way products are manufactured is changing dramatically [
+1
+]. Moreover, the way humans and machines interact with one another in manufacturing has seen enormous changes [
+2
+], developing towards an ‘Industry 5.0’ notion [
+3
+]. The digitalization of businesses and production companies, the inter-connection of their machines through embedded system and the Internet of Things (IoT) [
+4
+], the rise of cobots [
+5
+,
+6
+], and the use of individual workstations and matrix production [
+7
+] are disrupting conventional manufacturing paradigms [
+1
+,
+8
+]. The demand for individualized and customized products is continuously increasing. Consequently, order numbers are surging while batch sizes diminish, to the extremes of fully decentralized ’batch size one’ production. The demand for a high level of variability in production and manufacturing through Mass Customization is inevitable. Mass Customization in turn requires manufacturing systems which are increasingly more flexible and adaptable [
+7
+,
+8
+,
+9
+].
+Machine Learning (ML) is one of the cornerstones for making manufacturing (more) intelligent, and thereby providing it with the needed capabilities towards greater flexibility and adaptability [
+10
+]. These advances in ML are shifting the traditional manufacturing era into the smart manufacturing era of Industry 4.0 [
+11
+]. Therefore, ML plays an increasingly important role in manufacturing domain together with digital solutions and advanced technologies, including the Industrial Internet of Things (IIoT), additive manufacturing, digital twins, advanced robotics, cloud computing, and augmented/virtual reality [
+11
+]. ML refers to a field of Artificial Intelligence (AI) that covers algorithms learning directly from their input data [
+12
+]. Despite most researchers focusing on finding a single suitable ML solution for a specific problem, efforts have already been undertaken to reveal the entire scope of ML in manufacturing. Wang et al. presented frequently-used deep learning algorithms along with an assessment of their applications towards making manufacturing “smart” in their 2018 survey [
+13
+]. In particular, they discussed four learning models: Convolutional Neural Networks, Restricted Boltzmann Machines, Auto-Encoders, and Recurrent Neural Networks. In their recent literature review on “Machine Learning for Industrial Applications”, Bertolini et al. [
+12
+] identified, classified, and analyzed 147 papers published during a twenty-year time span from Jan. 2000 to Jan. 2020. In addition, they provided a classification on the basis of application domains in terms of both industrial areas and processes, as well as their respective subareas. Within these domains, the authors analyzed the different trends concerning supervised, unsupervised, and reinforced learning techniques, including the most commonly used algorithms, Neural Networks (NNs), Support Vector Machine (SVM), and Tree-Based (TB) techniques. The goal of another literature review from Dogan and Birant [
+14
+] was to provide a sound comprehension of the major approaches and algorithms from the fields of ML and data mining (DM) that have been used to improve manufacturing in the recent past. Similarly, they investigated research articles from the period of the past two decades and grouped the identified articles under four main subjects: scheduling, monitoring, quality, and failure.
+While these classifications and trend analyses provide an excellent overview of the extent of ML applications in manufacturing, they mainly focus on introducing ML algorithms; the implementation of ML solution for different tasks in an industrial environment from scratch has not yet been fully discussed. In general, a comprehensive formulation of industrial problems prior to the development of ML solutions seems lacking. Therefore, the issue we aim to address in this paper is how ML can be implemented to improve manufacturing in the transition towards Industry 4.0. From this issue, we derive the following research questions:
+RQ1: How does ML benefit manufacturing, and what are the typical ML application cases?
+RQ2: How are ML-based solutions developed for problems in manufacturing engineering?
+RQ3: What are the challenges and opportunities in applying ML in manufacturing contexts?
+RQ1: How does ML benefit manufacturing, and what are the typical ML application cases?
+RQ2: How are ML-based solutions developed for problems in manufacturing engineering?
+RQ3: What are the challenges and opportunities in applying ML in manufacturing contexts?
+To answer these research questions, more than a thousand research articles retrieved from two well-known research databases were systematically identified, screened, and analyzed. Subsequently, the articles were classified within a two-dimensional framework, which takes value-based development stages into account on one axis and manufacturing levels on the other. The development stage concerns visibility, transparency, predictive capacity, and adaptability, whereas the four manufacturing levels are product, process, machine, and system.
+The rest of this paper is structured as follows. 
+Section 1
+ introduces the key concepts, research questions, and motivations. 
+Section 2
+ proposes the methodology of ’Four-know’ and ’Four-level’ to establish a two-dimensional framework for helping to formulate industrial problems effectively. Based on the proposed framework, a systematic literature review is carried out and the identified articles are analysed and classified. 
+Section 3
+ describes a six-step pipeline for the application of ML in manufacturing. 
+Section 4
+ explains different ML methods, presenting where and how they have been applied in manufacturing according to the prior identified research articles. 
+Section 5
+ formulates common challenges and potential future directions; finally, the paper concludes in 
+Section 6
+ with a summary and discussion of the authors’ findings.
+Despite numerous ML studies and their promising performance, it remains very difficult for non-experts working in the manufacturing industry to begin developing ML solutions for their specific problems. The first challenging part of application is to formulate the actual problems to be solved [
+15
+]. Therefore, this section aims to overcome this problem by introducing the categories of Four-Know and Four-Level to help formulate ML tasks in manufacturing and describing the benefits of applying ML in manufacturing from ML use cases categorized using the Four-Know and Four-Level concepts (RQ1). Lastly, an overview and developing trends in recent ML studies are provided as formulated by Four-Know and Four-Level.
+According to the 
+Acatech
+ Industrie 4.0 Maturity levels [
+16
+], the development towards Industry 4.0 in manufacturing can be structured into the following six successive stages: computerization, connectivity, visibility, transparency, predictive capacity, and adaptability. The first two stages, computerization and connectivity, provide the basis for digitization, while the rest are analytic capabilities required for achieving Industry 4.0. ML, as powerful data analytics tools are normally applied in the last four stages. Inspired by the 
+Acatech
+ Industrie 4.0 Maturity levels, ML studies in manufacturing can be categorized into four subjects: Know-what, Know-why, Know-when, and Know-how, which to a degree overlap with visibility, transparency, predictive capacity, and adaptability, respectively. The Four-Know definitions are presented below:
+Know-what
+ deals with understanding of the current states of machines, processes, or production systems, which can help in rapid decision-making. It should be noted that Know-what goes beyond visualization of real-time data. Instead, data should be processed, analyzed, and distilled into information which enables decision-making. For instance, typical examples of Know-what in manufacturing are defect detection in quality control [
+17
+,
+18
+], fault detection in process/machine monitoring [
+19
+,
+20
+], and soft sensor modelling [
+21
+,
+22
+].
+Know-why
+, based on the information from Know-what, aims to identify inner patterns from historical data, thereby discovering the reasons for a thing happening. Know-why includes the identification of interactions among different variables [
+23
+] and the discovery of cause-effect relationship between an event and other variables [
+24
+,
+25
+]. On one hand, Know-why can indicate most important factors for understanding Know-what. On the other hand, Know-why is the prerequisite for Know-when, as the reliability of predictions is heavily dependent upon the quality of casual inference.
+Know-when
+, built on Know-why, involves timely predictions of events or prediction of key variables based on historical data, allowing the decision-maker can take actions at early stages. For instance, Know-when in manufacturing includes quality prediction based on relevant variables [
+26
+,
+27
+], predictive maintenance via detection of incipient anomalies before break-down [
+28
+,
+29
+], and predicting Remaining Useful Life (RUL) [
+30
+,
+31
+].
+Know-how
+, on the foundation of Know-when, can recommend decisions that help adapt to expected disturbance and can aid in self-optimization. Examples in manufacturing include prediction-based process control [
+27
+,
+32
+], scheduling of predictive maintenance tasks [
+33
+,
+34
+], dynamic scheduling in the flexible production [
+35
+,
+36
+], and inventory control [
+34
+].
+Know-what
+ deals with understanding of the current states of machines, processes, or production systems, which can help in rapid decision-making. It should be noted that Know-what goes beyond visualization of real-time data. Instead, data should be processed, analyzed, and distilled into information which enables decision-making. For instance, typical examples of Know-what in manufacturing are defect detection in quality control [
+17
+,
+18
+], fault detection in process/machine monitoring [
+19
+,
+20
+], and soft sensor modelling [
+21
+,
+22
+].
+Know-why
+, based on the information from Know-what, aims to identify inner patterns from historical data, thereby discovering the reasons for a thing happening. Know-why includes the identification of interactions among different variables [
+23
+] and the discovery of cause-effect relationship between an event and other variables [
+24
+,
+25
+]. On one hand, Know-why can indicate most important factors for understanding Know-what. On the other hand, Know-why is the prerequisite for Know-when, as the reliability of predictions is heavily dependent upon the quality of casual inference.
+Know-when
+, built on Know-why, involves timely predictions of events or prediction of key variables based on historical data, allowing the decision-maker can take actions at early stages. For instance, Know-when in manufacturing includes quality prediction based on relevant variables [
+26
+,
+27
+], predictive maintenance via detection of incipient anomalies before break-down [
+28
+,
+29
+], and predicting Remaining Useful Life (RUL) [
+30
+,
+31
+].
+Know-how
+, on the foundation of Know-when, can recommend decisions that help adapt to expected disturbance and can aid in self-optimization. Examples in manufacturing include prediction-based process control [
+27
+,
+32
+], scheduling of predictive maintenance tasks [
+33
+,
+34
+], dynamic scheduling in the flexible production [
+35
+,
+36
+], and inventory control [
+34
+].
+The aim of applying ML in manufacturing is to achieve production optimization across four different levels: product, process, machine, and system. Therefore, the use cases for applying ML can be further categorized by these different levels, as shown in 
+Figure 1
+ and 
+Table 1
+, which answer RQ1 in terms of ML typical use cases.
+In order to address the research questions laid out in 
+Section 1
+, a systematic literature review following the PRISMA methodology [
+60
+] was carried out. Two well-known research databases, Scopus (Elsevier) and Web of Science (WoS), were chosen for retrieving documents. The overall literature review process is shown in 
+Figure 2
+.
+Table 2
+ shows the limitations used when performing the document search. It should be noted that the query strings were used for Title, Abstract, and Keywords as well as Keyword Plus (only in WoS).
+Following the document search, 2547 documents were found from Scopus and 1784 from WoS. The identified publications from the two databases were merged and duplicates were removed, resulting in 2861 publications. The documents were then evaluated and selected by reading the Title and Abstract field, and articles that did not meet the following selection criteria were excluded:
+The study dealt with the context of manufacturing;
+The study dealt with ML applications in specific fields.
+The study dealt with the context of manufacturing;
+The study dealt with ML applications in specific fields.
+Therefore, conceptual models, frameworks, and studies that only focused on algorithm development were considered to be out of scope.
+Finally, the remaining 1348 documents were analyzed and classified based on the Four-Level and Four-Know categories. 
+Figure 3
+ shows the trend of ML applications in manufacturing over the past five years from the Four-Level perspective. 
+Figure 4
+ reveals the detailed distribution of ML applications in Four-Know terms. It should be noted that because the literature review was conducted in August 2022, the actual numbers for the full year 2022 should be higher. As can be seen, there has been a gradual increase in the number of ML publications in manufacturing in all levels over the past five years. Typically, what stands out in this figure is the dominance of the product level. From 
+Figure 4
+, it can be seen that recent ML applications in product level are mainly focused on Know-what and Know-when. A similar pattern can be found at the machine level. Interestingly, a considerable growth in Know-how is observed at the process and system levels compared to the others. The reason for this may be correlated with higher demand for adaptability with respect to changes on the process and system levels.
+The identified documents were analyzed and classified according to their applied ML methods, providing examples for non-experts when dealing with similar tasks.
+ML is a technique capable of extracting knowledge from data automatically [
+12
+]. Increasing research on ML has shown that it is an appealing solution when tackling complex challenges. In recent years, more and more manufacturing industries have begun to leverage the benefits of ML by developing ML solutions in several industrial fields. However, despite plenty of off-the-shelf ML models, there are challenges when applying ML to real-world problems [
+61
+]. In particular, it is harder for small and medium-sized enterprises to develop in-house ML solutions, as commercial ML solutions are normally confidential and inaccessible. Therefore, this section aims to provide a pipeline for applying ML for those who are starting from scratch (RQ2). Applying machine learning in manufacturing normally involves the following six steps: (i) data collection, (ii) data cleaning, (iii) data transformation, (iv) model training, (v) model analysis, and (vi) model push, as shown in 
+Figure 5
+.
+The lifeblood of any machine learning model is data. In order for an ML model to learn, clean data samples must be continuously fed into system throughout the training process. When the collected data are highly imbalanced or otherwise inadequate, the desired task may not be achievable. Data can be collected from different sources, including machines, processes, or production with the aid of sensors or external databases. In terms of data types, the data used in machine learning can be generally categorized as follows:
+Image data
+, matrices of pixels with two or more dimensions, such as gray-scale images or colored images. Image data can acquired by with vision systems, through data transformations such as simple concatenation of several one-dimensional vectors with same length, or by the transformation of images from the spatial domain to the frequency domain.
+Tabular data
+ organized in a table, where normally one axis represents attributes and another axis represents observations. Tabular data are typically observed in production data, where the attributes of events of interest are collected. Though tabular data share a similar data structure with image data, the latter are more focused on one-dimensional interaction among attributes, while image data typically stress spatial interactions in both dimensions.
+Time series data
+, sequences of one or more attributes over time, with the former corresponding to univariate time series and the latter multivariate time series. In manufacturing, time series data are normally acquired with sensors whenever there is a need for monitoring time flow changes of data.
+Text data
+, including written documents with words, sentences or paragraphs. Examples of text data in manufacturing include maintenance reports on machines and descriptions of unexpected disturbances or events in production.
+Image data
+, matrices of pixels with two or more dimensions, such as gray-scale images or colored images. Image data can acquired by with vision systems, through data transformations such as simple concatenation of several one-dimensional vectors with same length, or by the transformation of images from the spatial domain to the frequency domain.
+Tabular data
+ organized in a table, where normally one axis represents attributes and another axis represents observations. Tabular data are typically observed in production data, where the attributes of events of interest are collected. Though tabular data share a similar data structure with image data, the latter are more focused on one-dimensional interaction among attributes, while image data typically stress spatial interactions in both dimensions.
+Time series data
+, sequences of one or more attributes over time, with the former corresponding to univariate time series and the latter multivariate time series. In manufacturing, time series data are normally acquired with sensors whenever there is a need for monitoring time flow changes of data.
+Text data
+, including written documents with words, sentences or paragraphs. Examples of text data in manufacturing include maintenance reports on machines and descriptions of unexpected disturbances or events in production.
+Real-world industrial data are highly susceptible to noisy, missing, and inconsistent data due to several factors. Low-quality noisy data can lead to less accurate ML models. Data cleaning [
+62
+] is a crucial step when organizing data into a consistent data structure across packages, and can improve the quality of the data, leading to more accurate ML models. It is usually performed as an iterative approach. Methods include filling in missing values, smoothing noisy data, removing outliers, resolving data inconsistencies, etc.
+Data transformation is the process of transforming unstructured raw data into data better suited for model construction. Data transformation can be broadly classified into mandatory transformations and optional quality transformations. Mandatory transformations must be carried out to convert the data into a usable format and then deliver the transformed data to the destination system. These include transforming non-numerical data into numerical data, resizing data to a fixed size, etc. It should be noted that data transformations are not always straightforward. Indeed, in certain situations data types can be interconvertible by leveraging specific processing techniques, as shown in 
+Figure 6
+. For instance, univariate time series can be converted into image data using the Gramian Angular Field (GAF) or Markov Transition Field (MTF) [
+63
+] methods. Unstructured text data can be converted into tabular data via word embedding [
+64
+]. Tabular data can be transformed into image data by projecting data into a 2D space and assigning pixels, as in Deepinsight [
+65
+] or Image Generator for Tabular Data (IGTD) [
+66
+]. Image data are preferable for data analysis, as they allow the power of Convolutional Neural Networks (CNNs) [
+67
+] to be exploited.
+In real-world applications, data are normally high-dimensional and redundant. When performing data modelling directly in the original high-dimensional space, the computational efficiency can be very low. Hence, it is necessary to reduce the dimensionality in order to obtain better representation for data modelling. This is achieved by feature selection, which selects the most informative feature subset from raw data, or feature extraction, which generates new lower-dimensional features. After feature engineering, features are either manually designed, so-called “handcrafted features” [
+68
+], or automatically learned from data, so-called “automatic features”. Handcrafted features are heavily dependent on domain knowledge, and normally have physical meaning. However, these features are highly subjective [
+69
+] and inevitably lack implicit key features [
+70
+,
+71
+].
+By contrast, automatic features driven by data require no prior knowledge. Therefore, they have been gaining increasing research attention in recent years. Conventionally, automatic features are obtained by linear transformations such as Principle Component Analysis (PCA) [
+72
+] or Independent Component Analysis (ICA) [
+73
+]. However, with the development of Artificial Neural Networks (ANNs), direct learning of implicit features has become possible by optimizing the loss function. Thus, neural networks have gradually developed into an end-to-end solution where knowledge is directly learned from raw data without human effort. Typically, CNNs [
+74
+] and Recurrent Neural networks (RNNs) [
+75
+] are used for image data and time series data, respectively.
+A summary of typical features for different data types can be seen in 
+Table 3
+.
+After selecting the features, it is necessary to form the correct data structure for each individual ML model used in the subsequent steps. Note that different ML algorithms might require different data models for the same task. Furthermore, results can be improved through normalization or standardization. Then, the ML models can be applied in the actual modelling phase. The first step in training a machine learning model typically involves selecting a model type that is appropriate for the nature of the data and the problem at hand. After a model has been chosen, it can be trained by providing it with the training data and using an optimization algorithm to find the set of parameters that provide the best performance on those data. Depending on the task, either unsupervised, semi-supervised, supervised, or reinforcement learning can be applied. These are individually introduced in the following section.
+Analysis of model performance is an important step in choosing the right model. This stage emphasizes how effective the selected model will perform in the future and helps to make the final decision with regard to model selection. Performance analysis evaluates models using different metrics, e.g., accuracy, precision, recall, and F1-score (the weighted average of precision and recall) for classification tasks and the root mean square error (RMSE) for regression tasks.
+Although state-of-the-art ML models improve predictive performance, they contain millions of parameters, and consequently require a large number of operations per inference. Such computationally intensive models make deployment in low-power or resource-constrained devices with strict latency requirements quite difficult. Several methods, including model pruning [
+83
+], model quantization [
+84
+], and knowledge distillation [
+85
+], have been suggested in the literature as ways to compress these dense models.
+Overall, In the context of manufacturing applications, data collection, data cleaning, data transformation, model training, model analysis, and model push are key steps in the implementation of utilizing historical data with ML in order to optimize production and improve efficiency, quality, and productivity. For instance, data collection involves gathering data from various sources, such as sensor data, production logs, and quality control records. Data cleaning involves removing any errors, inconsistencies, or irrelevant information from the data. Data transformation involves preparing the data for analysis via formatting in a way that is suitable for the chosen model. Model training involves using the cleaned and transformed data to train a machine learning model. Model analysis involves evaluating the performance of the model and identifying any areas for improvement. Model push involves deploying the model in a production environment and making predictions or decisions based on the model. All of these steps are critical to ensuring that the results from ML models are accurate, reliable, and useful for manufacturing production.
+Model development is the core of ML-based solutions, as the selection of an ML model plays a critical roles in the outcome. Therefore, this section aims to provide a comprehensive overview of ML methods and their potential possibilities in manufacturing applications, including supervised learning methods, semi-supervised learning methods, unsupervised learning methods, and reinforcement learning methods. In addition, example typical applications for each category of ML method are listed to support model selection.
+Supervised learning methods aim to learn an approximation function 
+f
+ that can map inputs 
+x
+ to outputs 
+y
+ with the guidance of annotations 
+
+
+
+
+
+
+(
+
+
+
+
+x
+
+
+1
+
+
+
+
+,
+
+
+
+
+y
+
+
+1
+
+
+
+
+)
+
+
+
+
+,
+
+
+
+
+(
+
+
+
+
+x
+
+
+2
+
+
+
+
+,
+
+
+
+
+y
+
+
+2
+
+
+
+
+)
+
+
+
+
+,
+
+
+…
+
+
+,
+
+
+
+
+(
+
+
+
+
+x
+
+
+N
+
+
+
+
+,
+
+
+
+
+y
+
+
+N
+
+
+
+
+)
+
+
+
+
+
+
+. In supervised learning, the algorithm analyzes a labeled dataset and derives an inferred function which can be applied to unseen samples. It should be noted that labeled dataset is a necessity for supervised learning, and as such it requires a large amount of data and high labeling costs. Supervised learning methods are generally used for dealing with two problems, namely, regression and classification. The difference between regression and classification is in the data type of the output variables; regression predicts continuous numeric values (
+
+
+
+
+y
+
+
+∈
+
+
+R
+
+
+
+
+), while classification predicts categorical values (
+
+
+
+
+y
+
+
+∈
+
+
+{
+
+
+0
+
+
+,
+
+
+1
+
+
+}
+
+
+
+
+). In terms of principles, supervised learning methods can be further categorized into four groups: tree-based methods, probabilistic-based methods, kernel-based methods, and neural network-based methods.
+Tree-based methods
+: Tree-based methods aim at partitioning the feature space into several regions until the datapoints in each region share a similar class or value, as depicted in 
+Figure 7
+. After space partitioning, a series of if–then rules with a tree-like structure can be obtained and used to determine the target class or value. Compared with the black-box models in other supervised methods, Tree-based methods are easily understandable models that offer better model interpretability. Decision trees [
+86
+], in which only a single tree is established, are the most basic of tree-based methods. It is simple and effective to train a decision tree, and the results are intuitively understandable, though this approach is very prone to overfitting. A tree ensemble is an extension of the decision tree concept. Instead of establishing a single tree, multiple trees are established in parallel or in sequence, referred to as bagging [
+87
+] and boosting [
+88
+], respectively. Commonly used tree ensemble methods include Random Forest [
+89
+], Adaptive Boosting (AdaBoost) [
+88
+], and Extreme Gradient Boosting (XGBoost) [
+90
+].
+Thanks to their better model interpretability, tree-based methods can be used to identify the most important factors leading up to events. Their possible applications in manufacturing are mainly in the Know-why and Know-when stages. For instance, examples of Know-why tasks with tree-based methods at the product and machine level include identifying the influencing factors that lead to quality defects [
+91
+] or machine failure [
+92
+], thereby allowing the manufacturer to diagnose problems effectively. In addition, the identified important factors when using tree-based methods can help in further predicting target values such as product quality [
+93
+](Know-when, product level) or events of interest before they happen, such as machine breakdown [
+31
+] (Know-when, machine level).
+Probabilistic-based methods
+: For a given input, probabilistic-based methods provide probabilities for each class as the output. Probabilistic models are able to explain the uncertainties inherent to data, and can hierarchically build complex models. Widely used probabilistic-based methods include Bayesian Optimization (BO) [
+94
+] and Hidden Markov Models (HMM) [
+95
+].
+The dependencies among different variables can be well captured by Bayesian networks [
+94
+], enabling a greater likelihood of predicting the target. This can be potentially beneficial for manufacturing when it comes to Know-what and Know-when tasks, for instance, detection or prediction of events such as quality issues [
+96
+] (product level), machine failure [
+97
+] (machine level), or dynamic process modelling [
+98
+] (process level).
+Markov chains [
+95
+], on the other hand, are a type of probabilistic model that describe a sequence of possible events in which the probability of each event depends only on the state attained in the previous event. Markov chains can be utilized in manufacturing to model and analyze the behavior of systems (Know-why, system level) such as production lines [
+99
+] or supply chains [
+100
+]. In addition, the capability of predicting future states with Markov chains enables applications predicting joint maintenance in production systems [
+101
+] (Know-when, system level) and optimizing production scheduling [
+102
+] (Know-how, system level).
+Kernel-based methods
+: As depicted in 
+Figure 8
+, kernel-based methods utilize a defined kernel function to map input data into a high-dimensional implicit feature space [
+103
+]. Instead of computing the targeted coordinates, kernel-based methods normally compute the inner product between a pair of data points in the feature space. However, kernel-based methods have low efficiency, especially with respect to large-scale input data. Due to the promising capability of kernel-based methods in classification and regression, they can be utilized in the Know-what and Know-when stages in manufacturing, such as defect detection [
+104
+] (Know-what, product level), quality prediction [
+105
+] (Know-when, product level), and wear prediction in machinery [
+106
+] (Know-when, machine level). There are different types of kernel-based methods in supervised learning, such as SVM [
+107
+] and Kernel–Fisher discriminant analysis (KFD) [
+108
+].
+Neural-network-based methods
+: Inspired by biological neurons and their ability to communicate with other connected cells, neural network-based methods employ artificial neurons. A typical neural network, such as ANNs, consists of an input layer, hidden layer, and output layer, as illustrated in 
+Figure 9
+. Common ANNs types include CNNs [
+109
+], RNNs [
+110
+], and Deep Belief Network (DBN) [
+111
+].
+Thanks to their powerful feature extraction capability when using matrix-like data, CNNs are widely used for image processing. In terms of possible applications in manufacturing, CNNs can be used in the Know-what stage to perform image-based quality control [
+112
+] (Know-what, product level) or image-based process monitoring [
+113
+] (Know-what, process level). In addition, by converting time series data from sensors to 2D images [
+114
+], CNNs can be used to detect and diagnosis machine failure as well.
+RNNs are typically used to process sequential input data such as time series data or sequential images. Therefore, in terms of possible applications in manufacturing, RNNs are well-suited to the Know-when stage for analyzing sensor data or live images from machines, processes, or production systems. For instance, RNNs can enable the real-time performance prediction, such as the remaining useful life of machinery [
+115
+] (Know-when, machine level), process behavior prediction [
+116
+] (Know-when, process level), or the prediction of production indicators for real-time production scheduling [
+117
+] (Know-when, system level).
+The typical supervised learning approaches applied in manufacturing are summarized in 
+Table A1
+.
+Unsupervised learning algorithms aim to identify patterns in data sets containing data points that are not labeled. Unsupervised learning eliminates the need for labeled data and manual feature engineering, allowing for more general, flexible, and automated ML methods. As a result, unsupervised learning methods draw patterns and highlight areas of interest, revealing critical insight into the production process and opportunities for improvement. This can allow manufacturers to make better production-focused decisions, driving their business forward. The primary goal of unsupervised learning is to identify hidden and interesting patterns in unlabeled data. In terms of principles, there are three types of unsupervised tasks: Dimension Reduction [
+118
+,
+119
+], Clustering [
+120
+], and Association Rules [
+121
+]. Many aspects of unsupervised learning can be beneficial in manufacturing applications. First, clustering algorithms can be used to identify outliers in manufacturing data. Another aspect is to handle high dimensional data, e.g., for manufacturing cost estimation, quality improvement methodologies, production process optimization, better understanding of the customer’s data, etc. Usually, a dimensional reduction support algorithm is required to handle data complexity and high dimensionality. Finally, it is challenging to perform root cause analysis in large-scale process execution due to the complexity of services in data centers. Association rule-based learning can be employed to conduct root cause analysis and to identify correlations between variables in a dataset.
+Dimensional reduction
+ is the process of converting data from a high-dimensional space to a low-dimensional space while preserving important characteristics of the original data.
+Principal component analysis
+ (PCA) [
+118
+]: The main idea of PCA is to minimize the number of interrelated variables in a dataset while preserving as much of the dataset’s inherent variance as possible. A new set of variables, called principal components (PCs), are generated; these are uncorrelated and sorted such that the first few variables retain the majority of the variance included in all of the original variables. A pictorial representation of PCA is shown in 
+Figure 10
+.
+The five steps below can be used to condense the entire process of extracting principal components from a raw dataset.
+Say we wish to condense 
+d
+ features in our data matrix 
+X
+ to 
+k
+ features. The first step is to standardize the input data:
+
+
+
+
+
+
+
+
+
+z
+
+
+=
+
+
+x
+
+
+−
+
+
+μ
+
+
+/
+
+
+σ
+
+
+
+
+
+
+
+
+
+
+
+
+
+where 
+
+
+μ
+
+
+ is the mean and 
+
+
+σ
+
+
+ is the standard deviation.
+Next, it is necessary to find the covariance matrix of the standardized input data. The covariance of variables 
+X
+ and 
+Y
+ can be written as follows:
+
+
+
+
+
+
+
+
+
+cov
+
+
+
+
+(
+
+
+X
+
+
+,
+
+
+Y
+
+
+)
+
+
+
+
+=
+
+
+
+
+1
+
+
+
+
+n
+
+
+−
+
+
+1
+
+
+
+
+
+
+
+
+∑
+
+
+
+
+i
+
+
+=
+
+
+1
+
+
+
+
+n
+
+
+
+
+
+
+(
+
+
+X
+
+
+i
+
+
+−
+
+
+
+
+x
+
+
+→
+
+
+
+
+)
+
+
+
+
+
+
+(
+
+
+Y
+
+
+i
+
+
+−
+
+
+
+
+y
+
+
+¯
+
+
+
+
+)
+
+
+
+
+.
+
+
+
+
+
+
+
+
+
+
+(1)
+
+
+
+
+The third steps is to find all of the eigenvalues and eigenvectors of the covariance matrix:
+
+
+
+
+
+
+
+
+
+A
+
+
+
+
+v
+
+
+→
+
+
+
+
+=
+
+
+λ
+
+
+
+
+v
+
+
+→
+
+
+
+
+
+
+
+
+
+
+
+
+(2)
+
+
+
+
+
+
+
+
+
+
+
+
+A
+
+
+
+
+v
+
+
+→
+
+
+
+
+−
+
+
+λ
+
+
+
+
+v
+
+
+→
+
+
+
+
+=
+
+
+0
+
+
+
+
+
+
+
+
+
+
+(3)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+
+
+→
+
+
+
+
+
+
+(
+
+
+A
+
+
+−
+
+
+λ
+
+
+I
+
+
+)
+
+
+
+
+=
+
+
+0
+
+
+.
+
+
+
+
+
+
+
+
+
+
+(4)
+
+
+
+
+Then, the eigenvector corresponding to the largest eigenvalue is the direction with the maximum variance, the eigenvector corresponding to second-largest eigenvalue is the direction with the second maximum variance, etc.
+To obtain 
+k
+ features, it is necessary to multiply the original data matrix by the matrix of eigenvectors corresponding to the 
+k
+ largest eigenvalues.
+PCA is particularly useful for processing manufacturing data, which typically have a large number of variables, making it difficult to identify patterns and trends. A variety of applications of PCA in manufacturing are listed below:
+Quality improvement (Know-why, product level): by analyzing the variations of a product’s features, PCA can be used to identify the causes of product defects [
+122
+].
+Machine monitoring (Know-why, machine level): by analyzing sensor data from a machine, PCA can be used to detect incipient patterns in the data that indicate potential issues with the machinery, such as wear and tear [
+123
+].
+Process optimization (Know-why, process level): by analyzing variations in the process data, PCA can be used to identify the most important factors that affect the process, allowing the manufacturer to optimize the process and thereby reduce costs [
+124
+].
+Quality improvement (Know-why, product level): by analyzing the variations of a product’s features, PCA can be used to identify the causes of product defects [
+122
+].
+Machine monitoring (Know-why, machine level): by analyzing sensor data from a machine, PCA can be used to detect incipient patterns in the data that indicate potential issues with the machinery, such as wear and tear [
+123
+].
+Process optimization (Know-why, process level): by analyzing variations in the process data, PCA can be used to identify the most important factors that affect the process, allowing the manufacturer to optimize the process and thereby reduce costs [
+124
+].
+Autoencoder
+ (AE) [
+119
+] is another popular method for reducing the dimensionality of high-dimensional data. AE alone does not perform classification; instead, it provides a compressed feature representation of high-dimensional data. The typical structure of AE consists of an input layer, one hidden or encoding layer, one reconstruction or decoding layer, and an output layer. The training strategy of AE includes encoding input data into a latent representation that can reconstruct the input. To learn a compressed feature representation of input data, AE tries to reduce the reconstruction error, that is, to minimize the difference between the input and output data. An illustration of AE is shown in 
+Figure 11
+.
+There are different types autoencoders that can be used for high-dimensional data. 
+Stacked Autoencoder
+ (SAE) [
+119
+] is built by stacking multiple layers of AEs in such a way that the output of one layer serves as the input of the subsequent layer. 
+Denoising autoencoder
+ (DAE) [
+125
+] is a variant of AE that has a similar structure except for the input data. In DAE, the input is corrupted by adding noise to it; however, the output is the original input signal without noise. Therefore, unlike AE, DAE has the ability to recover the original input from a noisy input signal. 
+Convolutional autoencoder
+ [
+126
+] is another interesting variant of AE, employing convolutional layers to encode and decode high-dimensional data.
+AEs can be used for a variety of applications in manufacturing, such as:
+Anomaly detection (Know-what): an AE can be trained to reconstruct normal data and detect abnormal data by measuring the reconstruction error, which allows the manufacturer to detect and address issues such as product defects [
+124
+] and machinery failure [
+127
+].
+Feature selection (Know-why): an AE can be used to identify the most important features in the data and remove the noise and irrelevant information, which can be used for diagnosis of product defects or to detect events of interests [
+128
+].
+Dimensionality reduction: an AE can be used to reduce the dimensionality of large and complex datasets, making it easier to identify patterns and trends [
+129
+].
+Anomaly detection (Know-what): an AE can be trained to reconstruct normal data and detect abnormal data by measuring the reconstruction error, which allows the manufacturer to detect and address issues such as product defects [
+124
+] and machinery failure [
+127
+].
+Feature selection (Know-why): an AE can be used to identify the most important features in the data and remove the noise and irrelevant information, which can be used for diagnosis of product defects or to detect events of interests [
+128
+].
+Dimensionality reduction: an AE can be used to reduce the dimensionality of large and complex datasets, making it easier to identify patterns and trends [
+129
+].
+Furthermore, AEs can be used in conjunction with other techniques, such as clustering or classification, to improve the accuracy of prediction and enhance the interpretability of the results [
+130
+]. Additionally, AEs can be used for data visualization. By reducing the dimensionality of the data, AEs allow high-dimensional data to be visualized clearly and interpretably [
+129
+] in a way that can be easily understood by non-technical stakeholders.
+Clustering
+: The objective of clustering is to divide the set of datapoints into a number of groups, ensuring that the datapoints within each group are similar to one another and different from the datapoints in the other groups. Clustering methods are powerful tools, allowing manufacturers examine large and complex datasets and gain meaningful insights. There are different clustering methods available, each with their own strengths and weaknesses, and the choice of method depends on the characteristics of the data and the problem to be solved. Among the widely used clustering methods are 
+Centroid-based Clustering
+ [
+120
+], 
+Density-based Clustering
+ [
+131
+], 
+Distribution-based Clustering
+ [
+132
+], and 
+Hierarchical Clustering
+ [
+133
+]. Clustering algorithms have a wide range of applications in manufacturing. For instance, clustering can be used to group manufactured inventory parts according to different features [
+134
+] (Know-what). The obtained clusters can be used as a guideline for warehouse space optimization [
+135
+]. Clustering can be used for anomaly detection [
+136
+] (Know-what) and process optimization [
+137
+] (Know-how), and can be used in conjunction with other techniques to improve the interpretability of results.
+Association rule-based learning
+ [
+121
+]: Association rule-based learning is an unsupervised data-mining technique that finds important interactions among variables in a dataset. It is capable of identifying hidden correlations in datasets by measuring degrees of similarity. Hence, association rule-based learning is suitable in the Know-why stage in manufacturing. For instance, association rule-based learning can be utilized to accurately depict the relationship between quantifiable shop floor indicators and appropriate causes of action under various conditions of machine utilization (Know-why, system level), which can be used to establish an appropriate management strategy [
+138
+].
+Unsupervised learning methods do not have any input guidance during training, which reduces labeling costs; however, their performance is normally less accurate. Therefore, semi-supervised learning methods can be used to take advantage of the accuracy achieved by supervised learning while limiting costs thanks to the reduction in labeling effort. Therefore, researchers have turned to data augmentation [
+139
+,
+140
+] to enlarge dataset, with the inputs and labels generated massively based on the existing dataset in a controlled way while incurring no extra cost in the labeling phase. Taking an image with its label as an example, it can be enriched by basic transformations such as rotation, translation, flipping, noise injection, etc. It can be enriched by adversarial data augmentation, such as by generating synthetic dataset using generative models, e.g., Generative Adversarial Network (GAN) [
+141
+] and Variational AutoEncoder (VAE) [
+142
+], thereby obtaining new images for training ML models at low cost. However, the improvements obtainable with data augmentation are limited, and more real data are better than more synthetic data [
+143
+]. Therefore, increasing attention is being paid to the combination of supervised learning and unsupervised learning, namely, semi-supervised learning, in which both unlabeled data and labeled data are leveraged during training.
+Semi-supervised learning methods can be generally divided into two groups: data augmentation-based methods and semi-supervised mechanism-based methods. An overview of semi-supervised methods is provided in 
+Figure 12
+.
+Data augmentation
+: through data augmentation, labeled data can be enlarged and augmented by adding model predictions of newly unlabeled data with high confidence as pseudo-labels, as shown in 
+Figure 13
+. However, the model continues to be run in a fully supervised manner. In addition, the quality of the pseudo-labels can highly affect model performance, and incorrect pseudo-labels with high confidence are inevitable due to their nature. To improve the quality of pseudo-labels, there are hybrid methods combining pseudo-labels and consistency regularization, such as MixMatch [
+144
+] and FixMatch [
+145
+]. Nevertheless, data augmentation-based methods are simple, and there is no need to carefully design the loss. Therefore, data augmentation-based methods can be potentially useful for non-experts in manufacturing for enlarging labeled dataset when it is easy to collect massive amounts of unlabeled data.
+Semi-supervised mechanisms
+: by contrast, semi-supervised mechanism-based methods are more focused on the mechanism of utilizing both labeled data and unlabeled data. The principle of semi-supervised mechanisms is illustrated in 
+Figure 14
+, where both labeled data and unlabeled data can be model inputs while their losses are calculated in a different way. Semi-supervised mechanism-based methods can be further categorized into consistency-based methods, graph-based methods, and generative-based methods.
+Consistency-based methods take advantage of the consistency of model outputs after perturbations [
+146
+]; therefore, consistency regularization can be applied for unlabeled data. Consistency constraint can be either imposed between the predictions from perturbed inputs from the same sample, for instance, the 
+
+
+π
+
+
+ model [
+147
+], or between the predictions from two models with the same architecture, such as MeanTeacher [
+148
+]. Thanks to the perturbations in consistency-based methods, model generalization can be enhanced [
+149
+]. In terms of applications in manufacturing, depending on the output values consistency-based methods can be used in the Know-what and Know-when stages. For instance, consistency-based methods can be utilized in quality monitoring based on images (Know-what, product level).
+Graph-based methods aim to establish a graph from a dataset by denoting each data point as a node, with the edge connecting two nodes representing the similarity between them. Label propagation is then performed on the established graph, with the information from labeled data used to infer the labels of the unlabeled data. Graph-based methods result in the connected nodes being closer in the feature space, while disconnected nodes repel each other. Therefore, graph-based methods can be used to address the problem of poor class separation due to intra-class variations and inter-class similarities [
+18
+]. Consequently, graph-based methods can be potentially useful for defect classification [
+18
+] (Know-what, product level) or machine health state monitoring [
+150
+] (Know-what, machine level) where there are problems with insufficient label information or poor class separation. However, it should be noted that graph-based methods are normally transductive methods, meaning that the constructed graph is only valid for the trained data and rebuilding the graph is necessary when it comes to new data. Typical examples of graph-based methods include Graph Neural Networks (GNNs) [
+151
+] and Graph Convolution Networks (GCNs) [
+152
+].
+The main point of generative-based methods is to learn patterns from a dataset and to model data distributions, allowing the model to be used to generate new samples. Then during training, the model can be updated using the combination of the supervised loss (for existing data with labels) and unsupervised loss (for synthetic data). An inherent advantage of generative-based methods is that the labeled data can be enriched by a trained model which has learned the data distribution. Therefore, generative-based methods are well-suited for situations where it is difficult to collect labeled data, such as process fault detection [
+153
+] (Know-what, process level) and anomaly detection in machinery [
+154
+] (Know-what, machine level). Examples include the semi-supervised GAN series (SS-GANs), such as Categorical Generative Adversarial Network (CatGAN) [
+155
+], Improved GAN [
+156
+], and semi-supervised VAEs (SS-VAEs) [
+157
+].
+Table A3
+ lists semi-supervised applications in manufacturing taken from the selected documents in 
+Section 2.2
+.
+Reinforcement Learning (RL) algorithms consist of two elements, namely, an 
+agent
+ acting within an 
+environment
+ (see 
+Figure 15
+). The agent is acting, and is therefore subject to the desired learning process by directly interacting with and manipulating the environment. Based on [
+158
+], the procedure of a learning cycle is as follows: first, the agent is presented with an observation of the environment state 
+
+
+
+
+
+
+s
+
+
+t
+
+
+
+
+∈
+
+
+S
+
+
+
+
+; then, based on this observation (along with internal decision making), the selection of an action 
+
+
+
+
+
+
+a
+
+
+t
+
+
+
+
+∈
+
+
+A
+
+
+
+
+. 
+
+
+S
+
+
+ refers to the state space, that is, the set of possible observations that could occur in the environment. The observation has to provide sufficient information on the current environment or system state in order for the agent to select actions in an ideal way to solve the control problem. For selecting the action, 
+
+
+A
+
+
+ refers to the action space, that is, the set of possible actions chosen by the agent. After 
+
+
+
+
+a
+
+
+t
+
+
+
+
+ is performed (in a given state 
+
+
+
+
+s
+
+
+t
+
+
+
+
+), the environment moves to the resulting state 
+
+
+
+
+s
+
+
+
+
+t
+
+
++
+
+
+1
+
+
+
+
+
+
+ and the agent receives a reward 
+
+
+
+
+r
+
+
+
+
+t
+
+
++
+
+
+1
+
+
+
+
+
+
+. Then, the reinforcement learning cycle continues to iterate as shown in 
+Figure 15
+. The agent aims to maximize the (discounted) long-term cumulative reward by improving the selection of actions towards an optimum. In other words, the RL agent wants to learn an optimal control policy for the environment.
+In general, RL approaches can be split into model-based, i.e., the agent has an internal model of how the environment works, and model-free. The latter is most common thanks to the advent of deep learning, and simplifies application, as feature selection can be applied. Model-free approaches themselves can be divided into short value-based or policy-based approaches by their approach to storing state-action value pairs, which are used to select the action for optimal value return; the latter directly optimize the action selection policy. In contrast to the other machine learning techniques, RL does not require large dataset, only a clearly specified environment. Typically, an RL agent is trained on a simulation or digital twin model [
+159
+]; after successful training, it can be implemented on the Know-how level for its original purpose. Otherwise, the agent starts with random non-optimal actions, leading to undesired system behavior.
+Considering the aim of achieving the Know-how level for autonomous control in processes, machines, or systems, RL is extremely important for applications in future production. In addition, multi-agent RL is becoming of interest to the research community [
+33
+], and can even be applied for controlling products [
+160
+]. However, RL remains under-exploited in the industrial area, especially in respect to other machine learning techniques [
+161
+].
+As of now, applied approaches can be summarized as shown in 
+Table A4
+. Note that the applications reviewed here are implemented in a simulation or digital twin [
+159
+], and features are manually crafted from raw data.
+A large number of ML use cases have shown the great potential for addressing complex manufacturing problems, from knowing what is happening to knowing how employ self-adapting or self-optimizing systems. The data-driven mechanisms in ML enable broader applications in different fields as well as at different levels, from individual products to whole systems. However, in spite of the great potential and advantages offered by ML and numerous off-the-shelf ML models, there are critical challenges to overcome before the successful application of ML in manufacturing can be realized. The following demonstrate typical challenges that manufacturing industries might confront during the application and deployment of ML-based solutions, along with corresponding future directions for tackling these challenges (RQ3).
+Lack of data
+. Preparing the data used for ML is not a simple task, as the scale and the quality of data can greatly affect the performance of ML models. The most common challenge involves preparing a large amount of organized input data, and ensuring high-quality labels if labels are needed. Despite manufacturing data becoming increasingly more accessible due to the development of sensors and the Internet of Things, gathering meaningful data is time-consuming and costly in many cases, for example, fault detection and RUL prediction. This issue might be alleviated by the Synthetic Minority Over-sampling Technique (SMOTE) [
+162
+]. However, SMOTE cannot capture complex representative data, as it often relies on interpolation [
+163
+]. Data augmentation [
+139
+,
+164
+] or transfer learning [
+165
+] may address this problem. The aim of data augmentation is to enlarge dataset by means of transforming data [
+139
+], by transforming both data and labels, as with MixUp [
+166
+], or by generating synthetic data using generative models [
+167
+,
+168
+]. On the contrary, instead of focusing on expanding data, transfer learning aims to leverage knowledge from similar external datasets. A typically used method in transfer learning is parameter transfer, where a pretrained model from a similar dataset is employed for initialization [
+165
+]. Another situation involving lack of data is that certain data cannot be shared due to data privacy and security issues. In confronting this problem, Federated Learning (FL) [
+169
+] might be a potential opportunity to enable model training across multiple decentralized devices while holding local data privately.
+Limited computing resources
+. The high performance of ML models always comes with high computational complexity. In particular, obtaining high accuracy with a neural network requires on millions or even billions of parameters [
+170
+]. However, limited computing resources in industries makes it a challenge to deploy heavy ML models in real-time industrial environments. Possible approaches include model compression via pruning and sharing of model parameters [
+171
+] and knowledge distillation [
+172
+]. Parameter pruning aims to reduce the number of model parameters by removing redundant parameters without any effect on model performance. By contrast, seeking the same goal, knowledge distillation focuses on distilling knowledge from a cumbersome neural network to a lightweight network to allow it to be deployed more easily with limited computing resources.
+Changing circumstances
+. Most ML applications in manufacturing focus only on model development and verification in off-line environments. However, when deploying these models in running production, their performance may be degraded due to changing circumstances, leading to changes in data distribution, that is, drift [
+173
+,
+174
+]. Therefore, manual model adjustment over time, which is time-consuming, is usually unavoidable [
+175
+]. However, this could be addressed in the future by automatic model adaption [
+174
+], in which data drifts are automatically detected and handled with less resources.
+Interpretability of results
+. Many expectations have been placed on ML to overcome all types of problems without the need for prior knowledge. In particular, ML models are expected to directly learn higher level knowledge such as Know-when and Know-how, which is difficult for human beings to obtain in manufacturing. However, without the foundations of early-stage knowledge and an understanding of the data, the results inferred from big data by black-box ML models are meaningless and unreliable. For instance, predictions blindly obtained from all data, including both relevant and irrelevant data, might even degrade performance due to the GIGO (garbage in, garbage out) phenomenon [
+176
+]. To overcome this problem, future directions within ML development might include incorporating physical models into ML models [
+177
+] or obtaining Four-know knowledge successively.
+Uncertainty of results
+. Related to the challenge of interpretability is the challenge of uncertain results. The success of manufacturing depends heavily on the quality of the resulting products. As every manufacturing process has a degree of variability, almost all industrial manufacturers use statistical process control (SPC) to ensure a stable and defined quality of products [
+178
+]. A central element of statistical process control is the determination and handling of statistical uncertainty. The uncertainty of ML results often cannot be quantified reliably and efficiently, even with today’s state-of-the-art [
+179
+,
+180
+,
+181
+]. Furthermore, model complexity and severe non-linearity in ML can hinder the evaluation of uncertainty [
+182
+]. Although there are promising approaches, e.g., Gaussian mixture models for NN [
+183
+,
+184
+] and Probabilistic Neural Network (PNN) [
+184
+], or the use of Baysian Networks [
+180
+], there are several limitations limiting potential applications, such as high computational cost and simplified assumptions [
+184
+]. Therefore, future research needs to make progress on the general theory of integrating uncertainty into ML methods to allow manufacturing in order to ensure high quality and stability in production.
+To summarize, while ML is a fairly open tool which can be used to handle a variety of problems in manufacturing, it is necessary to have an understanding of the hidden challenges in ML application in order to provide more realistic and robust outcomes. For instance, early in ML application in manufacturing, one might face the problem of lacking data. During the deployment of ML-based solutions, one might confront challenges around integrating the solution into the industrial environment. After deployment, one might encounter the challenge of evaluating ML results on product and process in terms of interpretability and uncertainty. The future directions pointed out in this review can help to address the above-mentioned challenges and ensure reliable improvements in manufacturing contexts.
+It is fully recognized that ML is playing an increasingly critical role in the digitization of manufacturing industries towards Industry 4.0, leading to improved quality, productivity, and efficiency. This review has paper aimed to address the issue of how ML can improve manufacturing, posing three research questions related to the above issue in the introduction. To address these research questions, we carried out a literature review assessing the state-of-the-art based on 1348 published scientific articles.
+To answer RQ1, we first introduced the concepts of the ‘Four-Know’ (Know-what, Know-why, Know-when, Know-how) and ‘Four-Level’ (Product, Process, Machine, System) categories to help formulate ML tasks in manufacturing. By mapping ML use cases into the Four-Know and Four-Level matrix, we provide an understanding of typical ML use cases and their potential benefits for improving manufacturing. To further support RQ1, the identified ML studies were classified using the ’Four-Know’ and ’Four-Level’ perspective to provide an overview of ML publications in manufacturing. The results showed that current ML applications are mainly focused on the product level, in particular in terms of Know-what and Know-when. In addition, considerable growth in Know-how was observed at the process and system levels, which might be correlated to higher demand for adaptability to changes on these levels.
+To fill the gap between academic research and manufacturing industries, we provided an actionable pipeline for the implementation of ML solutions by production engineers from ideation through to deployment, thereby answering RQ2. To further explain the ’model training’ step, which is the core stage in the pipeline, a holistic review of ML methods was provided, including supervised, semi-supervised, unsupervised, and reinforcement learning methods along with their typical applications in manufacturing. We hope that this can provide support in method selection for decision-makers considering ML solutions.
+Finally, to answer RQ3, we uncovered the current challenges that manufacturing industry is likely to encounter during application and deployment, and provided possible future directions for tackling these challenges as possible developments for ensuring more reliable and robust outcomes in manufacturing.
+Conceptualization, T.C., O.J.J., M.C.M., V.S. and G.F.; methodology, T.C. and S.S.; formal analysis, T.C. and S.S.; writing—original draft preparation, T.C., V.S., S.S., M.C.M., O.J.J. and F.S.; writing—review and editing, T.C., V.S., M.C.M., S.S., O.J.J., M.C., G.F., G.T., J.J.A.M. and F.S.; supervision, M.C., G.F., G.T., J.J.A.M. and F.S.; funding acquisition, G.T. All authors have read and agreed to the published version of the manuscript.
+This research was funded by a European Training Network supported by Horizon 2020, grant number 814225.
+Not applicable.
+Not applicable.
+Not applicable.
+This research work was undertaken in the context of the DIGIMAN4.0 project (“DIGItal MANufacturing Technologies for Zero-defect Industry 4.0 Production”, 
+https://www.digiman4-0.mek.dtu.dk/
+, accessed on 1 January 2023). DIGIMAN4.0 is a European Training Network supported by Horizon 2020, the EU Framework Programme for Research and Innovation (Project ID: 814225).
+The authors declare no conflict of interest.
+Disclaimer/Publisher’s Note:
+ The statements, opinions and data contained in all publications are solely those of the individual author(s) and contributor(s) and not of MDPI and/or the editor(s). MDPI and/or the editor(s) disclaim responsibility for any injury to people or property resulting from any ideas, methods, instructions or products referred to in the content.

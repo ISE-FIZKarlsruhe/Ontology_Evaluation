@@ -1,0 +1,295 @@
+T-welded joints are commonly seen in various industrial assemblies. An effort is made to check the applicability of friction stir welding for producing T-joints made of AA6063-T6 using a developed fixture. Quality T-joints were produced free from any surface defects. The effects of three parameters, such as the speed of rotation of the tool, axial force, and travel speed were analyzed. Correspondingly, mechanical characteristics such as tensile strength, hardness in three zones (thermal heat affected zone, heat affected zone, and nugget zone) and temperature distribution were measured. The full factorial analysis was performed with various combinations of parameters generated using factorial design and responses. Evident changes in the strength, hardness, and temperature profile were noticed for each combination of parameters. The three main parameters were significant in every response with 
+p
+-values less than 0.05, indicating their importance in the friction stir welding process. Mathematical models developed for investigated responses were satisfactory with high R-sq and least percentage error.
+Friction stir welding (FSW) has the capability to weld similar and dissimilar metals with different melting points [
+1
+,
+2
+,
+3
+]. This process has gained wide attention due to several advantages over other welding operations. Mechanical properties of the material remain nearly the same after welding due to less anticipation of heat energy produced in an FSW process. Other benefits not limited to different position weldability include less waste, eco-friendliness, ability to weld thin metals, and a less distorted high strength weld joint [
+4
+,
+5
+,
+6
+,
+7
+]. Butt, lap, and T-joints are very common joint configurations for many applications [
+8
+,
+9
+,
+10
+]. FSW developed for these joint configurations can be used for welding hollow pipes and pressure vessels [
+11
+,
+12
+,
+13
+]. In the last decade, FSW has been limited to only a few applications because of its difficulty in welding complex shape. However, many attempts succeeded in the later stage with appropriate fixtures. Henceforth, the process is used in aerospace and aircraft industries for welding complex profiles, for example, welding of skin and stringers in aircraft. The process parameters play a vital role in producing quality welds [
+14
+]. T-joints are mostly encountered in the assemblage of the parts. However, only a few studies are available investigating specific process parameters of FSW used for joining T-joints that can produce sound welds [
+15
+,
+16
+,
+17
+]. Investigation of mechanical characteristics of this complex configuration after performing friction stir welding is much needed to evaluate the usefulness of the process for such applications [
+18
+,
+19
+]. 
+In the case of friction stir welded T-joints, pin shapes and welding parameters are found to have a significant effect on the soundness of the weld. The pin shapes contributing more resistance are mostly preferred for FSW and to enhance strength. Heat dissipation and cooling rate influence the metallurgy. Thermocouples are commonly arranged in different locations to acquire temperature data. Investigation of the temperature profile in friction stir welded AA602-T6 conducted by Donati proved to have an optimal range that provided good mechanical properties [
+20
+]. As a result of the thermo–mechanical process, residual stress will be generated in the specimens. The higher the residual stress, the higher will be the chance for corrosion. In a T joint made of two flanges (AA6056) and one web (AA7075), residual stress will be more in the flange than the web. This is due to direct contact of the tool shoulder onto the flanges. However, studies reveal that the residual stress in the advancing side and the retreating side remains the same [
+21
+]. A number of passes are commonly used in arc welding to increase the strength of the joint and to fill the weld grooves. However, in a study conducted by making a T joint using AA64430 and FSW, it was noticed that the number of passes has no effect on the grain size and hardness, whereas tool rotational speed is a significant factor affecting hardness [
+22
+]. Various ways are practiced to capture temperature data of welded samples. Thermocouples fixed to the workpiece, thermal camera, ultrasound and neutron source based methods, and statistical models are used for capturing temperature data. The temperature at the hottest portion is estimated by placing the sensor in the transition region between the tool and shoulder [
+23
+]. A data mining algorithm can be used as a tool to relate process parameters to responses [
+24
+]. At the same time, statistical regression analysis is also an excellent choice to predict responses such as temperature, hardness, and strength for various combinations of parameters. The method is also ideal to find the temperature at any distance away from the weld line using a developed model [
+25
+,
+26
+]. At the same time, degradation of mechanical properties of the weld joint may lead to the complete collapse of the structure. Therefore, the mechanical properties are given prime importance in all welding processes. Therefore, an inspection of thermo–mechanical characteristics and process parameters has played a major role in improving the process and technology [
+27
+,
+28
+]. 
+Though many research articles related to friction stir welding of aluminum alloy butt-joints are available, investigation of T-joints are rare. This study is intended to experimentally evaluate the mechanical performances of the friction stir welded T-joints and to analyze statistically the significant parameters on responses such as weld strength, temperature, and hardness in three zones, namely the nugget zone (NZ), heat affected zone (HAZ), and thermally heat affected zone (TMAZ). 
+Chemical composition and mechanical properties of AA6063-T6 plates are given in 
+Table 1
+ and 
+Table 2
+, respectively. AA6063-T6 alloy plates were of 2 mm thickness. The geometrical dimensions of the two baseplates for T-joints were 30 × 180 × 2 mm and 60 × 180 × 2 mm. A tool made of SS316L was used for friction stir welding. Mechanical properties of SS316L are given in 
+Table 3
+.
+The geometrical dimensions are presented in 
+Figure 1
+. The conical pin was designed for easy piercing of the tool to the specimen during the penetration process. Henceforth, the FSW tool was prepared according to geometrical dimensions depicted in 
+Table 4
+.
+Tool rotational speed, axial force exerted by the tool onto the specimen, penetration depth, and travel speed are the major process parameters for the friction stir welding process. In the first phase, these process parameters were established and recorded for acceptable quality welds by performing welding trails. The FSW process comprises four important steps: tool penetration, dwell time, tool traverse motion, and tool pull out. Therefore, a conical pin tool was rotated and slowly plunged into the T joint until the tool shoulder exerted the required thrust pressure on the surface. A T joint was clamped to a backing bar using a designed fixture for preventing the joint faces from being forced apart. The rotating probe generated frictional heat between the wear resistant welding tool and the specimen. This heat caused plastic extrusion of the work-piece without the material being brought to the melting point (solid phase process), thus allowing the tool to traverse along the weld line. 
+Figure 2
+ shows the friction stir welding of AA6063-T6 joints rigidly fixed using a fixture and SS316L tool. 
+Figure 3
+ shows the welded T joint.
+The entire process can be described in five stages as follows: 
+The tool is loaded into the spindle, and the T-joint is clamped to the machine bed.
+The tool is set to the required rotational speed and then slowly plunged into the T-joint with a required axial force until the tool shoulder makes contact with the T-joint.
+The tool then travels along the weld axis forming the weld region along the travel path.
+After completion of the process, the tool is removed from the T-joint, allowing the weld material to settle.
+The welded T-joint is unloaded and the cycle is repeated producing another T-joint sample.
+The tool is loaded into the spindle, and the T-joint is clamped to the machine bed.
+The tool is set to the required rotational speed and then slowly plunged into the T-joint with a required axial force until the tool shoulder makes contact with the T-joint.
+The tool then travels along the weld axis forming the weld region along the travel path.
+After completion of the process, the tool is removed from the T-joint, allowing the weld material to settle.
+The welded T-joint is unloaded and the cycle is repeated producing another T-joint sample.
+All the welded samples were inspected using visual examination. Specimens of the required size were cut from the welded specimen to carry out examinations [
+20
+]. Further, tensile testing was carried out to determine the strength of the joint. Three of each tensile test specimen for each set of parameters were machined and tested according to ASTM standard E8M-04 [
+29
+] using a designed fixture as shown in schematic 
+Figure 4
+. It is evident that the metallurgical properties in NZ, HAZ, and TMAZ were expected to vary as a result of thermo–mechanical changes. Therefore, the Vickers hardness was measured using Vickers hardness testing equipment-VM-50 according to ASTM E-384 standards in these respective zones. These testers are suitable for measuring the hardness of metallic parts for a wide testing range from soft to hard and with high precision. Furthermore, these testers strictly conform to ISO 1754 and ISO 6507-2. A 30 kgf load was applied using a diamond indenter on the cross-section at seven different locations, including one in the nugget zone and two symmetrically 1 mm and 2 mm away from the nugget zone boundary, for measuring the hardness in the thermal heat affected zone and heat affected zone, respectively. At least 8 measurements were taken in each of the zones and an average value was taken. Finally, the average value of hardness in the baseplate was measured to compare with the hardness in the weld pool area. Two type-K thermocouples were used to measure temperature at locations that were 7 mm away from the weld line along the lateral axis of the specimen. These were inserted into drilled holes of 1 mm diameter and 1 mm depth in the bottom surface of the flange portion. A schematic representation showing the location of the thermocouples is shown in 
+Figure 5
+. The average value of the temperature was considered for statistical analysis. 
+The full factorial experiment was performed using a three-factor and three-level factorial design comprised of 27 experimental runs (see 
+Table 5
+). T-joints were welded using the generated combination of parameters, and responses for the analysis, such as temperature, strength, and hardness in NZ, HAZ, and TMAZ, were noted. Average values of responses were taken after performing three replications. Finally, the experimental values of responses for each of the experimental runs are shown in 
+Table 6
+, and predicted responses and percentage error are given in 
+Table 7
+. 
+Mathematical models were developed to calculate tensile strength, temperature, and hardness of the FSW T-joints as a function of rotational speed, travel speed, and axial forces. These are expressed as Y = f (RS, AF, TS), where Y is the response, RS is the rotation speed in RPM, AF is the axial force in kN, and TS is the travel speed in mm/min. For the three factors, the selected polynomial could be expressed as Y = b0 + b1 RS + b2 AF + b3 TS + b12 RS*AF + b13 RS*TS + b23 AF*TS, where b0 is a constant, b1, b2, and b3 are coefficients of linear terms, and b12, b13, and b23 are the coefficients of interaction terms. The values of the coefficient of the polynomial were calculated by regression analysis. Minitab software was used for statistical analysis. Final mathematical models in a coded form were generated after the analysis.
+Due to the stirring action of the tool in the T joint, uniformly curved ripples were formed at the weld surface, as shown in 
+Figure 6
+a. This resulted from the sweeping action of the shoulder over the weld hunk, causing the transfer of material from the advancing side to the retreating side. The presence of such surface ripples, also known as onion rings, is a unique characteristic of the friction stir welding process [
+22
+]. No surface defects were identified in the weld regions. Furthermore, there was no indication of worm hole or other surface deformities in any of the joints for all samples. 
+Figure 7
+ presents the stress–strain relation obtained by conducting a tensile test on T-joints for all combination of parameters. From all the observations, the tensile strength of all T-joints was observed to be lower than the base material. Tensile strength is proportional to the speed of rotation within the experimented range (1000 rpm to 1800 rpm) for constant travel speed. For a fixed 4 mm/min travel speed, the tensile strength of specimen welded at 1000 rpm was 183.7 MPa, which was less than 190.7 MPa and 206.5 MPa achieved at 1400 rpm and 1800 rpm, respectively. Restriction to grain dislocation was the reason for high strength in those welds prepared at 1800 rpm compared to the lower speed of rotation. Flash and tunnel defects were observed in a few welds prepared at 10 mm/min. This was due to high axial forces and rapid movement of the rotating tool across the weld line. At a fixed speed of rotation, the strength of the welds was noted to increase for travel speeds from low to high value. Therefore, an optimum combination of speed of rotation and travel speed was needed to obtain a strengthened joint. Proper material flow and adequate mixing are necessary for a friction stir welding process. At a high axial force and lower travel speeds, there was a prolonged exposure of the workpieces to frictional heating. This continuous stirring of the tool at a high speed of rotation for a long time will result in the formation of flash defects leading to the formation of weak joints. However, from the experimented range of travel speeds (4 mm/min to 10 mm/min), the tensile strength was found to be inversely proportional to travel speed, i.e., 4 mm/min travel speed had more strength whereas 10 mm/min had the least. At higher travel speeds, the weld area was exposed to frictional heating for only a short time, resulting in insufficient heating and poor plastic flow of the metal, resulting in void formation. These voids generally acted as stress raisers and affected the tensile strength of the joint. A tunnel defect and void are shown in 
+Figure 8
+.
+Due to the thermo–mechanical friction stir welding process, both the material flow and the heat dissipation rate can cause metallurgical transformations, altering the mechanical characteristics. 
+Figure 9
+ shows the optical microscopic image of the T-joint cross-section. Four zones—nugget zone, thermal heat affected zone, heat affected zone, and base metal were clearly distinguishable from the optical microscopic image of the T-joint weld. This signified the need for the inspection of mechanical characteristics of the T-joint due to the peculiar distribution of the material in the weld region.
+The Vickers micro-hardness was measured along the transverse cross-section sectioned at the middle (see 
+Figure 10
+, 
+Figure 11
+ and 
+Figure 12
+). The hardness of all the joints was found to be lower than the hardness of the base material. The microhardness of raw metal was 85 HV. For all travel speeds, maximum hardness was obtained at different zones for a combination of high rotation speed (1800 rpm) and high axial force (2 kN). This evidently proved the metallurgical transformations in a friction stir welding process. As a result, grain dislocated, preventing further deformation and acted as an obstacle to the slip. Consequently, high dislocation density and fine grains imparted high hardness and strength. Similarly, a low speed of rotation and less axial force at all travel speeds resulted in low hardness compared to other combinations of rotational speed and axial force. In all cases, the lowest hardness was observed in the nugget zone compared to HAZ and TMAZ. 
+Temperature profiles obtained using type k thermocouples are shown in 
+Figure 13
+, 
+Figure 14
+ and 
+Figure 15
+ at a fixed 2 kN axial force. For all speed of rotations at 2 kN axial force, the highest temperatures were formed when the travel speed was low, i.e., 4 mm/min. Similarly, the lowest temperature was generated at higher travel speeds (10 mm/min). At low speeds of rotation, as seen in 
+Figure 10
+, the maximum temperature was recorded to be 600 °C, whereas the lowest was 510 °C. 
+Figure 11
+ shows the temperature distribution for different travel speeds at a constant 1400 rpm and 2 kN axial force. The temperature was increased slightly compared to the previous condition. The maximum and minimum temperatures were 620 °C and 560 °C, respectively. At a higher speed of rotation (1800 rpm) and 2 kN axial force, the maximum temperature was noted to be 700 °C, corresponding to 4 mm/min. Therefore, it was inferred that peak temperature was formed when the speed of rotation was high and at a low travel speed at a fixed axial force. 
+Based on the experimental data, the full factorial analysis was performed considering strength, temperature, and hardness at three zones—NZ, HAZ, and TMAZ. 
+Figure 16
+ shows the pareto chart obtained after the full factorial analysis. Three parameters, namely axial force, travel speed, and rotational speed, were found to be significant in determining the hardness in the TMAZ zone. From the main effect plots shown in 
+Figure 17
+, hardness increased significantly when RS and AF increased from their low level to a high level. However, hardness in TMAZ was more when friction stir welding was operated at a low travel speed. 
+p
+-Values of AF, TS, and RS were 0.000, 0.000, and 0.000, respectively. Since 
+p
+-values of the main factors were less than 0.05, they were significant in a 95% confidence interval. However, interactions such as RS*AF, RS*TS, and AF*TS had 
+p
+-values of 0.120, 0.356, and 0.311, respectively. As 
+p
+-values of interactions were greater than 0.05, these were insignificant in a 95% confidence interval. The parallel lines in the interaction plot shown in 
+Figure 18
+ indicated that the two-way interactions were insignificant. A model to predict the hardness in the TMAZ zone is given by equation 1. The R-sq of the model was 98.78%, which means 98.78% of the variance of the hardness in the TMAZ was explained by the factors and interactions.
+
+
+
+
+Hardness—TMAZ = 54.254 − 1.309 RS_1000 − 0.959 RS_1400 + 2.269 RS_1800 − 3.643 AF_1.0 − 0.926 AF_1.5 + 4.569 AF_2.0 + 2.324 TS_4 + 0.457 TS_8 − 2.781 TS_10 − 0.702 RS*AF_1000_1.0 + 0.781 RS*AF_1000_1.5 − 0.080 RS*AF_1000_2.0 + 0.098 RS*AF_1400_1.0 − 0.735 RS*AF_1400_1.5 + 0.637 RS*AF_1400_2.0 + 0.604 RS*AF_1800_1.0 − 0.046 RS*AF_1800_1.5 − 0.557 RS*AF_1800_2.0 + 0.015 RS*TS_1000_4 + 0.048 RS*TS_1000_8 − 0.063 RS*TS_1000_10 + 0.215 RS*TS_1400_4 + 0.415 RS*TS_1400_8 − 0.630 RS*TS_1400_10 − 0.230 RS*TS_1800_4 − 0.463 RS*TS_1800_8 + 0.693 RS*TS_1800_10 − 0.385 AF*TS_1.0_4 + 0.465 AF*TS_1.0_8 − 0.080 AF*TS_1.0_10 + 0.581 AF*TS_1.5_4 − 0.069 AF*TS_1.5_8 − 0.513 AF*TS_1.5_10 − 0.196 AF*TS_2.0_4 − 0.396 AF*TS_2.0_8 + 0.593 AF*TS_2.0_10
+
+
+
+
+
+(1)
+
+
+
+
+From the pareto chart for the hardness in the nugget zone shown in 
+Figure 19
+, AF, TS, RS were found to be significant. The 
+p
+-values of AF, RS, TS were 0.000. Therefore, three isolated parameters were significant to the hardness in the nugget zone. The main effect plot shown in 
+Figure 20
+ validated the above inference. The observations were similar to those of the thermal heat affected zone. 
+p
+-Values of two-way interactions RS*AF, RS*TS, and AF*TS were 0.432, 0.453, and 0.383, respectively. Hence, all the interactions were insignificant to the nugget zone, as seen in 
+Figure 21
+. When the hardness in the nugget zone was analyzed, the hardness increased when RS and AF changed from corresponding low to high levels, whereas travel speed changed from high to a low level (see 
+Figure 20
+). The model correlating the main effects and the interaction effects of the parameters on the hardness of the NZ is provided by Equation (2). The R-sq of the model is 98.81%.
+
+
+
+
+Hardness—NZ = 50.356 − 1.500 RS_1000 − 0.667 RS_1400 + 2.167 RS_1800 − 3.456 AF_1.0 − 0.944 AF_1.5 + 4.400 AF_2.0 + 2.656 TS_4 + 1.178 TS_8 − 3.833 TS_10 − 0.400 RS*AF_1000_1.0 + 0.356 RS*AF_1000_1.5 + 0.044 RS*AF_1000_2.0 + 0.067 RS*AF_1400_1.0 − 0.544 RS*AF_1400_1.5 + 0.478 RS*AF_1400_2.0 + 0.333 RS*AF_1800_1.0 + 0.189 RS*AF_1800_1.5 − 0.522 RS*AF_1800_2.0 − 0.044 RS*TS_1000_4 + 0.200 RS*TS_1000_8 − 0.156 RS*TS_1000_10 + 0.322 RS*TS_1400_4 + 0.200 RS*TS_1400_8 − 0.522 RS*TS_1400_10 − 0.278 RS*TS_1800_4 − 0.400 RS*TS_1800_8 + 0.678 RS*TS_1800_10 − 0.256 AF*TS_1.0_4 + 0.689 AF*TS_1.0_8 − 0.433 AF*TS_1.0_10 + 0.367 AF*TS_1.5_4 − 0.289 AF*TS_1.5_8 − 0.078 AF*TS_1.5_10 − 0.111 AF*TS_2.0_4 − 0.400 AF*TS_2.0_8 + 0.511 AF*TS_2.0_10
+
+
+
+
+
+(2)
+
+
+
+
+The pareto chart, main effect plot, and interaction plot after the analysis considering hardness in the HAZ zone as a response are shown in 
+Figure 22
+, 
+Figure 23
+ and 
+Figure 24
+, respectively. AF, TS, RS, and AF*TS with 
+p
+-values 0.001, 0.000, 0.000, and 0.001 were significant. Bars in the pareto chart corresponding to these factors crossing the reference line equaled 2.306, also indicating the significance. Interactions of the speed of rotation with axial force and travel speed were not significant. In the case of HAZ, AF*TS interaction was additionally significant compared to TMAZ and NZ. The regression equation of the model is given by Equation (3). The R-sq value is 97.07%.
+
+
+
+
+Hardness—HAZ = 57.315 − 0.987 RS_1000 − 0.359 RS_1400 + 1.346 RS_1800 − 1.720 AF_1.0 − 0.226 AF_1.5 + 1.946 AF_2.0 + 0.396 TS_4 + 1.330 TS_8 − 1.726 TS_10 − 0.191 RS*AF_1000_1.0 + 0.265 RS*AF_1000_1.5 − 0.074 RS*AF_1000_2.0 + 0.048 RS*AF_1400_1.0 − 0.180 RS*AF_1400_1.5 + 0.131 RS*AF_1400_2.0 + 0.143 RS*AF_1800_1.0 − 0.085 RS*AF_1800_1.5 − 0.057 RS*AF_1800_2.0 − 0.874 RS*TS_1000_4 + 0.209 RS*TS_1000_8 + 0.665 RS*TS_1000_10 + 0.198 RS*TS_1400_4 − 0.052 RS*TS_1400_8 − 0.146 RS*TS_1400_10 + 0.676 RS*TS_1800_4 − 0.157 RS*TS_1800_8 − 0.519 RS*TS_1800_10 − 1.674 AF*TS_1.0_4 + 0.559 AF*TS_1.0_8 + 1.115 AF*TS_1.0_10 − 0.569 AF*TS_1.5_4 + 0.331 AF*TS_1.5_8 + 0.237 AF*TS_1.5_10 + 2.243 AF*TS_2.0_4 − 0.891 AF*TS_2.0_8 − 1.352 AF*TS_2.0_10
+
+
+
+
+
+(3)
+
+
+
+
+The pareto chart, main effect plot, and interaction plot for the analysis with the response as strength are shown in 
+Figure 25
+, 
+Figure 26
+ and 
+Figure 27
+. All the three parameters (RS, AF, TS) and interactions RS*TS and RS*AF were significant in estimating the strength. The 
+p
+-values of RS, AF, TS, RS*AF, RS*TS, and AF*TS were 0.000, 0.000, 0.000, 0.021, 0.320, and 0.023, respectively. Henceforth, all the factors except RS*TS were significant. The same results interpreted from the bars in the pareto compared with the reference line equaled 2.31. To increase the tensile strength, speed of rotation and axial force had to be increased while travel speed had to be reduced. The regression equation for estimating the strength is given by Equation (4). R-sq of the model is 99.30%.
+
+
+
+
+Strength = 185.420 − 10.418 RS_1000 + 0.305 RS_1400 + 10.113 RS_1800 − 3.365 AF_1.0 − 1.215 AF_1.5 + 4.580 AF_2.0 + 4.735 TS_4 − 0.087 TS_8 − 4.648 TS_10 − 0.404 RS*AF_1000_1.0 − 1.347 RS*AF_1000_1.5 + 1.751 RS*AF_1000 2.0 + 1.106 RS*AF_1400_1.0 − 1.134 RS*AF_1400_1.5 + 0.028 RS*AF_1400_2.0 − 0.702 RS*AF_1800_1.0 + 2.481 RS*AF_1800_1.5 − 1.780 RS*AF_1800_2.0 + 0.563 RS*TS_1000_4 − 0.415 RS*TS_1000_8 − 0.147 RS*TS_1000_10 − 1.294 RS*TS_1400_4 + 0.328 RS*TS_1400_8 + 0.966 RS*TS_1400_10 + 0.731 RS*TS_1800_4 + 0.087 RS*TS_1800_8 − 0.819 RS*TS_1800_10 − 1.024 AF*TS_1.0_4 + 0.265 AF*TS_1.0_8 + 0.759 AF*TS_1.0_10 − 1.241 AF*TS_1.5_4 − 0.352 AF*TS_1.5_8 + 1.593 AF*TS_1.5_10 + 2.265 AF*TS_2.0_4 + 0.087 AF*TS_2.0_8 − 2.352 AF*TS_2.0_10
+
+
+
+
+
+(4)
+
+
+
+
+The pareto chart, main effect plot, and interaction plot for the analysis with the response as temperature are shown in 
+Figure 28
+, 
+Figure 29
+ and 
+Figure 30
+. All the three isolated factors such as the speed of rotation, travel speed, and axial force were significant to the temperature. It can be noted from the pareto chart that the interaction effects were not significant as they were less than the significance level, which was 2.31. There was a substantial rise in the temperature from 560 °C to 640 °C when the speed of rotation was changed from 1000 rpm to 1800 rpm. Similarly, the temperature was decreased by 50 °C for an increase in the travel speed from 4 mm/min to 10 mm/min. The high speed of rotation and axial force and less travel speed were the reasons for an increase in the temperature. Frictional heat generated was the main reason for the rise in temperature. The high speed of rotation, deeper penetration, and prolonged exposure to contact developed this frictional heat. The graphs in the interaction plots were parallel to each other, indicating the insignificance of interaction effects. A mathematical model for calculating temperature is provided by Equation (5). The model has a regression value of 99.66%.
+
+
+
+
+Temperature = 598.741 − 39.63 RS_1000 − 9.41 RS_1400 + 49.04 RS_1800 − 7.19 AF_1.0 + 0.37 AF_1.5 + 6.81 AF_2.0 + 22.93 TS_4 + 1.59 TS_8 − 24.52 TS_10 + 0.07 RS*AF_1000_1.0 − 0.81 RS*AF_1000_1.5 + 0.74 RS*AF_1000_2.0 + 0.52 RS*AF_1400_1.0 − 1.04 RS*AF_1400_1.5 + 0.52 RS*AF_1400_2.0 − 0.59 RS*AF_1800_1.0 + 1.85 RS*AF_1800_1.5 − 1.26 RS*AF_1800_2.0 − 2.04 RS*TS_1000_4 + 4.30 RS*TS_1000_8 − 2.26 RS*TS_1000_10 − 0.59 RS*TS_1400_4 + 0.07 RS*TS_1400_8 + 0.52 RS*TS_1400_10 + 2.63 RS*TS_1800_4 − 4.37 RS*TS_1800_8 + 1.74 RS*TS_1800 _10 − 2.81 AF*TS_1.0_4 + 0.85 AF*TS_1.0_8 + 1.96 AF*TS_1.0_10 − 2.04 AF*TS_1.5_4 + 1.30 AF*TS_1.5_8 + 0.74 AF*TS_1.5_10 + 4.85 AF*TS_2.0_4 − 2.15 AF*TS_2.0_8 − 2.70 AF*TS_2.0_10
+
+
+
+
+
+(5)
+
+
+
+
+Percentage error between the actual and predicted values are presented in 
+Table 7
+. It is noted that the percentage error was less for estimating each of the responses. Maximum percentage error for temperature, strength, and hardness in HAZ, NZ, and TMAZ were 0.91, 1.03, 1.72, 2.08, and 1.88, respectively. This indicates the adequacy of the developed models and the results are satisfactory.
+T-joints were friction stir welded satisfactorily using developed fixtures and experimental setup. Tensile strength, temperature distribution, and hardness in the nugget zone, heat affected zone, and thermally heat affected zone of welded T-joints for different parameters (speed of rotation, axial force, and travel speed) were assessed. The following conclusions were observed after the research investigation.
+
+Quality T joint welds made of AA6063-T6 were produced using a friction stir welding process with the developed fixture.
+Internal voids were formed in a few samples at a higher travel speed and no surface deformities were formed.
+Tensile strength was proportional to the speed of rotation within the experimental range (1000 rpm to 1800 rpm) at a constant travel speed. Low travel speed caused an increase in tensile strength.
+Hardness was comparatively high in those samples welded at a combination of high speed of rotation and high axial force.
+The peak temperature was formed from a combination of high speed of rotation and low travel speed at a fixed axial force.
+From the full factorial analysis, all the three parameters were significant to responses—tensile strength, temperature, and hardness in NZ, TMAZ, and HAZ. In the pareto chart, bars corresponding to significant factors crossed the significance level. 
+p
+-Values of those factors and interactions were less than 0.05 in a 95% confidence interval.
+R-sq of mathematical models in coded form for tensile strength, temperature, and hardness in NZ, TMAZ, and HAZ were 99.30%, 99.66%, 98.91%, 98.78%, and 97.07%, respectively. Correspondingly, the percentage errors between the actual and predicted for these responses were 0.91%, 1.03%, 1.72%, 2.08%, and 1.88%, respectively. Since the models have high R-sq value and less percentage error, the models are highly satisfactory.
+Quality T joint welds made of AA6063-T6 were produced using a friction stir welding process with the developed fixture.
+Internal voids were formed in a few samples at a higher travel speed and no surface deformities were formed.
+Tensile strength was proportional to the speed of rotation within the experimental range (1000 rpm to 1800 rpm) at a constant travel speed. Low travel speed caused an increase in tensile strength.
+Hardness was comparatively high in those samples welded at a combination of high speed of rotation and high axial force.
+The peak temperature was formed from a combination of high speed of rotation and low travel speed at a fixed axial force.
+From the full factorial analysis, all the three parameters were significant to responses—tensile strength, temperature, and hardness in NZ, TMAZ, and HAZ. In the pareto chart, bars corresponding to significant factors crossed the significance level. 
+p
+-Values of those factors and interactions were less than 0.05 in a 95% confidence interval.
+R-sq of mathematical models in coded form for tensile strength, temperature, and hardness in NZ, TMAZ, and HAZ were 99.30%, 99.66%, 98.91%, 98.78%, and 97.07%, respectively. Correspondingly, the percentage errors between the actual and predicted for these responses were 0.91%, 1.03%, 1.72%, 2.08%, and 1.88%, respectively. Since the models have high R-sq value and less percentage error, the models are highly satisfactory.
+Conceptualization: I.S., A.-H.I.M., A.M.E.-K.; Data curation: I.S., A.M.E.-K., A.-H.I.M., D.T.T.; Formal analysis: I.S., D.T.T.; Investigation: I.S., A.M.E.-K., A.-H.I.M.; Methodology: I.S., D.T.T.; Resources: I.S.; Software: I.S., A.M.E.-K., D.T.T.; Supervision: A.-H.I.M., A.M.E.-K.; Visualization: J.A.Q.; Writing—original draft: A.-H.I.M., I.S., D.T.T.; Writing—review & editing: A.-H.I.M., J.A.Q.
+This research received no external funding.
+The authors declare no conflict of interest.
+RS: Speed of rotation; TS: Travel speed; AF: Axial force; HAZ: Heat affected zone; NZ: Nugget zone; TMAZ: Thermal heat affected zone.
+RS: Speed of rotation; TS: Travel speed; AF: Axial force; HAZ: Heat affected zone; NZ: Nugget zone; TMAZ: Thermal heat affected zone.
+HAZ: Heat affected zone; NZ: Nugget zone; TMAZ: Thermal heat affected zone.
+HAZ: Heat affected zone; NZ: Nugget zone; TMAZ: Thermal heat affected zone.

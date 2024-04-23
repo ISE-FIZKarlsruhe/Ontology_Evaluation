@@ -1,0 +1,335 @@
+Additive manufacturing (AM) has developed rapidly since its inception in the 1980s. AM is perceived as an environmentally friendly and sustainable technology and has already gained a lot of attention globally. The potential freedom of design offered by AM is, however, often limited when printing complex geometries due to an inability to support the stresses inherent within the manufacturing process. Additional support structures are often needed, which leads to material, time and energy waste. Research in support structures is, therefore, of great importance for the future and further improvement of additive manufacturing. This paper aims to review the varied research that has been performed in the area of support structures. Fifty-seven publications regarding support structure optimization are selected and categorized into six groups for discussion. A framework is established in which future research into support structures can be pursued and standardized. By providing a comprehensive review and discussion on support structures, AM can be further improved and developed in terms of support waste in the future, thus, making AM a more sustainable technology.
+Additive manufacturing (AM), also known as 3D printing, direct digital manufacturing and solid freeform fabrication, is defined by the joint ISO/ASTM terminology standard to be the “process of joining materials to make parts from 3D model data, usually layer upon layer, as opposed to subtractive manufacturing and formative manufacturing methodologies” [
+1
+]. 3D printing has been mentioned as a revolution by “The Economist” and others due to its distinctive manufacturing method [
+2
+]. The origins of additive manufacturing can be traced back to the 1980s, when a series of technologies were developed that were able to construct a three-dimensional object directly from a suitably formatted data file in a layer-by-layer fashion [
+3
+]. The primary market for these technologies was in the production of models and prototypes to enable better visualization of designs, and to see how the designed part would interact with pre-existing parts. As the use of such technologies reduced the time necessary to make prototypes, the technologies were often referred to as ‘rapid prototyping’ [
+4
+].
+As rapid prototyping technologies were developed, in particular the ability to additively manufacture metal parts, the possibility of using such techniques as a manufacturing process became highly appealing. Potential advantages of such a manufacturing approach include a reduction in material waste, decentralization of the manufacturing process and subsequent reduction in transportation and storage costs [
+5
+], realization of objects that would be difficult or impossible to achieve by conventional subtractive means [
+6
+] and mass customization of components [
+7
+]. Due to these advantages, additive manufacturing is becoming increasingly common and has been applied in many fields such as aerospace, automotive and industrial applications [
+8
+,
+9
+].
+As stated above, an additive manufacturing process joins material together in a layer-by-layer fashion. This can lead to issues when a new layer has a footprint different to the previous layer, as is likely to be encountered in the complex geometries that additive manufacturing is best suited for. 
+Figure 1
+ shows an engineering part that needs support structures for printability. As the complexity of the printed parts increases, the likelihood of encountering a multitude of these features in a component increases as well. This means that to enable the additive manufacture of complex components, a support structure of some kind is necessary, which needs to be removed from the part to form the final component, wasting materials and cost.
+The need for a support structure has been well appreciated since the techniques used were developed for rapid prototyping. This was viewed as a minor inconvenience within the manufacture of prototypes, largely due to both the one-off nature of production and the other benefits of rapid prototyping outweighing this disadvantage. In addition, the quality of the finish of the prototyped parts was not necessarily critical to their function. As a manufacturing process, the need to produce and then remove support material presents significant potential increases in material consumption, energy usage and the amount of manual post-processing required to produce the final part. As well as the concurrent increases in cost, this also has the potential to increase the level of manual intervention necessary in an otherwise automated process, hence, negating some of the advantages as a manufacturing process [
+10
+]. Consequently, there is a significant economic imperative in reducing the costs associated with support structures in additive manufacturing. A number of papers have been published with regard to optimizing support structures for additive manufacturing, in terms of reducing wasted support materials, print time, energy cost and others. To make additive manufacturing a more environmentally friendly production technique, it is necessary to review all the research done on support structures for future development.
+The aim of this article is to provide a contextual framework to the range of research that has been carried out in the area of additive manufacturing support structures, by reviewing the underlying (thermo-) mechanical processes that define the necessity of a support structure for a given additive manufacturing technique. The article will then review the differing strategies for support structure generation and try to relate these between different additive manufacturing technologies, and the established underlying process. Finally, it will give an outlook into potential future research directions into support structures for additive manufacturing, making additive manufacturing a more sustainable technology.
+Given the potential benefits achievable by optimizing the use of support structures in additive manufacturing, it is appropriate to look at the research that has been performed previously in the area. The number of papers published within this research area over the last 28 years is shown in 
+Figure 2
+. The curve clearly shows the increased interest in additive manufacturing technologies in recent years, but also shows the relatively small proportion of work that concerns the support structure inherent within these processes. An additional complexity within reviewing the literature in this area is the variety of additive manufacturing technologies that are in use, each having their own particular processing requirements and associated challenges with regard to support structures. As a rapidly evolving manufacturing technology, new additive manufacturing technologies are being developed and will most likely continue to be developed in the future [
+11
+,
+12
+,
+13
+]. It is, therefore, perhaps timely that a review of the topic with regard to support structures is performed, so that newly developed additive manufacturing technologies can exploit the most apposite strategies for support structure optimization, making AM a more sustainable technology.
+In this paper, 57 publications regarding support structure optimization have been selected and discussed. These publications are categorized according to an introduced taxonomy, which will be illustrated in 
+Section 4
+ and discussed in 
+Section 5
+. 
+Section 3
+ presents the details about different 3D printing technologies and their support structure features/functions.
+According to ISO 17296-1 [
+14
+], 3D printing can be divided into seven groups: Vat photopolymerization, material jetting, binder jetting, powder bed fusion, material extrusion, directed energy deposition and sheet lamination. As the focus in this study is support structure methods rather than the technologies themselves, a detailed description of these technologies is not given here. For more information about 3D printing technologies, readers are referred to the following review papers [
+15
+,
+16
+]. Different 3D printing technologies have different reasons for requiring support structures. Some require such a structure to resist deformation or even collapse caused by gravity as the fabrication of the component proceeds, or to tether parts so far unconnected to the main body of the printed part during production. Support structures can also be used to mitigate against the effects caused by any generated thermal gradients during the manufacturing process and shrinkage upon solidification that are inherent within a large number of AM techniques. This helps to reduce thermal distortion that can lead to cracking, curling, sag, delamination and shrinkage. Support may also be used to balance a printed object so that it is securely tethered to the build platform during manufacture. A comprehensively summarized table shows the details (see 
+Table 1
+) about different 3D printing processes and its support structure features/functions. Overall, the purposes of support structures can be categorized into three types:
+Some printing processes may include high thermal gradients, especially metal processes. Therefore, shape distortions and residual stresses may occur due to this excessive heat accumulation [
+17
+]. In this case, the support structures play the role of both a heat diffuser and rigidity enhancer. 
+Figure 3
+a shows an illustration of thermal deformation due to residual stresses.
+Local deposition processes (such as fused deposition modeling (FDM), Direct metal deposition (DMD)) can only deposit material on existing surfaces below. A support structure is, therefore, necessary to ensure that material is deposited at the intended height and the expected output geometry is achieved. 
+Figure 3
+b shows such an example schematically.
+Shapes of the printed parts may move or deform during the printing process, typically when fabricating unbalanced parts or the raw material (powder, resin) is unable to sustain the weight of that part. In this case, the support structure plays the role of a fixture. 
+Figure 3
+c shows an example of part balance. Here in this figure, if there is no support structure, the part is unable to stand in balance and will collapse. Further, a support structure can act as a tether in powder bed processes to stop any shift, especially layer shift during re-coating processes.
+Some printing processes may include high thermal gradients, especially metal processes. Therefore, shape distortions and residual stresses may occur due to this excessive heat accumulation [
+17
+]. In this case, the support structures play the role of both a heat diffuser and rigidity enhancer. 
+Figure 3
+a shows an illustration of thermal deformation due to residual stresses.
+Local deposition processes (such as fused deposition modeling (FDM), Direct metal deposition (DMD)) can only deposit material on existing surfaces below. A support structure is, therefore, necessary to ensure that material is deposited at the intended height and the expected output geometry is achieved. 
+Figure 3
+b shows such an example schematically.
+Shapes of the printed parts may move or deform during the printing process, typically when fabricating unbalanced parts or the raw material (powder, resin) is unable to sustain the weight of that part. In this case, the support structure plays the role of a fixture. 
+Figure 3
+c shows an example of part balance. Here in this figure, if there is no support structure, the part is unable to stand in balance and will collapse. Further, a support structure can act as a tether in powder bed processes to stop any shift, especially layer shift during re-coating processes.
+However, although a support structure can help solve the aforementioned problems, it will introduce some new challenges. The main disadvantages of a support structure are as follows:
+The removal of support structures after printing often requires a significant amount of manual work, especially in the case of metal processes. Support structures need extra time to be cut, ground or milled off after printing. Consequently, labor and time to manufacture the part increases. Different support methods will also lead to different finish surface roughness, thus, influencing the post-processing.
+The requirement of manually removing the support from the part constrains the geometric freedom of the part as there needs to be hand/tool access.
+Support structures typically result in wasted feedstock material as they are not reusable and have to be discarded after removal if not recyclable.
+When adding a support structure to a part, the print time will be longer as the support structure also needs to be printed. As additive manufacturing processes typically have energy costs that scale with the volume of material used, this leads to increased energy usage.
+A support structure may be detrimental to the surface finish when the structure is removed.
+Extra time is required to design the part to accommodate the support structure and the design of the support structure itself. This implies a larger data file for the part. As printing speed increases and the complexity of a single voxel increases by incorporation of information such as color and material, the speed of data transfer may become a limitation.
+The set-up of STL (or equivalent data file) models ready for printing requires the specification of the print orientation and the subsequent generation and placement of support structures. This generally requires manual intervention based on the expertise of the operator.
+The removal of support structures after printing often requires a significant amount of manual work, especially in the case of metal processes. Support structures need extra time to be cut, ground or milled off after printing. Consequently, labor and time to manufacture the part increases. Different support methods will also lead to different finish surface roughness, thus, influencing the post-processing.
+The requirement of manually removing the support from the part constrains the geometric freedom of the part as there needs to be hand/tool access.
+Support structures typically result in wasted feedstock material as they are not reusable and have to be discarded after removal if not recyclable.
+When adding a support structure to a part, the print time will be longer as the support structure also needs to be printed. As additive manufacturing processes typically have energy costs that scale with the volume of material used, this leads to increased energy usage.
+A support structure may be detrimental to the surface finish when the structure is removed.
+Extra time is required to design the part to accommodate the support structure and the design of the support structure itself. This implies a larger data file for the part. As printing speed increases and the complexity of a single voxel increases by incorporation of information such as color and material, the speed of data transfer may become a limitation.
+The set-up of STL (or equivalent data file) models ready for printing requires the specification of the print orientation and the subsequent generation and placement of support structures. This generally requires manual intervention based on the expertise of the operator.
+The reason for using support structures is to assist printability in the manufacturing process. Generally, a 3D model with overhanging, hole or edge features will need support structures for successful fabrication as printed materials will not be able to stand in a position “in the air”. Therefore, support structures are necessary to keep these printed materials in the aimed position. There are many different strategies to find the supported regions that need support assistance. Based on the literature review, STL and sliced data are two major files based on which support structures are generated. The STL file consists of a large number of triangles; the recognition of to-be-supported regions needs to traverse all the triangles and judge whether each facet satisfies the conditions. All the selected facets are subsequently organized to create the support structures [
+36
+]. Another method to generate supports is based on sliced layers. Jin et al. [
+37
+] proposed a support generation approach based on sliced layers to generate both internal and external supports for AM, which is easier to be handled than the three-dimensional processing of the STL model.
+Research in support structures for 3D printing has largely focused on reducing the print time, support materials used and post-processing by altering and optimizing support materials. The methods by which these goals have been investigated is relatively diverse. For the sake of simplicity, and to help in placing this variety of research into context, a simple taxonomy has been devised, which is illustrated in 
+Figure 4
+. Each subset as defined in the taxonomy will then be discussed in turn.
+In this section, research on support structure improvement while keeping the original design of the part intact will be discussed. Specifically, variations to part orientation, sacrificial/soluble support, support structure optimization and the use of support baths will be discussed with reference to how they influence the support usage and final part quality.
+The build orientation of an AM part refers to the direction that is orthogonal to the layers of the object being fabricated. AM part orientations play an important role in AM processes as they have a profound influence on the properties of the final part and the nature and amount of support structure needed [
+38
+]. In addition, the part orientation affects the support contact area, surface roughness, build time and cost of the fabricated part. 
+Figure 5
+ illustrates a “T” example. The left needs the most support material (see 
+Figure 5
+a), followed by the example illustrated in 
+Figure 5
+b, while 
+Figure 5
+c does not need any support. However, different support orientations will influence the final printed mechanical properties [
+39
+]. Much research has been done on minimizing the support volume by altering the orientation of the supported parts [
+40
+,
+41
+,
+42
+,
+43
+,
+44
+,
+45
+]. For instance, Zhao [
+46
+] proposed a multi-objective function to find an optimal part orientation to minimize volumetric error, build time and support structure. This operation, however, was deemed to consume too much computing time due to using a generic algorithm iteratively for an arbitrarily large and complex STL file. Pandey et al. [
+47
+] proposed a multi-criteria genetic algorithm to minimize build time while improving surface quality. Paul and Anand [
+48
+] analyzed the manufacturing of precision parts through AM processes with a minimal amount of support structures by choosing the optimal part orientation. The orientation is determined by a voxel-based algorithm, developed by the authors. Nevertheless, this is based only on minimizing flatness and cylindricity errors. Das et al. [
+49
+] also identified a better build direction which can reduce the support material used while meeting the specified geometric dimensioning and tolerancing (GD&T) criteria of the part for a direct metal laser sintering (DMLS) based process. However, the methodology used in their paper to calculate the relative build time considers only the contiguous area of each layer. It does not include parts with internal cavities or pockets. Yang et al. [
+50
+] proposed a multi-orientational deposition (MOD) method to minimize the use of support structures in FDM and stereolithography (SLA). However, this MOD is limited only to the first layers of the overhanging structures. Gao et al. [
+51
+] modified a standard low-cost FDM printer with a revolving cuboidal platform and printed partitioned geometries around cuboidal facets, which achieves a multidirectional additive prototyping process to eliminate the support and print materials usage. The disadvantage of this method is that parts with complex geometries cannot be approximated by a single cuboid, thus are unable to be printed. To prevent the visual impact of the finished parts, Zhang et al. [
+52
+] presented a method to find printing directions that avoid placing supports in user-preferred features. However, this prefer-method only has a limited application as it requires manual intervention to define the preferred features. Zhao et al. [
+53
+] proposed a novel printing strategy, inclined layer printing, which allows printing without supports. The printed structures are sliced at an incline and overhanging structures are supported by adjacent layers under a suitable slicing angle.
+Another method to create support structures is by printing supports with different materials which are soluble or sacrificial in some way. This means when printing a part, the part material is used to print the final part while another sacrificial material (that is either easier to remove or cheaper than the part material) to print the support, thus, reducing the cost and post-processing requirements. In FDM processes, soluble support materials have been used extensively, with preference given to polymer feedstocks that are soluble in relatively benign solvents such as water (poly(vinyl alcohol)) and limonene (high impact poly(styrene)). Another common combination is a part printed with acrylonitrile butadiene styrene (ABS) while a sacrificial support structure is printed with polylactic acid (PLA), which is later selectively removed by immersing the 3D printed structure in a solution of isopropyl alcohol and potassium hydroxide to remove the soluble support structures (PLA), while the ABS component will remain intact [
+54
+]. Hopkins et al. [
+55
+] proposed a support material containing acrylic copolymers with a polymeric impact modifier. The new support material can effectively resist cracking or breaking, and can be removed easily and quickly as well. In an alkaline aqueous solution, the material can be dissolved rapidly. In addition, Ni, Wang and Zhao [
+56
+] also conducted some research on poly(vinyl alcohol) (PVA) which can act as a water-soluble support in 3D printing processes.
+As for metal processes, Hildreth et al. [
+57
+] were the first to try to use sacrificial materials as supports in directed energy deposition. This method can be adopted in other metal deposition systems, such as wire-feed and powder-bed fusion. As a demonstration, a stainless steel bridged structure with a 90° overhang was fabricated using a carbon steel sacrificial support that was later removed through electrochemical etching in 41 wt.% nitric acid with bubbling O
+2
+. However, all these methods increase the post-process treatment and hence labor and cost. Mumtaz et al. [
+58
+] adopted an anchorless selective laser melting (SLM) method to manufacture eutectic alloys parts without support structures. Specifically, they used bismuth and zinc as the basic materials. The shortcoming is that this method is limited to producing eutectic alloys. Recently, Lefky et al. [
+59
+], for the first time, brought dissolvable supports into powder bed based metal printers that are limited to single-material builds.
+Support structures are typically optimized so as to minimize material usage, and, therefore, concurrently minimize build time and cost of the manufactured part. Due to their advantages of low solid volume fraction, this has tended to lead to cellular support structures, which also provide opportunities to reduce the time needed for removal of support structures as well as build time. The main support methods in this subsection are shown in 
+Table 2
+ for visual perception. Hussein et al. [
+60
+] explored the potential of using cellular structures for the support of metallic parts based on SLM. They conducted some preliminary experiments to validate their method. Despite this, due to high thermal gradients involved in the phase transformation process, thermal stresses and distortion of the part occurred. According to their preliminary results, they did further research [
+61
+]. Two types of lattice structure (diamond and gyroid) have been investigated for their suitability as support structures, the results show that material and build time can be reduced successfully while fulfilling the structural demands. However, the low volume fraction of cellular structure may be too fragile to be consistently manufactured with an SLM process at the desired resolution. Vaidya and Anand [
+62
+] employed Dijkstra’s shortest path algorithm [
+63
+] to generate cellular support structures which can minimize the support volume. They used a numerical model to show their methods are capable of handling the load of the part. Their case studies show that there is a substantial decrease in support volume, sintered area and support contact area when compared with a fully solid support, with adequate consideration of support accessibility for post processing. However, the support structure is limited to truncated octahedrons and rhombic dodecahedrons.
+Strano et al. [
+43
+] proposed a new approach which applies a new optimization algorithm to use pure mathematical 3D implicit functions for the design and generation of the cellular support structures, including graded supports. In their method, different cellular structures can be easily defined and optimized, especially graded structures providing less support where it is not needed and more robust support elsewhere. Lu et al. [
+64
+] utilized the Voronoi diagram to compute irregular honeycomb-like volume tessellations which define the inner structure. They took honeycomb-cell structure as inner support structures based on a hollowing optimization algorithm. However, they only considered the inner support as a part of the final product rather than as a removable support structure. Wei et al. [
+65
+] presented a sparse tree support structure generation algorithm. This method consumes less time and materials and is more stable for FDM. It may be further improved if surface quality can be considered in the future. Vanek et al. [
+66
+] proposed a tree-like support structure generation method for FDM which can reduce printing time and material used. However, their method is geometry-based and considers only the angle and length of the supporting strut.
+Schmidt et al. [
+67
+] proposed a type of space-efficient branching support structure which can reduce wasted time and material in fused-filament 3D printing (FDM). In their study, 75% less plastic support material was used than the manufacturer-provided supports, as well as reducing print time by an hour. Shen [
+68
+] proposed a bridge support structure generation algorithm which can save an average of about 15.19% of printing and about 24.41% of the time, compared with a vertical support structure. They also developed an automatic generation algorithm based on critical angle constraint, which can achieve the same goals [
+69
+].
+Gan et al. [
+70
+] explored “Y”, “IY” and Pin support structures to help design practical supports for thin plates and cuboids, based on SLM. Their results revealed that, with only 2.2% overhang–support contact area, uniformly spaced vertical struts can manufacture relatively level thin plates. Another conclusion is that unequally spaced support structures can transform the heat dissipation pattern in the thin plate, thus, resulting in thermal distortions. Regardless of this, further experiments are necessary for adapting the method to more applications. Zhao et al. [
+71
+] employed particle swarm optimization (PSO) algorithm with a novel constraint handling strategy to minimize the material waste and contacting area with the consideration of mechanical analysis on the support structures. However, they only considered the base supports in their work, though theoretically it could be extended to the in-part support structures. In addition, only simulation work has been done in this paper, physical experiments are still necessary. Dumas et al. [
+72
+] presented a novel way to select points to be supported based not only on overhangs but also on the stability of the printed model throughout the entire build process. An efficient algorithm was shown to build bridge scaffoldings that support given sets of points in space with less material. However, their method does not consider the robustness of the printed object and the sweeping algorithm is unaware of the geometry of the object aside from the collision detection. Recently, Habib and Khoda [
+73
+] proposed a grain architecture design as a support considering the amount of support volume, maximum contact interface, lower fabrication time and ease of fabrication.
+While ubiquitous in top-down stereolithography, support baths have recently garnered interest in other areas of 3D printing, mainly in the area of bio-fabrication. During the printing processes, the printed parts are stabilized by the support bath that readily flows when applying an external force larger than its yield stress, such as that induced by a moving extrusion nozzle. Once the nozzle moves on, the fluidized support material fills any crevasses in its wake and then returns to its gel-like behavior. This bulk support material could successfully support every feature of a printed part when the yield stress of the support material is higher than surface tension and gravitational forces. Then, the whole liquid structure is solidified in situ by applying suitable cross-linking mechanisms [
+74
+,
+75
+]. Hinton et al. [
+76
+] demonstrated a new method of 3D printing polydimethylsiloxane (PDMS) using a hydrophilic Carbopol support bath. Carbopol support acts as a Bingham plastic that yields and fluidizes when the syringe tip of the 3D printer moves through it, but acts as a solid for the PDMS extruded within it. Suspension 3D printing was proposed by Yu et al. [
+77
+] which used self-healing hydrogel support to create macroscopic structures of liquid metal that exhibits properties indicative of a non-printable object. Another advantage of support baths is that they are theoretically reusable and can be seen as a sustainable and green support method.
+In addition to the mentioned methods for improving support structures, there are a variety of other trials. Chalasani et al. [
+78
+] proposed a computational algorithm for support minimization for FDM using a ray casting approach. Huang et al. [
+79
+] designed and tested a novel support structure with sloping walls for FDM, through an algorithm, based on the STL model. The results show that this support structure can greatly reduce the volume of support (30%), thus optimizing the fabrication process. But, they did not consider the reduction of total support contact area with the part. Calignano [
+80
+] optimized the design of supports for overhanging structures in aluminum and titanium alloys by SLM. He used Taguchi methods to find values that allow obtaining the condition most suitable for easy removal and reducing deformations for most geometries of the printed parts. Barnett and Gosselin [
+81
+] introduced new support geometry algorithms based on the use of two support materials, one of which is weak and easily removed and another that can maintain structural integrity. In addition, the effects of the process parameters on the lowest printable overhang angle size were studied by the authors for minimizing support waste [
+82
+].
+The use of skin-frame structures was investigated by Wang et al. [
+83
+] with an algorithm derived for the purpose of reducing the material cost in printing a given 3D object, with the frame effectively acting as a support structure. Unfortunately, the alteration to mechanical properties had not been considered. Zhang et al. [
+84
+] presented a novel method for designing the internal supporting structures of 3D objects based on their medial axis in order to reduce the amount of material used, with satisfactory quality. However, all the above methods do not consider a self-printability requirement (i.e., the support structure itself should not require a support structure). Lee and Lee [
+85
+] proposed a new inner support structure generation algorithm which can reduce the amount of material used to fill the interior of an object and the manufacturing time as well, while ensuring self-printability. Jin et al. [
+37
+] presented an approach to generate both external and internal support structures for AM based on sliced layers to enhance the manufacturing accuracy and efficiency. Their experiments validated that this can reduce fabricating material usage and build time. However, they failed to take account of post-process impact to the surface quality and the removability of the support structures, especially internal support.
+In this section, research on support structure improvement by redesigning/changing the geometry of the original part is discussed. Generally, redesign is based on topology optimization (TO) or feature-based methods and the final part can still keep the function of that original part.
+Usually, TO methods are used to tackle practical design problems with traditional manufacturing processes, such as machining and casting. However, as the development of 3D printing technology proceeds apace, it is desirable to adopt TO in 3D printing. TO can provide the ‘best’ design (structure) in a given area, load and constraint condition. The general workflow of TO for 3D printing can be found in the following review [
+86
+]. Many researchers have done relevant works [
+87
+,
+88
+,
+89
+,
+90
+,
+91
+,
+92
+]. Unfortunately, to the best of the authors’ knowledge, only seven papers are related to the reduction of the support structure. 
+Gaynor and Guest [
+93
+] attempted to more thoroughly integrate overhang constraints into the topology optimization methodology. They embed a projection step associated with the overhang angle constraint within the standard Heaviside Projection methodology (HPM) [
+94
+]. By designing components and structures whose features rise in the build direction at an angle that is greater than a process specific minimum allowable self-supporting angle, anchors in metallic AM processes or polymer support materials can be eliminated. Mirzendehdel and Suresh [
+95
+] proposed a topology optimization methodology that can lead to designs requiring significantly reduced support structures. Cloots et al. [
+96
+] developed a specific component segmentation strategy for SLM which allows the segmentation of critical areas of the parts by applying a specific scanning strategy with appropriate energy input, thus reducing the support structures needed. Leary et al. [
+97
+] proposed an automated method to modify topologically optimal geometries as required to enable support-free manufacture. However, this method has been applied to only polymeric additive systems. Langelaar [
+98
+] proposed a topology optimization formulation that can exclude unprintable geometries from the design space, resulting in fully self-supporting optimized designs. However, this will be detrimental to the performance of some products in some cases and can only be used in limited components.
+As stated above, all six of these papers are about topologically optimizing the final product to reduce the support needed, rather than the support structure itself. Strictly speaking, these studies could not be directly seen as support structure research as TO is not applied in support structures. This distinction is of particular relevance as AM processes move towards mainstream manufacturing, where further constraints on design will limit the ability to redesign a component based on printability and support structures. Recently, Kuo et al. [
+99
+] tried to integrate topology optimization directly into the support structure generation process itself, though they only considered a fixed part orientation. Further work needs to be carried out in the future to fully apply TO in support generation.
+Hu et al. [
+100
+] proposed an orientation-driven shape optimizer to reduce the supporting structures used in single material-based AM (in particular FDM and selective laser sintering (SLS)). Their method can meet the overhang angle constraint through modifying a given topology by changing the angles and shapes of features, thus, reducing supports. Unfortunately, this method, to some extent, needs to change the shape of products, which is unacceptable in some cases. 
+Figure 6
+ shows some printed examples by changing the original shapes for reducing support waste.
+Of the research looking into methods of improving support material utilization, the majority concern FDM printing technology (27 publications), and just a few could be suitable for all AM techniques (5 publications). The reason for this is most probably because of the unavoidable and higher requirement of support in FDM, and the popularity of the printing technique. FDM needs material beneath the printed layer as it is extrusion-based, while for powder processes, the powder could take the role of support. In addition, the unused powder which acts as the support can be reused, to an extent, in the future. However, the supports fabricated in extrusion-based processes are generally unable to be reused, unless the supports are re-manufactured into filaments. For powder bed processes, the support material is generally for ameliorating against thermal stresses during manufacture and to anchor the printed part within the build volume.
+Compared with FDM, the number of papers published on metal additive processes regarding support is quite small (8 publications). The comparatively low accessibility to metal 3D printers is probably one of the causes of this discrepancy. However, this does not necessarily mean support structure for metal processes is not a topic of significant importance. On the contrary, metal-based processes will have greater research focus as their significance increases as usage of additive technologies trends from prototyping to manufacturing. In contrast, polymer-based additive manufacturing technologies are easy to access and cheap, like FDM. It would, therefore, be desirable if research into the more accessible additive manufacturing technologies could be more widely related to other techniques. The following discussion will focus on the current limitations of existing support generation strategies and on ways in which the research can be applied in a more universal manner.
+A significant amount of research has been done on improving support for additive manufacturing and this has achieved a lot in reducing support material and time used. There are, however, still many limitations in the current improved methods. For instance, the method from Hu et al. [
+100
+], to some extent, needs to change the shape of products for self-support, which will lead to inevitable alterations compared with the original 3D model. This is unacceptable if the tolerance is small, especially for a functional component which needs exactly the size and characteristics initially specified. For example, when a part from an engine is broken and will be replaced by 3D printing that part is supposed to have the exact size and features to fit the engine. Therefore, altering the 3D model, even just a little bit, may not be acceptable.
+For optimal part orientation, it is true that support could be reduced significantly by changing the print orientation [
+41
+,
+42
+,
+43
+,
+45
+]. However, the strength of the printed part may be changed accordingly as well, due to the anisotropic mechanical properties typically found in additive manufacturing technology. For example, the strengths of a dog bone as shown in 
+Figure 7
+ printed in X (a) and Y (b) directions will be different [
+101
+]. From a design perspective, it is, therefore, desirable to manufacture a part so that the principal stresses align with the strongest print direction. Research to date has focused solely on the reduction in support material irrespective of mechanical properties. As the use of additive technologies for final part manufacture increases, the balance of time and cost savings in manufacture due to support materials will have to be balanced with the influence on mechanical properties.
+The use of a material different from that used in building the object, such as the use of soluble support materials, presents inherent advantages with regards to the automation of post-processing. It does, however, raise further complications in the printing process as the AM technique has to be amenable to the use of multiple materials. It is, therefore, most suitable for techniques where this is relatively trivial, which is predominantly the case with deposition-based processes such as material jetting and fused deposition modeling. Serendipitously, these are perhaps the AM techniques in which soluble support materials are most desired. In addition, consideration has to be given to the removal process, which will take additional time in manufacturing and may involve the use of potentially harmful solvents. Approaches that limit the use of soluble material to only where it is needed may be of increased interest [
+81
+]. The use of support baths that provide the role of support material without the necessity of directly printing a support is also of considerable interest for similar reasons.
+For seeking better structures as supports, some structures have been optimized to fulfill their primary support role in the most energy and material efficient way possible. Unfortunately, the new support structure might also bring new problems during 3D printing. For instance, Hussein et al. [
+60
+] explored the potential of using cellular structures as support of metallic parts based on SLM. However, due to high thermal gradients involved in the phase transformation process, thermal stresses and distortion of the part occur. 
+In addition to optimizing support structures in previous studies, some researchers have also carried out some work on eliminating support usage. Zhao et al. [
+53
+] tried to use an inclined deposition method for building parts in fused deposition modeling processes which can change the direction of the nozzle for eliminating support consumption. However, this method can only be used in fused deposition modeling processes and may require accurate control of the nozzle as well as path calculation. Removable water/ice support for stereolithography was tried and proposed by Jin and Chen [
+102
+]. Though this strategy seems to eliminate using the part material as support, it instead requires the repeated heating and cooling of water to induce the necessary phase change, which may be less energy efficient. Multi-axis or robotic additive manufacturing processes were also investigated by [
+103
+,
+104
+,
+105
+]. However, these techniques may require high cost at the beginning and the extra complexity within the manufacturing process will likely render any support reduction strategies highly specific to the process in question. The main purposes of multi-axis additive manufacturing are for special functions such as repairing components.
+In general, a large proportion of support methods in the literature are based on the following rules: (1) avoid large-size holes parallel to the printing surface; (2) avoid surfaces with a large overhang angle; (3) avoid trapped surfaces where support materials would be difficult or impossible to remove; and (4) structure optimization to reduce the support material used. While these methods are of significant validity, especially when focusing on prototyping applications, the freedom to produce an object based around these principles may be limited when manufacturing parts for real-world use due to the constraints placed upon final part geometry and performance. It is, therefore, apposite to establish whether the methods discussed in the literature are able to work within a relevant set of constraints related to the defined application of the part. Support structure design should also consider the printability, constraint of overhang angle size, part balance, thermal conditions, ease of removal and any other relevant factors. Generally, the design of support structures should be based on the following principles:
+The support should be able to prevent parts from collapse/warping, especially the outer contour area which needs support; for metal processes, stress and strain needs to be considered and thermal simulation modeling can be conducted for design;
+The connection between the support and final parts should be of minimal strength to perform the support function, with the aim of easily removing support;
+The contact area between the support and final parts should be as small as possible to reduce surface deterioration after support removal;
+When designing the support, material consumption and build time should be considered as a significant factor, as well as the trade-off between them and the final printed quality.
+The support should be able to prevent parts from collapse/warping, especially the outer contour area which needs support; for metal processes, stress and strain needs to be considered and thermal simulation modeling can be conducted for design;
+The connection between the support and final parts should be of minimal strength to perform the support function, with the aim of easily removing support;
+The contact area between the support and final parts should be as small as possible to reduce surface deterioration after support removal;
+When designing the support, material consumption and build time should be considered as a significant factor, as well as the trade-off between them and the final printed quality.
+There are many software applications for generating support structures. For example, CURA and Slic3r for FDM processes and Magic for metallic processes. However, there is still no knowledge for which software is better than the other in terms of support structures. 
+The majority of works carried out on support modeling are for reducing support structure usage, irrespective of changing printing orientation or adopting new structures. There are papers published on modeling and predicting the thermal behavior change of the material during 3D printing processes, which can help understand, optimize and control the deposition process [
+106
+,
+107
+,
+108
+,
+109
+,
+110
+]. However, little research has been carried out to investigate support structure modeling for optimizing heat dissipation and residual stresses for improving the support structure, thus, enhancing the final part quality. Research on support structure modeling is quite necessary, especially for metal 3D printing processes. Metal-based processes typically aim to produce industrially relevant components which need to be precise within tolerance and should be strong enough for functionality. Support structure plays a crucial role in metal additive manufacturing by eliminating cracks, curling up, sag or shrinkage. If thermal and support force generation process modeling could be conducted, the modeling results will be beneficial for understanding and further improving the support structure for AM, especially for industrial development.
+Topology optimization has been used in structure optimization for a long time, which is a mathematical method that can reduce material used and optimizes material layout within a given design space, for a given set of loads, boundary conditions and constraints with the goal of maximizing the performance of the system. Given this advantage, it is beneficial to integrate TO into support structures for 3D printing. Although much research has been done on topologically optimizing 3D structures for AM, most of them are on designing the final parts. Among them, six papers are related to reducing the support needed through topologically optimizing the final part rather than support structure themselves. Although optimizing topology is mainly for better functional performance in the use stage, it is potentially still useful and effective when optimizing support for large-scale parts. Hence, research on integrating TO for the support structure is still necessary as TO can significantly reduce the support needed and optimize the support structures based on material properties. The workflow of TO for support structure should be in the way shown in 
+Figure 8
+. Due to the limitation of 3D printers’ resolution and the nature of the layer-by-layer process, some over-thin struts or struts with too large angles could not be printed successfully. For example, it is impossible to print a support with 0.1 mm diameter size according to the TO result when the print nozzle has a diameter of 0.2 mm. It is also unavailable if a support structure after topology optimization still needs another support beneath it. Therefore, some criteria and uniformed tolerance of support structure for a given AM technique should be made in order to 3D print parts reliably using these supports. Specifically, some certain conditions (such as printable angle size and nozzle size) should be constrained in topology optimization settings in the future.
+The experimental evaluation of the efficiency of support material usage has so far relied on the comparison between the ‘standard’ support generation settings for a particular 3D printing technique and the new method of support generation. This has typically taken the form of looking at the savings in terms of time and amount of material used. Such an approach, unfortunately, makes it difficult to compare different support generation techniques to each other due to the lack of standardization in both the model that is used to test the efficacy of the support generation and the method of quantification. Within the published literature, each support method has not provided the explicit resolution of its printed products, though the support material usage was available. The comparison in a certain paper between the mentioned support methods in that paper may be acceptable. For example, in the study of Schmidt et al. [
+67
+], their support structure method can reduce 75% plastic support material compared with the manufacturer-provided supports, as well as reducing print time by an hour. Shen et al. [
+68
+] proposed a bridge support structure generation algorithm which can save an average of about 15.19% of printing and about 24.41% of the time, compared with a vertical support structure. However, the studies of their methods are unable to be compared with each other as they are based on different 3D models and did not mention the resolution or criteria for comparison.
+Since there are no benchmark examples in the literature for support volumes, a criterion is quite necessary to evaluate the efficacy of different support method. The benchmark should be proposed and standardized in the future [
+111
+]. A standardized model should be proposed with specific characteristics of every possible situation for comparisons between different support methods. First, the possible overhang angles should be defined, a part or whole of a circle may be useful as this can contain all angle sizes. Second, flat point characteristics should be included with the main angle sizes that can help test whether different support methods are able to adequately support this type of overhang situation. Third, a quantitative comparison criterion is necessary and should be given. These criteria should not only include the time and material used due to the support structure, but should also factor in criteria that are of increasing relevance to final part manufacture, such as time to remove support and both printed and final surface finish. For example, when comparing different support methods, one may be more economical than another but with worse finish surface. The relative utility of such a change in support generation method will be dependent upon the final use of the printed part. 
+There are a few academic works on standardized test pieces for AM processes which are good examples of test pieces to quantitatively evaluate aspects of AM processes [
+112
+,
+113
+]. However, they are not directly used to evaluate support material. A further important consideration is how the criteria for support generation method comparison vary between the additive manufacturing techniques. At least four aspects should be taken into account: Contact area, support material volume, time to build and cost per unit. Taking the common 3D printing technologies as an example, SLA, FDM and metal processes should be compared according to different criteria. For SLA, the main focus should be on the support volume and time to build. The contact area is relatively unimportant as the resolution is comparatively high and has little impact on the surface quality after removing support. However, for FDM, the contact area and time to build is the most significant aspect as the stair-step effect is quite influential in this process. For metal processes, support volume and contact area play the most important roles as the raw materials are always expensive and thermal dissipation (support structure design is quite an influential factor) of printed part is crucial.
+As illustrated before, there are numerous strategies for reducing support waste. While less support usage may lead to poor printed quality, how to balance support and printed quality is another interesting topic in the future. So far, no publications have been reported about the trade-off between support usage and printed quality. Using different support strategies may lead to different finished surface roughness, tensile properties or other mechanical properties.
+With the continuous development of 3D printing technology, the support structure is becoming an important research area for further improvement. This paper gives a comprehensive review on the range of research that has been carried out in the area of additive manufacturing support structures. Whether different technologies need support or not and the reason why they require support structures are illustrated. The disadvantages and advantages of support structures are displayed. A support structure is unavoidable in some additive manufacturing processes. However, more efforts could be made to minimize the side effects of support structures (increasing printing time, cost and impact on surface quality). A few of gaps can be found according to the literature review, lack of a comprehensive method that can largely reduce the support material while keeping the mechanical strength and good surface finish quality is the most important one. In addition, some innovative and creative methods which can largely minimize or even achieve zero-support for AM are urgently necessary. Support structure modeling needs to be adopted in the future, especially for metal processes. Further, a standardized model and uniform criteria need to be made in the future for fairly comparing different support methods and choosing the most economical strategy. Lastly, topology optimization is necessary to be integrated into support structures for further reducing materials used, making AM a more sustainable technology.
+This research received no external funding.
+Suggestions on this paper’s structure and contents from Yuanbin Wang and Mei Ying Teo are highly appreciated. The authors are also grateful to the help of the engineering librarians at the University of Auckland.
+The authors declare no conflict of interest.
