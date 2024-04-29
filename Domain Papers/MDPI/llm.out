@@ -1,0 +1,1729 @@
+nohup: ignoring input
+[nltk_data] Downloading package stopwords to
+[nltk_data]     /home/ebrahim/nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+Token has not been saved to git credential helper. Pass `add_to_git_credential=True` if you want to set the git credential as well.
+Token is valid (permission: read).
+Your token has been saved to /home/ebrahim/.cache/huggingface/token
+Login successful
+Fetching 1 files:   0%|          | 0/1 [00:00<?, ?it/s]Fetching 1 files: 100%|██████████| 1/1 [00:00<00:00, 23967.45it/s]
+Fetching 1 files:   0%|          | 0/1 [00:00<?, ?it/s]Fetching 1 files: 100%|██████████| 1/1 [00:00<00:00, 15477.14it/s]
+ggml_cuda_set_main_device: using device 0 (NVIDIA A100 80GB PCIe) as main device
+Loading checkpoint shards:   0%|          | 0/19 [00:00<?, ?it/s]Loading checkpoint shards:   5%|▌         | 1/19 [00:00<00:12,  1.48it/s]Loading checkpoint shards:  11%|█         | 2/19 [00:01<00:10,  1.57it/s]Loading checkpoint shards:  16%|█▌        | 3/19 [00:01<00:09,  1.61it/s]Loading checkpoint shards:  21%|██        | 4/19 [00:02<00:08,  1.67it/s]Loading checkpoint shards:  26%|██▋       | 5/19 [00:03<00:08,  1.70it/s]Loading checkpoint shards:  32%|███▏      | 6/19 [00:03<00:07,  1.72it/s]Loading checkpoint shards:  37%|███▋      | 7/19 [00:04<00:06,  1.73it/s]Loading checkpoint shards:  42%|████▏     | 8/19 [00:04<00:06,  1.72it/s]Loading checkpoint shards:  47%|████▋     | 9/19 [00:05<00:05,  1.72it/s]Loading checkpoint shards:  53%|█████▎    | 10/19 [00:05<00:05,  1.72it/s]Loading checkpoint shards:  58%|█████▊    | 11/19 [00:06<00:04,  1.72it/s]Loading checkpoint shards:  63%|██████▎   | 12/19 [00:07<00:04,  1.72it/s]Loading checkpoint shards:  68%|██████▊   | 13/19 [00:07<00:03,  1.73it/s]Loading checkpoint shards:  74%|███████▎  | 14/19 [00:08<00:02,  1.73it/s]Loading checkpoint shards:  79%|███████▉  | 15/19 [00:08<00:02,  1.74it/s]Loading checkpoint shards:  84%|████████▍ | 16/19 [00:09<00:01,  1.74it/s]Loading checkpoint shards:  89%|████████▉ | 17/19 [00:09<00:01,  1.74it/s]Loading checkpoint shards:  95%|█████████▍| 18/19 [00:10<00:00,  1.74it/s]Loading checkpoint shards: 100%|██████████| 19/19 [00:11<00:00,  1.80it/s]Loading checkpoint shards: 100%|██████████| 19/19 [00:11<00:00,  1.72it/s]
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+/home/ebrahim/.local/lib/python3.10/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Number of tokens (513) exceeded maximum context length (512).
+Number of tokens (514) exceeded maximum context length (512).
+Number of tokens (515) exceeded maximum context length (512).
+Number of tokens (516) exceeded maximum context length (512).
+Number of tokens (517) exceeded maximum context length (512).
+Number of tokens (518) exceeded maximum context length (512).
+Number of tokens (519) exceeded maximum context length (512).
+Number of tokens (520) exceeded maximum context length (512).
+Number of tokens (521) exceeded maximum context length (512).
+Number of tokens (522) exceeded maximum context length (512).
+Number of tokens (523) exceeded maximum context length (512).
+Number of tokens (524) exceeded maximum context length (512).
+Number of tokens (525) exceeded maximum context length (512).
+Number of tokens (526) exceeded maximum context length (512).
+Number of tokens (527) exceeded maximum context length (512).
+Number of tokens (528) exceeded maximum context length (512).
+Number of tokens (529) exceeded maximum context length (512).
+Number of tokens (530) exceeded maximum context length (512).
+Number of tokens (531) exceeded maximum context length (512).
+Number of tokens (532) exceeded maximum context length (512).
+Number of tokens (533) exceeded maximum context length (512).
+Number of tokens (534) exceeded maximum context length (512).
+Number of tokens (535) exceeded maximum context length (512).
+Number of tokens (536) exceeded maximum context length (512).
+Number of tokens (537) exceeded maximum context length (512).
+Number of tokens (538) exceeded maximum context length (512).
+Number of tokens (539) exceeded maximum context length (512).
+Number of tokens (540) exceeded maximum context length (512).
+Number of tokens (541) exceeded maximum context length (512).
+Number of tokens (542) exceeded maximum context length (512).
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Number of tokens (513) exceeded maximum context length (512).
+Number of tokens (514) exceeded maximum context length (512).
+Number of tokens (515) exceeded maximum context length (512).
+Number of tokens (516) exceeded maximum context length (512).
+Number of tokens (517) exceeded maximum context length (512).
+Number of tokens (518) exceeded maximum context length (512).
+Number of tokens (519) exceeded maximum context length (512).
+Number of tokens (520) exceeded maximum context length (512).
+Number of tokens (521) exceeded maximum context length (512).
+Number of tokens (522) exceeded maximum context length (512).
+Number of tokens (523) exceeded maximum context length (512).
+Number of tokens (524) exceeded maximum context length (512).
+Number of tokens (525) exceeded maximum context length (512).
+Number of tokens (526) exceeded maximum context length (512).
+Number of tokens (527) exceeded maximum context length (512).
+Number of tokens (528) exceeded maximum context length (512).
+Number of tokens (529) exceeded maximum context length (512).
+Number of tokens (530) exceeded maximum context length (512).
+Number of tokens (531) exceeded maximum context length (512).
+Number of tokens (532) exceeded maximum context length (512).
+Number of tokens (533) exceeded maximum context length (512).
+Number of tokens (534) exceeded maximum context length (512).
+Number of tokens (535) exceeded maximum context length (512).
+Number of tokens (536) exceeded maximum context length (512).
+Number of tokens (537) exceeded maximum context length (512).
+Number of tokens (538) exceeded maximum context length (512).
+Number of tokens (539) exceeded maximum context length (512).
+Number of tokens (540) exceeded maximum context length (512).
+Number of tokens (541) exceeded maximum context length (512).
+Number of tokens (542) exceeded maximum context length (512).
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Number of tokens (513) exceeded maximum context length (512).
+Number of tokens (514) exceeded maximum context length (512).
+Number of tokens (515) exceeded maximum context length (512).
+Number of tokens (516) exceeded maximum context length (512).
+Number of tokens (517) exceeded maximum context length (512).
+Number of tokens (518) exceeded maximum context length (512).
+Number of tokens (519) exceeded maximum context length (512).
+Number of tokens (520) exceeded maximum context length (512).
+Number of tokens (521) exceeded maximum context length (512).
+Number of tokens (522) exceeded maximum context length (512).
+Number of tokens (523) exceeded maximum context length (512).
+Number of tokens (524) exceeded maximum context length (512).
+Number of tokens (525) exceeded maximum context length (512).
+Number of tokens (526) exceeded maximum context length (512).
+Number of tokens (527) exceeded maximum context length (512).
+Number of tokens (528) exceeded maximum context length (512).
+Number of tokens (529) exceeded maximum context length (512).
+Number of tokens (530) exceeded maximum context length (512).
+Number of tokens (531) exceeded maximum context length (512).
+Number of tokens (532) exceeded maximum context length (512).
+Number of tokens (533) exceeded maximum context length (512).
+Number of tokens (534) exceeded maximum context length (512).
+Number of tokens (535) exceeded maximum context length (512).
+Number of tokens (536) exceeded maximum context length (512).
+Number of tokens (537) exceeded maximum context length (512).
+Number of tokens (538) exceeded maximum context length (512).
+Number of tokens (539) exceeded maximum context length (512).
+Number of tokens (540) exceeded maximum context length (512).
+Number of tokens (541) exceeded maximum context length (512).
+Number of tokens (542) exceeded maximum context length (512).
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Number of tokens (513) exceeded maximum context length (512).
+Number of tokens (514) exceeded maximum context length (512).
+Number of tokens (515) exceeded maximum context length (512).
+Number of tokens (516) exceeded maximum context length (512).
+Number of tokens (517) exceeded maximum context length (512).
+Number of tokens (518) exceeded maximum context length (512).
+Number of tokens (519) exceeded maximum context length (512).
+Number of tokens (520) exceeded maximum context length (512).
+Number of tokens (521) exceeded maximum context length (512).
+Number of tokens (522) exceeded maximum context length (512).
+Number of tokens (523) exceeded maximum context length (512).
+Number of tokens (524) exceeded maximum context length (512).
+Number of tokens (525) exceeded maximum context length (512).
+Number of tokens (526) exceeded maximum context length (512).
+Number of tokens (527) exceeded maximum context length (512).
+Number of tokens (528) exceeded maximum context length (512).
+Number of tokens (529) exceeded maximum context length (512).
+Number of tokens (530) exceeded maximum context length (512).
+Number of tokens (531) exceeded maximum context length (512).
+Number of tokens (532) exceeded maximum context length (512).
+Number of tokens (533) exceeded maximum context length (512).
+Number of tokens (534) exceeded maximum context length (512).
+Number of tokens (535) exceeded maximum context length (512).
+Number of tokens (536) exceeded maximum context length (512).
+Number of tokens (537) exceeded maximum context length (512).
+Number of tokens (538) exceeded maximum context length (512).
+Number of tokens (539) exceeded maximum context length (512).
+Number of tokens (540) exceeded maximum context length (512).
+Number of tokens (541) exceeded maximum context length (512).
+Number of tokens (542) exceeded maximum context length (512).
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Number of tokens (513) exceeded maximum context length (512).
+Number of tokens (514) exceeded maximum context length (512).
+Number of tokens (515) exceeded maximum context length (512).
+Number of tokens (516) exceeded maximum context length (512).
+Number of tokens (517) exceeded maximum context length (512).
+Number of tokens (518) exceeded maximum context length (512).
+Number of tokens (519) exceeded maximum context length (512).
+Number of tokens (520) exceeded maximum context length (512).
+Number of tokens (521) exceeded maximum context length (512).
+Number of tokens (522) exceeded maximum context length (512).
+Number of tokens (523) exceeded maximum context length (512).
+Number of tokens (524) exceeded maximum context length (512).
+Number of tokens (525) exceeded maximum context length (512).
+Number of tokens (526) exceeded maximum context length (512).
+Number of tokens (527) exceeded maximum context length (512).
+Number of tokens (528) exceeded maximum context length (512).
+Number of tokens (529) exceeded maximum context length (512).
+Number of tokens (530) exceeded maximum context length (512).
+Number of tokens (531) exceeded maximum context length (512).
+Number of tokens (532) exceeded maximum context length (512).
+Number of tokens (533) exceeded maximum context length (512).
+Number of tokens (534) exceeded maximum context length (512).
+Number of tokens (535) exceeded maximum context length (512).
+Number of tokens (536) exceeded maximum context length (512).
+Number of tokens (537) exceeded maximum context length (512).
+Number of tokens (538) exceeded maximum context length (512).
+Number of tokens (539) exceeded maximum context length (512).
+Number of tokens (540) exceeded maximum context length (512).
+Number of tokens (541) exceeded maximum context length (512).
+Number of tokens (542) exceeded maximum context length (512).
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Number of tokens (513) exceeded maximum context length (512).
+Number of tokens (514) exceeded maximum context length (512).
+Number of tokens (515) exceeded maximum context length (512).
+Number of tokens (516) exceeded maximum context length (512).
+Number of tokens (517) exceeded maximum context length (512).
+Number of tokens (518) exceeded maximum context length (512).
+Number of tokens (519) exceeded maximum context length (512).
+Number of tokens (520) exceeded maximum context length (512).
+Number of tokens (521) exceeded maximum context length (512).
+Number of tokens (522) exceeded maximum context length (512).
+Number of tokens (523) exceeded maximum context length (512).
+Number of tokens (524) exceeded maximum context length (512).
+Number of tokens (525) exceeded maximum context length (512).
+Number of tokens (526) exceeded maximum context length (512).
+Number of tokens (527) exceeded maximum context length (512).
+Number of tokens (528) exceeded maximum context length (512).
+Number of tokens (529) exceeded maximum context length (512).
+Number of tokens (530) exceeded maximum context length (512).
+Number of tokens (531) exceeded maximum context length (512).
+Number of tokens (532) exceeded maximum context length (512).
+Number of tokens (533) exceeded maximum context length (512).
+Number of tokens (534) exceeded maximum context length (512).
+Number of tokens (535) exceeded maximum context length (512).
+Number of tokens (536) exceeded maximum context length (512).
+Number of tokens (537) exceeded maximum context length (512).
+Number of tokens (538) exceeded maximum context length (512).
+Number of tokens (539) exceeded maximum context length (512).
+Number of tokens (540) exceeded maximum context length (512).
+Number of tokens (541) exceeded maximum context length (512).
+Number of tokens (542) exceeded maximum context length (512).
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Number of tokens (513) exceeded maximum context length (512).
+Number of tokens (514) exceeded maximum context length (512).
+Number of tokens (515) exceeded maximum context length (512).
+Number of tokens (516) exceeded maximum context length (512).
+Number of tokens (517) exceeded maximum context length (512).
+Number of tokens (518) exceeded maximum context length (512).
+Number of tokens (519) exceeded maximum context length (512).
+Number of tokens (520) exceeded maximum context length (512).
+Number of tokens (521) exceeded maximum context length (512).
+Number of tokens (522) exceeded maximum context length (512).
+Number of tokens (523) exceeded maximum context length (512).
+Number of tokens (524) exceeded maximum context length (512).
+Number of tokens (525) exceeded maximum context length (512).
+Number of tokens (526) exceeded maximum context length (512).
+Number of tokens (527) exceeded maximum context length (512).
+Number of tokens (528) exceeded maximum context length (512).
+Number of tokens (529) exceeded maximum context length (512).
+Number of tokens (530) exceeded maximum context length (512).
+Number of tokens (531) exceeded maximum context length (512).
+Number of tokens (532) exceeded maximum context length (512).
+Number of tokens (533) exceeded maximum context length (512).
+Number of tokens (534) exceeded maximum context length (512).
+Number of tokens (535) exceeded maximum context length (512).
+Number of tokens (536) exceeded maximum context length (512).
+Number of tokens (537) exceeded maximum context length (512).
+Number of tokens (538) exceeded maximum context length (512).
+Number of tokens (539) exceeded maximum context length (512).
+Number of tokens (540) exceeded maximum context length (512).
+Number of tokens (541) exceeded maximum context length (512).
+Number of tokens (542) exceeded maximum context length (512).
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Number of tokens (513) exceeded maximum context length (512).
+Number of tokens (514) exceeded maximum context length (512).
+Number of tokens (515) exceeded maximum context length (512).
+Number of tokens (516) exceeded maximum context length (512).
+Number of tokens (517) exceeded maximum context length (512).
+Number of tokens (518) exceeded maximum context length (512).
+Number of tokens (519) exceeded maximum context length (512).
+Number of tokens (520) exceeded maximum context length (512).
+Number of tokens (521) exceeded maximum context length (512).
+Number of tokens (522) exceeded maximum context length (512).
+Number of tokens (523) exceeded maximum context length (512).
+Number of tokens (524) exceeded maximum context length (512).
+Number of tokens (525) exceeded maximum context length (512).
+Number of tokens (526) exceeded maximum context length (512).
+Number of tokens (527) exceeded maximum context length (512).
+Number of tokens (528) exceeded maximum context length (512).
+Number of tokens (529) exceeded maximum context length (512).
+Number of tokens (530) exceeded maximum context length (512).
+Number of tokens (531) exceeded maximum context length (512).
+Number of tokens (532) exceeded maximum context length (512).
+Number of tokens (533) exceeded maximum context length (512).
+Number of tokens (534) exceeded maximum context length (512).
+Number of tokens (535) exceeded maximum context length (512).
+Number of tokens (536) exceeded maximum context length (512).
+Number of tokens (537) exceeded maximum context length (512).
+Number of tokens (538) exceeded maximum context length (512).
+Number of tokens (539) exceeded maximum context length (512).
+Number of tokens (540) exceeded maximum context length (512).
+Number of tokens (541) exceeded maximum context length (512).
+Number of tokens (542) exceeded maximum context length (512).
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Number of tokens (513) exceeded maximum context length (512).
+Number of tokens (514) exceeded maximum context length (512).
+Number of tokens (515) exceeded maximum context length (512).
+Number of tokens (516) exceeded maximum context length (512).
+Number of tokens (517) exceeded maximum context length (512).
+Number of tokens (518) exceeded maximum context length (512).
+Number of tokens (519) exceeded maximum context length (512).
+Number of tokens (520) exceeded maximum context length (512).
+Number of tokens (521) exceeded maximum context length (512).
+Number of tokens (522) exceeded maximum context length (512).
+Number of tokens (523) exceeded maximum context length (512).
+Number of tokens (524) exceeded maximum context length (512).
+Number of tokens (525) exceeded maximum context length (512).
+Number of tokens (526) exceeded maximum context length (512).
+Number of tokens (527) exceeded maximum context length (512).
+Number of tokens (528) exceeded maximum context length (512).
+Number of tokens (529) exceeded maximum context length (512).
+Number of tokens (530) exceeded maximum context length (512).
+Number of tokens (531) exceeded maximum context length (512).
+Number of tokens (532) exceeded maximum context length (512).
+Number of tokens (533) exceeded maximum context length (512).
+Number of tokens (534) exceeded maximum context length (512).
+Number of tokens (535) exceeded maximum context length (512).
+Number of tokens (536) exceeded maximum context length (512).
+Number of tokens (537) exceeded maximum context length (512).
+Number of tokens (538) exceeded maximum context length (512).
+Number of tokens (539) exceeded maximum context length (512).
+Number of tokens (540) exceeded maximum context length (512).
+Number of tokens (541) exceeded maximum context length (512).
+Number of tokens (542) exceeded maximum context length (512).
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Number of tokens (513) exceeded maximum context length (512).
+Number of tokens (514) exceeded maximum context length (512).
+Number of tokens (515) exceeded maximum context length (512).
+Number of tokens (516) exceeded maximum context length (512).
+Number of tokens (517) exceeded maximum context length (512).
+Number of tokens (518) exceeded maximum context length (512).
+Number of tokens (519) exceeded maximum context length (512).
+Number of tokens (520) exceeded maximum context length (512).
+Number of tokens (521) exceeded maximum context length (512).
+Number of tokens (522) exceeded maximum context length (512).
+Number of tokens (523) exceeded maximum context length (512).
+Number of tokens (524) exceeded maximum context length (512).
+Number of tokens (525) exceeded maximum context length (512).
+Number of tokens (526) exceeded maximum context length (512).
+Number of tokens (527) exceeded maximum context length (512).
+Number of tokens (528) exceeded maximum context length (512).
+Number of tokens (529) exceeded maximum context length (512).
+Number of tokens (530) exceeded maximum context length (512).
+Number of tokens (531) exceeded maximum context length (512).
+Number of tokens (532) exceeded maximum context length (512).
+Number of tokens (533) exceeded maximum context length (512).
+Number of tokens (534) exceeded maximum context length (512).
+Number of tokens (535) exceeded maximum context length (512).
+Number of tokens (536) exceeded maximum context length (512).
+Number of tokens (537) exceeded maximum context length (512).
+Number of tokens (538) exceeded maximum context length (512).
+Number of tokens (539) exceeded maximum context length (512).
+Number of tokens (540) exceeded maximum context length (512).
+Number of tokens (541) exceeded maximum context length (512).
+Number of tokens (542) exceeded maximum context length (512).
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Number of tokens (513) exceeded maximum context length (512).
+Number of tokens (514) exceeded maximum context length (512).
+Number of tokens (515) exceeded maximum context length (512).
+Number of tokens (516) exceeded maximum context length (512).
+Number of tokens (517) exceeded maximum context length (512).
+Number of tokens (518) exceeded maximum context length (512).
+Number of tokens (519) exceeded maximum context length (512).
+Number of tokens (520) exceeded maximum context length (512).
+Number of tokens (521) exceeded maximum context length (512).
+Number of tokens (522) exceeded maximum context length (512).
+Number of tokens (523) exceeded maximum context length (512).
+Number of tokens (524) exceeded maximum context length (512).
+Number of tokens (525) exceeded maximum context length (512).
+Number of tokens (526) exceeded maximum context length (512).
+Number of tokens (527) exceeded maximum context length (512).
+Number of tokens (528) exceeded maximum context length (512).
+Number of tokens (529) exceeded maximum context length (512).
+Number of tokens (530) exceeded maximum context length (512).
+Number of tokens (531) exceeded maximum context length (512).
+Number of tokens (532) exceeded maximum context length (512).
+Number of tokens (533) exceeded maximum context length (512).
+Number of tokens (534) exceeded maximum context length (512).
+Number of tokens (535) exceeded maximum context length (512).
+Number of tokens (536) exceeded maximum context length (512).
+Number of tokens (537) exceeded maximum context length (512).
+Number of tokens (538) exceeded maximum context length (512).
+Number of tokens (539) exceeded maximum context length (512).
+Number of tokens (540) exceeded maximum context length (512).
+Number of tokens (541) exceeded maximum context length (512).
+Number of tokens (542) exceeded maximum context length (512).
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Number of tokens (513) exceeded maximum context length (512).
+Number of tokens (514) exceeded maximum context length (512).
+Number of tokens (515) exceeded maximum context length (512).
+Number of tokens (516) exceeded maximum context length (512).
+Number of tokens (517) exceeded maximum context length (512).
+Number of tokens (518) exceeded maximum context length (512).
+Number of tokens (519) exceeded maximum context length (512).
+Number of tokens (520) exceeded maximum context length (512).
+Number of tokens (521) exceeded maximum context length (512).
+Number of tokens (522) exceeded maximum context length (512).
+Number of tokens (523) exceeded maximum context length (512).
+Number of tokens (524) exceeded maximum context length (512).
+Number of tokens (525) exceeded maximum context length (512).
+Number of tokens (526) exceeded maximum context length (512).
+Number of tokens (527) exceeded maximum context length (512).
+Number of tokens (528) exceeded maximum context length (512).
+Number of tokens (529) exceeded maximum context length (512).
+Number of tokens (530) exceeded maximum context length (512).
+Number of tokens (531) exceeded maximum context length (512).
+Number of tokens (532) exceeded maximum context length (512).
+Number of tokens (533) exceeded maximum context length (512).
+Number of tokens (534) exceeded maximum context length (512).
+Number of tokens (535) exceeded maximum context length (512).
+Number of tokens (536) exceeded maximum context length (512).
+Number of tokens (537) exceeded maximum context length (512).
+Number of tokens (538) exceeded maximum context length (512).
+Number of tokens (539) exceeded maximum context length (512).
+Number of tokens (540) exceeded maximum context length (512).
+Number of tokens (541) exceeded maximum context length (512).
+Number of tokens (542) exceeded maximum context length (512).
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Number of tokens (513) exceeded maximum context length (512).
+Number of tokens (514) exceeded maximum context length (512).
+Number of tokens (515) exceeded maximum context length (512).
+Number of tokens (516) exceeded maximum context length (512).
+Number of tokens (517) exceeded maximum context length (512).
+Number of tokens (518) exceeded maximum context length (512).
+Number of tokens (519) exceeded maximum context length (512).
+Number of tokens (520) exceeded maximum context length (512).
+Number of tokens (521) exceeded maximum context length (512).
+Number of tokens (522) exceeded maximum context length (512).
+Number of tokens (523) exceeded maximum context length (512).
+Number of tokens (524) exceeded maximum context length (512).
+Number of tokens (525) exceeded maximum context length (512).
+Number of tokens (526) exceeded maximum context length (512).
+Number of tokens (527) exceeded maximum context length (512).
+Number of tokens (528) exceeded maximum context length (512).
+Number of tokens (529) exceeded maximum context length (512).
+Number of tokens (530) exceeded maximum context length (512).
+Number of tokens (531) exceeded maximum context length (512).
+Number of tokens (532) exceeded maximum context length (512).
+Number of tokens (533) exceeded maximum context length (512).
+Number of tokens (534) exceeded maximum context length (512).
+Number of tokens (535) exceeded maximum context length (512).
+Number of tokens (536) exceeded maximum context length (512).
+Number of tokens (537) exceeded maximum context length (512).
+Number of tokens (538) exceeded maximum context length (512).
+Number of tokens (539) exceeded maximum context length (512).
+Number of tokens (540) exceeded maximum context length (512).
+Number of tokens (541) exceeded maximum context length (512).
+Number of tokens (542) exceeded maximum context length (512).
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Number of tokens (513) exceeded maximum context length (512).
+Number of tokens (514) exceeded maximum context length (512).
+Number of tokens (515) exceeded maximum context length (512).
+Number of tokens (516) exceeded maximum context length (512).
+Number of tokens (517) exceeded maximum context length (512).
+Number of tokens (518) exceeded maximum context length (512).
+Number of tokens (519) exceeded maximum context length (512).
+Number of tokens (520) exceeded maximum context length (512).
+Number of tokens (521) exceeded maximum context length (512).
+Number of tokens (522) exceeded maximum context length (512).
+Number of tokens (523) exceeded maximum context length (512).
+Number of tokens (524) exceeded maximum context length (512).
+Number of tokens (525) exceeded maximum context length (512).
+Number of tokens (526) exceeded maximum context length (512).
+Number of tokens (527) exceeded maximum context length (512).
+Number of tokens (528) exceeded maximum context length (512).
+Number of tokens (529) exceeded maximum context length (512).
+Number of tokens (530) exceeded maximum context length (512).
+Number of tokens (531) exceeded maximum context length (512).
+Number of tokens (532) exceeded maximum context length (512).
+Number of tokens (533) exceeded maximum context length (512).
+Number of tokens (534) exceeded maximum context length (512).
+Number of tokens (535) exceeded maximum context length (512).
+Number of tokens (536) exceeded maximum context length (512).
+Number of tokens (537) exceeded maximum context length (512).
+Number of tokens (538) exceeded maximum context length (512).
+Number of tokens (539) exceeded maximum context length (512).
+Number of tokens (540) exceeded maximum context length (512).
+Number of tokens (541) exceeded maximum context length (512).
+Number of tokens (542) exceeded maximum context length (512).
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Number of tokens (513) exceeded maximum context length (512).
+Number of tokens (514) exceeded maximum context length (512).
+Number of tokens (515) exceeded maximum context length (512).
+Number of tokens (516) exceeded maximum context length (512).
+Number of tokens (517) exceeded maximum context length (512).
+Number of tokens (518) exceeded maximum context length (512).
+Number of tokens (519) exceeded maximum context length (512).
+Number of tokens (520) exceeded maximum context length (512).
+Number of tokens (521) exceeded maximum context length (512).
+Number of tokens (522) exceeded maximum context length (512).
+Number of tokens (523) exceeded maximum context length (512).
+Number of tokens (524) exceeded maximum context length (512).
+Number of tokens (525) exceeded maximum context length (512).
+Number of tokens (526) exceeded maximum context length (512).
+Number of tokens (527) exceeded maximum context length (512).
+Number of tokens (528) exceeded maximum context length (512).
+Number of tokens (529) exceeded maximum context length (512).
+Number of tokens (530) exceeded maximum context length (512).
+Number of tokens (531) exceeded maximum context length (512).
+Number of tokens (532) exceeded maximum context length (512).
+Number of tokens (533) exceeded maximum context length (512).
+Number of tokens (534) exceeded maximum context length (512).
+Number of tokens (535) exceeded maximum context length (512).
+Number of tokens (536) exceeded maximum context length (512).
+Number of tokens (537) exceeded maximum context length (512).
+Number of tokens (538) exceeded maximum context length (512).
+Number of tokens (539) exceeded maximum context length (512).
+Number of tokens (540) exceeded maximum context length (512).
+Number of tokens (541) exceeded maximum context length (512).
+Number of tokens (542) exceeded maximum context length (512).
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Number of tokens (513) exceeded maximum context length (512).
+Number of tokens (514) exceeded maximum context length (512).
+Number of tokens (515) exceeded maximum context length (512).
+Number of tokens (516) exceeded maximum context length (512).
+Number of tokens (517) exceeded maximum context length (512).
+Number of tokens (518) exceeded maximum context length (512).
+Number of tokens (519) exceeded maximum context length (512).
+Number of tokens (520) exceeded maximum context length (512).
+Number of tokens (521) exceeded maximum context length (512).
+Number of tokens (522) exceeded maximum context length (512).
+Number of tokens (523) exceeded maximum context length (512).
+Number of tokens (524) exceeded maximum context length (512).
+Number of tokens (525) exceeded maximum context length (512).
+Number of tokens (526) exceeded maximum context length (512).
+Number of tokens (527) exceeded maximum context length (512).
+Number of tokens (528) exceeded maximum context length (512).
+Number of tokens (529) exceeded maximum context length (512).
+Number of tokens (530) exceeded maximum context length (512).
+Number of tokens (531) exceeded maximum context length (512).
+Number of tokens (532) exceeded maximum context length (512).
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Number of tokens (513) exceeded maximum context length (512).
+Number of tokens (514) exceeded maximum context length (512).
+Number of tokens (515) exceeded maximum context length (512).
+Number of tokens (516) exceeded maximum context length (512).
+Number of tokens (517) exceeded maximum context length (512).
+Number of tokens (518) exceeded maximum context length (512).
+Number of tokens (519) exceeded maximum context length (512).
+Number of tokens (520) exceeded maximum context length (512).
+Number of tokens (521) exceeded maximum context length (512).
+Number of tokens (522) exceeded maximum context length (512).
+Number of tokens (523) exceeded maximum context length (512).
+Number of tokens (524) exceeded maximum context length (512).
+Number of tokens (525) exceeded maximum context length (512).
+Number of tokens (526) exceeded maximum context length (512).
+Number of tokens (527) exceeded maximum context length (512).
+Number of tokens (528) exceeded maximum context length (512).
+Number of tokens (529) exceeded maximum context length (512).
+Number of tokens (530) exceeded maximum context length (512).
+Number of tokens (531) exceeded maximum context length (512).
+Number of tokens (532) exceeded maximum context length (512).
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Number of tokens (513) exceeded maximum context length (512).
+Number of tokens (514) exceeded maximum context length (512).
+Number of tokens (515) exceeded maximum context length (512).
+Number of tokens (516) exceeded maximum context length (512).
+Number of tokens (517) exceeded maximum context length (512).
+Number of tokens (518) exceeded maximum context length (512).
+Number of tokens (519) exceeded maximum context length (512).
+Number of tokens (520) exceeded maximum context length (512).
+Number of tokens (521) exceeded maximum context length (512).
+Number of tokens (522) exceeded maximum context length (512).
+Number of tokens (523) exceeded maximum context length (512).
+Number of tokens (524) exceeded maximum context length (512).
+Number of tokens (525) exceeded maximum context length (512).
+Number of tokens (526) exceeded maximum context length (512).
+Number of tokens (527) exceeded maximum context length (512).
+Number of tokens (528) exceeded maximum context length (512).
+Number of tokens (529) exceeded maximum context length (512).
+Number of tokens (530) exceeded maximum context length (512).
+Number of tokens (531) exceeded maximum context length (512).
+Number of tokens (532) exceeded maximum context length (512).
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Number of tokens (513) exceeded maximum context length (512).
+Number of tokens (514) exceeded maximum context length (512).
+Number of tokens (515) exceeded maximum context length (512).
+Number of tokens (516) exceeded maximum context length (512).
+Number of tokens (517) exceeded maximum context length (512).
+Number of tokens (518) exceeded maximum context length (512).
+Number of tokens (519) exceeded maximum context length (512).
+Number of tokens (520) exceeded maximum context length (512).
+Number of tokens (521) exceeded maximum context length (512).
+Number of tokens (522) exceeded maximum context length (512).
+Number of tokens (523) exceeded maximum context length (512).
+Number of tokens (524) exceeded maximum context length (512).
+Number of tokens (525) exceeded maximum context length (512).
+Number of tokens (526) exceeded maximum context length (512).
+Number of tokens (527) exceeded maximum context length (512).
+Number of tokens (528) exceeded maximum context length (512).
+Number of tokens (529) exceeded maximum context length (512).
+Number of tokens (530) exceeded maximum context length (512).
+Number of tokens (531) exceeded maximum context length (512).
+Number of tokens (532) exceeded maximum context length (512).
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Number of tokens (513) exceeded maximum context length (512).
+Number of tokens (514) exceeded maximum context length (512).
+Number of tokens (515) exceeded maximum context length (512).
+Number of tokens (516) exceeded maximum context length (512).
+Number of tokens (517) exceeded maximum context length (512).
+Number of tokens (518) exceeded maximum context length (512).
+Number of tokens (519) exceeded maximum context length (512).
+Number of tokens (520) exceeded maximum context length (512).
+Number of tokens (521) exceeded maximum context length (512).
+Number of tokens (522) exceeded maximum context length (512).
+Number of tokens (523) exceeded maximum context length (512).
+Number of tokens (524) exceeded maximum context length (512).
+Number of tokens (525) exceeded maximum context length (512).
+Number of tokens (526) exceeded maximum context length (512).
+Number of tokens (527) exceeded maximum context length (512).
+Number of tokens (528) exceeded maximum context length (512).
+Number of tokens (529) exceeded maximum context length (512).
+Number of tokens (530) exceeded maximum context length (512).
+Number of tokens (531) exceeded maximum context length (512).
+Number of tokens (532) exceeded maximum context length (512).
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Number of tokens (513) exceeded maximum context length (512).
+Number of tokens (514) exceeded maximum context length (512).
+Number of tokens (515) exceeded maximum context length (512).
+Number of tokens (516) exceeded maximum context length (512).
+Number of tokens (517) exceeded maximum context length (512).
+Number of tokens (518) exceeded maximum context length (512).
+Number of tokens (519) exceeded maximum context length (512).
+Number of tokens (520) exceeded maximum context length (512).
+Number of tokens (521) exceeded maximum context length (512).
+Number of tokens (522) exceeded maximum context length (512).
+Number of tokens (523) exceeded maximum context length (512).
+Number of tokens (524) exceeded maximum context length (512).
+Number of tokens (525) exceeded maximum context length (512).
+Number of tokens (526) exceeded maximum context length (512).
+Number of tokens (527) exceeded maximum context length (512).
+Number of tokens (528) exceeded maximum context length (512).
+Number of tokens (529) exceeded maximum context length (512).
+Number of tokens (530) exceeded maximum context length (512).
+Number of tokens (531) exceeded maximum context length (512).
+Number of tokens (532) exceeded maximum context length (512).
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Number of tokens (513) exceeded maximum context length (512).
+Number of tokens (514) exceeded maximum context length (512).
+Number of tokens (515) exceeded maximum context length (512).
+Number of tokens (516) exceeded maximum context length (512).
+Number of tokens (517) exceeded maximum context length (512).
+Number of tokens (518) exceeded maximum context length (512).
+Number of tokens (519) exceeded maximum context length (512).
+Number of tokens (520) exceeded maximum context length (512).
+Number of tokens (521) exceeded maximum context length (512).
+Number of tokens (522) exceeded maximum context length (512).
+Number of tokens (523) exceeded maximum context length (512).
+Number of tokens (524) exceeded maximum context length (512).
+Number of tokens (525) exceeded maximum context length (512).
+Number of tokens (526) exceeded maximum context length (512).
+Number of tokens (527) exceeded maximum context length (512).
+Number of tokens (528) exceeded maximum context length (512).
+Number of tokens (529) exceeded maximum context length (512).
+Number of tokens (530) exceeded maximum context length (512).
+Number of tokens (531) exceeded maximum context length (512).
+Number of tokens (532) exceeded maximum context length (512).
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Number of tokens (513) exceeded maximum context length (512).
+Number of tokens (514) exceeded maximum context length (512).
+Number of tokens (515) exceeded maximum context length (512).
+Number of tokens (516) exceeded maximum context length (512).
+Number of tokens (517) exceeded maximum context length (512).
+Number of tokens (518) exceeded maximum context length (512).
+Number of tokens (519) exceeded maximum context length (512).
+Number of tokens (520) exceeded maximum context length (512).
+Number of tokens (521) exceeded maximum context length (512).
+Number of tokens (522) exceeded maximum context length (512).
+Number of tokens (523) exceeded maximum context length (512).
+Number of tokens (524) exceeded maximum context length (512).
+Number of tokens (525) exceeded maximum context length (512).
+Number of tokens (526) exceeded maximum context length (512).
+Number of tokens (527) exceeded maximum context length (512).
+Number of tokens (528) exceeded maximum context length (512).
+Number of tokens (529) exceeded maximum context length (512).
+Number of tokens (530) exceeded maximum context length (512).
+Number of tokens (531) exceeded maximum context length (512).
+Number of tokens (532) exceeded maximum context length (512).
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Number of tokens (513) exceeded maximum context length (512).
+Number of tokens (514) exceeded maximum context length (512).
+Number of tokens (515) exceeded maximum context length (512).
+Number of tokens (516) exceeded maximum context length (512).
+Number of tokens (517) exceeded maximum context length (512).
+Number of tokens (518) exceeded maximum context length (512).
+Number of tokens (519) exceeded maximum context length (512).
+Number of tokens (520) exceeded maximum context length (512).
+Number of tokens (521) exceeded maximum context length (512).
+Number of tokens (522) exceeded maximum context length (512).
+Number of tokens (523) exceeded maximum context length (512).
+Number of tokens (524) exceeded maximum context length (512).
+Number of tokens (525) exceeded maximum context length (512).
+Number of tokens (526) exceeded maximum context length (512).
+Number of tokens (527) exceeded maximum context length (512).
+Number of tokens (528) exceeded maximum context length (512).
+Number of tokens (529) exceeded maximum context length (512).
+Number of tokens (530) exceeded maximum context length (512).
+Number of tokens (531) exceeded maximum context length (512).
+Number of tokens (532) exceeded maximum context length (512).
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Number of tokens (513) exceeded maximum context length (512).
+Number of tokens (514) exceeded maximum context length (512).
+Number of tokens (515) exceeded maximum context length (512).
+Number of tokens (516) exceeded maximum context length (512).
+Number of tokens (517) exceeded maximum context length (512).
+Number of tokens (518) exceeded maximum context length (512).
+Number of tokens (519) exceeded maximum context length (512).
+Number of tokens (520) exceeded maximum context length (512).
+Number of tokens (521) exceeded maximum context length (512).
+Number of tokens (522) exceeded maximum context length (512).
+Number of tokens (523) exceeded maximum context length (512).
+Number of tokens (524) exceeded maximum context length (512).
+Number of tokens (525) exceeded maximum context length (512).
+Number of tokens (526) exceeded maximum context length (512).
+Number of tokens (527) exceeded maximum context length (512).
+Number of tokens (528) exceeded maximum context length (512).
+Number of tokens (529) exceeded maximum context length (512).
+Number of tokens (530) exceeded maximum context length (512).
+Number of tokens (531) exceeded maximum context length (512).
+Number of tokens (532) exceeded maximum context length (512).
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Number of tokens (513) exceeded maximum context length (512).
+Number of tokens (514) exceeded maximum context length (512).
+Number of tokens (515) exceeded maximum context length (512).
+Number of tokens (516) exceeded maximum context length (512).
+Number of tokens (517) exceeded maximum context length (512).
+Number of tokens (518) exceeded maximum context length (512).
+Number of tokens (519) exceeded maximum context length (512).
+Number of tokens (520) exceeded maximum context length (512).
+Number of tokens (521) exceeded maximum context length (512).
+Number of tokens (522) exceeded maximum context length (512).
+Number of tokens (523) exceeded maximum context length (512).
+Number of tokens (524) exceeded maximum context length (512).
+Number of tokens (525) exceeded maximum context length (512).
+Number of tokens (526) exceeded maximum context length (512).
+Number of tokens (527) exceeded maximum context length (512).
+Number of tokens (528) exceeded maximum context length (512).
+Number of tokens (529) exceeded maximum context length (512).
+Number of tokens (530) exceeded maximum context length (512).
+Number of tokens (531) exceeded maximum context length (512).
+Number of tokens (532) exceeded maximum context length (512).
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Number of tokens (513) exceeded maximum context length (512).
+Number of tokens (514) exceeded maximum context length (512).
+Number of tokens (515) exceeded maximum context length (512).
+Number of tokens (516) exceeded maximum context length (512).
+Number of tokens (517) exceeded maximum context length (512).
+Number of tokens (518) exceeded maximum context length (512).
+Number of tokens (519) exceeded maximum context length (512).
+Number of tokens (520) exceeded maximum context length (512).
+Number of tokens (521) exceeded maximum context length (512).
+Number of tokens (522) exceeded maximum context length (512).
+Number of tokens (523) exceeded maximum context length (512).
+Number of tokens (524) exceeded maximum context length (512).
+Number of tokens (525) exceeded maximum context length (512).
+Number of tokens (526) exceeded maximum context length (512).
+Number of tokens (527) exceeded maximum context length (512).
+Number of tokens (528) exceeded maximum context length (512).
+Number of tokens (529) exceeded maximum context length (512).
+Number of tokens (530) exceeded maximum context length (512).
+Number of tokens (531) exceeded maximum context length (512).
+Number of tokens (532) exceeded maximum context length (512).
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Number of tokens (513) exceeded maximum context length (512).
+Number of tokens (514) exceeded maximum context length (512).
+Number of tokens (515) exceeded maximum context length (512).
+Number of tokens (516) exceeded maximum context length (512).
+Number of tokens (517) exceeded maximum context length (512).
+Number of tokens (518) exceeded maximum context length (512).
+Number of tokens (519) exceeded maximum context length (512).
+Number of tokens (520) exceeded maximum context length (512).
+Number of tokens (521) exceeded maximum context length (512).
+Number of tokens (522) exceeded maximum context length (512).
+Number of tokens (523) exceeded maximum context length (512).
+Number of tokens (524) exceeded maximum context length (512).
+Number of tokens (525) exceeded maximum context length (512).
+Number of tokens (526) exceeded maximum context length (512).
+Number of tokens (527) exceeded maximum context length (512).
+Number of tokens (528) exceeded maximum context length (512).
+Number of tokens (529) exceeded maximum context length (512).
+Number of tokens (530) exceeded maximum context length (512).
+Number of tokens (531) exceeded maximum context length (512).
+Number of tokens (532) exceeded maximum context length (512).
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Number of tokens (513) exceeded maximum context length (512).
+Number of tokens (514) exceeded maximum context length (512).
+Number of tokens (515) exceeded maximum context length (512).
+Number of tokens (516) exceeded maximum context length (512).
+Number of tokens (517) exceeded maximum context length (512).
+Number of tokens (518) exceeded maximum context length (512).
+Number of tokens (519) exceeded maximum context length (512).
+Number of tokens (520) exceeded maximum context length (512).
+Number of tokens (521) exceeded maximum context length (512).
+Number of tokens (522) exceeded maximum context length (512).
+Number of tokens (523) exceeded maximum context length (512).
+Number of tokens (524) exceeded maximum context length (512).
+Number of tokens (525) exceeded maximum context length (512).
+Number of tokens (526) exceeded maximum context length (512).
+Number of tokens (527) exceeded maximum context length (512).
+Number of tokens (528) exceeded maximum context length (512).
+Number of tokens (529) exceeded maximum context length (512).
+Number of tokens (530) exceeded maximum context length (512).
+Number of tokens (531) exceeded maximum context length (512).
+Number of tokens (532) exceeded maximum context length (512).
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Number of tokens (513) exceeded maximum context length (512).
+Number of tokens (514) exceeded maximum context length (512).
+Number of tokens (515) exceeded maximum context length (512).
+Number of tokens (516) exceeded maximum context length (512).
+Number of tokens (517) exceeded maximum context length (512).
+Number of tokens (518) exceeded maximum context length (512).
+Number of tokens (519) exceeded maximum context length (512).
+Number of tokens (520) exceeded maximum context length (512).
+Number of tokens (521) exceeded maximum context length (512).
+Number of tokens (522) exceeded maximum context length (512).
+Number of tokens (523) exceeded maximum context length (512).
+Number of tokens (524) exceeded maximum context length (512).
+Number of tokens (525) exceeded maximum context length (512).
+Number of tokens (526) exceeded maximum context length (512).
+Number of tokens (527) exceeded maximum context length (512).
+Number of tokens (528) exceeded maximum context length (512).
+Number of tokens (529) exceeded maximum context length (512).
+Number of tokens (530) exceeded maximum context length (512).
+Number of tokens (531) exceeded maximum context length (512).
+Number of tokens (532) exceeded maximum context length (512).
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Setting `pad_token_id` to `eos_token_id`:2 for open-end generation.
+No sentence-transformers model found with name m3rg-iitd/matscibert. Creating a new one with MEAN pooling.
+Some weights of BertModel were not initialized from the model checkpoint at m3rg-iitd/matscibert and are newly initialized: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/home/ebrahim/.local/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+Spacy_entities:  []
+Spacy_noun_chunks:  ['Functionalization', 'targeted delivery nanoparticles', 'various cell types', 'bioimaging', 'gene delivery', 'drug delivery therapeutic diagnostic applications']
+YAKE_keywords:  ['therapeutic diagnostic applications', 'Functionalization facilitates targeted', 'drug delivery therapeutic', 'facilitates targeted delivery', 'targeted delivery nanoparticles', 'delivery therapeutic diagnostic', 'Functionalization facilitates', 'cell types', 'diagnostic applications', 'facilitates targeted', 'nanoparticles various cell', 'therapeutic diagnostic', 'gene delivery', 'drug delivery', 'targeted delivery', 'delivery nanoparticles', 'delivery therapeutic', 'bioimaging', 'delivery', 'Functionalization']
+RAKE_keywords:  ['functionalization facilitates targeted delivery nanoparticles various cell types', 'drug delivery therapeutic diagnostic applications', 'gene delivery', 'bioimaging']
+Pyate_combo_basic_keywords:  ['delivery', 'therapeutic', 'drug', 'diagnostic', 'therapeutic', 'delivery', 'delivery', 'drug', 'drug', 'drug', 'various', 'cell', 'various', 'functionalization', 'gene']
+Pyate_basic_keywords:  ['delivery', 'therapeutic', 'drug', 'diagnostic', 'delivery', 'therapeutic', 'drug', 'delivery', 'various', 'cell', 'drug', 'drug', 'various', 'functionalization', 'gene']
+Pyate_cvalues_keywords:  ['drug', 'delivery', 'various', 'therapeutic', 'functionalization', 'various', 'cell', 'gene', 'drug', 'diagnostic', 'drug', 'drug', 'delivery', 'delivery', 'therapeutic']
+Summa_keywords:  ['delivery', 'types']
+Keybert_keywords:  ['targeted delivery nanoparticles', 'delivery nanoparticles', 'delivery nanoparticles various', 'drug delivery therapeutic', 'delivery therapeutic']
+Keybert_m_keywords:  ['gene delivery drug', 'drug delivery therapeutic', 'drug delivery', 'targeted delivery nanoparticles', 'delivery drug']
+TFIDF_keywords:  ['applications' 'bioimaging' 'bioimaging gene' 'bioimaging gene delivery'
+ 'cell' 'cell types' 'cell types bioimaging' 'delivery' 'delivery drug'
+ 'delivery drug delivery' 'delivery nanoparticles'
+ 'delivery nanoparticles various' 'delivery therapeutic'
+ 'delivery therapeutic diagnostic' 'diagnostic' 'diagnostic applications'
+ 'drug' 'drug delivery' 'drug delivery therapeutic' 'facilitates'
+ 'facilitates targeted' 'facilitates targeted delivery'
+ 'functionalization' 'functionalization facilitates'
+ 'functionalization facilitates targeted' 'gene' 'gene delivery'
+ 'gene delivery drug' 'nanoparticles' 'nanoparticles various'
+ 'nanoparticles various cell' 'targeted' 'targeted delivery'
+ 'targeted delivery nanoparticles' 'therapeutic' 'therapeutic diagnostic'
+ 'therapeutic diagnostic applications' 'types' 'types bioimaging'
+ 'types bioimaging gene' 'various' 'various cell' 'various cell types']
+LSA_keywords:  ['delivery', 'various cell types', 'delivery nanoparticles', 'drug delivery therapeutic', 'drug delivery', 'drug', 'diagnostic applications', 'diagnostic', 'delivery therapeutic diagnostic', 'delivery therapeutic', 'delivery nanoparticles various', 'delivery drug delivery', 'facilitates targeted', 'delivery drug', 'cell types bioimaging', 'cell types', 'cell', 'bioimaging gene delivery', 'bioimaging gene', 'bioimaging', 'facilitates', 'facilitates targeted delivery', 'various cell', 'targeted delivery', 'various', 'types bioimaging gene', 'types bioimaging', 'types', 'therapeutic diagnostic applications', 'therapeutic diagnostic', 'therapeutic', 'targeted delivery nanoparticles', 'targeted', 'functionalization', 'nanoparticles various cell', 'nanoparticles various', 'nanoparticles', 'gene delivery drug', 'gene delivery', 'gene', 'functionalization facilitates targeted', 'functionalization facilitates', 'applications']
+LDA_keywords:  ['delivery', 'facilitates', 'targeted', 'Functionalization', 'delivery,', 'therapeutic', 'diagnostic', 'cell', 'applications.', 'various']
+Mistral7B_KeyBERT:  ['functionalization', 'nanoparticles', 'targeted delivery', 'cell types', 'bioimaging', 'gene delivery', 'drug delivery', 'therapeutic applications', 'diagnostic applications.']
+Mixtral7B_KeyBERT:  ['functionalization', 'targeted delivery', 'nanoparticles', 'cell types', 'bioimaging', 'gene delivery', 'drug delivery', 'therapeutic applications', 'diagnostic applications.']
+Average Scores over all Abstracts:
+Method      , Average Precision:                    , Average Recall:                    , Average F1-score:                    
+Spacy_entities,0.0,0.0,0.0
+Method      , Average Precision:                    , Average Recall:                    , Average F1-score:                    
+Spacy_noun_chunks,0.20478339642813329,0.24216406612287625,0.21267827502065434
+Method      , Average Precision:                    , Average Recall:                    , Average F1-score:                    
+YAKE_keywords,0.12500000000000003,0.14533289407431288,0.1316645268969759
+Method      , Average Precision:                    , Average Recall:                    , Average F1-score:                    
+RAKE_keywords,0.07311318311318311,0.062074222074222085,0.06673487869140042
+Method      , Average Precision:                    , Average Recall:                    , Average F1-score:                    
+Pyate_combo_basic_keywords,0.084515281985271,0.14400574211787026,0.10508350678140783
+Method      , Average Precision:                    , Average Recall:                    , Average F1-score:                    
+Pyate_basic_keywords,0.084515281985271,0.14400574211787026,0.10508350678140783
+Method      , Average Precision:                    , Average Recall:                    , Average F1-score:                    
+Pyate_cvalues_keywords,0.084515281985271,0.14400574211787026,0.10508350678140783
+Method      , Average Precision:                    , Average Recall:                    , Average F1-score:                    
+Summa_keywords,0.22501727804359387,0.15244947230073086,0.17631167103116613
+Method      , Average Precision:                    , Average Recall:                    , Average F1-score:                    
+Keybert_keywords,0.24,0.06344057544286377,0.09966137566137565
+Method      , Average Precision:                    , Average Recall:                    , Average F1-score:                    
+Keybert_m_keywords,0.04,0.011014492753623189,0.017142857142857144
+Method      , Average Precision:                    , Average Recall:                    , Average F1-score:                    
+TFIDF_keywords,0.0699843691818674,0.8516890694693899,0.12879603880675777
+Method      , Average Precision:                    , Average Recall:                    , Average F1-score:                    
+LSA_keywords,0.0699843691818674,0.8516890694693899,0.12879603880675777
+Method      , Average Precision:                    , Average Recall:                    , Average F1-score:                    
+LDA_keywords,0.07999999999999999,0.04341301041529874,0.055621433754867035
+Method      , Average Precision:                    , Average Recall:                    , Average F1-score:                    
+Mistral7B_KeyBERT,0.5252236652236653,0.30576743114500554,0.3733418031244118
+Method      , Average Precision:                    , Average Recall:                    , Average F1-score:                    
+Mixtral7B_KeyBERT,0.5950355526826115,0.5411501118594939,0.5606300673277828
